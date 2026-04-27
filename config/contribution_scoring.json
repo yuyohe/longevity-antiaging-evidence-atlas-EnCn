@@ -1,0 +1,34 @@
+{
+  "version": "2026-04-28",
+  "total_base_score": 100,
+  "dimensions": {
+    "endpoint_value_score": 20,
+    "study_design_score": 20,
+    "human_relevance_score": 15,
+    "scale_replication_score": 10,
+    "effect_actionability_score": 15,
+    "authority_signal_score": 10,
+    "atlas_coverage_score": 5,
+    "bilingual_explainability_score": 5
+  },
+  "authority_signal_subscores": {
+    "journal_if_score": 5,
+    "venue_quality_score": 2,
+    "citation_guideline_score": 2,
+    "open_data_code_protocol_score": 1
+  },
+  "thresholds": {
+    "high_priority_include": 85,
+    "shortlist": 70,
+    "candidate_hold": 50,
+    "low_priority": 30
+  },
+  "penalties": {
+    "high_risk_of_bias": [-10, -25],
+    "conflict_of_interest_not_transparent": [-5, -15],
+    "endpoint_mismatch_or_overclaim": [-5, -20],
+    "nonhuman_market_as_human_action": [-10, -25],
+    "unaddressed_safety_concern": [-5, -20],
+    "duplicate_or_superseded": [-10, -30]
+  }
+}

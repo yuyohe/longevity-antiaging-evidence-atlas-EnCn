@@ -1,22 +1,192 @@
 [
   {
-    "name": "longevity_healthspan_core",
-    "query": "(longevity OR lifespan OR healthspan) AND (human OR mouse OR mice OR clinical trial OR cohort)",
+    "name": "cardiorespiratory_fitness_mortality",
+    "query": "(cardiorespiratory fitness OR VO2max OR VO2 peak) AND (mortality OR cardiovascular mortality) AND (cohort OR meta-analysis OR systematic review)",
+    "max_results": 18
+  },
+  {
+    "name": "resistance_training_mortality_sarcopenia",
+    "query": "(resistance training OR strength training OR muscle strengthening) AND (mortality OR frailty OR sarcopenia) AND (human OR trial OR cohort OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "physical_activity_longevity",
+    "query": "(physical activity OR exercise) AND (longevity OR lifespan OR mortality OR healthspan) AND (meta-analysis OR cohort OR randomized controlled trial)",
+    "max_results": 18
+  },
+  {
+    "name": "blood_pressure_mortality_aging",
+    "query": "(blood pressure OR hypertension) AND (mortality OR cardiovascular disease) AND (older adults OR aging) AND (trial OR meta-analysis OR cohort)",
+    "max_results": 16
+  },
+  {
+    "name": "ldl_apob_cardiovascular_mortality",
+    "query": "(LDL cholesterol OR apolipoprotein B OR apoB) AND (cardiovascular mortality OR all-cause mortality) AND (meta-analysis OR Mendelian randomization OR trial)",
+    "max_results": 16
+  },
+  {
+    "name": "sleep_duration_mortality_aging",
+    "query": "(sleep duration OR sleep quality OR insomnia) AND (mortality OR healthy aging OR cognitive decline) AND (meta-analysis OR cohort)",
+    "max_results": 16
+  },
+  {
+    "name": "dietary_pattern_longevity",
+    "query": "(Mediterranean diet OR healthy dietary pattern OR ultra-processed food) AND (mortality OR healthy aging OR longevity) AND (meta-analysis OR cohort OR trial)",
+    "max_results": 18
+  },
+  {
+    "name": "caloric_restriction_human_aging",
+    "query": "(caloric restriction OR calorie restriction OR dietary restriction) AND (aging OR biological aging OR healthspan) AND (human OR randomized controlled trial)",
+    "max_results": 18
+  },
+  {
+    "name": "intermittent_fasting_aging_human",
+    "query": "(intermittent fasting OR time-restricted eating OR time restricted feeding) AND (aging OR mortality OR metabolic health) AND (human OR randomized controlled trial OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "glp1_obesity_cardiometabolic_outcomes",
+    "query": "(semaglutide OR tirzepatide OR GLP-1 receptor agonist) AND (cardiovascular outcomes OR mortality OR obesity) AND (randomized controlled trial OR meta-analysis)",
+    "max_results": 16
+  },
+  {
+    "name": "metformin_aging_longevity",
+    "query": "(metformin) AND (aging OR longevity OR lifespan OR healthspan OR TAME) AND (human OR trial OR cohort OR review)",
+    "max_results": 18
+  },
+  {
+    "name": "rapamycin_mtor_aging",
+    "query": "(rapamycin OR sirolimus OR mTOR inhibitor) AND (aging OR longevity OR lifespan OR immune aging) AND (human OR mouse OR trial OR review)",
     "max_results": 20
   },
   {
-    "name": "vo2max_mortality",
-    "query": "(VO2max OR cardiorespiratory fitness) AND mortality",
+    "name": "senolytics_human_aging",
+    "query": "(senolytic OR senolytics OR dasatinib quercetin OR fisetin) AND (aging OR frailty OR senescence) AND (human OR trial OR mouse OR review)",
     "max_results": 20
   },
   {
-    "name": "senolytics_aging",
-    "query": "senolytic OR senolytics OR cellular senescence aging",
+    "name": "nad_nmn_nr_human_aging",
+    "query": "(nicotinamide riboside OR nicotinamide mononucleotide OR NMN OR NAD) AND (aging OR older adults OR metabolic health) AND (human OR randomized controlled trial OR review)",
     "max_results": 20
   },
   {
-    "name": "nad_nmn_nr",
-    "query": "(NMN OR nicotinamide riboside OR NAD) AND aging",
+    "name": "epigenetic_clocks_intervention",
+    "query": "(epigenetic clock OR DNA methylation age OR biological age) AND (intervention OR mortality OR disease prediction OR trial)",
     "max_results": 20
+  },
+  {
+    "name": "proteomic_metabolomic_aging_clocks",
+    "query": "(proteomic clock OR metabolomic clock OR biological aging biomarker) AND (mortality OR disease prediction OR longevity)",
+    "max_results": 18
+  },
+  {
+    "name": "partial_reprogramming_aging",
+    "query": "(partial reprogramming OR Yamanaka factors OR cellular rejuvenation) AND (aging OR rejuvenation OR lifespan)",
+    "max_results": 20
+  },
+  {
+    "name": "klotho_aging_human",
+    "query": "(Klotho) AND (aging OR cognition OR mortality OR longevity) AND (human OR mouse OR review)",
+    "max_results": 16
+  },
+  {
+    "name": "il11_aging",
+    "query": "(interleukin 11 OR IL-11) AND (aging OR lifespan OR frailty OR inflammation)",
+    "max_results": 16
+  },
+  {
+    "name": "parabiosis_plasma_aging",
+    "query": "(parabiosis OR young plasma OR plasma exchange) AND (aging OR rejuvenation OR cognition)",
+    "max_results": 16
+  },
+  {
+    "name": "autophagy_mitophagy_longevity",
+    "query": "(autophagy OR mitophagy) AND (aging OR longevity OR lifespan OR healthspan) AND (review OR intervention)",
+    "max_results": 18
+  },
+  {
+    "name": "microbiome_healthy_aging",
+    "query": "(gut microbiome OR microbiota) AND (healthy aging OR longevity OR frailty OR inflammaging) AND (human OR cohort OR review)",
+    "max_results": 16
+  },
+  {
+    "name": "inflammaging_interventions",
+    "query": "(inflammaging OR chronic inflammation) AND (aging OR mortality OR frailty) AND (intervention OR review OR cohort)",
+    "max_results": 16
+  },
+  {
+    "name": "sauna_heat_therapy_mortality",
+    "query": "(sauna OR heat therapy) AND (mortality OR cardiovascular disease OR dementia) AND (cohort OR trial OR review)",
+    "max_results": 12
+  },
+  {
+    "name": "diabetes_glycemic_control_mortality_aging",
+    "query": "(HbA1c OR glycemic control OR type 2 diabetes) AND (mortality OR cardiovascular outcomes OR dementia) AND (older adults OR aging OR cohort OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "obesity_weight_loss_mortality_aging",
+    "query": "(weight loss OR obesity OR bariatric surgery) AND (mortality OR cardiovascular outcomes OR healthy aging) AND (cohort OR trial OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "frailty_interventions_older_adults",
+    "query": "(frailty) AND (intervention OR exercise OR nutrition OR multidomain) AND (older adults OR randomized controlled trial OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "cognitive_decline_dementia_prevention",
+    "query": "(cognitive decline OR dementia prevention) AND (lifestyle OR multidomain intervention OR exercise OR diet) AND (trial OR cohort OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "smoking_alcohol_mortality_healthy_aging",
+    "query": "(smoking cessation OR alcohol consumption) AND (mortality OR healthy aging OR longevity) AND (cohort OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "hearing_vision_social_isolation_aging",
+    "query": "(hearing loss OR vision impairment OR social isolation OR loneliness) AND (dementia OR mortality OR healthy aging) AND (cohort OR trial OR meta-analysis)",
+    "max_results": 18
+  },
+  {
+    "name": "vaccination_older_adults_mortality",
+    "query": "(vaccination OR influenza vaccine OR shingles vaccine) AND (older adults OR elderly) AND (mortality OR dementia OR cardiovascular outcomes)",
+    "max_results": 16
+  },
+  {
+    "name": "itp_mouse_lifespan_interventions",
+    "query": "(Interventions Testing Program OR ITP) AND (mouse OR mice) AND (lifespan OR longevity OR rapamycin OR acarbose OR 17-alpha-estradiol)",
+    "max_results": 20
+  },
+  {
+    "name": "acarbose_lifespan_aging",
+    "query": "(acarbose) AND (lifespan OR longevity OR aging OR mortality) AND (mouse OR mice OR human OR cohort)",
+    "max_results": 16
+  },
+  {
+    "name": "taurine_aging_longevity",
+    "query": "(taurine) AND (aging OR longevity OR lifespan OR older adults) AND (trial OR cohort OR mouse OR review)",
+    "max_results": 16
+  },
+  {
+    "name": "urolithin_a_mitophagy_aging",
+    "query": "(urolithin A) AND (aging OR mitophagy OR muscle OR older adults) AND (trial OR review)",
+    "max_results": 16
+  },
+  {
+    "name": "spermidine_autophagy_aging",
+    "query": "(spermidine) AND (aging OR autophagy OR cognition OR mortality OR lifespan) AND (human OR trial OR cohort OR mouse OR review)",
+    "max_results": 16
+  },
+  {
+    "name": "glynac_glutathione_aging",
+    "query": "(GlyNAC OR glycine N-acetylcysteine OR glutathione) AND (aging OR older adults OR oxidative stress OR mitochondrial dysfunction)",
+    "max_results": 16
+  },
+  {
+    "name": "mendelian_randomization_longevity_risk_factors",
+    "query": "(Mendelian randomization) AND (longevity OR lifespan OR aging OR mortality) AND (blood pressure OR LDL OR BMI OR smoking)",
+    "max_results": 16
   }
 ]

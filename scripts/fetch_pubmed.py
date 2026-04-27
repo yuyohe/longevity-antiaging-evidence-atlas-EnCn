@@ -15,11 +15,13 @@ import os
 import time
 from datetime import date
 from pathlib import Path
-from typing import Dict, Iterable, List
+from typing import Dict, List
 from urllib.parse import urlencode
 
 import requests
 from dotenv import load_dotenv
+
+from candidate_utils import CANDIDATE_FIELDS, ensure_csv_header, is_duplicate, load_candidate_keys, remember
 
 ROOT = Path(__file__).resolve().parents[1]
 QUERIES = ROOT / "queries" / "pubmed.json"
@@ -54,30 +56,17 @@ def esummary(pmids: List[str]) -> Dict:
     return request_json("esummary.fcgi", {"db": "pubmed", "id": ",".join(pmids)})
 
 
-def ensure_csv_header(path: Path, fieldnames: List[str]) -> None:
-    if not path.exists() or path.stat().st_size == 0:
-        with path.open("w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-
-
 def main() -> None:
     load_dotenv(ROOT / ".env")
     queries = json.loads(QUERIES.read_text(encoding="utf-8"))
 
-    candidate_fields = ["id", "title_en", "title_zh", "year", "doi", "pmid", "pmcid", "url", "source", "query", "include_status", "notes", "last_checked"]
     log_fields = ["date", "source", "query", "result_count", "new_candidates", "included_count", "notes"]
-    ensure_csv_header(CANDIDATES, candidate_fields)
+    ensure_csv_header(CANDIDATES, CANDIDATE_FIELDS)
     ensure_csv_header(QUERY_LOG, log_fields)
-
-    existing_pmids = set()
-    with CANDIDATES.open("r", encoding="utf-8-sig", newline="") as f:
-        for row in csv.DictReader(f):
-            if row.get("pmid"):
-                existing_pmids.add(row["pmid"])
+    existing_keys = load_candidate_keys(CANDIDATES)
 
     with CANDIDATES.open("a", encoding="utf-8", newline="") as cf, QUERY_LOG.open("a", encoding="utf-8", newline="") as lf:
-        cw = csv.DictWriter(cf, fieldnames=candidate_fields)
+        cw = csv.DictWriter(cf, fieldnames=CANDIDATE_FIELDS)
         lw = csv.DictWriter(lf, fieldnames=log_fields)
 
         for q in queries:
@@ -89,8 +78,6 @@ def main() -> None:
             new_count = 0
 
             for pmid in pmids:
-                if pmid in existing_pmids:
-                    continue
                 item = summary.get("result", {}).get(pmid, {})
                 title = item.get("title", "").strip()
                 year = str(item.get("pubdate", "")[:4])
@@ -98,7 +85,7 @@ def main() -> None:
                 for aid in item.get("articleids", []):
                     if aid.get("idtype") == "doi":
                         doi = aid.get("value", "")
-                cw.writerow({
+                row = {
                     "id": f"pubmed-{pmid}",
                     "title_en": title,
                     "title_zh": "",
@@ -112,8 +99,11 @@ def main() -> None:
                     "include_status": "needs_review",
                     "notes": "Fetched by scripts/fetch_pubmed.py",
                     "last_checked": str(date.today()),
-                })
-                existing_pmids.add(pmid)
+                }
+                if is_duplicate(row, existing_keys):
+                    continue
+                cw.writerow(row)
+                remember(row, existing_keys)
                 new_count += 1
 
             lw.writerow({

@@ -1,2 +1,2 @@
 paper_id,year,topic,intervention_or_exposure,study_type,species,sample_size,primary_endpoint,endpoint_class,effect_size,evidence_level,risk_of_bias,actionability,medical_supervision,recommendation_class,claim_supported,claim_not_supported,zh_summary,en_summary,last_checked
-example-2026-placeholder,2026,placeholder,placeholder,needs_classification,needs_classification,,placeholder,,,"F",not_checked,low,false,Insufficient Evidence,"待补充","待补充","占位符，请替换为真实文献。","Placeholder; replace with a real paper.",2026-04-27
+example-2026-placeholder,2026,placeholder,placeholder,needs_classification,needs_classification,,placeholder,,,F,not_checked,low,false,Insufficient Evidence,待补充,待补充,占位符，请替换为真实文献。,Placeholder; replace with a real paper.,2026-04-27

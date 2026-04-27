@@ -1,0 +1,77 @@
+[
+  {
+    "name": "metformin_aging",
+    "query": "metformin aging longevity healthspan",
+    "max_results": 10
+  },
+  {
+    "name": "rapamycin_aging",
+    "query": "rapamycin OR sirolimus aging older adults immune",
+    "max_results": 10
+  },
+  {
+    "name": "senolytics_aging",
+    "query": "senolytic OR senolytics OR dasatinib quercetin aging",
+    "max_results": 10
+  },
+  {
+    "name": "nad_nmn_nr_aging",
+    "query": "NAD OR nicotinamide riboside OR nicotinamide mononucleotide aging",
+    "max_results": 10
+  },
+  {
+    "name": "caloric_restriction_aging",
+    "query": "caloric restriction aging biological age",
+    "max_results": 10
+  },
+  {
+    "name": "time_restricted_eating_aging",
+    "query": "time restricted eating aging metabolic health",
+    "max_results": 10
+  },
+  {
+    "name": "exercise_older_adults_frailty",
+    "query": "exercise older adults frailty sarcopenia",
+    "max_results": 10
+  },
+  {
+    "name": "biological_age_clock_trial",
+    "query": "biological age epigenetic clock intervention",
+    "max_results": 10
+  },
+  {
+    "name": "klotho_aging",
+    "query": "Klotho aging cognition",
+    "max_results": 10
+  },
+  {
+    "name": "plasma_exchange_aging",
+    "query": "plasma exchange aging rejuvenation",
+    "max_results": 10
+  },
+  {
+    "name": "frailty_multidomain",
+    "query": "frailty multidomain intervention older adults",
+    "max_results": 10
+  },
+  {
+    "name": "urolithin_a_aging",
+    "query": "urolithin A aging muscle older adults",
+    "max_results": 10
+  },
+  {
+    "name": "spermidine_aging",
+    "query": "spermidine aging cognition older adults",
+    "max_results": 10
+  },
+  {
+    "name": "taurine_aging",
+    "query": "taurine aging older adults",
+    "max_results": 10
+  },
+  {
+    "name": "glynac_aging",
+    "query": "GlyNAC aging older adults",
+    "max_results": 10
+  }
+]

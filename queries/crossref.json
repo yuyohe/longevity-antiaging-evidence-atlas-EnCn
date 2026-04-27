@@ -1,0 +1,77 @@
+[
+  {
+    "name": "human_longevity_interventions_reviews",
+    "query": "human longevity healthspan interventions systematic review mortality aging",
+    "max_results": 18
+  },
+  {
+    "name": "exercise_cardiorespiratory_fitness_longevity",
+    "query": "cardiorespiratory fitness VO2max mortality longevity cohort meta-analysis",
+    "max_results": 18
+  },
+  {
+    "name": "resistance_training_sarcopenia_frailty",
+    "query": "resistance training sarcopenia frailty mortality older adults systematic review",
+    "max_results": 16
+  },
+  {
+    "name": "nutrition_dietary_restriction_aging",
+    "query": "caloric restriction intermittent fasting Mediterranean diet healthy aging mortality",
+    "max_results": 18
+  },
+  {
+    "name": "geroprotectors_mtor_metformin_senolytics",
+    "query": "geroprotectors rapamycin metformin senolytics aging clinical trial review",
+    "max_results": 18
+  },
+  {
+    "name": "nad_precursors_aging_trials",
+    "query": "nicotinamide riboside NMN NAD aging randomized trial older adults",
+    "max_results": 16
+  },
+  {
+    "name": "aging_clocks_disease_prediction",
+    "query": "epigenetic clock proteomic clock metabolomic biological age disease prediction mortality",
+    "max_results": 18
+  },
+  {
+    "name": "partial_reprogramming_rejuvenation",
+    "query": "partial reprogramming Yamanaka factors cellular rejuvenation aging",
+    "max_results": 16
+  },
+  {
+    "name": "immune_inflammation_aging",
+    "query": "immune aging inflammaging IL-11 Klotho aging lifespan intervention",
+    "max_results": 16
+  },
+  {
+    "name": "clinical_aging_biomarkers",
+    "query": "biomarkers of aging biological age clinical trial older adults",
+    "max_results": 18
+  },
+  {
+    "name": "frailty_multidomain_interventions",
+    "query": "frailty multidomain intervention older adults randomized trial systematic review",
+    "max_results": 18
+  },
+  {
+    "name": "dementia_prevention_lifestyle_aging",
+    "query": "dementia prevention lifestyle multidomain intervention cognitive decline aging trial",
+    "max_results": 18
+  },
+  {
+    "name": "diabetes_obesity_longevity_outcomes",
+    "query": "diabetes obesity weight loss mortality cardiovascular outcomes older adults meta-analysis",
+    "max_results": 18
+  },
+  {
+    "name": "itp_mouse_lifespan_drugs",
+    "query": "NIA interventions testing program mouse lifespan rapamycin acarbose 17 alpha estradiol",
+    "max_results": 18
+  },
+  {
+    "name": "nutraceuticals_aging_trials",
+    "query": "urolithin A spermidine taurine GlyNAC aging older adults trial review",
+    "max_results": 18
+  }
+]

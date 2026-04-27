@@ -1,70 +1,103 @@
-# 飞书多维表格结构
+# 飞书多维表格结构 / Feishu Base Schema
 
-飞书是展示层和人工审核层，GitHub 仍然是唯一事实源头。标准版第一阶段使用 PubMed、ClinicalTrials.gov、Crossref 三类来源。
+飞书是展示层、筛选层和人工审核层。GitHub 仍然是唯一事实源。
 
-## Base 名称
+Feishu is the display, screening, and manual review layer. GitHub remains the source of truth.
+
+## Base Name / 表格名称
 
 `长寿抗衰与健康寿命证据图谱`
 
-## 表 1：文献总表 / Papers
+## Table 1: 文献总表 / Papers
 
-用途：正式收录的文献、证据等级和双语结论。
+Purpose / 用途: formally included papers, evidence grades, and bilingual conclusions.
 
-主键：`paper_id`
+正式收录的文献、证据等级和中英双语结论。
 
-字段沿用 `docs/feishu-field-mapping.md`。
+Primary key / 主键: `paper_id`
 
-## 表 2：候选文献 / Candidate Sources
+Field mapping follows `docs/feishu-field-mapping.md`.
 
-用途：抓取结果和人工审核队列。候选文献不等于正式收录。
+## Table 2: 候选文献 / Candidate Sources
 
-| 字段名 | 类型 | 说明 |
+Purpose / 用途: raw discovery results and manual screening queue. Candidate records are not formal inclusion.
+
+抓取结果和人工审核队列。候选文献不等于正式收录。
+
+Core fields / 核心字段:
+
+| Field | Type | Meaning |
 |---|---|---|
-| id | 文本 | 候选记录 ID，例如 `pubmed-12345678` |
-| title_en | 长文本 | 英文标题 |
-| title_zh | 长文本 | 中文暂译标题 |
-| year | 数字 | 年份 |
-| doi | 文本 | DOI |
-| pmid | 文本 | PubMed ID |
-| trial_id | 文本 | ClinicalTrials.gov ID |
-| url | URL | 来源链接 |
-| source | 单选 | PubMed / ClinicalTrials.gov / Crossref |
-| query | 文本 | 来源查询名称 |
-| include_status | 单选 | needs_review / include / exclude / duplicate |
-| notes | 长文本 | 审核备注 |
-| last_checked | 日期 | 最后核查日期 |
+| id | Text | Candidate record ID, e.g. `pubmed-12345678` |
+| title_en | Text | English title |
+| title_zh | Text | Chinese translated title, filled during review |
+| year | Text | Publication or trial start year |
+| doi | Text | DOI |
+| pmid | Text | PubMed ID |
+| pmcid | Text | PubMed Central ID |
+| url | Text | Source URL |
+| source | Text | PubMed / ClinicalTrials.gov / Crossref |
+| query | Text | Query name |
+| include_status | Text | needs_review / shortlist / include / exclude / duplicate |
+| notes | Text | Fetch or review notes |
+| last_checked | Text | Last checked date |
 
-## 表 3：主题库 / Topics
+Review and scoring fields / 审核与评分字段:
 
-用途：主题页管理和文库发布导航。
+| Field | Meaning |
+|---|---|
+| reviewer | Reviewer |
+| review_date | Review date |
+| journal | Journal or registry |
+| journal_if | Journal Impact Factor, if available |
+| journal_if_year | IF year |
+| journal_if_source | IF source |
+| endpoint_value_score | Endpoint value subscore |
+| study_design_score | Study design subscore |
+| human_relevance_score | Human relevance subscore |
+| scale_replication_score | Scale and replication subscore |
+| effect_actionability_score | Effect and actionability subscore |
+| authority_signal_score | IF, journal, citation, registry, open-data signal |
+| atlas_coverage_score | Contribution to topic coverage |
+| bilingual_explainability_score | Chinese/English explainability |
+| penalty_score | Bias, safety, conflict, overclaim, duplicate penalty |
+| contribution_score | Final contribution score |
+| decision | high_priority_include / shortlist / candidate_hold / low_priority / exclude_or_archive |
+| reviewer_notes | Manual review notes |
 
-| 字段名 | 类型 | 说明 |
-|---|---|---|
-| topic_id | 文本 | 主题 ID |
-| title_zh | 文本 | 中文主题名 |
-| title_en | 文本 | 英文主题名 |
-| scope | 长文本 | 纳入范围 |
-| evidence_summary_zh | 长文本 | 中文证据总览 |
-| evidence_summary_en | 长文本 | English summary |
-| status | 单选 | draft / review / published |
-| paper_count | 数字 | 关联文献数量 |
-| last_checked | 日期 | 最后核查日期 |
+## Table 3: 主题库 / Topics
 
-## 表 4：发布日志 / Publish Log
+Purpose / 用途: topic management and future Feishu knowledge-base publishing.
 
-用途：记录 GitHub 到飞书多维表格和文库的同步。
+主题页管理和后续飞书知识库发布导航。
 
-| 字段名 | 类型 | 说明 |
-|---|---|---|
-| publish_id | 文本 | 发布 ID |
-| date | 日期 | 发布日期 |
-| target | 单选 | GitHub / Feishu Base / Feishu Docs / Feishu Wiki |
-| source_commit | 文本 | Git commit SHA |
-| changed_items | 长文本 | 更新内容 |
-| status | 单选 | success / failed / partial |
-| notes | 长文本 | 备注 |
+| Field | Meaning |
+|---|---|
+| topic_id | Topic ID |
+| title_zh | Chinese topic title |
+| title_en | English topic title |
+| scope | Inclusion scope |
+| evidence_summary_zh | Chinese evidence overview |
+| evidence_summary_en | English evidence overview |
+| status | draft / review / published |
+| paper_count | Linked paper count |
+| last_checked | Last checked date |
 
-## 飞书文库目录
+## Table 4: 发布日志 / Publish Log
+
+Purpose / 用途: record GitHub-to-Feishu sync and publishing events.
+
+| Field | Meaning |
+|---|---|
+| publish_id | Publish ID |
+| date | Date |
+| target | GitHub / Feishu Base / Feishu Docs / Feishu Wiki |
+| source_commit | Git commit SHA |
+| changed_items | Changed items |
+| status | success / failed / partial |
+| notes | Notes |
+
+## Feishu Knowledge Base Outline / 飞书知识库目录
 
 ```text
 长寿抗衰与健康寿命证据图谱
