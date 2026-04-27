@@ -34,10 +34,6 @@ def normalize_value(value: str) -> Any:
     if value is None:
         return ""
     value = str(value).strip()
-    if value.lower() == "true":
-        return True
-    if value.lower() == "false":
-        return False
     if value == "":
         return ""
     return value
@@ -60,12 +56,14 @@ def main() -> None:
     load_dotenv(ROOT / ".env")
 
     app_token = os.getenv("FEISHU_BITABLE_APP_TOKEN", "")
+    wiki_node_token = os.getenv("FEISHU_BITABLE_WIKI_NODE_TOKEN", "")
     table_id = os.getenv("FEISHU_SOURCE_TABLE_ID", "")
-    if not app_token or not table_id:
-        raise SystemExit("Missing FEISHU_BITABLE_APP_TOKEN or FEISHU_SOURCE_TABLE_ID.")
+    if not table_id:
+        raise SystemExit("Missing FEISHU_SOURCE_TABLE_ID.")
 
     mapping = load_mapping()
     client = FeishuClient()
+    app_token = client.resolve_bitable_app_token(app_token=app_token, wiki_node_token=wiki_node_token)
 
     existing = client.list_bitable_records(app_token, table_id)
     by_paper_id: Dict[str, str] = {}

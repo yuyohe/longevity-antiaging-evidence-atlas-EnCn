@@ -96,3 +96,22 @@ class FeishuClient:
         url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/{record_id}"
         resp = requests.put(url, headers=self._headers(), json={"fields": fields}, timeout=30)
         return self._json(resp)
+
+    def get_wiki_node(self, node_token: str) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/wiki/v2/spaces/get_node"
+        resp = requests.get(url, headers=self._headers(), params={"token": node_token}, timeout=30)
+        return self._json(resp)
+
+    def resolve_bitable_app_token(self, app_token: str = "", wiki_node_token: str = "") -> str:
+        if app_token:
+            return app_token
+        if not wiki_node_token:
+            raise FeishuError("Missing FEISHU_BITABLE_APP_TOKEN or FEISHU_BITABLE_WIKI_NODE_TOKEN.")
+        data = self.get_wiki_node(wiki_node_token)
+        node = data.get("data", {}).get("node", {})
+        if node.get("obj_type") != "bitable":
+            raise FeishuError(f"Wiki node is not a bitable: {node.get('obj_type')}")
+        obj_token = node.get("obj_token", "")
+        if not obj_token:
+            raise FeishuError(f"Wiki node response missing obj_token: {data}")
+        return obj_token

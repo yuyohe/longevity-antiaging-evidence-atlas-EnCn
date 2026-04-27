@@ -61,6 +61,7 @@ App Secret
 
 ```text
 FEISHU_BITABLE_APP_TOKEN
+FEISHU_BITABLE_WIKI_NODE_TOKEN
 FEISHU_SOURCE_TABLE_ID
 FEISHU_CANDIDATE_TABLE_ID
 FEISHU_TOPIC_TABLE_ID
@@ -81,8 +82,14 @@ cp .env.example .env
 FEISHU_APP_ID=cli_xxx
 FEISHU_APP_SECRET=xxx
 FEISHU_BITABLE_APP_TOKEN=bascn_xxx
+FEISHU_BITABLE_WIKI_NODE_TOKEN=
 FEISHU_SOURCE_TABLE_ID=tblxxx
 ```
+
+如果多维表格 URL 是 `https://xxx.feishu.cn/wiki/{node_token}?table=tbl...`，需要先通过 Wiki `get_node` 接口把 `{node_token}` 换成真实的多维表格 `obj_token`。本项目支持两种配置：
+
+- 已知真实多维表格 token：填写 `FEISHU_BITABLE_APP_TOKEN`
+- 只有 Wiki 链接：填写 `FEISHU_BITABLE_WIKI_NODE_TOKEN`，脚本会自动解析
 
 ## 第四步：同步证据矩阵到飞书
 
