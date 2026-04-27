@@ -1,0 +1,30 @@
+name: Fetch PubMed Candidates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Fetch PubMed candidates
+        env:
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: python scripts/fetch_pubmed.py
+      - name: Commit candidates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/candidate_sources.csv data/query_log.csv
+          git diff --cached --quiet || git commit -m "data: update PubMed candidate sources"
+          git push

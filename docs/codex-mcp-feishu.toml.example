@@ -1,0 +1,22 @@
+# Example Codex MCP config for Feishu/Lark OpenAPI MCP.
+# Put this in ~/.codex/config.toml, then replace placeholders.
+
+[mcp_servers.lark]
+command = "npx"
+args = [
+  "-y",
+  "@larksuiteoapi/lark-mcp",
+  "mcp",
+  "-a",
+  "<your_feishu_app_id>",
+  "-s",
+  "<your_feishu_app_secret>"
+]
+
+# For user identity / personal documents, use OAuth user token mode instead:
+# args = [
+#   "-y", "@larksuiteoapi/lark-mcp", "mcp",
+#   "-a", "<your_feishu_app_id>",
+#   "-s", "<your_feishu_app_secret>",
+#   "--oauth", "--token-mode", "user_access_token"
+# ]

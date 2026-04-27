@@ -1,0 +1,27 @@
+name: Publish to Feishu
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/evidence_matrix.csv"
+      - "config/feishu_field_mapping.json"
+      - "scripts/sync_feishu_bitable.py"
+
+jobs:
+  publish-feishu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Sync evidence matrix to Feishu Base
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_BITABLE_APP_TOKEN: ${{ secrets.FEISHU_BITABLE_APP_TOKEN }}
+          FEISHU_SOURCE_TABLE_ID: ${{ secrets.FEISHU_SOURCE_TABLE_ID }}
+        run: python scripts/sync_feishu_bitable.py

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "longevity_healthspan_core",
+    "query": "(longevity OR lifespan OR healthspan) AND (human OR mouse OR mice OR clinical trial OR cohort)",
+    "max_results": 20
+  },
+  {
+    "name": "vo2max_mortality",
+    "query": "(VO2max OR cardiorespiratory fitness) AND mortality",
+    "max_results": 20
+  },
+  {
+    "name": "senolytics_aging",
+    "query": "senolytic OR senolytics OR cellular senescence aging",
+    "max_results": 20
+  },
+  {
+    "name": "nad_nmn_nr",
+    "query": "(NMN OR nicotinamide riboside OR NAD) AND aging",
+    "max_results": 20
+  }
+]

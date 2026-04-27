@@ -1,0 +1,22 @@
+{
+  "paper_id": "paper_id",
+  "year": "年份",
+  "topic": "主题",
+  "intervention_or_exposure": "干预/暴露",
+  "study_type": "研究类型",
+  "species": "物种",
+  "sample_size": "样本量",
+  "primary_endpoint": "主要终点",
+  "endpoint_class": "终点等级",
+  "effect_size": "效应量",
+  "evidence_level": "证据等级",
+  "risk_of_bias": "偏倚风险",
+  "actionability": "可行动性",
+  "medical_supervision": "是否需要医生监督",
+  "recommendation_class": "推荐等级",
+  "claim_supported": "支持的结论",
+  "claim_not_supported": "不支持的结论",
+  "zh_summary": "中文一句话结论",
+  "en_summary": "英文一句话结论",
+  "last_checked": "最后核查日期"
+}

@@ -1,0 +1,54 @@
+name: Codex Maintenance
+
+on:
+  workflow_dispatch:
+
+jobs:
+  codex:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Run Codex maintenance
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/weekly-maintenance.md
+          output-file: codex-output.md
+          sandbox: workspace-write
+          safety-strategy: drop-sudo
+      - name: Validate changes
+        run: |
+          python scripts/lint.py
+          python scripts/build_index.py
+      - name: Create branch and commit changes
+        run: |
+          BRANCH="codex/weekly-maintenance-${{ github.run_number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add .
+          git diff --cached --quiet || git commit -m "codex: weekly evidence maintenance"
+          git push origin "$BRANCH"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+      - name: Open pull request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = process.env.BRANCH;
+            const { owner, repo } = context.repo;
+            const pulls = await github.rest.pulls.create({
+              owner,
+              repo,
+              title: `Codex weekly evidence maintenance #${context.runNumber}`,
+              head: branch,
+              base: 'main',
+              body: 'Automated Codex maintenance run. Please review evidence wording, citations, and medical safety boundaries before merging.'
+            });
+            core.info(`Created PR: ${pulls.data.html_url}`);

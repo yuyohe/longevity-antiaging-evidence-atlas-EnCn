@@ -1,0 +1,31 @@
+[
+  {
+    "id": "example-2026-placeholder",
+    "title_en": "Replace this with a real paper title",
+    "title_zh": "替换为真实论文中文标题",
+    "year": 2026,
+    "journal": "TBD",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "source_type": "peer_reviewed_paper",
+    "study_type": "needs_classification",
+    "species": "needs_classification",
+    "sample_size": null,
+    "population": "",
+    "intervention_or_exposure": "",
+    "comparator": "",
+    "primary_endpoint": "",
+    "endpoint_class": "",
+    "effect_size": "",
+    "confidence_interval": "",
+    "risk_of_bias": "not_checked",
+    "conflict_of_interest": "not_checked",
+    "funding": "not_checked",
+    "license": "metadata_only",
+    "included": false,
+    "exclusion_reason": "placeholder",
+    "last_checked": "2026-04-27"
+  }
+]

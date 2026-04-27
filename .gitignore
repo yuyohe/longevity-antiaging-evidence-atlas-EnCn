@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+build/
+dist/
+.tmp/
+logs/
+.cache/
+raw_pdfs/
+raw_html/
+*.pdf
+*.sqlite
+codex-output.md
