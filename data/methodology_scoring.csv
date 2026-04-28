@@ -1,0 +1,13 @@
+section_id,section_zh,section_en,description_zh,weight_or_rule,last_checked
+method-01,项目定位,Project position,三条并列路径：健康寿命、外观抗老与皮肤健康、补剂证据矩阵。终点必须分清楚，皮肤改善不等于延寿。,rule,2026-04-28
+method-02,候选来源,Candidate sources,优先 PubMed，补充 ClinicalTrials.gov、Crossref、NIH ODS、NCCIH、Cochrane 和可信指南资料。,source_priority,2026-04-28
+method-03,终点价值,Endpoint value,L1 硬终点和 L2 健康寿命功能终点权重最高；S1 只代表皮肤临床/外观终点；S2/M 不能外推为临床结论。,20,2026-04-28
+method-04,研究设计,Study design,系统综述、Meta 分析、RCT、大队列优先；小样本、动物、体外和题录级证据降权。,20,2026-04-28
+method-05,人类相关性,Human relevance,人体研究最高，动物和细胞研究仅作为机制线索。,15,2026-04-28
+method-06,规模与重复验证,Scale and replication,样本量、中心数、随访时间、重复研究和独立验证会提高贡献度。,10,2026-04-28
+method-07,效应与安全性,Effect and safety,同时看效果大小、临床意义、不良事件、禁忌和风险收益。,10,2026-04-28
+method-08,权威性信号,Authority signal,不伪造 IF；先使用 PMID、DOI、ClinicalTrials ID、开放全文、注册试验、可信机构资料作为替代信号。,10,2026-04-28
+method-09,图谱覆盖价值,Atlas coverage value,能填补主题空白、覆盖热门争议或关键干预的研究提高优先级。,10,2026-04-28
+method-10,双语解释价值,Bilingual explainability,能清楚解释给中文和英文读者的研究优先整理。,5,2026-04-28
+method-11,补剂双轴评分,Supplement dual-axis scoring,补剂同时评价 longevity_evidence_level 和 skin_beauty_evidence_level，不能把皮肤指标写成延寿。,rule,2026-04-28
+method-12,更新记录,Update record,每次更新记录 GitHub commit、飞书同步状态、更新日期、变更数量和草稿状态。,rule,2026-04-28

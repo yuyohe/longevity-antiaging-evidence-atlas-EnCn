@@ -15,6 +15,9 @@ OUT = ROOT / "build" / "feishu-docs"
 PUBLIC_FILES = [
     ROOT / "README.zh-CN.md",
     ROOT / "content" / "overview" / "public-summary.md",
+    ROOT / "content" / "overview" / "methods-and-scoring.md",
+    ROOT / "content" / "overview" / "skin-beauty-summary.md",
+    ROOT / "content" / "overview" / "supplement-summary.md",
     ROOT / "docs" / "current-output-status.md",
     ROOT / "content" / "analysis" / "evidence-ranking.md",
     ROOT / "content" / "recommendations" / "for-general-readers.md",
@@ -30,6 +33,11 @@ def main() -> None:
     for file in topics_dir.glob("*.md"):
         if not file.name.startswith("_"):
             shutil.copy2(file, OUT / f"topic-{file.name}")
+    skin_topics_dir = ROOT / "content" / "skin-beauty-topics"
+    if skin_topics_dir.exists():
+        for file in skin_topics_dir.glob("*.md"):
+            if not file.name.startswith("_"):
+                shutil.copy2(file, OUT / f"skin-topic-{file.name}")
     papers_dir = ROOT / "content" / "papers"
     for file in papers_dir.glob("*.md"):
         if not file.name.startswith("_"):
