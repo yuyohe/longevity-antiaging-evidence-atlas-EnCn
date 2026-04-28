@@ -1,5 +1,10 @@
 # Longevity Anti-Aging Evidence Atlas EnCn
 
+> Public entry point: [`content/overview/public-summary.md`](content/overview/public-summary.md)
+>
+> ??????[`content/overview/public-summary.md`](content/overview/public-summary.md)
+
+
 A bilingual evidence atlas for longevity, anti-aging claims, healthspan, clinical prevention, supplements, biomarkers, and frontier geroscience.
 
 Chinese public name: **长寿抗衰与健康寿命证据图谱**.

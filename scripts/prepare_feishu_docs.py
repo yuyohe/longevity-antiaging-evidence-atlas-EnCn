@@ -14,6 +14,7 @@ OUT = ROOT / "build" / "feishu-docs"
 
 PUBLIC_FILES = [
     ROOT / "README.zh-CN.md",
+    ROOT / "content" / "overview" / "public-summary.md",
     ROOT / "docs" / "current-output-status.md",
     ROOT / "content" / "analysis" / "evidence-ranking.md",
     ROOT / "content" / "recommendations" / "for-general-readers.md",

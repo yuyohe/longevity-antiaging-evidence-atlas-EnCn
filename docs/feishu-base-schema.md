@@ -109,3 +109,32 @@ Purpose / 用途: record GitHub-to-Feishu sync and publishing events.
 ├── 05 普通读者建议边界
 └── 99 更新日志
 ```
+
+## Table 5: 对外总览 / Public Overview
+
+Purpose / 用途: public-facing entry table. It summarizes the 20 topics before readers open individual evidence records.
+
+对外展示入口表。读者先看这里，理解本项目是什么、当前能说什么、不能说什么，再进入主题页和论文卡片。
+
+Primary key / 主键: `summary_id`
+
+| Field | Meaning |
+|---|---|
+| summary_id | Summary row ID |
+| topic_id | Topic ID |
+| title_zh | Chinese topic title |
+| title_en | English topic title |
+| current_public_position_zh | Current public-facing position |
+| current_public_position_en | Current English-facing position |
+| evidence_level_top | Highest draft evidence level in the formal matrix |
+| recommendation_boundary | Public-health / medical / research-only boundary |
+| finding_count | Number of finding records in this topic |
+| formal_matrix_count | Number of formal matrix records in this topic |
+| pmc_or_abstract_count | Records with PMC or abstract-level evidence |
+| metadata_only_count | Records with metadata only |
+| what_we_know_zh | What the atlas currently supports |
+| what_remains_uncertain_zh | What remains uncertain |
+| reader_boundary_zh | Reader-facing caution |
+| github_topic_path | GitHub topic page path |
+| status | Draft/review/published status |
+| last_checked | Last checked date |

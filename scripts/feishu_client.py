@@ -104,6 +104,39 @@ class FeishuClient:
                 break
         return fields
 
+    def list_bitable_tables(self, app_token: str, page_size: int = 100) -> List[Dict[str, Any]]:
+        tables: List[Dict[str, Any]] = []
+        page_token: Optional[str] = None
+        while True:
+            params: Dict[str, Any] = {"page_size": page_size}
+            if page_token:
+                params["page_token"] = page_token
+            url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables"
+            resp = requests.get(url, headers=self._headers(), params=params, timeout=30)
+            data = self._json(resp)
+            payload = data.get("data", {})
+            tables.extend(payload.get("items", []))
+            page_token = payload.get("page_token")
+            if not payload.get("has_more") or not page_token:
+                break
+        return tables
+
+    def create_bitable_table(
+        self,
+        app_token: str,
+        table_name: str,
+        default_view_name: str,
+        fields: List[Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables"
+        resp = requests.post(
+            url,
+            headers=self._headers(),
+            json={"table": {"name": table_name, "default_view_name": default_view_name, "fields": fields}},
+            timeout=30,
+        )
+        return self._json(resp)
+
     def create_bitable_text_field(self, app_token: str, table_id: str, field_name: str) -> Dict[str, Any]:
         url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/fields"
         resp = requests.post(
