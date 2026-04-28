@@ -246,6 +246,14 @@ Current dashboard summary after v0.5:
 - Oral collagen: no longer A; public framing is cautious and downgraded.
 - Healthspan public topic levels after caps: A=8 topics, B=5 topics, C=5 topics, D=2 topics.
 
+## 2026-04-29 Skin Scoring Correction
+
+- Corrected `sunscreen-photoaging-prevention` from an overly conservative automated public grade to `A`.
+- Rationale: broad-spectrum sunscreen / photoprotection has strong causal plausibility, human RCT evidence for slowing photoaging, and broad dermatology consensus for preventing premature skin aging.
+- Boundary kept explicit: `A` applies to prevention and slowing of UV-related photoaging, not reversal of all existing skin aging, not a claim that any single product is superior, and not a substitute for professional dermatology or aesthetic procedures.
+- Updated GitHub files: `data/skin_beauty_summary.csv`, `data/skin_beauty_topics.csv`, `content/overview/skin-beauty-summary.md`, and scoring override logic in `scripts/apply_evidence_scoring_v04.py`.
+- Feishu `外观抗老总览` should be re-synced after this correction.
+
 ## Operating Rules For Future Threads
 
 - Always read this file first.

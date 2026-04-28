@@ -475,6 +475,10 @@ def update_skin_summary(findings: list[dict[str, str]]) -> None:
             if row["topic_id"] == "oral-collagen-peptides":
                 row["current_public_position_zh"] = "口服胶原肽对皮肤水分、弹性等软终点有候选证据，但异质性、商业化和终点临床意义限制较大；公开等级下调为 C。"
                 row["reader_boundary_zh"] = "不支持把口服胶原写成逆龄、延寿或替代均衡蛋白摄入；需要看研究质量和利益冲突。"
+            if row["topic_id"] == "sunscreen-photoaging-prevention":
+                row["evidence_level_top"] = "A"
+                row["current_public_position_zh"] = "广谱防晒/光防护对预防 UV 相关光老化属于皮肤美容图谱中最强、最可转化的证据方向之一；核心结论是预防和减缓光老化，而不是逆转所有皮肤老化。"
+                row["reader_boundary_zh"] = "支持长期规范光防护作为皮肤健康基础；不支持把防晒写成逆龄治疗、替代医美或保证某个具体产品优于其他产品。"
         row["last_checked"] = TODAY
     write_csv(path, rows)
 
