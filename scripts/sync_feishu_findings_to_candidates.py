@@ -82,6 +82,11 @@ def ensure_fields(client: FeishuClient, app_token: str, table_id: str) -> None:
         time.sleep(0.2)
 
 
+def chunks(items: list[Any], size: int = 500):
+    for start in range(0, len(items), size):
+        yield items[start : start + size]
+
+
 def main() -> None:
     load_dotenv(ROOT / ".env")
     table_id = os.getenv("FEISHU_CANDIDATE_TABLE_ID", "")
@@ -102,7 +107,7 @@ def main() -> None:
         if candidate_id:
             by_candidate_id[str(candidate_id)] = record.get("record_id", "")
 
-    updated = 0
+    payloads: list[Dict[str, Any]] = []
     missing = 0
     with FINDINGS.open("r", encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
@@ -111,8 +116,14 @@ def main() -> None:
                 missing += 1
                 continue
             fields = {field: normalize(row.get(field, "")) for field in FINDING_FIELDS}
-            client.update_bitable_record(app_token, table_id, record_id, fields)
-            updated += 1
+            payloads.append({"record_id": record_id, "fields": fields})
+
+    updated = 0
+    for batch in chunks(payloads):
+        client.batch_update_bitable_records(app_token, table_id, batch)
+        updated += len(batch)
+        print(f"candidate_findings_updated={updated}/{len(payloads)}")
+        time.sleep(0.2)
     print(f"Feishu candidate findings sync complete: updated={updated}, missing={missing}")
 
 

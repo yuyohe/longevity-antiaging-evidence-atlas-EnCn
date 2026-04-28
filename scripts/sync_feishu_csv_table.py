@@ -46,6 +46,11 @@ def ensure_fields(client: FeishuClient, app_token: str, table_id: str, primary_f
         time.sleep(0.2)
 
 
+def chunks(items: list[Any], size: int = 500):
+    for start in range(0, len(items), size):
+        yield items[start : start + size]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", required=True, help="CSV path relative to repo root.")
@@ -79,6 +84,7 @@ def main() -> None:
     existing = client.list_bitable_records(app_token, table_id)
     by_key: dict[str, str] = {}
     blank_record_ids: list[str] = []
+    missing_key_record_ids: list[str] = []
     for record in existing:
         fields = record.get("fields", {})
         key = fields.get(args.primary_key)
@@ -86,9 +92,11 @@ def main() -> None:
             by_key[str(key)] = record.get("record_id", "")
         elif not fields:
             blank_record_ids.append(record.get("record_id", ""))
+        else:
+            missing_key_record_ids.append(record.get("record_id", ""))
 
-    created = 0
-    updated = 0
+    create_payloads: list[dict[str, Any]] = []
+    update_payloads: list[dict[str, Any]] = []
     seen = set()
     for row in rows:
         key = row.get(args.primary_key, "")
@@ -96,11 +104,23 @@ def main() -> None:
         fields = {field: normalize(row.get(field, "")) for field in fieldnames}
         fields[args.primary_field] = row.get("title_zh") or row.get("name_zh") or row.get(args.primary_key, "")
         if key in by_key:
-            client.update_bitable_record(app_token, table_id, by_key[key], fields)
-            updated += 1
+            update_payloads.append({"record_id": by_key[key], "fields": fields})
         else:
-            client.create_bitable_record(app_token, table_id, fields)
-            created += 1
+            create_payloads.append({"fields": fields})
+
+    created = 0
+    for batch in chunks(create_payloads):
+        client.batch_create_bitable_records(app_token, table_id, batch)
+        created += len(batch)
+        print(f"csv_created={created}/{len(create_payloads)}")
+        time.sleep(0.2)
+
+    updated = 0
+    for batch in chunks(update_payloads):
+        client.batch_update_bitable_records(app_token, table_id, batch)
+        updated += len(batch)
+        print(f"csv_updated={updated}/{len(update_payloads)}")
+        time.sleep(0.2)
 
     deleted = 0
     if args.delete_stale:
@@ -109,6 +129,10 @@ def main() -> None:
                 client.delete_bitable_record(app_token, table_id, record_id)
                 deleted += 1
         for record_id in blank_record_ids:
+            if record_id:
+                client.delete_bitable_record(app_token, table_id, record_id)
+                deleted += 1
+        for record_id in missing_key_record_ids:
             if record_id:
                 client.delete_bitable_record(app_token, table_id, record_id)
                 deleted += 1

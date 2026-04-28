@@ -3,7 +3,7 @@
 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。  
 Draft status: automatically prepared; not fully reviewed; not medical advice.
 
-Last updated / 更新时间：2026-04-28
+Last updated / 更新时间：2026-04-29
 
 ## 我们为什么重做评分
 

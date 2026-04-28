@@ -1,6 +1,6 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-04-28
+Last updated / 最后更新：2026-04-29
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
@@ -66,8 +66,8 @@ Useful Feishu links:
 Main longevity evidence atlas:
 
 - `data/candidate_sources.csv`: candidate source pool.
-- `data/evidence_findings.csv`: 600 healthspan/longevity findings with bilingual draft fields and v0.4 scoring fields.
-- `data/evidence_matrix.csv`: 300 formally selected/public matrix rows.
+- `data/evidence_findings.csv`: 1800 healthspan/longevity findings with bilingual draft fields and v0.4/v0.5 scoring fields.
+- `data/evidence_matrix.csv`: 900 formally selected/public matrix rows.
 - `data/topics.csv`: 20 healthspan/longevity topics.
 - `content/topics/`: 20 public topic pages.
 - `content/papers/`: paper-card style public draft pages.
@@ -93,10 +93,13 @@ Methodology:
 - `data/methodology_scoring.csv`: previous methodology table.
 - `data/scoring_policy_v0_4.csv`: current v0.4 scoring policy table.
 - `scripts/apply_evidence_scoring_v04.py`: applies v0.4 scoring across healthspan findings, skin findings, supplement matrix, summaries, and public method pages.
+- `scripts/expand_healthspan_pubmed_v05.py`: expands healthspan PubMed candidates using high-weight journal and high-design search tiers.
+- `scripts/build_healthspan_outputs_v05.py`: rebuilds 1800 paper cards, 20 topic pages, 900 evidence matrix rows, public summary, status, and analysis outputs.
+- `scripts/cleanup_feishu_evidence_matrix.py`: removes stale/duplicate Feishu evidence matrix records after schema changes.
 
 ## Current Scoring Framework
 
-Current version: `v0.4_GRADE_RoB_AMSTAR_bibliometrics`.
+Current version: `v0.5_expanded_selection_plus_v0.4_scoring`.
 
 The framework combines:
 
@@ -108,6 +111,7 @@ The framework combines:
 - OpenAlex citation count where cached/available.
 - Risk adjustments for abstract-only records, metadata-only records, soft endpoints, possible industry funding, and commercial overclaim risk.
 - Confidence caps so animal/mechanistic/metadata-only/high-commercial-risk soft endpoint claims cannot become A solely because of study type.
+- v0.5 topic-level confidence caps: early or highly translational topics such as rapamycin/mTOR, senolytics, NAD/NMN/NR, Klotho/IL-11, partial reprogramming, ITP mouse lifespan, autophagy/mitophagy, and microbiome/inflammaging are capped below A where appropriate, even if PubMed contains review-level records.
 
 Important policy decisions:
 
@@ -126,6 +130,9 @@ Important policy decisions:
 6. Rebuilt the scoring methodology after user challenged over-optimistic grades, especially oral collagen.
 7. Added v0.4 scoring fields to CSVs and Feishu tables.
 8. Added public method and quality dashboard pages.
+9. Expanded healthspan/longevity findings from 600 to 1800 records using PubMed high-weight-journal/high-design search tiers.
+10. Expanded candidate pool from 938 to 5983 records.
+11. Rebuilt paper cards, topic pages, public summary, evidence matrix, and Feishu tables for the v0.5 expansion.
 
 ## Standard Local Commands
 
@@ -144,6 +151,15 @@ python scripts\prepare_feishu_docs.py
 Apply v0.4 scoring with cached bibliometrics only:
 
 ```powershell
+python scripts\apply_evidence_scoring_v04.py
+```
+
+Expand healthspan findings to 1800:
+
+```powershell
+python scripts\expand_healthspan_pubmed_v05.py --target 1800 --retmax-per-topic-tier 150
+python scripts\apply_evidence_scoring_v04.py
+python scripts\build_healthspan_outputs_v05.py --matrix-limit 900
 python scripts\apply_evidence_scoring_v04.py
 ```
 
@@ -176,6 +192,8 @@ python scripts\sync_feishu_csv_table.py --csv data/scoring_policy_v0_4.csv --tab
 python scripts\sync_feishu_csv_table.py --csv data/evidence_matrix.csv --table-name 文献总表 --table-id tblYryTL08h4jE53 --primary-key paper_id --primary-field 文本
 
 python scripts\sync_feishu_findings_to_candidates.py
+
+python scripts\cleanup_feishu_evidence_matrix.py
 ```
 
 After committing to GitHub, append publish log:
@@ -186,19 +204,26 @@ python scripts\sync_feishu_publish_log.py
 
 ## Latest Sync Status Before This Handoff
 
-Completed in this working round:
+Completed in the v0.5 expansion round:
 
+- Candidate pool: 5983 records.
+- Healthspan findings: 1800 records, 90 per topic.
+- Evidence matrix: 900 records.
+- Paper cards: 1800 Markdown pages.
+- Topic pages: 20 Markdown pages.
+- Feishu `候选文献`: all 5983 candidate records present; 1800 finding/scoring records updated.
+- Feishu `文献总表`: 900 current records retained after deleting 300 stale legacy records.
 - Feishu `对外总览`: 20 rows updated.
+- Feishu `主题库`: 20 rows updated.
 - Feishu `外观抗老总览`: 8 rows updated.
 - Feishu `补剂证据矩阵`: 100 rows updated.
-- Feishu `方法学与评分说明`: v0.4 rows added.
-- Feishu `文献总表`: 300 rows updated with v0.4 fields.
-- Feishu `候选文献`: 600 finding records updated with v0.4 fields.
+- Feishu `方法学与评分说明`: 11 rows updated.
 - Local validation passed:
   - `python scripts\lint.py`
   - `python scripts\build_index.py`
   - `python scripts\validate_public_drafts.py`
   - `python scripts\validate_skin_beauty_public_drafts.py`
+  - `python scripts\prepare_feishu_docs.py`
 
 ## Public Summary Window
 
@@ -213,12 +238,13 @@ Supporting public windows:
 - `content/overview/skin-beauty-summary.md`
 - `content/overview/supplement-summary.md`
 
-Current dashboard summary after v0.4:
+Current dashboard summary after v0.5:
 
-- Healthspan/longevity findings: 600 records.
+- Healthspan/longevity findings: 1800 records.
 - Skin/appearance findings: 160 records.
 - Supplement/nutrition matrix: 100 entries.
 - Oral collagen: no longer A; public framing is cautious and downgraded.
+- Healthspan public topic levels after caps: A=8 topics, B=5 topics, C=5 topics, D=2 topics.
 
 ## Operating Rules For Future Threads
 

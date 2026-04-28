@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from feishu_client import FeishuClient, FeishuError
 
 ROOT = Path(__file__).resolve().parents[1]
-TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-28")
+TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-29")
 
 
 def git_commit() -> str:
@@ -48,9 +48,9 @@ def main() -> None:
             "date": TODAY,
             "target": "GitHub + Feishu Base + Feishu Docs package",
             "source_commit": commit,
-            "changed_items": "v0.4 scoring overhaul: GRADE/RoB/AMSTAR framework, iCite/OpenAlex signals, confidence caps, collagen downgrade, updated public summary/skin/supplement/methodology tables",
+            "changed_items": "v0.5 expansion: candidate pool 5983, healthspan findings 1800, paper cards 1800, evidence matrix 900, high-weight/high-design PubMed search, topic confidence caps, Feishu tables synced",
             "status": "success",
-            "notes": "Scoring fields synced to Feishu public summary, skin summary, supplement matrix, methodology table, evidence matrix, and candidate findings.",
+            "notes": "Feishu candidate pool, 1800 finding fields, 900 evidence matrix records, public summary, topics, methodology, skin summary, and supplement matrix synced; stale evidence matrix records cleaned.",
         },
     )
     print("Feishu publish log synced.")

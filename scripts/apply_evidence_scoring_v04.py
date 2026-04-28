@@ -19,7 +19,7 @@ CONTENT = ROOT / "content"
 CACHE = ROOT / "build" / "cache"
 CACHE.mkdir(parents=True, exist_ok=True)
 
-TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-28")
+TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-29")
 METHOD_MD = CONTENT / "overview" / "evidence-scoring-v0-4.md"
 METHOD_CSV = DATA / "scoring_policy_v0_4.csv"
 SUMMARY_WINDOW_MD = CONTENT / "overview" / "public-summary.md"
@@ -92,7 +92,7 @@ def request_json(url: str, timeout: int = 20) -> dict:
 def batch_icite(pmids: Iterable[str]) -> dict[str, dict]:
     cache_path = CACHE / "icite_rcr_cache.json"
     cache = load_json(cache_path)
-    if os.environ.get("SCORING_FETCH_EXTERNAL", "0") != "1":
+    if os.environ.get("SCORING_FETCH_EXTERNAL", "0") != "1" and os.environ.get("SCORING_FETCH_ICITE", "0") != "1":
         return cache
     missing = [p for p in sorted(set(pmids)) if p and p not in cache]
     for start in range(0, len(missing), 900):
@@ -117,7 +117,7 @@ def batch_icite(pmids: Iterable[str]) -> dict[str, dict]:
 def openalex_lookup(rows: list[dict[str, str]]) -> dict[str, dict]:
     cache_path = CACHE / "openalex_work_cache.json"
     cache = load_json(cache_path)
-    if os.environ.get("SCORING_FETCH_EXTERNAL", "0") != "1":
+    if os.environ.get("SCORING_FETCH_EXTERNAL", "0") != "1" and os.environ.get("SCORING_FETCH_OPENALEX", "0") != "1":
         return cache
     targets: list[tuple[str, str]] = []
     for row in rows:
@@ -168,6 +168,8 @@ def design_score(study_type: str) -> int:
         return 34
     if "randomized" in s or "clinical_trial" in s or "clinical trial" in s:
         return 29
+    if "mendelian" in s:
+        return 26
     if "cohort" in s:
         return 24
     if "observational" in s or "human_or_mixed" in s:
@@ -317,10 +319,29 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
     endpoint = (row.get("endpoint_class_draft") or row.get("endpoint_class") or "").upper()
     depth = (row.get("evidence_source_depth") or "").lower()
     topic = row.get("topic_id", "")
+    if domain == "longevity":
+        topic_caps = {
+            "caloric-restriction-human": "B",
+            "time-restricted-eating": "B",
+            "metformin-aging": "B",
+            "rapamycin-mtor-aging": "C",
+            "senolytics": "C",
+            "nad-nmn-nr-aging": "C",
+            "epigenetic-clocks": "B",
+            "itp-mouse-lifespan": "D",
+            "klotho-il11-aging": "C",
+            "partial-reprogramming": "D",
+            "autophagy-mitophagy": "C",
+            "microbiome-inflammaging": "B",
+        }
+        if topic in topic_caps:
+            return topic_caps[topic]
     if "metadata_only" in depth:
         return "D"
     if "animal" in study or "preclinical" in study or "mechanistic" in study or endpoint in {"S2", "M", "H6"}:
         return "D"
+    if endpoint == "H5":
+        return "B"
     if domain == "skin":
         if topic in {"oral-collagen-peptides", "polyphenols-skin-photoprotection", "hyaluronic-acid-ceramides-hydration"}:
             return "B"

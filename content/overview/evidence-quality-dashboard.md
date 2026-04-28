@@ -3,11 +3,11 @@
 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。  
 Draft status: automatically prepared; not fully reviewed; not medical advice.
 
-Last updated / 更新时间：2026-04-28
+Last updated / 更新时间：2026-04-29
 
 ## 总览窗口 / Summary Window
 
-- 健康寿命文献：600 条；v0.4 等级分布：A:51, B:127, C:40, D:311, E:71。
+- 健康寿命文献：1800 条；v0.4 等级分布：A:158, B:726, C:623, D:263, E:30。
 - 外观抗老/皮肤文献：160 条；v0.4 等级分布：A:0, B:12, C:59, D:73, E:16。
 - 补剂证据矩阵：100 个补剂/营养方向；v0.4 等级分布：A:0, B:0, C:6, D:48, E:46。
 - 对外阅读入口仍然是 `public-summary.md`，但每条记录现在可追踪到 v0.4 综合评分、影响力信号和上限规则。
@@ -29,18 +29,18 @@ Last updated / 更新时间：2026-04-28
 
 | 等级 | 分数 | 主题 | 年份 | 标题 |
 |---|---:|---|---:|---|
-| A | 94 | 心肺适能与死亡风险 | 2026 | Cardiac Rehabilitation in Patients with Implantable Cardioverter-Defibrillators: A Systematic Review and Meta-Analysis o |
-| A | 93 | 抗阻训练、肌肉与衰弱 | 2026 | Effect of leucine-enriched essential amino acid supplementation combined with different exercise regimen on appendicular |
-| A | 93 | 抗阻训练、肌肉与衰弱 | 2026 | LEAN mass Preservation with Resistance Exercise and Protein during semaglutide and tirzepatide therapy (LEAN-PREP study) |
-| A | 92 | 心肺适能与死亡风险 | 2025 | Effect of preoperative prehabilitation on the 6-minute walk distance and postoperative outcomes in adult patients: meta- |
-| A | 92 | 心肺适能与死亡风险 | 2025 | Telehealth-Based Cardiac Rehabilitation for Heart Failure: A Systematic Review of Effectiveness, Access, and Patient-Cen |
-| A | 92 | 心肺适能与死亡风险 | 2026 | Systematic review of prognostic value of cardiorespiratory fitness in patients with cirrhosis. |
-| A | 92 | 抗阻训练、肌肉与衰弱 | 2026 | Disuse-Induced Muscle Atrophy and Muscle Weakness From Hospitalization to Spaceflight: Exercise Succeeds in Prevention a |
-| A | 91 | 抗阻训练、肌肉与衰弱 | 2026 | Reducing frailty in frail people with multiple sclerosis: Feasibility of a 6-week multimodal exercise training program. |
-| A | 90 | 心肺适能与死亡风险 | 2026 | High-intensity interval training for reducing cardiometabolic syndrome in healthy but sedentary populations. |
-| A | 90 | 身体活动与健康寿命 | 2026 | Exercise Volume and Coronary Artery Calcification: A Systematic Review. |
-| A | 90 | 身体活动与健康寿命 | 2026 | Emergency Ventral Hernia Management in Older Adults: A Retrospective Cohort Study and Structured Review of the Literatur |
-| A | 90 | 血压与健康寿命 | 2026 | Exploring the Causal Relationship and Potential Mediating Mechanisms Between Obesity and Facial Aging: A Two-Sample, Mul |
+| A | 90 | 心肺适能与死亡风险 | 2025 | Cardiorespiratory fitness, body mass index and mortality: a systematic review and meta-analysis. |
+| A | 90 | 心肺适能与死亡风险 | 2025 | Physiological responses to exercise in survivors of preterm birth: a meta-analysis. |
+| A | 90 | 心肺适能与死亡风险 | 2025 | Comparison of objectively measured and estimated cardiorespiratory fitness to predict all-cause and cardiovascular disea |
+| A | 90 | 心肺适能与死亡风险 | 2024 | Cardiorespiratory fitness is a strong and consistent predictor of morbidity and mortality among adults: an overview of m |
+| A | 90 | 心肺适能与死亡风险 | 2024 | Effects of postoperative physical exercise rehabilitation on cardiorespiratory fitness, functional capacity and quality  |
+| A | 90 | 心肺适能与死亡风险 | 2024 | Health Benefits of Different Sports: a Systematic Review and Meta-Analysis of Longitudinal and Intervention Studies Incl |
+| A | 90 | 心肺适能与死亡风险 | 2023 | Efficacy of ferric carboxymaltose in heart failure with iron deficiency: an individual patient data meta-analysis. |
+| A | 90 | 心肺适能与死亡风险 | 2023 | Long-term impact of SARS-CoV-2 infection on cardiorespiratory fitness: a meta-analysis. |
+| A | 90 | 心肺适能与死亡风险 | 2022 | Reliability of Field-Based Fitness Tests in Adults: A Systematic Review. |
+| A | 90 | 心肺适能与死亡风险 | 2022 | The Metabolic Signature of Cardiorespiratory Fitness: A Systematic Review. |
+| A | 90 | 心肺适能与死亡风险 | 2021 | Cardiorespiratory fitness measured with cardiopulmonary exercise testing and mortality in patients with cardiovascular d |
+| A | 90 | 心肺适能与死亡风险 | 2017 | Genes to predict VO(2max) trainability: a systematic review. |
 
 ## 皮肤/外观抗老高置信候选 / Higher-Confidence Skin Candidates
 

@@ -152,9 +152,19 @@ class FeishuClient:
         resp = requests.post(url, headers=self._headers(), json={"fields": fields}, timeout=30)
         return self._json(resp)
 
+    def batch_create_bitable_records(self, app_token: str, table_id: str, records: List[Dict[str, Any]]) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/batch_create"
+        resp = requests.post(url, headers=self._headers(), json={"records": records}, timeout=60)
+        return self._json(resp)
+
     def update_bitable_record(self, app_token: str, table_id: str, record_id: str, fields: Dict[str, Any]) -> Dict[str, Any]:
         url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/{record_id}"
         resp = requests.put(url, headers=self._headers(), json={"fields": fields}, timeout=30)
+        return self._json(resp)
+
+    def batch_update_bitable_records(self, app_token: str, table_id: str, records: List[Dict[str, Any]]) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/batch_update"
+        resp = requests.post(url, headers=self._headers(), json={"records": records}, timeout=60)
         return self._json(resp)
 
     def delete_bitable_record(self, app_token: str, table_id: str, record_id: str) -> Dict[str, Any]:

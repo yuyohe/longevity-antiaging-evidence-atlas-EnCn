@@ -63,6 +63,11 @@ def row_to_fields(row: Dict[str, str]) -> Dict[str, Any]:
     return fields
 
 
+def chunks(items: list[Any], size: int = 500):
+    for start in range(0, len(items), size):
+        yield items[start : start + size]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--update-existing", action="store_true", help="Update records already present in Feishu.")
@@ -88,8 +93,8 @@ def main() -> None:
         if candidate_id:
             by_id[str(candidate_id)] = record.get("record_id", "")
 
-    created = 0
-    updated = 0
+    create_payloads: list[Dict[str, Any]] = []
+    update_payloads: list[Dict[str, Any]] = []
     with CSV_PATH.open("r", encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
             candidate_id = (row.get("id") or "").strip()
@@ -98,11 +103,23 @@ def main() -> None:
             fields = row_to_fields(row)
             if candidate_id in by_id:
                 if args.update_existing:
-                    client.update_bitable_record(app_token, table_id, by_id[candidate_id], fields)
-                    updated += 1
+                    update_payloads.append({"record_id": by_id[candidate_id], "fields": fields})
             else:
-                client.create_bitable_record(app_token, table_id, fields)
-                created += 1
+                create_payloads.append({"fields": fields})
+
+    created = 0
+    for batch in chunks(create_payloads):
+        client.batch_create_bitable_records(app_token, table_id, batch)
+        created += len(batch)
+        print(f"candidate_created={created}/{len(create_payloads)}")
+        time.sleep(0.2)
+
+    updated = 0
+    for batch in chunks(update_payloads):
+        client.batch_update_bitable_records(app_token, table_id, batch)
+        updated += len(batch)
+        print(f"candidate_updated={updated}/{len(update_payloads)}")
+        time.sleep(0.2)
 
     skipped = len(by_id) if not args.update_existing else 0
     print(f"Feishu candidate sync complete: created={created}, updated={updated}, skipped_existing={skipped}")
