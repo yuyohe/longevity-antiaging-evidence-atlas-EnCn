@@ -124,6 +124,11 @@ class FeishuClient:
         resp = requests.put(url, headers=self._headers(), json={"fields": fields}, timeout=30)
         return self._json(resp)
 
+    def delete_bitable_record(self, app_token: str, table_id: str, record_id: str) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/{record_id}"
+        resp = requests.delete(url, headers=self._headers(), timeout=30)
+        return self._json(resp)
+
     def get_wiki_node(self, node_token: str) -> Dict[str, Any]:
         url = f"{self.base_url}/open-apis/wiki/v2/spaces/get_node"
         resp = requests.get(url, headers=self._headers(), params={"token": node_token}, timeout=30)
