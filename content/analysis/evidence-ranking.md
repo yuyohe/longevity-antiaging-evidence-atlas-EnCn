@@ -1,22 +1,44 @@
----
-id: evidence-ranking
-title_zh: "长寿抗衰干预证据排行榜"
-title_en: "Longevity and Anti-Aging Evidence Ranking"
-last_checked: "2026-04-27"
----
+# 长寿抗衰证据排行 / Longevity Evidence Ranking
 
-# 长寿抗衰干预证据排行榜
+> 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。
+> Draft status: automatically prepared; not fully reviewed; not medical advice.
 
-> 本页由 `data/evidence_matrix.csv` 和 `data/interventions.csv` 支撑。更新前必须运行 `scripts/lint.py`。
-
-| 排名 | 干预 | 证据等级 | 终点等级 | 推荐等级 | 是否需医生监督 | 说明 |
+| Rank | Topic | Evidence | Endpoint | Recommendation | Medical supervision | Summary |
 |---:|---|---|---|---|---|---|
-| 1 | 待补充 |  |  |  |  |  |
+| 1 | GLP-1、减重与心代谢结局 | A | H2 | Medical Action | true | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：GLP-1 receptor agonists significantly reduce OSA severity, promote substantial weight loss, and lower systolic and diastolic blood pressure in patients with obstructive sleep apnea and obesity. These findings support the role of GLP-1 RAs as a multifaceted and effective therapeutic intervention for managing OSA. |
+| 2 | LDL-C/apoB 与心血管风险 | A | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：Our findings suggest that digital health interventions can support LDL-c reduction and lipid control in patients with ASCVD. Multi-component interventions were most effective, particularly when combined with high-frequency delivery, bidirectional communication, and telemonitoring. High heterogeneity and high risk of bias were observed across studies, and LDL-c reduction was not a primary outcome in most trials, warranting careful interpretation. Nevertheless, digital health shows potential fo... |
+| 3 | LDL-C/apoB 与心血管风险 | A | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for LDL-C/apoB and Cardiovascular Risk; full-text or manual abstract review is required before publication claims. |
+| 4 | LDL-C/apoB 与心血管风险 | A | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：RC reduction was not associated with cardiovascular benefit. This contrasts with observational and Mendelian randomization studies, likely reflecting methodological differences; MR estimates lifelong genetically mediated exposure and may not reliably predict the effects of short-term pharmacological lipid lowering. |
+| 5 | 微生物组与炎症性衰老 | A | H2 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Microbiome and Inflammaging; full-text or manual abstract review is required before publication claims. |
+| 6 | 心肺适能与死亡风险 | A | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：Our findings suggest an association between prehabilitation and preoperative enhancement in cardiorespiratory fitness. However, the effect size is modest and may have marginal clinical significance. It remains unclear whether prehabilitation can improve clinical outcomes beyond the reduction of hospital length of stay. Further research is required to provide evidence of the efficacy of these programs. |
+| 7 | 身体活动与健康寿命 | A | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：This meta-analysis indicated that MSC therapy may reduce mortality in patients with severe or critical COVID-19, demonstrating a favorable safety profile and potential benefits for Long-COVID and other viral pneumonias. Further large-scale, rigorous RCTs and mechanistic studies are warranted to strengthen the evidence base and standardize MSC administration regimens (source, dosing, frequency, and intervals) for managing COVID-19, Long-COVID, and other viral pneumonias. |
+| 8 | 饮食模式与死亡风险 | A | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Dietary Patterns and Longevity; full-text or manual abstract review is required before publication claims. |
+| 9 | 二甲双胍与衰老 | B | H1 | Monitor | true | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：Although no significant difference was noted in the primary outcome between groups, these preliminary findings support the feasibility of geroscience-trials in this population and support further investigation of metformin in larger, adequately powered studies to determine whether metformin can modify biological ageing in people with HIV. |
+| 10 | 心肺适能与死亡风险 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Cardiorespiratory Fitness and Mortality; full-text or manual abstract review is required before publication claims. |
+| 11 | 抗阻训练、肌肉与衰弱 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Resistance Training, Muscle, and Frailty; full-text or manual abstract review is required before publication claims. |
+| 12 | 抗阻训练、肌肉与衰弱 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：This study presents the first interpretable ML model specifically tailored for predicting sepsis onset in patients with MDR-PA infections. By addressing the limitations of general sepsis scores, our validated model and accompanying web-based tool provide clinicians with a precise, visualizable decision-support system to optimize early intervention strategies. |
+| 13 | 睡眠与健康结局 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Sleep and Aging Outcomes; full-text or manual abstract review is required before publication claims. |
+| 14 | 睡眠与健康结局 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Sleep and Aging Outcomes; full-text or manual abstract review is required before publication claims. |
+| 15 | 血压与健康寿命 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Blood Pressure and Healthspan; full-text or manual abstract review is required before publication claims. |
+| 16 | 血压与健康寿命 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Blood Pressure and Healthspan; full-text or manual abstract review is required before publication claims. |
+| 17 | 血压与健康寿命 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Blood Pressure and Healthspan; full-text or manual abstract review is required before publication claims. |
+| 18 | 身体活动与健康寿命 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：RVFWLS/PASP is a robust, independent determinant of long-term prognosis in patients with PAH. As a noninvasive measure of RV-PA coupling, it provides significant incremental value for clinical risk assessment and treatment monitoring. |
+| 19 | 饮食模式与死亡风险 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Dietary Patterns and Longevity; full-text or manual abstract review is required before publication claims. |
+| 20 | 饮食模式与死亡风险 | B | H1 | Strong Action | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：In the progression of CMM, high adherence of PDI and hPDI has been demonstrated to reduce the risk of transitioning from CMD-free to FCMD, particularly in diabetes, and lowers the risk of CMM with a much lower incidence risk from CMD-free to CMM compared to CMD-free to FCMD. The present study hypothesizes that both hPDI and unhealthy plant-based index (uPDI) are associated with the risk from baseline to death. |
+| 21 | ITP 小鼠寿命干预 | C | H6 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for ITP Mouse Lifespan Interventions; full-text or manual abstract review is required before publication claims. |
+| 22 | 表观遗传时钟与干预 | C | H5 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Epigenetic Clocks and Interventions; full-text or manual abstract review is required before publication claims. |
+| 23 | 表观遗传时钟与干预 | C | H5 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Epigenetic Clocks and Interventions; full-text or manual abstract review is required before publication claims. |
+| 24 | 身体活动与健康寿命 | C | H4 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：These findings show that muscle fat infiltration and reduced muscle quality have important prognostic value in young women with breast cancer. Exploratory cutpoints derived from routine staging CT scans may help inform risk stratification and generate hypotheses for targeted nutritional or exercise interventions, but require validation in larger, independent cohorts before clinical application. |
+| 25 | 限时进食与代谢健康 | C | H3 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：These findings suggest that RIF can improve health outcomes by promoting better dietary habits, enhancing sleep duration, and reducing stress, leading to significant reductions in body weight, BMI, and BRI. |
+| 26 | 限时进食与代谢健康 | C | H4 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：Vitamin D and insulin levels were not significantly associated with oxidative stress markers in this cohort. These findings highlight the potential of long-term, culturally structured fasting to modulate redox homeostasis and suggest a complex interplay between age, adiposity, and antioxidant defenses. These findings should be interpreted within the context of a highly specific religious and cultural lifestyle and may not be generalizable to other populations. Further research is needed to el... |
+| 27 | Senolytics 与细胞衰老 | D | H1 | Monitor | true | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Senolytics and Cellular Senescence; full-text or manual abstract review is required before publication claims. |
+| 28 | 自噬/线粒体自噬 | D | H1 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Autophagy and Mitophagy; full-text or manual abstract review is required before publication claims. |
+| 29 | 部分重编程 | D | H2 | Monitor | false | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Partial Reprogramming; full-text or manual abstract review is required before publication claims. |
+| 30 | 雷帕霉素/mTOR 与衰老 | D | H1 | Monitor | true | 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。 中文草稿：英文摘要结论为：No separate conclusion section was parsed from the abstract for Rapamycin/mTOR and Aging; full-text or manual abstract review is required before publication claims. |
 
-## 分层说明
+## 解释边界 / Interpretation Boundary
 
-- Strong Action：生活方式和风险管理优先。
-- Medical Action：需要医生监督。
-- Monitor：前沿观察，不是公众建议。
-- Do Not Recommend：不建议追逐。
-- Insufficient Evidence：证据不足。
+- Strong Action: lifestyle or prevention topics with human evidence, still not individualized medical advice.
+- Medical Action: requires clinician evaluation or monitoring.
+- Monitor: frontier or lower-certainty evidence; not a public recommendation.
+- 所有条目仍处于公开草稿阶段，正式建议需要人工全文复核。

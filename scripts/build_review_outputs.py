@@ -1,163 +1,182 @@
-"""Build shortlist CSV and draft bilingual topic/paper pages from findings."""
+"""Generate v0.1 publication draft outputs from evidence_findings.csv."""
 
 from __future__ import annotations
 
 import csv
 import re
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, Iterable, List
 
 ROOT = Path(__file__).resolve().parents[1]
 FINDINGS = ROOT / "data" / "evidence_findings.csv"
 SHORTLIST = ROOT / "data" / "shortlist_sources.csv"
 TOPICS = ROOT / "data" / "topics.csv"
+MATRIX = ROOT / "data" / "evidence_matrix.csv"
 PAPERS = ROOT / "content" / "papers"
 TOPIC_DIR = ROOT / "content" / "topics"
+ANALYSIS = ROOT / "content" / "analysis" / "evidence-ranking.md"
+RECOMMENDATIONS = ROOT / "content" / "recommendations" / "for-general-readers.md"
+STATUS_DOC = ROOT / "docs" / "current-output-status.md"
 
-TOPIC_MAP = {
-    "cardiorespiratory_fitness_mortality": ("cardiorespiratory-fitness", "心肺适能与死亡风险", "Cardiorespiratory Fitness and Mortality"),
-    "resistance_training_mortality_sarcopenia": ("resistance-training-muscle", "抗阻训练、肌肉与衰弱", "Resistance Training, Muscle, and Frailty"),
-    "physical_activity_longevity": ("physical-activity-healthspan", "身体活动与健康寿命", "Physical Activity and Healthspan"),
-    "blood_pressure_mortality_aging": ("blood-pressure-aging", "血压与健康寿命", "Blood Pressure and Healthspan"),
-    "ldl_apob_cardiovascular_mortality": ("ldl-apob-cardiovascular-risk", "LDL-C/apoB 与心血管风险", "LDL-C/apoB and Cardiovascular Risk"),
-    "sleep_duration_mortality_aging": ("sleep-aging", "睡眠与健康结局", "Sleep and Aging Outcomes"),
-    "dietary_pattern_longevity": ("dietary-pattern-longevity", "饮食模式与死亡风险", "Dietary Patterns and Longevity"),
-    "caloric_restriction_human_aging": ("caloric-restriction-human", "热量限制与人体衰老", "Caloric Restriction in Humans"),
-    "intermittent_fasting_aging_human": ("time-restricted-eating", "限时进食与代谢健康", "Time-Restricted Eating and Metabolic Health"),
-    "glp1_obesity_cardiometabolic_outcomes": ("glp1-weight-cardiometabolic", "GLP-1、减重与心代谢结局", "GLP-1, Weight Loss, and Cardiometabolic Outcomes"),
-    "metformin_aging_longevity": ("metformin-aging", "二甲双胍与衰老", "Metformin and Aging"),
-    "rapamycin_mtor_aging": ("rapamycin-mtor-aging", "雷帕霉素/mTOR 与衰老", "Rapamycin/mTOR and Aging"),
-    "senolytics_human_aging": ("senolytics", "Senolytics 与细胞衰老", "Senolytics and Cellular Senescence"),
-    "nad_nmn_nr_human_aging": ("nad-nmn-nr-aging", "NAD/NMN/NR 与衰老", "NAD/NMN/NR and Aging"),
-    "epigenetic_clocks_intervention": ("epigenetic-clocks", "表观遗传时钟与干预", "Epigenetic Clocks and Interventions"),
-}
+DRAFT_NOTICE_ZH = "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。"
+DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not medical advice."
+
+MATRIX_FIELDS = [
+    "paper_id",
+    "year",
+    "topic",
+    "intervention_or_exposure",
+    "study_type",
+    "species",
+    "sample_size",
+    "primary_endpoint",
+    "endpoint_class",
+    "effect_size",
+    "evidence_level",
+    "risk_of_bias",
+    "actionability",
+    "medical_supervision",
+    "recommendation_class",
+    "claim_supported",
+    "claim_not_supported",
+    "zh_summary",
+    "en_summary",
+    "last_checked",
+]
 
 
 def slug(value: str) -> str:
     value = re.sub(r"[^a-zA-Z0-9]+", "-", value.lower()).strip("-")
-    return value[:80] or "paper"
+    return value[:90] or "item"
 
 
-def rank_key(row: Dict[str, str]) -> tuple[int, int]:
+def read_rows(path: Path) -> List[Dict[str, str]]:
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def write_csv(path: Path, rows: List[Dict[str, str]], fieldnames: List[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows([{key: row.get(key, "") for key in fieldnames} for row in rows])
+
+
+def rank_key(row: Dict[str, str]) -> tuple[int, int, int]:
     level_score = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5}.get(row.get("evidence_level_draft", "E"), 5)
     endpoint_score = {"H1": 0, "H2": 1, "H3": 2, "H5": 3, "H4": 4, "H6": 5}.get(row.get("endpoint_class_draft", "H6"), 6)
-    return level_score, endpoint_score
+    contribution = -int(row.get("contribution_score_draft") or 0)
+    return level_score, endpoint_score, contribution
 
 
-def read_findings() -> List[Dict[str, str]]:
-    with FINDINGS.open("r", encoding="utf-8-sig", newline="") as f:
-        rows = list(csv.DictReader(f))
-    return sorted(rows, key=rank_key)
+def grouped_by_topic(rows: Iterable[Dict[str, str]]) -> Dict[str, List[Dict[str, str]]]:
+    grouped: Dict[str, List[Dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        grouped[row.get("topic_id", row.get("query", "unknown"))].append(row)
+    return grouped
 
 
-def build_shortlist(rows: List[Dict[str, str]], limit: int = 60) -> List[Dict[str, str]]:
-    shortlist: List[Dict[str, str]] = []
-    for i, row in enumerate(rows[:limit], start=1):
-        topic_id, topic_zh, topic_en = TOPIC_MAP.get(row["query"], (row["query"], row["query"], row["query"]))
+def build_shortlist(rows: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    shortlist = []
+    for i, row in enumerate(sorted(rows, key=rank_key), start=1):
         shortlist.append(
             {
                 "candidate_id": row["candidate_id"],
                 "priority_rank": str(i),
-                "topic_zh": topic_zh,
-                "topic_en": topic_en,
+                "topic_id": row["topic_id"],
+                "topic_zh": row["topic_zh"],
+                "topic_en": row["topic_en"],
                 "title_en": row["title_en"],
                 "title_zh": row["title_zh"],
                 "year": row["year"],
                 "journal": row["journal"],
                 "source": row["source"],
                 "pmid": row["pmid"],
+                "pmcid": row.get("pmcid", ""),
                 "doi": row["doi"],
                 "evidence_level_draft": row["evidence_level_draft"],
                 "endpoint_class_draft": row["endpoint_class_draft"],
-                "reason_for_shortlist_zh": f"初筛优先：{topic_zh}；草判证据等级 {row['evidence_level_draft']}，终点等级 {row['endpoint_class_draft']}。需人工阅读全文复核。",
-                "reason_for_shortlist_en": f"Initial shortlist: {topic_en}; draft evidence level {row['evidence_level_draft']}, endpoint class {row['endpoint_class_draft']}. Full-text review required.",
-                "review_status": "shortlist_needs_full_text_review",
+                "contribution_score_draft": row["contribution_score_draft"],
+                "evidence_source_depth": row["evidence_source_depth"],
+                "reason_for_shortlist_zh": f"首版短名单：{row['topic_zh']}；草判证据等级 {row['evidence_level_draft']}，终点等级 {row['endpoint_class_draft']}，贡献度 {row['contribution_score_draft']}。公开前仍需人工复核。",
+                "reason_for_shortlist_en": f"v0.1 shortlist: {row['topic_en']}; draft evidence level {row['evidence_level_draft']}, endpoint class {row['endpoint_class_draft']}, contribution score {row['contribution_score_draft']}. Human review still required.",
+                "review_status": row["review_status"],
             }
         )
     return shortlist
 
 
-def write_shortlist(shortlist: List[Dict[str, str]]) -> None:
-    fields = list(shortlist[0].keys()) if shortlist else []
-    with SHORTLIST.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
-        writer.writeheader()
-        writer.writerows(shortlist)
-
-
-def write_topic_pages(shortlist: List[Dict[str, str]]) -> None:
-    TOPIC_DIR.mkdir(parents=True, exist_ok=True)
-    PAPERS.mkdir(parents=True, exist_ok=True)
-
-    grouped: Dict[str, List[Dict[str, str]]] = {}
-    for row in shortlist:
-        grouped.setdefault(row["topic_en"], []).append(row)
-
-    topic_rows: List[Dict[str, str]] = []
-    for topic_en, rows in grouped.items():
-        first = rows[0]
-        topic_id = slug(topic_en)
-        lines = [
-            f"# {first['topic_zh']} / {topic_en}",
-            "",
-            "## 状态 / Status",
-            "",
-            "Draft topic hub. This page is generated from the first PubMed finding extraction and requires manual full-text review.",
-            "",
-            "草稿主题页。当前内容来自第一批 PubMed 摘要结果抽取，仍需人工阅读全文复核。",
-            "",
-            "## 候选短名单 / Candidate Shortlist",
-            "",
-        ]
-        for row in rows[:8]:
-            lines.append(f"- {row['title_en']} ({row['year']}). PMID: {row['pmid']}. Draft level: {row['evidence_level_draft']}/{row['endpoint_class_draft']}.")
-        lines.append("")
-        lines.append("## 发布边界 / Publication Boundary")
-        lines.append("")
-        lines.append("Do not convert this topic into public advice until at least one reviewer has checked the full texts and completed contribution scoring.")
-        lines.append("")
-        lines.append("在至少一名复核者阅读全文并完成贡献度评分前，不应把本主题页转成公众建议。")
-        (TOPIC_DIR / f"{topic_id}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-        topic_rows.append(
+def matrix_rows(rows: List[Dict[str, str]], limit: int = 30) -> List[Dict[str, str]]:
+    included = []
+    for row in sorted(rows, key=rank_key)[:limit]:
+        included.append(
             {
-                "topic_id": topic_id,
-                "title_zh": first["topic_zh"],
-                "title_en": topic_en,
-                "scope": "Draft scope generated from PubMed shortlist; full-text review required.",
-                "evidence_summary_zh": "草稿：已有候选短名单，但尚未完成全文复核和贡献度评分。",
-                "evidence_summary_en": "Draft: candidate shortlist exists, but full-text review and contribution scoring are not complete.",
-                "status": "draft",
-                "paper_count": str(len(rows)),
+                "paper_id": row["candidate_id"],
+                "year": row["year"],
+                "topic": row["topic_zh"],
+                "intervention_or_exposure": row["intervention_or_exposure_draft"],
+                "study_type": row["study_type_draft"],
+                "species": row["species_draft"],
+                "sample_size": row["sample_size_draft"],
+                "primary_endpoint": row["endpoint_draft"],
+                "endpoint_class": row["endpoint_class_draft"],
+                "effect_size": "摘要级待复核",
+                "evidence_level": row["evidence_level_draft"],
+                "risk_of_bias": "not_checked_public_draft",
+                "actionability": "high" if row["recommendation_class_draft"] == "Strong Action" else "medium" if row["recommendation_class_draft"] == "Medical Action" else "low",
+                "medical_supervision": row["medical_supervision_draft"],
+                "recommendation_class": row["recommendation_class_draft"],
+                "claim_supported": row["claim_supported_zh"],
+                "claim_not_supported": row["claim_not_supported_zh"],
+                "zh_summary": f"{DRAFT_NOTICE_ZH} {row['conclusion_zh']}",
+                "en_summary": f"{DRAFT_NOTICE_EN} {row['conclusion_en']}",
                 "last_checked": str(date.today()),
             }
         )
-
-    with TOPICS.open("w", encoding="utf-8", newline="") as f:
-        fieldnames = ["topic_id", "title_zh", "title_en", "scope", "evidence_summary_zh", "evidence_summary_en", "status", "paper_count", "last_checked"]
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(topic_rows)
+    return included
 
 
-def write_paper_pages(rows: List[Dict[str, str]], limit: int = 20) -> None:
+def clean_generated_pages() -> None:
+    for path in PAPERS.glob("pubmed-*.md"):
+        path.unlink()
+    for path in TOPIC_DIR.glob("*.md"):
+        if path.name != "_template.md":
+            path.unlink()
+
+
+def write_paper_pages(rows: List[Dict[str, str]]) -> None:
     PAPERS.mkdir(parents=True, exist_ok=True)
-    for row in rows[:limit]:
-        topic_id, topic_zh, topic_en = TOPIC_MAP.get(row["query"], (row["query"], row["query"], row["query"]))
-        filename = f"{slug(row['candidate_id'])}.md"
+    for row in sorted(rows, key=rank_key):
         lines = [
             f"# {row['title_en']}",
             "",
+            f"> {DRAFT_NOTICE_ZH}",
+            f"> {DRAFT_NOTICE_EN}",
+            "",
+            "## Metadata / 元数据",
+            "",
             f"- Candidate ID: `{row['candidate_id']}`",
             f"- PMID: `{row['pmid']}`",
+            f"- PMCID: `{row.get('pmcid','')}`",
             f"- DOI: `{row['doi']}`",
             f"- Year: {row['year']}",
             f"- Journal: {row['journal']}",
-            f"- Topic: {topic_zh} / {topic_en}",
-            f"- Draft evidence level: {row['evidence_level_draft']}",
-            f"- Draft endpoint class: {row['endpoint_class_draft']}",
+            f"- Topic: {row['topic_zh']} / {row['topic_en']}",
+            f"- Evidence source depth: `{row['evidence_source_depth']}`",
             "",
-            "## Main Finding / 主要发现",
+            "## Study Design / 研究设计",
+            "",
+            f"- Draft study type: `{row['study_type_draft']}`",
+            f"- Draft species/population: `{row['species_draft']}` / {row['population_draft']}",
+            f"- Draft intervention or exposure: {row['intervention_or_exposure_draft']}",
+            f"- Draft comparator: {row['comparator_draft']}",
+            f"- Draft primary endpoint: {row['endpoint_draft']}",
+            f"- Draft sample size: {row['sample_size_draft']}",
+            "",
+            "## Main Results / 主要结果",
             "",
             f"EN: {row['result_en']}",
             "",
@@ -169,25 +188,246 @@ def write_paper_pages(rows: List[Dict[str, str]], limit: int = 20) -> None:
             "",
             f"ZH draft: {row['conclusion_zh']}",
             "",
+            "## Supported Claim / 支持的结论",
+            "",
+            f"- ZH: {row['claim_supported_zh']}",
+            f"- EN: {row['claim_supported_en']}",
+            "",
+            "## Unsupported Claim / 不支持的结论",
+            "",
+            f"- ZH: {row['claim_not_supported_zh']}",
+            f"- EN: {row['claim_not_supported_en']}",
+            "",
+            "## Overinterpretation Risk / 过度解读风险",
+            "",
+            f"- ZH: {row['overinterpretation_risk_zh']}",
+            f"- EN: {row['overinterpretation_risk_en']}",
+            "",
+            "## Draft Grading / 草判分级",
+            "",
+            f"- Evidence level: `{row['evidence_level_draft']}`",
+            f"- Endpoint class: `{row['endpoint_class_draft']}`",
+            f"- Contribution score: `{row['contribution_score_draft']}`",
+            f"- Recommendation class: `{row['recommendation_class_draft']}`",
+            f"- Medical supervision needed: `{row['medical_supervision_draft']}`",
+            f"- Authority signal: {row['authority_signal_draft']}",
+            "",
             "## Review Status / 复核状态",
             "",
-            "Needs manual full-text review and contribution scoring before formal inclusion.",
+            "Public draft. Needs human full-text review before formal recommendation or clinical interpretation.",
             "",
-            "需要人工阅读全文和贡献度评分后，才能正式纳入证据总表。",
+            "公开草稿。形成正式推荐或临床解释前，必须人工阅读全文复核。",
         ]
-        (PAPERS / filename).write_text("\n".join(lines) + "\n", encoding="utf-8")
+        (PAPERS / f"{slug(row['candidate_id'])}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def topic_summary_zh(rows: List[Dict[str, str]]) -> str:
+    best = sorted(rows, key=rank_key)[0]
+    return f"草稿总结：本主题已有 {len(rows)} 篇首版候选文献，当前最高草判证据等级为 {best['evidence_level_draft']}，仍需全文复核后才能形成正式建议。"
+
+
+def topic_summary_en(rows: List[Dict[str, str]]) -> str:
+    best = sorted(rows, key=rank_key)[0]
+    return f"Draft summary: this topic has {len(rows)} v0.1 candidate papers; the highest draft evidence level is {best['evidence_level_draft']}. Full-text review is required before formal advice."
+
+
+def write_topic_pages(rows: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    TOPIC_DIR.mkdir(parents=True, exist_ok=True)
+    topic_rows: List[Dict[str, str]] = []
+    for topic_id, topic_rows_raw in grouped_by_topic(rows).items():
+        topic_rows_sorted = sorted(topic_rows_raw, key=rank_key)
+        first = topic_rows_sorted[0]
+        lines = [
+            f"# {first['topic_zh']} / {first['topic_en']}",
+            "",
+            f"> {DRAFT_NOTICE_ZH}",
+            f"> {DRAFT_NOTICE_EN}",
+            "",
+            "## 一句话结论 / One-Sentence Conclusion",
+            "",
+            topic_summary_zh(topic_rows_sorted),
+            "",
+            topic_summary_en(topic_rows_sorted),
+            "",
+            "## 当前证据等级 / Current Evidence Level",
+            "",
+            f"- Highest draft evidence level: `{first['evidence_level_draft']}`",
+            f"- Highest draft endpoint class: `{first['endpoint_class_draft']}`",
+            "- Status: public draft, not fully reviewed",
+            "",
+            "## 我们知道什么 / What We Know",
+            "",
+        ]
+        for row in topic_rows_sorted:
+            lines.append(f"- {row['claim_supported_zh']} / {row['claim_supported_en']}")
+        lines.extend(
+            [
+                "",
+                "## 仍不确定什么 / What Remains Uncertain",
+                "",
+                "- 自动抽取结果仍需阅读全文确认研究设计、样本量、终点定义、效应量和偏倚风险。",
+                "- Automated extraction still needs full-text confirmation of design, sample size, endpoint definition, effect size, and bias risk.",
+                "",
+                "## 不能这么说 / What Not To Claim",
+                "",
+            ]
+        )
+        for row in topic_rows_sorted:
+            lines.append(f"- {row['claim_not_supported_zh']} / {row['claim_not_supported_en']}")
+        lines.extend(
+            [
+                "",
+                "## 相关论文卡片 / Related Paper Cards",
+                "",
+            ]
+        )
+        for row in topic_rows_sorted:
+            lines.append(f"- [{row['title_en']}](../papers/{slug(row['candidate_id'])}.md) ({row['year']}, PMID: {row['pmid']})")
+        lines.extend(
+            [
+                "",
+                "## 发布边界 / Publication Boundary",
+                "",
+                "本页可以作为公开草稿展示，但不能作为医疗建议、补剂/药物建议或个体化风险管理建议。",
+                "",
+                "This page may be shown as a public draft, but it is not medical advice, supplement/drug advice, or personalized risk management guidance.",
+            ]
+        )
+        (TOPIC_DIR / f"{topic_id}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+        topic_rows.append(
+            {
+                "topic_id": topic_id,
+                "title_zh": first["topic_zh"],
+                "title_en": first["topic_en"],
+                "scope": "Public draft topic generated from v0.1 PubMed shortlist; full-text review required.",
+                "evidence_summary_zh": topic_summary_zh(topic_rows_sorted),
+                "evidence_summary_en": topic_summary_en(topic_rows_sorted),
+                "status": "public_draft_not_fully_reviewed",
+                "paper_count": str(len(topic_rows_sorted)),
+                "last_checked": str(date.today()),
+            }
+        )
+    return sorted(topic_rows, key=lambda row: row["topic_id"])
+
+
+def write_analysis(matrix: List[Dict[str, str]]) -> None:
+    ANALYSIS.parent.mkdir(parents=True, exist_ok=True)
+    rows = sorted(matrix, key=lambda row: ({"A": 0, "B": 1, "C": 2, "D": 3, "E": 4}.get(row["evidence_level"], 9), row["topic"]))
+    lines = [
+        "# 长寿抗衰证据排行 / Longevity Evidence Ranking",
+        "",
+        f"> {DRAFT_NOTICE_ZH}",
+        f"> {DRAFT_NOTICE_EN}",
+        "",
+        "| Rank | Topic | Evidence | Endpoint | Recommendation | Medical supervision | Summary |",
+        "|---:|---|---|---|---|---|---|",
+    ]
+    for i, row in enumerate(rows, start=1):
+        lines.append(f"| {i} | {row['topic']} | {row['evidence_level']} | {row['endpoint_class']} | {row['recommendation_class']} | {row['medical_supervision']} | {row['zh_summary']} |")
+    lines.extend(
+        [
+            "",
+            "## 解释边界 / Interpretation Boundary",
+            "",
+            "- Strong Action: lifestyle or prevention topics with human evidence, still not individualized medical advice.",
+            "- Medical Action: requires clinician evaluation or monitoring.",
+            "- Monitor: frontier or lower-certainty evidence; not a public recommendation.",
+            "- 所有条目仍处于公开草稿阶段，正式建议需要人工全文复核。",
+        ]
+    )
+    ANALYSIS.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def write_recommendations(matrix: List[Dict[str, str]]) -> None:
+    RECOMMENDATIONS.parent.mkdir(parents=True, exist_ok=True)
+    strong = [row for row in matrix if row["recommendation_class"] == "Strong Action"]
+    monitor = [row for row in matrix if row["recommendation_class"] == "Monitor"]
+    medical = [row for row in matrix if row["recommendation_class"] == "Medical Action"]
+    lines = [
+        "# 普通读者建议边界 / Boundaries for General Readers",
+        "",
+        f"> {DRAFT_NOTICE_ZH}",
+        f"> {DRAFT_NOTICE_EN}",
+        "",
+        "本页不是医疗建议，不提供药物、补剂、剂量或治疗方案。它只说明哪些主题在证据图谱中更值得优先复核。",
+        "",
+        "This page is not medical advice and does not provide drugs, supplements, dosages, or treatment plans. It only describes which topics deserve higher review priority in the evidence atlas.",
+        "",
+        "## 可作为健康行为优先复核的方向 / Higher-Priority Health Behavior Topics",
+        "",
+    ]
+    for row in strong:
+        lines.append(f"- {row['topic']}: {row['claim_supported']}")
+    lines.extend(["", "## 需要医生评估或监测 / Requires Clinician Evaluation", ""])
+    for row in medical:
+        lines.append(f"- {row['topic']}: {row['claim_supported']}")
+    lines.extend(["", "## 只观察，不建议自行实践 / Monitor Only", ""])
+    for row in monitor[:12]:
+        lines.append(f"- {row['topic']}: {row['claim_supported']}")
+    lines.extend(
+        [
+            "",
+            "## 禁止性边界 / Do Not Overclaim",
+            "",
+            "- 不把动物寿命实验写成人类延寿已证实。",
+            "- 不把 biomarker 改善写成临床逆龄。",
+            "- 不从单篇摘要推出剂量、处方或治疗建议。",
+            "- Do not present animal lifespan studies as proven human lifespan extension.",
+            "- Do not present biomarker changes as clinical rejuvenation.",
+            "- Do not infer dosage, prescription, or treatment advice from one abstract.",
+        ]
+    )
+    RECOMMENDATIONS.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def write_status(findings: List[Dict[str, str]], matrix: List[Dict[str, str]], topics: List[Dict[str, str]]) -> None:
+    STATUS_DOC.parent.mkdir(parents=True, exist_ok=True)
+    lines = [
+        "# Current Output Status / 当前输出状态",
+        "",
+        f"Date / 日期: {date.today()}",
+        "",
+        "## Production Draft Assets / 可发布草稿资产",
+        "",
+        f"- Candidate pool: 938 unique records.",
+        f"- Finding extraction layer: {len(findings)} publication-draft finding records.",
+        f"- Shortlist: {len(findings)} records for v0.1 public draft.",
+        f"- Topic drafts: {len(topics)} public draft topic pages.",
+        f"- Paper-card drafts: {len(findings)} public draft paper pages.",
+        f"- Evidence matrix: {len(matrix)} cautious draft inclusion records.",
+        "",
+        "## Public Caveat / 公开警示",
+        "",
+        f"- {DRAFT_NOTICE_ZH}",
+        f"- {DRAFT_NOTICE_EN}",
+        "",
+        "## Feishu Sync Targets / 飞书同步目标",
+        "",
+        "- 候选文献: 938 unique candidates; 60 finding records include result/conclusion fields.",
+        "- 主题库: 20 public draft topic records.",
+        "- 文献总表: 30 cautious draft inclusion records.",
+        "- 发布日志: record GitHub commit and Feishu sync status.",
+    ]
+    STATUS_DOC.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main() -> None:
-    rows = read_findings()
+    rows = read_rows(FINDINGS)
+    if len(rows) < 60:
+        raise SystemExit(f"Expected at least 60 finding rows, found {len(rows)}.")
+    rows = sorted(rows, key=lambda row: (row["topic_id"], rank_key(row)))[:60]
+    clean_generated_pages()
     shortlist = build_shortlist(rows)
-    if not shortlist:
-        print("No findings available.")
-        return
-    write_shortlist(shortlist)
-    write_topic_pages(shortlist)
+    write_csv(SHORTLIST, shortlist, list(shortlist[0].keys()))
+    topics = write_topic_pages(rows)
+    write_csv(TOPICS, topics, ["topic_id", "title_zh", "title_en", "scope", "evidence_summary_zh", "evidence_summary_en", "status", "paper_count", "last_checked"])
     write_paper_pages(rows)
-    print(f"Wrote {len(shortlist)} shortlist rows, {len(set(r['topic_en'] for r in shortlist))} topic pages, and 20 draft paper pages.")
+    matrix = matrix_rows(rows, limit=30)
+    write_csv(MATRIX, matrix, MATRIX_FIELDS)
+    write_analysis(matrix)
+    write_recommendations(matrix)
+    write_status(rows, matrix, topics)
+    print(f"Wrote {len(shortlist)} shortlist rows, {len(topics)} topic pages, {len(rows)} paper pages, and {len(matrix)} evidence matrix rows.")
 
 
 if __name__ == "__main__":

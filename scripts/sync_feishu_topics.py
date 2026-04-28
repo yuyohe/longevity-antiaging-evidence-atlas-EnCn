@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import argparse
 import os
 import time
 from pathlib import Path
@@ -32,6 +33,10 @@ def ensure_fields(client: FeishuClient, app_token: str, table_id: str, fieldname
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--delete-stale", action="store_true", help="Delete blank/stale topic records not present in data/topics.csv.")
+    args = parser.parse_args()
+
     load_dotenv(ROOT / ".env")
     table_id = os.getenv("FEISHU_TOPIC_TABLE_ID", "")
     if not table_id:
@@ -51,15 +56,20 @@ def main() -> None:
 
     existing = client.list_bitable_records(app_token, table_id)
     by_topic_id: Dict[str, str] = {}
+    blank_record_ids = []
     for record in existing:
         topic_id = record.get("fields", {}).get("topic_id")
         if topic_id:
             by_topic_id[str(topic_id)] = record.get("record_id", "")
+        elif not record.get("fields"):
+            blank_record_ids.append(record.get("record_id", ""))
 
     created = 0
     updated = 0
+    seen_topic_ids = set()
     for row in rows:
         topic_id = row.get("topic_id", "")
+        seen_topic_ids.add(topic_id)
         fields = {key: normalize(row.get(key, "")) for key in fieldnames}
         fields[PRIMARY_FIELD] = row.get("title_zh") or row.get("title_en") or topic_id
         if topic_id in by_topic_id:
@@ -68,7 +78,17 @@ def main() -> None:
         else:
             client.create_bitable_record(app_token, table_id, fields)
             created += 1
-    print(f"Feishu topics sync complete: created={created}, updated={updated}")
+    deleted = 0
+    if args.delete_stale:
+        for topic_id, record_id in by_topic_id.items():
+            if topic_id not in seen_topic_ids:
+                client.delete_bitable_record(app_token, table_id, record_id)
+                deleted += 1
+        for record_id in blank_record_ids:
+            if record_id:
+                client.delete_bitable_record(app_token, table_id, record_id)
+                deleted += 1
+    print(f"Feishu topics sync complete: created={created}, updated={updated}, deleted_stale={deleted}")
 
 
 if __name__ == "__main__":

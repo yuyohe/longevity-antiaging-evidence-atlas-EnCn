@@ -14,6 +14,7 @@ OUT = ROOT / "build" / "feishu-docs"
 
 PUBLIC_FILES = [
     ROOT / "README.zh-CN.md",
+    ROOT / "docs" / "current-output-status.md",
     ROOT / "content" / "analysis" / "evidence-ranking.md",
     ROOT / "content" / "recommendations" / "for-general-readers.md",
 ]
@@ -28,6 +29,10 @@ def main() -> None:
     for file in topics_dir.glob("*.md"):
         if not file.name.startswith("_"):
             shutil.copy2(file, OUT / f"topic-{file.name}")
+    papers_dir = ROOT / "content" / "papers"
+    for file in papers_dir.glob("*.md"):
+        if not file.name.startswith("_"):
+            shutil.copy2(file, OUT / f"paper-{file.name}")
     print(f"Prepared Feishu Markdown files in {OUT.relative_to(ROOT)}")
 
 

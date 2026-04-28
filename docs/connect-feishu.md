@@ -1,52 +1,23 @@
-# 如何连接飞书并发布“长寿抗衰与健康寿命证据图谱”
+# 如何连接飞书并发布证据图谱 / Feishu Publishing Setup
 
 ## 推荐架构
 
 ```text
-GitHub = 唯一事实源头
-Codex = 维护 GitHub
-飞书多维表格 = 中文结构化展示
+GitHub = 唯一事实源
+Codex = 维护 GitHub 和生成发布草稿
+飞书多维表格 = 中文结构化展示和审核看板
 飞书知识库/云文档 = 中文阅读展示
 ```
 
-正式流程：
+## 飞书表格
 
-```text
-Codex 修改仓库 → 你 review PR → merge → GitHub Action 同步飞书
-```
-
-## 第一步：创建飞书自建应用
-
-1. 打开飞书开放平台。
-2. 进入开发者后台 / Console。
-3. 创建企业自建应用。
-4. 保存：
-
-```text
-App ID
-App Secret
-```
-
-5. 根据场景申请权限：
-
-```text
-多维表格 / Base / Bitable：读取、写入记录
-云文档 / Docs：读取、创建、导入文档
-云空间 / Drive：上传、导入文件
-知识库 / Wiki：创建或管理节点，视权限而定
-```
-
-6. 发布或安装应用到当前租户。
-
-## 第二步：创建飞书多维表格
-
-建议名称：
+建议表名：
 
 ```text
 长寿抗衰与健康寿命证据图谱
 ```
 
-建议先手动创建四张表：
+建议数据表：
 
 ```text
 文献总表
@@ -55,59 +26,45 @@ App Secret
 发布日志
 ```
 
-字段请参考：`docs/feishu-field-mapping.md` 和 `docs/feishu-base-schema.md`。
+## 环境变量
 
-保存：
-
-```text
-FEISHU_BITABLE_APP_TOKEN
-FEISHU_BITABLE_WIKI_NODE_TOKEN
-FEISHU_SOURCE_TABLE_ID
-FEISHU_CANDIDATE_TABLE_ID
-FEISHU_TOPIC_TABLE_ID
-FEISHU_PUBLISH_LOG_TABLE_ID
-```
-
-## 第三步：配置环境变量
-
-复制：
-
-```bash
-cp .env.example .env
-```
-
-填入：
+在 `.env` 中配置：
 
 ```text
 FEISHU_APP_ID=cli_xxx
 FEISHU_APP_SECRET=xxx
-FEISHU_BITABLE_APP_TOKEN=bascn_xxx
-FEISHU_BITABLE_WIKI_NODE_TOKEN=
-FEISHU_SOURCE_TABLE_ID=tblxxx
+FEISHU_BITABLE_APP_TOKEN=真实多维表格 token
+FEISHU_BITABLE_WIKI_NODE_TOKEN=wiki 链接里的 node token，可选
+FEISHU_SOURCE_TABLE_ID=文献总表 table id
+FEISHU_CANDIDATE_TABLE_ID=候选文献 table id
+FEISHU_TOPIC_TABLE_ID=主题库 table id
+FEISHU_PUBLISH_LOG_TABLE_ID=发布日志 table id
 ```
 
-如果多维表格 URL 是 `https://xxx.feishu.cn/wiki/{node_token}?table=tbl...`，需要先通过 Wiki `get_node` 接口把 `{node_token}` 换成真实的多维表格 `obj_token`。本项目支持两种配置：
+如果多维表格 URL 是 `https://xxx.feishu.cn/wiki/{node_token}?table=tbl...`，脚本会通过 Wiki `get_node` 接口把 `{node_token}` 转换为真实多维表格 `obj_token`。
 
-- 已知真实多维表格 token：填写 `FEISHU_BITABLE_APP_TOKEN`
-- 只有 Wiki 链接：填写 `FEISHU_BITABLE_WIKI_NODE_TOKEN`，脚本会自动解析
-
-## 第四步：同步证据矩阵到飞书
+## 同步命令
 
 ```bash
+python scripts/sync_feishu_candidates.py --update-existing
+python scripts/sync_feishu_findings_to_candidates.py
+python scripts/sync_feishu_topics.py
 python scripts/sync_feishu_bitable.py
+python scripts/sync_feishu_publish_log.py
 ```
 
-该脚本会读取：
+## 飞书知识库发布包
+
+当前项目先生成 Markdown 发布包：
+
+```bash
+python scripts/prepare_feishu_docs.py
+```
+
+输出目录：
 
 ```text
-data/evidence_matrix.csv
-config/feishu_field_mapping.json
+build/feishu-docs/
 ```
 
-并按 `paper_id` upsert 到飞书多维表格。
-
-## 第五步：让 Codex 通过飞书 MCP 操作
-
-如果你希望 Codex 临时直接操作飞书，可以配置 MCP。示例见：`docs/codex-mcp-feishu.toml.example`。
-
-注意：飞书 MCP 更适合临时操作；生产发布建议仍使用脚本同步。
+如果后续开放了飞书 Docs/Wiki 创建页面权限，可以把这个目录作为 API 导入源。

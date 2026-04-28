@@ -15,27 +15,43 @@ from feishu_client import FeishuClient, FeishuError
 ROOT = Path(__file__).resolve().parents[1]
 FINDINGS = ROOT / "data" / "evidence_findings.csv"
 FINDING_FIELDS = [
+    "topic_id",
+    "topic_zh",
+    "topic_en",
+    "publication_types",
     "study_type_draft",
     "species_draft",
     "population_draft",
     "intervention_or_exposure_draft",
     "comparator_draft",
     "endpoint_draft",
+    "sample_size_draft",
     "result_en",
     "result_zh",
     "conclusion_en",
     "conclusion_zh",
+    "claim_supported_zh",
+    "claim_supported_en",
+    "claim_not_supported_zh",
+    "claim_not_supported_en",
+    "overinterpretation_risk_zh",
+    "overinterpretation_risk_en",
     "evidence_level_draft",
     "endpoint_class_draft",
+    "authority_signal_draft",
+    "contribution_score_draft",
+    "recommendation_class_draft",
+    "medical_supervision_draft",
+    "evidence_source_depth",
+    "draft_notice_zh",
+    "draft_notice_en",
     "translation_status",
     "review_status",
 ]
 
 
 def normalize(value: str) -> Any:
-    if value is None:
-        return ""
-    return str(value).strip()
+    return "" if value is None else str(value).strip()
 
 
 def ensure_fields(client: FeishuClient, app_token: str, table_id: str) -> None:
@@ -72,8 +88,7 @@ def main() -> None:
     missing = 0
     with FINDINGS.open("r", encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
-            candidate_id = row.get("candidate_id", "")
-            record_id = by_candidate_id.get(candidate_id)
+            record_id = by_candidate_id.get(row.get("candidate_id", ""))
             if not record_id:
                 missing += 1
                 continue
