@@ -285,6 +285,51 @@ New Feishu tables created/synced:
 
 Existing Feishu `候选文献` was also checked: 5983 records already present.
 
+## 2026-04-29 Reader-Friendly Feishu Upgrade
+
+User asked to make the project easier for non-specialist 40-50-year-old readers, especially inside Feishu. Implemented a plain-language layer aimed at readers who do not know biology, statistics, or medical research terminology.
+
+New local files:
+
+- `scripts/build_reader_friendly_layer.py`: builds beginner guides, topic reading guides, glossary, Feishu table guide, and overview Markdown pages.
+- `scripts/enhance_feishu_plain_language_fields.py`: adds plain-language fields directly into the Feishu-facing CSVs.
+- `data/reader_guides.csv`: 8 beginner guide records.
+- `data/reader_topic_guide.csv`: 28 topic guide records covering healthspan and skin/appearance topics.
+- `data/plain_language_glossary.csv`: 40 glossary records.
+- `data/feishu_table_guide.csv`: 14 Feishu table guide records.
+- `content/overview/start-here.md`: first-reader entry page.
+- `content/overview/evidence-levels-plain-language.md`: A/B/C/D/E grade explanation in plain Chinese.
+- `content/overview/feishu-reading-guide.md`: Feishu navigation and reading order.
+- `content/overview/plain-language-glossary.md`: public glossary page.
+- `content/overview/reader-topic-guide.md`: public topic reading guide.
+- `docs/reader-friendly-upgrade-report-2026-04-29.md`: implementation report.
+
+New Feishu tables created/synced:
+
+- `新手阅读指南`: `tblaYnCNYIJnf0dG`, 8 rows.
+- `普通读者主题指南`: `tblUAsYxAzCtNBQc`, 28 rows.
+- `术语解释`: `tblTl9zuW2h4Aavp`, 40 rows.
+- `飞书表格使用说明`: `tblM53UjZbx6VUJG`, 14 rows.
+
+Existing Feishu tables also updated with plain-language fields:
+
+- `对外总览` (`tblFsXTD5yqnJTFH`): added `plain_takeaway_zh`, `read_first_zh`, `do_not_misread_zh`, `doctor_boundary_plain_zh`, `plain_language_updated`; 20 rows updated.
+- `外观抗老总览` (`tbl9vcaOrwjPcWZt`): added `plain_takeaway_zh`, `endpoint_plain_zh`, `do_not_misread_zh`, `professional_boundary_plain_zh`, `plain_language_updated`; 8 rows updated.
+- `补剂证据矩阵` (`tblAfXqX6qHqpSKb`): added `plain_takeaway_zh`, `not_a_buying_guide_zh`, `overclaim_warning_plain_zh`, `safety_plain_zh`, `doctor_boundary_plain_zh`, `plain_language_updated`; 100 rows updated.
+
+Feishu Markdown package was regenerated under `build/feishu-docs/`. `scripts/prepare_feishu_docs.py` now includes the beginner pages, claim-level grading page, and high-priority review brief.
+
+Validation run after this upgrade:
+
+```powershell
+python scripts\prepare_feishu_docs.py
+python scripts\lint.py
+python scripts\validate_public_drafts.py
+python scripts\validate_skin_beauty_public_drafts.py
+```
+
+All validation commands passed before commit.
+
 ## Operating Rules For Future Threads
 
 - Always read this file first.

@@ -16,6 +16,11 @@
 | 补剂证据矩阵 | 同一补剂对健康寿命和皮肤美容的证据强弱、不能宣传什么。 | [补剂矩阵](supplement-summary.md) |
 | A/B 级核心复核 | A/B 级主题的核心文献人工复核队列，以及为什么不是个人医疗建议。 | [核心复核说明](high-priority-review-brief.md) |
 | Claim 级评级 | 把同一主题拆成“支持的说法”和“不能外推的说法”，并配 PICO/PECO。 | [Claim 级评级](claim-level-grading.md) |
+| 新手阅读指南 | 给第一次打开项目的人，先讲这个项目是什么、不是什么、怎么读。 | [从这里开始](start-here.md) |
+| 普通读者主题指南 | 把 28 个主题翻译成白话，说明普通人怎么看、哪些需要问医生。 | [普通读者主题指南](reader-topic-guide.md) |
+| 证据等级白话说明 | 用普通话解释 A/B/C/D/E，不把等级误读成处方。 | [证据等级白话说明](evidence-levels-plain-language.md) |
+| 飞书阅读指南 | 说明飞书里每张表是干什么的，先看哪张，后看哪张。 | [飞书阅读指南](feishu-reading-guide.md) |
+| 术语解释 | 解释 RCT、biomarker、硬终点、IF、GRADE 等词。 | [术语解释](plain-language-glossary.md) |
 
 ## 一句话说明
 

@@ -14,10 +14,17 @@ OUT = ROOT / "build" / "feishu-docs"
 
 PUBLIC_FILES = [
     ROOT / "README.zh-CN.md",
+    ROOT / "content" / "overview" / "start-here.md",
     ROOT / "content" / "overview" / "public-summary.md",
+    ROOT / "content" / "overview" / "reader-topic-guide.md",
+    ROOT / "content" / "overview" / "evidence-levels-plain-language.md",
+    ROOT / "content" / "overview" / "feishu-reading-guide.md",
+    ROOT / "content" / "overview" / "plain-language-glossary.md",
     ROOT / "content" / "overview" / "methods-and-scoring.md",
     ROOT / "content" / "overview" / "skin-beauty-summary.md",
     ROOT / "content" / "overview" / "supplement-summary.md",
+    ROOT / "content" / "overview" / "claim-level-grading.md",
+    ROOT / "content" / "overview" / "high-priority-review-brief.md",
     ROOT / "docs" / "current-output-status.md",
     ROOT / "content" / "analysis" / "evidence-ranking.md",
     ROOT / "content" / "recommendations" / "for-general-readers.md",
