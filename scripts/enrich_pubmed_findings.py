@@ -1,9 +1,8 @@
-"""Build the v0.1 PubMed finding layer for publication drafts.
+"""Build v0.3 finding records from the candidate pool.
 
-The output is intentionally conservative:
-- it uses PubMed metadata/abstracts first;
-- it records whether an open PMCID is available;
-- all Chinese fields are draft interpretations that require review.
+v0.3 expands the public-draft evidence layer from 60 to 600 records.
+PubMed records are enriched with E-utilities abstracts when possible.
+Crossref and ClinicalTrials.gov records are kept as metadata-level findings.
 """
 
 from __future__ import annotations
@@ -31,76 +30,59 @@ PUBLIC_DRAFT_NOTICE_ZH = "草稿状态：自动整理，尚未完成全文复核
 PUBLIC_DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not medical advice."
 
 TOPICS = [
-    ("cardiorespiratory_fitness_mortality", "cardiorespiratory-fitness", "心肺适能与死亡风险", "Cardiorespiratory Fitness and Mortality", "fitness / VO2max"),
-    ("resistance_training_mortality_sarcopenia", "resistance-training-muscle", "抗阻训练、肌肉与衰弱", "Resistance Training, Muscle, and Frailty", "resistance training / muscle"),
-    ("physical_activity_longevity", "physical-activity-healthspan", "身体活动与健康寿命", "Physical Activity and Healthspan", "physical activity"),
-    ("blood_pressure_mortality_aging", "blood-pressure-aging", "血压与健康寿命", "Blood Pressure and Healthspan", "blood pressure"),
-    ("ldl_apob_cardiovascular_mortality", "ldl-apob-cardiovascular-risk", "LDL-C/apoB 与心血管风险", "LDL-C/apoB and Cardiovascular Risk", "LDL-C / apoB"),
-    ("sleep_duration_mortality_aging", "sleep-aging", "睡眠与健康结局", "Sleep and Aging Outcomes", "sleep"),
-    ("dietary_pattern_longevity", "dietary-pattern-longevity", "饮食模式与死亡风险", "Dietary Patterns and Longevity", "dietary pattern"),
-    ("caloric_restriction_human_aging", "caloric-restriction-human", "热量限制与人体衰老", "Caloric Restriction in Humans", "caloric restriction"),
-    ("intermittent_fasting_aging_human", "time-restricted-eating", "限时进食与代谢健康", "Time-Restricted Eating and Metabolic Health", "time-restricted eating / intermittent fasting"),
-    ("glp1_obesity_cardiometabolic_outcomes", "glp1-weight-cardiometabolic", "GLP-1、减重与心代谢结局", "GLP-1, Weight Loss, and Cardiometabolic Outcomes", "GLP-1 / weight loss"),
-    ("metformin_aging_longevity", "metformin-aging", "二甲双胍与衰老", "Metformin and Aging", "metformin"),
-    ("rapamycin_mtor_aging", "rapamycin-mtor-aging", "雷帕霉素/mTOR 与衰老", "Rapamycin/mTOR and Aging", "rapamycin / mTOR"),
-    ("senolytics_human_aging", "senolytics", "Senolytics 与细胞衰老", "Senolytics and Cellular Senescence", "senolytics"),
-    ("nad_nmn_nr_human_aging", "nad-nmn-nr-aging", "NAD/NMN/NR 与衰老", "NAD/NMN/NR and Aging", "NAD / NMN / NR"),
-    ("epigenetic_clocks_intervention", "epigenetic-clocks", "表观遗传时钟与干预", "Epigenetic Clocks and Interventions", "epigenetic clock"),
-    ("itp_mouse_lifespan_interventions", "itp-mouse-lifespan", "ITP 小鼠寿命干预", "ITP Mouse Lifespan Interventions", "mouse lifespan intervention"),
-    ("klotho_aging_human", "klotho-il11-aging", "Klotho / IL-11 与衰老", "Klotho / IL-11 and Aging", "Klotho / IL-11"),
-    ("partial_reprogramming_aging", "partial-reprogramming", "部分重编程", "Partial Reprogramming", "partial reprogramming"),
-    ("autophagy_mitophagy_longevity", "autophagy-mitophagy", "自噬/线粒体自噬", "Autophagy and Mitophagy", "autophagy / mitophagy"),
-    ("microbiome_healthy_aging", "microbiome-inflammaging", "微生物组与炎症性衰老", "Microbiome and Inflammaging", "microbiome / inflammaging"),
+    ("cardiorespiratory-fitness", "心肺适能与死亡风险", "Cardiorespiratory Fitness and Mortality", "fitness / VO2max", ["cardiorespiratory_fitness_mortality", "exercise_cardiorespiratory_fitness_longevity"]),
+    ("resistance-training-muscle", "抗阻训练、肌肉与衰弱", "Resistance Training, Muscle, and Frailty", "resistance training / muscle", ["resistance_training_mortality_sarcopenia", "resistance_training_sarcopenia_frailty", "exercise_older_adults_frailty"]),
+    ("physical-activity-healthspan", "身体活动与健康寿命", "Physical Activity and Healthspan", "physical activity", ["physical_activity_longevity", "frailty_interventions_older_adults", "frailty_multidomain", "frailty_multidomain_interventions"]),
+    ("blood-pressure-aging", "血压与健康寿命", "Blood Pressure and Healthspan", "blood pressure", ["blood_pressure_mortality_aging", "mendelian_randomization_longevity_risk_factors"]),
+    ("ldl-apob-cardiovascular-risk", "LDL-C/apoB 与心血管风险", "LDL-C/apoB and Cardiovascular Risk", "LDL-C / apoB", ["ldl_apob_cardiovascular_mortality", "mendelian_randomization_longevity_risk_factors"]),
+    ("sleep-aging", "睡眠与健康结局", "Sleep and Aging Outcomes", "sleep", ["sleep_duration_mortality_aging"]),
+    ("dietary-pattern-longevity", "饮食模式与死亡风险", "Dietary Patterns and Longevity", "dietary pattern", ["dietary_pattern_longevity", "nutrition_dietary_restriction_aging", "human_longevity_interventions_reviews"]),
+    ("caloric-restriction-human", "热量限制与人体衰老", "Caloric Restriction in Humans", "caloric restriction", ["caloric_restriction_human_aging", "caloric_restriction_aging"]),
+    ("time-restricted-eating", "限时进食与代谢健康", "Time-Restricted Eating and Metabolic Health", "time-restricted eating / intermittent fasting", ["intermittent_fasting_aging_human", "time_restricted_eating_aging"]),
+    ("glp1-weight-cardiometabolic", "GLP-1、减重与心代谢结局", "GLP-1, Weight Loss, and Cardiometabolic Outcomes", "GLP-1 / weight loss", ["glp1_obesity_cardiometabolic_outcomes", "diabetes_obesity_longevity_outcomes", "obesity_weight_loss_mortality_aging"]),
+    ("metformin-aging", "二甲双胍与衰老", "Metformin and Aging", "metformin", ["metformin_aging_longevity", "metformin_aging", "geroprotectors_mtor_metformin_senolytics"]),
+    ("rapamycin-mtor-aging", "雷帕霉素/mTOR 与衰老", "Rapamycin/mTOR and Aging", "rapamycin / mTOR", ["rapamycin_mtor_aging", "rapamycin_aging", "geroprotectors_mtor_metformin_senolytics"]),
+    ("senolytics", "Senolytics 与细胞衰老", "Senolytics and Cellular Senescence", "senolytics", ["senolytics_human_aging", "senolytics_aging", "geroprotectors_mtor_metformin_senolytics"]),
+    ("nad-nmn-nr-aging", "NAD/NMN/NR 与衰老", "NAD/NMN/NR and Aging", "NAD / NMN / NR", ["nad_nmn_nr_human_aging", "nad_precursors_aging_trials", "nad_nmn_nr_aging"]),
+    ("epigenetic-clocks", "表观遗传时钟与干预", "Epigenetic Clocks and Interventions", "epigenetic clock", ["epigenetic_clocks_intervention", "aging_clocks_disease_prediction", "clinical_aging_biomarkers", "biological_age_clock_trial", "proteomic_metabolomic_aging_clocks"]),
+    ("itp-mouse-lifespan", "ITP 小鼠寿命干预", "ITP Mouse Lifespan Interventions", "mouse lifespan intervention", ["itp_mouse_lifespan_interventions", "itp_mouse_lifespan_drugs", "acarbose_lifespan_aging"]),
+    ("klotho-il11-aging", "Klotho / IL-11 与衰老", "Klotho / IL-11 and Aging", "Klotho / IL-11", ["klotho_aging_human", "klotho_aging", "il11_aging"]),
+    ("partial-reprogramming", "部分重编程", "Partial Reprogramming", "partial reprogramming", ["partial_reprogramming_aging", "partial_reprogramming_rejuvenation"]),
+    ("autophagy-mitophagy", "自噬/线粒体自噬", "Autophagy and Mitophagy", "autophagy / mitophagy", ["autophagy_mitophagy_longevity", "urolithin_a_mitophagy_aging", "urolithin_a_aging", "spermidine_autophagy_aging", "spermidine_aging", "glynac_glutathione_aging", "taurine_aging_longevity", "taurine_aging", "nutraceuticals_aging_trials"]),
+    ("microbiome-inflammaging", "微生物组与炎症性衰老", "Microbiome and Inflammaging", "microbiome / inflammaging", ["microbiome_healthy_aging", "inflammaging_interventions", "immune_inflammation_aging", "parabiosis_plasma_aging", "hearing_vision_social_isolation_aging", "dementia_prevention_lifestyle_aging", "smoking_alcohol_mortality_healthy_aging", "vaccination_older_adults_mortality", "sauna_heat_therapy_mortality"]),
 ]
 
-TOPIC_BY_QUERY = {item[0]: item for item in TOPICS}
+QUERY_TO_TOPIC = {}
+for topic in TOPICS:
+    for query in topic[4]:
+        QUERY_TO_TOPIC[query] = topic
 
 FINDING_FIELDS = [
-    "finding_id",
-    "candidate_id",
-    "pmid",
-    "pmcid",
-    "doi",
-    "source",
-    "query",
-    "topic_id",
-    "topic_zh",
-    "topic_en",
-    "title_en",
-    "title_zh",
-    "journal",
-    "year",
-    "publication_types",
-    "study_type_draft",
-    "species_draft",
-    "population_draft",
-    "intervention_or_exposure_draft",
-    "comparator_draft",
-    "endpoint_draft",
-    "sample_size_draft",
-    "result_en",
-    "result_zh",
-    "conclusion_en",
-    "conclusion_zh",
-    "claim_supported_zh",
-    "claim_supported_en",
-    "claim_not_supported_zh",
-    "claim_not_supported_en",
-    "overinterpretation_risk_zh",
-    "overinterpretation_risk_en",
-    "evidence_level_draft",
-    "endpoint_class_draft",
-    "authority_signal_draft",
-    "contribution_score_draft",
-    "recommendation_class_draft",
-    "medical_supervision_draft",
-    "evidence_source_depth",
-    "draft_notice_zh",
-    "draft_notice_en",
-    "translation_status",
-    "review_status",
-    "last_checked",
+    "finding_id", "candidate_id", "pmid", "pmcid", "doi", "source", "query",
+    "topic_id", "topic_zh", "topic_en", "title_en", "title_zh", "journal", "year",
+    "publication_types", "study_type_draft", "species_draft", "population_draft",
+    "intervention_or_exposure_draft", "comparator_draft", "endpoint_draft",
+    "sample_size_draft", "result_en", "result_zh", "conclusion_en", "conclusion_zh",
+    "claim_supported_zh", "claim_supported_en", "claim_not_supported_zh",
+    "claim_not_supported_en", "overinterpretation_risk_zh", "overinterpretation_risk_en",
+    "evidence_level_draft", "endpoint_class_draft", "authority_signal_draft",
+    "contribution_score_draft", "recommendation_class_draft", "medical_supervision_draft",
+    "evidence_source_depth", "draft_notice_zh", "draft_notice_en",
+    "translation_status", "review_status", "last_checked",
 ]
+
+
+def clean(value: str) -> str:
+    return re.sub(r"\s+", " ", value or "").strip()
+
+
+def concise(value: str, max_chars: int = 900) -> str:
+    value = clean(value)
+    return value if len(value) <= max_chars else value[: max_chars - 3].rstrip() + "..."
+
+
+def text(element: ET.Element | None) -> str:
+    return "" if element is None else clean("".join(element.itertext()))
 
 
 def request_xml(endpoint: str, params: Dict[str, str]) -> ET.Element:
@@ -115,21 +97,17 @@ def request_xml(endpoint: str, params: Dict[str, str]) -> ET.Element:
     return ET.fromstring(resp.content)
 
 
-def clean(value: str) -> str:
-    return re.sub(r"\s+", " ", value or "").strip()
-
-
-def text(element: ET.Element | None) -> str:
-    if element is None:
-        return ""
-    return clean("".join(element.itertext()))
-
-
-def concise(value: str, max_chars: int = 900) -> str:
-    value = clean(value)
-    if len(value) <= max_chars:
-        return value
-    return value[: max_chars - 3].rstrip() + "..."
+def parse_articles(pmids: Iterable[str]) -> Dict[str, ET.Element]:
+    pmids = [pmid for pmid in pmids if pmid]
+    if not pmids:
+        return {}
+    root = request_xml("efetch.fcgi", {"db": "pubmed", "id": ",".join(pmids)})
+    articles: Dict[str, ET.Element] = {}
+    for article in root.findall(".//PubmedArticle"):
+        pmid = text(article.find(".//PMID"))
+        if pmid:
+            articles[pmid] = article
+    return articles
 
 
 def abstract_sections(article: ET.Element) -> Dict[str, str]:
@@ -138,6 +116,10 @@ def abstract_sections(article: ET.Element) -> Dict[str, str]:
         label = abstract_text.attrib.get("Label") or abstract_text.attrib.get("NlmCategory") or "ABSTRACT"
         sections.setdefault(label.upper(), []).append(text(abstract_text))
     return {key: clean(" ".join(value)) for key, value in sections.items()}
+
+
+def publication_types(article: ET.Element) -> List[str]:
+    return [text(item) for item in article.findall(".//PublicationTypeList/PublicationType") if text(item)]
 
 
 def article_ids(article: ET.Element) -> Dict[str, str]:
@@ -149,12 +131,10 @@ def article_ids(article: ET.Element) -> Dict[str, str]:
     return ids
 
 
-def publication_types(article: ET.Element) -> List[str]:
-    return [text(item) for item in article.findall(".//PublicationTypeList/PublicationType") if text(item)]
-
-
-def classify_study(pub_types: List[str], abstract: str) -> str:
-    joined = f"{' '.join(pub_types)} {abstract}".lower()
+def classify_study(pub_types: List[str], body: str, source: str) -> str:
+    joined = f"{' '.join(pub_types)} {body}".lower()
+    if source == "ClinicalTrials.gov":
+        return "registered_clinical_trial"
     if "meta-analysis" in joined or "systematic review" in joined:
         return "systematic_review_or_meta_analysis"
     if "randomized" in joined or "randomised" in joined or "clinical trial" in joined:
@@ -165,12 +145,14 @@ def classify_study(pub_types: List[str], abstract: str) -> str:
         return "animal_study"
     if any(term in joined for term in ["cell", "in vitro", "organoid"]):
         return "mechanistic_or_cell_study"
-    return "needs_classification"
+    return "metadata_only_needs_classification"
 
 
-def classify_species(study_type: str, abstract: str) -> str:
-    lower = abstract.lower()
-    if study_type.startswith("human") or any(term in lower for term in ["participants", "patients", "adults", "women", "men"]):
+def classify_species(study_type: str, body: str) -> str:
+    lower = body.lower()
+    if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort"}:
+        return "human"
+    if any(term in lower for term in ["participants", "patients", "adults", "women", "men"]):
         return "human"
     if any(term in lower for term in ["mice", "mouse", "murine"]):
         return "mouse"
@@ -181,13 +163,13 @@ def classify_species(study_type: str, abstract: str) -> str:
     return "needs_review"
 
 
-def classify_endpoint(query: str, abstract: str) -> str:
-    lower = f"{query} {abstract}".lower()
+def classify_endpoint(query: str, body: str) -> str:
+    lower = f"{query} {body}".lower()
     if any(term in lower for term in ["mortality", "death", "mace", "stroke", "cardiovascular event", "cancer incidence"]):
         return "H1"
     if any(term in lower for term in ["vo2", "frailty", "grip strength", "cognition", "falls", "ahi", "sarcopenia"]):
         return "H2"
-    if any(term in lower for term in ["ldl", "apob", "blood pressure", "hba1c", "waist", "glucose", "body weight"]):
+    if any(term in lower for term in ["ldl", "apob", "blood pressure", "hba1c", "waist", "glucose", "body weight", "obesity"]):
         return "H3"
     if "clock" in lower or "methylation age" in lower or "biological age" in lower:
         return "H5"
@@ -201,35 +183,41 @@ def evidence_level(study_type: str, endpoint_class: str) -> str:
         return "A"
     if study_type in {"human_randomized_or_clinical_trial", "human_cohort"} and endpoint_class in {"H1", "H2"}:
         return "B"
-    if study_type.startswith("human"):
+    if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort"}:
         return "C"
     if study_type == "animal_study":
         return "D"
     return "E"
 
 
-def recommendation(study_type: str, topic_id: str, level: str) -> str:
-    if topic_id in {"metformin-aging", "rapamycin-mtor-aging", "senolytics", "nad-nmn-nr-aging", "glp1-weight-cardiometabolic"}:
+def recommendation(topic_id: str, level: str, species: str) -> str:
+    if topic_id in {"glp1-weight-cardiometabolic", "metformin-aging", "rapamycin-mtor-aging", "senolytics"}:
         return "Medical Action" if topic_id == "glp1-weight-cardiometabolic" else "Monitor"
-    if level in {"A", "B"} and study_type.startswith("human"):
+    if level in {"A", "B"} and species == "human":
         return "Strong Action"
     return "Monitor"
 
 
-def authority_signal(pub_types: List[str], ids: Dict[str, str], journal: str, evidence_source_depth: str) -> str:
+def authority_signal(row: Dict[str, str], ids: Dict[str, str], pub_types: List[str], journal: str, source_depth: str) -> str:
     signals = []
-    if "doi" in ids:
+    if row.get("doi") or ids.get("doi"):
         signals.append("DOI")
-    if "pmcid" in ids:
+    if row.get("pmid"):
+        signals.append("PMID")
+    if row.get("pmcid") or ids.get("pmc"):
         signals.append("PMCID/open-access signal")
+    if row.get("source") == "ClinicalTrials.gov":
+        signals.append("trial registry")
+    if row.get("source") == "Crossref":
+        signals.append("Crossref metadata")
     if any("Meta-Analysis" in pt or "Systematic Review" in pt for pt in pub_types):
         signals.append("review-level publication type")
     if any("Clinical Trial" in pt or "Randomized" in pt for pt in pub_types):
         signals.append("trial publication type")
     if journal:
         signals.append("peer-reviewed journal metadata")
-    if evidence_source_depth != "abstract_only":
-        signals.append(evidence_source_depth)
+    if source_depth != "abstract_only":
+        signals.append(source_depth)
     return "; ".join(signals) or "metadata_only"
 
 
@@ -241,20 +229,47 @@ def score(level: str, endpoint: str, species: str, authority: str) -> int:
     return min(100, level_points + endpoint_points + human_points + authority_points + 10)
 
 
-def draft_zh_result(topic_zh: str, value_en: str) -> str:
-    if not value_en:
-        return f"中文草稿：该记录属于「{topic_zh}」主题；摘要中未解析出明确结果，需人工复核。"
+def selected_candidates(target: int) -> List[Dict[str, str]]:
+    rows = list(csv.DictReader(CANDIDATES.open("r", encoding="utf-8-sig", newline="")))
+    used: set[str] = set()
+    selected: List[Dict[str, str]] = []
+    per_topic = max(1, target // len(TOPICS))
+    for topic in TOPICS:
+        topic_rows = [row for row in rows if row.get("query") in set(topic[4])]
+        topic_rows.sort(key=lambda row: (0 if row.get("source") == "PubMed" else 1 if row.get("source") == "ClinicalTrials.gov" else 2, row.get("year", "")), reverse=False)
+        for row in topic_rows:
+            if len([r for r in selected if r.get("_topic_id") == topic[0]]) >= per_topic:
+                break
+            if row["id"] in used:
+                continue
+            row = dict(row)
+            row["_topic_id"], row["_topic_zh"], row["_topic_en"], row["_exposure"] = topic[:4]
+            selected.append(row)
+            used.add(row["id"])
+    if len(selected) < target:
+        for row in rows:
+            if row["id"] in used:
+                continue
+            topic = QUERY_TO_TOPIC.get(row.get("query"), TOPICS[-1])
+            row = dict(row)
+            row["_topic_id"], row["_topic_zh"], row["_topic_en"], row["_exposure"] = topic[:4]
+            selected.append(row)
+            used.add(row["id"])
+            if len(selected) >= target:
+                break
+    return selected[:target]
+
+
+def zh_result(topic_zh: str, value_en: str, metadata_only: bool) -> str:
+    if metadata_only:
+        return f"中文草稿：该记录属于「{topic_zh}」主题；当前只有题录/注册信息，尚未抽取到摘要级结果，需要后续补全文或摘要。"
     return f"中文草稿：该研究属于「{topic_zh}」主题；摘要结果显示：{value_en}"
 
 
-def draft_zh_conclusion(topic_zh: str, value_en: str) -> str:
-    if not value_en:
-        return f"中文草稿：摘要未给出明确结论，不能据此形成正式建议。"
+def zh_conclusion(value_en: str, metadata_only: bool) -> str:
+    if metadata_only:
+        return "中文草稿：当前仅能确认该记录与主题相关，不能据此形成正式结论。"
     return f"中文草稿：英文摘要结论为：{value_en}"
-
-
-def conclusion_fallback(topic_en: str) -> str:
-    return f"No separate conclusion section was parsed from the abstract for {topic_en}; full-text or manual abstract review is required before publication claims."
 
 
 def support_claim(topic_zh: str, topic_en: str, level: str) -> tuple[str, str]:
@@ -264,7 +279,9 @@ def support_claim(topic_zh: str, topic_en: str, level: str) -> tuple[str, str]:
     )
 
 
-def unsupported_claim(species: str, endpoint_class: str) -> tuple[str, str]:
+def unsupported_claim(species: str, endpoint_class: str, metadata_only: bool) -> tuple[str, str]:
+    if metadata_only:
+        return ("不支持：仅凭题录/注册信息不能判断疗效、风险或临床意义。", "Does not support efficacy, risk, or clinical interpretation from metadata alone.")
     if species != "human":
         return ("不支持：不能把非人体结果直接解释为已证实的人类延寿作用。", "Does not support direct claims of proven human lifespan extension.")
     if endpoint_class not in {"H1", "H2"}:
@@ -272,132 +289,120 @@ def unsupported_claim(species: str, endpoint_class: str) -> tuple[str, str]:
     return ("不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。", "Does not support dosing, prescriptions, or individual medical advice from one abstract.")
 
 
-def parse_articles(pmids: Iterable[str]) -> Dict[str, ET.Element]:
-    root = request_xml("efetch.fcgi", {"db": "pubmed", "id": ",".join(pmids)})
-    articles: Dict[str, ET.Element] = {}
-    for article in root.findall(".//PubmedArticle"):
-        pmid = text(article.find(".//PMID"))
-        if pmid:
-            articles[pmid] = article
-    return articles
-
-
-def selected_candidates(per_topic: int) -> List[Dict[str, str]]:
-    with CANDIDATES.open("r", encoding="utf-8-sig", newline="") as f:
-        rows = [row for row in csv.DictReader(f) if row.get("source") == "PubMed" and row.get("pmid")]
-    selected: List[Dict[str, str]] = []
-    for query, *_ in TOPICS:
-        topic_rows = [row for row in rows if row.get("query") == query]
-        selected.extend(topic_rows[:per_topic])
-    return selected
-
-
-def ensure_parent() -> None:
-    FINDINGS.parent.mkdir(parents=True, exist_ok=True)
+def finding_from_row(row: Dict[str, str], article: ET.Element | None) -> Dict[str, str]:
+    pub_types: List[str] = []
+    ids: Dict[str, str] = {}
+    journal = ""
+    pmcid = row.get("pmcid", "")
+    if article is not None:
+        ids = article_ids(article)
+        pub_types = publication_types(article)
+        journal = text(article.find(".//Journal/Title"))
+        sections = abstract_sections(article)
+        body = clean(" ".join(sections.values()))
+        result_en = sections.get("RESULTS") or sections.get("RESULT") or sections.get("FINDINGS") or body
+        if not result_en:
+            result_en = (
+                f"PubMed bibliographic record for {row['_topic_en']}: {row.get('title_en','')}. "
+                "No abstract result section was available through E-utilities; result extraction requires manual full-text review."
+            )
+        conclusion_en = sections.get("CONCLUSIONS") or sections.get("CONCLUSION") or sections.get("INTERPRETATION") or f"No separate conclusion section was parsed from the abstract for {row['_topic_en']}; full-text or manual abstract review is required before publication claims."
+        pmcid = ids.get("pmc", pmcid)
+        source_depth = "abstract_plus_open_pmc_available" if pmcid else "abstract_only"
+        metadata_only = False
+    else:
+        body = row.get("title_en", "")
+        result_en = f"Metadata-level record for {row['_topic_en']}: {row.get('title_en','')}. Result extraction requires abstract or full-text retrieval."
+        conclusion_en = f"Metadata-level candidate only; no result-level conclusion is available yet for {row['_topic_en']}."
+        source_depth = "metadata_only"
+        metadata_only = True
+        if row.get("source") == "ClinicalTrials.gov":
+            pub_types = ["ClinicalTrials.gov registry record"]
+            journal = "ClinicalTrials.gov"
+        elif row.get("source") == "Crossref":
+            pub_types = ["Crossref bibliographic record"]
+            journal = "Crossref"
+    study = classify_study(pub_types, body, row.get("source", ""))
+    species = classify_species(study, body)
+    endpoint = classify_endpoint(row.get("query", ""), body)
+    level = evidence_level(study, endpoint)
+    authority = authority_signal(row, ids, pub_types, journal, source_depth)
+    contribution = score(level, endpoint, species, authority)
+    rec = recommendation(row["_topic_id"], level, species)
+    supported_zh, supported_en = support_claim(row["_topic_zh"], row["_topic_en"], level)
+    not_zh, not_en = unsupported_claim(species, endpoint, metadata_only)
+    return {
+        "finding_id": f"finding-{row['id']}",
+        "candidate_id": row["id"],
+        "pmid": row.get("pmid", ""),
+        "pmcid": pmcid,
+        "doi": ids.get("doi", row.get("doi", "")),
+        "source": row.get("source", ""),
+        "query": row.get("query", ""),
+        "topic_id": row["_topic_id"],
+        "topic_zh": row["_topic_zh"],
+        "topic_en": row["_topic_en"],
+        "title_en": row.get("title_en", ""),
+        "title_zh": row.get("title_zh", ""),
+        "journal": journal,
+        "year": row.get("year", ""),
+        "publication_types": "; ".join(pub_types),
+        "study_type_draft": study,
+        "species_draft": species,
+        "population_draft": "摘要级/题录级待复核 / abstract-or-metadata-level pending review",
+        "intervention_or_exposure_draft": row["_exposure"],
+        "comparator_draft": "摘要级/题录级待复核 / abstract-or-metadata-level pending review",
+        "endpoint_draft": endpoint,
+        "sample_size_draft": "摘要级/题录级待复核 / abstract-or-metadata-level pending review",
+        "result_en": concise(result_en),
+        "result_zh": zh_result(row["_topic_zh"], concise(result_en, 500), metadata_only),
+        "conclusion_en": concise(conclusion_en),
+        "conclusion_zh": zh_conclusion(concise(conclusion_en, 500), metadata_only),
+        "claim_supported_zh": supported_zh,
+        "claim_supported_en": supported_en,
+        "claim_not_supported_zh": not_zh,
+        "claim_not_supported_en": not_en,
+        "overinterpretation_risk_zh": "过度解读风险：自动抽取结果不能替代全文复核，不能直接转化为个人医疗建议。",
+        "overinterpretation_risk_en": "Overinterpretation risk: automated extraction does not replace full-text review and cannot be converted into personal medical advice.",
+        "evidence_level_draft": level,
+        "endpoint_class_draft": endpoint,
+        "authority_signal_draft": authority,
+        "contribution_score_draft": str(contribution),
+        "recommendation_class_draft": rec,
+        "medical_supervision_draft": "true" if rec == "Medical Action" or row["_topic_id"] in {"metformin-aging", "rapamycin-mtor-aging", "senolytics"} else "false",
+        "evidence_source_depth": source_depth,
+        "draft_notice_zh": PUBLIC_DRAFT_NOTICE_ZH,
+        "draft_notice_en": PUBLIC_DRAFT_NOTICE_EN,
+        "translation_status": "zh_draft_needs_review",
+        "review_status": "public_draft_not_fully_reviewed",
+        "last_checked": str(date.today()),
+    }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--per-topic", type=int, default=3)
-    parser.add_argument("--force", action="store_true", help="Rebuild evidence_findings.csv from scratch.")
+    parser.add_argument("--target", type=int, default=600)
+    parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
-
     load_dotenv(ROOT / ".env")
-    ensure_parent()
-    candidates = selected_candidates(args.per_topic)
-    if args.force or not FINDINGS.exists():
-        existing: set[str] = set()
-        mode = "w"
-    else:
-        with FINDINGS.open("r", encoding="utf-8-sig", newline="") as f:
-            existing = {row.get("candidate_id", "") for row in csv.DictReader(f) if row.get("candidate_id")}
-        mode = "a"
-    candidates = [row for row in candidates if row.get("id") not in existing]
-
-    with FINDINGS.open(mode, encoding="utf-8", newline="") as out:
-        writer = csv.DictWriter(out, fieldnames=FINDING_FIELDS)
-        if mode == "w":
-            writer.writeheader()
-        created = 0
-        for start in range(0, len(candidates), 20):
-            batch = candidates[start : start + 20]
-            articles = parse_articles(row["pmid"] for row in batch)
-            for row in batch:
-                article = articles.get(row["pmid"])
-                if article is None:
-                    continue
-                ids = article_ids(article)
-                sections = abstract_sections(article)
-                abstract = clean(" ".join(sections.values()))
-                result_en = sections.get("RESULTS") or sections.get("RESULT") or sections.get("FINDINGS") or abstract
-                conclusion_en = sections.get("CONCLUSIONS") or sections.get("CONCLUSION") or sections.get("INTERPRETATION") or ""
-                pub_types = publication_types(article)
-                study_type = classify_study(pub_types, abstract)
-                species = classify_species(study_type, abstract)
-                endpoint_class = classify_endpoint(row["query"], abstract)
-                level = evidence_level(study_type, endpoint_class)
-                topic_id, topic_zh, topic_en, exposure = TOPIC_BY_QUERY[row["query"]][1:]
-                if not conclusion_en:
-                    conclusion_en = conclusion_fallback(topic_en)
-                pmcid = ids.get("pmc", row.get("pmcid", ""))
-                evidence_source_depth = "abstract_plus_open_pmc_available" if pmcid else "abstract_only"
-                journal = text(article.find(".//Journal/Title"))
-                authority = authority_signal(pub_types, ids, journal, evidence_source_depth)
-                contribution = score(level, endpoint_class, species, authority)
-                rec = recommendation(study_type, topic_id, level)
-                supported_zh, supported_en = support_claim(topic_zh, topic_en, level)
-                not_zh, not_en = unsupported_claim(species, endpoint_class)
-                writer.writerow(
-                    {
-                        "finding_id": f"finding-{row['id']}",
-                        "candidate_id": row["id"],
-                        "pmid": row["pmid"],
-                        "pmcid": pmcid,
-                        "doi": ids.get("doi", row.get("doi", "")),
-                        "source": row.get("source", ""),
-                        "query": row.get("query", ""),
-                        "topic_id": topic_id,
-                        "topic_zh": topic_zh,
-                        "topic_en": topic_en,
-                        "title_en": row.get("title_en", ""),
-                        "title_zh": "",
-                        "journal": journal,
-                        "year": row.get("year", ""),
-                        "publication_types": "; ".join(pub_types),
-                        "study_type_draft": study_type,
-                        "species_draft": species,
-                        "population_draft": "摘要级待复核 / abstract-level pending review",
-                        "intervention_or_exposure_draft": exposure,
-                        "comparator_draft": "摘要级待复核 / abstract-level pending review",
-                        "endpoint_draft": endpoint_class,
-                        "sample_size_draft": "摘要级待复核 / abstract-level pending review",
-                        "result_en": concise(result_en),
-                        "result_zh": draft_zh_result(topic_zh, concise(result_en, 500)),
-                        "conclusion_en": concise(conclusion_en),
-                        "conclusion_zh": draft_zh_conclusion(topic_zh, concise(conclusion_en, 500)),
-                        "claim_supported_zh": supported_zh,
-                        "claim_supported_en": supported_en,
-                        "claim_not_supported_zh": not_zh,
-                        "claim_not_supported_en": not_en,
-                        "overinterpretation_risk_zh": "过度解读风险：自动抽取结果不能替代全文复核，不能直接转化为个人医疗建议。",
-                        "overinterpretation_risk_en": "Overinterpretation risk: automated extraction does not replace full-text review and cannot be converted into personal medical advice.",
-                        "evidence_level_draft": level,
-                        "endpoint_class_draft": endpoint_class,
-                        "authority_signal_draft": authority,
-                        "contribution_score_draft": str(contribution),
-                        "recommendation_class_draft": rec,
-                        "medical_supervision_draft": "true" if rec == "Medical Action" or topic_id in {"metformin-aging", "rapamycin-mtor-aging", "senolytics"} else "false",
-                        "evidence_source_depth": evidence_source_depth,
-                        "draft_notice_zh": PUBLIC_DRAFT_NOTICE_ZH,
-                        "draft_notice_en": PUBLIC_DRAFT_NOTICE_EN,
-                        "translation_status": "zh_draft_needs_review",
-                        "review_status": "public_draft_not_fully_reviewed",
-                        "last_checked": str(date.today()),
-                    }
-                )
-                created += 1
+    rows = selected_candidates(args.target)
+    if len(rows) < args.target:
+        raise SystemExit(f"Only {len(rows)} candidates available for target={args.target}.")
+    findings: List[Dict[str, str]] = []
+    for start in range(0, len(rows), 50):
+        batch = rows[start : start + 50]
+        pubmed_rows = [row for row in batch if row.get("pmid")]
+        articles = parse_articles(row.get("pmid", "") for row in pubmed_rows)
+        for row in batch:
+            findings.append(finding_from_row(row, articles.get(row.get("pmid", ""))))
+        if pubmed_rows:
             time.sleep(0.35)
-    print(f"Created {created} PubMed finding records. total_target={len(TOPICS) * args.per_topic}")
+        print(f"processed={min(start + len(batch), len(rows))}/{len(rows)}")
+    with FINDINGS.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=FINDING_FIELDS)
+        writer.writeheader()
+        writer.writerows(findings)
+    print(f"Wrote {len(findings)} finding records.")
 
 
 if __name__ == "__main__":

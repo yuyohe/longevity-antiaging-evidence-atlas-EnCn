@@ -48,9 +48,9 @@ def main() -> None:
             "date": str(date.today()),
             "target": "GitHub + Feishu Base + Feishu Docs package",
             "source_commit": commit,
-            "changed_items": "v0.1 public draft: 60 findings, 20 topics, 60 paper cards, 30 evidence matrix rows",
+            "changed_items": "v0.3 public draft: 600 findings, 20 topics, 600 paper cards, 300 evidence matrix rows",
             "status": "success",
-            "notes": "Draft publication package generated; Feishu Docs API publishing not enabled, Markdown package prepared.",
+            "notes": "Draft publication package generated and synced to Feishu tables; Feishu Docs Markdown import package prepared.",
         },
     )
     print("Feishu publish log synced.")

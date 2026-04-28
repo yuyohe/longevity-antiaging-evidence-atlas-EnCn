@@ -1,0 +1,67 @@
+# Assessment of Cardiorespiratory Fitness In Individuals With Type 2 Diabetes Mellitus: Systematic Review And Meta-Analysis Protocol (Preprint)
+
+> 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。
+> Draft status: automatically prepared; not fully reviewed; not medical advice.
+
+## Metadata / 元数据
+
+- Candidate ID: `crossref-10.2196/preprints.91185`
+- Source: `Crossref`
+- PMID: ``
+- PMCID: ``
+- DOI: `10.2196/preprints.91185`
+- Year: 2026
+- Journal/Registry: Crossref
+- Topic: 心肺适能与死亡风险 / Cardiorespiratory Fitness and Mortality
+- Evidence source depth: `metadata_only`
+
+## Study Design / 研究设计
+
+- Draft study type: `systematic_review_or_meta_analysis`
+- Draft species/population: `human` / 摘要级/题录级待复核 / abstract-or-metadata-level pending review
+- Draft intervention or exposure: fitness / VO2max
+- Draft comparator: 摘要级/题录级待复核 / abstract-or-metadata-level pending review
+- Draft primary endpoint: H4
+- Draft sample size: 摘要级/题录级待复核 / abstract-or-metadata-level pending review
+
+## Main Results / 主要结果
+
+EN: Metadata-level record for Cardiorespiratory Fitness and Mortality: Assessment of Cardiorespiratory Fitness In Individuals With Type 2 Diabetes Mellitus: Systematic Review And Meta-Analysis Protocol (Preprint). Result extraction requires abstract or full-text retrieval.
+
+ZH draft: 中文草稿：该记录属于「心肺适能与死亡风险」主题；当前只有题录/注册信息，尚未抽取到摘要级结果，需要后续补全文或摘要。
+
+## Conclusion Boundary / 结论边界
+
+EN: Metadata-level candidate only; no result-level conclusion is available yet for Cardiorespiratory Fitness and Mortality.
+
+ZH draft: 中文草稿：当前仅能确认该记录与主题相关，不能据此形成正式结论。
+
+## Supported Claim / 支持的结论
+
+- ZH: 可支持：将「心肺适能与死亡风险」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。
+- EN: Supports treating Cardiorespiratory Fitness and Mortality as a candidate evidence topic with draft level E, pending full review.
+
+## Unsupported Claim / 不支持的结论
+
+- ZH: 不支持：仅凭题录/注册信息不能判断疗效、风险或临床意义。
+- EN: Does not support efficacy, risk, or clinical interpretation from metadata alone.
+
+## Overinterpretation Risk / 过度解读风险
+
+- ZH: 过度解读风险：自动抽取结果不能替代全文复核，不能直接转化为个人医疗建议。
+- EN: Overinterpretation risk: automated extraction does not replace full-text review and cannot be converted into personal medical advice.
+
+## Draft Grading / 草判分级
+
+- Evidence level: `E`
+- Endpoint class: `H4`
+- Proxy credibility score: `49`
+- Recommendation class: `Monitor`
+- Medical supervision needed: `false`
+- Authority signal: DOI; Crossref metadata; peer-reviewed journal metadata; metadata_only
+
+## Review Status / 复核状态
+
+Public draft. Needs human full-text review before formal recommendation or clinical interpretation.
+
+公开草稿。形成正式推荐或临床解释前，必须人工阅读全文复核。
