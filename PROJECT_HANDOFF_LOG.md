@@ -254,6 +254,37 @@ Current dashboard summary after v0.5:
 - Updated GitHub files: `data/skin_beauty_summary.csv`, `data/skin_beauty_topics.csv`, `content/overview/skin-beauty-summary.md`, and scoring override logic in `scripts/apply_evidence_scoring_v04.py`.
 - Feishu `外观抗老总览` should be re-synced after this correction.
 
+## 2026-04-29 Methods A/B Implementation
+
+User asked to execute both hardening options:
+
+- Method A: publication-prep hardening for high-grade topics.
+- Method B: methodology enhancement with PICO/PECO, claim-level grading, and appraisal plans.
+
+Implemented:
+
+- `data/literature_library.csv`: 5983 full-library records for Feishu visibility.
+- `data/core_review_queue.csv`: 95 A/B-topic core paper review records.
+- `data/public_topic_explanations.csv`: 28 topic-level explanations for why a level was assigned and why it is not personal medical advice.
+- `data/topic_pico_peco.csv`: 28 PICO/PECO question frames.
+- `data/claim_level_grading.csv`: 56 claim-level rows, separating supported public claims from unsupported/overstated claims.
+- `data/methodology_appraisal_plan.csv`: 95 appraisal assignments using AMSTAR 2, Cochrane RoB 2, ROBINS-I, or domain screen.
+- `content/overview/high-priority-review-brief.md`: public/internal bridge for high-grade topic review.
+- `content/overview/claim-level-grading.md`: claim-level grading and PICO/PECO summary.
+- `docs/methods-ab-implementation-report-2026-04-29.md`: implementation report.
+- `scripts/implement_methods_ab.py`: reproducible generator for these files.
+
+New Feishu tables created/synced:
+
+- `文献库全量`: `tblphEOQSzMb3dFi`, 5983 rows.
+- `核心复核队列`: `tblRyAJ5afGo6tGj`, 95 rows.
+- `主题评级说明`: `tblMfLdNDc4zkrDk`, 28 rows.
+- `PICO_PECO问题框架`: `tblPJ2AHChIV7gGo`, 28 rows.
+- `Claim级证据评级`: `tblgsBeHJ7LI7uKf`, 56 rows.
+- `方法学复核计划`: `tblwZVdgFQRYd1fA`, 95 rows.
+
+Existing Feishu `候选文献` was also checked: 5983 records already present.
+
 ## Operating Rules For Future Threads
 
 - Always read this file first.

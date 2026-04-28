@@ -53,7 +53,7 @@
 - 皮肤 finding 必填字段缺失：{'finding_id': 0, 'pmid': 0, 'topic_id': 0, 'title_en': 0, 'result_en': 0, 'result_zh': 0, 'conclusion_en': 0, 'conclusion_zh': 0, 'final_evidence_level': 0}
 - 补剂矩阵必填字段缺失：{'supplement_id': 0, 'name_zh': 0, 'name_en': 0, 'longevity_evidence_level': 0, 'skin_beauty_evidence_level': 0, 'unsupported_claim_zh': 0, 'safety_notes_zh': 0}
 - evidence_matrix 中找不到对应 candidate_id 的记录数：0
-- 公开页面检查：{'overview_topic_pages_checked': 35, 'paper_pages_checked': 1800, 'draft_notice_missing': 0, 'paper_marker_missing': 0, 'mojibake_pages': 0}
+- 公开页面检查：{'overview_topic_pages_checked': 37, 'paper_pages_checked': 1800, 'draft_notice_missing': 0, 'paper_marker_missing': 0, 'mojibake_pages': 0}
 
 ## 3. 当前等级分布
 

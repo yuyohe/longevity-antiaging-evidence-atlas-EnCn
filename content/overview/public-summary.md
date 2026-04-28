@@ -14,6 +14,8 @@
 | 健康寿命证据图谱 | 死亡、疾病、功能、代谢、药物、机制和健康寿命边界。 | [公开总览](public-summary.md) |
 | 外观抗老与皮肤健康证据图谱 | 光老化、皱纹、色斑、屏障、水分、医美和皮肤安全边界。 | [皮肤美容总览](skin-beauty-summary.md) |
 | 补剂证据矩阵 | 同一补剂对健康寿命和皮肤美容的证据强弱、不能宣传什么。 | [补剂矩阵](supplement-summary.md) |
+| A/B 级核心复核 | A/B 级主题的核心文献人工复核队列，以及为什么不是个人医疗建议。 | [核心复核说明](high-priority-review-brief.md) |
+| Claim 级评级 | 把同一主题拆成“支持的说法”和“不能外推的说法”，并配 PICO/PECO。 | [Claim 级评级](claim-level-grading.md) |
 
 ## 一句话说明
 

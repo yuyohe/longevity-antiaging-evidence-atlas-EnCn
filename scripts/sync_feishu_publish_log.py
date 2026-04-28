@@ -40,6 +40,14 @@ def main() -> None:
             client.create_bitable_text_field(app_token, table_id, field)
 
     commit = git_commit()
+    changed_items = os.getenv(
+        "FEISHU_PUBLISH_CHANGED_ITEMS",
+        "Methods A/B implementation: full literature library, core review queue, PICO/PECO framework, claim-level grading, methodology appraisal plan, Feishu tables synced",
+    )
+    notes = os.getenv(
+        "FEISHU_PUBLISH_NOTES",
+        "Full literature library is visible in Feishu; A/B topic review workflow and claim-level grading tables are available for manual review and lock/downgrade decisions.",
+    )
     client.create_bitable_record(
         app_token,
         table_id,
@@ -48,9 +56,9 @@ def main() -> None:
             "date": TODAY,
             "target": "GitHub + Feishu Base + Feishu Docs package",
             "source_commit": commit,
-            "changed_items": "v0.5 expansion: candidate pool 5983, healthspan findings 1800, paper cards 1800, evidence matrix 900, high-weight/high-design PubMed search, topic confidence caps, Feishu tables synced",
+            "changed_items": changed_items,
             "status": "success",
-            "notes": "Feishu candidate pool, 1800 finding fields, 900 evidence matrix records, public summary, topics, methodology, skin summary, and supplement matrix synced; stale evidence matrix records cleaned.",
+            "notes": notes,
         },
     )
     print("Feishu publish log synced.")
