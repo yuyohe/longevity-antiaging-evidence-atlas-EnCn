@@ -15,10 +15,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def git_commit() -> str:
-    try:
-        return subprocess.check_output(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True).strip()
-    except Exception:
-        return ""
+    for git in ["git", r"C:\Program Files\Git\cmd\git.exe"]:
+        try:
+            return subprocess.check_output([git, "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True).strip()
+        except Exception:
+            continue
+    return ""
 
 
 def main() -> None:
