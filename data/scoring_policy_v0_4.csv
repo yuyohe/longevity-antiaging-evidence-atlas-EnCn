@@ -1,0 +1,12 @@
+rule_id,name_zh,name_en,description_zh,weight_or_rule
+framework,总框架,Framework,采用 GRADE 思路作为公开结论置信度框架，并把 Cochrane RoB 2、ROBINS-I、AMSTAR 2 作为后续全文复核工具。,rule
+design,研究设计,Study design,系统综述/Meta 分析、随机试验、队列、观察、动物/机制按层级给基础分；但不能单独决定 A/B/C/D。,0-34
+endpoint,终点价值,Endpoint value,死亡、疾病事件、骨折等硬终点最高；皮肤皱纹/水分/弹性属于 S1 软临床/仪器终点，不能等同延寿。,0-25
+human,人类相关性,Human relevance,人体 RCT、队列、临床研究优先；动物、细胞和机制研究设置等级上限。,0-15
+source_depth,来源深度,Source depth,开放全文/PMC、摘要、仅题录分层；仅题录记录不能进入高等级。,0-10
+bibliometrics,影响力信号,Influence signals,自动使用 NIH iCite RCR 和 OpenAlex cited_by_count。JCR IF/CiteScore/SJR 若有授权数据，可后续导入；默认不伪造 IF。,0-20 plus influence_score
+risk,风险扣分,Risk adjustments,摘要级、仅题录、商业过度宣传、可能行业资助、软终点外推等会扣分。,-0 to -20
+cap,等级上限,Confidence caps,动物/机制最高 D；仅题录最高 D；皮肤软终点系统综述通常最高 B；口服胶原、抗氧化补剂等高商业风险主题最高 C/B。,hard cap
+final_level,最终等级,Final level,quality_confidence_score 先映射 A/B/C/D/E，再应用上限规则得到 final_evidence_level。,"A>=82, B>=66, C>=48, D>=30, else E"
+if_policy,IF 使用政策,Impact factor policy,IF 是期刊层指标，不作为单篇研究质量的直接替代；若后续导入 JCR IF，只进入 authority_signal_score，不覆盖 RoB/GRADE。,optional external import
+update,更新时间,Update date,本轮评分和公开说明更新时间：2026-04-28。,2026-04-28

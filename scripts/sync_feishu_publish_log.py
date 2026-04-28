@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 import subprocess
-from datetime import date
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -12,6 +11,7 @@ from dotenv import load_dotenv
 from feishu_client import FeishuClient, FeishuError
 
 ROOT = Path(__file__).resolve().parents[1]
+TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-28")
 
 
 def git_commit() -> str:
@@ -44,13 +44,13 @@ def main() -> None:
         app_token,
         table_id,
         {
-            "publish_id": f"publish-{date.today()}-{commit or 'working'}",
-            "date": str(date.today()),
+            "publish_id": f"publish-{TODAY}-{commit or 'working'}",
+            "date": TODAY,
             "target": "GitHub + Feishu Base + Feishu Docs package",
             "source_commit": commit,
-            "changed_items": "v0.3 public draft: 600 findings, 20 topics, 600 paper cards, 300 evidence matrix rows",
+            "changed_items": "v0.4 scoring overhaul: GRADE/RoB/AMSTAR framework, iCite/OpenAlex signals, confidence caps, collagen downgrade, updated public summary/skin/supplement/methodology tables",
             "status": "success",
-            "notes": "Draft publication package generated and synced to Feishu tables; Feishu Docs Markdown import package prepared.",
+            "notes": "Scoring fields synced to Feishu public summary, skin summary, supplement matrix, methodology table, evidence matrix, and candidate findings.",
         },
     )
     print("Feishu publish log synced.")
