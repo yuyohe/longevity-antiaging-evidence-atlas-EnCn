@@ -1,0 +1,13 @@
+sync_id,类别,表名,table_id,飞书链接,GitHub路径或本地资产,状态,说明
+sync-000,公开总索引,公开数据_公开资产总索引_2026-05,tblxLlIN4LvohIHv,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblxLlIN4LvohIHv,data/public_asset_index_2026_05.csv,active,全部公开资产的总入口和路径说明
+sync-001,公开视觉资产,视觉资产_热力图图片_2026-05,tblv6lnYWiNIsX1o,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblv6lnYWiNIsX1o,data/visual_heatmap_assets_2026_05.csv,active,研究热力图、证据热力图、撤稿密度图和证据含金量图的图片入口
+sync-002,公开视觉资产,公开入口_前50成分单卡_2026-05,tblgxZHbMWOTRjX4,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblgxZHbMWOTRjX4,data/visual_ingredient_cards_2026_05.csv,active,一成分一张卡片的公开画廊入口
+sync-003,公开数据资产,公开数据_成分证据含金量_2026-05,tblPqnliNb81vsy2,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblPqnliNb81vsy2,data/evidence_yield_metrics_2026_05.csv,active,按成分展示发表量、A/B证据和证据产出率
+sync-004,公开数据资产,公开数据_主题证据产出率_2026-05,tblpn0KpsgAMTKPJ,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblpn0KpsgAMTKPJ,data/topic_evidence_yield_metrics_2026_05.csv,active,按主题展示研究量和高等级证据占比
+sync-005,公开数据资产,公开数据_撤稿密度_2026-05,tbl6HESOmAlZgUO8,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbl6HESOmAlZgUO8,data/retraction_risk_summary_20y.csv,active,用发表分母和每千篇撤稿数展示撤稿风险
+sync-006,公开全量数据,公开数据_全量文献候选库_2026-05,tblF5bAj1BfGIAfp,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblF5bAj1BfGIAfp,public-data/literature-library-2026-05.csv,active,11476 条候选文献入口
+sync-007,公开全量数据,公开数据_候选来源原始表_2026-05,tbluJ36RHMdzcUqe,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbluJ36RHMdzcUqe,public-data/candidate-sources-2026-05.csv,active,11476 条候选来源原始记录
+sync-008,公开全量数据,公开数据_入选短名单_2026-05,tblCHOdOojbsmRdL,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblCHOdOojbsmRdL,public-data/shortlist-sources-2026-05.csv,active,3000 条优先复核记录
+sync-009,公开全量数据,公开数据_证据发现表_2026-05,tblDkp1CCSam5JzL,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblDkp1CCSam5JzL,public-data/evidence-findings-2026-05.csv,active,3000 条证据发现；飞书中长文本为浏览版，完整内容见 CSV
+sync-010,公开全量数据,公开数据_证据矩阵_2026-05,tblM9GnRhWQYIId3,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblM9GnRhWQYIId3,public-data/evidence-matrix-2026-05.csv,active,1500 条入矩阵证据；飞书中长文本为浏览版，完整内容见 CSV
+sync-011,已下线,AI问答_读者自然语言入口_2026-05,tbl0TsAC7wwA88Cp,,data/feishu_ai_qa_live_2026_05.csv,deleted_2026-05-19,已按要求删除，不再作为公开入口
