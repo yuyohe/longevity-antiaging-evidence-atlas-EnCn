@@ -1,0 +1,12 @@
+asset_id,资产名称,资产类型,GitHub路径,飞书导入文件,飞书表格名,主要用途,公开状态,更新月份
+asset-001,前 50 常见成分卡片库,公开阅读资产,content/cards/ingredients-top-50/index.md,build/feishu-public-reader/011-前50常见成分卡片库.md,公开入口_前50成分单卡_2026-05,让普通网友快速理解常见成分,可公开,2026-05
+asset-002,抗衰研究热力图,公开阅读资产,docs/research-heatmap-2026-05.html,build/feishu-public-reader/012-抗衰研究热力图.md,视觉资产_热力图图片_2026-05,展示不同方向研究活跃度、证据热力图、撤稿密度图和证据含金量图,可公开,2026-05
+asset-003,2026-05 月度更新报告,公开阅读资产,docs/monthly-update-2026-05.html,build/feishu-public-reader/013-2026-05月度更新报告.md,公开数据_月度更新索引_2026-05,解释本月新增资产和维护范围,可公开,2026-05
+asset-004,全量文献候选库,公开全量数据,public-data/literature-library-2026-05.csv,,公开数据_全量文献候选库_2026-05,公开 11476 条候选文献入口和纳入状态,可公开,2026-05
+asset-005,候选来源原始表,公开全量数据,public-data/candidate-sources-2026-05.csv,,公开数据_候选来源原始表_2026-05,公开 11476 条候选来源、检索词和抓取备注,可公开,2026-05
+asset-006,入选短名单,公开全量数据,public-data/shortlist-sources-2026-05.csv,,公开数据_入选短名单_2026-05,公开 3000 条优先复核记录和评分字段,可公开,2026-05
+asset-007,证据发现表,公开全量数据,public-data/evidence-findings-2026-05.csv,,公开数据_证据发现表_2026-05,公开 3000 条证据发现、结论、风险和 0.5 评分字段,可公开,2026-05
+asset-008,证据矩阵,公开全量数据,public-data/evidence-matrix-2026-05.csv,,公开数据_证据矩阵_2026-05,公开 1500 条入矩阵证据和证据等级,可公开,2026-05
+asset-009,成分证据含金量,公开数据资产,data/evidence_yield_metrics_2026_05.csv,,公开数据_成分证据含金量_2026-05,按成分展示发表量、A/B 证据和证据产出率,可公开,2026-05
+asset-010,主题证据产出率,公开数据资产,data/topic_evidence_yield_metrics_2026_05.csv,,公开数据_主题证据产出率_2026-05,按主题展示研究量和高等级证据占比,可公开,2026-05
+asset-011,撤稿密度,公开数据资产,data/retraction_risk_summary_20y.csv,,公开数据_撤稿密度_2026-05,用发表分母和每千篇撤稿数展示撤稿风险,可公开,2026-05

@@ -1,0 +1,4 @@
+asset_surface,object,token_or_repo,public_readable,public_editable,verified_status,verified_at,notes
+Feishu,longevity wiki/bitable,WriBw4TXZiOsjQkJWk8ctL1xnVg,true,false,external_access=true;link_share_entity=anyone_readable;lock_switch=true,2026-05-20,外部拿到链接可阅读；公开链接不可编辑；若隐身仍空白，优先检查飞书租户外链策略和浏览器脚本/隐私限制
+Feishu,underlying bitable app,hidden,true,false,external_access=true;link_share_entity=anyone_readable;lock_switch=true,2026-05-20,与 wiki 节点权限一致；底层 app token 不写入公开索引
+GitHub,yuyohe/longevity-antiaging-evidence-atlas-EnCn,yuyohe/longevity-antiaging-evidence-atlas-EnCn,false,false,visibility=private,2026-05-20,需要在 GitHub 设置中手动切换为 public，并把本地 public-data 等资产推送后才可对外浏览
