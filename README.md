@@ -1,7 +1,7 @@
 # Longevity Anti-Aging Evidence Atlas EnCn
 
 **中文名 / Chinese public name:** 长寿抗衰与健康寿命证据图谱  
-**品牌 / Brand:** YulCell宇多细胞  
+**品牌 / Brand:** 宇多Yul细胞/yulcell  
 **Repository:** `longevity-antiaging-evidence-atlas-EnCn`
 
 > **Public entry point / 公众入口：** [`content/overview/start-here.md`](content/overview/start-here.md)  
@@ -9,11 +9,11 @@
 > **Brand asset index / 品牌资产索引：** [`docs/yulcell-brand-index.md`](docs/yulcell-brand-index.md)  
 > **Chinese README / 中文 README：** [`README.zh-CN.md`](README.zh-CN.md)
 
-This is a bilingual evidence atlas by **YulCell宇多细胞** for longevity, anti-aging claims, healthspan, supplements, skin-aging topics, biomarkers, and frontier geroscience.
+This is a bilingual evidence atlas by **宇多Yul细胞/yulcell** for longevity, anti-aging claims, healthspan, supplements, skin-aging topics, biomarkers, and frontier geroscience.
 
-这是 **YulCell宇多细胞** 维护的中英文双语证据图谱项目，用于整理长寿、抗衰、健康寿命、补剂、皮肤衰老、生物标志物和前沿老年科学相关主张。
+这是 **宇多Yul细胞/yulcell** 维护的中英文双语证据图谱项目，用于整理长寿、抗衰、健康寿命、补剂、皮肤衰老、生物标志物和前沿老年科学相关主张。
 
-**SEO keywords / 搜索关键词：** YulCell宇多细胞, YulCell, 宇多细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, Longevity Anti-Aging Evidence Atlas.
+**SEO keywords / 搜索关键词：** 宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, Longevity Anti-Aging Evidence Atlas.
 
 ## Mission / 项目使命
 
@@ -46,9 +46,9 @@ If you are not a researcher, start with the plain-language entry and topic guide
 
 ## Published GitHub Snapshot / GitHub 当前公开快照
 
-The public GitHub snapshot currently exposes the May 2026 data package under the **YulCell宇多细胞** brand. A larger June 2026 refresh has been generated locally and should be published as a separate data update.
+The public GitHub snapshot currently exposes the May 2026 data package under the **宇多Yul细胞/yulcell** brand. A larger June 2026 refresh has been generated locally and should be published as a separate data update.
 
-GitHub 当前公开的是 **YulCell宇多细胞** 名下的 2026 年 5 月数据包。2026 年 6 月扩展版已经在本地生成，后续应作为单独数据更新发布。
+GitHub 当前公开的是 **宇多Yul细胞/yulcell** 名下的 2026 年 5 月数据包。2026 年 6 月扩展版已经在本地生成，后续应作为单独数据更新发布。
 
 | Asset / 资产 | Published count / 已公开数量 | Link / 链接 |
 | --- | ---: | --- |
