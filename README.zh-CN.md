@@ -1,88 +1,50 @@
-# ????????????? / Longevity Anti-Aging Evidence Atlas EnCn
+# 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging Evidence Atlas EnCn
 
-> ??????[`content/overview/public-summary.md`](content/overview/public-summary.md)
->
-> Public entry point: [`content/overview/public-summary.md`](content/overview/public-summary.md)
+**品牌 / Brand：** 宇多Yul细胞/yulcell  
+**品牌资产索引 / Brand asset index：** [`docs/yulcell-brand-index.md`](docs/yulcell-brand-index.md)  
+**公众入口 / Public entry point：** [`content/overview/start-here.md`](content/overview/start-here.md)  
+**证据总览 / Evidence summary：** [`content/overview/public-summary.md`](content/overview/public-summary.md)
 
+这个仓库是 **宇多Yul细胞/yulcell** 维护的长寿抗衰证据图谱，把长寿、抗衰、健康寿命、补剂、护肤、皮肤衰老、生物标志物和前沿 geroscience 相关资料整理成一套可追踪的证据库。
 
-这是一个中英双语、可审计、可持续维护的长寿与健康寿命证据库。
+This repository is a bilingual evidence atlas by **宇多Yul细胞/yulcell** for longevity, anti-aging claims, healthspan, supplements, skin-aging topics, biomarkers, and frontier geroscience.
 
-项目目标不是提供医疗建议，也不是推荐药物、补剂或剂量，而是把长寿、健康寿命、抗衰、运动、心血管预防、代谢健康、生物年龄、补剂和前沿 geroscience 技术按证据强度重新整理。
+搜索关键词：宇多Yul细胞/yulcell、yulcell、宇多Yul细胞、长寿抗衰证据图谱、健康寿命证据图谱、抗衰证据库、longevity anti-aging evidence atlas。
 
-## 项目原则
+## 项目目标
 
-1. **证据优先**：区分人体硬终点、人体功能终点、临床风险指标、生物标志物、动物寿命实验和机制研究。
-2. **双语维护**：英文用于文献元数据和国际核查，简体中文用于中文读者理解。
-3. **不夸大**：不把动物实验写成人类延寿，不把 biomarker 改善写成“逆龄”。
-4. **不提供处方**：药物、剂量、诊断和治疗必须由医生评估。
-5. **GitHub 是唯一事实源**：飞书多维表格、知识库和后续中文发布内容都从本仓库同步。
-6. **候选不等于收录**：PubMed、ClinicalTrials.gov、Crossref 抓取结果先进候选池，经过人工审核和贡献度评分后才进入正式证据矩阵。
+本项目不是产品清单，也不是治疗方案。它的作用是帮助读者分清楚：哪些说法有更强证据，哪些只是早期信号，哪些更接近商业宣传。
 
-## 当前阶段
+- 区分人体硬终点、人体功能终点、临床风险指标、生物标志物、动物寿命实验和机制研究。
+- 区分健康寿命证据与皮肤、外观抗老证据。
+- 区分补剂证据与补剂营销。
+- 对药物、医美、慢病、高剂量或长期补剂使用保留明确安全边界。
+- GitHub 是源数据与内容源头，飞书是结构化中文展示和复核层。
 
-第一阶段参考外部 longevity GitHub 项目的主题结构，但扩容到约十倍候选规模。以参考清单当前 75 条来源为基线，本项目第一阶段候选池目标为不少于 750 条。
+## 从这里开始
 
-候选池只是筛选入口，正式纳入需要看：
+- [从这里开始](content/overview/start-here.md)
+- [公众版总览](content/overview/public-summary.md)
+- [大众版证据等级](content/overview/evidence-levels-plain-language.md)
+- [读者主题指南](content/overview/reader-topic-guide.md)
+- [补剂总览](content/overview/supplement-summary.md)
+- [皮肤与外观抗老总览](content/overview/skin-beauty-summary.md)
+- [大众版术语表](content/overview/plain-language-glossary.md)
 
-- 研究设计
-- 终点质量
-- 人类相关性
-- 样本量和重复验证
-- 效应量、风险收益和安全性
-- IF、期刊声誉、引用和开放数据等权威性信号
-- 对本图谱主题覆盖的贡献
-- 能否清楚地中英双语解释
+## 当前 GitHub 公开资产
 
-## 仓库结构
+GitHub 当前公开的是 **宇多Yul细胞/yulcell** 名下的 2026 年 5 月数据包。2026 年 6 月扩展版已经在本地生成，后续应作为单独数据更新发布。
 
-```text
-AGENTS.md                         # Codex / AI agent 维护规则
-README.md                         # English overview
-README.zh-CN.md                   # 中文说明
-DISCLAIMER.md                     # 医疗免责声明
-CHANGELOG.md                      # 更新日志
-data/                             # 结构化数据
-content/                          # 论文卡片、主题页、分析页、推荐边界
-methodology/                      # 纳入标准、证据分级、贡献度评分、搜索策略
-prompts/                          # 给 Codex 的提示词
-scripts/                          # 抓取、评分、检查、索引、飞书同步脚本
-docs/                             # GitHub/Codex/飞书接入说明
-.github/workflows/                # GitHub Actions
-```
+| 资产 | 已公开数量 | 链接 |
+| --- | ---: | --- |
+| 候选来源 | 11,480 条 | [`public-data/candidate-sources-2026-05.csv`](public-data/candidate-sources-2026-05.csv) |
+| 文献库 | 11,480 条 | [`public-data/literature-library-2026-05.csv`](public-data/literature-library-2026-05.csv) |
+| 证据发现 | 3,000 行 | [`public-data/evidence-findings-2026-05.csv`](public-data/evidence-findings-2026-05.csv) |
+| 证据矩阵 | 1,500 行 | [`public-data/evidence-matrix-2026-05.csv`](public-data/evidence-matrix-2026-05.csv) |
+| 入选来源 | 3,000 行 | [`public-data/shortlist-sources-2026-05.csv`](public-data/shortlist-sources-2026-05.csv) |
+| 公开数据说明 | 1 页 | [`public-data/README.md`](public-data/README.md) |
+| 品牌资产索引 | 1 页 | [`docs/yulcell-brand-index.md`](docs/yulcell-brand-index.md) |
 
-## 工作流
+## 边界声明
 
-```text
-文献检索
--> data/candidate_sources.csv
--> 飞书「候选文献」
--> 人工审核与贡献度评分
--> content/papers/ 论文卡片
--> data/evidence_matrix.csv
--> content/topics/ 主题页
--> lint / build index
--> GitHub commit
--> 同步飞书
-```
-
-## 快速开始
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/lint.py
-python scripts/build_index.py
-```
-
-## 飞书同步
-
-详见：
-
-- `docs/connect-feishu.md`
-- `docs/feishu-field-mapping.md`
-- `docs/feishu-base-schema.md`
-
-## 免责声明
-
-本项目仅用于研究整理和内容创作，不构成医疗建议、诊断或治疗建议。涉及药物、疾病、检查、补剂和治疗方案的问题，请咨询合格医疗专业人士。
+本项目用于证据复核和内容生产，不提供个人医疗建议、诊断、处方、剂量方案或购买建议。涉及药物、疾病、检查、补剂和治疗方案的问题，请咨询合格医疗专业人士。
