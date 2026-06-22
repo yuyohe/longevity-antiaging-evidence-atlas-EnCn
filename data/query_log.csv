@@ -323,3 +323,41 @@ date,source,query,result_count,new_candidates,included_count,notes
 2026-06-08,PubMed,(spermidine) AND (aging OR autophagy OR cognition OR mortality OR lifespan) AND (human OR trial OR cohort OR mouse OR review),16,1,0,spermidine_autophagy_aging
 2026-06-08,PubMed,(GlyNAC OR glycine N-acetylcysteine OR glutathione) AND (aging OR older adults OR oxidative stress OR mitochondrial dysfunction),16,16,0,glynac_glutathione_aging
 2026-06-08,PubMed,(Mendelian randomization) AND (longevity OR lifespan OR aging OR mortality) AND (blood pressure OR LDL OR BMI OR smoking),16,2,0,mendelian_randomization_longevity_risk_factors
+2026-06-22,PubMed,(cardiorespiratory fitness OR VO2max OR VO2 peak) AND (mortality OR cardiovascular mortality) AND (cohort OR meta-analysis OR systematic review),18,6,0,cardiorespiratory_fitness_mortality
+2026-06-22,PubMed,(resistance training OR strength training OR muscle strengthening) AND (mortality OR frailty OR sarcopenia) AND (human OR trial OR cohort OR meta-analysis),18,17,0,resistance_training_mortality_sarcopenia
+2026-06-22,PubMed,(physical activity OR exercise) AND (longevity OR lifespan OR mortality OR healthspan) AND (meta-analysis OR cohort OR randomized controlled trial),18,17,0,physical_activity_longevity
+2026-06-22,PubMed,(blood pressure OR hypertension) AND (mortality OR cardiovascular disease) AND (older adults OR aging) AND (trial OR meta-analysis OR cohort),16,15,0,blood_pressure_mortality_aging
+2026-06-22,PubMed,(LDL cholesterol OR apolipoprotein B OR apoB) AND (cardiovascular mortality OR all-cause mortality) AND (meta-analysis OR Mendelian randomization OR trial),16,3,0,ldl_apob_cardiovascular_mortality
+2026-06-22,PubMed,(sleep duration OR sleep quality OR insomnia) AND (mortality OR healthy aging OR cognitive decline) AND (meta-analysis OR cohort),16,8,0,sleep_duration_mortality_aging
+2026-06-22,PubMed,(Mediterranean diet OR healthy dietary pattern OR ultra-processed food) AND (mortality OR healthy aging OR longevity) AND (meta-analysis OR cohort OR trial),18,17,0,dietary_pattern_longevity
+2026-06-22,PubMed,(caloric restriction OR calorie restriction OR dietary restriction) AND (aging OR biological aging OR healthspan) AND (human OR randomized controlled trial),18,8,0,caloric_restriction_human_aging
+2026-06-22,PubMed,(intermittent fasting OR time-restricted eating OR time restricted feeding) AND (aging OR mortality OR metabolic health) AND (human OR randomized controlled trial OR meta-analysis),18,14,0,intermittent_fasting_aging_human
+2026-06-22,PubMed,(semaglutide OR tirzepatide OR GLP-1 receptor agonist) AND (cardiovascular outcomes OR mortality OR obesity) AND (randomized controlled trial OR meta-analysis),16,16,0,glp1_obesity_cardiometabolic_outcomes
+2026-06-22,PubMed,(metformin) AND (aging OR longevity OR lifespan OR healthspan OR TAME) AND (human OR trial OR cohort OR review),18,8,0,metformin_aging_longevity
+2026-06-22,PubMed,(rapamycin OR sirolimus OR mTOR inhibitor) AND (aging OR longevity OR lifespan OR immune aging) AND (human OR mouse OR trial OR review),20,8,0,rapamycin_mtor_aging
+2026-06-22,PubMed,(senolytic OR senolytics OR dasatinib quercetin OR fisetin) AND (aging OR frailty OR senescence) AND (human OR trial OR mouse OR review),20,18,0,senolytics_human_aging
+2026-06-22,PubMed,(nicotinamide riboside OR nicotinamide mononucleotide OR NMN OR NAD) AND (aging OR older adults OR metabolic health) AND (human OR randomized controlled trial OR review),20,17,0,nad_nmn_nr_human_aging
+2026-06-22,PubMed,(epigenetic clock OR DNA methylation age OR biological age) AND (intervention OR mortality OR disease prediction OR trial),20,20,0,epigenetic_clocks_intervention
+2026-06-22,PubMed,(proteomic clock OR metabolomic clock OR biological aging biomarker) AND (mortality OR disease prediction OR longevity),18,16,0,proteomic_metabolomic_aging_clocks
+2026-06-22,PubMed,(partial reprogramming OR Yamanaka factors OR cellular rejuvenation) AND (aging OR rejuvenation OR lifespan),20,17,0,partial_reprogramming_aging
+2026-06-22,PubMed,(Klotho) AND (aging OR cognition OR mortality OR longevity) AND (human OR mouse OR review),16,4,0,klotho_aging_human
+2026-06-22,PubMed,(interleukin 11 OR IL-11) AND (aging OR lifespan OR frailty OR inflammation),16,1,0,il11_aging
+2026-06-22,PubMed,(parabiosis OR young plasma OR plasma exchange) AND (aging OR rejuvenation OR cognition),16,14,0,parabiosis_plasma_aging
+2026-06-22,PubMed,(autophagy OR mitophagy) AND (aging OR longevity OR lifespan OR healthspan) AND (review OR intervention),18,14,0,autophagy_mitophagy_longevity
+2026-06-22,PubMed,(gut microbiome OR microbiota) AND (healthy aging OR longevity OR frailty OR inflammaging) AND (human OR cohort OR review),16,8,0,microbiome_healthy_aging
+2026-06-22,PubMed,(inflammaging OR chronic inflammation) AND (aging OR mortality OR frailty) AND (intervention OR review OR cohort),16,13,0,inflammaging_interventions
+2026-06-22,PubMed,(sauna OR heat therapy) AND (mortality OR cardiovascular disease OR dementia) AND (cohort OR trial OR review),12,3,0,sauna_heat_therapy_mortality
+2026-06-22,PubMed,(HbA1c OR glycemic control OR type 2 diabetes) AND (mortality OR cardiovascular outcomes OR dementia) AND (older adults OR aging OR cohort OR meta-analysis),18,12,0,diabetes_glycemic_control_mortality_aging
+2026-06-22,PubMed,(weight loss OR obesity OR bariatric surgery) AND (mortality OR cardiovascular outcomes OR healthy aging) AND (cohort OR trial OR meta-analysis),18,12,0,obesity_weight_loss_mortality_aging
+2026-06-22,PubMed,(frailty) AND (intervention OR exercise OR nutrition OR multidomain) AND (older adults OR randomized controlled trial OR meta-analysis),18,16,0,frailty_interventions_older_adults
+2026-06-22,PubMed,(cognitive decline OR dementia prevention) AND (lifestyle OR multidomain intervention OR exercise OR diet) AND (trial OR cohort OR meta-analysis),18,16,0,cognitive_decline_dementia_prevention
+2026-06-22,PubMed,(smoking cessation OR alcohol consumption) AND (mortality OR healthy aging OR longevity) AND (cohort OR meta-analysis),18,13,0,smoking_alcohol_mortality_healthy_aging
+2026-06-22,PubMed,(hearing loss OR vision impairment OR social isolation OR loneliness) AND (dementia OR mortality OR healthy aging) AND (cohort OR trial OR meta-analysis),18,15,0,hearing_vision_social_isolation_aging
+2026-06-22,PubMed,(vaccination OR influenza vaccine OR shingles vaccine) AND (older adults OR elderly) AND (mortality OR dementia OR cardiovascular outcomes),16,15,0,vaccination_older_adults_mortality
+2026-06-22,PubMed,(Interventions Testing Program OR ITP) AND (mouse OR mice) AND (lifespan OR longevity OR rapamycin OR acarbose OR 17-alpha-estradiol),20,0,0,itp_mouse_lifespan_interventions
+2026-06-22,PubMed,(acarbose) AND (lifespan OR longevity OR aging OR mortality) AND (mouse OR mice OR human OR cohort),16,0,0,acarbose_lifespan_aging
+2026-06-22,PubMed,(taurine) AND (aging OR longevity OR lifespan OR older adults) AND (trial OR cohort OR mouse OR review),16,6,0,taurine_aging_longevity
+2026-06-22,PubMed,(urolithin A) AND (aging OR mitophagy OR muscle OR older adults) AND (trial OR review),16,1,0,urolithin_a_mitophagy_aging
+2026-06-22,PubMed,(spermidine) AND (aging OR autophagy OR cognition OR mortality OR lifespan) AND (human OR trial OR cohort OR mouse OR review),16,3,0,spermidine_autophagy_aging
+2026-06-22,PubMed,(GlyNAC OR glycine N-acetylcysteine OR glutathione) AND (aging OR older adults OR oxidative stress OR mitochondrial dysfunction),16,16,0,glynac_glutathione_aging
+2026-06-22,PubMed,(Mendelian randomization) AND (longevity OR lifespan OR aging OR mortality) AND (blood pressure OR LDL OR BMI OR smoking),16,4,0,mendelian_randomization_longevity_risk_factors
