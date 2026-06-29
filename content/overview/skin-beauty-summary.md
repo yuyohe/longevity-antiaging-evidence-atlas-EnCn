@@ -11,6 +11,7 @@
 
 - 防晒、维A酸类、神经酰胺/透明质酸等方向可以作为皮肤健康基础证据入口；口服胶原肽等补剂需要更谨慎解释。
 - 医美设备、换肤、处方维A酸等属于专业或医疗场景，需要医生或合格专业人员评估。
+- PDRN/PN 是高声量美容与医美交叉主题，需要把外用化妆品、导入、注射、skin booster 和填充场景分开。
 - 多酚、抗氧化剂和部分补剂适合列为候选证据，但商业过度宣传风险较高。
 
 ## 不能这么说
@@ -30,7 +31,8 @@
 | 5 | [口服胶原肽与皮肤弹性/水分](../skin-beauty-topics/oral-collagen-peptides.md)<br>Oral Collagen Peptides | 口服胶原肽对皮肤水分、弹性等软终点有候选证据，但异质性、商业化和终点临床意义限制较大；公开等级下调为 C。 | C | 20 | 不支持把口服胶原写成逆龄、延寿或替代均衡蛋白摄入；需要看研究质量和利益冲突。 |
 | 6 | [透明质酸、神经酰胺与皮肤水分屏障](../skin-beauty-topics/hyaluronic-acid-ceramides-hydration.md)<br>Hyaluronic Acid, Ceramides, and Hydration | 透明质酸和神经酰胺更适合评价皮肤水分、屏障和干燥相关终点。 | B | 20 | 支持屏障/保湿方向的证据整理，不支持宣传为系统性抗衰。 |
 | 7 | [多酚/抗氧化剂与皮肤光保护](../skin-beauty-topics/polyphenols-skin-photoprotection.md)<br>Polyphenols and Skin Photoprotection | 多酚和抗氧化剂有一定光保护和皮肤指标研究，但商业化过度宣传风险较高。 | C | 20 | 不能替代防晒；不能把抗氧化机制直接写成抗老已证实。 |
-| 8 | [医美能量设备和换肤类干预](../skin-beauty-topics/energy-devices-resurfacing.md)<br>Energy Devices, Peels, and Resurfacing | 能量设备、微针和换肤类干预多属于专业医美或医疗美容场景，终点可见但风险和操作者依赖性高。 | B | 20 | 必须由合格专业人员评估；不提供设备、参数或疗程建议。 |
+| 8 | [PDRN/PN 与 Skin Booster](../skin-beauty-topics/pdrn-polynucleotide-skin-boosters.md)<br>PDRN / Polynucleotide / Skin Booster | PDRN/PN 属于高声量美容与医美交叉方向：既出现在外用化妆品叙事，也出现在注射、skin booster、填充或导入类项目中；当前证据和撤稿风险必须一起看。 | C | 20 | 外用、导入、注射和填充不是同一种证据；不支持把 PDRN 写成逆龄、延寿或无风险医美项目。 |
+| 9 | [医美能量设备和换肤类干预](../skin-beauty-topics/energy-devices-resurfacing.md)<br>Energy Devices, Peels, and Resurfacing | 能量设备、微针和换肤类干预多属于专业医美或医疗美容场景，终点可见但风险和操作者依赖性高。 | B | 20 | 必须由合格专业人员评估；不提供设备、参数或疗程建议。 |
 
 ## 热门补剂快速表
 

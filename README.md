@@ -1,10 +1,11 @@
-# Longevity Anti-Aging Evidence Atlas EnCn
+﻿# Longevity Anti-Aging Evidence Atlas EnCn
 
 **中文名 / Chinese public name:** 长寿抗衰与健康寿命证据图谱  
 **品牌 / Brand:** 宇多Yul细胞/yulcell  
 **Repository:** `longevity-antiaging-evidence-atlas-EnCn`
 
 > **Public entry point / 公众入口：** [`content/overview/start-here.md`](content/overview/start-here.md)  
+> **June-end reader update / 6 月底普通读者更新：** [`content/public-reader/june-end-2026-update.md`](content/public-reader/june-end-2026-update.md)  
 > **Evidence summary / 证据总览：** [`content/overview/public-summary.md`](content/overview/public-summary.md)  
 > **Brand asset index / 品牌资产索引：** [`docs/yulcell-brand-index.md`](docs/yulcell-brand-index.md)  
 > **Chinese README / 中文 README：** [`README.zh-CN.md`](README.zh-CN.md)
@@ -46,21 +47,25 @@ If you are not a researcher, start with the plain-language entry and topic guide
 
 ## Published GitHub Snapshot / GitHub 当前公开快照
 
-The public GitHub snapshot currently exposes the May 2026 data package under the **宇多Yul细胞/yulcell** brand. A larger June 2026 refresh has been generated locally and should be published as a separate data update.
+The public GitHub snapshot now exposes the June-end 2026 data package under the **宇多Yul细胞/yulcell** brand. It is a public evidence map, not a buying guide, dosing protocol, diagnosis tool, or personal medical recommendation.
 
-GitHub 当前公开的是 **宇多Yul细胞/yulcell** 名下的 2026 年 5 月数据包。2026 年 6 月扩展版已经在本地生成，后续应作为单独数据更新发布。
+GitHub 当前公开的是 **宇多Yul细胞/yulcell** 名下的 2026 年 6 月底数据包。它是一张公开证据地图，不是购买清单、剂量方案、诊断工具或个人医疗建议。
 
 | Asset / 资产 | Published count / 已公开数量 | Link / 链接 |
 | --- | ---: | --- |
-| Candidate sources / 候选来源 | 11,480 records | [`candidate-sources-2026-05.csv`](public-data/candidate-sources-2026-05.csv) |
-| Literature library / 文献库 | 11,480 records | [`literature-library-2026-05.csv`](public-data/literature-library-2026-05.csv) |
-| Evidence findings / 证据发现 | 3,000 rows | [`evidence-findings-2026-05.csv`](public-data/evidence-findings-2026-05.csv) |
-| Evidence matrix / 证据矩阵 | 1,500 rows | [`evidence-matrix-2026-05.csv`](public-data/evidence-matrix-2026-05.csv) |
-| Shortlist sources / 入选来源 | 3,000 rows | [`shortlist-sources-2026-05.csv`](public-data/shortlist-sources-2026-05.csv) |
-| Paper cards / 文献卡片 | 1,801 Markdown pages | [`content/papers/`](content/papers/) |
-| Healthspan topics / 健康寿命主题 | 21 topic files | [`content/topics/`](content/topics/) |
-| Skin and appearance topics / 皮肤与外观主题 | 8 topic files | [`content/skin-beauty-topics/`](content/skin-beauty-topics/) |
-| Public data index / 公开数据索引 | 1 report | [`docs/public-full-data-index-2026-05.md`](docs/public-full-data-index-2026-05.md) |
+| Candidate sources / 候选来源 | 14,273 records | [`candidate-sources-2026-06.csv`](public-data/candidate-sources-2026-06.csv) |
+| Literature library / 文献库 | 14,273 records | [`literature-library-2026-06.csv`](public-data/literature-library-2026-06.csv) |
+| Evidence findings / 证据发现 | 4,800 rows | [`evidence-findings-2026-06.csv`](public-data/evidence-findings-2026-06.csv) |
+| Evidence matrix / 证据矩阵 | 2,400 rows | [`evidence-matrix-2026-06.csv`](public-data/evidence-matrix-2026-06.csv) |
+| Shortlist sources / 入选来源 | 4,800 rows | [`shortlist-sources-2026-06.csv`](public-data/shortlist-sources-2026-06.csv) |
+| Public CSV rows / 公开 CSV 总行数 | 40,546 rows | [`public-data/README.md`](public-data/README.md) |
+| Paper cards / 文献卡片 | 4,800 Markdown pages | [`content/papers/`](content/papers/) |
+| Healthspan topics / 健康寿命主题 | 20 topic files | [`content/topics/`](content/topics/) |
+| Skin and appearance topics / 皮肤与外观主题 | 9 topic files | [`content/skin-beauty-topics/`](content/skin-beauty-topics/) |
+| Public data index / 公开数据索引 | 1 report | [`docs/public-full-data-index-2026-06.md`](docs/public-full-data-index-2026-06.md) |
+| June-end reader guide / 6 月底读者说明 | 1 guide | [`content/public-reader/june-end-2026-update.md`](content/public-reader/june-end-2026-update.md) |
+| Visual assets / 图片资产 | 57 PNG files | [`docs/assets/visual-assets/2026-06/`](docs/assets/visual-assets/2026-06/) |
+| Posting dashboard / 发帖面板 | 1 self-contained HTML | [`docs/yulcell-posting-asset-dashboard-2026-06-29.html`](docs/yulcell-posting-asset-dashboard-2026-06-29.html) |
 
 ## Evidence Rules / 证据规则
 

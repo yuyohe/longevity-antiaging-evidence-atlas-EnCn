@@ -1,0 +1,51 @@
+﻿card_id,update_month,name_zh,name_en,category,health_evidence,skin_evidence,commercial_overclaim_risk,one_sentence,common_misunderstanding,attention,retraction_note,local_path
+S001,2026-06,维生素 D,Vitamin D,vitamin,B：中等,D：很早期,中,缺乏或高风险人群的骨骼、跌倒和部分健康结局管理更有意义。,不支持健康人群普遍补充即可延寿或美容逆龄。,过量可导致高钙血症；检测和补充策略宜结合医生建议。,同一口径下总发表 25261 篇；每 1000 篇约 1.90 篇撤稿。,build/visual-assets/ingredient-cards/S001-维生素-D.png
+S002,2026-06,维生素 C,Vitamin C,vitamin,C：有限,C：有限,中,主要看缺乏风险、饮食不足或外用皮肤抗氧化方向的证据线索。,不支持高剂量口服维C延寿或替代防晒。,高剂量可能增加胃肠不适和结石风险人群负担。,同一口径下总发表 2972 篇；每 1000 篇约 3.36 篇撤稿。,build/visual-assets/ingredient-cards/S002-维生素-C.png
+S003,2026-06,Omega-3,Omega-3 Fatty Acids,fatty_acid,B：中等,C：有限,中,部分心血管、甘油三酯和炎症相关场景有证据基础。,不支持声称普通人补充即可延寿或全面抗炎抗老。,抗凝药、手术前和高剂量使用需医疗评估。,同一口径下总发表 10045 篇；每 1000 篇约 1.69 篇撤稿。,build/visual-assets/ingredient-cards/S003-Omega-3.png
+S004,2026-06,胶原蛋白/胶原肽,Collagen Peptides,protein,D：很早期,C：有限,高,主要看皮肤水分、弹性和皱纹等外观终点的证据线索。,不支持声称补胶原能直接变成年轻皮肤或延寿。,注意过敏、蛋白来源和基础肾病人群。,同一口径下总发表 339 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S004-胶原蛋白-胶原肽.png
+S005,2026-06,蛋白粉/必需氨基酸,Protein / Essential Amino Acids,protein,B：中等,D：很早期,中,主要看肌肉、衰弱和营养不足相关健康寿命终点。,不支持作为皮肤美容或延寿万能补剂。,肾病、肝病和特殊疾病人群需医生/营养师评估。,同一口径下总发表 441 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S005-蛋白粉-必需氨基酸.png
+S006,2026-06,肌酸,Creatine,sports_nutrition,B：中等,D：很早期,中,主要看力量、肌肉和老年功能相关证据线索。,不支持声称抗衰逆龄或皮肤美容明确有效。,肾病或多药人群需医疗评估。,同一口径下总发表 1602 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S006-肌酸.png
+S007,2026-06,钙/镁,Calcium / Magnesium,mineral,B：中等,D：很早期,中,特定缺乏、骨骼或膳食不足场景可有意义。,不支持无差别补充来延寿或美容。,钙补充与肾结石、心血管风险讨论需个体化；镁也需注意肾功能。,同一口径下总发表 16080 篇；每 1000 篇约 1.74 篇撤稿。,build/visual-assets/ingredient-cards/S007-钙-镁.png
+S008,2026-06,锌,Zinc,mineral,C：有限,C：有限,中,缺乏或特定皮肤炎症场景可看作证据线索。,不支持长期高剂量用于抗老或提升免疫。,长期过量可影响铜代谢和胃肠耐受。,同一口径下总发表 10948 篇；每 1000 篇约 2.19 篇撤稿。,build/visual-assets/ingredient-cards/S008-锌.png
+S009,2026-06,辅酶 Q10,Coenzyme Q10,mitochondrial,C：有限,D：很早期,高,可看作线粒体、心血管和疲劳相关证据线索。,不支持声称明确延寿或皮肤逆龄。,与抗凝药和慢病用药需注意相互作用。,同一口径下总发表 1378 篇；每 1000 篇约 3.63 篇撤稿。,build/visual-assets/ingredient-cards/S009-辅酶-Q10.png
+S010,2026-06,褪黑素,Melatonin,sleep,B：中等,D：很早期,中,主要看睡眠节律相关场景的证据线索。,不支持把它作为长期抗衰或美容补剂。,嗜睡、药物相互作用、孕期和儿童需谨慎。,同一口径下总发表 4095 篇；每 1000 篇约 7.33 篇撤稿。,build/visual-assets/ingredient-cards/S010-褪黑素.png
+S011,2026-06,益生菌,Probiotics,microbiome,C：有限,C：有限,高,部分肠道、炎症和皮肤屏障/炎症场景有证据线索。,不支持单一益生菌适用于所有人抗衰或美容。,免疫抑制、重症或中心静脉置管人群需医疗评估。,同一口径下总发表 18089 篇；每 1000 篇约 2.38 篇撤稿。,build/visual-assets/ingredient-cards/S011-益生菌.png
+S012,2026-06,NMN,NMN,nad_precursor,C：有限,D：很早期,高,可看作 NAD 代谢和人体早期指标研究候选。,不支持声称已证实延寿、逆龄或美容抗老。,长期安全性和适用人群仍不清楚。,同一口径下总发表 257 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S012-NMN.png
+S013,2026-06,NR,Nicotinamide Riboside,nad_precursor,C：有限,D：很早期,高,可看作 NAD 前体和代谢指标研究候选。,不支持声称已证实延寿或外观逆龄。,长期净收益和特殊疾病人群安全性仍需复核。,同一口径下总发表 216 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S013-NR.png
+S014,2026-06,NAD 前体,NAD Precursors,nad_precursor,C：有限,D：很早期,高,可看作机制和早期人体研究集合。,不支持把 NAD 提升等同于延寿或抗老成功。,不同前体不能混为同一效果。,同一口径下总发表 470 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S014-NAD-前体.png
+S015,2026-06,白藜芦醇,Resveratrol,polyphenol,C：有限,C：有限,高,可看作多酚、代谢和皮肤光保护证据线索。,不支持红酒/白藜芦醇延寿或逆龄宣传。,药物相互作用和剂量差异大。,同一口径下总发表 1031 篇；每 1000 篇约 4.85 篇撤稿。,build/visual-assets/ingredient-cards/S015-白藜芦醇.png
+S016,2026-06,槲皮素,Quercetin,polyphenol,D：很早期,D：很早期,高,可看作抗氧化、炎症和 senolytic 组合研究线索。,不支持单独作为抗衰、清除衰老细胞或美容方案。,与药物代谢相关相互作用需注意。,同一口径下总发表 3485 篇；每 1000 篇约 4.88 篇撤稿。,build/visual-assets/ingredient-cards/S016-槲皮素.png
+S017,2026-06,姜黄素,Curcumin,polyphenol,C：有限,D：很早期,高,可看作炎症和代谢相关证据线索。,不支持声称抗癌、延寿或皮肤逆龄。,胆道疾病、抗凝药和胃肠耐受需注意。,同一口径下总发表 5865 篇；每 1000 篇约 5.63 篇撤稿。,build/visual-assets/ingredient-cards/S017-姜黄素.png
+S018,2026-06,绿茶儿茶素,Green Tea Catechins,polyphenol,C：有限,C：有限,高,可看作代谢和皮肤光保护证据线索。,不支持高浓缩提取物无风险或明确延寿。,高剂量提取物有肝毒性报告，需谨慎。,同一口径下总发表 1129 篇；每 1000 篇约 4.43 篇撤稿。,build/visual-assets/ingredient-cards/S018-绿茶儿茶素.png
+S019,2026-06,虾青素,Astaxanthin,antioxidant,D：很早期,C：有限,高,可看作皮肤光保护和抗氧化证据线索。,不支持声称防晒替代、逆龄或延寿。,长期高剂量和特殊人群安全性仍需复核。,同一口径下总发表 1169 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S019-虾青素.png
+S020,2026-06,透明质酸,Hyaluronic Acid,skin_hydration,D：很早期,B：中等,中,主要看皮肤水分和屏障相关证据线索。,不支持声称系统性抗衰或延寿。,注射类属于医疗美容，不纳入口服/外用普通补剂结论。,同一口径下总发表 1595 篇；每 1000 篇约 1.88 篇撤稿。,build/visual-assets/ingredient-cards/S020-透明质酸.png
+S021,2026-06,神经酰胺,Ceramides,skin_barrier,D：很早期,B：中等,中,主要看干燥、屏障和 TEWL 相关皮肤终点。,不支持声称逆龄或治疗皮肤病。,皮肤病治疗需医生评估。,同一口径下总发表 133 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S021-神经酰胺.png
+S022,2026-06,烟酰胺,Niacinamide,vitamin_b3,C：有限,B：中等,中,主要看皮肤屏障、色素和炎症相关证据线索。,不支持把烟酰胺写成延寿或全面抗衰。,口服高剂量和肝病/慢病人群需谨慎。,同一口径下总发表 48 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S022-烟酰胺.png
+S023,2026-06,维生素 B12,Vitamin B12,vitamin,B：中等,D：很早期,中,主要看缺乏、贫血和神经相关风险管理。,不支持非缺乏人群补充即可延寿或美容。,需结合缺乏风险、素食、胃肠疾病和用药情况。,同一口径下总发表 3048 篇；每 1000 篇约 0.66 篇撤稿。,build/visual-assets/ingredient-cards/S023-维生素-B12.png
+S024,2026-06,叶酸,Folate,vitamin,B：中等,D：很早期,中,主要看孕前孕期和缺乏风险相关健康管理。,不支持作为抗衰或美容补剂泛用。,高剂量可能掩盖 B12 缺乏，需注意人群边界。,同一口径下总发表 3792 篇；每 1000 篇约 0.79 篇撤稿。,build/visual-assets/ingredient-cards/S024-叶酸.png
+S025,2026-06,复合维生素,Multivitamin,multi_nutrient,C：有限,D：很早期,高,可看作饮食不足或特定人群营养补充候选。,不支持替代健康饮食、延寿或美容逆龄。,注意重复摄入脂溶性维生素和矿物质。,同一口径下总发表 485 篇；每 1000 篇约 2.06 篇撤稿。,build/visual-assets/ingredient-cards/S025-复合维生素.png
+S026,2026-06,维生素 E,Vitamin E,vitamin,C：有限,C：有限,高,可看作抗氧化相关证据线索。,不支持高剂量用于延寿、心血管预防或美容逆龄。,高剂量可能增加出血风险，抗凝药人群需谨慎。,同一口径下总发表 2914 篇；每 1000 篇约 1.72 篇撤稿。,build/visual-assets/ingredient-cards/S026-维生素-E.png
+S027,2026-06,维生素 A,Vitamin A,vitamin,C：有限,C：有限,高,主要看缺乏相关视力、免疫和皮肤角化问题。,不支持高剂量抗老或美容口服。,脂溶性维生素，过量和孕期风险较高。,同一口径下总发表 2842 篇；每 1000 篇约 1.76 篇撤稿。,build/visual-assets/ingredient-cards/S027-维生素-A.png
+S028,2026-06,维生素 K2,Vitamin K2,vitamin,C：有限,D：很早期,高,可看作骨骼和钙代谢相关证据线索。,不支持声称软化血管、延寿或美容。,华法林等抗凝药人群需医生评估。,同一口径下总发表 306 篇；每 1000 篇约 9.80 篇撤稿。,build/visual-assets/ingredient-cards/S028-维生素-K2.png
+S029,2026-06,硒,Selenium,mineral,C：有限,D：很早期,高,主要看缺乏或甲状腺相关证据线索。,不支持高剂量抗癌、延寿或美容。,过量可导致硒中毒，安全窗较窄。,同一口径下总发表 7317 篇；每 1000 篇约 0.82 篇撤稿。,build/visual-assets/ingredient-cards/S029-硒.png
+S030,2026-06,碘,Iodine,mineral,B：中等,D：很早期,中,主要看缺乏和甲状腺健康管理。,不支持抗衰或美容泛用。,甲状腺疾病人群补充需医生评估。,同一口径下总发表 4785 篇；每 1000 篇约 1.04 篇撤稿。,build/visual-assets/ingredient-cards/S030-碘.png
+S031,2026-06,铁,Iron,mineral,B：中等,D：很早期,中,主要看缺铁和贫血相关健康管理。,不支持无缺乏人群补铁抗老。,过量铁有风险，需结合铁蛋白和医生评估。,同一口径下总发表 21603 篇；每 1000 篇约 1.81 篇撤稿。,build/visual-assets/ingredient-cards/S031-铁.png
+S032,2026-06,铜,Copper,mineral,C：有限,D：很早期,中,主要看明确缺乏相关证据线索。,不支持作为美容或抗衰补剂泛用。,过量有毒性，且与锌摄入存在平衡问题。,同一口径下总发表 5576 篇；每 1000 篇约 3.23 篇撤稿。,build/visual-assets/ingredient-cards/S032-铜.png
+S033,2026-06,锰,Manganese,mineral,D：很早期,D：很早期,中,可看作微量元素缺乏风险线索。,不支持抗衰或美容宣传。,过量有神经毒性风险。,同一口径下总发表 1948 篇；每 1000 篇约 1.03 篇撤稿。,build/visual-assets/ingredient-cards/S033-锰.png
+S034,2026-06,铬,Chromium,mineral,C：有限,D：很早期,高,可看作糖代谢相关证据线索。,不支持减肥、控糖或延寿确定有效宣传。,糖尿病用药人群需注意低血糖和相互作用。,同一口径下总发表 1783 篇；每 1000 篇约 4.49 篇撤稿。,build/visual-assets/ingredient-cards/S034-铬.png
+S035,2026-06,钾,Potassium,mineral,B：中等,D：很早期,中,主要看血压和膳食模式相关健康管理。,不支持自行高剂量补钾抗衰。,肾病、ACEI/ARB 或保钾利尿剂人群风险高。,同一口径下总发表 3913 篇；每 1000 篇约 1.53 篇撤稿。,build/visual-assets/ingredient-cards/S035-钾.png
+S036,2026-06,电解质,Electrolytes,mineral_mix,C：有限,D：很早期,中,主要看出汗、运动或脱水场景。,不支持日常抗衰或美容泛用。,高血压、肾病和心衰人群需看钠钾负担。,同一口径下总发表 226 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S036-电解质.png
+S037,2026-06,车前子壳/可溶性纤维,Psyllium / Soluble Fiber,fiber,B：中等,D：很早期,中,主要看 LDL-C、血糖和肠道规律相关终点。,不支持直接延寿或美容逆龄。,需注意饮水、吞咽困难和药物吸收间隔。,同一口径下总发表 306 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S037-车前子壳-可溶性纤维.png
+S038,2026-06,β-葡聚糖,Beta-Glucan,fiber,B：中等,D：很早期,中,主要看胆固醇和免疫相关证据线索。,不支持全面提升免疫或抗衰。,过敏和胃肠耐受需注意。,同一口径下总发表 968 篇；每 1000 篇约 1.03 篇撤稿。,build/visual-assets/ingredient-cards/S038-β-葡聚糖.png
+S039,2026-06,菊粉,Inulin,prebiotic,C：有限,D：很早期,中,可看作益生元、肠道和代谢证据线索。,不支持所有人群肠道抗老。,易腹胀，肠易激人群需谨慎。,同一口径下总发表 1169 篇；每 1000 篇约 1.71 篇撤稿。,build/visual-assets/ingredient-cards/S039-菊粉.png
+S040,2026-06,益生元复合物,Prebiotic Mix,prebiotic,C：有限,D：很早期,高,主要看肠道菌群和代谢证据线索。,不支持单独作为抗衰或美容方案。,肠道敏感人群需关注耐受。,同一口径下总发表 2396 篇；每 1000 篇约 0.83 篇撤稿。,build/visual-assets/ingredient-cards/S040-益生元复合物.png
+S041,2026-06,叶黄素,Lutein,carotenoid,B：中等,C：有限,中,主要看眼健康和黄斑相关证据。,不支持延寿或皮肤逆龄。,与综合配方和基础眼病状态有关。,同一口径下总发表 822 篇；每 1000 篇约 1.22 篇撤稿。,build/visual-assets/ingredient-cards/S041-叶黄素.png
+S042,2026-06,玉米黄质,Zeaxanthin,carotenoid,B：中等,C：有限,中,主要看眼健康和黄斑相关证据。,不支持美容或延寿泛用宣传。,常与叶黄素联用，需区分配方证据。,同一口径下总发表 342 篇；每 1000 篇约 0.00 篇撤稿。,build/visual-assets/ingredient-cards/S042-玉米黄质.png
+S043,2026-06,番茄红素,Lycopene,carotenoid,C：有限,C：有限,高,可看作抗氧化和皮肤光保护证据线索。,不支持抗癌、延寿或替代防晒。,补剂证据不能替代富含蔬果的饮食模式。,同一口径下总发表 1127 篇；每 1000 篇约 1.77 篇撤稿。,build/visual-assets/ingredient-cards/S043-番茄红素.png
+S044,2026-06,β-胡萝卜素,Beta-Carotene,carotenoid,C：有限,C：有限,高,可看作维A来源和抗氧化证据线索。,不支持吸烟者补充用于防癌或抗衰。,吸烟者高剂量补充存在重要安全警示。,同一口径下总发表 1106 篇；每 1000 篇约 1.81 篇撤稿。,build/visual-assets/ingredient-cards/S044-β-胡萝卜素.png
+S045,2026-06,α-硫辛酸,Alpha-Lipoic Acid,antioxidant,C：有限,D：很早期,高,可看作糖代谢和神经症状证据线索。,不支持延寿或美容逆龄。,糖尿病用药人群需注意低血糖风险。,同一口径下总发表 937 篇；每 1000 篇约 6.40 篇撤稿。,build/visual-assets/ingredient-cards/S045-α-硫辛酸.png
+S046,2026-06,NAC/N-乙酰半胱氨酸,N-Acetylcysteine,antioxidant,C：有限,D：很早期,高,可看作谷胱甘肽和呼吸/氧化应激相关证据线索。,不支持作为通用抗衰补剂。,哮喘、抗凝和药物相互作用需注意。,同一口径下总发表 1407 篇；每 1000 篇约 2.84 篇撤稿。,build/visual-assets/ingredient-cards/S046-NAC-N-乙酰半胱氨酸.png
+S047,2026-06,谷胱甘肽,Glutathione,antioxidant,D：很早期,C：有限,高,可看作色素和氧化应激证据线索。,不支持美白、排毒或逆龄确定有效宣传。,注射用途不属于普通补剂，存在医疗风险。,同一口径下总发表 2795 篇；每 1000 篇约 1.07 篇撤稿。,build/visual-assets/ingredient-cards/S047-谷胱甘肽.png
+S048,2026-06,甘氨酸,Glycine,amino_acid,C：有限,D：很早期,中,可看作睡眠、代谢和胶原相关证据线索。,不支持延寿已证实。,特殊疾病和多补剂组合需谨慎。,同一口径下总发表 1372 篇；每 1000 篇约 1.46 篇撤稿。,build/visual-assets/ingredient-cards/S048-甘氨酸.png
+S049,2026-06,牛磺酸,Taurine,amino_acid,C：有限,D：很早期,高,可看作代谢、运动和心血管证据线索。,不支持声称人类延寿已证实。,能量饮料配方不能等同于牛磺酸单独证据。,同一口径下总发表 1433 篇；每 1000 篇约 2.79 篇撤稿。,build/visual-assets/ingredient-cards/S049-牛磺酸.png
+S050,2026-06,左旋肉碱,L-Carnitine,amino_acid_derivative,C：有限,D：很早期,高,可看作脂代谢、疲劳和特定缺乏证据线索。,不支持减肥或延寿确定有效。,肾病、癫痫和 TMAO 风险讨论需复核。,同一口径下总发表 1247 篇；每 1000 篇约 0.80 篇撤稿。,build/visual-assets/ingredient-cards/S050-左旋肉碱.png

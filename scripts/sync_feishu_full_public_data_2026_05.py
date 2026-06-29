@@ -1,4 +1,4 @@
-"""Sync full public evidence data tables to Feishu Bitable."""
+﻿"""Sync full public evidence data tables to Feishu Bitable."""
 
 from __future__ import annotations
 
@@ -19,42 +19,62 @@ DATA = ROOT / "data"
 DOC_DOMAIN = "ucngl3rlrux2.feishu.cn"
 WIKI_NODE_TOKEN = "WriBw4TXZiOsjQkJWk8ctL1xnVg"
 TEXT_FIELD = 1
-FEISHU_CELL_MAX = 300
+FEISHU_CELL_MAX = 180
+MONTH = os.getenv("EVIDENCE_ATLAS_ASSET_MONTH", "2026-05")
+MONTH_UNDERSCORE = MONTH.replace("-", "_")
+BRAND_NAME = os.getenv("PUBLIC_BRAND_NAME", "宇多Yul细胞/yulcell")
+BRAND_EN = os.getenv("PUBLIC_BRAND_EN", "yulcell")
+BRAND_PROJECT = os.getenv("PUBLIC_BRAND_PROJECT", "Longevity Anti-Aging Evidence Atlas EnCn")
+BRAND_GITHUB_URL = os.getenv(
+    "PUBLIC_BRAND_GITHUB_URL",
+    "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn",
+)
+BRAND_SEO_KEYWORDS = os.getenv(
+    "PUBLIC_BRAND_SEO_KEYWORDS",
+    "宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, longevity anti-aging evidence atlas",
+)
+BRAND_FIELDS = {
+    "品牌标识": BRAND_NAME,
+    "Brand": BRAND_EN,
+    "SEO关键词": BRAND_SEO_KEYWORDS,
+    "资产归属": f"{BRAND_NAME} | {BRAND_PROJECT}",
+    "GitHub公开入口": BRAND_GITHUB_URL,
+}
 
 
 ASSETS = [
     {
         "asset_key": "literature_library",
-        "table_name": "公开数据_全量文献候选库_2026-05",
-        "csv": PUBLIC / "literature-library-2026-05.csv",
+        "table_name": f"公开数据_全量文献候选库_{MONTH}",
+        "csv": PUBLIC / f"literature-library-{MONTH}.csv",
         "primary_key": "library_id",
         "title_fields": ["title_zh", "title_en", "library_id"],
     },
     {
         "asset_key": "candidate_sources",
-        "table_name": "公开数据_候选来源原始表_2026-05",
-        "csv": PUBLIC / "candidate-sources-2026-05.csv",
+        "table_name": f"公开数据_候选来源原始表_{MONTH}",
+        "csv": PUBLIC / f"candidate-sources-{MONTH}.csv",
         "primary_key": "id",
         "title_fields": ["title_zh", "title_en", "id"],
     },
     {
         "asset_key": "shortlist_sources",
-        "table_name": "公开数据_入选短名单_2026-05",
-        "csv": PUBLIC / "shortlist-sources-2026-05.csv",
+        "table_name": f"公开数据_入选短名单_{MONTH}",
+        "csv": PUBLIC / f"shortlist-sources-{MONTH}.csv",
         "primary_key": "candidate_id",
         "title_fields": ["title_zh", "title_en", "candidate_id"],
     },
     {
         "asset_key": "evidence_findings",
-        "table_name": "公开数据_证据发现表_2026-05",
-        "csv": PUBLIC / "evidence-findings-2026-05.csv",
+        "table_name": f"公开数据_证据发现表_{MONTH}",
+        "csv": PUBLIC / f"evidence-findings-{MONTH}.csv",
         "primary_key": "finding_id",
         "title_fields": ["title_zh", "title_en", "finding_id"],
     },
     {
         "asset_key": "evidence_matrix",
-        "table_name": "公开数据_证据矩阵_2026-05",
-        "csv": PUBLIC / "evidence-matrix-2026-05.csv",
+        "table_name": f"公开数据_证据矩阵_{MONTH}",
+        "csv": PUBLIC / f"evidence-matrix-{MONTH}.csv",
         "primary_key": "paper_id",
         "title_fields": ["topic", "intervention_or_exposure", "paper_id"],
     },
@@ -75,7 +95,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> 
         writer.writerows(rows)
 
 
-def chunks(items: list[Any], size: int = 500):
+def chunks(items: list[Any], size: int = 100):
     for start in range(0, len(items), size):
         yield items[start : start + size]
 
@@ -105,12 +125,26 @@ def public_title(row: dict[str, str], title_fields: list[str], primary_key: str)
     return " | ".join(part for part in parts if part)[:120]
 
 
+def branded_public_title(row: dict[str, str], title_fields: list[str], primary_key: str) -> str:
+    return normalize(f"{BRAND_NAME} | {public_title(row, title_fields, primary_key)}", max_len=120)
+
+
+def record_has_brand(record: dict[str, Any]) -> bool:
+    fields = record.get("fields", {})
+    return all(str(fields.get(name, "")).strip() == value for name, value in BRAND_FIELDS.items())
+
+
 def ensure_table(client: FeishuClient, app_token: str, table_name: str, fieldnames: list[str]) -> str:
     for table in client.list_bitable_tables(app_token):
         if table.get("name") == table_name:
             return table.get("table_id", "")
     schema = [{"field_name": "公开标题", "type": TEXT_FIELD}]
-    schema.extend({"field_name": name, "type": TEXT_FIELD} for name in fieldnames if name != "公开标题")
+    schema.extend({"field_name": name, "type": TEXT_FIELD} for name in BRAND_FIELDS)
+    schema.extend(
+        {"field_name": name, "type": TEXT_FIELD}
+        for name in fieldnames
+        if name != "公开标题" and name not in BRAND_FIELDS
+    )
     created = client.create_bitable_table(app_token, table_name, "表格", schema)
     table_id = created.get("data", {}).get("table_id") or created.get("data", {}).get("table", {}).get("table_id", "")
     if table_id:
@@ -123,7 +157,7 @@ def ensure_table(client: FeishuClient, app_token: str, table_name: str, fieldnam
 
 def ensure_fields(client: FeishuClient, app_token: str, table_id: str, fieldnames: list[str]) -> None:
     existing = {field.get("field_name") for field in client.list_bitable_fields(app_token, table_id)}
-    for field in ["公开标题", *fieldnames]:
+    for field in ["公开标题", *BRAND_FIELDS, *fieldnames]:
         if field in existing:
             continue
         client.create_bitable_text_field(app_token, table_id, field)
@@ -145,7 +179,12 @@ def sync_asset(client: FeishuClient, app_token: str, asset: dict[str, Any]) -> d
         if record.get("fields", {}).get(asset["primary_key"])
     }
     source_keys = {normalize(row.get(asset["primary_key"]), max_len=120) for row in rows if row.get(asset["primary_key"])}
-    if source_keys and source_keys.issubset(set(by_key)) and len(by_key) >= len(source_keys):
+    if (
+        source_keys
+        and source_keys.issubset(set(by_key))
+        and len(by_key) >= len(source_keys)
+        and all(record_has_brand(record) for record in existing)
+    ):
         print(f"{asset['asset_key']}: already synced {len(source_keys)} records; skipped")
         return {
             "asset_group": asset["table_name"],
@@ -165,7 +204,8 @@ def sync_asset(client: FeishuClient, app_token: str, asset: dict[str, Any]) -> d
         if not key:
             continue
         fields = {field: normalize(row.get(field)) for field in fieldnames}
-        fields["公开标题"] = public_title(row, asset["title_fields"], asset["primary_key"])
+        fields.update(BRAND_FIELDS)
+        fields["公开标题"] = branded_public_title(row, asset["title_fields"], asset["primary_key"])
         payload = {"fields": fields}
         if key in by_key:
             update_payloads.append({"record_id": by_key[key], "fields": fields})
@@ -211,11 +251,11 @@ def main() -> None:
         synced.append(sync_asset(client, app_token, asset))
 
     write_csv(
-        DATA / "feishu_full_public_data_links_2026_05.csv",
+        DATA / f"feishu_full_public_data_links_{MONTH_UNDERSCORE}.csv",
         synced,
         ["asset_group", "asset_key", "table_id", "url", "rows", "created", "updated", "status"],
     )
-    print("wrote data/feishu_full_public_data_links_2026_05.csv")
+    print(f"wrote data/feishu_full_public_data_links_{MONTH_UNDERSCORE}.csv")
 
 
 if __name__ == "__main__":

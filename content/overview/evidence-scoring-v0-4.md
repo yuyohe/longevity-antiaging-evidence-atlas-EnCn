@@ -1,9 +1,12 @@
 # 证据评分方法 v0.4 / Evidence Scoring Method v0.4
 
+> 历史版本：当前公开评分方法已经升级为 [证据评分方法 v0.5](evidence-scoring-v0-5.md)。v0.4 仅保留用于追溯旧版本，不应作为当前对外解释入口。
+> Legacy version: the current public scoring method is [Evidence Scoring Method v0.5](evidence-scoring-v0-5.md). v0.4 is retained only for version history.
+
 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。  
 Draft status: automatically prepared; not fully reviewed; not medical advice.
 
-Last updated / 更新时间：2026-04-29
+Last updated / 更新时间：2026-05-12
 
 ## 我们为什么重做评分
 

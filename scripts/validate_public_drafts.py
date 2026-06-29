@@ -1,4 +1,4 @@
-"""Validate v0.3 public draft safety and completeness."""
+"""Validate public draft safety and completeness."""
 
 from __future__ import annotations
 
@@ -11,10 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 DRAFT_NOTICE_ZH = "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。"
 DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not medical advice."
 
-EXPECTED_FINDINGS = int(os.getenv("EXPECTED_FINDINGS", "1800"))
+EXPECTED_FINDINGS = int(os.getenv("EXPECTED_FINDINGS", "4800"))
 EXPECTED_TOPICS = 20
-MIN_MATRIX_ROWS = int(os.getenv("MIN_MATRIX_ROWS", "900"))
-MAX_MATRIX_ROWS = int(os.getenv("MAX_MATRIX_ROWS", "900"))
+MIN_MATRIX_ROWS = int(os.getenv("MIN_MATRIX_ROWS", "2400"))
+MAX_MATRIX_ROWS = int(os.getenv("MAX_MATRIX_ROWS", "2400"))
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:

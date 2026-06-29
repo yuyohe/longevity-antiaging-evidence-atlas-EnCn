@@ -35,10 +35,11 @@
 | 维A酸/视黄醇类与光老化<br>retinoids-photoaging | supported_public_claim | B | 外用维A酸类对光老化相关皮肤终点有较多人体和临床经验支持。 | 处方维A酸、孕期、敏感肌和皮肤病人群需要医生评估。 |
 | 烟酰胺与屏障/色素/炎症<br>niacinamide-barrier-pigment | supported_public_claim | B | 烟酰胺可作为屏障、色素和炎症相关皮肤终点的候选成分。 | 不能宣传为全身抗衰或延寿。 |
 | 维C外用与色素/胶原<br>topical-vitamin-c | supported_public_claim | B | 外用维C可作为色素、抗氧化和胶原相关皮肤终点的候选方向。 | 不能替代防晒、医美或疾病治疗。 |
-| 口服胶原肽与皮肤弹性/水分<br>oral-collagen-peptides | supported_public_claim | C | 口服胶原肽对水分和弹性等软终点有候选证据，但异质性和商业化风险较高。 | 不能写成逆龄、延寿或替代均衡蛋白摄入。 |
+| 口服胶原肽与皮肤弹性/水分<br>oral-collagen-peptides | supported_public_claim | B | 口服胶原肽对水分和弹性等软终点有候选证据，但异质性和商业化风险较高。 | 不能写成逆龄、延寿或替代均衡蛋白摄入。 |
 | 透明质酸、神经酰胺与皮肤水分屏障<br>hyaluronic-acid-ceramides-hydration | supported_public_claim | B | 透明质酸和神经酰胺方向适合讨论保湿和屏障终点。 | 不能宣传为系统性抗衰或替代皮肤病治疗。 |
-| 多酚/抗氧化剂与皮肤光保护<br>polyphenols-skin-photoprotection | supported_public_claim | C | 多酚/抗氧化剂可作为皮肤光保护候选方向，但证据和产品差异较大。 | 不能替代防晒，也不能把抗氧化机制写成抗老已证实。 |
+| 多酚/抗氧化剂与皮肤光保护<br>polyphenols-skin-photoprotection | supported_public_claim | B | 多酚/抗氧化剂可作为皮肤光保护候选方向，但证据和产品差异较大。 | 不能替代防晒，也不能把抗氧化机制写成抗老已证实。 |
 | 医美能量设备和换肤类干预<br>energy-devices-resurfacing | supported_public_claim | B | 能量设备和换肤类干预可改善部分外观终点，但操作者、设备和风险差异极大。 | 必须由合格专业人员评估；不能提供参数、疗程或设备推荐。 |
+| PDRN/PN 与 Skin Booster<br>pdrn-polynucleotide-skin-boosters | supported_public_claim | C | PDRN/PN 是高声量美容与医美交叉方向，但外用、导入、注射和填充不能混用同一证据。 | 不能把外用化妆品证据当作注射项目证据，也不能写成逆龄、延寿或无风险医美项目。 |
 
 ## PICO/PECO 摘要
 
@@ -72,3 +73,4 @@
 | 透明质酸、神经酰胺与皮肤水分屏障<br>hyaluronic-acid-ceramides-hydration | 皮肤干燥、屏障受损或保湿诉求人群。 | 外用或口服透明质酸、神经酰胺或屏障支持配方。 | 基质、安慰剂、常规保湿或不干预。 | 皮肤水分、经皮水分流失、屏障功能、干燥。 |
 | 多酚/抗氧化剂与皮肤光保护<br>polyphenols-skin-photoprotection | 以皮肤光保护为目标使用多酚或抗氧化剂的人群。 | 多酚、抗氧化剂、类胡萝卜素、植物提取物。 | 安慰剂、基质、常规饮食/护肤或不补充。 | 光保护指标、红斑、色素、氧化应激指标。 |
 | 医美能量设备和换肤类干预<br>energy-devices-resurfacing | 因光老化、皱纹、瘢痕或肤质问题考虑医美操作的人群。 | 激光、强脉冲光、微针、换肤和 resurfacing 设备。 | 假处理、常规护理、其他设备或基线。 | 皱纹、肤质、色素、瘢痕、不良反应、恢复期。 |
+| PDRN/PN 与 Skin Booster<br>pdrn-polynucleotide-skin-boosters | 考虑外用、导入、注射或填充类 PDRN/PN / skin booster 宣传的人群。 | PDRN、polynucleotide、PN 或 skin booster 产品/操作，并按外用、导入、注射、填充等路径分开。 | 基质、安慰剂、常规护肤、无操作或其他专业医美操作。 | 皮肤修复、皱纹、弹性、瘢痕/创面、操作相关不良反应和效果持续时间。 |

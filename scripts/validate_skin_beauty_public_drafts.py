@@ -22,12 +22,12 @@ def main() -> None:
     summary = read_csv(ROOT / "data" / "skin_beauty_summary.csv")
     supplements = read_csv(ROOT / "data" / "supplement_matrix.csv")
 
-    if len(topics) != 8:
-        errors.append(f"expected 8 skin beauty topics, found {len(topics)}")
-    if len(summary) != 8:
-        errors.append(f"expected 8 skin beauty summary rows, found {len(summary)}")
-    if len(findings) < 160:
-        errors.append(f"expected at least 160 skin beauty findings, found {len(findings)}")
+    if len(topics) != 9:
+        errors.append(f"expected 9 skin beauty topics, found {len(topics)}")
+    if len(summary) != 9:
+        errors.append(f"expected 9 skin beauty summary rows, found {len(summary)}")
+    if len(findings) < 180:
+        errors.append(f"expected at least 180 skin beauty findings, found {len(findings)}")
     if len(supplements) < 20:
         errors.append(f"expected at least 20 supplement rows, found {len(supplements)}")
 

@@ -119,28 +119,48 @@ def text(element: ET.Element | None) -> str:
     return "" if element is None else clean("".join(element.itertext()))
 
 
-def request_json(endpoint: str, params: dict[str, str], timeout: int = 45) -> dict:
+def request_json(endpoint: str, params: dict[str, str], timeout: int = 45, retries: int = 4) -> dict:
     params = dict(params)
     params["retmode"] = "json"
     if os.getenv("NCBI_EMAIL"):
         params["email"] = os.getenv("NCBI_EMAIL", "")
     if os.getenv("NCBI_API_KEY"):
         params["api_key"] = os.getenv("NCBI_API_KEY", "")
-    resp = requests.get(f"{BASE}/{endpoint}?{urlencode(params)}", timeout=timeout)
-    resp.raise_for_status()
-    return resp.json()
+    url = f"{BASE}/{endpoint}?{urlencode(params)}"
+    last_exc: Exception | None = None
+    for attempt in range(retries):
+        try:
+            resp = requests.get(url, timeout=timeout)
+            resp.raise_for_status()
+            return resp.json()
+        except requests.RequestException as exc:
+            last_exc = exc
+            if attempt == retries - 1:
+                raise
+            time.sleep(1.2 * (attempt + 1))
+    raise last_exc or RuntimeError(f"PubMed JSON request failed: {endpoint}")
 
 
-def request_xml(endpoint: str, params: dict[str, str], timeout: int = 60) -> ET.Element:
+def request_xml(endpoint: str, params: dict[str, str], timeout: int = 60, retries: int = 4) -> ET.Element:
     params = dict(params)
     params["retmode"] = "xml"
     if os.getenv("NCBI_EMAIL"):
         params["email"] = os.getenv("NCBI_EMAIL", "")
     if os.getenv("NCBI_API_KEY"):
         params["api_key"] = os.getenv("NCBI_API_KEY", "")
-    resp = requests.get(f"{BASE}/{endpoint}?{urlencode(params)}", timeout=timeout)
-    resp.raise_for_status()
-    return ET.fromstring(resp.content)
+    url = f"{BASE}/{endpoint}?{urlencode(params)}"
+    last_exc: Exception | None = None
+    for attempt in range(retries):
+        try:
+            resp = requests.get(url, timeout=timeout)
+            resp.raise_for_status()
+            return ET.fromstring(resp.content)
+        except (requests.RequestException, ET.ParseError) as exc:
+            last_exc = exc
+            if attempt == retries - 1:
+                raise
+            time.sleep(1.2 * (attempt + 1))
+    raise last_exc or RuntimeError(f"PubMed XML request failed: {endpoint}")
 
 
 def esearch(query: str, retmax: int, sort: str = "relevance") -> list[str]:
@@ -379,6 +399,8 @@ def pre_priority(row: dict[str, str], topic: dict[str, Any]) -> int:
     score = 0
     if "high_weight_journal" in row.get("query", "") or "high-weight-journal" in row.get("notes", ""):
         score += 35
+    if "recent_update" in row.get("query", "") or "recent_update" in row.get("notes", ""):
+        score += 18
     if any(term.lower() in text_blob for term in ["systematic review", "meta-analysis", "randomized", "clinical trial", "cohort", "mendelian randomization"]):
         score += 25
     try:

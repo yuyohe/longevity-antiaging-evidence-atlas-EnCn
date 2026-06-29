@@ -1,0 +1,12 @@
+﻿asset_id,资产名称,资产类型,GitHub路径,飞书导入文件,主要用途,公开状态,更新月份,品牌标识,SEO关键词
+asset-001,前 50 常见成分卡片库,公开阅读资产,content/cards/ingredients-top-50/index.md,build/feishu-public-reader/011-前50常见成分卡片库.md,让普通读者快速理解常见成分,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-002,抗衰研究热力图,公开阅读资产,docs/research-heatmap-2026-06.html,build/feishu-public-reader/012-抗衰研究热力图.md,展示不同方向研究活跃度,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-003,2026-06 月度更新报告,公开阅读资产,docs/monthly-update-2026-06.html,build/feishu-public-reader/013-2026-06月度更新报告.md,解释本月新增资产和维护范围,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-004,全量文献候选库,公开全量数据,public-data/literature-library-2026-06.csv,,14273 条候选文献入口,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-005,候选来源原始表,公开全量数据,public-data/candidate-sources-2026-06.csv,,14273 条原始候选来源,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-006,入选短名单,公开全量数据,public-data/shortlist-sources-2026-06.csv,,4800 条优先复核记录,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-007,证据发现表,公开全量数据,public-data/evidence-findings-2026-06.csv,,4800 条证据发现,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-008,证据矩阵,公开全量数据,public-data/evidence-matrix-2026-06.csv,,2400 条矩阵记录,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-009,成分证据含金量,公开数据资产,data/evidence_yield_metrics_2026_06.csv,,前 50 成分的证据产出代理指标,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-010,主题证据产出率,公开数据资产,data/topic_evidence_yield_metrics_2026_06.csv,,主题级证据产出代理指标,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"
+asset-011,撤稿密度,公开数据资产,data/retraction_risk_summary_20y.csv,,117 个撤稿风险观察目标,可公开,2026-06,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱"

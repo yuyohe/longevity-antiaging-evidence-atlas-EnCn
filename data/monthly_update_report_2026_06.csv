@@ -1,0 +1,6 @@
+﻿section_id,板块,内容,是否公开,GitHub路径,飞书导入文件,更新月份
+report-001,本月一句话,本月按 2026/05/01 至 2026/06/29 的 PubMed 近期窗口更新文献候选；相对 6 月中本地版新增候选 553 条，并把健康寿命发现扩到 4800 条、证据矩阵扩到 2400 条。,是,docs/monthly-update-2026-06.html,build/feishu-public-reader/013-2026-06月度更新报告.md,2026-06
+report-002,近期文献,相对 6 月中本地版新增候选 553 条；6 月 recent_update 标签累计 2797 条；进入 4800 条 findings 的 recent_update 记录 508 条。新增记录仍是自动草稿，不能直接改变医学结论。,是,build/healthspan_recent_update_2026_06_report.json,build/feishu-public-reader/013-2026-06月度更新报告.md,2026-06
+report-003,资产规模,候选文献 14273；证据发现 4800；证据矩阵 2400；皮肤/外观主题 9；补剂条目 100；撤稿观察目标 117。,是,data/public_asset_index_2026_06.csv,build/feishu-public-reader/013-2026-06月度更新报告.md,2026-06
+report-004,热力图,研究热力图和证据等级热力图已按最新 evidence_matrix 重建。热力图表示研究活跃度和证据分布，不是有效性排行榜。,是,docs/research-heatmap-2026-06.html,build/feishu-public-reader/012-抗衰研究热力图.md,2026-06
+report-005,边界,近期文献仅进入候选和草稿层；药物、慢病、医美、注射、剂量和个人方案继续保持医生/专业评估边界。,是,content/public-reader/doctor-first.md,build/feishu-public-reader/009-哪些内容必须先问医生.md,2026-06
