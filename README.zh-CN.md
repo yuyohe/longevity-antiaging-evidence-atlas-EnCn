@@ -1,131 +1,99 @@
-﻿# 长寿抗衰证据地图 / Longevity Anti-Aging Evidence Atlas EnCn
+# 宇多Yul细胞/yulcell 长寿抗衰与健康寿命证据图谱
 
-**品牌 / Brand：** 宇多Yul细胞/yulcell  
-**品牌资产索引 / Brand asset index：** [docs/yulcell-brand-index.md](docs/yulcell-brand-index.md)
+**当前公开快照：** 2026-07-14<br>
+**英文项目名：** Longevity Anti-Aging Evidence Atlas EnCn<br>
+**品牌：** 宇多Yul细胞/yulcell
 
-这个仓库是 **宇多Yul细胞/yulcell** 维护的长寿抗衰证据地图，把“抗衰、长寿、健康寿命、补剂、护肤和前沿技术”的资料整理成一套可追踪的证据库。它不是产品清单，也不是治疗方案；它的作用是帮读者分清楚：哪些说法比较可靠，哪些只是早期研究，哪些更像商业宣传。
+这是一个中英文双语、可以追溯来源的公开证据图谱。它不告诉读者应该买什么，而是帮助读者判断：一项“抗衰”说法来自人体研究、动物实验、指标变化，还是仍停留在商业宣传。
 
-This repository is a bilingual evidence atlas by **宇多Yul细胞/yulcell** for longevity, anti-aging claims, healthspan, supplements, skin-aging topics, biomarkers, and frontier geroscience. It is designed to separate stronger evidence from early signals and overclaimed marketing.
+> [7 月中旬普通读者说明](content/public-reader/mid-july-2026-update.md)<br>
+> [7 月自包含可视化报告](docs/mid-july-public-update-2026-07.html)<br>
+> [飞书 9 张在线表索引](docs/feishu-public-assets-2026-07.md)<br>
+> [7 月公开 CSV 数据包](public-data/README.md)<br>
+> [中英文 GitHub 首页](README.md)
 
-搜索关键词：宇多Yul细胞/yulcell、yulcell、宇多Yul细胞、长寿抗衰证据图谱、健康寿命证据图谱、抗衰证据库。
+## 7 月中旬更新摘要
 
-## 第一次打开，从这里开始
-
-如果你不是研究人员，也不想一上来读论文，请从这些入口开始：
-
-- [普通读者入口：从这里开始](content/public-reader/start-here.md)
-- [2026 年 6 月底更新说明：普通读者版](content/public-reader/june-end-2026-update.md)
-- [15 条结论](content/public-reader/ten-takeaways.md)
-- [证据权重怎么看](content/public-reader/evidence-weight.md)
-- [撤稿风险怎么看](content/public-reader/retractions.md)
-- [大众版入口表](content/public-reader/index.md)
-- [大众主题速读](content/public-reader/topics.md)
-- [最常见 30 个补剂](content/public-reader/supplements-top-30.md)
-- [大众补剂速查](content/public-reader/supplements.md)
-- [护肤与外观抗老速读](content/public-reader/skin.md)
-- [哪些内容必须先问医生](content/public-reader/doctor-first.md)
-
-If you are a non-specialist reader, start here:
-
-- [Plain-language start page](content/public-reader/start-here.md)
-- [15 takeaways](content/public-reader/ten-takeaways.md)
-- [Evidence weighting guide](content/public-reader/evidence-weight.md)
-- [Retraction risk guide](content/public-reader/retractions.md)
-- [Easy reader home](content/public-reader/index.md)
-- [Easy topic guide](content/public-reader/topics.md)
-- [30 common supplements](content/public-reader/supplements-top-30.md)
-- [Easy supplement lookup](content/public-reader/supplements.md)
-
-## 一句话说明
-
-很多“抗衰”内容听起来很厉害，但证据强弱差别很大。这个项目把它们分成几类：
-
-- 比较值得普通人先理解的基础方向：运动、力量、睡眠、饮食模式、血压、血脂、血糖、体重和防晒。
-- 需要医生或专业人员参与的方向：处方药、慢病指标、医美项目、高剂量或长期补剂。
-- 只能当作前沿研究看的方向：动物实验、细胞实验、衰老时钟、部分重编程、清除衰老细胞等。
-- 容易被夸大的方向：把补剂说成“逆龄”，把皮肤改善说成“延寿”，把一个指标变好说成真正抗衰。
-- 证据评分现在使用 v0.5 字段：除了研究设计、终点、人群和风险，也单独加入发表地/期刊层级 `venue_tier`、`venue_score`。
-- 撤稿风险层：对已进入资产库的补剂、护肤和抗衰前沿主题，记录近 20 年发表、且被 PubMed 标记为 `Retracted Publication` 的撤稿观察。
-
-In plain English: the project does not ask readers to buy or try things. It helps readers understand what the evidence can and cannot say.
-
-## 现在有哪些资产
-
-| 资产 | 数量 | 适合谁看 |
+| 项目 | 当前数量 | 怎么理解 |
 | --- | ---: | --- |
-| 文献候选库 | 14273 条 | 维护者、研究者 |
-| 当前高权重证据矩阵 | 2400 条 | 研究者、编辑 |
-| 健康寿命证据发现 | 4800 条 | 研究者、编辑 |
-| 健康寿命主题 | 20 个 | 普通读者、编辑、研究者 |
-| 皮肤与外观抗老主题 | 9 个 | 普通读者、内容创作者 |
-| 皮肤与外观证据发现 | 180 条 | 编辑、研究者 |
-| 补剂/营养条目 | 100 个 | 普通读者、内容创作者 |
-| 撤稿观察目标 | 117 个 | 普通读者、编辑、研究者 |
-| 撤稿明细 | 538 条 | 研究者、深度读者 |
-| 论文卡片 | 4800 个 Markdown 页面 | 研究者、深度读者 |
-| 普通读者页面 | 16 个 | 第一次打开项目的人 |
-| 飞书全量 Markdown 发布包 | 4862 个文件 | 维护者 |
-| 飞书普通读者包 | 15 个文件 | 普通读者、内容团队 |
-| 公开全量 CSV 数据包 | 40546 行 | 研究者、维护者 |
-| 公开图片资产 | 57 张 PNG | 内容团队、发帖助手 |
-| 自包含发帖面板 | 1 个 HTML | 内容团队、助理 |
+| 候选文献 | 15,724 条 | 资料池，进入这里不代表已经证明有效 |
+| 入选短名单 | 5,600 条 | 优先进入结构化复核的记录 |
+| 证据发现 | 5,600 条 | 已记录研究设计、终点、结论和夸大风险 |
+| 证据矩阵 | 2,800 条 | 便于按主题和证据权重比较的整理层 |
+| 公开 CSV | 45,448 行 | 五张处理层表相加，不是独立论文总数 |
+| 论文卡片 | 5,600 页 | 给研究者和深度读者查证 |
+| 健康寿命主题 | 20 个 | 运动、睡眠、代谢、血压、衰老机制等 |
+| 皮肤与外观主题 | 9 个 | 防晒、皱纹、色斑、屏障、PDRN/PN、医美等 |
+| 图片资产 | 57 张 | 7 张主图和 50 张单成分卡 |
+| 飞书在线表 | 9 张 | 阅读导航、图片和研究数据层 |
 
-评分方法见：[证据评分方法 v0.5](content/overview/evidence-scoring-v0-5.md)。v0.5 把发表地/期刊分成 S/A/B/C/D：S 是顶级综合或临床期刊，A 是领域头部期刊，B 是正规专业或综合期刊，C 是普通索引或注册记录，D 是未知或预印本。期刊只加权，不替代研究设计、终点硬度、人体相关性和偏倚风险判断。
-撤稿观察见：[撤稿风险怎么看](content/public-reader/retractions.md) 和 [撤稿风险观察方法](content/overview/retraction-risk-methodology.md)。撤稿数是风险观察信号，不等于成分一定有效或无效。
-撤稿层现在同时展示分母：同一口径下的总发表量、年均发表量、撤稿百分比和每 1000 篇撤稿数，避免只按撤稿绝对数量比较。
+相对 2026-06-29 的 14,273 条冻结快照，本次候选库新增 1,451 条：每周自动更新加入 709 条，七月定向 PubMed 补检加入 742 条。近期窗口覆盖 2026-06-15 至 2026-07-14，共有 855 条近期记录进入 5,600 条证据发现层。
 
-## 普通人应该怎么读
+## 普通人从哪里开始
 
-推荐读法：
+1. 先读[7 月中旬更新说明](content/public-reader/mid-july-2026-update.md)，知道数字分别代表什么。
+2. 打开[普通读者入口](content/public-reader/start-here.md)，按自己的问题选择主题。
+3. 用[15 条结论](content/public-reader/ten-takeaways.md)建立基本判断框架。
+4. 用[证据权重怎么看](content/public-reader/evidence-weight.md)理解不同研究为什么不能等量看待。
+5. 查 NMN、鱼油、胶原蛋白和维生素时，先看[最常见 30 个补剂](content/public-reader/supplements-top-30.md)。
+6. 查防晒、皱纹、色斑或医美时，看[护肤与外观抗老速读](content/public-reader/skin.md)。
+7. 遇到药物、医美、高剂量补剂或慢病指标时，看[哪些内容必须先问医生](content/public-reader/doctor-first.md)。
 
-1. 从 [普通读者入口](content/public-reader/start-here.md) 开始，知道这个项目能解决什么问题。
-2. 读 [15 条结论](content/public-reader/ten-takeaways.md)，快速建立判断框架。
-3. 想知道我们怎么筛文献，就看 [证据权重怎么看](content/public-reader/evidence-weight.md)。
-4. 想知道哪些成分或方向出现过撤稿记录，就看 [撤稿风险怎么看](content/public-reader/retractions.md)。
-5. 想看运动、睡眠、饮食、血压血脂，就看 [大众主题速读](content/public-reader/topics.md)。
-6. 想查 NMN、鱼油、维生素、胶原蛋白等，读 [最常见 30 个补剂](content/public-reader/supplements-top-30.md)，再查 [大众补剂速查](content/public-reader/supplements.md)。
-7. 想看防晒、皱纹、色斑、屏障、医美设备，就看 [护肤与外观抗老速读](content/public-reader/skin.md)。
-8. 看到药物、医美、高剂量补剂、慢病用药，读 [哪些内容必须先问医生](content/public-reader/doctor-first.md)。
+## 图片怎么读
 
-只保留一句边界提醒：本项目用于研究整理和内容创作，不提供个人医疗建议、诊断、处方、剂量或购买建议。
+- 热力图颜色深，表示记录多或研究活跃，不表示疗效最好。
+- 证据等级分布，表示资料结构，不表示每个人都应该行动。
+- 撤稿密度是风险信号，不能单独判断某个成分有效或无效。
+- 成分卡是阅读入口，不是购买清单或剂量方案。
 
-## 给内容创作者的用法
+图片入口：
 
-你可以把这个项目讲成一张“抗衰证据地图”：
+- [7 月自包含可视化报告](docs/mid-july-public-update-2026-07.html)
+- [7 月研究热力图](docs/research-heatmap-2026-07.html)
+- [7 月全部 57 张 PNG](docs/assets/visual-assets/2026-07/)
+- [发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-07-14.html)
 
-- 它不是告诉大家买什么，而是告诉大家哪些说法不要轻信。
-- 它把“健康寿命”和“皮肤外观”分开，避免把护肤效果说成延寿。
-- 它把“补剂证据”和“安全边界”放在一起，避免把表格误读成购买清单。
-- 它把 PDRN/PN 单独作为美容与医美交叉主题处理，区分外用、导入、注射、skin booster 和填充。
-- 它不只看论文数量，也记录近 20 年发表且已被 PubMed 标记撤稿的论文，提醒大家不要只拿单篇论文做宣传。
-- 它保留论文卡片和证据矩阵，方便追溯来源。
-- 它准备了 GitHub 研究资产和飞书阅读资产，普通人和维护者可以看不同层级。
+## 飞书怎么读
 
-## 飞书怎么用
+飞书用于中文结构化展示和复核，GitHub 保留版本化源文件。普通读者先看阅读导航，不要直接打开 15,724 条全量候选表。
 
-仓库里现在区分两个飞书导出包：
+- [飞书公开资产总索引](docs/feishu-public-assets-2026-07.md)
+- [飞书普通读者导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblVZxT68e7JiBTv)
+- [飞书热力图与证据产出图](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL)
+- [飞书前 50 成分单卡](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla)
+- [飞书证据矩阵](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir)
 
-- `build/feishu-public-reader/`：普通读者包，只放 11 个入口文件，适合直接分享。
-- `build/feishu-docs/`：全量发布包，包含论文卡片、主题页、研究页，适合维护者和深度读者。
+飞书页面能否被搜索引擎收录，取决于相应文档和多维表格的公开分享设置。仓库和飞书表都使用“宇多Yul细胞/yulcell”品牌字段与关键词，便于公开页面建立统一名称。
 
-普通人不要从全量包开始读。全量包文件很多，适合查证，不适合第一次浏览。
+## 证据规则
+
+- 不把动物寿命实验说成人类延寿已经证实。
+- 不把一个生物标志物改善说成临床返老还童。
+- 不把论文多、热力图颜色深说成疗效更强。
+- 不把皮肤外观改善说成健康寿命延长。
+- 不把候选文献直接当成已经复核的结论。
+- 不提供个人处方、剂量、诊断、医美操作或购买建议。
+
+评分方法见[证据评分 v0.5](content/overview/evidence-scoring-v0-5.md)，总方法见[方法与分级](content/overview/methods-and-scoring.md)。期刊层级只参与加权，不能替代研究设计、人体相关性、终点硬度和偏倚风险判断。
 
 ## 仓库结构
 
 ```text
-data/                     结构化数据：文献、主题、补剂、证据矩阵
-content/public-reader/    普通读者入口和人话解释
-content/topics/           健康寿命主题页
-content/skin-beauty-topics/ 皮肤与外观抗老主题页
-content/papers/           论文卡片
-content/overview/         总览、方法、术语和公开摘要
-content/analysis/         排名和分析页
-scripts/                  构建、校验、飞书导出和同步脚本
-docs/                     报告、交接和操作说明
+data/                       结构化数据
+public-data/                公开 CSV 快照
+content/public-reader/      普通读者页面
+content/papers/             论文卡片
+content/topics/             健康寿命主题
+content/skin-beauty-topics/ 皮肤与外观主题
+content/overview/           方法、总览和术语
+scripts/                    构建、校验和飞书同步脚本
+docs/                       报告与公开资产索引
 ```
 
-## For English Readers
+## English Summary
 
-This project is a bilingual evidence atlas. The Chinese layer is designed for public communication, while the English metadata and paper cards preserve traceability. Start with the easy reader pages if you want the public-facing interpretation, and use the research pages when you need source-level evidence.
+This repository is a bilingual evidence atlas maintained by **宇多Yul细胞/yulcell**. The 2026-07-14 snapshot contains 15,724 candidate records, 5,600 evidence findings, 2,800 matrix records, 45,448 rows across five public CSV layers, 57 visual assets, and nine live Feishu Bitable tables. Research volume does not establish efficacy, safety, or personal suitability.
 
-The key design rule is simple: strong evidence does not automatically mean an individual should act, and weak or early evidence should not be marketed as proven longevity advice.
+## 使用边界
+
+本项目用于证据复核、公众科普和内容生产，不提供个人医疗建议、诊断、处方、剂量方案、医美操作建议或购买推荐。

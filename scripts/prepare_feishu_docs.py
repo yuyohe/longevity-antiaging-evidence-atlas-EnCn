@@ -31,7 +31,7 @@ BRAND_HEADER = (
 PUBLIC_FILES = [
     (ROOT / "README.zh-CN.md", None),
     (ROOT / "content" / "public-reader" / "start-here.md", "000-start-here-public-reader.md"),
-    (ROOT / "content" / "public-reader" / "june-end-2026-update.md", "public-reader-june-end-2026-update.md"),
+    (ROOT / "content" / "public-reader" / "mid-july-2026-update.md", "public-reader-mid-july-2026-update.md"),
     (ROOT / "content" / "public-reader" / "ten-takeaways.md", "001-public-reader-15-takeaways.md"),
     (ROOT / "content" / "public-reader" / "evidence-weight.md", "002-public-reader-evidence-weight.md"),
     (ROOT / "content" / "public-reader" / "retractions.md", "public-reader-retractions.md"),
@@ -66,7 +66,7 @@ PUBLIC_FILES = [
 
 PUBLIC_READER_FILES = [
     (ROOT / "content" / "public-reader" / "start-here.md", "000-普通读者入口-从这里开始.md"),
-    (ROOT / "content" / "public-reader" / "june-end-2026-update.md", "001-2026-06月底更新说明.md"),
+    (ROOT / "content" / "public-reader" / "mid-july-2026-update.md", "001-2026-07中旬更新说明.md"),
     (ROOT / "content" / "public-reader" / "ten-takeaways.md", "002-15条结论.md"),
     (ROOT / "content" / "public-reader" / "evidence-weight.md", "003-证据权重怎么看.md"),
     (ROOT / "content" / "public-reader" / "retractions.md", "004-撤稿风险怎么看.md"),

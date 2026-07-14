@@ -18,7 +18,14 @@ BUILD = ROOT / "build"
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-06")
 MONTH_UNDERSCORE = MONTH.replace("-", "_")
 RUN_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", date.today().isoformat())
-RECENT_REPORT = BUILD / "healthspan_recent_update_2026_06_report.json"
+RECENT_REPORT = BUILD / f"healthspan_recent_update_{MONTH_UNDERSCORE}_report.json"
+MONTH_NUMBER = int(MONTH.split("-")[1])
+RECENT_TAG = f"recent_update_{MONTH_UNDERSCORE}"
+BASELINE_LABEL = os.environ.get(
+    "EVIDENCE_ATLAS_BASELINE_LABEL",
+    "6 月底冻结版" if MONTH == "2026-07" else "6 月中本地版",
+)
+DEFAULT_BASELINE_COUNT = "14273" if MONTH == "2026-07" else "13720"
 BRAND_NAME = os.environ.get("PUBLIC_BRAND_NAME", "宇多Yul细胞/yulcell")
 BRAND_KEYWORDS = os.environ.get(
     "PUBLIC_BRAND_SEO_KEYWORDS",
@@ -250,8 +257,8 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
     retractions = read_csv(DATA / "retraction_risk_summary_20y.csv")
     recent = recent_report()
     expansion = recent.get("candidate_expansion", {})
-    date_window = str(expansion.get("date_window") or "2026/05/01..2026/06/18").replace("..", " 至 ")
-    recent_bucket_total = safe_int(expansion.get("added"))
+    date_window = str(expansion.get("date_window") or f"{MONTH}/01..{RUN_DATE.replace('-', '/')}").replace("..", " 至 ")
+    recent_bucket_total = safe_int(expansion.get("recent_tagged_total") or expansion.get("added"))
     recent_selected = safe_int(recent.get("recent_update_findings_selected"))
 
     counts = {
@@ -264,7 +271,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         "supplements": len(supplements),
         "retraction_targets": len(retractions),
     }
-    midmonth_candidate_base = safe_int(os.environ.get("MIDMONTH_CANDIDATE_BASE", "13720"))
+    midmonth_candidate_base = safe_int(os.environ.get("MIDMONTH_CANDIDATE_BASE", DEFAULT_BASELINE_COUNT))
     recent_added_since_midmonth = max(0, len(candidates) - midmonth_candidate_base)
     public_recent_added = recent_added_since_midmonth or recent_bucket_total
     build_public_asset_index(counts)
@@ -276,7 +283,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         sample_rows = [
             row
             for row in candidates
-            if row.get("last_checked") == RUN_DATE and "recent_update_2026_06" in row.get("query", "")
+            if row.get("last_checked") == RUN_DATE and RECENT_TAG in f"{row.get('query', '')} {row.get('notes', '')}"
         ][:12]
     for row in sample_rows:
         top_recent_rows.append([row.get("pmid", ""), row.get("year", ""), row.get("title_en", "")[:120], row.get("query", "")])
@@ -285,7 +292,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         {
             "section_id": "report-001",
             "板块": "本月一句话",
-            "内容": f"本月按 {date_window} 的 PubMed 近期窗口更新文献候选；相对 6 月中本地版新增候选 {public_recent_added} 条，并把健康寿命发现扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。",
+            "内容": f"本月按 {date_window} 的 PubMed 近期窗口更新文献候选；相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条，并把健康寿命发现扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。",
             "是否公开": "是",
             "GitHub路径": f"docs/monthly-update-{MONTH}.html",
             "飞书导入文件": f"build/feishu-public-reader/013-{MONTH}月度更新报告.md",
@@ -294,9 +301,9 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         {
             "section_id": "report-002",
             "板块": "近期文献",
-            "内容": f"相对 6 月中本地版新增候选 {public_recent_added} 条；6 月 recent_update 标签累计 {recent_bucket_total} 条；进入 {len(findings)} 条 findings 的 recent_update 记录 {recent_selected} 条。新增记录仍是自动草稿，不能直接改变医学结论。",
+            "内容": f"相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条；{MONTH_NUMBER} 月 recent_update 标签累计 {recent_bucket_total} 条；进入 {len(findings)} 条 findings 的 recent_update 记录 {recent_selected} 条。新增记录仍是自动草稿，不能直接改变医学结论。",
             "是否公开": "是",
-            "GitHub路径": "build/healthspan_recent_update_2026_06_report.json",
+            "GitHub路径": f"build/healthspan_recent_update_{MONTH_UNDERSCORE}_report.json",
             "飞书导入文件": f"build/feishu-public-reader/013-{MONTH}月度更新报告.md",
             "更新月份": MONTH,
         },
@@ -380,7 +387,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
   <main>
     <section>
       <h2>本月一句话</h2>
-      <p class="note">按 {esc(date_window)} 的 PubMed 近期窗口补充候选文献；相对 6 月中本地版新增候选 {public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。近期文献仍是草稿层，不直接改变医学结论。</p>
+      <p class="note">按 {esc(date_window)} 的 PubMed 近期窗口补充候选文献；相对 {esc(BASELINE_LABEL)} 新增候选 {public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。近期文献仍是草稿层，不直接改变医学结论。</p>
     </section>
     <section>
       <h2>资产规模</h2>
@@ -388,8 +395,8 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
     </section>
     <section>
       <h2>近期文献更新</h2>
-      <p>相对 6 月中本地版新增候选：{public_recent_added} 条；6 月 recent_update 标签累计：{recent_bucket_total} 条；进入本轮 findings 的 recent_update 记录：{recent_selected} 条。</p>
-      <p>检索窗口：{esc(expansion.get("date_window", "2026/05/01..2026/06/02"))}。数据源为 PubMed E-utilities。</p>
+      <p>相对 {esc(BASELINE_LABEL)} 新增候选：{public_recent_added} 条；{MONTH_NUMBER} 月 recent_update 标签累计：{recent_bucket_total} 条；进入本轮 findings 的 recent_update 记录：{recent_selected} 条。</p>
+      <p>检索窗口：{esc(expansion.get("date_window", f"{MONTH}/01..{RUN_DATE.replace('-', '/')}"))}。数据源为 PubMed E-utilities。</p>
     </section>
     <section>
       <h2>证据矩阵等级分布</h2>
@@ -418,7 +425,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
 
 ## 本月一句话
 
-按 {date_window} 的 PubMed 近期窗口补充候选文献；相对 6 月中本地版新增候选 {public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。近期文献仍是草稿层，不直接改变医学结论。
+按 {date_window} 的 PubMed 近期窗口补充候选文献；相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。近期文献仍是草稿层，不直接改变医学结论。
 
 ## 资产规模
 
@@ -426,7 +433,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
 - 证据发现：{len(findings):,}
 - 证据矩阵：{len(matrix):,}
 - 月底新增候选：{public_recent_added:,}
-- 6 月 recent_update 标签累计：{recent_bucket_total:,}
+- {MONTH_NUMBER} 月 recent_update 标签累计：{recent_bucket_total:,}
 - 近期入选 findings：{recent_selected:,}
 - 皮肤/外观主题：{len(skin):,}
 - 补剂条目：{len(supplements):,}

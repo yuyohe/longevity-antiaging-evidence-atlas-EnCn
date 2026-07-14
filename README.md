@@ -1,114 +1,115 @@
-﻿# Longevity Anti-Aging Evidence Atlas EnCn
+# 宇多Yul细胞/yulcell · 长寿抗衰与健康寿命证据图谱
 
-**中文名 / Chinese public name:** 长寿抗衰与健康寿命证据图谱  
-**品牌 / Brand:** 宇多Yul细胞/yulcell  
-**Repository:** `longevity-antiaging-evidence-atlas-EnCn`
+# Longevity Anti-Aging & Healthspan Evidence Atlas EnCn
 
-> **Public entry point / 公众入口：** [`content/overview/start-here.md`](content/overview/start-here.md)  
-> **June-end reader update / 6 月底普通读者更新：** [`content/public-reader/june-end-2026-update.md`](content/public-reader/june-end-2026-update.md)  
-> **Evidence summary / 证据总览：** [`content/overview/public-summary.md`](content/overview/public-summary.md)  
-> **Brand asset index / 品牌资产索引：** [`docs/yulcell-brand-index.md`](docs/yulcell-brand-index.md)  
-> **Chinese README / 中文 README：** [`README.zh-CN.md`](README.zh-CN.md)
+**Current snapshot / 当前公开快照：** 2026-07-14<br>
+**Maintainer and public brand / 维护方与公开品牌：** 宇多Yul细胞/yulcell<br>
+**Repository / 仓库：** `longevity-antiaging-evidence-atlas-EnCn`
 
-This is a bilingual evidence atlas by **宇多Yul细胞/yulcell** for longevity, anti-aging claims, healthspan, supplements, skin-aging topics, biomarkers, and frontier geroscience.
+> **Mid-July update / 7 月中旬更新：** [plain-language guide / 普通读者说明](content/public-reader/mid-july-2026-update.md)<br>
+> **Visual report / 自包含可视化报告：** [open the July report / 打开七月报告](docs/mid-july-public-update-2026-07.html)<br>
+> **Feishu assets / 飞书资产：** [9 live tables / 9 张在线表](docs/feishu-public-assets-2026-07.md)<br>
+> **Public data / 公开数据：** [July CSV package / 七月 CSV 数据包](public-data/README.md)<br>
+> **Chinese guide / 中文详细说明：** [README.zh-CN.md](README.zh-CN.md)
 
-这是 **宇多Yul细胞/yulcell** 维护的中英文双语证据图谱项目，用于整理长寿、抗衰、健康寿命、补剂、皮肤衰老、生物标志物和前沿老年科学相关主张。
+This is a bilingual, versioned evidence atlas maintained by **宇多Yul细胞/yulcell**. It organizes research on longevity, anti-aging claims, healthspan, supplements, skin aging, biomarkers, and frontier geroscience so that readers can distinguish stronger human evidence from early signals and marketing claims.
 
-**SEO keywords / 搜索关键词：** 宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, Longevity Anti-Aging Evidence Atlas.
+这是 **宇多Yul细胞/yulcell** 维护的中英文双语、可追溯版本化证据图谱。项目整理长寿、抗衰、健康寿命、补剂、皮肤衰老、生物标志物和前沿老年科学研究，帮助读者分清较强人体证据、早期线索和营销说法。
 
-## Mission / 项目使命
+**Search keywords / 搜索关键词：** 宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, Longevity Anti-Aging Evidence Atlas, Healthspan Evidence Atlas.
 
-The goal is not to tell readers what to buy or try. The goal is to make longevity and anti-aging claims easier to audit.
+## July Snapshot / 七月快照
 
-本项目不是购买建议、用药建议或个人医疗建议，而是把抗衰与长寿相关主张拆成可以审查的证据层级。
+| Asset / 资产 | Published size / 当前规模 | Link / 入口 |
+| --- | ---: | --- |
+| Candidate sources / 候选来源 | 15,724 records | [CSV](public-data/candidate-sources-2026-07.csv) |
+| Literature library / 全量文献候选库 | 15,724 records | [CSV](public-data/literature-library-2026-07.csv) |
+| Shortlist / 入选短名单 | 5,600 rows | [CSV](public-data/shortlist-sources-2026-07.csv) |
+| Evidence findings / 证据发现 | 5,600 rows | [CSV](public-data/evidence-findings-2026-07.csv) |
+| Evidence matrix / 证据矩阵 | 2,800 rows | [CSV](public-data/evidence-matrix-2026-07.csv) |
+| Public CSV processing rows / 公开 CSV 处理层总行数 | 45,448 rows | [data index / 数据索引](docs/public-full-data-index-2026-07.md) |
+| Paper cards / 论文卡片 | 5,600 Markdown pages | [paper directory / 论文目录](content/papers/) |
+| Healthspan topics / 健康寿命主题 | 20 topics | [topic directory / 主题目录](content/topics/) |
+| Skin and appearance topics / 皮肤与外观主题 | 9 topics | [topic directory / 主题目录](content/skin-beauty-topics/) |
+| Visual assets / 图片资产 | 7 main charts + 50 cards | [July images / 七月图片](docs/assets/visual-assets/2026-07/) |
+| Feishu Bitable / 飞书多维表格 | 9 live tables | [Feishu index / 飞书索引](docs/feishu-public-assets-2026-07.md) |
+| Posting dashboard / 发帖资产面板 | 1 self-contained HTML | [dashboard / 面板](docs/yulcell-posting-asset-dashboard-2026-07-14.html) |
 
-- **English:** Separate hard human outcomes from biomarkers, animal studies, functional endpoints, risk markers, and mechanisms.
-- **中文：** 区分真正的人体结局、功能终点、临床风险指标、生物标志物、动物寿命实验和机制假说。
-- **English:** Separate healthspan evidence from skin and appearance evidence.
-- **中文：** 区分健康寿命证据与皮肤、外观抗老证据。
-- **English:** Separate supplement evidence from supplement marketing.
-- **中文：** 区分补剂证据与补剂营销。
-- **English:** Keep safety boundaries visible for drugs, medical aesthetics, chronic disease, and high-dose or long-term supplement use.
-- **中文：** 对药物、医美、慢病、高剂量或长期补剂使用保留清晰的安全边界。
+The 45,448-row total is the sum of five processing layers. One paper may appear in the candidate, shortlist, findings, and matrix layers, so this number is not a count of unique publications.
+
+45,448 行是五张处理层表的行数相加。同一篇论文可能同时出现在候选、短名单、发现和矩阵层，因此不能把它理解成互不重复的论文数。
+
+## What Changed / 本次更新
+
+- **English:** The candidate pool grew from 14,273 at the June-end snapshot to 15,724 on 2026-07-14, an increase of 1,451 records.
+- **中文：** 候选库从 6 月底快照的 14,273 条增至 2026-07-14 的 15,724 条，共新增 1,451 条。
+- **English:** Weekly automation added 709 records, and a targeted PubMed refresh added 742 records.
+- **中文：** 每周自动更新加入 709 条，七月定向 PubMed 补检再加入 742 条。
+- **English:** The findings layer expanded to 5,600 records and the evidence matrix to 2,800 records; 855 recently tagged records entered the findings layer across all 20 healthspan topics.
+- **中文：** 证据发现层扩到 5,600 条，证据矩阵扩到 2,800 条；20 个健康寿命主题共有 855 条近期记录进入发现层。
+- **English:** All seven main visuals and 50 ingredient cards were regenerated for the July snapshot.
+- **中文：** 7 张主图和 50 张单成分卡已按七月快照全部重建。
 
 ## Start Here / 从这里开始
 
-If you are not a researcher, start with the plain-language entry and topic guides.
+For non-specialist readers, use the short route below before opening the full research tables.
 
-如果你不是研究人员，建议先从大众入口和主题速读开始。
+普通读者不必从上万条文献开始，建议按下面的顺序阅读。
 
-- [Start here / 从这里开始](content/overview/start-here.md)
-- [Public summary / 公众版总览](content/overview/public-summary.md)
-- [Plain-language evidence levels / 大众版证据等级](content/overview/evidence-levels-plain-language.md)
-- [Reader topic guide / 读者主题指南](content/overview/reader-topic-guide.md)
-- [Supplement summary / 补剂总览](content/overview/supplement-summary.md)
-- [Skin and appearance summary / 皮肤与外观抗老总览](content/overview/skin-beauty-summary.md)
-- [Plain-language glossary / 大众版术语表](content/overview/plain-language-glossary.md)
+1. [Mid-July public update / 7 月中旬普通读者说明](content/public-reader/mid-july-2026-update.md)
+2. [Plain-language start page / 普通读者入口](content/public-reader/start-here.md)
+3. [15 takeaways / 15 条结论](content/public-reader/ten-takeaways.md)
+4. [Evidence weighting / 证据权重怎么看](content/public-reader/evidence-weight.md)
+5. [Topic guide / 大众主题速读](content/public-reader/topics.md)
+6. [Common supplements / 最常见 30 个补剂](content/public-reader/supplements-top-30.md)
+7. [Skin and appearance / 护肤与外观抗老速读](content/public-reader/skin.md)
+8. [Doctor-first topics / 哪些内容必须先问医生](content/public-reader/doctor-first.md)
 
-## Published GitHub Snapshot / GitHub 当前公开快照
+## Visuals and Feishu / 图片与飞书
 
-The public GitHub snapshot now exposes the June-end 2026 data package under the **宇多Yul细胞/yulcell** brand. It is a public evidence map, not a buying guide, dosing protocol, diagnosis tool, or personal medical recommendation.
+- [Self-contained July report / 七月自包含报告](docs/mid-july-public-update-2026-07.html)
+- [Monthly update / 七月月度更新](docs/monthly-update-2026-07.html)
+- [Research heatmap / 七月研究热力图](docs/research-heatmap-2026-07.html)
+- [Posting asset dashboard / 发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-07-14.html)
+- [Feishu public asset index / 飞书公开资产索引](docs/feishu-public-assets-2026-07.md)
+- [Feishu reading navigation / 飞书普通读者导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblVZxT68e7JiBTv)
 
-GitHub 当前公开的是 **宇多Yul细胞/yulcell** 名下的 2026 年 6 月底数据包。它是一张公开证据地图，不是购买清单、剂量方案、诊断工具或个人医疗建议。
+GitHub is the versioned source of truth. Feishu is the structured Chinese reading and review layer. Search-engine visibility for Feishu still depends on its public sharing settings.
 
-| Asset / 资产 | Published count / 已公开数量 | Link / 链接 |
-| --- | ---: | --- |
-| Candidate sources / 候选来源 | 14,273 records | [`candidate-sources-2026-06.csv`](public-data/candidate-sources-2026-06.csv) |
-| Literature library / 文献库 | 14,273 records | [`literature-library-2026-06.csv`](public-data/literature-library-2026-06.csv) |
-| Evidence findings / 证据发现 | 4,800 rows | [`evidence-findings-2026-06.csv`](public-data/evidence-findings-2026-06.csv) |
-| Evidence matrix / 证据矩阵 | 2,400 rows | [`evidence-matrix-2026-06.csv`](public-data/evidence-matrix-2026-06.csv) |
-| Shortlist sources / 入选来源 | 4,800 rows | [`shortlist-sources-2026-06.csv`](public-data/shortlist-sources-2026-06.csv) |
-| Public CSV rows / 公开 CSV 总行数 | 40,546 rows | [`public-data/README.md`](public-data/README.md) |
-| Paper cards / 文献卡片 | 4,800 Markdown pages | [`content/papers/`](content/papers/) |
-| Healthspan topics / 健康寿命主题 | 20 topic files | [`content/topics/`](content/topics/) |
-| Skin and appearance topics / 皮肤与外观主题 | 9 topic files | [`content/skin-beauty-topics/`](content/skin-beauty-topics/) |
-| Public data index / 公开数据索引 | 1 report | [`docs/public-full-data-index-2026-06.md`](docs/public-full-data-index-2026-06.md) |
-| June-end reader guide / 6 月底读者说明 | 1 guide | [`content/public-reader/june-end-2026-update.md`](content/public-reader/june-end-2026-update.md) |
-| Visual assets / 图片资产 | 57 PNG files | [`docs/assets/visual-assets/2026-06/`](docs/assets/visual-assets/2026-06/) |
-| Posting dashboard / 发帖面板 | 1 self-contained HTML | [`docs/yulcell-posting-asset-dashboard-2026-06-29.html`](docs/yulcell-posting-asset-dashboard-2026-06-29.html) |
+GitHub 是版本化的数据与内容源头；飞书是结构化中文阅读和复核层。飞书能否被搜索引擎收录，仍取决于相应页面的公开分享设置。
 
 ## Evidence Rules / 证据规则
 
-- **English:** Do not present animal lifespan studies as proven human lifespan extension.
-- **中文：** 不把动物寿命实验表述成人类寿命延长已被证明。
-- **English:** Do not present biomarker improvement as clinical rejuvenation.
-- **中文：** 不把生物标志物改善直接表述成临床返老还童。
-- **English:** Do not provide medical prescriptions, dosing protocols, diagnosis, or purchase recommendations.
-- **中文：** 不提供个人处方、剂量方案、诊断或购买建议。
-- **English:** GitHub is the source of truth; Feishu is the structured Chinese display and review layer.
-- **中文：** GitHub 是数据与内容源头；飞书是结构化中文展示和复核层。
+- Do not present animal lifespan studies as proven human lifespan extension. / 不把动物延寿实验说成人类延寿已经证实。
+- Do not present biomarker improvement as clinical rejuvenation. / 不把生物标志物改善说成临床返老还童。
+- Research volume and dark heatmap colors do not prove efficacy. / 论文多、热力图颜色深，不代表疗效更强。
+- Separate healthspan evidence from skin and appearance evidence. / 区分健康寿命证据与皮肤外观证据。
+- Candidate records require review before being treated as evidence. / 候选记录必须经过复核，不能直接当成结论。
+- Do not provide personal prescriptions, dosing protocols, diagnosis, aesthetic procedure advice, or purchase recommendations. / 不提供个人处方、剂量、诊断、医美操作或购买建议。
 
-Scoring method / 评分方法：[`content/overview/evidence-scoring-v0-4.md`](content/overview/evidence-scoring-v0-4.md)
-
-Methods and grading / 方法与分级：[`content/overview/methods-and-scoring.md`](content/overview/methods-and-scoring.md)
+Scoring / 评分方法：[evidence scoring v0.5 / 证据评分 v0.5](content/overview/evidence-scoring-v0-5.md)<br>
+Methods / 方法说明：[methods and scoring / 方法与分级](content/overview/methods-and-scoring.md)
 
 ## Repository Structure / 仓库结构
 
 ```text
 data/                       structured data / 结构化数据
-public-data/                public CSV exports / 公开 CSV 导出
-content/papers/             paper cards / 文献卡片
-content/topics/             healthspan topic pages / 健康寿命主题页
-content/skin-beauty-topics/ skin and appearance topic pages / 皮肤与外观主题页
-content/overview/           overviews, methods, glossary / 总览、方法、术语表
-content/analysis/           rankings and analysis / 排名与分析
-methodology/                inclusion, grading, search strategy / 纳入、分级与检索策略
-scripts/                    build, validation, Feishu export, sync scripts / 构建、校验、飞书导出与同步脚本
-docs/                       reports and operations notes / 报告与运维记录
+public-data/                public CSV snapshots / 公开 CSV 快照
+content/public-reader/      plain-language pages / 普通读者页面
+content/papers/             paper cards / 论文卡片
+content/topics/             healthspan topics / 健康寿命主题
+content/skin-beauty-topics/ skin and appearance topics / 皮肤与外观主题
+content/overview/           methods and summaries / 方法与总览
+scripts/                    build, validation, Feishu sync / 构建、校验、飞书同步
+docs/                       reports and public asset indexes / 报告与公开资产索引
 ```
 
-## Quick Start / 快速开始
+## Historical Snapshot / 历史快照
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/lint.py
-python scripts/build_index.py
-```
+The June-end snapshot remains available for reproducibility: [June-end reader guide / 6 月底读者说明](content/public-reader/june-end-2026-update.md).
 
-## Boundary Note / 边界说明
+## Boundary / 使用边界
 
-This project is for evidence review and content production. It does not provide personal medical advice, diagnosis, prescriptions, dosing protocols, or purchase recommendations.
+This project is for evidence review, public education, and content production. It does not provide personal medical advice, diagnosis, prescriptions, dosing protocols, aesthetic procedure guidance, or purchase recommendations.
 
-本项目用于证据复核与内容生产，不提供个人医疗建议、诊断、处方、剂量方案或购买建议。
+本项目用于证据复核、公众科普和内容生产，不提供个人医疗建议、诊断、处方、剂量方案、医美操作建议或购买推荐。

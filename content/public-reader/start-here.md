@@ -1,5 +1,8 @@
 # 普通读者入口：从这里开始
 
+**品牌 / Brand：** 宇多Yul细胞/yulcell<br>
+**当前公开快照 / Current public snapshot：** 2026-07-14
+
 如果你第一次打开这个项目，读这一页。你不需要懂论文，也不需要懂医学统计。
 
 这个项目做一件事：把“抗衰、长寿、补剂、护肤和前沿技术”的说法拆开，看它们到底有没有证据。
@@ -15,12 +18,15 @@
 
 我们把这些东西分开写，避免普通人一看到“抗衰”两个字就被带去买东西。
 
+## 7 月中旬更新
+
+本次快照包括 15,724 条候选文献、5,600 条证据发现、2,800 条证据矩阵、45,448 行公开 CSV，以及 57 张图片。请先读[2026 年 7 月中旬更新说明](mid-july-2026-update.md)，再按自己的问题选择下面的入口。
+
 ## 从这里进入
 
 | 需求 | 打开 | 得到什么 |
 | --- | --- | --- |
 | 我完全不知道从哪里开始 | [大众版入口表](index.md) | 项目有哪几类内容 |
-| 我想看 6 月底更新了什么 | [2026 年 6 月底更新说明](june-end-2026-update.md) | 用普通话解释本次新增资产、图片和边界 |
 | 我想看 15 条结论 | [15 条结论](ten-takeaways.md) | 哪些抗衰说法最容易误解 |
 | 我想知道哪些方向更靠谱 | [大众主题速读](topics.md) | 运动、睡眠、饮食、血压、血脂等主题怎么理解 |
 | 我想知道证据怎么分级 | [证据权重怎么看](evidence-weight.md) | 哪些文献权重高，哪些只能当线索 |
@@ -42,20 +48,22 @@
 
 | 资产 | 数量 | 说明 |
 | --- | ---: | --- |
-| 文献候选库 | 14273 条 | 原始资料池，不建议普通人直接看 |
-| 证据矩阵 | 2400 条 | 已经筛过一轮的研究资料 |
-| 健康寿命发现 | 4800 条 | 和运动、代谢、疾病风险等有关的证据 |
+| 文献候选库 | 15724 条 | 原始资料池，不建议普通人直接看 |
+| 证据矩阵 | 2800 条 | 已经筛过一轮的研究资料 |
+| 健康寿命发现 | 5600 条 | 和运动、代谢、疾病风险等有关的证据 |
 | 健康寿命主题 | 20 个 | 普通人最常问的健康寿命方向 |
 | 皮肤外观主题 | 9 个 | 防晒、皱纹、色斑、屏障、PDRN/PN、医美等 |
 | 皮肤外观证据 | 180 条 | 只回答皮肤和外观，不等于延寿 |
 | 补剂条目 | 100 个 | 看常见误解和注意最重要 |
 | 撤稿观察目标 | 117 个 | 补剂、护肤、抗衰前沿目标 |
 | 撤稿明细 | 538 条 | 近 20 年发表且题名匹配的 PubMed 撤稿记录 |
-| 论文卡片 | 4800 个 | 给研究者和深度读者查证 |
-| 公开 CSV 数据包 | 40546 行 | 给研究者和维护者下载复核 |
+| 论文卡片 | 5600 个 | 给研究者和深度读者查证 |
+| 公开 CSV | 45448 行 | 五张处理层表的行数相加，不是独立论文数 |
+| 图片资产 | 57 张 | 7 张主图和 50 张成分卡 |
+| 飞书在线表 | 9 张 | [打开飞书公开资产索引](../../docs/feishu-public-assets-2026-07.md) |
 
 ## English Summary
 
-This is the plain-language entry page for non-specialist readers. The project separates stronger human evidence from early research, biomarkers, animal studies, supplement marketing, and skin-appearance claims. Start with the easy reader pages before opening the full research archive.
+This is the plain-language entry page for non-specialist readers. The current snapshot is dated 2026-07-14 and contains 15,724 candidate records, 5,600 findings, and 2,800 matrix rows. The project separates stronger human evidence from early research, biomarkers, animal studies, supplement marketing, and skin-appearance claims.
 
 One boundary note: this project is for evidence review and content production. It does not provide personal medical advice, prescriptions, dosing protocols, diagnosis, or purchase recommendations.

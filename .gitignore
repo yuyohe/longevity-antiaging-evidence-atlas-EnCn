@@ -13,3 +13,7 @@ raw_html/
 *.pdf
 *.sqlite
 codex-output.md
+.playwright-cli/
+output/
+data/visual_feishu_file_tokens_*.csv
+data/visual_feishu_deleted_old_tables_*.csv

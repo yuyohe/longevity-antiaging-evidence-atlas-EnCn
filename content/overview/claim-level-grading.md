@@ -35,9 +35,9 @@
 | 维A酸/视黄醇类与光老化<br>retinoids-photoaging | supported_public_claim | B | 外用维A酸类对光老化相关皮肤终点有较多人体和临床经验支持。 | 处方维A酸、孕期、敏感肌和皮肤病人群需要医生评估。 |
 | 烟酰胺与屏障/色素/炎症<br>niacinamide-barrier-pigment | supported_public_claim | B | 烟酰胺可作为屏障、色素和炎症相关皮肤终点的候选成分。 | 不能宣传为全身抗衰或延寿。 |
 | 维C外用与色素/胶原<br>topical-vitamin-c | supported_public_claim | B | 外用维C可作为色素、抗氧化和胶原相关皮肤终点的候选方向。 | 不能替代防晒、医美或疾病治疗。 |
-| 口服胶原肽与皮肤弹性/水分<br>oral-collagen-peptides | supported_public_claim | B | 口服胶原肽对水分和弹性等软终点有候选证据，但异质性和商业化风险较高。 | 不能写成逆龄、延寿或替代均衡蛋白摄入。 |
+| 口服胶原肽与皮肤弹性/水分<br>oral-collagen-peptides | supported_public_claim | C | 口服胶原肽对水分和弹性等软终点有候选证据，但异质性和商业化风险较高。 | 不能写成逆龄、延寿或替代均衡蛋白摄入。 |
 | 透明质酸、神经酰胺与皮肤水分屏障<br>hyaluronic-acid-ceramides-hydration | supported_public_claim | B | 透明质酸和神经酰胺方向适合讨论保湿和屏障终点。 | 不能宣传为系统性抗衰或替代皮肤病治疗。 |
-| 多酚/抗氧化剂与皮肤光保护<br>polyphenols-skin-photoprotection | supported_public_claim | B | 多酚/抗氧化剂可作为皮肤光保护候选方向，但证据和产品差异较大。 | 不能替代防晒，也不能把抗氧化机制写成抗老已证实。 |
+| 多酚/抗氧化剂与皮肤光保护<br>polyphenols-skin-photoprotection | supported_public_claim | C | 多酚/抗氧化剂可作为皮肤光保护候选方向，但证据和产品差异较大。 | 不能替代防晒，也不能把抗氧化机制写成抗老已证实。 |
 | 医美能量设备和换肤类干预<br>energy-devices-resurfacing | supported_public_claim | B | 能量设备和换肤类干预可改善部分外观终点，但操作者、设备和风险差异极大。 | 必须由合格专业人员评估；不能提供参数、疗程或设备推荐。 |
 | PDRN/PN 与 Skin Booster<br>pdrn-polynucleotide-skin-boosters | supported_public_claim | C | PDRN/PN 是高声量美容与医美交叉方向，但外用、导入、注射和填充不能混用同一证据。 | 不能把外用化妆品证据当作注射项目证据，也不能写成逆龄、延寿或无风险医美项目。 |
 

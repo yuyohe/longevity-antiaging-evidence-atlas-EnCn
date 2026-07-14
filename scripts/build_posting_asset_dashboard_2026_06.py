@@ -16,6 +16,12 @@ BRAND = os.environ.get("PUBLIC_BRAND_NAME", "宇多Yul细胞/yulcell")
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-06")
 MONTH_UNDERSCORE = MONTH.replace("-", "_")
 RUN_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", date.today().isoformat())
+UPDATE_LABEL = os.environ.get(
+    "EVIDENCE_ATLAS_UPDATE_LABEL",
+    "2026 年 7 月中旬" if MONTH == "2026-07" else f"{MONTH} 更新",
+)
+BASELINE_LABEL = os.environ.get("EVIDENCE_ATLAS_BASELINE_LABEL", "6 月底冻结版")
+BASELINE_DELTA = int(os.environ.get("EVIDENCE_ATLAS_BASELINE_DELTA", "1451" if MONTH == "2026-07" else "0"))
 OUT = ROOT / "docs" / f"yulcell-posting-asset-dashboard-{RUN_DATE}.html"
 
 MAIN_IMAGES = [
@@ -32,17 +38,20 @@ GITHUB_LINKS = [
     ("GitHub 仓库", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"),
     ("GitHub README", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/README.md"),
     ("中文 README", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/README.zh-CN.md"),
-    ("6 月底读者说明", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/content/public-reader/june-end-2026-update.md"),
+    ("7 月中旬读者说明", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/content/public-reader/mid-july-2026-update.md"),
+    ("7 月中旬自包含报告", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/docs/mid-july-public-update-2026-07.html"),
     ("品牌资产索引", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/docs/yulcell-brand-index.md"),
     ("公开数据说明", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/README.md"),
 ]
 
 REPORT_LINKS = [
-    ("6 月底普通读者说明", ROOT / "content" / "public-reader" / "june-end-2026-update.md"),
+    ("7 月中旬普通读者说明", ROOT / "content" / "public-reader" / "mid-july-2026-update.md"),
+    ("7 月中旬自包含报告", ROOT / "docs" / "mid-july-public-update-2026-07.html"),
+    ("飞书公开资产索引", ROOT / "docs" / f"feishu-public-assets-{MONTH}.md"),
     ("月度更新 HTML", ROOT / "docs" / f"monthly-update-{MONTH}.html"),
     ("月度更新 Markdown", ROOT / "content" / "public-reader" / f"monthly-update-{MONTH}.md"),
     ("研究热力图 HTML", ROOT / "docs" / f"research-heatmap-{MONTH}.html"),
-    ("PubMed 增量 JSON", ROOT / "build" / "healthspan_recent_update_2026_06_report.json"),
+    ("PubMed 增量 JSON", ROOT / "build" / f"healthspan_recent_update_{MONTH_UNDERSCORE}_report.json"),
     ("飞书大众读者包", ROOT / "build" / "feishu-public-reader"),
     ("飞书全量 Markdown 包", ROOT / "build" / "feishu-docs"),
 ]
@@ -136,12 +145,13 @@ def feishu_links() -> list[dict[str, str]]:
 
 def stats() -> list[dict[str, str]]:
     table_rows = {row["label"]: row["note"].split()[0] for row in public_tables()}
+    public_row_total = sum(int(row["note"].split()[0].replace(",", "")) for row in public_tables())
     return [
-        {"value": table_rows.get("全量文献候选库", "14,273"), "label": "候选文献库"},
-        {"value": table_rows.get("证据发现表", "4,800"), "label": "evidence findings"},
-        {"value": table_rows.get("证据矩阵", "2,400"), "label": "evidence matrix"},
-        {"value": "40,546", "label": "公开 CSV 总行数"},
-        {"value": "553", "label": "较 6 月中新增候选"},
+        {"value": table_rows.get("全量文献候选库", "0"), "label": "候选文献库"},
+        {"value": table_rows.get("证据发现表", "0"), "label": "evidence findings"},
+        {"value": table_rows.get("证据矩阵", "0"), "label": "evidence matrix"},
+        {"value": f"{public_row_total:,}", "label": "公开 CSV 总行数"},
+        {"value": f"{BASELINE_DELTA:,}", "label": f"较 {BASELINE_LABEL}新增候选"},
         {"value": "50", "label": "单成分卡"},
         {"value": "7", "label": "主图资产"},
     ]
@@ -156,16 +166,17 @@ def card_assets() -> list[dict[str, object]]:
 
 
 def post_copy() -> str:
-    return f"""宇多Yul细胞/yulcell 2026 年 6 月底抗衰证据图谱更新：
+    values = {item["label"]: item["value"] for item in stats()}
+    return f"""宇多Yul细胞/yulcell {UPDATE_LABEL}抗衰证据图谱更新：
 
-这次把 PubMed 近期窗口扩到 2026/06/29，并重新生成公开表格和图片资产。
+这次把 PubMed 近期窗口扩到 {RUN_DATE.replace("-", "/")}，并重新生成公开表格、飞书多维表格和图片资产。
 
 核心规模：
-- 候选文献库：14,273 条
-- evidence findings：4,800 条
-- evidence matrix：2,400 条
-- 公开 CSV 数据包：40,546 行
-- 相对 6 月中本地版新增候选：553 条
+- 候选文献库：{values["候选文献库"]} 条
+- evidence findings：{values["evidence findings"]} 条
+- evidence matrix：{values["evidence matrix"]} 条
+- 公开 CSV 数据包：{values["公开 CSV 总行数"]} 行
+- 相对 {BASELINE_LABEL}新增候选：{BASELINE_DELTA:,} 条
 - 单成分卡：50 张
 - 主图资产：7 张
 
@@ -182,8 +193,9 @@ HTML_TEMPLATE = """<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="data:,">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>__BRAND__ 发帖资产面板 __RUN_DATE__</title>
+  <title>__BRAND__ __UPDATE_LABEL__发帖资产面板</title>
   <style>
     :root {
       --ink: #1f2933;
@@ -302,7 +314,14 @@ HTML_TEMPLATE = """<!doctype html>
       border: 1px solid #edf1f4;
     }
     .small-card .name { margin-top: 7px; font-size: 13px; min-height: 34px; overflow-wrap: anywhere; }
-    .link-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px; }
+    .table-scroll {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+    .link-table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 14px; margin-bottom: 16px; }
     .link-table th, .link-table td {
       border: 1px solid var(--line);
       padding: 8px 9px;
@@ -349,7 +368,7 @@ HTML_TEMPLATE = """<!doctype html>
   <header>
     <div class="wrap">
       <h1>__BRAND__ 发帖资产面板</h1>
-      <p>2026 年 6 月底更新，生成日期：__RUN_DATE__。本文件为自包含 HTML，图片已经内嵌，可离线打开。</p>
+      <p>__UPDATE_LABEL__更新，快照日期：__RUN_DATE__。本文件为自包含 HTML，图片已经内嵌，可离线打开。</p>
       <div class="toolbar">
         <button class="primary" id="posterBtn">生成总览海报 PNG</button>
         <button class="secondary" id="copyPostBtn">复制发帖文案</button>
@@ -382,13 +401,13 @@ HTML_TEMPLATE = """<!doctype html>
     <section id="asset-links">
       <h2>GitHub 与表格资产链接</h2>
       <h3>GitHub 公开入口</h3>
-      <table class="link-table" id="githubLinks"></table>
+      <div class="table-scroll"><table class="link-table" id="githubLinks"></table></div>
       <h3>飞书在线多维表格</h3>
-      <table class="link-table" id="feishuLinks"></table>
+      <div class="table-scroll"><table class="link-table" id="feishuLinks"></table></div>
       <h3>本地公开 CSV 表格</h3>
-      <table class="link-table" id="tableLinks"></table>
+      <div class="table-scroll"><table class="link-table" id="tableLinks"></table></div>
       <h3>本地报告与飞书包</h3>
-      <table class="link-table" id="reportLinks"></table>
+      <div class="table-scroll"><table class="link-table" id="reportLinks"></table></div>
     </section>
 
     <section>
@@ -546,9 +565,9 @@ HTML_TEMPLATE = """<!doctype html>
       ctx.font = "700 58px Microsoft YaHei, Arial";
       ctx.fillText("宇多Yul细胞/yulcell", 70, 92);
       ctx.font = "500 38px Microsoft YaHei, Arial";
-      ctx.fillText("2026 年 6 月底抗衰证据图谱更新", 70, 154);
+      ctx.fillText("__UPDATE_LABEL__抗衰证据图谱更新", 70, 154);
       ctx.font = "26px Microsoft YaHei, Arial";
-      ctx.fillText("候选文献 14,273 · findings 4,800 · matrix 2,400 · 成分卡 50", 70, 204);
+      ctx.fillText(`候选文献 ${STATS[0].value} · findings ${STATS[1].value} · matrix ${STATS[2].value} · 成分卡 50`, 70, 204);
 
       let sx = 70;
       for (const item of STATS.slice(0, 4)) {
@@ -577,14 +596,14 @@ HTML_TEMPLATE = """<!doctype html>
       ctx.font = "22px Microsoft YaHei, Arial";
       ctx.fillText("GitHub: github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn", 70, 1750);
       ctx.fillText("生成日期：__RUN_DATE__", 70, 1786);
-      downloadDataUrl(canvas.toDataURL("image/png"), "yulcell-2026-06-29-posting-overview.png");
+      downloadDataUrl(canvas.toDataURL("image/png"), "yulcell-__RUN_DATE__-posting-overview.png");
     }
 
     function downloadText() {
       const blob = new Blob([POST_COPY], { type: "text/plain;charset=utf-8" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "yulcell-2026-06-29-post-copy.txt";
+      link.download = "yulcell-__RUN_DATE__-post-copy.txt";
       document.body.appendChild(link);
       link.click();
       URL.revokeObjectURL(link.href);
@@ -648,6 +667,7 @@ def build_html(main_assets: list[dict[str, object]], cards: list[dict[str, objec
     replacements = {
         "__BRAND__": BRAND,
         "__RUN_DATE__": RUN_DATE,
+        "__UPDATE_LABEL__": UPDATE_LABEL,
         "__MAIN_ASSETS__": json.dumps(main_assets, ensure_ascii=False),
         "__CARD_ASSETS__": json.dumps(cards, ensure_ascii=False),
         "__GITHUB_LINKS__": json.dumps(GITHUB_LINKS, ensure_ascii=False),

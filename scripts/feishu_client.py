@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import os
 import time
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 import requests
@@ -138,14 +139,69 @@ class FeishuClient:
         return self._json(resp)
 
     def create_bitable_text_field(self, app_token: str, table_id: str, field_name: str) -> Dict[str, Any]:
+        return self.create_bitable_field(app_token, table_id, field_name, 1)
+
+    def create_bitable_field(self, app_token: str, table_id: str, field_name: str, field_type: int) -> Dict[str, Any]:
         url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/fields"
         resp = requests.post(
             url,
             headers=self._headers(),
-            json={"field_name": field_name, "type": 1},
+            json={"field_name": field_name, "type": field_type},
             timeout=30,
         )
         return self._json(resp)
+
+    def delete_bitable_table(self, app_token: str, table_id: str) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}"
+        resp = requests.delete(url, headers=self._headers(), timeout=30)
+        return self._json(resp)
+
+    def create_bitable_view(self, app_token: str, table_id: str, view_name: str, view_type: str = "grid") -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/views"
+        resp = requests.post(
+            url,
+            headers=self._headers(),
+            json={"view_name": view_name, "view_type": view_type},
+            timeout=30,
+        )
+        return self._json(resp)
+
+    def list_bitable_views(self, app_token: str, table_id: str, page_size: int = 100) -> List[Dict[str, Any]]:
+        views: List[Dict[str, Any]] = []
+        page_token: Optional[str] = None
+        while True:
+            params: Dict[str, Any] = {"page_size": page_size}
+            if page_token:
+                params["page_token"] = page_token
+            url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/views"
+            resp = requests.get(url, headers=self._headers(), params=params, timeout=30)
+            data = self._json(resp)
+            payload = data.get("data", {})
+            views.extend(payload.get("items", []))
+            page_token = payload.get("page_token")
+            if not payload.get("has_more") or not page_token:
+                break
+        return views
+
+    def upload_bitable_file(self, app_token: str, file_path: str | Path, parent_type: str = "bitable_file") -> str:
+        path = Path(file_path)
+        url = f"{self.base_url}/open-apis/drive/v1/medias/upload_all"
+        headers = {"Authorization": f"Bearer {self.tenant_access_token()}"}
+        with path.open("rb") as f:
+            files = {"file": (path.name, f)}
+            data = {
+                "file_name": path.name,
+                "parent_type": parent_type,
+                "parent_node": app_token,
+                "size": str(path.stat().st_size),
+            }
+            resp = requests.post(url, headers=headers, data=data, files=files, timeout=90)
+        payload = self._json(resp)
+        data_out = payload.get("data", {})
+        token = data_out.get("file_token") or data_out.get("media_token")
+        if not token:
+            raise FeishuError(f"Upload response missing file token: {payload}")
+        return token
 
     def create_bitable_record(self, app_token: str, table_id: str, fields: Dict[str, Any]) -> Dict[str, Any]:
         url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records"

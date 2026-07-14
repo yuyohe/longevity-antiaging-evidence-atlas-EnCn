@@ -429,6 +429,20 @@ SKIN_TOPIC_FRAMES = {
         "boundary_zh": "必须由合格专业人员评估；不能提供参数、疗程或设备推荐。",
         "medical": "true",
     },
+    "pdrn-polynucleotide-skin-boosters": {
+        "population": "People considering topical, device-assisted, injectable, or filler-like PDRN/PN skin-booster claims.",
+        "population_zh": "考虑外用、导入、注射或填充类 PDRN/PN / skin booster 宣传的人群。",
+        "intervention": "PDRN, polynucleotide, PN, or skin-booster products and procedures, separated by route and procedure type.",
+        "intervention_zh": "PDRN、polynucleotide、PN 或 skin booster 产品/操作，并按外用、导入、注射、填充等路径分开。",
+        "comparator": "Vehicle, placebo, usual skincare, no procedure, or alternative professional procedures.",
+        "comparator_zh": "基质、安慰剂、常规护肤、无操作或其他专业医美操作。",
+        "outcomes": "Skin repair, wrinkles, elasticity, scars/wounds, procedure-related adverse events, and durability.",
+        "outcomes_zh": "皮肤修复、皱纹、弹性、瘢痕/创面、操作相关不良反应和效果持续时间。",
+        "main_claim_zh": "PDRN/PN 是高声量美容与医美交叉方向，但外用、导入、注射和填充不能混用同一证据。",
+        "main_claim_en": "PDRN/PN is a high-visibility cosmetic/procedural topic, but topical, assisted-delivery, injectable, and filler-like uses require separate evidence.",
+        "boundary_zh": "不能把外用化妆品证据当作注射项目证据，也不能写成逆龄、延寿或无风险医美项目。",
+        "medical": "true",
+    },
 }
 
 

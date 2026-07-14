@@ -1,0 +1,6 @@
+﻿asset_id,资产名称,公开文件,源文件,记录数,说明,公开状态,更新月份,品牌标识,SEO关键词
+full-001,全量文献候选库,public-data/literature-library-2026-07.csv,data/literature_library.csv,15724,超过 1 万条候选文献入口，含题名、年份、来源、PMID/DOI、检索词和纳入状态。,对外公开,2026-07,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, longevity anti-aging evidence atlas"
+full-002,候选来源原始表,public-data/candidate-sources-2026-07.csv,data/candidate_sources.csv,15724,原始候选来源表，保留抓取来源、检索词、备注和最近检查日期。,对外公开,2026-07,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, longevity anti-aging evidence atlas"
+full-003,入选短名单,public-data/shortlist-sources-2026-07.csv,data/shortlist_sources.csv,5600,从候选库里进入优先复核的记录，含主题、证据草稿等级、期刊和评分字段。,对外公开,2026-07,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, longevity anti-aging evidence atlas"
+full-004,证据发现表,public-data/evidence-findings-2026-07.csv,data/evidence_findings.csv,5600,证据发现记录，含研究类型、终点、结论、过度解读风险和 0.5 评分字段。,对外公开,2026-07,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, longevity anti-aging evidence atlas"
+full-005,证据矩阵,public-data/evidence-matrix-2026-07.csv,data/evidence_matrix.csv,2800,入矩阵证据，适合按主题、证据等级、终点等级和行动性筛选。,对外公开,2026-07,宇多Yul细胞/yulcell,"宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, longevity anti-aging evidence atlas"

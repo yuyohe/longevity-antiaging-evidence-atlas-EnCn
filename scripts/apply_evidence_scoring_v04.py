@@ -526,7 +526,7 @@ def write_policy_docs() -> None:
     write_csv(METHOD_CSV, rows, ["rule_id", "name_zh", "name_en", "description_zh", "weight_or_rule"])
     METHOD_MD.write_text(f"""# 证据评分方法 v0.4 / Evidence Scoring Method v0.4
 
-草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。  
+草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。<br>
 Draft status: automatically prepared; not fully reviewed; not medical advice.
 
 Last updated / 更新时间：{TODAY}

@@ -13,6 +13,7 @@ PUBLIC = ROOT / "public-data"
 DOCS = ROOT / "docs"
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-05")
 MONTH_UNDERSCORE = MONTH.replace("-", "_")
+RUN_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", f"{MONTH}-01")
 BRAND_NAME = os.environ.get("PUBLIC_BRAND_NAME", "宇多Yul细胞/yulcell")
 BRAND_EN = os.environ.get("PUBLIC_BRAND_EN", "yulcell")
 BRAND_PROJECT = os.environ.get("PUBLIC_BRAND_PROJECT", "Longevity Anti-Aging Evidence Atlas EnCn")
@@ -133,10 +134,13 @@ def main() -> None:
     total = sum(int(row["记录数"]) for row in rows)
     readme = f"""# 抗衰证据库公开全量数据包（{MONTH}）
 
-**品牌 / Brand：** {BRAND_NAME}  
+**品牌 / Brand：** {BRAND_NAME}<br>
 **项目 / Project：** 长寿抗衰与健康寿命证据图谱 / {BRAND_PROJECT}
+**冻结日期 / Snapshot date：** {RUN_DATE}
 
 这个目录是 **{BRAND_NAME}** 给外部读者和研究者下载、复核、二次分析用的公开数据包。它不只包含卡片和热力图，也包含底层候选文献、入选短名单、证据发现和证据矩阵。
+
+这是固定版本快照。工作候选库后续仍会增长，但不会倒灌修改 `{MONTH}` 文件；后续新增进入下一次公开发布。
 
 搜索关键词：{BRAND_SEO_KEYWORDS}。
 
@@ -144,7 +148,7 @@ def main() -> None:
 | --- | ---: | --- | --- |
 {table}
 
-合计公开记录数：{total:,}。
+合计公开记录数：{total:,}。这里是五张处理层表的记录数相加；同一篇文献可能出现在候选、短名单、发现和矩阵等不同层，不能把总行数理解成互不重复的论文篇数。
 
 说明：这些表是证据地图的资料层，不等于个人医疗建议。读者可以用 PMID、DOI、主题、证据等级、期刊和评分字段追溯每条记录。
 """
