@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "build" / "feishu-docs"
 PUBLIC_READER_OUT = ROOT / "build" / "feishu-public-reader"
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-06")
+RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-july-2026-update.md")
+RELEASE_EXPORT_NAME = os.environ.get("EVIDENCE_ATLAS_RELEASE_EXPORT_NAME", "001-2026-07中旬更新说明.md")
 BRAND_NAME = os.environ.get("PUBLIC_BRAND_NAME", "宇多Yul细胞/yulcell")
 BRAND_PROJECT = os.environ.get("PUBLIC_BRAND_PROJECT", "Longevity Anti-Aging Evidence Atlas EnCn")
 BRAND_KEYWORDS = os.environ.get(
@@ -31,7 +33,7 @@ BRAND_HEADER = (
 PUBLIC_FILES = [
     (ROOT / "README.zh-CN.md", None),
     (ROOT / "content" / "public-reader" / "start-here.md", "000-start-here-public-reader.md"),
-    (ROOT / "content" / "public-reader" / "mid-july-2026-update.md", "public-reader-mid-july-2026-update.md"),
+    (ROOT / "content" / "public-reader" / RELEASE_FILE, f"public-reader-{RELEASE_FILE}"),
     (ROOT / "content" / "public-reader" / "ten-takeaways.md", "001-public-reader-15-takeaways.md"),
     (ROOT / "content" / "public-reader" / "evidence-weight.md", "002-public-reader-evidence-weight.md"),
     (ROOT / "content" / "public-reader" / "retractions.md", "public-reader-retractions.md"),
@@ -66,7 +68,7 @@ PUBLIC_FILES = [
 
 PUBLIC_READER_FILES = [
     (ROOT / "content" / "public-reader" / "start-here.md", "000-普通读者入口-从这里开始.md"),
-    (ROOT / "content" / "public-reader" / "mid-july-2026-update.md", "001-2026-07中旬更新说明.md"),
+    (ROOT / "content" / "public-reader" / RELEASE_FILE, RELEASE_EXPORT_NAME),
     (ROOT / "content" / "public-reader" / "ten-takeaways.md", "002-15条结论.md"),
     (ROOT / "content" / "public-reader" / "evidence-weight.md", "003-证据权重怎么看.md"),
     (ROOT / "content" / "public-reader" / "retractions.md", "004-撤稿风险怎么看.md"),

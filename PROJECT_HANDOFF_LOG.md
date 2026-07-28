@@ -1,15 +1,51 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-04-29
+Last updated / 最后更新：2026-07-29
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
 本文档是本地交接记录，供后续 Codex 线程和人工维护者快速接手。这里记录已经完成的工作、执行流程、GitHub/飞书同步方式，以及凭据文件位置。不要把真实密钥写入本文档。
 
+## Current Release Snapshot / 当前发布快照
+
+The current public release supersedes the historical counts later in this log.
+
+- Snapshot date: `2026-07-29`
+- Publication repository: `D:\longevity\github-publish-2026-06-29`
+- Development workspace: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn` (may contain unrelated local work; do not use it as a clean release checkout)
+- Candidate and literature records: `16,151`
+- Shortlist and evidence findings: `6,000`
+- Evidence matrix: `3,000`
+- Public CSV processing rows: `47,302`
+- Visual assets: `7` main PNGs plus `50` ingredient cards
+- Feishu release layer: `9` active tables
+- Plain-language release guide: `content/public-reader/end-july-2026-update.md`
+- Self-contained visual report: `docs/end-july-public-update-2026-07.html`
+- Self-contained posting dashboard: `docs/yulcell-posting-asset-dashboard-2026-07-29.html`
+- Feishu table manifest: `data/feishu_live_tables_2026_07.csv`
+- Feishu read-only audit report: `build/feishu_online_audit_2026_07.json`
+
+The July 15-29 PubMed refresh added 427 deduplicated candidates. Of those, 161 entered the findings layer across 18 topics. Protocols are classified as `protocol_or_registered_plan` and capped at evidence level E. Editorials, corrections, and related non-primary records are classified as `non_primary_commentary_or_correction` and capped at E. Explicit animal subjects take precedence over randomized-design wording; uncertain designs remain `metadata_only_needs_classification`.
+
+Current release validation:
+
+```powershell
+$env:EXPECTED_FINDINGS='6000'
+$env:MIN_MATRIX_ROWS='3000'
+$env:MAX_MATRIX_ROWS='3000'
+python scripts\lint.py
+python scripts\validate_public_drafts.py
+python scripts\validate_skin_beauty_public_drafts.py
+python scripts\validate_public_release_2026_07.py
+```
+
+Do not publish from the development workspace without first checking its worktree. For public releases, start from a clean clone or worktree that matches GitHub `main`, run the complete build chain, validate locally, then perform the read-only Feishu audit.
+
 ## Project Identity
 
 - GitHub repo: `https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn.git`
-- Local repo path: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn`
+- Publication repo path: `D:\longevity\github-publish-2026-06-29`
+- Development repo path: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn`
 - Public Chinese name: `长寿抗衰与健康寿命证据图谱`
 - Repository name: `longevity-antiaging-evidence-atlas-EnCn`
 - Language policy: bilingual Chinese + English. Public interpretation should be Chinese-first, with English metadata and English summaries retained.
@@ -61,7 +97,9 @@ Useful Feishu links:
 - 补剂证据矩阵: `https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblAfXqX6qHqpSKb`
 - 方法学与评分说明: `https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbl96mwWn085quRA`
 
-## What Has Been Built
+## Historical Build Baseline
+
+The counts and commands below document earlier milestones and are retained for provenance. Use the current release snapshot and current scripts for new publication work.
 
 Main longevity evidence atlas:
 

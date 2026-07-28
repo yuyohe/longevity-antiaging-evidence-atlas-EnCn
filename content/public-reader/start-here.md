@@ -1,7 +1,7 @@
 # 普通读者入口：从这里开始
 
 **品牌 / Brand：** 宇多Yul细胞/yulcell<br>
-**当前公开快照 / Current public snapshot：** 2026-07-14
+**当前公开快照 / Current public snapshot：** 2026-07-29
 
 如果你第一次打开这个项目，读这一页。你不需要懂论文，也不需要懂医学统计。
 
@@ -18,9 +18,9 @@
 
 我们把这些东西分开写，避免普通人一看到“抗衰”两个字就被带去买东西。
 
-## 7 月中旬更新
+## 7 月底更新
 
-本次快照包括 15,724 条候选文献、5,600 条证据发现、2,800 条证据矩阵、45,448 行公开 CSV，以及 57 张图片。请先读[2026 年 7 月中旬更新说明](mid-july-2026-update.md)，再按自己的问题选择下面的入口。
+本次快照包括 16,151 条候选文献、6,000 条证据发现、3,000 条证据矩阵、47,302 行公开 CSV，以及 57 张图片。请先读[2026 年 7 月底更新说明](end-july-2026-update.md)，再按自己的问题选择下面的入口。
 
 ## 从这里进入
 
@@ -48,22 +48,22 @@
 
 | 资产 | 数量 | 说明 |
 | --- | ---: | --- |
-| 文献候选库 | 15724 条 | 原始资料池，不建议普通人直接看 |
-| 证据矩阵 | 2800 条 | 已经筛过一轮的研究资料 |
-| 健康寿命发现 | 5600 条 | 和运动、代谢、疾病风险等有关的证据 |
+| 文献候选库 | 16151 条 | 原始资料池，不建议普通人直接看 |
+| 证据矩阵 | 3000 条 | 已经筛过一轮的研究资料 |
+| 健康寿命发现 | 6000 条 | 和运动、代谢、疾病风险等有关的证据 |
 | 健康寿命主题 | 20 个 | 普通人最常问的健康寿命方向 |
 | 皮肤外观主题 | 9 个 | 防晒、皱纹、色斑、屏障、PDRN/PN、医美等 |
 | 皮肤外观证据 | 180 条 | 只回答皮肤和外观，不等于延寿 |
 | 补剂条目 | 100 个 | 看常见误解和注意最重要 |
 | 撤稿观察目标 | 117 个 | 补剂、护肤、抗衰前沿目标 |
 | 撤稿明细 | 538 条 | 近 20 年发表且题名匹配的 PubMed 撤稿记录 |
-| 论文卡片 | 5600 个 | 给研究者和深度读者查证 |
-| 公开 CSV | 45448 行 | 五张处理层表的行数相加，不是独立论文数 |
+| 论文卡片 | 6000 个 | 给研究者和深度读者查证 |
+| 公开 CSV | 47302 行 | 五张处理层表的行数相加，不是独立论文数 |
 | 图片资产 | 57 张 | 7 张主图和 50 张成分卡 |
 | 飞书在线表 | 9 张 | [打开飞书公开资产索引](../../docs/feishu-public-assets-2026-07.md) |
 
 ## English Summary
 
-This is the plain-language entry page for non-specialist readers. The current snapshot is dated 2026-07-14 and contains 15,724 candidate records, 5,600 findings, and 2,800 matrix rows. The project separates stronger human evidence from early research, biomarkers, animal studies, supplement marketing, and skin-appearance claims.
+This is the plain-language entry page for non-specialist readers. The current snapshot is dated 2026-07-29 and contains 16,151 candidate records, 6,000 findings, and 3,000 matrix rows. The project separates stronger human evidence from early research, biomarkers, animal studies, supplement marketing, and skin-appearance claims.
 
 One boundary note: this project is for evidence review and content production. It does not provide personal medical advice, prescriptions, dosing protocols, diagnosis, or purchase recommendations.

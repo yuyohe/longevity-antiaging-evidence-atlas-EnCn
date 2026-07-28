@@ -23,6 +23,11 @@ MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-07")
 SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", TODAY)
 RELEASE_LABEL = os.environ.get("EVIDENCE_ATLAS_RELEASE_LABEL", "7 月中旬")
 RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-july-2026-update.md")
+RELEASE_EXPORT_NAME = os.environ.get("EVIDENCE_ATLAS_RELEASE_EXPORT_NAME", "001-2026-07中旬更新说明.md")
+FEISHU_NAV_URL = os.environ.get(
+    "EVIDENCE_ATLAS_FEISHU_NAV_URL",
+    "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblVZxT68e7JiBTv",
+)
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -666,14 +671,14 @@ This page is the navigation table for non-specialist readers. Start with `start-
 **品牌 / Brand：** 宇多Yul细胞/yulcell<br>
 **当前快照 / Current snapshot：** {SNAPSHOT_DATE}
 
-第一次打开时，先用[飞书 7 月中旬阅读导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblVZxT68e7JiBTv)。不要从 {candidate_count:,} 条全量候选库开始读。
+第一次打开时，先用[飞书 {RELEASE_LABEL}阅读导航]({FEISHU_NAV_URL})。不要从 {candidate_count:,} 条全量候选库开始读。
 
 ## 普通读者包 / Public Reader Package
 
 | 我想了解 | 打开哪个文件 | 下一步 |
 | --- | --- | --- |
-| 我第一次打开项目 | `000-普通读者入口-从这里开始.md` | `001-2026-07中旬更新说明.md` |
-| 我想知道这次更新了什么 | `001-2026-07中旬更新说明.md` | `002-15条结论.md` |
+| 我第一次打开项目 | `000-普通读者入口-从这里开始.md` | `{RELEASE_EXPORT_NAME}` |
+| 我想知道这次更新了什么 | `{RELEASE_EXPORT_NAME}` | `002-15条结论.md` |
 | 我想看 15 条结论 | `002-15条结论.md` | `003-证据权重怎么看.md` |
 | 我想知道证据怎么分级 | `003-证据权重怎么看.md` | `004-撤稿风险怎么看.md` |
 | 我想找适合自己的主题入口 | `005-大众版入口表.md` | `006-大众主题速读.md` |
@@ -685,7 +690,7 @@ This page is the navigation table for non-specialist readers. Start with `start-
 ## 在线多维表格 / Live Bitable Tables
 
 - [9 张飞书在线表总索引](../../docs/feishu-public-assets-{MONTH}.md)
-- [普通读者导航：14 条入口](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblVZxT68e7JiBTv)
+- [普通读者导航：14 条入口]({FEISHU_NAV_URL})
 - [热力图与证据产出图：6 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL)
 - [前 50 成分单卡：50 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla)
 - [证据矩阵：{matrix_count:,} 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir)

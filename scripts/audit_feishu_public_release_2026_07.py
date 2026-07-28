@@ -22,6 +22,8 @@ BRAND_ZH = "宇多Yul细胞/yulcell"
 BRAND_EN = "yulcell"
 MONTH = "2026-07"
 GITHUB_URL = "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"
+SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-07-14")
+EXPECTED_TABLES = int(os.environ.get("EXPECTED_FEISHU_TABLES", "9"))
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -59,11 +61,29 @@ def audit_table(
         if required not in field_names:
             errors.append(f"{table_name}: missing field {required}")
 
-    records = client.list_bitable_records(app_token, table_id)
+    primary_field = field_names[0] if field_names else ""
+    audit_field_candidates = [
+        primary_field,
+        "品牌标识",
+        "Brand",
+        "SEO关键词",
+        "GitHub公开入口",
+        "GitHub链接",
+        "图片",
+        "卡片图",
+        "总览图",
+        "冻结日期",
+        "复核日期",
+    ]
+    audit_fields = list(dict.fromkeys(name for name in audit_field_candidates if name in field_names))
+    records = client.list_bitable_records(
+        app_token,
+        table_id,
+        field_names=audit_fields,
+    )
     if len(records) != expected_count:
         errors.append(f"{table_name}: expected {expected_count} records, found {len(records)}")
 
-    primary_field = field_names[0] if field_names else ""
     primary_values: list[str] = []
     brand_coverage = 0
     github_coverage = 0
@@ -102,8 +122,8 @@ def audit_table(
     if category == "阅读入口":
         for item in records:
             values = item.get("fields", {})
-            if values.get("冻结日期") != "2026-07-14" or values.get("复核日期") != "2026-07-14":
-                errors.append(f"{table_name}: navigation dates are not 2026-07-14")
+            if values.get("冻结日期") != SNAPSHOT_DATE or values.get("复核日期") != SNAPSHOT_DATE:
+                errors.append(f"{table_name}: navigation dates are not {SNAPSHOT_DATE}")
                 break
 
     result = {
@@ -112,6 +132,7 @@ def audit_table(
         "expected_records": expected_count,
         "actual_records": len(records),
         "field_count": len(field_names),
+        "audited_fields": audit_fields,
         "primary_field": primary_field,
         "brand_coverage": brand_coverage,
         "github_link_coverage": github_coverage,
@@ -136,8 +157,8 @@ def main() -> None:
         wiki_node_token=os.getenv("FEISHU_BITABLE_WIKI_NODE_TOKEN", ""),
     )
     manifest = read_csv(args.manifest)
-    if len(manifest) != 9:
-        raise RuntimeError(f"Expected 9 manifest rows, found {len(manifest)}")
+    if len(manifest) != EXPECTED_TABLES:
+        raise RuntimeError(f"Expected {EXPECTED_TABLES} manifest rows, found {len(manifest)}")
 
     table_catalog = {str(item.get("table_id")): item for item in client.list_bitable_tables(app_token)}
     all_errors: list[str] = []
@@ -151,16 +172,16 @@ def main() -> None:
         result, errors = audit_table(client, app_token, row, metadata)
         results.append(result)
         all_errors.extend(errors)
-        print(f"[{index}/9] {result['table_name']}: {result['actual_records']} records, {result['status']}")
+        print(f"[{index}/{EXPECTED_TABLES}] {result['table_name']}: {result['actual_records']} records, {result['status']}")
 
     report = {
-        "audit_version": "2026-07-release-v1",
+        "audit_version": "2026-07-release-v2",
         "audited_at_utc": datetime.now(timezone.utc).isoformat(),
-        "snapshot_date": "2026-07-14",
+        "snapshot_date": SNAPSHOT_DATE,
         "manifest": str(args.manifest.resolve()),
         "tables": results,
         "errors": all_errors,
-        "status": "passed" if not all_errors and len(results) == 9 else "failed",
+        "status": "passed" if not all_errors and len(results) == EXPECTED_TABLES else "failed",
     }
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -170,7 +191,10 @@ def main() -> None:
         for error in all_errors:
             print(f"- {error}")
         sys.exit(1)
-    print("Feishu online audit passed: 9/9 tables, exact counts, full brand coverage, no mojibake.")
+    print(
+        f"Feishu online audit passed: {EXPECTED_TABLES}/{EXPECTED_TABLES} tables, "
+        "exact counts, full brand coverage, and no mojibake in audited publication fields."
+    )
 
 
 if __name__ == "__main__":

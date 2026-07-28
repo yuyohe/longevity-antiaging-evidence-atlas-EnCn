@@ -1,11 +1,11 @@
 # 宇多Yul细胞/yulcell · 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging & Healthspan Evidence Atlas EnCn
 
-**Current snapshot / 当前公开快照：** 2026-07-14<br>
+**Current snapshot / 当前公开快照：** 2026-07-29<br>
 **Maintainer and public brand / 维护方与公开品牌：** 宇多Yul细胞/yulcell<br>
 **Repository / 仓库：** `longevity-antiaging-evidence-atlas-EnCn`
 
-> **Mid-July update / 7 月中旬更新：** [plain-language guide / 普通读者说明](content/public-reader/mid-july-2026-update.md)<br>
-> **Visual report / 自包含可视化报告：** [open the July report / 打开七月报告](docs/mid-july-public-update-2026-07.html)<br>
+> **End-of-July update / 7 月底更新：** [plain-language guide / 普通读者说明](content/public-reader/end-july-2026-update.md)<br>
+> **Visual report / 自包含可视化报告：** [open the July report / 打开七月报告](docs/end-july-public-update-2026-07.html)<br>
 > **Feishu assets / 飞书资产：** [9 live tables / 9 张在线表](docs/feishu-public-assets-2026-07.md)<br>
 > **Public data / 公开数据：** [July CSV package / 七月 CSV 数据包](public-data/README.md)<br>
 > **Chinese guide / 中文详细说明：** [README.zh-CN.md](README.zh-CN.md)
@@ -20,31 +20,33 @@ This is a bilingual, versioned evidence atlas maintained by **宇多Yul细胞/yu
 
 | Asset / 资产 | Published size / 当前规模 | Link / 入口 |
 | --- | ---: | --- |
-| Candidate sources / 候选来源 | 15,724 records | [CSV](public-data/candidate-sources-2026-07.csv) |
-| Literature library / 全量文献候选库 | 15,724 records | [CSV](public-data/literature-library-2026-07.csv) |
-| Shortlist / 入选短名单 | 5,600 rows | [CSV](public-data/shortlist-sources-2026-07.csv) |
-| Evidence findings / 证据发现 | 5,600 rows | [CSV](public-data/evidence-findings-2026-07.csv) |
-| Evidence matrix / 证据矩阵 | 2,800 rows | [CSV](public-data/evidence-matrix-2026-07.csv) |
-| Public CSV processing rows / 公开 CSV 处理层总行数 | 45,448 rows | [data index / 数据索引](docs/public-full-data-index-2026-07.md) |
-| Paper cards / 论文卡片 | 5,600 Markdown pages | [paper directory / 论文目录](content/papers/) |
+| Candidate sources / 候选来源 | 16,151 records | [CSV](public-data/candidate-sources-2026-07.csv) |
+| Literature library / 全量文献候选库 | 16,151 records | [CSV](public-data/literature-library-2026-07.csv) |
+| Shortlist / 入选短名单 | 6,000 rows | [CSV](public-data/shortlist-sources-2026-07.csv) |
+| Evidence findings / 证据发现 | 6,000 rows | [CSV](public-data/evidence-findings-2026-07.csv) |
+| Evidence matrix / 证据矩阵 | 3,000 rows | [CSV](public-data/evidence-matrix-2026-07.csv) |
+| Public CSV processing rows / 公开 CSV 处理层总行数 | 47,302 rows | [data index / 数据索引](docs/public-full-data-index-2026-07.md) |
+| Paper cards / 论文卡片 | 6,000 Markdown pages | [paper directory / 论文目录](content/papers/) |
 | Healthspan topics / 健康寿命主题 | 20 topics | [topic directory / 主题目录](content/topics/) |
 | Skin and appearance topics / 皮肤与外观主题 | 9 topics | [topic directory / 主题目录](content/skin-beauty-topics/) |
 | Visual assets / 图片资产 | 7 main charts + 50 cards | [July images / 七月图片](docs/assets/visual-assets/2026-07/) |
 | Feishu Bitable / 飞书多维表格 | 9 live tables | [Feishu index / 飞书索引](docs/feishu-public-assets-2026-07.md) |
-| Posting dashboard / 发帖资产面板 | 1 self-contained HTML | [dashboard / 面板](docs/yulcell-posting-asset-dashboard-2026-07-14.html) |
+| Posting dashboard / 发帖资产面板 | 1 self-contained HTML | [dashboard / 面板](docs/yulcell-posting-asset-dashboard-2026-07-29.html) |
 
-The 45,448-row total is the sum of five processing layers. One paper may appear in the candidate, shortlist, findings, and matrix layers, so this number is not a count of unique publications.
+The 47,302-row total is the sum of five processing layers. One paper may appear in the candidate, shortlist, findings, and matrix layers, so this number is not a count of unique publications.
 
-45,448 行是五张处理层表的行数相加。同一篇论文可能同时出现在候选、短名单、发现和矩阵层，因此不能把它理解成互不重复的论文数。
+47,302 行是五张处理层表的行数相加。同一篇论文可能同时出现在候选、短名单、发现和矩阵层，因此不能把它理解成互不重复的论文数。
 
 ## What Changed / 本次更新
 
-- **English:** The candidate pool grew from 14,273 at the June-end snapshot to 15,724 on 2026-07-14, an increase of 1,451 records.
-- **中文：** 候选库从 6 月底快照的 14,273 条增至 2026-07-14 的 15,724 条，共新增 1,451 条。
-- **English:** Weekly automation added 709 records, and a targeted PubMed refresh added 742 records.
-- **中文：** 每周自动更新加入 709 条，七月定向 PubMed 补检再加入 742 条。
-- **English:** The findings layer expanded to 5,600 records and the evidence matrix to 2,800 records; 855 recently tagged records entered the findings layer across all 20 healthspan topics.
-- **中文：** 证据发现层扩到 5,600 条，证据矩阵扩到 2,800 条；20 个健康寿命主题共有 855 条近期记录进入发现层。
+- **English:** A PubMed refresh covering 2026-07-15 through 2026-07-29 added 427 deduplicated candidates, increasing the pool from 15,724 to 16,151.
+- **中文：** 本轮 PubMed 检索覆盖 2026-07-15 至 2026-07-29，去重后新增 427 条，候选库从 15,724 增至 16,151。
+- **English:** The findings layer expanded from 5,600 to 6,000 and the matrix from 2,800 to 3,000. Of the 427 new candidates, 161 entered the findings layer across 18 topics.
+- **中文：** 证据发现从 5,600 扩到 6,000，证据矩阵从 2,800 扩到 3,000；427 条新增候选中有 161 条进入 findings，覆盖 18 个主题。
+- **English:** Protocols are now capped at level E, while unclear study designs remain unclassified instead of being promoted by keywords found in abstracts.
+- **中文：** 研究方案现在统一最高为 E；无法可靠判断设计的记录保留“待分类”，不再因为摘要提到试验或综述而自动升级。
+- **English:** Editorials, corrections, and other non-primary records are capped at E, and explicit animal experiments are no longer classified as human randomized trials.
+- **中文：** 评论、勘误等非原始研究统一最高为 E；明确的动物实验不再被归入人体随机试验。
 - **English:** All seven main visuals and 50 ingredient cards were regenerated for the July snapshot.
 - **中文：** 7 张主图和 50 张单成分卡已按七月快照全部重建。
 
@@ -54,7 +56,7 @@ For non-specialist readers, use the short route below before opening the full re
 
 普通读者不必从上万条文献开始，建议按下面的顺序阅读。
 
-1. [Mid-July public update / 7 月中旬普通读者说明](content/public-reader/mid-july-2026-update.md)
+1. [End-of-July public update / 7 月底普通读者说明](content/public-reader/end-july-2026-update.md)
 2. [Plain-language start page / 普通读者入口](content/public-reader/start-here.md)
 3. [15 takeaways / 15 条结论](content/public-reader/ten-takeaways.md)
 4. [Evidence weighting / 证据权重怎么看](content/public-reader/evidence-weight.md)
@@ -65,12 +67,12 @@ For non-specialist readers, use the short route below before opening the full re
 
 ## Visuals and Feishu / 图片与飞书
 
-- [Self-contained July report / 七月自包含报告](docs/mid-july-public-update-2026-07.html)
+- [Self-contained July report / 七月自包含报告](docs/end-july-public-update-2026-07.html)
 - [Monthly update / 七月月度更新](docs/monthly-update-2026-07.html)
 - [Research heatmap / 七月研究热力图](docs/research-heatmap-2026-07.html)
-- [Posting asset dashboard / 发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-07-14.html)
+- [Posting asset dashboard / 发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-07-29.html)
 - [Feishu public asset index / 飞书公开资产索引](docs/feishu-public-assets-2026-07.md)
-- [Feishu reading navigation / 飞书普通读者导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblVZxT68e7JiBTv)
+- [Feishu reading navigation / 飞书普通读者导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD)
 
 GitHub is the versioned source of truth. Feishu is the structured Chinese reading and review layer. Search-engine visibility for Feishu still depends on its public sharing settings.
 
@@ -104,7 +106,7 @@ docs/                       reports and public asset indexes / 报告与公开�
 
 ## Historical Snapshot / 历史快照
 
-The June-end snapshot remains available for reproducibility: [June-end reader guide / 6 月底读者说明](content/public-reader/june-end-2026-update.md).
+Earlier snapshots remain available for reproducibility: [mid-July guide / 7 月中旬说明](content/public-reader/mid-july-2026-update.md) and [June-end guide / 6 月底说明](content/public-reader/june-end-2026-update.md).
 
 ## Boundary / 使用边界
 

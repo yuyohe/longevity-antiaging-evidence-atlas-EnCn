@@ -12,6 +12,7 @@ import csv
 import math
 import os
 import re
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -24,6 +25,8 @@ CARD_DIR = OUT_DIR / "ingredient-cards"
 DATA_DIR = ROOT / "data"
 UPDATE_MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-05")
 UPDATE_MONTH_UNDERSCORE = UPDATE_MONTH.replace("-", "_")
+PUBLIC_DIR = ROOT / "docs" / "assets" / "visual-assets" / UPDATE_MONTH
+PUBLIC_CARD_DIR = PUBLIC_DIR / "ingredient-cards"
 
 FONT_CANDIDATES = [
     Path(r"C:\Windows\Fonts\msyh.ttc"),
@@ -475,6 +478,33 @@ def main() -> None:
             "local_path": str(dashboard_path.relative_to(ROOT)).replace("\\", "/"),
         },
         {
+            "asset_id": "H004",
+            "update_month": UPDATE_MONTH,
+            "title": "前 50 成分证据产出图",
+            "asset_type": "evidence_yield_png",
+            "description": "按统一代理指标展示常见成分的证据产出结构，不作为产品或疗效排行榜。",
+            "data_source": f"data/evidence_yield_metrics_{UPDATE_MONTH_UNDERSCORE}.csv",
+            "local_path": f"build/visual-assets/evidence-yield-ingredients-{UPDATE_MONTH}.png",
+        },
+        {
+            "asset_id": "H005",
+            "update_month": UPDATE_MONTH,
+            "title": "撤稿密度观察图",
+            "asset_type": "retraction_density_png",
+            "description": "展示撤稿风险观察指标；撤稿密度是复核提醒，不单独判定有效或无效。",
+            "data_source": "data/retraction_risk_summary_20y.csv",
+            "local_path": f"build/visual-assets/retraction-density-{UPDATE_MONTH}.png",
+        },
+        {
+            "asset_id": "H006",
+            "update_month": UPDATE_MONTH,
+            "title": "主题证据产出图",
+            "asset_type": "topic_evidence_yield_png",
+            "description": "比较各主题进入较高等级证据层的比例，不代表个人行动优先级。",
+            "data_source": f"data/topic_evidence_yield_metrics_{UPDATE_MONTH_UNDERSCORE}.csv",
+            "local_path": f"build/visual-assets/topic-evidence-yield-{UPDATE_MONTH}.png",
+        },
+        {
             "asset_id": "C000",
             "update_month": UPDATE_MONTH,
             "title": "前 50 成分卡片总览图",
@@ -518,7 +548,26 @@ def main() -> None:
         ],
     )
 
+    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
+    PUBLIC_CARD_DIR.mkdir(parents=True, exist_ok=True)
+    public_main_assets = [
+        topic_year_path,
+        evidence_path,
+        wall_path,
+        dashboard_path,
+        OUT_DIR / f"evidence-yield-ingredients-{UPDATE_MONTH}.png",
+        OUT_DIR / f"retraction-density-{UPDATE_MONTH}.png",
+        OUT_DIR / f"topic-evidence-yield-{UPDATE_MONTH}.png",
+    ]
+    for path in public_main_assets:
+        if not path.exists():
+            raise FileNotFoundError(f"Missing public visual asset: {path}")
+        shutil.copy2(path, PUBLIC_DIR / path.name)
+    for path in card_paths:
+        shutil.copy2(path, PUBLIC_CARD_DIR / path.name)
+
     print(f"Generated {len(card_paths)} ingredient card PNGs")
+    print(f"Published {len(public_main_assets) + len(card_paths)} PNGs to {PUBLIC_DIR.relative_to(ROOT)}")
     print(topic_year_path.relative_to(ROOT))
     print(evidence_path.relative_to(ROOT))
     print(wall_path.relative_to(ROOT))

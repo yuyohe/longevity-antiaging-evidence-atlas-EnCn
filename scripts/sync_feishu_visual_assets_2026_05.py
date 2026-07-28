@@ -156,13 +156,39 @@ def upsert_records(
     table_id: str,
     primary_field: str,
     records: list[dict[str, Any]],
-) -> tuple[int, int]:
-    existing = client.list_bitable_records(app_token, table_id)
-    by_key = {
-        str(record.get("fields", {}).get(primary_field, "")): record.get("record_id", "")
-        for record in existing
-        if record.get("fields", {}).get(primary_field)
-    }
+    delete_stale_records: bool = False,
+) -> tuple[int, int, int]:
+    existing = client.list_bitable_records(
+        app_token,
+        table_id,
+        field_names=[primary_field],
+    )
+    by_key: dict[str, str] = {}
+    stale_record_ids: list[str] = []
+    for record in existing:
+        key = str(record.get("fields", {}).get(primary_field, "")).strip()
+        record_id = str(record.get("record_id", ""))
+        if not key or key in by_key:
+            if record_id:
+                stale_record_ids.append(record_id)
+            continue
+        by_key[key] = record_id
+
+    source_keys = {str(fields.get(primary_field, "")).strip() for fields in records}
+    stale_record_ids.extend(
+        record_id
+        for key, record_id in by_key.items()
+        if key not in source_keys and record_id
+    )
+    stale_record_ids = list(dict.fromkeys(stale_record_ids))
+    if stale_record_ids and not delete_stale_records:
+        print(
+            f"{primary_field}: found {len(stale_record_ids)} stale or duplicate records; "
+            "rerun with --delete-stale-records to remove them"
+        )
+    if stale_record_ids and delete_stale_records:
+        for record_id in stale_record_ids:
+            client.delete_bitable_record(app_token, table_id, record_id)
 
     create_payloads: list[dict[str, Any]] = []
     update_payloads: list[dict[str, Any]] = []
@@ -184,7 +210,7 @@ def upsert_records(
         client.batch_update_bitable_records(app_token, table_id, batch)
         updated += len(batch)
         time.sleep(0.3)
-    return created, updated
+    return created, updated, len(stale_record_ids) if delete_stale_records else 0
 
 
 def attachment(token: str, name: str) -> list[dict[str, str]]:
@@ -200,7 +226,12 @@ def add_brand_field_schema(fields: dict[str, int]) -> dict[str, int]:
     return {**fields, **{name: TEXT_FIELD for name in BRAND_FIELDS}}
 
 
-def sync_heatmaps(client: FeishuClient, app_token: str, cache: dict[str, str]) -> tuple[str, int, int]:
+def sync_heatmaps(
+    client: FeishuClient,
+    app_token: str,
+    cache: dict[str, str],
+    delete_stale_records: bool = False,
+) -> tuple[str, int, int, int]:
     table_name = f"视觉资产_热力图图片_{UPDATE_MONTH}"
     fields = add_brand_field_schema({
         "标题": TEXT_FIELD,
@@ -233,15 +264,27 @@ def sync_heatmaps(client: FeishuClient, app_token: str, cache: dict[str, str]) -
                 "更新月份": row["update_month"],
             })
         )
-    created, updated = upsert_records(client, app_token, table_id, "标题", rows)
+    created, updated, deleted = upsert_records(
+        client,
+        app_token,
+        table_id,
+        "标题",
+        rows,
+        delete_stale_records=delete_stale_records,
+    )
     try:
         client.create_bitable_view(app_token, table_id, "图片入口", view_type="gallery")
     except Exception:
         pass
-    return table_id, created, updated
+    return table_id, created, updated, deleted
 
 
-def sync_cards(client: FeishuClient, app_token: str, cache: dict[str, str]) -> tuple[str, int, int]:
+def sync_cards(
+    client: FeishuClient,
+    app_token: str,
+    cache: dict[str, str],
+    delete_stale_records: bool = False,
+) -> tuple[str, int, int, int]:
     table_name = f"公开入口_前50成分单卡_{UPDATE_MONTH}"
     fields = add_brand_field_schema({
         "成分": TEXT_FIELD,
@@ -282,16 +325,28 @@ def sync_cards(client: FeishuClient, app_token: str, cache: dict[str, str]) -> t
                 "更新月份": row["update_month"],
             })
         )
-    created, updated = upsert_records(client, app_token, table_id, "成分", rows)
+    created, updated, deleted = upsert_records(
+        client,
+        app_token,
+        table_id,
+        "成分",
+        rows,
+        delete_stale_records=delete_stale_records,
+    )
     for view_name, view_type in [("单卡画廊", "gallery"), ("表格备查", "grid")]:
         try:
             client.create_bitable_view(app_token, table_id, view_name, view_type=view_type)
         except Exception:
             pass
-    return table_id, created, updated
+    return table_id, created, updated, deleted
 
 
-def sync_overview(client: FeishuClient, app_token: str, cache: dict[str, str]) -> tuple[str, int, int]:
+def sync_overview(
+    client: FeishuClient,
+    app_token: str,
+    cache: dict[str, str],
+    delete_stale_records: bool = False,
+) -> tuple[str, int, int, int]:
     table_name = f"视觉资产_成分卡片总览_{UPDATE_MONTH}"
     fields = add_brand_field_schema({
         "标题": TEXT_FIELD,
@@ -319,12 +374,19 @@ def sync_overview(client: FeishuClient, app_token: str, cache: dict[str, str]) -
             "更新月份": row["update_month"],
         })
     ]
-    created, updated = upsert_records(client, app_token, table_id, "标题", records)
+    created, updated, deleted = upsert_records(
+        client,
+        app_token,
+        table_id,
+        "标题",
+        records,
+        delete_stale_records=delete_stale_records,
+    )
     try:
         client.create_bitable_view(app_token, table_id, "总览图片", view_type="gallery")
     except Exception:
         pass
-    return table_id, created, updated
+    return table_id, created, updated, deleted
 
 
 def delete_old_public_tables(client: FeishuClient, app_token: str) -> list[dict[str, str]]:
@@ -347,6 +409,7 @@ def delete_old_public_tables(client: FeishuClient, app_token: str) -> list[dict[
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--delete-old-public-tables", action="store_true")
+    parser.add_argument("--delete-stale-records", action="store_true")
     args = parser.parse_args()
 
     load_dotenv(ROOT / ".env")
@@ -356,7 +419,12 @@ def main() -> None:
         wiki_node_token=os.getenv("FEISHU_BITABLE_WIKI_NODE_TOKEN", ""),
     )
 
-    cache_path = DATA_DIR / f"visual_feishu_file_tokens_{UPDATE_MONTH_UNDERSCORE}.csv"
+    cache_path = Path(
+        os.environ.get(
+            "FEISHU_VISUAL_TOKEN_CACHE",
+            DATA_DIR / f"visual_feishu_file_tokens_{UPDATE_MONTH_UNDERSCORE}.csv",
+        )
+    )
     cache = load_token_cache(cache_path)
 
     synced: list[dict[str, Any]] = []
@@ -365,7 +433,12 @@ def main() -> None:
         (f"公开入口_前50成分单卡_{UPDATE_MONTH}", sync_cards),
         (f"视觉资产_成分卡片总览_{UPDATE_MONTH}", sync_overview),
     ]:
-        table_id, created, updated = fn(client, app_token, cache)
+        table_id, created, updated, deleted = fn(
+            client,
+            app_token,
+            cache,
+            delete_stale_records=args.delete_stale_records,
+        )
         synced.append(
             {
                 "asset_group": name,
@@ -373,10 +446,14 @@ def main() -> None:
                 "url": table_url(table_id),
                 "created": created,
                 "updated": updated,
+                "deleted": deleted,
                 "status": "active",
             }
         )
-        print(f"synced {name}: table_id={table_id}, created={created}, updated={updated}")
+        print(
+            f"synced {name}: table_id={table_id}, created={created}, "
+            f"updated={updated}, deleted={deleted}"
+        )
         save_token_cache(cache_path, cache)
 
     delete_results: list[dict[str, str]] = []
@@ -386,7 +463,7 @@ def main() -> None:
     write_csv(
         DATA_DIR / f"visual_feishu_links_{UPDATE_MONTH_UNDERSCORE}.csv",
         synced,
-        ["asset_group", "table_id", "url", "created", "updated", "status"],
+        ["asset_group", "table_id", "url", "created", "updated", "deleted", "status"],
     )
     write_csv(
         DATA_DIR / f"visual_feishu_deleted_old_tables_{UPDATE_MONTH_UNDERSCORE}.csv",

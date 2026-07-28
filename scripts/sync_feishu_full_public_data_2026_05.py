@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import os
 import time
@@ -165,25 +166,61 @@ def ensure_fields(client: FeishuClient, app_token: str, table_id: str, fieldname
         time.sleep(0.15)
 
 
-def sync_asset(client: FeishuClient, app_token: str, asset: dict[str, Any]) -> dict[str, Any]:
+def sync_asset(
+    client: FeishuClient,
+    app_token: str,
+    asset: dict[str, Any],
+    delete_stale_records: bool = False,
+    force_update: bool = False,
+    only_keys: set[str] | None = None,
+) -> dict[str, Any]:
     rows, fieldnames = read_csv(asset["csv"])
     if asset["primary_key"] not in fieldnames:
         raise FeishuError(f"{asset['csv']} missing primary key {asset['primary_key']}")
     table_id = ensure_table(client, app_token, asset["table_name"], fieldnames)
     ensure_fields(client, app_token, table_id, fieldnames)
 
-    existing = client.list_bitable_records(app_token, table_id)
-    by_key = {
-        str(record.get("fields", {}).get(asset["primary_key"], "")): record.get("record_id", "")
-        for record in existing
-        if record.get("fields", {}).get(asset["primary_key"])
-    }
+    existing = client.list_bitable_records(
+        app_token,
+        table_id,
+        field_names=[asset["primary_key"], *BRAND_FIELDS],
+    )
+    by_key: dict[str, str] = {}
+    record_by_key: dict[str, dict[str, Any]] = {}
+    stale_record_ids: list[str] = []
+    for record in existing:
+        key = normalize(record.get("fields", {}).get(asset["primary_key"], ""), max_len=120)
+        record_id = str(record.get("record_id", ""))
+        if not key or key in by_key:
+            if record_id:
+                stale_record_ids.append(record_id)
+            continue
+        by_key[key] = record_id
+        record_by_key[key] = record
+
     source_keys = {normalize(row.get(asset["primary_key"]), max_len=120) for row in rows if row.get(asset["primary_key"])}
+    stale_record_ids.extend(
+        record_id
+        for key, record_id in by_key.items()
+        if key not in source_keys and record_id
+    )
+    stale_record_ids = list(dict.fromkeys(stale_record_ids))
+    if stale_record_ids and not delete_stale_records:
+        print(
+            f"{asset['asset_key']}: found {len(stale_record_ids)} stale or duplicate records; "
+            "rerun with --delete-stale-records to remove them"
+        )
+    if stale_record_ids and delete_stale_records:
+        for index, record_id in enumerate(stale_record_ids, 1):
+            client.delete_bitable_record(app_token, table_id, record_id)
+            if index % 50 == 0 or index == len(stale_record_ids):
+                print(f"{asset['asset_key']}: deleted stale {index}/{len(stale_record_ids)}")
+
     if (
-        source_keys
+        not force_update
+        and source_keys
         and source_keys.issubset(set(by_key))
-        and len(by_key) >= len(source_keys)
-        and all(record_has_brand(record) for record in existing)
+        and all(record_has_brand(record_by_key[key]) for key in source_keys)
     ):
         print(f"{asset['asset_key']}: already synced {len(source_keys)} records; skipped")
         return {
@@ -197,9 +234,26 @@ def sync_asset(client: FeishuClient, app_token: str, asset: dict[str, Any]) -> d
             "status": "active",
         }
 
+    rows_to_sync = rows
+    if only_keys is not None:
+        rows_to_sync = [
+            row
+            for row in rows
+            if normalize(row.get(asset["primary_key"]), max_len=120) in only_keys
+        ]
+        missing_requested_keys = only_keys - {
+            normalize(row.get(asset["primary_key"]), max_len=120)
+            for row in rows_to_sync
+        }
+        if missing_requested_keys:
+            print(
+                f"{asset['asset_key']}: {len(missing_requested_keys)} requested keys are absent "
+                "from the current source and will only be handled by stale cleanup"
+            )
+
     create_payloads: list[dict[str, Any]] = []
     update_payloads: list[dict[str, Any]] = []
-    for row in rows:
+    for row in rows_to_sync:
         key = normalize(row.get(asset["primary_key"]), max_len=120)
         if not key:
             continue
@@ -239,6 +293,31 @@ def sync_asset(client: FeishuClient, app_token: str, asset: dict[str, Any]) -> d
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--delete-stale-records", action="store_true")
+    parser.add_argument("--force-update", action="store_true")
+    parser.add_argument(
+        "--asset",
+        action="append",
+        choices=[asset["asset_key"] for asset in ASSETS],
+        help="Sync only the selected asset key. Repeat to select multiple assets.",
+    )
+    parser.add_argument(
+        "--keys-file",
+        type=Path,
+        help="UTF-8 file with one primary-key value per line; requires exactly one --asset.",
+    )
+    args = parser.parse_args()
+    if args.keys_file and (not args.asset or len(set(args.asset)) != 1):
+        parser.error("--keys-file requires exactly one --asset")
+    only_keys = None
+    if args.keys_file:
+        only_keys = {
+            line.strip()
+            for line in args.keys_file.read_text(encoding="utf-8-sig").splitlines()
+            if line.strip()
+        }
+
     load_dotenv(ROOT / ".env")
     client = FeishuClient()
     app_token = client.resolve_bitable_app_token(
@@ -246,13 +325,39 @@ def main() -> None:
         wiki_node_token=os.getenv("FEISHU_BITABLE_WIKI_NODE_TOKEN", ""),
     )
 
+    selected_assets = [
+        asset
+        for asset in ASSETS
+        if not args.asset or asset["asset_key"] in args.asset
+    ]
     synced: list[dict[str, Any]] = []
-    for asset in ASSETS:
-        synced.append(sync_asset(client, app_token, asset))
+    for asset in selected_assets:
+        synced.append(
+            sync_asset(
+                client,
+                app_token,
+                asset,
+                delete_stale_records=args.delete_stale_records,
+                force_update=args.force_update,
+                only_keys=only_keys,
+            )
+        )
+
+    links_path = DATA / f"feishu_full_public_data_links_{MONTH_UNDERSCORE}.csv"
+    output_rows = synced
+    if args.asset and links_path.exists():
+        previous_rows, _ = read_csv(links_path)
+        merged = {row.get("asset_key", ""): row for row in previous_rows}
+        merged.update({row["asset_key"]: row for row in synced})
+        output_rows = [
+            merged[asset["asset_key"]]
+            for asset in ASSETS
+            if asset["asset_key"] in merged
+        ]
 
     write_csv(
-        DATA / f"feishu_full_public_data_links_{MONTH_UNDERSCORE}.csv",
-        synced,
+        links_path,
+        output_rows,
         ["asset_group", "asset_key", "table_id", "url", "rows", "created", "updated", "status"],
     )
     print(f"wrote data/feishu_full_public_data_links_{MONTH_UNDERSCORE}.csv")

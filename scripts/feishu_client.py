@@ -12,6 +12,7 @@ Environment variables:
 
 from __future__ import annotations
 
+import json
 import os
 import time
 from pathlib import Path
@@ -71,11 +72,19 @@ class FeishuClient:
             raise FeishuError(f"Feishu API error: {data}")
         return data
 
-    def list_bitable_records(self, app_token: str, table_id: str, page_size: int = 500) -> List[Dict[str, Any]]:
+    def list_bitable_records(
+        self,
+        app_token: str,
+        table_id: str,
+        page_size: int = 500,
+        field_names: Optional[Iterable[str]] = None,
+    ) -> List[Dict[str, Any]]:
         records: List[Dict[str, Any]] = []
         page_token: Optional[str] = None
         while True:
             params: Dict[str, Any] = {"page_size": page_size}
+            if field_names:
+                params["field_names"] = json.dumps(list(field_names), ensure_ascii=False)
             if page_token:
                 params["page_token"] = page_token
             url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records"

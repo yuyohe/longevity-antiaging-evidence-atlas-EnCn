@@ -29,6 +29,31 @@ TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-29")
 DRAFT_NOTICE_ZH = "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。"
 DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not medical advice."
 
+ANIMAL_SUBJECT_RE = re.compile(
+    r"\b(?:mice|mouse|murine|rats?|rodents?|goats?|sheep|lambs?|pigs?|swine|porcine|"
+    r"rabbits?|dogs?|canine|calves|cattle|bovine|horses?|equine|non[- ]?human primates?)\b",
+    flags=re.IGNORECASE,
+)
+HUMAN_SUBJECT_RE = re.compile(
+    r"\b(?:humans?|patients?|participants?|adults?|women|men|people|persons?|"
+    r"volunteers?|children|adolescents?)\b",
+    flags=re.IGNORECASE,
+)
+NON_PRIMARY_PUBLICATION_TYPES = (
+    "published erratum",
+    "editorial",
+    "comment",
+    "letter",
+    "news",
+    "retracted publication",
+    "retraction of publication",
+    "expression of concern",
+)
+NON_PRIMARY_TITLE_RE = re.compile(
+    r"^\s*(?:correction|corrigendum|erratum|editorial|comment(?:ary)?|reply|letter)\s*:",
+    flags=re.IGNORECASE,
+)
+
 CANDIDATE_FIELDS = [
     "id", "title_en", "title_zh", "year", "doi", "pmid", "pmcid", "url", "source", "query",
     "include_status", "notes", "last_checked",
@@ -456,36 +481,80 @@ def select_candidates(rows: list[dict[str, str]], target: int) -> list[dict[str,
     return selected[:target]
 
 
-def classify_study(pub_types: list[str], body: str, source: str) -> str:
-    joined = f"{' '.join(pub_types)} {body}".lower()
+def has_direct_animal_subject(type_text: str, title_text: str, body_text: str) -> bool:
+    if "veterinary" in type_text:
+        return True
+    if ANIMAL_SUBJECT_RE.search(title_text) and not HUMAN_SUBJECT_RE.search(title_text):
+        return True
+    assignment = r"(?:randomly assigned|randomly allocated|allocated at random)"
+    animal = ANIMAL_SUBJECT_RE.pattern
+    return bool(
+        re.search(rf"{animal}.{{0,180}}{assignment}|{assignment}.{{0,180}}{animal}", body_text)
+    )
+
+
+def classify_study(pub_types: list[str], body: str, source: str, title: str = "") -> str:
+    type_text = " ".join(pub_types).lower()
+    title_text = title.lower()
+    body_text = body.lower()
     if source == "ClinicalTrials.gov":
         return "registered_clinical_trial"
-    if "meta-analysis" in joined or "systematic review" in joined or "umbrella review" in joined:
+    if any(term in type_text for term in NON_PRIMARY_PUBLICATION_TYPES) or NON_PRIMARY_TITLE_RE.search(title_text):
+        return "non_primary_commentary_or_correction"
+    if "protocol" in title_text or "protocol" in type_text:
+        return "protocol_or_registered_plan"
+    if any(term in f"{type_text} {title_text}" for term in ["meta-analysis", "meta analysis", "systematic review", "umbrella review"]):
         return "systematic_review_or_meta_analysis"
-    if "randomized" in joined or "randomised" in joined or "clinical trial" in joined:
-        return "human_randomized_or_clinical_trial"
-    if "mendelian randomization" in joined:
-        return "human_mendelian_randomization"
-    if "cohort" in joined or "prospective" in joined or "longitudinal" in joined:
-        return "human_cohort"
-    if any(term in joined for term in ["mice", "mouse", "murine", "rats", "rodent"]):
+    if has_direct_animal_subject(type_text, title_text, body_text):
         return "animal_study"
-    if any(term in joined for term in ["cell", "in vitro", "organoid"]):
-        return "mechanistic_or_cell_study"
-    if "review" in joined:
+    if (
+        any(term in type_text for term in ["randomized controlled trial", "clinical trial"])
+        or any(term in title_text for term in ["randomized controlled trial", "randomised controlled trial", "randomized trial", "randomised trial"])
+    ):
+        return "human_randomized_or_clinical_trial"
+    if "mendelian randomization" in f"{title_text} {body_text}":
+        return "human_mendelian_randomization"
+    if (
+        any(term in f"{type_text} {title_text}" for term in ["cohort", "prospective study", "longitudinal study"])
+        or any(term in body_text for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort"])
+    ):
+        return "human_cohort"
+    if "review" in type_text or any(term in title_text for term in ["review", "guideline", "consensus statement"]):
         return "narrative_review"
+    if any(
+        term in body_text
+        for term in [
+            "we randomly assigned",
+            "participants were randomly assigned",
+            "were randomly allocated",
+            "we conducted a randomized controlled trial",
+            "in this randomized controlled trial",
+        ]
+    ):
+        return "human_randomized_or_clinical_trial"
+    joined = f"{title_text} {body_text}"
+    if ANIMAL_SUBJECT_RE.search(joined):
+        return "animal_study"
+    if any(term in joined for term in ["cell culture", "in vitro", "organoid"]):
+        return "mechanistic_or_cell_study"
     return "metadata_only_needs_classification"
 
 
-def classify_species(study_type: str, body: str) -> str:
-    lower = body.lower()
+def classify_species(study_type: str, body: str, title: str = "") -> str:
+    lower = f"{title} {body}".lower()
+    if study_type == "non_primary_commentary_or_correction":
+        return "needs_review"
+    if study_type == "animal_study":
+        if any(term in lower for term in ["mice", "mouse", "murine"]):
+            return "mouse"
+        return "animal"
     if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort", "human_mendelian_randomization"}:
         return "human"
     if any(term in lower for term in ["participants", "patients", "adults", "women", "men", "cohort"]):
         return "human"
     if any(term in lower for term in ["mice", "mouse", "murine"]):
         return "mouse"
-    if any(term in lower for term in ["rats", "rodent"]):
+    if ANIMAL_SUBJECT_RE.search(lower):
         return "animal"
     if "cell" in lower or "in vitro" in lower:
         return "cell"
@@ -592,8 +661,8 @@ def finding_from_article(row: dict[str, str], article: ET.Element | None, index:
         conclusion_en = f"Metadata-level candidate only; no result-level conclusion is available yet for {topic['en']}."
         source_depth = "metadata_only"
         metadata_only = True
-    study = classify_study(pub_types, body, row.get("source", "PubMed"))
-    species = classify_species(study, body)
+    study = classify_study(pub_types, body, row.get("source", "PubMed"), row.get("title_en", ""))
+    species = classify_species(study, body, row.get("title_en", ""))
     endpoint = classify_endpoint(topic["id"], body)
     level = evidence_level(study, endpoint)
     authority = authority_signal(row, ids, pub_types, journal, source_depth)

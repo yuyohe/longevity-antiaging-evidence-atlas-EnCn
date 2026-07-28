@@ -4,6 +4,7 @@ import csv
 import json
 import math
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -24,6 +25,31 @@ METHOD_MD = CONTENT / "overview" / "evidence-scoring-v0-4.md"
 METHOD_CSV = DATA / "scoring_policy_v0_4.csv"
 SUMMARY_WINDOW_MD = CONTENT / "overview" / "public-summary.md"
 QUALITY_DASHBOARD = CONTENT / "overview" / "evidence-quality-dashboard.md"
+
+ANIMAL_SUBJECT_RE = re.compile(
+    r"\b(?:mice|mouse|murine|rats?|rodents?|goats?|sheep|lambs?|pigs?|swine|porcine|"
+    r"rabbits?|dogs?|canine|calves|cattle|bovine|horses?|equine|non[- ]?human primates?)\b",
+    flags=re.IGNORECASE,
+)
+HUMAN_SUBJECT_RE = re.compile(
+    r"\b(?:humans?|patients?|participants?|adults?|women|men|people|persons?|"
+    r"volunteers?|children|adolescents?)\b",
+    flags=re.IGNORECASE,
+)
+NON_PRIMARY_PUBLICATION_TYPES = (
+    "published erratum",
+    "editorial",
+    "comment",
+    "letter",
+    "news",
+    "retracted publication",
+    "retraction of publication",
+    "expression of concern",
+)
+NON_PRIMARY_TITLE_RE = re.compile(
+    r"^\s*(?:correction|corrigendum|erratum|editorial|comment(?:ary)?|reply|letter)\s*:",
+    flags=re.IGNORECASE,
+)
 
 
 SCORING_COLUMNS = [
@@ -162,8 +188,116 @@ def row_key(row: dict[str, str]) -> str:
     return row.get("pmid") or clean_doi(row.get("doi", "")) or row.get("candidate_id") or row.get("finding_id") or row.get("supplement_id", "")
 
 
+def is_protocol_record(row: dict[str, str]) -> bool:
+    title = row.get("title_en", "").lower()
+    publication_types = row.get("publication_types", "").lower()
+    study = (row.get("study_type_draft") or row.get("study_type") or "").lower()
+    return "protocol" in title or "protocol" in publication_types or "protocol_or_registered_plan" in study
+
+
+def is_non_primary_record(row: dict[str, str]) -> bool:
+    title = row.get("title_en", "").lower()
+    publication_types = row.get("publication_types", "").lower()
+    study = (row.get("study_type_draft") or row.get("study_type") or "").lower()
+    return (
+        any(term in publication_types for term in NON_PRIMARY_PUBLICATION_TYPES)
+        or bool(NON_PRIMARY_TITLE_RE.search(title))
+        or study == "non_primary_commentary_or_correction"
+    )
+
+
+def has_direct_animal_subject(publication_types: str, title: str, body: str) -> bool:
+    if "veterinary" in publication_types:
+        return True
+    if ANIMAL_SUBJECT_RE.search(title) and not HUMAN_SUBJECT_RE.search(title):
+        return True
+    assignment = r"(?:randomly assigned|randomly allocated|allocated at random)"
+    animal = ANIMAL_SUBJECT_RE.pattern
+    return bool(re.search(rf"{animal}.{{0,180}}{assignment}|{assignment}.{{0,180}}{animal}", body))
+
+
+def normalized_study_type(row: dict[str, str]) -> str:
+    title = row.get("title_en", "").lower()
+    publication_types = row.get("publication_types", "").lower()
+    body = f"{row.get('result_en', '')} {row.get('conclusion_en', '')}".lower()
+    current = (row.get("study_type_draft") or row.get("study_type") or "").lower()
+    title_and_types = f"{title} {publication_types}"
+
+    if is_non_primary_record(row):
+        return "non_primary_commentary_or_correction"
+    if is_protocol_record(row):
+        return "protocol_or_registered_plan"
+    if any(term in title_and_types for term in ["meta-analysis", "meta analysis", "systematic review", "umbrella review"]):
+        return "systematic_review_or_meta_analysis"
+    if has_direct_animal_subject(publication_types, title, body):
+        return "animal_study"
+    if (
+        any(term in publication_types for term in ["randomized controlled trial", "clinical trial"])
+        or any(term in title for term in ["randomized controlled trial", "randomised controlled trial", "randomized trial", "randomised trial"])
+    ):
+        return "human_randomized_or_clinical_trial"
+    if "mendelian randomization" in f"{title} {body}":
+        return "human_mendelian_randomization"
+    if (
+        any(term in title_and_types for term in ["cohort", "prospective study", "longitudinal study"])
+        or any(term in body for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort"])
+    ):
+        return "human_cohort"
+    if "review" in publication_types or any(term in title for term in ["review", "guideline", "consensus statement"]):
+        return "narrative_review"
+    if any(
+        term in body
+        for term in [
+            "we randomly assigned",
+            "participants were randomly assigned",
+            "were randomly allocated",
+            "we conducted a randomized controlled trial",
+            "in this randomized controlled trial",
+        ]
+    ):
+        return "human_randomized_or_clinical_trial"
+    if ANIMAL_SUBJECT_RE.search(f"{title} {body}"):
+        return "animal_study"
+    if any(term in f"{title} {body}" for term in ["in vitro", "organoid", "cell culture"]):
+        return "mechanistic_or_cell_study"
+    if current in {"animal_study", "mechanistic_or_cell_study"}:
+        return current
+    return "metadata_only_needs_classification"
+
+
+def normalized_species(row: dict[str, str], study_type: str) -> str:
+    title = row.get("title_en", "")
+    body = f"{row.get('result_en', '')} {row.get('conclusion_en', '')}"
+    combined = f"{title} {body}".lower()
+    current = (row.get("species_draft") or row.get("species") or "").lower()
+    if study_type == "non_primary_commentary_or_correction":
+        return "needs_review"
+    if study_type == "animal_study":
+        return "mouse" if any(term in combined for term in ["mice", "mouse", "murine"]) else "animal"
+    if study_type == "mechanistic_or_cell_study":
+        return "cell"
+    if study_type in {
+        "registered_clinical_trial",
+        "human_randomized_or_clinical_trial",
+        "human_cohort",
+        "human_mendelian_randomization",
+    }:
+        return "human"
+    if current in {"human", "mouse", "animal", "cell"}:
+        return current
+    if ANIMAL_SUBJECT_RE.search(combined):
+        return "mouse" if any(term in combined for term in ["mice", "mouse", "murine"]) else "animal"
+    if HUMAN_SUBJECT_RE.search(combined):
+        return "human"
+    if any(term in combined for term in ["in vitro", "organoid", "cell culture"]):
+        return "cell"
+    return "needs_review"
+
+
 def design_score(study_type: str) -> int:
     s = (study_type or "").lower()
+    if "protocol" in s or "registered_plan" in s:
+        return 3
     if "systematic_review" in s or "meta_analysis" in s or "meta-analysis" in s:
         return 34
     if "randomized" in s or "clinical_trial" in s or "clinical trial" in s:
@@ -285,6 +419,8 @@ def risk_adjustment(row: dict[str, str], domain: str) -> tuple[int, str, str, st
         industry_risk = "possible"
     if "metadata_only" in text:
         risk -= 12
+    if is_protocol_record(row):
+        risk -= 12
     if "abstract_only" in text:
         risk -= 4
     if domain == "skin" and topic in {"oral-collagen-peptides", "polyphenols-skin-photoprotection"}:
@@ -319,6 +455,8 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
     endpoint = (row.get("endpoint_class_draft") or row.get("endpoint_class") or "").upper()
     depth = (row.get("evidence_source_depth") or "").lower()
     topic = row.get("topic_id", "")
+    if is_protocol_record(row) or is_non_primary_record(row):
+        return "E"
     if domain == "longevity":
         topic_caps = {
             "caloric-restriction-human": "B",
@@ -354,12 +492,20 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
 
 
 def score_row(row: dict[str, str], domain: str, icite: dict, openalex: dict) -> dict[str, str]:
+    protocol = is_protocol_record(row)
+    non_primary = is_non_primary_record(row)
+    normalized_study = normalized_study_type(row)
+    row["study_type_draft"] = normalized_study
+    row["species_draft"] = normalized_species(row, normalized_study)
+    if protocol or non_primary:
+        row["evidence_level_draft"] = "E"
+        row["recommendation_class_draft"] = "Monitor"
     study = row.get("study_type_draft") or row.get("study_type") or row.get("category", "")
     endpoint = row.get("endpoint_class_draft") or row.get("endpoint_class") or row.get("longevity_endpoint_class") or row.get("skin_endpoint_class") or ""
     species = row.get("species_draft") or row.get("species") or ""
     depth = row.get("evidence_source_depth") or row.get("source", "")
     ds = design_score(study)
-    es = endpoint_score(endpoint, domain)
+    es = 0 if protocol or non_primary else endpoint_score(endpoint, domain)
     hs = human_score(species, study, domain)
     ss = source_depth_score(depth, row)
     auth, influence, metric_source, metric_value, metric_note, work_id, cited = authority_score(row, icite, openalex)
@@ -589,7 +735,7 @@ def write_dashboard(longevity: list[dict[str, str]], skin: list[dict[str, str]],
     lines = [
         "# 证据质量总览 / Evidence Quality Dashboard",
         "",
-        "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。  ",
+        "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。<br>",
         "Draft status: automatically prepared; not fully reviewed; not medical advice.",
         "",
         f"Last updated / 更新时间：{TODAY}",

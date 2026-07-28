@@ -20,6 +20,8 @@ UPDATE_LABEL = os.environ.get(
     "EVIDENCE_ATLAS_UPDATE_LABEL",
     "2026 年 7 月中旬" if MONTH == "2026-07" else f"{MONTH} 更新",
 )
+RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-july-2026-update.md")
+PUBLIC_REPORT_FILE = os.environ.get("EVIDENCE_ATLAS_PUBLIC_REPORT_FILE", "mid-july-public-update-2026-07.html")
 BASELINE_LABEL = os.environ.get("EVIDENCE_ATLAS_BASELINE_LABEL", "6 月底冻结版")
 BASELINE_DELTA = int(os.environ.get("EVIDENCE_ATLAS_BASELINE_DELTA", "1451" if MONTH == "2026-07" else "0"))
 OUT = ROOT / "docs" / f"yulcell-posting-asset-dashboard-{RUN_DATE}.html"
@@ -38,15 +40,15 @@ GITHUB_LINKS = [
     ("GitHub 仓库", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"),
     ("GitHub README", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/README.md"),
     ("中文 README", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/README.zh-CN.md"),
-    ("7 月中旬读者说明", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/content/public-reader/mid-july-2026-update.md"),
-    ("7 月中旬自包含报告", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/docs/mid-july-public-update-2026-07.html"),
+    (f"{UPDATE_LABEL}读者说明", f"https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/content/public-reader/{RELEASE_FILE}"),
+    (f"{UPDATE_LABEL}自包含报告", f"https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/docs/{PUBLIC_REPORT_FILE}"),
     ("品牌资产索引", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/docs/yulcell-brand-index.md"),
     ("公开数据说明", "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/README.md"),
 ]
 
 REPORT_LINKS = [
-    ("7 月中旬普通读者说明", ROOT / "content" / "public-reader" / "mid-july-2026-update.md"),
-    ("7 月中旬自包含报告", ROOT / "docs" / "mid-july-public-update-2026-07.html"),
+    (f"{UPDATE_LABEL}普通读者说明", ROOT / "content" / "public-reader" / RELEASE_FILE),
+    (f"{UPDATE_LABEL}自包含报告", ROOT / "docs" / PUBLIC_REPORT_FILE),
     ("飞书公开资产索引", ROOT / "docs" / f"feishu-public-assets-{MONTH}.md"),
     ("月度更新 HTML", ROOT / "docs" / f"monthly-update-{MONTH}.html"),
     ("月度更新 Markdown", ROOT / "content" / "public-reader" / f"monthly-update-{MONTH}.md"),

@@ -4,6 +4,7 @@ import base64
 import csv
 import html
 import json
+import os
 from pathlib import Path
 
 
@@ -15,8 +16,16 @@ VISUALS = DOCS / "assets" / "visual-assets" / "2026-07"
 
 BRAND = "宇多Yul细胞/yulcell"
 REPO_URL = "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"
-FREEZE_DATE = "2026-07-14"
-REVIEW_DATE = "2026-07-14"
+FREEZE_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-07-14")
+REVIEW_DATE = os.environ.get("EVIDENCE_ATLAS_REVIEW_DATE", FREEZE_DATE)
+RELEASE_LABEL = os.environ.get("EVIDENCE_ATLAS_RELEASE_LABEL_FULL", "2026 年 7 月中旬")
+RELEASE_SHORT = os.environ.get("EVIDENCE_ATLAS_RELEASE_LABEL", "7 月中旬")
+RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-july-2026-update.md")
+REPORT_FILE = os.environ.get("EVIDENCE_ATLAS_PUBLIC_REPORT_FILE", "mid-july-public-update-2026-07.html")
+DASHBOARD_FILE = os.environ.get("EVIDENCE_ATLAS_DASHBOARD_FILE", "yulcell-posting-asset-dashboard-2026-07-14.html")
+NAV_TABLE_NAME = os.environ.get("EVIDENCE_ATLAS_NAV_TABLE_NAME", "公开入口_7月中阅读导航_2026-07")
+PREVIOUS_SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_PREVIOUS_SNAPSHOT_DATE", "2026-06-29")
+PREVIOUS_CANDIDATES = int(os.environ.get("EVIDENCE_ATLAS_PREVIOUS_CANDIDATES", "14273"))
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -54,7 +63,7 @@ def table_links() -> tuple[list[dict[str, str]], dict[str, str]]:
 
 
 def navigation_rows(links: dict[str, str]) -> list[dict[str, str]]:
-    nav_url = links.get("公开入口_7月中阅读导航_2026-07", "")
+    nav_url = links.get(NAV_TABLE_NAME, "")
     heatmap_url = links.get("视觉资产_热力图图片_2026-07", "")
     cards_url = links.get("公开入口_前50成分单卡_2026-07", "")
     wall_url = links.get("视觉资产_成分卡片总览_2026-07", "")
@@ -64,7 +73,7 @@ def navigation_rows(links: dict[str, str]) -> list[dict[str, str]]:
 
     items = [
         ("R001", "01", "普通读者入口：从这里开始", "Start here", "第一次打开项目的人", "先弄清项目能回答什么、不能回答什么。", f"{REPO_URL}/blob/main/content/public-reader/start-here.md", nav_url, "阅读入口"),
-        ("R002", "02", "2026 年 7 月中旬更新说明", "Mid-July update", "所有读者", "用几分钟看懂这次新增了什么。", f"{REPO_URL}/blob/main/content/public-reader/mid-july-2026-update.md", nav_url, "更新说明"),
+        ("R002", "02", f"{RELEASE_LABEL}更新说明", "July update", "所有读者", "用几分钟看懂这次新增了什么。", f"{REPO_URL}/blob/main/content/public-reader/{RELEASE_FILE}", nav_url, "更新说明"),
         ("R003", "03", "15 条结论", "15 takeaways", "普通读者、学生", "先建立判断抗衰说法的基本框架。", f"{REPO_URL}/blob/main/content/public-reader/ten-takeaways.md", nav_url, "阅读入口"),
         ("R004", "04", "证据权重怎么看", "How evidence is weighted", "想学会判断证据的人", "分清人体结局、指标、动物和机制研究。", f"{REPO_URL}/blob/main/content/public-reader/evidence-weight.md", matrix_url, "方法说明"),
         ("R005", "05", "大众主题速读", "Topic guide", "关心运动、睡眠和代谢的人", "按主题读结论，不必先翻论文。", f"{REPO_URL}/blob/main/content/public-reader/topics.md", findings_url, "阅读入口"),
@@ -73,9 +82,9 @@ def navigation_rows(links: dict[str, str]) -> list[dict[str, str]]:
         ("R008", "08", "哪些内容必须先问医生", "Ask a clinician first", "看到药物、医美或高剂量补剂的人", "识别不能自己照表行动的内容。", f"{REPO_URL}/blob/main/content/public-reader/doctor-first.md", nav_url, "安全边界"),
         ("R009", "09", "研究热力图", "Research heatmaps", "普通读者、内容团队", "看研究多不多，不把热度误当效果。", f"{REPO_URL}/blob/main/docs/research-heatmap-2026-07.html", heatmap_url, "视觉资产"),
         ("R010", "10", "前 50 个常见成分卡", "Top 50 ingredient cards", "普通读者、内容团队", "一张卡看一个成分的证据和提醒。", f"{REPO_URL}/tree/main/docs/assets/visual-assets/2026-07/ingredient-cards", cards_url, "视觉资产"),
-        ("R011", "11", "公开全量 CSV 数据包", "Public CSV package", "研究者、维护者", "下载 40,546 行冻结数据进行复核。", f"{REPO_URL}/tree/main/public-data", library_url, "公开数据"),
-        ("R012", "12", "证据矩阵", "Evidence matrix", "研究者、编辑", "查看进入矩阵的 2,800 条记录。", f"{REPO_URL}/blob/main/public-data/evidence-matrix-2026-07.csv", matrix_url, "公开数据"),
-        ("R013", "13", "发帖资产面板", "Posting asset dashboard", "内容团队、助理", "集中找图片、文案和下载入口。", f"{REPO_URL}/blob/main/docs/yulcell-posting-asset-dashboard-2026-07-14.html", wall_url, "内容生产"),
+        ("R011", "11", "公开全量 CSV 数据包", "Public CSV package", "研究者、维护者", "下载冻结数据进行复核；总行数不是互不重复论文数。", f"{REPO_URL}/tree/main/public-data", library_url, "公开数据"),
+        ("R012", "12", "证据矩阵", "Evidence matrix", "研究者、编辑", f"查看进入矩阵的 {count_csv(PUBLIC / 'evidence-matrix-2026-07.csv'):,} 条记录。", f"{REPO_URL}/blob/main/public-data/evidence-matrix-2026-07.csv", matrix_url, "公开数据"),
+        ("R013", "13", "发帖资产面板", "Posting asset dashboard", "内容团队、助理", "集中找图片、文案和下载入口。", f"{REPO_URL}/blob/main/docs/{DASHBOARD_FILE}", wall_url, "内容生产"),
         ("R014", "14", "飞书公开资产总索引", "Feishu public asset index", "所有读者", "按阅读、图片和研究数据三类找表。", f"{REPO_URL}/blob/main/docs/feishu-public-assets-2026-07.md", nav_url, "飞书入口"),
     ]
 
@@ -125,10 +134,10 @@ def navigation_rows(links: dict[str, str]) -> list[dict[str, str]]:
 
 def build_feishu_index(active_tables: list[dict[str, str]]) -> None:
     snapshot_candidates = count_csv(PUBLIC / "candidate-sources-2026-07.csv")
-    previous_candidates = count_csv(PUBLIC / "candidate-sources-2026-06.csv")
+    previous_candidates = PREVIOUS_CANDIDATES
     added_since_previous = max(0, snapshot_candidates - previous_candidates)
     lines = [
-        "# 飞书公开资产索引（2026 年 7 月中旬） / Feishu Public Assets",
+        f"# 飞书公开资产索引（{RELEASE_LABEL}） / Feishu Public Assets",
         "",
         f"**品牌 / Brand：** {BRAND}<br>",
         f"**冻结日期 / Snapshot date：** {FREEZE_DATE}<br>",
@@ -141,7 +150,7 @@ def build_feishu_index(active_tables: list[dict[str, str]]) -> None:
         "## 最短阅读路线 / Shortest Route",
         "",
     ]
-    nav = next((row for row in active_tables if row.get("表名") == "公开入口_7月中阅读导航_2026-07"), None)
+    nav = next((row for row in active_tables if row.get("表名") == NAV_TABLE_NAME), None)
     heatmap = next((row for row in active_tables if row.get("表名") == "视觉资产_热力图图片_2026-07"), None)
     cards = next((row for row in active_tables if row.get("表名") == "公开入口_前50成分单卡_2026-07"), None)
     for label, row, note in [
@@ -176,9 +185,9 @@ def build_feishu_index(active_tables: list[dict[str, str]]) -> None:
             "",
             "## 两个数字为什么不同 / Why Two Candidate Counts Differ",
             "",
-            f"- {snapshot_candidates:,} 条：2026-07-14 公开冻结快照，GitHub 与飞书 2026-07 表保持一致，便于复核和引用。",
-            f"- {previous_candidates:,} 条：2026-06-29 历史冻结快照，用来计算本轮新增 {added_since_previous:,} 条候选。",
-            "- 工作候选库会继续自动增长；后续新增不倒灌进 7 月中旬冻结快照，而是进入下一次发布。",
+            f"- {snapshot_candidates:,} 条：{FREEZE_DATE} 公开冻结快照，GitHub 与飞书 2026-07 表保持一致，便于复核和引用。",
+            f"- {previous_candidates:,} 条：{PREVIOUS_SNAPSHOT_DATE} 历史冻结快照，用来计算本轮新增 {added_since_previous:,} 条候选。",
+            f"- 工作候选库会继续自动增长；后续新增不倒灌进 {RELEASE_SHORT}冻结快照，而是进入下一次发布。",
             "",
             "## 使用边界 / Boundary",
             "",
@@ -193,7 +202,7 @@ def build_feishu_index(active_tables: list[dict[str, str]]) -> None:
 
 def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> None:
     snapshot_candidates = count_csv(PUBLIC / "candidate-sources-2026-07.csv")
-    previous_candidates = count_csv(PUBLIC / "candidate-sources-2026-06.csv")
+    previous_candidates = PREVIOUS_CANDIDATES
     literature = count_csv(PUBLIC / "literature-library-2026-07.csv")
     findings = count_csv(PUBLIC / "evidence-findings-2026-07.csv")
     shortlist = count_csv(PUBLIC / "shortlist-sources-2026-07.csv")
@@ -208,9 +217,9 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
         "retractions": data_uri(VISUALS / "retraction-density-2026-07.png"),
         "cards": data_uri(VISUALS / "ingredient-card-wall-2026-07.png"),
     }
-    nav_url = links.get("公开入口_7月中阅读导航_2026-07", f"{REPO_URL}/blob/main/docs/feishu-public-assets-2026-07.md")
+    nav_url = links.get(NAV_TABLE_NAME, f"{REPO_URL}/blob/main/docs/feishu-public-assets-2026-07.md")
     summary_text = (
-        f"{BRAND} 2026 年 7 月中旬证据图谱：公开冻结候选文献 {snapshot_candidates:,} 条、"
+        f"{BRAND} {RELEASE_LABEL}证据图谱：公开冻结候选文献 {snapshot_candidates:,} 条、"
         f"证据发现 {findings:,} 条、证据矩阵 {matrix:,} 条、公开 CSV {public_total:,} 行，"
         f"以及 {visual_count} 张图片资产。候选文献不等于已证实结论，药物、医美和高剂量补剂仍需专业评估。"
     )
@@ -221,9 +230,9 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
   <meta charset="utf-8">
   <link rel="icon" href="data:,">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="宇多Yul细胞/yulcell 2026 年 7 月中旬长寿抗衰证据图谱公开更新，含 GitHub、飞书多维表格、热力图和公开数据包。">
+  <meta name="description" content="宇多Yul细胞/yulcell {RELEASE_LABEL}长寿抗衰证据图谱公开更新，含 GitHub、飞书多维表格、热力图和公开数据包。">
   <meta name="keywords" content="宇多Yul细胞/yulcell,yulcell,长寿抗衰证据图谱,健康寿命证据图谱,longevity evidence atlas">
-  <title>宇多Yul细胞/yulcell | 2026 年 7 月中旬公开更新</title>
+  <title>宇多Yul细胞/yulcell | {RELEASE_LABEL}公开更新</title>
   <style>
     :root {{ --ink:#182126; --muted:#5d6a70; --paper:#ffffff; --wash:#f2f5f4; --teal:#176f73; --teal-soft:#dceced; --coral:#b74c3c; --line:#ccd5d4; --max:1160px; }}
     * {{ box-sizing:border-box; }}
@@ -278,8 +287,9 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
     footer {{ padding:34px 24px; background:#12252a; color:#d7e3e4; }}
     footer .inner {{ display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; }}
     footer a {{ color:#a9d6d7; }}
-    .reveal {{ opacity:0; transform:translateY(14px); transition:opacity .45s ease, transform .45s ease; }}
-    .reveal.visible {{ opacity:1; transform:none; }}
+    .reveal {{ opacity:1; transform:none; }}
+    .reveal.visible {{ animation:reveal-in .45s ease both; }}
+    @keyframes reveal-in {{ from {{ opacity:.72; transform:translateY(8px); }} to {{ opacity:1; transform:none; }} }}
     dialog {{ width:min(94vw,1280px); max-height:92vh; border:0; border-radius:6px; padding:12px; background:#fff; }}
     dialog::backdrop {{ background:rgba(10,20,23,.82); }}
     dialog img {{ display:block; max-width:100%; max-height:84vh; margin:auto; }}
@@ -299,19 +309,19 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
       .route dt {{ padding-bottom:4px; border-bottom:0; }}
       .route dd {{ padding-top:0; }}
     }}
-    @media (prefers-reduced-motion:reduce) {{ html {{ scroll-behavior:auto; }} .reveal {{ opacity:1; transform:none; transition:none; }} }}
+    @media (prefers-reduced-motion:reduce) {{ html {{ scroll-behavior:auto; }} .reveal.visible {{ animation:none; }} }}
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
       <p class="brand">{esc(BRAND)} · Longevity Anti-Aging Evidence Atlas</p>
-      <h1>2026 年 7 月中旬<br>公开更新</h1>
+      <h1>{RELEASE_LABEL}<br>公开更新</h1>
       <p class="lede">把 {snapshot_candidates:,} 条候选资料、{findings:,} 条证据发现和 {visual_count} 张图片，整理成普通读者也能顺着读下去的证据地图。</p>
       <div class="actions">
-        <a class="action primary" href="{esc(REPO_URL)}/blob/main/content/public-reader/mid-july-2026-update.md">先读普通版说明</a>
+        <a class="action primary" href="{esc(REPO_URL)}/blob/main/content/public-reader/{RELEASE_FILE}">先读普通版说明</a>
         <a class="action" href="{esc(nav_url)}">打开飞书导航</a>
-        <button class="copy-button" id="copy-summary" type="button">复制 7 月中旬摘要</button>
+        <button class="copy-button" id="copy-summary" type="button">复制 {RELEASE_SHORT}摘要</button>
       </div>
     </div>
   </header>
@@ -323,7 +333,7 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
     <section class="band" id="summary"><div class="inner reveal">
       <p class="eyebrow">30 秒看完 / 30-second summary</p>
       <h2>这次更新的重点不是“论文更多”，而是“读起来更清楚”</h2>
-      <p class="intro">7 月中旬版补充了近期候选文献，扩大证据发现和证据矩阵，重做热力图与成分卡，并把 GitHub 和飞书入口放到同一条阅读路线中。新增候选只是等待复核的资料，不代表结论已经被证明。</p>
+      <p class="intro">{RELEASE_SHORT}版补充了近期候选文献，扩大证据发现和证据矩阵，重做热力图与成分卡，并把 GitHub 和飞书入口放到同一条阅读路线中。新增候选只是等待复核的资料，不代表结论已经被证明。</p>
       <div class="stats">
         <div class="stat"><strong>{snapshot_candidates:,}</strong><span>候选文献冻结快照</span></div>
         <div class="stat"><strong>{findings:,}</strong><span>证据发现</span></div>
@@ -331,7 +341,8 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
         <div class="stat"><strong>{public_total:,}</strong><span>公开 CSV 总行数</span></div>
         <div class="stat"><strong>{visual_count}</strong><span>公开图片资产</span></div>
       </div>
-      <div class="freeze-note"><strong>数字口径：</strong>{snapshot_candidates:,} 条是 {FREEZE_DATE} 的公开冻结快照；相对 6 月 29 日的 {previous_candidates:,} 条，新增 {added_since_previous:,} 条。后续自动检索会进入下一轮发布，不会倒灌修改这份 7 月中旬快照。</div>
+      <div class="freeze-note"><strong>数字口径：</strong>{snapshot_candidates:,} 条是 {FREEZE_DATE} 的公开冻结快照；相对 {PREVIOUS_SNAPSHOT_DATE} 的 {previous_candidates:,} 条，新增 {added_since_previous:,} 条。后续自动检索会进入下一轮发布，不会倒灌修改这份 {RELEASE_SHORT}快照。</div>
+      <div class="freeze-note"><strong>分类保护：</strong>研究方案和评论、社论、勘误等非原始研究最高为 E；系统先分清人体与动物，再判断随机设计。自动分层仍不能替代人工全文复核。</div>
     </div></section>
 
     <section class="band alt" id="pipeline"><div class="inner reveal">
@@ -381,7 +392,7 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
         <dt>第一次看</dt><dd><a href="{REPO_URL}/blob/main/content/public-reader/start-here.md">普通读者入口</a> → <a href="{REPO_URL}/blob/main/content/public-reader/ten-takeaways.md">15 条结论</a> → <a href="{REPO_URL}/blob/main/content/public-reader/evidence-weight.md">证据权重</a></dd>
         <dt>想看图片</dt><dd><a href="{links.get('视觉资产_热力图图片_2026-07', '')}">飞书热力图</a> · <a href="{links.get('公开入口_前50成分单卡_2026-07', '')}">飞书 50 张成分卡</a> · <a href="{REPO_URL}/tree/main/docs/assets/visual-assets/2026-07">GitHub 图片目录</a></dd>
         <dt>想查数据</dt><dd><a href="{REPO_URL}/tree/main/public-data">GitHub 公开 CSV 包</a> · <a href="{links.get('公开数据_证据矩阵_2026-07', '')}">飞书证据矩阵</a> · <a href="{links.get('公开数据_全量文献候选库_2026-07', '')}">飞书候选文献库</a></dd>
-        <dt>要做内容</dt><dd><a href="{REPO_URL}/blob/main/docs/yulcell-posting-asset-dashboard-2026-07-14.html">自包含发帖面板</a> · <a href="{REPO_URL}/blob/main/docs/feishu-public-assets-2026-07.md">飞书公开资产索引</a></dd>
+        <dt>要做内容</dt><dd><a href="{REPO_URL}/blob/main/docs/{DASHBOARD_FILE}">自包含发帖面板</a> · <a href="{REPO_URL}/blob/main/docs/feishu-public-assets-2026-07.md">飞书公开资产索引</a></dd>
       </dl>
       <p class="intro" style="margin-top:28px">当前飞书公开索引记录 {len(active_tables)} 张 active 表。飞书能否被外部搜索引擎收录，仍取决于对应页面的公开分享权限。</p>
     </div></section>
@@ -395,7 +406,7 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
     </div></section>
   </main>
 
-  <footer><div class="inner"><div><strong>{esc(BRAND)}</strong><br>2026 年 7 月中旬长寿抗衰与健康寿命证据图谱</div><div><a href="{REPO_URL}">GitHub</a> · <a href="{esc(nav_url)}">Feishu</a> · 冻结 {FREEZE_DATE} · 复核 {REVIEW_DATE}</div></div></footer>
+  <footer><div class="inner"><div><strong>{esc(BRAND)}</strong><br>{RELEASE_LABEL}长寿抗衰与健康寿命证据图谱</div><div><a href="{REPO_URL}">GitHub</a> · <a href="{esc(nav_url)}">Feishu</a> · 冻结 {FREEZE_DATE} · 复核 {REVIEW_DATE}</div></div></footer>
 
   <dialog id="lightbox"><button class="close" type="button" title="关闭原图" aria-label="关闭原图">×</button><img alt="放大的证据图"></dialog>
   <script>
@@ -425,7 +436,7 @@ def build_html(active_tables: list[dict[str, str]], links: dict[str, str]) -> No
 </body>
 </html>
 '''
-    (DOCS / "mid-july-public-update-2026-07.html").write_text(html_text, encoding="utf-8")
+    (DOCS / REPORT_FILE).write_text(html_text, encoding="utf-8")
 
 
 def main() -> None:
@@ -435,7 +446,7 @@ def main() -> None:
     build_html(active_tables, links)
     print("built data/feishu_reader_navigation_2026_07.csv")
     print("built docs/feishu-public-assets-2026-07.md")
-    print("built docs/mid-july-public-update-2026-07.html")
+    print(f"built docs/{REPORT_FILE}")
 
 
 if __name__ == "__main__":
