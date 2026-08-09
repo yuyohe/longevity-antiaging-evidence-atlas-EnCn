@@ -36,6 +36,17 @@ HUMAN_SUBJECT_RE = re.compile(
     r"volunteers?|children|adolescents?)\b",
     flags=re.IGNORECASE,
 )
+DIRECT_ANIMAL_METHOD_RE = re.compile(
+    r"\banimal experiments?\b|\b(?:mouse|rat) model\b|"
+    r"\b(?:mice|rats)\s+(?:were|underwent|received|exhibited|showed|demonstrated)\b|"
+    r"\bin vivo\b",
+    flags=re.IGNORECASE,
+)
+DIRECT_HUMAN_METHOD_RE = re.compile(
+    r"\bclinical cohort\b|\bhuman cohort\b|\bpatients? who\b|\bin patients?\b|"
+    r"\bparticipants? (?:were|received|underwent)\b",
+    flags=re.IGNORECASE,
+)
 NON_PRIMARY_PUBLICATION_TYPES = (
     "published erratum",
     "editorial",
@@ -211,9 +222,17 @@ def has_direct_animal_subject(publication_types: str, title: str, body: str) -> 
         return True
     if ANIMAL_SUBJECT_RE.search(title) and not HUMAN_SUBJECT_RE.search(title):
         return True
+    if DIRECT_ANIMAL_METHOD_RE.search(body):
+        return True
     assignment = r"(?:randomly assigned|randomly allocated|allocated at random)"
     animal = ANIMAL_SUBJECT_RE.pattern
     return bool(re.search(rf"{animal}.{{0,180}}{assignment}|{assignment}.{{0,180}}{animal}", body))
+
+
+def has_mixed_human_and_animal_subjects(publication_types: str, title: str, body: str) -> bool:
+    return has_direct_animal_subject(publication_types, title, body) and bool(
+        DIRECT_HUMAN_METHOD_RE.search(f"{title} {body}")
+    )
 
 
 def normalized_study_type(row: dict[str, str]) -> str:
@@ -229,6 +248,8 @@ def normalized_study_type(row: dict[str, str]) -> str:
         return "protocol_or_registered_plan"
     if any(term in title_and_types for term in ["meta-analysis", "meta analysis", "systematic review", "umbrella review"]):
         return "systematic_review_or_meta_analysis"
+    if has_mixed_human_and_animal_subjects(publication_types, title, body):
+        return "mixed_human_and_animal_study"
     if has_direct_animal_subject(publication_types, title, body):
         return "animal_study"
     if (
@@ -236,6 +257,8 @@ def normalized_study_type(row: dict[str, str]) -> str:
         or any(term in title for term in ["randomized controlled trial", "randomised controlled trial", "randomized trial", "randomised trial"])
     ):
         return "human_randomized_or_clinical_trial"
+    if "review" in publication_types or any(term in title for term in ["review", "guideline", "consensus statement"]):
+        return "narrative_review"
     if "mendelian randomization" in f"{title} {body}":
         return "human_mendelian_randomization"
     if (
@@ -243,8 +266,6 @@ def normalized_study_type(row: dict[str, str]) -> str:
         or any(term in body for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort"])
     ):
         return "human_cohort"
-    if "review" in publication_types or any(term in title for term in ["review", "guideline", "consensus statement"]):
-        return "narrative_review"
     if any(
         term in body
         for term in [
@@ -274,6 +295,8 @@ def normalized_species(row: dict[str, str], study_type: str) -> str:
         return "needs_review"
     if study_type == "animal_study":
         return "mouse" if any(term in combined for term in ["mice", "mouse", "murine"]) else "animal"
+    if study_type == "mixed_human_and_animal_study":
+        return "mixed_human_animal"
     if study_type == "mechanistic_or_cell_study":
         return "cell"
     if study_type in {
@@ -294,6 +317,34 @@ def normalized_species(row: dict[str, str], study_type: str) -> str:
     return "needs_review"
 
 
+def normalized_healthspan_endpoint(row: dict[str, str]) -> str:
+    """Prefer the paper's title/conclusion over background-only abstract wording."""
+    text = f"{row.get('title_en', '')} {row.get('conclusion_en', '')}".lower()
+    if any(
+        term in text
+        for term in [
+            "mortality",
+            "death",
+            "mace",
+            "stroke",
+            "cardiovascular event",
+            "fracture",
+            "dementia incidence",
+            "cancer incidence",
+        ]
+    ):
+        return "H1"
+    if any(term in text for term in ["vo2", "frailty", "grip strength", "cognition", "falls", "sarcopenia", "disability", "quality of life"]):
+        return "H2"
+    if any(term in text for term in ["ldl", "apob", "blood pressure", "hba1c", "waist", "glucose", "body weight", "obesity", "insulin"]):
+        return "H3"
+    if any(term in text for term in ["epigenetic clock", "methylation age", "biological age", "aging clock"]):
+        return "H5"
+    if any(term in text for term in ["mouse lifespan", "mice lifespan", "murine lifespan"]):
+        return "H6"
+    return row.get("endpoint_class_draft") or row.get("endpoint_class") or "H4"
+
+
 def design_score(study_type: str) -> int:
     s = (study_type or "").lower()
     if "protocol" in s or "registered_plan" in s:
@@ -308,6 +359,8 @@ def design_score(study_type: str) -> int:
         return 24
     if "observational" in s or "human_or_mixed" in s:
         return 18
+    if "mixed_human_and_animal" in s:
+        return 16
     if "animal" in s or "preclinical" in s:
         return 11
     if "mechanistic" in s or "cell" in s:
@@ -336,6 +389,8 @@ def endpoint_score(endpoint: str, domain: str) -> int:
 
 def human_score(species: str, study: str, domain: str) -> int:
     s = f"{species} {study}".lower()
+    if "mixed_human_animal" in s or "mixed_human_and_animal" in s:
+        return 9
     if "human" in s or "clinical" in s or "cohort" in s or "randomized" in s:
         return 15
     if "animal" in s or "mouse" in s or "mice" in s:
@@ -451,7 +506,7 @@ def level_from_score(score: int, cap: str) -> str:
 
 
 def confidence_cap(row: dict[str, str], domain: str) -> str:
-    study = (row.get("study_type_draft") or row.get("study_type") or "").lower()
+    study = normalized_study_type(row).lower()
     endpoint = (row.get("endpoint_class_draft") or row.get("endpoint_class") or "").upper()
     depth = (row.get("evidence_source_depth") or "").lower()
     topic = row.get("topic_id", "")
@@ -497,6 +552,8 @@ def score_row(row: dict[str, str], domain: str, icite: dict, openalex: dict) -> 
     normalized_study = normalized_study_type(row)
     row["study_type_draft"] = normalized_study
     row["species_draft"] = normalized_species(row, normalized_study)
+    if domain == "longevity":
+        row["endpoint_class_draft"] = normalized_healthspan_endpoint(row)
     if protocol or non_primary:
         row["evidence_level_draft"] = "E"
         row["recommendation_class_draft"] = "Monitor"

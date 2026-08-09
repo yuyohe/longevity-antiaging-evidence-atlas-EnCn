@@ -34,93 +34,57 @@
 
 | Review ID | 主题 | PMID | 年份 | 等级 | 工具 | 下一步 |
 |---|---|---|---:|---|---|---|
-| core-healthspan-cardiorespiratory-fitness-01 | 心肺适能与死亡风险 | [42415992](https://pubmed.ncbi.nlm.nih.gov/42415992/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-cardiorespiratory-fitness-02 | 心肺适能与死亡风险 | [42404333](https://pubmed.ncbi.nlm.nih.gov/42404333/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-cardiorespiratory-fitness-03 | 心肺适能与死亡风险 | [42376039](https://pubmed.ncbi.nlm.nih.gov/42376039/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-cardiorespiratory-fitness-04 | 心肺适能与死亡风险 | [42269051](https://pubmed.ncbi.nlm.nih.gov/42269051/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-cardiorespiratory-fitness-05 | 心肺适能与死亡风险 | [42062906](https://pubmed.ncbi.nlm.nih.gov/42062906/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-01 | 身体活动与健康寿命 | [42477260](https://pubmed.ncbi.nlm.nih.gov/42477260/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-02 | 身体活动与健康寿命 | [41980883](https://pubmed.ncbi.nlm.nih.gov/41980883/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-03 | 身体活动与健康寿命 | [42421626](https://pubmed.ncbi.nlm.nih.gov/42421626/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-04 | 身体活动与健康寿命 | [42400650](https://pubmed.ncbi.nlm.nih.gov/42400650/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-05 | 身体活动与健康寿命 | [42373873](https://pubmed.ncbi.nlm.nih.gov/42373873/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-resistance-training-muscle-01 | 抗阻训练、肌肉与衰弱 | [41051730](https://pubmed.ncbi.nlm.nih.gov/41051730/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-resistance-training-muscle-02 | 抗阻训练、肌肉与衰弱 | [42495106](https://pubmed.ncbi.nlm.nih.gov/42495106/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-resistance-training-muscle-03 | 抗阻训练、肌肉与衰弱 | [39342128](https://pubmed.ncbi.nlm.nih.gov/39342128/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-resistance-training-muscle-04 | 抗阻训练、肌肉与衰弱 | [38489994](https://pubmed.ncbi.nlm.nih.gov/38489994/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-resistance-training-muscle-05 | 抗阻训练、肌肉与衰弱 | [38341512](https://pubmed.ncbi.nlm.nih.gov/38341512/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-blood-pressure-aging-01 | 血压与健康寿命 | [42396164](https://pubmed.ncbi.nlm.nih.gov/42396164/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-blood-pressure-aging-02 | 血压与健康寿命 | [42377683](https://pubmed.ncbi.nlm.nih.gov/42377683/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-blood-pressure-aging-03 | 血压与健康寿命 | [42254206](https://pubmed.ncbi.nlm.nih.gov/42254206/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-blood-pressure-aging-04 | 血压与健康寿命 | [42161238](https://pubmed.ncbi.nlm.nih.gov/42161238/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-blood-pressure-aging-05 | 血压与健康寿命 | [41066678](https://pubmed.ncbi.nlm.nih.gov/41066678/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-ldl-apob-cardiovascular-risk-01 | LDL-C/apoB 与心血管风险 | [42321442](https://pubmed.ncbi.nlm.nih.gov/42321442/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-ldl-apob-cardiovascular-risk-02 | LDL-C/apoB 与心血管风险 | [41549171](https://pubmed.ncbi.nlm.nih.gov/41549171/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-ldl-apob-cardiovascular-risk-03 | LDL-C/apoB 与心血管风险 | [42111473](https://pubmed.ncbi.nlm.nih.gov/42111473/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-ldl-apob-cardiovascular-risk-04 | LDL-C/apoB 与心血管风险 | [42095149](https://pubmed.ncbi.nlm.nih.gov/42095149/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-ldl-apob-cardiovascular-risk-05 | LDL-C/apoB 与心血管风险 | [42091697](https://pubmed.ncbi.nlm.nih.gov/42091697/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-01 | 饮食模式与死亡风险 | [41158656](https://pubmed.ncbi.nlm.nih.gov/41158656/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-02 | 饮食模式与死亡风险 | [40866745](https://pubmed.ncbi.nlm.nih.gov/40866745/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-03 | 饮食模式与死亡风险 | [40033461](https://pubmed.ncbi.nlm.nih.gov/40033461/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-04 | 饮食模式与死亡风险 | [40005424](https://pubmed.ncbi.nlm.nih.gov/40005424/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-05 | 饮食模式与死亡风险 | [39902310](https://pubmed.ncbi.nlm.nih.gov/39902310/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-sleep-aging-01 | 睡眠与健康结局 | [42278841](https://pubmed.ncbi.nlm.nih.gov/42278841/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-sleep-aging-02 | 睡眠与健康结局 | [41039116](https://pubmed.ncbi.nlm.nih.gov/41039116/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-sleep-aging-03 | 睡眠与健康结局 | [40982264](https://pubmed.ncbi.nlm.nih.gov/40982264/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-sleep-aging-04 | 睡眠与健康结局 | [40118084](https://pubmed.ncbi.nlm.nih.gov/40118084/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-sleep-aging-05 | 睡眠与健康结局 | [40078770](https://pubmed.ncbi.nlm.nih.gov/40078770/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-01 | GLP-1、减重与心代谢结局 | [42479368](https://pubmed.ncbi.nlm.nih.gov/42479368/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-02 | GLP-1、减重与心代谢结局 | [41761267](https://pubmed.ncbi.nlm.nih.gov/41761267/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-03 | GLP-1、减重与心代谢结局 | [42427474](https://pubmed.ncbi.nlm.nih.gov/42427474/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-04 | GLP-1、减重与心代谢结局 | [42387250](https://pubmed.ncbi.nlm.nih.gov/42387250/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-05 | GLP-1、减重与心代谢结局 | [42376494](https://pubmed.ncbi.nlm.nih.gov/42376494/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-caloric-restriction-human-01 | 热量限制与人体衰老 | [41470790](https://pubmed.ncbi.nlm.nih.gov/41470790/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-caloric-restriction-human-02 | 热量限制与人体衰老 | [36521448](https://pubmed.ncbi.nlm.nih.gov/36521448/) | 2023 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-caloric-restriction-human-03 | 热量限制与人体衰老 | [22718956](https://pubmed.ncbi.nlm.nih.gov/22718956/) | 2012 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-caloric-restriction-human-04 | 热量限制与人体衰老 | [40289996](https://pubmed.ncbi.nlm.nih.gov/40289996/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-caloric-restriction-human-05 | 热量限制与人体衰老 | [39267053](https://pubmed.ncbi.nlm.nih.gov/39267053/) | 2024 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-time-restricted-eating-01 | 限时进食与代谢健康 | [40970988](https://pubmed.ncbi.nlm.nih.gov/40970988/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-time-restricted-eating-02 | 限时进食与代谢健康 | [39696154](https://pubmed.ncbi.nlm.nih.gov/39696154/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-time-restricted-eating-03 | 限时进食与代谢健康 | [34919135](https://pubmed.ncbi.nlm.nih.gov/34919135/) | 2021 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-time-restricted-eating-04 | 限时进食与代谢健康 | [41692034](https://pubmed.ncbi.nlm.nih.gov/41692034/) | 2026 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-time-restricted-eating-05 | 限时进食与代谢健康 | [41459076](https://pubmed.ncbi.nlm.nih.gov/41459076/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-cardiorespiratory-fitness-01 | 心肺适能与死亡风险 | [42543470](https://pubmed.ncbi.nlm.nih.gov/42543470/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-cardiorespiratory-fitness-02 | 心肺适能与死亡风险 | [42376039](https://pubmed.ncbi.nlm.nih.gov/42376039/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-cardiorespiratory-fitness-03 | 心肺适能与死亡风险 | [42062906](https://pubmed.ncbi.nlm.nih.gov/42062906/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-physical-activity-healthspan-01 | 身体活动与健康寿命 | [42400650](https://pubmed.ncbi.nlm.nih.gov/42400650/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-physical-activity-healthspan-02 | 身体活动与健康寿命 | [42348026](https://pubmed.ncbi.nlm.nih.gov/42348026/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-physical-activity-healthspan-03 | 身体活动与健康寿命 | [42127076](https://pubmed.ncbi.nlm.nih.gov/42127076/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-resistance-training-muscle-01 | 抗阻训练、肌肉与衰弱 | [42495106](https://pubmed.ncbi.nlm.nih.gov/42495106/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-resistance-training-muscle-02 | 抗阻训练、肌肉与衰弱 | [39342128](https://pubmed.ncbi.nlm.nih.gov/39342128/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-resistance-training-muscle-03 | 抗阻训练、肌肉与衰弱 | [38341512](https://pubmed.ncbi.nlm.nih.gov/38341512/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-blood-pressure-aging-01 | 血压与健康寿命 | [42254206](https://pubmed.ncbi.nlm.nih.gov/42254206/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-blood-pressure-aging-02 | 血压与健康寿命 | [35137952](https://pubmed.ncbi.nlm.nih.gov/35137952/) | 2022 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-blood-pressure-aging-03 | 血压与健康寿命 | [32083689](https://pubmed.ncbi.nlm.nih.gov/32083689/) | 2020 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-ldl-apob-cardiovascular-risk-01 | LDL-C/apoB 与心血管风险 | [41717350](https://pubmed.ncbi.nlm.nih.gov/41717350/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-ldl-apob-cardiovascular-risk-02 | LDL-C/apoB 与心血管风险 | [41235335](https://pubmed.ncbi.nlm.nih.gov/41235335/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-ldl-apob-cardiovascular-risk-03 | LDL-C/apoB 与心血管风险 | [35886124](https://pubmed.ncbi.nlm.nih.gov/35886124/) | 2022 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-01 | 饮食模式与死亡风险 | [41515149](https://pubmed.ncbi.nlm.nih.gov/41515149/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-02 | 饮食模式与死亡风险 | [41158656](https://pubmed.ncbi.nlm.nih.gov/41158656/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-03 | 饮食模式与死亡风险 | [40866745](https://pubmed.ncbi.nlm.nih.gov/40866745/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-sleep-aging-01 | 睡眠与健康结局 | [40982264](https://pubmed.ncbi.nlm.nih.gov/40982264/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-sleep-aging-02 | 睡眠与健康结局 | [40072785](https://pubmed.ncbi.nlm.nih.gov/40072785/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-sleep-aging-03 | 睡眠与健康结局 | [39960920](https://pubmed.ncbi.nlm.nih.gov/39960920/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-01 | GLP-1、减重与心代谢结局 | [42219271](https://pubmed.ncbi.nlm.nih.gov/42219271/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-02 | GLP-1、减重与心代谢结局 | [42339050](https://pubmed.ncbi.nlm.nih.gov/42339050/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-03 | GLP-1、减重与心代谢结局 | [41761267](https://pubmed.ncbi.nlm.nih.gov/41761267/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-caloric-restriction-human-01 | 热量限制与人体衰老 | [37118425](https://pubmed.ncbi.nlm.nih.gov/37118425/) | 2023 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-caloric-restriction-human-02 | 热量限制与人体衰老 | [28600365](https://pubmed.ncbi.nlm.nih.gov/28600365/) | 2017 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-caloric-restriction-human-03 | 热量限制与人体衰老 | [26332798](https://pubmed.ncbi.nlm.nih.gov/26332798/) | 2016 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-time-restricted-eating-01 | 限时进食与代谢健康 | [39696154](https://pubmed.ncbi.nlm.nih.gov/39696154/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-time-restricted-eating-02 | 限时进食与代谢健康 | [40573103](https://pubmed.ncbi.nlm.nih.gov/40573103/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-time-restricted-eating-03 | 限时进食与代谢健康 | [39212676](https://pubmed.ncbi.nlm.nih.gov/39212676/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-metformin-aging-01 | 二甲双胍与衰老 | [39819905](https://pubmed.ncbi.nlm.nih.gov/39819905/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-metformin-aging-02 | 二甲双胍与衰老 | [39277567](https://pubmed.ncbi.nlm.nih.gov/39277567/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-metformin-aging-03 | 二甲双胍与衰老 | [38683419](https://pubmed.ncbi.nlm.nih.gov/38683419/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-metformin-aging-04 | 二甲双胍与衰老 | [38589722](https://pubmed.ncbi.nlm.nih.gov/38589722/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-metformin-aging-05 | 二甲双胍与衰老 | [37526857](https://pubmed.ncbi.nlm.nih.gov/37526857/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-epigenetic-clocks-01 | 表观遗传时钟 | [41756167](https://pubmed.ncbi.nlm.nih.gov/41756167/) | 2026 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-epigenetic-clocks-02 | 表观遗传时钟 | [41580776](https://pubmed.ncbi.nlm.nih.gov/41580776/) | 2026 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-epigenetic-clocks-03 | 表观遗传时钟 | [41281553](https://pubmed.ncbi.nlm.nih.gov/41281553/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-epigenetic-clocks-04 | 表观遗传时钟 | [38856830](https://pubmed.ncbi.nlm.nih.gov/38856830/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-epigenetic-clocks-05 | 表观遗传时钟 | [38589929](https://pubmed.ncbi.nlm.nih.gov/38589929/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-metformin-aging-02 | 二甲双胍与衰老 | [36821577](https://pubmed.ncbi.nlm.nih.gov/36821577/) | 2023 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-metformin-aging-03 | 二甲双胍与衰老 | [36652938](https://pubmed.ncbi.nlm.nih.gov/36652938/) | 2023 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-epigenetic-clocks-01 | 表观遗传时钟 | [30975202](https://pubmed.ncbi.nlm.nih.gov/30975202/) | 2019 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-epigenetic-clocks-02 | 表观遗传时钟 | [27690265](https://pubmed.ncbi.nlm.nih.gov/27690265/) | 2016 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-epigenetic-clocks-03 | 表观遗传时钟 | [42239007](https://pubmed.ncbi.nlm.nih.gov/42239007/) | 2026 | B | ROBINS-I | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-microbiome-inflammaging-01 | 微生物组与炎症性衰老 | [41879310](https://pubmed.ncbi.nlm.nih.gov/41879310/) | 2026 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-microbiome-inflammaging-02 | 微生物组与炎症性衰老 | [42434011](https://pubmed.ncbi.nlm.nih.gov/42434011/) | 2026 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-microbiome-inflammaging-03 | 微生物组与炎症性衰老 | [41408188](https://pubmed.ncbi.nlm.nih.gov/41408188/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-microbiome-inflammaging-04 | 微生物组与炎症性衰老 | [40826128](https://pubmed.ncbi.nlm.nih.gov/40826128/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-microbiome-inflammaging-05 | 微生物组与炎症性衰老 | [40806090](https://pubmed.ncbi.nlm.nih.gov/40806090/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-microbiome-inflammaging-02 | 微生物组与炎症性衰老 | [41408188](https://pubmed.ncbi.nlm.nih.gov/41408188/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-microbiome-inflammaging-03 | 微生物组与炎症性衰老 | [40826128](https://pubmed.ncbi.nlm.nih.gov/40826128/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-sunscreen-photoaging-prevention-01 | 防晒与光老化预防 | [23732711](https://pubmed.ncbi.nlm.nih.gov/23732711/) | 2013 | C | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-sunscreen-photoaging-prevention-02 | 防晒与光老化预防 | [34387824](https://pubmed.ncbi.nlm.nih.gov/34387824/) | 2021 | C | domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-sunscreen-photoaging-prevention-03 | 防晒与光老化预防 | [36536536](https://pubmed.ncbi.nlm.nih.gov/36536536/) | 2023 | D | preclinical/domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-sunscreen-photoaging-prevention-04 | 防晒与光老化预防 | [33655657](https://pubmed.ncbi.nlm.nih.gov/33655657/) | 2021 | D | domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-sunscreen-photoaging-prevention-05 | 防晒与光老化预防 | [29981751](https://pubmed.ncbi.nlm.nih.gov/29981751/) | 2019 | D | domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-retinoids-photoaging-01 | 维A酸/视黄醇类与光老化 | [40145274](https://pubmed.ncbi.nlm.nih.gov/40145274/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-retinoids-photoaging-02 | 维A酸/视黄醇类与光老化 | [40707570](https://pubmed.ncbi.nlm.nih.gov/40707570/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-retinoids-photoaging-03 | 维A酸/视黄醇类与光老化 | [39348007](https://pubmed.ncbi.nlm.nih.gov/39348007/) | 2024 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-retinoids-photoaging-04 | 维A酸/视黄醇类与光老化 | [36176207](https://pubmed.ncbi.nlm.nih.gov/36176207/) | 2022 | C | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-retinoids-photoaging-05 | 维A酸/视黄醇类与光老化 | [39128883](https://pubmed.ncbi.nlm.nih.gov/39128883/) | 2025 | C | domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-topical-vitamin-c-01 | 维C外用与色素/胶原 | [31975502](https://pubmed.ncbi.nlm.nih.gov/31975502/) | 2020 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-topical-vitamin-c-02 | 维C外用与色素/胶原 | [37128827](https://pubmed.ncbi.nlm.nih.gov/37128827/) | 2023 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-topical-vitamin-c-03 | 维C外用与色素/胶原 | [33857549](https://pubmed.ncbi.nlm.nih.gov/33857549/) | 2022 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-topical-vitamin-c-04 | 维C外用与色素/胶原 | [36009324](https://pubmed.ncbi.nlm.nih.gov/36009324/) | 2022 | D | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-topical-vitamin-c-05 | 维C外用与色素/胶原 | [30386805](https://pubmed.ncbi.nlm.nih.gov/30386805/) | 2018 | D | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-energy-devices-resurfacing-01 | 医美能量设备和换肤类干预 | [40542236](https://pubmed.ncbi.nlm.nih.gov/40542236/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-energy-devices-resurfacing-02 | 医美能量设备和换肤类干预 | [28690124](https://pubmed.ncbi.nlm.nih.gov/28690124/) | 2018 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-energy-devices-resurfacing-03 | 医美能量设备和换肤类干预 | [39731267](https://pubmed.ncbi.nlm.nih.gov/39731267/) | 2025 | C | domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-energy-devices-resurfacing-04 | 医美能量设备和换肤类干预 | [39449889](https://pubmed.ncbi.nlm.nih.gov/39449889/) | 2024 | C | domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-energy-devices-resurfacing-05 | 医美能量设备和换肤类干预 | [38816973](https://pubmed.ncbi.nlm.nih.gov/38816973/) | 2024 | D | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-pdrn-polynucleotide-skin-boosters-01 | PDRN/PN 与 Skin Booster | [39645667](https://pubmed.ncbi.nlm.nih.gov/39645667/) | 2025 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-pdrn-polynucleotide-skin-boosters-02 | PDRN/PN 与 Skin Booster | [39313949](https://pubmed.ncbi.nlm.nih.gov/39313949/) | 2025 | C | ROBINS-I | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-skin_beauty-pdrn-polynucleotide-skin-boosters-03 | PDRN/PN 与 Skin Booster | [39198280](https://pubmed.ncbi.nlm.nih.gov/39198280/) | 2025 | D | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-pdrn-polynucleotide-skin-boosters-04 | PDRN/PN 与 Skin Booster | [34791770](https://pubmed.ncbi.nlm.nih.gov/34791770/) | 2022 | D | ROBINS-I | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-skin_beauty-pdrn-polynucleotide-skin-boosters-05 | PDRN/PN 与 Skin Booster | [25473210](https://pubmed.ncbi.nlm.nih.gov/25473210/) | 2014 | D | preclinical/domain screen | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |

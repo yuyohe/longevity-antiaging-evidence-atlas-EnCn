@@ -147,6 +147,17 @@ class FeishuClient:
         )
         return self._json(resp)
 
+    def update_bitable_table(self, app_token: str, table_id: str, table_name: str) -> Dict[str, Any]:
+        """Rename an existing table without creating a monthly duplicate."""
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}"
+        resp = requests.patch(
+            url,
+            headers=self._headers(),
+            json={"name": table_name},
+            timeout=30,
+        )
+        return self._json(resp)
+
     def create_bitable_text_field(self, app_token: str, table_id: str, field_name: str) -> Dict[str, Any]:
         return self.create_bitable_field(app_token, table_id, field_name, 1)
 
@@ -235,6 +246,21 @@ class FeishuClient:
     def delete_bitable_record(self, app_token: str, table_id: str, record_id: str) -> Dict[str, Any]:
         url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/{record_id}"
         resp = requests.delete(url, headers=self._headers(), timeout=30)
+        return self._json(resp)
+
+    def batch_delete_bitable_records(self, app_token: str, table_id: str, record_ids: List[str]) -> Dict[str, Any]:
+        """Delete up to 500 records in one request."""
+        if not record_ids:
+            return {"code": 0, "msg": "no records", "data": {"records": []}}
+        if len(record_ids) > 500:
+            raise FeishuError("batch_delete_bitable_records accepts at most 500 record IDs")
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/records/batch_delete"
+        resp = requests.post(
+            url,
+            headers=self._headers(),
+            json={"records": record_ids},
+            timeout=60,
+        )
         return self._json(resp)
 
     def get_wiki_node(self, node_token: str) -> Dict[str, Any]:

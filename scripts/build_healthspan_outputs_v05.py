@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -20,7 +21,7 @@ TOPICS_DIR = CONTENT / "topics"
 ANALYSIS = CONTENT / "analysis" / "evidence-ranking.md"
 RECOMMENDATIONS = CONTENT / "recommendations" / "for-general-readers.md"
 STATUS_DOC = ROOT / "docs" / "current-output-status.md"
-TODAY = "2026-04-29"
+TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-04-29")
 DRAFT_NOTICE_ZH = "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。"
 DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not medical advice."
 
@@ -108,9 +109,13 @@ def build_shortlist(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     return out
 
 
-def build_matrix(rows: list[dict[str, str]], limit: int) -> list[dict[str, str]]:
+def build_matrix(rows: list[dict[str, str]], limit: int, per_topic_cap: int = 0) -> list[dict[str, str]]:
     out = []
-    for row in sorted(rows, key=level_rank)[:limit]:
+    topic_counts: Counter[str] = Counter()
+    for row in sorted(rows, key=level_rank):
+        topic_id = row.get("topic_id", "")
+        if per_topic_cap and topic_counts[topic_id] >= per_topic_cap:
+            continue
         out.append({
             "paper_id": row["candidate_id"],
             "year": row["year"],
@@ -138,6 +143,9 @@ def build_matrix(rows: list[dict[str, str]], limit: int) -> list[dict[str, str]]
             "confidence_cap_rule": row.get("confidence_cap_rule", ""),
             "scoring_version": row.get("scoring_version", ""),
         })
+        topic_counts[topic_id] += 1
+        if len(out) >= limit:
+            break
     return out
 
 
@@ -502,12 +510,18 @@ def write_status(rows: list[dict[str, str]], matrix: list[dict[str, str]], topic
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--matrix-limit", type=int, default=900)
+    parser.add_argument(
+        "--matrix-per-topic-cap",
+        type=int,
+        default=0,
+        help="Optional maximum rows per topic; zero keeps the historical global ranking behavior.",
+    )
     args = parser.parse_args()
     rows = read_csv(FINDINGS)
     clean_generated_pages()
     shortlist = build_shortlist(rows)
     write_csv(SHORTLIST, shortlist, list(shortlist[0].keys()))
-    matrix = build_matrix(rows, args.matrix_limit)
+    matrix = build_matrix(rows, args.matrix_limit, args.matrix_per_topic_cap)
     write_csv(MATRIX, matrix, list(matrix[0].keys()))
     write_paper_pages(rows)
     topics = write_topic_pages_and_topics(rows)

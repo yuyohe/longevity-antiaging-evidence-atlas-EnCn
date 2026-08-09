@@ -39,6 +39,17 @@ HUMAN_SUBJECT_RE = re.compile(
     r"volunteers?|children|adolescents?)\b",
     flags=re.IGNORECASE,
 )
+DIRECT_ANIMAL_METHOD_RE = re.compile(
+    r"\banimal experiments?\b|\b(?:mouse|rat) model\b|"
+    r"\b(?:mice|rats)\s+(?:were|underwent|received|exhibited|showed|demonstrated)\b|"
+    r"\bin vivo\b",
+    flags=re.IGNORECASE,
+)
+DIRECT_HUMAN_METHOD_RE = re.compile(
+    r"\bclinical cohort\b|\bhuman cohort\b|\bpatients? who\b|\bin patients?\b|"
+    r"\bparticipants? (?:were|received|underwent)\b",
+    flags=re.IGNORECASE,
+)
 NON_PRIMARY_PUBLICATION_TYPES = (
     "published erratum",
     "editorial",
@@ -227,7 +238,9 @@ def publication_types(article: ET.Element) -> list[str]:
 
 def article_ids(article: ET.Element) -> dict[str, str]:
     ids = {}
-    for item in article.findall(".//ArticleIdList/ArticleId"):
+    # Restrict the lookup to the article's own PubmedData block. Reference
+    # lists also contain ArticleIdList nodes and must never overwrite IDs.
+    for item in article.findall("./PubmedData/ArticleIdList/ArticleId"):
         id_type = item.attrib.get("IdType", "").lower()
         if id_type:
             ids[id_type] = text(item)
@@ -486,10 +499,18 @@ def has_direct_animal_subject(type_text: str, title_text: str, body_text: str) -
         return True
     if ANIMAL_SUBJECT_RE.search(title_text) and not HUMAN_SUBJECT_RE.search(title_text):
         return True
+    if DIRECT_ANIMAL_METHOD_RE.search(body_text):
+        return True
     assignment = r"(?:randomly assigned|randomly allocated|allocated at random)"
     animal = ANIMAL_SUBJECT_RE.pattern
     return bool(
         re.search(rf"{animal}.{{0,180}}{assignment}|{assignment}.{{0,180}}{animal}", body_text)
+    )
+
+
+def has_mixed_human_and_animal_subjects(type_text: str, title_text: str, body_text: str) -> bool:
+    return has_direct_animal_subject(type_text, title_text, body_text) and bool(
+        DIRECT_HUMAN_METHOD_RE.search(f"{title_text} {body_text}")
     )
 
 
@@ -505,6 +526,8 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         return "protocol_or_registered_plan"
     if any(term in f"{type_text} {title_text}" for term in ["meta-analysis", "meta analysis", "systematic review", "umbrella review"]):
         return "systematic_review_or_meta_analysis"
+    if has_mixed_human_and_animal_subjects(type_text, title_text, body_text):
+        return "mixed_human_and_animal_study"
     if has_direct_animal_subject(type_text, title_text, body_text):
         return "animal_study"
     if (
@@ -512,6 +535,8 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         or any(term in title_text for term in ["randomized controlled trial", "randomised controlled trial", "randomized trial", "randomised trial"])
     ):
         return "human_randomized_or_clinical_trial"
+    if "review" in type_text or any(term in title_text for term in ["review", "guideline", "consensus statement"]):
+        return "narrative_review"
     if "mendelian randomization" in f"{title_text} {body_text}":
         return "human_mendelian_randomization"
     if (
@@ -519,8 +544,6 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         or any(term in body_text for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort"])
     ):
         return "human_cohort"
-    if "review" in type_text or any(term in title_text for term in ["review", "guideline", "consensus statement"]):
-        return "narrative_review"
     if any(
         term in body_text
         for term in [
@@ -548,6 +571,8 @@ def classify_species(study_type: str, body: str, title: str = "") -> str:
         if any(term in lower for term in ["mice", "mouse", "murine"]):
             return "mouse"
         return "animal"
+    if study_type == "mixed_human_and_animal_study":
+        return "mixed_human_animal"
     if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort", "human_mendelian_randomization"}:
         return "human"
     if any(term in lower for term in ["participants", "patients", "adults", "women", "men", "cohort"]):
@@ -584,6 +609,8 @@ def evidence_level(study_type: str, endpoint_class: str) -> str:
     if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort", "human_mendelian_randomization"}:
         return "C"
     if study_type == "animal_study":
+        return "D"
+    if study_type == "mixed_human_and_animal_study":
         return "D"
     return "E"
 
@@ -663,7 +690,7 @@ def finding_from_article(row: dict[str, str], article: ET.Element | None, index:
         metadata_only = True
     study = classify_study(pub_types, body, row.get("source", "PubMed"), row.get("title_en", ""))
     species = classify_species(study, body, row.get("title_en", ""))
-    endpoint = classify_endpoint(topic["id"], body)
+    endpoint = classify_endpoint(topic["id"], f"{row.get('title_en', '')} {result_en} {conclusion_en}")
     level = evidence_level(study, endpoint)
     authority = authority_signal(row, ids, pub_types, journal, source_depth)
     contribution = draft_score(level, endpoint, species, authority)

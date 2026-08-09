@@ -1,6 +1,6 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-07-29
+Last updated / 最后更新：2026-08-09
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
@@ -10,33 +10,35 @@ This file is the local continuity record for future Codex threads and human main
 
 The current public release supersedes the historical counts later in this log.
 
-- Snapshot date: `2026-07-29`
-- Publication repository: `D:\longevity\github-publish-2026-06-29`
+- Snapshot date: `2026-08-09`
+- Publication repository: `D:\longevity\github-publish-2026-08-mid`
 - Development workspace: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn` (may contain unrelated local work; do not use it as a clean release checkout)
-- Candidate and literature records: `16,151`
-- Shortlist and evidence findings: `6,000`
-- Evidence matrix: `3,000`
-- Public CSV processing rows: `47,302`
+- Candidate and literature records: `11,079`
+- Shortlist and evidence findings: `2,966`
+- Evidence matrix: `1,500`
+- Public CSV processing rows: `29,590`
 - Visual assets: `7` main PNGs plus `50` ingredient cards
 - Feishu release layer: `9` active tables
-- Plain-language release guide: `content/public-reader/end-july-2026-update.md`
-- Self-contained visual report: `docs/end-july-public-update-2026-07.html`
-- Self-contained posting dashboard: `docs/yulcell-posting-asset-dashboard-2026-07-29.html`
-- Feishu table manifest: `data/feishu_live_tables_2026_07.csv`
-- Feishu read-only audit report: `build/feishu_online_audit_2026_07.json`
+- Plain-language release guide: `content/public-reader/mid-august-2026-update.md`
+- Self-contained visual report: `docs/mid-august-public-update-2026-08.html`
+- Feishu table manifest: `data/feishu_live_tables_2026_08.csv`
+- Feishu stable table registry: `data/feishu_table_registry.csv`
+- Feishu read-only audit report: `build/feishu_online_audit_2026_08.json`
 
-The July 15-29 PubMed refresh added 427 deduplicated candidates. Of those, 161 entered the findings layer across 18 topics. Protocols are classified as `protocol_or_registered_plan` and capped at evidence level E. Editorials, corrections, and related non-primary records are classified as `non_primary_commentary_or_correction` and capped at E. Explicit animal subjects take precedence over randomized-design wording; uncertain designs remain `metadata_only_needs_classification`.
+The August curation searched PubMed for 2026-07-30 through 2026-08-09, found 1,042 unique matches and 834 new candidates, retained 303 recent candidates, and placed 211 into findings. The active library is bounded at 600 candidates and 200 findings per topic; the matrix is bounded at 1,500 total and 100 per topic. Retirement decisions are in `data/archive/`, and older public snapshots are compressed under `archive/public-data/` after SHA-256 verification.
+
+The PubMed XML parser now restricts article identifiers to the article's own `PubmedData/ArticleIdList`. A full official-summary repair checked all 2,966 finding PMIDs and corrected DOI/PMCID contamination from cited references.
 
 Current release validation:
 
 ```powershell
-$env:EXPECTED_FINDINGS='6000'
-$env:MIN_MATRIX_ROWS='3000'
-$env:MAX_MATRIX_ROWS='3000'
+$env:EXPECTED_FINDINGS='2966'
+$env:MIN_MATRIX_ROWS='1500'
+$env:MAX_MATRIX_ROWS='1500'
 python scripts\lint.py
 python scripts\validate_public_drafts.py
 python scripts\validate_skin_beauty_public_drafts.py
-python scripts\validate_public_release_2026_07.py
+python scripts\validate_public_release_2026_08.py
 ```
 
 Do not publish from the development workspace without first checking its worktree. For public releases, start from a clean clone or worktree that matches GitHub `main`, run the complete build chain, validate locally, then perform the read-only Feishu audit.

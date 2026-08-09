@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import os
 import sys
 from pathlib import Path
@@ -11,10 +12,27 @@ ROOT = Path(__file__).resolve().parents[1]
 DRAFT_NOTICE_ZH = "草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。"
 DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not medical advice."
 
-EXPECTED_FINDINGS = int(os.getenv("EXPECTED_FINDINGS", "5600"))
 EXPECTED_TOPICS = 20
-MIN_MATRIX_ROWS = int(os.getenv("MIN_MATRIX_ROWS", "2800"))
-MAX_MATRIX_ROWS = int(os.getenv("MAX_MATRIX_ROWS", "2800"))
+
+
+def release_expectations() -> tuple[int, int, int]:
+    metrics_path = Path(
+        os.getenv(
+            "RELEASE_METRICS_PATH",
+            ROOT / "data" / "curation_release_metrics_2026_08.json",
+        )
+    )
+    metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+    findings = int(metrics["after"]["finding_records"])
+    matrix = int(metrics["capacity_policy"]["matrix_global_cap"])
+    return (
+        int(os.getenv("EXPECTED_FINDINGS", findings)),
+        int(os.getenv("MIN_MATRIX_ROWS", matrix)),
+        int(os.getenv("MAX_MATRIX_ROWS", matrix)),
+    )
+
+
+EXPECTED_FINDINGS, MIN_MATRIX_ROWS, MAX_MATRIX_ROWS = release_expectations()
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:

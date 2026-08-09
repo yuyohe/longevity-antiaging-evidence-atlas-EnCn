@@ -10,21 +10,40 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: Fetch PubMed candidates
+      - name: Build bounded PubMed intake queue
         env:
           NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
-        run: python scripts/fetch_pubmed.py
-      - name: Commit candidates
+        run: python scripts/fetch_pubmed_intake.py --lookback-days 14 --max-intake 300
+      - name: Check intake changes
+        id: changes
         run: |
+          if git diff --quiet -- data/candidate_intake.csv data/candidate_intake_report.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open review pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="pubmed/bounded-intake-${{ github.run_id }}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/candidate_sources.csv data/query_log.csv
-          git diff --cached --quiet || git commit -m "data: update PubMed candidate sources"
-          git push
+          git checkout -b "$BRANCH"
+          git add data/candidate_intake.csv data/candidate_intake_report.json
+          git commit -m "data: refresh bounded PubMed intake"
+          git push origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "PubMed bounded intake review" \
+            --body "This PR refreshes a capped intake queue only. It does not enlarge the active candidate library. Promotion requires relevance review and replacement within the per-topic capacity budget."

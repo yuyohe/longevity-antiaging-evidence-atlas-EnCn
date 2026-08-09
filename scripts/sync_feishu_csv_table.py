@@ -20,10 +20,19 @@ def normalize(value: str) -> Any:
     return "" if value is None else str(value).strip()
 
 
-def ensure_table(client: FeishuClient, app_token: str, table_name: str, primary_field: str, fieldnames: list[str]) -> str:
+def ensure_table(
+    client: FeishuClient,
+    app_token: str,
+    table_name: str,
+    primary_field: str,
+    fieldnames: list[str],
+    allow_create: bool,
+) -> str:
     for table in client.list_bitable_tables(app_token):
         if table.get("name") == table_name:
             return table.get("table_id", "")
+    if not allow_create:
+        raise FeishuError(f"No existing table named {table_name}; pass --allow-create only for a deliberate new asset")
     fields = [{"field_name": primary_field, "type": 1}]
     fields.extend({"field_name": name, "type": 1} for name in fieldnames if name != primary_field)
     table = client.create_bitable_table(app_token, table_name, "表格", fields)
@@ -60,6 +69,8 @@ def main() -> None:
     parser.add_argument("--primary-field", default="文本")
     parser.add_argument("--table-id-env", default="")
     parser.add_argument("--delete-stale", action="store_true")
+    parser.add_argument("--rename-existing", action="store_true")
+    parser.add_argument("--allow-create", action="store_true")
     args = parser.parse_args()
 
     load_dotenv(ROOT / ".env")
@@ -78,18 +89,38 @@ def main() -> None:
     )
     table_id = args.table_id or (os.getenv(args.table_id_env, "") if args.table_id_env else "")
     if not table_id:
-        table_id = ensure_table(client, app_token, args.table_name, args.primary_field, fieldnames)
+        table_id = ensure_table(
+            client,
+            app_token,
+            args.table_name,
+            args.primary_field,
+            fieldnames,
+            args.allow_create,
+        )
+    elif args.rename_existing:
+        tables = {str(table.get("table_id", "")): table for table in client.list_bitable_tables(app_token)}
+        table = tables.get(table_id)
+        if not table:
+            raise FeishuError(f"Registered table is missing: {table_id}")
+        if table.get("name") != args.table_name:
+            client.update_bitable_table(app_token, table_id, args.table_name)
+            print(f"renamed {table_id}: {table.get('name')} -> {args.table_name}")
     ensure_fields(client, app_token, table_id, args.primary_field, fieldnames)
 
     existing = client.list_bitable_records(app_token, table_id)
     by_key: dict[str, str] = {}
     blank_record_ids: list[str] = []
     missing_key_record_ids: list[str] = []
+    duplicate_record_ids: list[str] = []
     for record in existing:
         fields = record.get("fields", {})
         key = fields.get(args.primary_key)
         if key:
-            by_key[str(key)] = record.get("record_id", "")
+            normalized_key = str(key)
+            if normalized_key in by_key:
+                duplicate_record_ids.append(record.get("record_id", ""))
+            else:
+                by_key[normalized_key] = record.get("record_id", "")
         elif not fields:
             blank_record_ids.append(record.get("record_id", ""))
         else:
@@ -102,7 +133,12 @@ def main() -> None:
         key = row.get(args.primary_key, "")
         seen.add(key)
         fields = {field: normalize(row.get(field, "")) for field in fieldnames}
-        fields[args.primary_field] = row.get("title_zh") or row.get("name_zh") or row.get(args.primary_key, "")
+        fields[args.primary_field] = (
+            normalize(row.get(args.primary_field, ""))
+            or normalize(row.get("title_zh", ""))
+            or normalize(row.get("name_zh", ""))
+            or normalize(row.get(args.primary_key, ""))
+        )
         if key in by_key:
             update_payloads.append({"record_id": by_key[key], "fields": fields})
         else:
@@ -124,18 +160,19 @@ def main() -> None:
 
     deleted = 0
     if args.delete_stale:
+        stale_record_ids: list[str] = []
         for key, record_id in by_key.items():
             if key not in seen:
-                client.delete_bitable_record(app_token, table_id, record_id)
-                deleted += 1
-        for record_id in blank_record_ids:
-            if record_id:
-                client.delete_bitable_record(app_token, table_id, record_id)
-                deleted += 1
-        for record_id in missing_key_record_ids:
-            if record_id:
-                client.delete_bitable_record(app_token, table_id, record_id)
-                deleted += 1
+                stale_record_ids.append(record_id)
+        stale_record_ids.extend(blank_record_ids)
+        stale_record_ids.extend(missing_key_record_ids)
+        stale_record_ids.extend(duplicate_record_ids)
+        stale_record_ids = list(dict.fromkeys(record_id for record_id in stale_record_ids if record_id))
+        for batch in chunks(stale_record_ids):
+            client.batch_delete_bitable_records(app_token, table_id, batch)
+            deleted += len(batch)
+            print(f"csv_deleted={deleted}/{len(stale_record_ids)}")
+            time.sleep(0.2)
 
     print(f"Feishu CSV sync complete: table_name={args.table_name}, table_id={table_id}, created={created}, updated={updated}, deleted_stale={deleted}")
 

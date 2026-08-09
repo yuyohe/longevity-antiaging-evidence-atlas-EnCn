@@ -24,6 +24,12 @@ RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-july-2026-upda
 PUBLIC_REPORT_FILE = os.environ.get("EVIDENCE_ATLAS_PUBLIC_REPORT_FILE", "mid-july-public-update-2026-07.html")
 BASELINE_LABEL = os.environ.get("EVIDENCE_ATLAS_BASELINE_LABEL", "6 月底冻结版")
 BASELINE_DELTA = int(os.environ.get("EVIDENCE_ATLAS_BASELINE_DELTA", "1451" if MONTH == "2026-07" else "0"))
+CURATION_METRICS_PATH = Path(
+    os.environ.get(
+        "EVIDENCE_ATLAS_CURATION_METRICS",
+        ROOT / "data" / f"curation_release_metrics_{MONTH_UNDERSCORE}.json",
+    )
+)
 OUT = ROOT / "docs" / f"yulcell-posting-asset-dashboard-{RUN_DATE}.html"
 
 MAIN_IMAGES = [
@@ -69,6 +75,12 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def count_rows(path: Path) -> int:
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         return sum(1 for _ in csv.DictReader(f))
+
+
+def curation_metrics() -> dict[str, Any] | None:
+    if not CURATION_METRICS_PATH.exists():
+        return None
+    return json.loads(CURATION_METRICS_PATH.read_text(encoding="utf-8"))
 
 
 def data_url(path: Path) -> str:
@@ -148,12 +160,21 @@ def feishu_links() -> list[dict[str, str]]:
 def stats() -> list[dict[str, str]]:
     table_rows = {row["label"]: row["note"].split()[0] for row in public_tables()}
     public_row_total = sum(int(row["note"].split()[0].replace(",", "")) for row in public_tables())
+    release = curation_metrics()
+    intake_stats = (
+        [
+            {"value": f"{release['search']['new_rows']:,}", "label": "本轮 PubMed 新候选"},
+            {"value": f"{release['after']['recent_candidates_retained']:,}", "label": "近期候选最终保留"},
+        ]
+        if release
+        else [{"value": f"{BASELINE_DELTA:,}", "label": f"较 {BASELINE_LABEL}新增候选"}]
+    )
     return [
         {"value": table_rows.get("全量文献候选库", "0"), "label": "候选文献库"},
         {"value": table_rows.get("证据发现表", "0"), "label": "evidence findings"},
         {"value": table_rows.get("证据矩阵", "0"), "label": "evidence matrix"},
         {"value": f"{public_row_total:,}", "label": "公开 CSV 总行数"},
-        {"value": f"{BASELINE_DELTA:,}", "label": f"较 {BASELINE_LABEL}新增候选"},
+        *intake_stats,
         {"value": "50", "label": "单成分卡"},
         {"value": "7", "label": "主图资产"},
     ]
@@ -169,16 +190,31 @@ def card_assets() -> list[dict[str, object]]:
 
 def post_copy() -> str:
     values = {item["label"]: item["value"] for item in stats()}
+    release = curation_metrics()
+    if release:
+        intake_lines = (
+            f"- 本轮 PubMed 新候选：{release['search']['new_rows']:,} 条\n"
+            f"- 近期候选最终保留：{release['after']['recent_candidates_retained']:,} 条"
+        )
+        curation_note = (
+            f"本次不是继续堆数量：当前候选库从 {release['before']['candidate_records']:,} 条"
+            f"清理到 {release['after']['candidate_records']:,} 条。退出记录保留在日志、归档和 Git 历史中。"
+        )
+    else:
+        intake_lines = f"- 相对 {BASELINE_LABEL}新增候选：{BASELINE_DELTA:,} 条"
+        curation_note = ""
     return f"""宇多Yul细胞/yulcell {UPDATE_LABEL}抗衰证据图谱更新：
 
 这次把 PubMed 近期窗口扩到 {RUN_DATE.replace("-", "/")}，并重新生成公开表格、飞书多维表格和图片资产。
+
+{curation_note}
 
 核心规模：
 - 候选文献库：{values["候选文献库"]} 条
 - evidence findings：{values["evidence findings"]} 条
 - evidence matrix：{values["evidence matrix"]} 条
 - 公开 CSV 数据包：{values["公开 CSV 总行数"]} 行
-- 相对 {BASELINE_LABEL}新增候选：{BASELINE_DELTA:,} 条
+{intake_lines}
 - 单成分卡：50 张
 - 主图资产：7 张
 
@@ -568,8 +604,13 @@ HTML_TEMPLATE = """<!doctype html>
       ctx.fillText("宇多Yul细胞/yulcell", 70, 92);
       ctx.font = "500 38px Microsoft YaHei, Arial";
       ctx.fillText("__UPDATE_LABEL__抗衰证据图谱更新", 70, 154);
-      ctx.font = "26px Microsoft YaHei, Arial";
-      ctx.fillText(`候选文献 ${STATS[0].value} · findings ${STATS[1].value} · matrix ${STATS[2].value} · 成分卡 50`, 70, 204);
+      const newCandidates = STATS.find(item => item.label === "本轮 PubMed 新候选");
+      const recentRetained = STATS.find(item => item.label === "近期候选最终保留");
+      ctx.font = "24px Microsoft YaHei, Arial";
+      ctx.fillText(`当前：候选文献 ${STATS[0].value} · findings ${STATS[1].value} · matrix ${STATS[2].value} · 成分卡 50`, 70, 194);
+      if (newCandidates && recentRetained) {
+        ctx.fillText(`本轮检索：新候选 ${newCandidates.value} · 近期最终保留 ${recentRetained.value} · 主动清理重复与弱相关记录`, 70, 226);
+      }
 
       let sx = 70;
       for (const item of STATS.slice(0, 4)) {

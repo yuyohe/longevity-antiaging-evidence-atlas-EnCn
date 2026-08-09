@@ -47,6 +47,7 @@ BRAND_FIELDS = {
     "资产归属": f"{BRAND_NAME} | {BRAND_PROJECT}",
     "GitHub公开入口": BRAND_GITHUB_URL,
 }
+REGISTRY_PATH = DATA_DIR / "feishu_table_registry.csv"
 
 OLD_PUBLIC_TABLES = {
     "tblEVNI9nsjU6oT3": "公开资产_索引_2026-05",
@@ -86,6 +87,10 @@ def table_url(table_id: str) -> str:
     return f"https://{domain}/wiki/{wiki_token}?table={table_id}"
 
 
+def load_registry() -> dict[str, dict[str, str]]:
+    return {row["asset_key"]: row for row in read_csv(REGISTRY_PATH) if row.get("asset_key")}
+
+
 def load_token_cache(path: Path) -> dict[str, str]:
     if not path.exists():
         return {}
@@ -104,10 +109,26 @@ def ensure_table(
     table_name: str,
     primary_field: str,
     fields: dict[str, int],
+    preferred_table_id: str,
+    allow_create: bool,
 ) -> str:
-    for table in client.list_bitable_tables(app_token):
+    tables = client.list_bitable_tables(app_token)
+    by_id = {str(table.get("table_id", "")): table for table in tables}
+    if preferred_table_id:
+        table = by_id.get(preferred_table_id)
+        if not table:
+            if not allow_create:
+                raise FeishuError(f"Registered table is missing: {preferred_table_id} ({table_name})")
+        else:
+            if table.get("name") != table_name:
+                client.update_bitable_table(app_token, preferred_table_id, table_name)
+                print(f"renamed {preferred_table_id}: {table.get('name')} -> {table_name}")
+            return preferred_table_id
+    for table in tables:
         if table.get("name") == table_name:
-            return table.get("table_id", "")
+            return str(table.get("table_id", ""))
+    if not allow_create:
+        raise FeishuError(f"No registered table for {table_name}; pass --allow-create only for a deliberate new asset")
     schema = [{"field_name": primary_field, "type": TEXT_FIELD}]
     for name, field_type in fields.items():
         if name == primary_field:
@@ -187,8 +208,9 @@ def upsert_records(
             "rerun with --delete-stale-records to remove them"
         )
     if stale_record_ids and delete_stale_records:
-        for record_id in stale_record_ids:
-            client.delete_bitable_record(app_token, table_id, record_id)
+        for batch in chunks(stale_record_ids, size=500):
+            client.batch_delete_bitable_records(app_token, table_id, batch)
+            time.sleep(0.25)
 
     create_payloads: list[dict[str, Any]] = []
     update_payloads: list[dict[str, Any]] = []
@@ -230,9 +252,11 @@ def sync_heatmaps(
     client: FeishuClient,
     app_token: str,
     cache: dict[str, str],
+    registry_row: dict[str, str],
     delete_stale_records: bool = False,
+    allow_create: bool = False,
 ) -> tuple[str, int, int, int]:
-    table_name = f"视觉资产_热力图图片_{UPDATE_MONTH}"
+    table_name = registry_row["stable_name"]
     fields = add_brand_field_schema({
         "标题": TEXT_FIELD,
         "asset_id": TEXT_FIELD,
@@ -243,7 +267,15 @@ def sync_heatmaps(
         "本地路径": TEXT_FIELD,
         "更新月份": TEXT_FIELD,
     })
-    table_id = ensure_table(client, app_token, table_name, "标题", fields)
+    table_id = ensure_table(
+        client,
+        app_token,
+        table_name,
+        "标题",
+        fields,
+        registry_row["table_id"],
+        allow_create,
+    )
     ensure_fields(client, app_token, table_id, fields)
 
     rows = []
@@ -283,9 +315,11 @@ def sync_cards(
     client: FeishuClient,
     app_token: str,
     cache: dict[str, str],
+    registry_row: dict[str, str],
     delete_stale_records: bool = False,
+    allow_create: bool = False,
 ) -> tuple[str, int, int, int]:
-    table_name = f"公开入口_前50成分单卡_{UPDATE_MONTH}"
+    table_name = registry_row["stable_name"]
     fields = add_brand_field_schema({
         "成分": TEXT_FIELD,
         "card_id": TEXT_FIELD,
@@ -301,7 +335,15 @@ def sync_cards(
         "本地路径": TEXT_FIELD,
         "更新月份": TEXT_FIELD,
     })
-    table_id = ensure_table(client, app_token, table_name, "成分", fields)
+    table_id = ensure_table(
+        client,
+        app_token,
+        table_name,
+        "成分",
+        fields,
+        registry_row["table_id"],
+        allow_create,
+    )
     ensure_fields(client, app_token, table_id, fields)
 
     rows = []
@@ -345,9 +387,11 @@ def sync_overview(
     client: FeishuClient,
     app_token: str,
     cache: dict[str, str],
+    registry_row: dict[str, str],
     delete_stale_records: bool = False,
+    allow_create: bool = False,
 ) -> tuple[str, int, int, int]:
-    table_name = f"视觉资产_成分卡片总览_{UPDATE_MONTH}"
+    table_name = registry_row["stable_name"]
     fields = add_brand_field_schema({
         "标题": TEXT_FIELD,
         "asset_id": TEXT_FIELD,
@@ -357,7 +401,15 @@ def sync_overview(
         "本地路径": TEXT_FIELD,
         "更新月份": TEXT_FIELD,
     })
-    table_id = ensure_table(client, app_token, table_name, "标题", fields)
+    table_id = ensure_table(
+        client,
+        app_token,
+        table_name,
+        "标题",
+        fields,
+        registry_row["table_id"],
+        allow_create,
+    )
     ensure_fields(client, app_token, table_id, fields)
 
     heatmap_rows = read_csv(DATA_DIR / f"visual_heatmap_assets_{UPDATE_MONTH_UNDERSCORE}.csv")
@@ -410,6 +462,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--delete-old-public-tables", action="store_true")
     parser.add_argument("--delete-stale-records", action="store_true")
+    parser.add_argument(
+        "--allow-create",
+        action="store_true",
+        help="Allow creation only when a registered table is genuinely missing.",
+    )
     args = parser.parse_args()
 
     load_dotenv(ROOT / ".env")
@@ -426,18 +483,25 @@ def main() -> None:
         )
     )
     cache = load_token_cache(cache_path)
+    registry = load_registry()
 
     synced: list[dict[str, Any]] = []
-    for name, fn in [
-        (f"视觉资产_热力图图片_{UPDATE_MONTH}", sync_heatmaps),
-        (f"公开入口_前50成分单卡_{UPDATE_MONTH}", sync_cards),
-        (f"视觉资产_成分卡片总览_{UPDATE_MONTH}", sync_overview),
+    for asset_key, fn in [
+        ("heatmaps", sync_heatmaps),
+        ("ingredient_cards", sync_cards),
+        ("ingredient_wall", sync_overview),
     ]:
+        registry_row = registry.get(asset_key)
+        if not registry_row:
+            raise FeishuError(f"Missing registry entry for {asset_key}")
+        name = registry_row["stable_name"]
         table_id, created, updated, deleted = fn(
             client,
             app_token,
             cache,
+            registry_row,
             delete_stale_records=args.delete_stale_records,
+            allow_create=args.allow_create,
         )
         synced.append(
             {

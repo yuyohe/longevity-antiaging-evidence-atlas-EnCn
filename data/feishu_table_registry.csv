@@ -1,0 +1,10 @@
+asset_key,category,stable_name,table_id,url,source_primary_key,feishu_primary_field,expected_rows,status
+literature_library,公开全量数据,宇多Yul细胞_当前文献库,tblIPdcBJPH6UkAE,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE,library_id,公开标题,11079,active
+candidate_sources,公开全量数据,宇多Yul细胞_当前候选来源,tblWoc9k5UIsKq4J,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblWoc9k5UIsKq4J,id,公开标题,11079,active
+shortlist_sources,公开全量数据,宇多Yul细胞_当前入选短名单,tblhZtMqsgCxFq0v,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblhZtMqsgCxFq0v,candidate_id,公开标题,2966,active
+evidence_findings,公开全量数据,宇多Yul细胞_当前证据发现,tblgAIsjA1UR4jLr,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblgAIsjA1UR4jLr,finding_id,公开标题,2966,active
+evidence_matrix,公开全量数据,宇多Yul细胞_当前证据矩阵,tblLnS2g439w9pir,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir,paper_id,公开标题,1500,active
+heatmaps,视觉资产,宇多Yul细胞_当前研究图,tblASMHdK01yuvjL,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL,asset_id,标题,6,active
+ingredient_cards,视觉资产,宇多Yul细胞_当前50成分卡,tbliLsUC2T8lXHla,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla,card_id,成分,50,active
+ingredient_wall,视觉资产,宇多Yul细胞_当前成分总览,tblOTMnRmq5uStWE,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblOTMnRmq5uStWE,asset_id,标题,1,active
+reader_navigation,阅读入口,宇多Yul细胞_当前阅读导航,tbljh1Xmkn6RYWPD,https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD,entry_id,公开标题,14,active

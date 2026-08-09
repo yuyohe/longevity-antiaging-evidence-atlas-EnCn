@@ -41,40 +41,41 @@ BRAND_FIELDS = {
     "资产归属": f"{BRAND_NAME} | {BRAND_PROJECT}",
     "GitHub公开入口": BRAND_GITHUB_URL,
 }
+REGISTRY_PATH = DATA / "feishu_table_registry.csv"
 
 
 ASSETS = [
     {
         "asset_key": "literature_library",
-        "table_name": f"公开数据_全量文献候选库_{MONTH}",
+        "table_name": "宇多Yul细胞_当前文献库",
         "csv": PUBLIC / f"literature-library-{MONTH}.csv",
         "primary_key": "library_id",
         "title_fields": ["title_zh", "title_en", "library_id"],
     },
     {
         "asset_key": "candidate_sources",
-        "table_name": f"公开数据_候选来源原始表_{MONTH}",
+        "table_name": "宇多Yul细胞_当前候选来源",
         "csv": PUBLIC / f"candidate-sources-{MONTH}.csv",
         "primary_key": "id",
         "title_fields": ["title_zh", "title_en", "id"],
     },
     {
         "asset_key": "shortlist_sources",
-        "table_name": f"公开数据_入选短名单_{MONTH}",
+        "table_name": "宇多Yul细胞_当前入选短名单",
         "csv": PUBLIC / f"shortlist-sources-{MONTH}.csv",
         "primary_key": "candidate_id",
         "title_fields": ["title_zh", "title_en", "candidate_id"],
     },
     {
         "asset_key": "evidence_findings",
-        "table_name": f"公开数据_证据发现表_{MONTH}",
+        "table_name": "宇多Yul细胞_当前证据发现",
         "csv": PUBLIC / f"evidence-findings-{MONTH}.csv",
         "primary_key": "finding_id",
         "title_fields": ["title_zh", "title_en", "finding_id"],
     },
     {
         "asset_key": "evidence_matrix",
-        "table_name": f"公开数据_证据矩阵_{MONTH}",
+        "table_name": "宇多Yul细胞_当前证据矩阵",
         "csv": PUBLIC / f"evidence-matrix-{MONTH}.csv",
         "primary_key": "paper_id",
         "title_fields": ["topic", "intervention_or_exposure", "paper_id"],
@@ -135,10 +136,36 @@ def record_has_brand(record: dict[str, Any]) -> bool:
     return all(str(fields.get(name, "")).strip() == value for name, value in BRAND_FIELDS.items())
 
 
-def ensure_table(client: FeishuClient, app_token: str, table_name: str, fieldnames: list[str]) -> str:
-    for table in client.list_bitable_tables(app_token):
+def load_registry() -> dict[str, dict[str, str]]:
+    rows, _ = read_csv(REGISTRY_PATH)
+    return {row["asset_key"]: row for row in rows if row.get("asset_key")}
+
+
+def ensure_table(
+    client: FeishuClient,
+    app_token: str,
+    table_name: str,
+    fieldnames: list[str],
+    preferred_table_id: str,
+    allow_create: bool,
+) -> str:
+    tables = client.list_bitable_tables(app_token)
+    by_id = {str(table.get("table_id", "")): table for table in tables}
+    if preferred_table_id:
+        table = by_id.get(preferred_table_id)
+        if not table:
+            if not allow_create:
+                raise FeishuError(f"Registered table is missing: {preferred_table_id} ({table_name})")
+        else:
+            if table.get("name") != table_name:
+                client.update_bitable_table(app_token, preferred_table_id, table_name)
+                print(f"renamed {preferred_table_id}: {table.get('name')} -> {table_name}")
+            return preferred_table_id
+    for table in tables:
         if table.get("name") == table_name:
-            return table.get("table_id", "")
+            return str(table.get("table_id", ""))
+    if not allow_create:
+        raise FeishuError(f"No registered table for {table_name}; pass --allow-create only for a deliberate new asset")
     schema = [{"field_name": "公开标题", "type": TEXT_FIELD}]
     schema.extend({"field_name": name, "type": TEXT_FIELD} for name in BRAND_FIELDS)
     schema.extend(
@@ -173,11 +200,19 @@ def sync_asset(
     delete_stale_records: bool = False,
     force_update: bool = False,
     only_keys: set[str] | None = None,
+    allow_create: bool = False,
 ) -> dict[str, Any]:
     rows, fieldnames = read_csv(asset["csv"])
     if asset["primary_key"] not in fieldnames:
         raise FeishuError(f"{asset['csv']} missing primary key {asset['primary_key']}")
-    table_id = ensure_table(client, app_token, asset["table_name"], fieldnames)
+    table_id = ensure_table(
+        client,
+        app_token,
+        asset["table_name"],
+        fieldnames,
+        str(asset.get("table_id", "")),
+        allow_create,
+    )
     ensure_fields(client, app_token, table_id, fieldnames)
 
     existing = client.list_bitable_records(
@@ -211,10 +246,12 @@ def sync_asset(
             "rerun with --delete-stale-records to remove them"
         )
     if stale_record_ids and delete_stale_records:
-        for index, record_id in enumerate(stale_record_ids, 1):
-            client.delete_bitable_record(app_token, table_id, record_id)
-            if index % 50 == 0 or index == len(stale_record_ids):
-                print(f"{asset['asset_key']}: deleted stale {index}/{len(stale_record_ids)}")
+        deleted = 0
+        for batch in chunks(stale_record_ids, size=500):
+            client.batch_delete_bitable_records(app_token, table_id, batch)
+            deleted += len(batch)
+            print(f"{asset['asset_key']}: deleted stale {deleted}/{len(stale_record_ids)}")
+            time.sleep(0.25)
 
     if (
         not force_update
@@ -297,6 +334,11 @@ def main() -> None:
     parser.add_argument("--delete-stale-records", action="store_true")
     parser.add_argument("--force-update", action="store_true")
     parser.add_argument(
+        "--allow-create",
+        action="store_true",
+        help="Allow creation only when a registered table is genuinely missing.",
+    )
+    parser.add_argument(
         "--asset",
         action="append",
         choices=[asset["asset_key"] for asset in ASSETS],
@@ -325,6 +367,14 @@ def main() -> None:
         wiki_node_token=os.getenv("FEISHU_BITABLE_WIKI_NODE_TOKEN", ""),
     )
 
+    registry = load_registry()
+    for asset in ASSETS:
+        row = registry.get(asset["asset_key"])
+        if not row:
+            raise FeishuError(f"Missing registry entry for {asset['asset_key']}")
+        asset["table_name"] = row["stable_name"]
+        asset["table_id"] = row["table_id"]
+
     selected_assets = [
         asset
         for asset in ASSETS
@@ -340,6 +390,7 @@ def main() -> None:
                 delete_stale_records=args.delete_stale_records,
                 force_update=args.force_update,
                 only_keys=only_keys,
+                allow_create=args.allow_create,
             )
         )
 

@@ -27,6 +27,10 @@ class FakeClient:
         self.deleted.append(record_id)
         return {}
 
+    def batch_delete_bitable_records(self, app_token: str, table_id: str, record_ids: list[str]):
+        self.deleted.extend(record_ids)
+        return {}
+
     def batch_create_bitable_records(self, app_token: str, table_id: str, records):
         self.created.extend(records)
         return {}

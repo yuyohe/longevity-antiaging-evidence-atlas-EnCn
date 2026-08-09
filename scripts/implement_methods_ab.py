@@ -17,6 +17,7 @@ Also builds a Feishu-friendly full literature library table.
 from __future__ import annotations
 
 import csv
+import os
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -26,7 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CONTENT = ROOT / "content" / "overview"
 DOCS = ROOT / "docs"
-TODAY = date.today().isoformat()
+TODAY = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", date.today().isoformat())
+CORE_REVIEW_PER_TOPIC = int(os.environ.get("CORE_REVIEW_PER_TOPIC", "3"))
 
 
 GRADE_ORDER = {"A": 5, "B": 4, "C": 3, "D": 2, "E": 1, "": 0}
@@ -547,6 +549,14 @@ def build_core_review_queue() -> list[dict[str, str]]:
     for row in skin:
         by_topic[("skin_beauty", row["topic_id"])].append(row)
 
+    previous_by_candidate: dict[str, dict[str, str]] = {}
+    previous_path = DATA / "core_review_queue.csv"
+    if previous_path.exists():
+        for row in read_csv(previous_path):
+            candidate_id = row.get("candidate_id", "")
+            if candidate_id:
+                previous_by_candidate[candidate_id] = row
+
     topic_rows = []
     for row in public_summary:
         if row["evidence_level_top"] in {"A", "B"}:
@@ -557,10 +567,11 @@ def build_core_review_queue() -> list[dict[str, str]]:
 
     queue = []
     for domain, topic in topic_rows:
-        items = sorted(by_topic[(domain, topic["topic_id"])], key=sort_key, reverse=True)[:5]
+        items = sorted(by_topic[(domain, topic["topic_id"])], key=sort_key, reverse=True)[:CORE_REVIEW_PER_TOPIC]
         for rank, item in enumerate(items, 1):
             cid = item.get("candidate_id") or item.get("finding_id")
             level = item.get("final_evidence_level") or item.get("evidence_level_draft")
+            previous = previous_by_candidate.get(cid, {})
             queue.append(
                 {
                     "review_id": f"core-{domain}-{topic['topic_id']}-{rank:02d}",
@@ -584,9 +595,9 @@ def build_core_review_queue() -> list[dict[str, str]]:
                     "review_priority": "P1" if topic.get("evidence_level_top") == "A" else "P2",
                     "why_selected_zh": "该条属于 A/B 级公开主题的核心候选文献，按等级、质量分、影响力和年份优先排序进入人工复核队列。",
                     "next_action_zh": "读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。",
-                    "manual_review_status": "queued_not_started",
-                    "reviewer": "",
-                    "review_date": "",
+                    "manual_review_status": previous.get("manual_review_status") or "queued_not_started",
+                    "reviewer": previous.get("reviewer", ""),
+                    "review_date": previous.get("review_date", ""),
                     "pubmed_url": pubmed_url(item),
                     "github_card_path": f"content/papers/{cid}.md" if cid else "",
                     "last_checked": TODAY,

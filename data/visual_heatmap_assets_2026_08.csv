@@ -1,0 +1,8 @@
+﻿asset_id,update_month,title,asset_type,description,data_source,local_path
+H001,2026-08,研究热力图：主题 x 年份,heatmap_png,按主题和年份显示候选文献数量，颜色越深数量越多。,data/research_heatmap_topic_year.csv,build/visual-assets/heatmap-topic-year-2026-08.png
+H002,2026-08,证据热力图：主题 x 证据等级,heatmap_png,按主题和证据等级显示文献数量，帮助读者看出哪些方向证据更成熟。,data/research_heatmap_topic_evidence.csv,build/visual-assets/heatmap-topic-evidence-2026-08.png
+H003,2026-08,热力图总览图,dashboard_png,把研究热力图和证据热力图合并成一张长图，便于飞书和社媒展示。,data/research_heatmap_topic_year.csv; data/research_heatmap_topic_evidence.csv,build/visual-assets/heatmap-dashboard-2026-08.png
+H004,2026-08,前 50 成分证据产出图,evidence_yield_png,按统一代理指标展示常见成分的证据产出结构，不作为产品或疗效排行榜。,data/evidence_yield_metrics_2026_08.csv,build/visual-assets/evidence-yield-ingredients-2026-08.png
+H005,2026-08,撤稿密度观察图,retraction_density_png,展示撤稿风险观察指标；撤稿密度是复核提醒，不单独判定有效或无效。,data/retraction_risk_summary_20y.csv,build/visual-assets/retraction-density-2026-08.png
+H006,2026-08,主题证据产出图,topic_evidence_yield_png,比较各主题进入较高等级证据层的比例，不代表个人行动优先级。,data/topic_evidence_yield_metrics_2026_08.csv,build/visual-assets/topic-evidence-yield-2026-08.png
+C000,2026-08,前 50 成分卡片总览图,card_wall_png,50 张成分卡片的总览墙，适合放在飞书入口页作为视觉索引。,data/social_cards_top50_ingredients.csv,build/visual-assets/ingredient-card-wall-2026-08.png

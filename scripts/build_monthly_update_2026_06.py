@@ -19,6 +19,7 @@ MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-06")
 MONTH_UNDERSCORE = MONTH.replace("-", "_")
 RUN_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", date.today().isoformat())
 RECENT_REPORT = BUILD / f"healthspan_recent_update_{MONTH_UNDERSCORE}_report.json"
+CURATION_REPORT = DATA / f"curation_release_metrics_{MONTH_UNDERSCORE}.json"
 MONTH_NUMBER = int(MONTH.split("-")[1])
 RECENT_TAG = f"recent_update_{MONTH_UNDERSCORE}"
 BASELINE_LABEL = os.environ.get(
@@ -84,6 +85,8 @@ def heat_color(value: int, max_value: int) -> str:
 
 
 def recent_report() -> dict:
+    if CURATION_REPORT.exists():
+        return json.loads(CURATION_REPORT.read_text(encoding="utf-8"))
     if RECENT_REPORT.exists():
         return json.loads(RECENT_REPORT.read_text(encoding="utf-8"))
     return {}
@@ -91,6 +94,8 @@ def recent_report() -> dict:
 
 def build_heatmap_tables() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     matrix = read_csv(DATA / "evidence_matrix.csv")
+    topic_catalog = read_csv(DATA / "topics.csv")
+    catalog_names = [row.get("title_zh", "").strip() for row in topic_catalog if row.get("title_zh", "").strip()]
     years = list(range(2020, 2027))
     by_topic_year: dict[str, Counter[int]] = defaultdict(Counter)
     by_topic_level: dict[str, Counter[str]] = defaultdict(Counter)
@@ -102,7 +107,9 @@ def build_heatmap_tables() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         by_topic_level[topic][row.get("evidence_level", "") or "未分级"] += 1
 
     topic_year_rows: list[dict[str, str]] = []
-    for topic, counts in by_topic_year.items():
+    all_topics = list(dict.fromkeys([*catalog_names, *by_topic_year, *by_topic_level]))
+    for topic in all_topics:
+        counts = by_topic_year[topic]
         row = {"topic": topic}
         total = 0
         for year in years:
@@ -114,7 +121,8 @@ def build_heatmap_tables() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     topic_year_rows.sort(key=lambda row: safe_int(row["total_2020_2026"]), reverse=True)
 
     topic_evidence_rows: list[dict[str, str]] = []
-    for topic, counts in by_topic_level.items():
+    for topic in all_topics:
+        counts = by_topic_level[topic]
         row = {"topic": topic}
         total = 0
         for level in ["A", "B", "C", "D", "E"]:
@@ -215,14 +223,14 @@ def build_heatmap_html(topic_year_rows: list[dict[str, str]], topic_evidence_row
 """
     (CONTENT / "public-reader" / "research-heatmap.md").write_text(md_text, encoding="utf-8")
     (BUILD / "feishu-public-reader").mkdir(parents=True, exist_ok=True)
-    (BUILD / "feishu-public-reader" / "012-抗衰研究热力图.md").write_text(md_text, encoding="utf-8")
+    (BUILD / "feishu-public-reader" / "013-抗衰研究热力图.md").write_text(md_text, encoding="utf-8")
 
 
 def build_public_asset_index(counts: dict[str, int]) -> None:
     rows = [
         ["asset-001", "前 50 常见成分卡片库", "公开阅读资产", "content/cards/ingredients-top-50/index.md", "build/feishu-public-reader/011-前50常见成分卡片库.md", "让普通读者快速理解常见成分", "可公开"],
-        ["asset-002", "抗衰研究热力图", "公开阅读资产", f"docs/research-heatmap-{MONTH}.html", "build/feishu-public-reader/012-抗衰研究热力图.md", "展示不同方向研究活跃度", "可公开"],
-        ["asset-003", f"{MONTH} 月度更新报告", "公开阅读资产", f"docs/monthly-update-{MONTH}.html", f"build/feishu-public-reader/013-{MONTH}月度更新报告.md", "解释本月新增资产和维护范围", "可公开"],
+        ["asset-002", "抗衰研究热力图", "公开阅读资产", f"docs/research-heatmap-{MONTH}.html", "build/feishu-public-reader/013-抗衰研究热力图.md", "展示不同方向研究活跃度", "可公开"],
+        ["asset-003", f"{MONTH} 月度更新报告", "公开阅读资产", f"docs/monthly-update-{MONTH}.html", f"build/feishu-public-reader/014-{MONTH}月度更新报告.md", "解释本月新增资产和维护范围", "可公开"],
         ["asset-004", "全量文献候选库", "公开全量数据", f"public-data/literature-library-{MONTH}.csv", "", f"{counts['literature_library']} 条候选文献入口", "可公开"],
         ["asset-005", "候选来源原始表", "公开全量数据", f"public-data/candidate-sources-{MONTH}.csv", "", f"{counts['candidate_sources']} 条原始候选来源", "可公开"],
         ["asset-006", "入选短名单", "公开全量数据", f"public-data/shortlist-sources-{MONTH}.csv", "", f"{counts['shortlist_sources']} 条优先复核记录", "可公开"],
@@ -256,10 +264,46 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
     supplements = read_csv(DATA / "supplement_matrix.csv")
     retractions = read_csv(DATA / "retraction_risk_summary_20y.csv")
     recent = recent_report()
-    expansion = recent.get("candidate_expansion", {})
+    curated_release = bool(recent.get("capacity_policy"))
+    expansion = recent.get("search", {}) if curated_release else recent.get("candidate_expansion", {})
     date_window = str(expansion.get("date_window") or f"{MONTH}/01..{RUN_DATE.replace('-', '/')}").replace("..", " 至 ")
-    recent_bucket_total = safe_int(expansion.get("recent_tagged_total") or expansion.get("added"))
-    recent_selected = safe_int(recent.get("recent_update_findings_selected"))
+    if curated_release:
+        recent_bucket_total = safe_int(expansion.get("unique_pubmed_matches"))
+        recent_selected = safe_int(recent.get("after", {}).get("recent_findings_retained"))
+        public_recent_added = safe_int(expansion.get("new_rows"))
+        matched_existing = safe_int(expansion.get("matched_existing"))
+        before_candidates = safe_int(recent.get("before", {}).get("candidate_records"))
+        before_findings = safe_int(recent.get("before", {}).get("finding_records"))
+        retired_candidates = safe_int(recent.get("retired", {}).get("candidate_decisions"))
+        retired_findings = safe_int(recent.get("retired", {}).get("finding_decisions"))
+        update_sentence = (
+            f"按 {date_window} 的 PubMed 窗口找到 {recent_bucket_total:,} 条匹配，其中 {public_recent_added:,} 条是新候选、"
+            f"{matched_existing:,} 条已在库中。清理重复和弱相关记录后，当前候选库由 {before_candidates:,} 条精简为 "
+            f"{len(candidates):,} 条，证据发现由 {before_findings:,} 条精简为 {len(findings):,} 条。数量变小是质量控制，不是资料丢失。"
+        )
+        recent_detail = (
+            f"本轮保留近期候选 {safe_int(recent.get('after', {}).get('recent_candidates_retained')):,} 条，"
+            f"其中 {recent_selected:,} 条进入 findings；记录候选退出决定 {retired_candidates:,} 条、"
+            f"findings 退出决定 {retired_findings:,} 条。退出理由可在 data/archive/ 中复核。"
+        )
+    else:
+        recent_bucket_total = safe_int(expansion.get("recent_tagged_total") or expansion.get("added"))
+        recent_selected = safe_int(recent.get("recent_update_findings_selected"))
+        matched_existing = 0
+        before_candidates = safe_int(os.environ.get("MIDMONTH_CANDIDATE_BASE", DEFAULT_BASELINE_COUNT))
+        before_findings = len(findings)
+        retired_candidates = 0
+        retired_findings = 0
+        recent_added_since_midmonth = max(0, len(candidates) - before_candidates)
+        public_recent_added = recent_added_since_midmonth or recent_bucket_total
+        update_sentence = (
+            f"按 {date_window} 的 PubMed 近期窗口补充候选文献；相对 {BASELINE_LABEL} 新增候选 "
+            f"{public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。"
+        )
+        recent_detail = (
+            f"相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条；{MONTH_NUMBER} 月 recent_update 标签累计 "
+            f"{recent_bucket_total} 条；进入 findings 的 recent_update 记录 {recent_selected} 条。"
+        )
 
     counts = {
         "candidate_sources": len(candidates),
@@ -271,14 +315,15 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         "supplements": len(supplements),
         "retraction_targets": len(retractions),
     }
-    midmonth_candidate_base = safe_int(os.environ.get("MIDMONTH_CANDIDATE_BASE", DEFAULT_BASELINE_COUNT))
-    recent_added_since_midmonth = max(0, len(candidates) - midmonth_candidate_base)
-    public_recent_added = recent_added_since_midmonth or recent_bucket_total
     build_public_asset_index(counts)
 
     matrix_levels = Counter(row.get("evidence_level", "") for row in matrix)
     top_recent_rows = []
     sample_rows = list(expansion.get("added_sample", [])[:12])
+    if curated_release:
+        featured_pmids = ["42543470", "42219271", "42044540", "42217831", "42212393", "42545663"]
+        candidates_by_pmid = {row.get("pmid", ""): row for row in candidates}
+        sample_rows = [candidates_by_pmid[pmid] for pmid in featured_pmids if pmid in candidates_by_pmid]
     if not sample_rows:
         sample_rows = [
             row
@@ -292,19 +337,19 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         {
             "section_id": "report-001",
             "板块": "本月一句话",
-            "内容": f"本月按 {date_window} 的 PubMed 近期窗口更新文献候选；相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条，并把健康寿命发现扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。",
+            "内容": update_sentence,
             "是否公开": "是",
             "GitHub路径": f"docs/monthly-update-{MONTH}.html",
-            "飞书导入文件": f"build/feishu-public-reader/013-{MONTH}月度更新报告.md",
+            "飞书导入文件": f"build/feishu-public-reader/014-{MONTH}月度更新报告.md",
             "更新月份": MONTH,
         },
         {
             "section_id": "report-002",
             "板块": "近期文献",
-            "内容": f"相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条；{MONTH_NUMBER} 月 recent_update 标签累计 {recent_bucket_total} 条；进入 {len(findings)} 条 findings 的 recent_update 记录 {recent_selected} 条。新增记录仍是自动草稿，不能直接改变医学结论。",
+            "内容": recent_detail + " 新增记录仍是自动草稿，不能直接改变医学结论。",
             "是否公开": "是",
             "GitHub路径": f"build/healthspan_recent_update_{MONTH_UNDERSCORE}_report.json",
-            "飞书导入文件": f"build/feishu-public-reader/013-{MONTH}月度更新报告.md",
+            "飞书导入文件": f"build/feishu-public-reader/014-{MONTH}月度更新报告.md",
             "更新月份": MONTH,
         },
         {
@@ -313,7 +358,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
             "内容": f"候选文献 {len(candidates)}；证据发现 {len(findings)}；证据矩阵 {len(matrix)}；皮肤/外观主题 {len(skin)}；补剂条目 {len(supplements)}；撤稿观察目标 {len(retractions)}。",
             "是否公开": "是",
             "GitHub路径": f"data/public_asset_index_{MONTH_UNDERSCORE}.csv",
-            "飞书导入文件": f"build/feishu-public-reader/013-{MONTH}月度更新报告.md",
+            "飞书导入文件": f"build/feishu-public-reader/014-{MONTH}月度更新报告.md",
             "更新月份": MONTH,
         },
         {
@@ -322,7 +367,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
             "内容": "研究热力图和证据等级热力图已按最新 evidence_matrix 重建。热力图表示研究活跃度和证据分布，不是有效性排行榜。",
             "是否公开": "是",
             "GitHub路径": f"docs/research-heatmap-{MONTH}.html",
-            "飞书导入文件": "build/feishu-public-reader/012-抗衰研究热力图.md",
+            "飞书导入文件": "build/feishu-public-reader/013-抗衰研究热力图.md",
             "更新月份": MONTH,
         },
         {
@@ -347,7 +392,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
             ("候选文献", len(candidates)),
             ("证据发现", len(findings)),
             ("证据矩阵", len(matrix)),
-            ("月底新增候选", public_recent_added),
+            ("检索新增候选", public_recent_added),
             ("近期入选 findings", recent_selected),
             ("撤稿观察目标", len(retractions)),
         ]
@@ -387,7 +432,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
   <main>
     <section>
       <h2>本月一句话</h2>
-      <p class="note">按 {esc(date_window)} 的 PubMed 近期窗口补充候选文献；相对 {esc(BASELINE_LABEL)} 新增候选 {public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。近期文献仍是草稿层，不直接改变医学结论。</p>
+      <p class="note">{esc(update_sentence)} 近期文献仍是草稿层，不直接改变医学结论。</p>
     </section>
     <section>
       <h2>资产规模</h2>
@@ -395,7 +440,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
     </section>
     <section>
       <h2>近期文献更新</h2>
-      <p>相对 {esc(BASELINE_LABEL)} 新增候选：{public_recent_added} 条；{MONTH_NUMBER} 月 recent_update 标签累计：{recent_bucket_total} 条；进入本轮 findings 的 recent_update 记录：{recent_selected} 条。</p>
+      <p>{esc(recent_detail)}</p>
       <p>检索窗口：{esc(expansion.get("date_window", f"{MONTH}/01..{RUN_DATE.replace('-', '/')}"))}。数据源为 PubMed E-utilities。</p>
     </section>
     <section>
@@ -425,21 +470,25 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
 
 ## 本月一句话
 
-按 {date_window} 的 PubMed 近期窗口补充候选文献；相对 {BASELINE_LABEL} 新增候选 {public_recent_added} 条，并将健康寿命 findings 扩到 {len(findings)} 条、证据矩阵扩到 {len(matrix)} 条。近期文献仍是草稿层，不直接改变医学结论。
+{update_sentence} 近期文献仍是草稿层，不直接改变医学结论。
 
 ## 资产规模
 
 - 候选文献：{len(candidates):,}
 - 证据发现：{len(findings):,}
 - 证据矩阵：{len(matrix):,}
-- 月底新增候选：{public_recent_added:,}
-- {MONTH_NUMBER} 月 recent_update 标签累计：{recent_bucket_total:,}
+- 检索新增候选：{public_recent_added:,}
+- PubMed 匹配总数：{recent_bucket_total:,}
 - 近期入选 findings：{recent_selected:,}
+- 候选退出决定：{retired_candidates:,}
+- findings 退出决定：{retired_findings:,}
 - 皮肤/外观主题：{len(skin):,}
 - 补剂条目：{len(supplements):,}
 - 撤稿观察目标：{len(retractions):,}
 
 ## 近期文献样例
+
+{recent_detail}
 
 {recent_table}
 
@@ -454,7 +503,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
 本项目继续只做证据导航，不给个人剂量、诊断、处方替代、注射医美操作建议。近期文献需要人工全文复核后，才适合调整公开叙述。
 """
     (CONTENT / "public-reader" / f"monthly-update-{MONTH}.md").write_text(md_report, encoding="utf-8")
-    (BUILD / "feishu-public-reader" / f"013-{MONTH}月度更新报告.md").write_text(md_report, encoding="utf-8")
+    (BUILD / "feishu-public-reader" / f"014-{MONTH}月度更新报告.md").write_text(md_report, encoding="utf-8")
 
 
 def main() -> None:
