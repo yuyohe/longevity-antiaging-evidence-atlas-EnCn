@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -207,7 +208,7 @@ def validate_visuals_and_reports(errors: list[str]) -> None:
         errors.append("monthly update still uses expansion-only wording")
 
 
-def validate_feishu(errors: list[str]) -> None:
+def validate_feishu(errors: list[str], *, require_online_audit: bool) -> None:
     manifest = read_csv(ROOT / "data" / "feishu_live_tables_2026_08.csv")
     registry = read_csv(ROOT / "data" / "feishu_table_registry.csv")
     navigation = read_csv(ROOT / "data" / "feishu_reader_navigation_2026_08.csv")
@@ -224,13 +225,14 @@ def validate_feishu(errors: list[str]) -> None:
     if len(table_ids) != len(set(table_ids)) or any(not re.fullmatch(r"tbl[A-Za-z0-9]+", value) for value in table_ids):
         errors.append("Feishu manifest has invalid or duplicate table IDs")
 
-    online_report = ROOT / "build" / "feishu_online_audit_2026_08.json"
-    if not online_report.exists():
-        errors.append("missing Feishu online audit report")
-    else:
-        audit = json.loads(online_report.read_text(encoding="utf-8"))
-        if audit.get("status") != "passed" or len(audit.get("tables", [])) != 9:
-            errors.append("Feishu online audit did not pass 9/9 tables")
+    if require_online_audit:
+        online_report = ROOT / "build" / "feishu_online_audit_2026_08.json"
+        if not online_report.exists():
+            errors.append("missing Feishu online audit report")
+        else:
+            audit = json.loads(online_report.read_text(encoding="utf-8"))
+            if audit.get("status") != "passed" or len(audit.get("tables", [])) != 9:
+                errors.append("Feishu online audit did not pass 9/9 tables")
 
 
 def validate_archives_and_automation(errors: list[str]) -> None:
@@ -266,24 +268,41 @@ def validate_feishu_packages(errors: list[str]) -> None:
         errors.append("Feishu reader package lacks the August curated release guide")
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--source-only",
+        action="store_true",
+        help="Validate tracked GitHub assets without requiring ignored local Feishu audit/export artifacts.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
     errors: list[str] = []
     validate_public_tables(errors)
     validate_active_curation(errors)
     validate_metrics_and_retirements(errors)
     validate_visuals_and_reports(errors)
-    validate_feishu(errors)
+    validate_feishu(errors, require_online_audit=not args.source_only)
     validate_archives_and_automation(errors)
-    validate_feishu_packages(errors)
+    if not args.source_only:
+        validate_feishu_packages(errors)
     if errors:
         print("August public release validation failed:")
         for error in errors:
             print(f"- {error}")
         sys.exit(1)
     print("August public release validation passed.")
+    scope = (
+        "tracked Feishu manifests"
+        if args.source_only
+        else "9 audited Feishu tables and export packages"
+    )
     print(
         "Validated: 29,590 public CSV rows, bounded active layers, 57 PNGs, "
-        "9 audited Feishu tables, identifier repair, archives, and export packages."
+        f"{scope}, identifier repair, and archives."
     )
 
 
