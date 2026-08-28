@@ -147,6 +147,9 @@ def validate_active_curation(errors: list[str]) -> None:
 
 def validate_metrics_and_retirements(errors: list[str]) -> None:
     metrics = json.loads((ROOT / "data" / "curation_release_metrics_2026_08_end.json").read_text(encoding="utf-8"))
+    current_metrics = json.loads((ROOT / "data" / "curation_release_metrics_2026_08.json").read_text(encoding="utf-8"))
+    if current_metrics != metrics:
+        errors.append("current August metrics alias is not synchronized with end-August metrics")
     candidate_retired = read_csv(ROOT / "data" / "archive" / "candidate_retirement_2026-08-end.csv")
     finding_retired = read_csv(ROOT / "data" / "archive" / "finding_retirement_2026-08-end.csv")
     expected_metrics = {
