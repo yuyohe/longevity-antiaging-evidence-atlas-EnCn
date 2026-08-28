@@ -1,4 +1,4 @@
-"""Build a bounded mid-August 2026 evidence-atlas release.
+"""Build a bounded evidence-atlas release from a recent PubMed window.
 
 The historical pipeline treated discovery volume as progress. This release
 uses fixed per-topic budgets and keeps retirement decisions in compact audit
@@ -29,8 +29,6 @@ DATA = ROOT / "data"
 BUILD = ROOT / "build"
 ARCHIVE = DATA / "archive"
 RECENT_TAG = "curated_recent_update_2026_08"
-REPORT = BUILD / "healthspan_recent_update_2026_08_report.json"
-PUBLIC_REPORT = DATA / "curation_release_metrics_2026_08.json"
 
 TOPIC_PATTERNS = {
     "cardiorespiratory-fitness": r"cardiorespiratory|\bvo2\b|oxygen uptake|exercise capacity|aerobic capacity",
@@ -233,7 +231,7 @@ def fetch_recent_candidates(
             "query": f"{topic_id}__{RECENT_TAG}",
             "include_status": "intake_pending_curation",
             "notes": (
-                f"Fetched by curate_mid_august_2026.py; {RECENT_TAG}; "
+                f"Fetched by {Path(__file__).name}; {RECENT_TAG}; "
                 f"publication window={start_date}..{end_date}; matched_topics={','.join(topic_ids)}."
             ),
             "last_checked": run_date,
@@ -509,14 +507,46 @@ def retirement_reason_counts(rows: list[dict[str, str]]) -> dict[str, int]:
 
 
 def main() -> None:
+    global RECENT_TAG
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--start-date", default="2026/07/30")
     parser.add_argument("--end-date", default="2026/08/09")
     parser.add_argument("--candidate-per-topic-cap", type=int, default=600)
     parser.add_argument("--finding-per-topic-cap", type=int, default=200)
     parser.add_argument("--retmax-per-topic", type=int, default=180)
+    parser.add_argument("--release", default="2026-08-mid-curated")
+    parser.add_argument("--recent-tag", default=RECENT_TAG)
+    parser.add_argument(
+        "--report-path",
+        default="build/healthspan_recent_update_2026_08_report.json",
+        help="Release metrics path relative to the repository root.",
+    )
+    parser.add_argument(
+        "--public-report-path",
+        default="data/curation_release_metrics_2026_08.json",
+        help="Tracked release metrics path relative to the repository root.",
+    )
+    parser.add_argument(
+        "--candidate-retirement-path",
+        default="data/archive/candidate_retirement_2026-08.csv",
+        help="Candidate retirement log path relative to the repository root.",
+    )
+    parser.add_argument(
+        "--finding-retirement-path",
+        default="data/archive/finding_retirement_2026-08.csv",
+        help="Finding retirement log path relative to the repository root.",
+    )
     parser.add_argument("--skip-fetch", action="store_true")
     args = parser.parse_args()
+
+    RECENT_TAG = args.recent_tag
+    report_path = ROOT / args.report_path
+    public_report_path = ROOT / args.public_report_path
+    candidate_retirement_path = ROOT / args.candidate_retirement_path
+    finding_retirement_path = ROOT / args.finding_retirement_path
+    for path in (report_path, public_report_path, candidate_retirement_path, finding_retirement_path):
+        path.parent.mkdir(parents=True, exist_ok=True)
 
     load_dotenv(ROOT / ".env")
     run_date = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", date.today().isoformat())
@@ -651,12 +681,12 @@ def main() -> None:
         "recovery_source",
     ]
     write_csv(
-        ARCHIVE / "candidate_retirement_2026-08.csv",
+        candidate_retirement_path,
         sorted(candidate_retirements, key=lambda row: row.get("candidate_id", "")),
         candidate_retirement_fields,
     )
     write_csv(
-        ARCHIVE / "finding_retirement_2026-08.csv",
+        finding_retirement_path,
         sorted(finding_retirements, key=lambda row: row.get("finding_id", "")),
         finding_retirement_fields,
     )
@@ -664,7 +694,7 @@ def main() -> None:
     selected_recent_candidates = [row for row in curated_candidates if row.get("id") in discovered_ids]
     selected_recent_findings = [row for row in curated_findings if row.get("candidate_id") in discovered_ids]
     report = {
-        "release": "2026-08-mid-curated",
+        "release": args.release,
         "date": run_date,
         "search": fetch_report,
         "capacity_policy": {
@@ -714,8 +744,8 @@ def main() -> None:
         ],
     }
     report_text = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
-    REPORT.write_text(report_text, encoding="utf-8")
-    PUBLIC_REPORT.write_text(report_text, encoding="utf-8")
+    report_path.write_text(report_text, encoding="utf-8")
+    public_report_path.write_text(report_text, encoding="utf-8")
     print(json.dumps(report, ensure_ascii=True, indent=2))
 
 

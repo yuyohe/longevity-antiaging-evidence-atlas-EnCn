@@ -1,0 +1,254 @@
+{
+  "release": "2026-08-end-curated",
+  "date": "2026-08-28",
+  "search": {
+    "date_window": "2026/08/10..2026/08/28",
+    "queries": 20,
+    "unique_pubmed_matches": 923,
+    "new_rows": 911,
+    "matched_existing": 12
+  },
+  "capacity_policy": {
+    "candidate_per_topic_cap": 600,
+    "finding_per_topic_cap": 200,
+    "matrix_global_cap": 1500,
+    "matrix_per_topic_cap": 100,
+    "core_review_per_high_grade_topic": 3
+  },
+  "before": {
+    "candidate_records": 11079,
+    "finding_records": 2966
+  },
+  "after": {
+    "candidate_records": 11104,
+    "finding_records": 3039,
+    "recent_candidates_retained": 248,
+    "recent_findings_retained": 162
+  },
+  "retired": {
+    "candidate_decisions": 886,
+    "candidate_reasons": {
+      "duplicate_record": 1,
+      "non_result_publication_title": 1,
+      "topic_capacity_limit": 884
+    },
+    "finding_decisions": 850,
+    "finding_reasons": {
+      "nonhuman_record_in_human_outcome_topic": 15,
+      "protocol_or_registered_plan": 10,
+      "title_topic_signal_missing": 506,
+      "topic_capacity_limit": 319
+    }
+  },
+  "candidate_topic_counts": {
+    "autophagy-mitophagy": 600,
+    "blood-pressure-aging": 600,
+    "caloric-restriction-human": 600,
+    "cardiorespiratory-fitness": 600,
+    "dietary-pattern-longevity": 600,
+    "epigenetic-clocks": 600,
+    "glp1-weight-cardiometabolic": 600,
+    "itp-mouse-lifespan": 179,
+    "klotho-il11-aging": 600,
+    "ldl-apob-cardiovascular-risk": 600,
+    "metformin-aging": 600,
+    "microbiome-inflammaging": 600,
+    "nad-nmn-nr-aging": 519,
+    "partial-reprogramming": 309,
+    "physical-activity-healthspan": 600,
+    "rapamycin-mtor-aging": 497,
+    "resistance-training-muscle": 600,
+    "senolytics": 600,
+    "sleep-aging": 600,
+    "time-restricted-eating": 600
+  },
+  "finding_topic_counts": {
+    "autophagy-mitophagy": 127,
+    "blood-pressure-aging": 165,
+    "caloric-restriction-human": 104,
+    "cardiorespiratory-fitness": 136,
+    "dietary-pattern-longevity": 200,
+    "epigenetic-clocks": 104,
+    "glp1-weight-cardiometabolic": 200,
+    "itp-mouse-lifespan": 11,
+    "klotho-il11-aging": 189,
+    "ldl-apob-cardiovascular-risk": 170,
+    "metformin-aging": 200,
+    "microbiome-inflammaging": 200,
+    "nad-nmn-nr-aging": 131,
+    "partial-reprogramming": 30,
+    "physical-activity-healthspan": 200,
+    "rapamycin-mtor-aging": 108,
+    "resistance-training-muscle": 200,
+    "senolytics": 164,
+    "sleep-aging": 200,
+    "time-restricted-eating": 200
+  },
+  "recent_selected_examples": [
+    {
+      "candidate_id": "pubmed-42525403",
+      "pmid": "42525403",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Global Burden of Elevated LDL-C: Findings From the Global Burden of Disease Study 2023.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42592869",
+      "pmid": "42592869",
+      "topic_id": "physical-activity-healthspan",
+      "title_en": "Physical activity for the management of obesity in adolescents aged 10 to 19 years.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42645869",
+      "pmid": "42645869",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Enlicitide, a Novel Oral Macrocyclic Peptide PCSK9 Inhibitor for Lipid Lowering: A Systematic Review and Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42641835",
+      "pmid": "42641835",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Clinical Frailty Scale for Risk Stratification in Elderly Patients with Heart Failure: A Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42613745",
+      "pmid": "42613745",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Association of clinical frailty with the development and adverse outcomes of venous diseases: A systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42575851",
+      "pmid": "42575851",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Efficacy and Safety of Oral PCSK9 Inhibitors in Adults With Hypercholesterolemia: An Updated and GRADE Assessed Systematic Review and Meta-Analysis of Randomised Controlled Trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42644078",
+      "pmid": "42644078",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Prevalence and associated factors of cognitive frailty in older adults with heart failure: a systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42645008",
+      "pmid": "42645008",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Long-Term Physical Activity Patterns and Risk of Future Frailty: A Systematic Review and Age-Stratified Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42616235",
+      "pmid": "42616235",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Combined use of SGLT2 inhibitor and GLP-1 receptor agonist versus either monotherapy for cardiorenal Outcomes: an exploratory network meta-analysis of 16 randomized trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42611710",
+      "pmid": "42611710",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Exercise to prevent falls in older adults with physical frailty: A systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42651433",
+      "pmid": "42651433",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Effects of Traditional Chinese Mind-Body Exercise on Physical Function in Older Adults with Sarcopenia and Frailty: A Meta-Analysis of Randomized Controlled Trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42641413",
+      "pmid": "42641413",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Measurement tools for social frailty in cancer patients: A systematic review.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42633655",
+      "pmid": "42633655",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Adverse Childhood Experiences, Cognitive Outcomes, and Frailty in Older Adults: A Systematic Review and Meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42623933",
+      "pmid": "42623933",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Effects of Resistance Training on Executive Functions in Community-Dwelling Older Adults: A Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42580253",
+      "pmid": "42580253",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Nonlinear dose-response effects of exercise modalities on handgrip strength and functional mobility in middle-aged and older adults with sarcopenia: A Bayesian network meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-41728915",
+      "pmid": "41728915",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Effect of semaglutide on COVID-19 and other infections: an analysis from the FLOW randomized clinical trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42479992",
+      "pmid": "42479992",
+      "topic_id": "sleep-aging",
+      "title_en": "Central Obesity and Recurrent Cardiovascular Events in Patients With Obstructive Sleep Apnea: The SAVE Study.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42643064",
+      "pmid": "42643064",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Clinical Trial: Intensive Supervised Nutritional Therapy Versus Guideline-Based Nutritional Advice for Sarcopenia in Decompensated Cirrhosis-A Randomised Controlled Trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42622994",
+      "pmid": "42622994",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Integrated rehabilitation and ambulatory recovery in older adults with hip fracture according to muscle strength and sarcopenia status: a secondary analysis of a randomized controlled trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42608598",
+      "pmid": "42608598",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Gross motor function, functional level, physical performance, and muscle strength in preschool children newly diagnosed with cancer: Data from the RePlay trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    }
+  ],
+  "notes": [
+    "Discovery is not evidence of benefit.",
+    "Retired rows remain recoverable from Git history and prior public snapshots.",
+    "No protocol, commentary, correction, or title-topic mismatch is promoted into active findings."
+  ]
+}

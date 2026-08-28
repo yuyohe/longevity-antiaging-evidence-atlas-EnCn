@@ -1,6 +1,6 @@
 ﻿section_id,板块,内容,是否公开,GitHub路径,飞书导入文件,更新月份
-report-001,本月一句话,"按 2026/07/30 至 2026/08/09 的 PubMed 窗口找到 1,042 条匹配，其中 834 条是新候选、208 条已在库中。清理重复和弱相关记录后，当前候选库由 16,547 条精简为 11,079 条，证据发现由 6,000 条精简为 2,966 条。数量变小是质量控制，不是资料丢失。",是,docs/monthly-update-2026-08.html,build/feishu-public-reader/014-2026-08月度更新报告.md,2026-08
-report-002,近期文献,"本轮保留近期候选 303 条，其中 211 条进入 findings；记录候选退出决定 6,302 条、findings 退出决定 4,027 条。退出理由可在 data/archive/ 中复核。 新增记录仍是自动草稿，不能直接改变医学结论。",是,build/healthspan_recent_update_2026_08_report.json,build/feishu-public-reader/014-2026-08月度更新报告.md,2026-08
-report-003,资产规模,候选文献 11079；证据发现 2966；证据矩阵 1500；皮肤/外观主题 9；补剂条目 100；撤稿观察目标 117。,是,data/public_asset_index_2026_08.csv,build/feishu-public-reader/014-2026-08月度更新报告.md,2026-08
+report-001,本月一句话,"按 2026/08/10 至 2026/08/28 的 PubMed 窗口找到 923 条匹配，其中 911 条是新候选、12 条已在库中。清理重复和弱相关记录后，当前候选库由 11,079 条调整为 11,104 条，证据发现由 2,966 条调整为 3,039 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。",是,docs/monthly-update-2026-08.html,build/feishu-public-reader/014-2026-08月度更新报告.md,2026-08
+report-002,近期文献,本轮保留近期候选 248 条，其中 162 条进入 findings；记录候选退出决定 886 条、findings 退出决定 850 条。退出理由可在 data/archive/ 中复核。 新增记录仍是自动草稿，不能直接改变医学结论。,是,data/curation_release_metrics_2026_08_end.json,build/feishu-public-reader/014-2026-08月度更新报告.md,2026-08
+report-003,资产规模,候选文献 11104；证据发现 3039；证据矩阵 1500；皮肤/外观主题 9；补剂条目 100；撤稿观察目标 117。,是,data/public_asset_index_2026_08.csv,build/feishu-public-reader/014-2026-08月度更新报告.md,2026-08
 report-004,热力图,研究热力图和证据等级热力图已按最新 evidence_matrix 重建。热力图表示研究活跃度和证据分布，不是有效性排行榜。,是,docs/research-heatmap-2026-08.html,build/feishu-public-reader/013-抗衰研究热力图.md,2026-08
 report-005,边界,近期文献仅进入候选和草稿层；药物、慢病、医美、注射、剂量和个人方案继续保持医生/专业评估边界。,是,content/public-reader/doctor-first.md,build/feishu-public-reader/009-哪些内容必须先问医生.md,2026-08

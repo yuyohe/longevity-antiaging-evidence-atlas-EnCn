@@ -7,7 +7,7 @@
 
 部分重编程 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 29 records; final public claims still require full-text review.
+Draft summary: this topic now includes 30 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -59,20 +59,21 @@ Draft summary: this topic now includes 29 records; final public claims still req
 - [The epigenetic rejuvenation promise: Partial reprogramming as a therapeutic strategy for aging and disease.](../papers/pubmed-41490578.md) (2026, Ageing research reviews)
 - [Role of Sirtuin1-p53 regulatory axis in aging, cancer and cellular reprogramming.](../papers/pubmed-29476819.md) (2018, Ageing research reviews)
 - [Mitochondrial function in pluripotent stem cells and cellular reprogramming.](../papers/pubmed-24281332.md) (2014, Gerontology)
-- [Tissue nanotransfection and cellular reprogramming in regenerative medicine and antimicrobial dynamics.](../papers/pubmed-40606909.md) (2025, Frontiers in bioengineering and biotechnology)
 - [A cross-talk between p16High senescence and cellular reprogramming.](../papers/pubmed-42212384.md) (2026, Clinical science (London, England : 1979))
+- [Tissue nanotransfection and cellular reprogramming in regenerative medicine and antimicrobial dynamics.](../papers/pubmed-40606909.md) (2025, Frontiers in bioengineering and biotechnology)
 - [Restoration of neuronal progenitors by partial reprogramming in the aged neurogenic niche.](../papers/pubmed-38553564.md) (2024, Nature aging)
 - [Partial reprogramming of the mammalian brain.](../papers/pubmed-38553563.md) (2024, Nature aging)
 - [Partial reprogramming induces a steady decline in epigenetic age before loss of somatic identity.](../papers/pubmed-30450724.md) (2019, Aging cell)
 - [Partial reprogramming strategy for intervertebral disc rejuvenation by activating energy switch.](../papers/pubmed-35266272.md) (2022, Aging cell)
-- [Partial Reprogramming As An Emerging Strategy for Safe Induced Cell Generation and Rejuvenation.](../papers/pubmed-31475896.md) (2019, Current gene therapy)
-- [Anti-Aging Strategies Based on Cellular Reprogramming.](../papers/pubmed-27426043.md) (2016, Trends in molecular medicine)
-- [Cellular reprogramming beyond pluripotency.](../papers/pubmed-41864756.md) (2026, Trends in molecular medicine)
+- [Conserved Partial Reprogramming Effects on the Methylome.](../papers/pubmed-42647204.md) (2026, Epigenomes)
 - [Telomeres as hallmarks of iPSC aging: A review on telomere dynamics during stemness and cellular reprogramming.](../papers/pubmed-40414363.md) (2025, Ageing research reviews)
 - [Unlocking regeneration: how partial reprogramming resembles tissue healing.](../papers/pubmed-40311172.md) (2025, Current opinion in genetics & development)
 - [The crosstalk between cellular reprogramming and senescence in aging and regeneration.](../papers/pubmed-32561400.md) (2020, Experimental gerontology)
 - [Mitochondrial bioenergetic function and metabolic plasticity in stem cell differentiation and cellular reprogramming.](../papers/pubmed-21983491.md) (2012, Biochimica et biophysica acta)
+- [Cellular reprogramming beyond pluripotency.](../papers/pubmed-41864756.md) (2026, Trends in molecular medicine)
 - [Targeted partial reprogramming of age-associated cell states improves markers of health in mouse models of aging.](../papers/pubmed-39259812.md) (2024, Science translational medicine)
 - [Diverse partial reprogramming strategies restore youthful gene expression and transiently suppress cell identity.](../papers/pubmed-35690067.md) (2022, Cell systems)
+- [Partial Reprogramming As An Emerging Strategy for Safe Induced Cell Generation and Rejuvenation.](../papers/pubmed-31475896.md) (2019, Current gene therapy)
 - [Tissue damage and senescence provide critical signals for cellular reprogramming in vivo.](../papers/pubmed-27884981.md) (2016, Science (New York, N.Y.))
+- [Anti-Aging Strategies Based on Cellular Reprogramming.](../papers/pubmed-27426043.md) (2016, Trends in molecular medicine)
 - [Vitamin B(12) boosts cellular reprogramming.](../papers/pubmed-38052932.md) (2023, Nature aging)

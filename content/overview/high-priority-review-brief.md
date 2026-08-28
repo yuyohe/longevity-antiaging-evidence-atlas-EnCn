@@ -37,9 +37,9 @@
 | core-healthspan-cardiorespiratory-fitness-01 | 心肺适能与死亡风险 | [42543470](https://pubmed.ncbi.nlm.nih.gov/42543470/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-cardiorespiratory-fitness-02 | 心肺适能与死亡风险 | [42376039](https://pubmed.ncbi.nlm.nih.gov/42376039/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-cardiorespiratory-fitness-03 | 心肺适能与死亡风险 | [42062906](https://pubmed.ncbi.nlm.nih.gov/42062906/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-01 | 身体活动与健康寿命 | [42400650](https://pubmed.ncbi.nlm.nih.gov/42400650/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-02 | 身体活动与健康寿命 | [42348026](https://pubmed.ncbi.nlm.nih.gov/42348026/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-physical-activity-healthspan-03 | 身体活动与健康寿命 | [42127076](https://pubmed.ncbi.nlm.nih.gov/42127076/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-physical-activity-healthspan-01 | 身体活动与健康寿命 | [42512681](https://pubmed.ncbi.nlm.nih.gov/42512681/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-physical-activity-healthspan-02 | 身体活动与健康寿命 | [42400650](https://pubmed.ncbi.nlm.nih.gov/42400650/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-physical-activity-healthspan-03 | 身体活动与健康寿命 | [42348026](https://pubmed.ncbi.nlm.nih.gov/42348026/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-resistance-training-muscle-01 | 抗阻训练、肌肉与衰弱 | [42495106](https://pubmed.ncbi.nlm.nih.gov/42495106/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-resistance-training-muscle-02 | 抗阻训练、肌肉与衰弱 | [39342128](https://pubmed.ncbi.nlm.nih.gov/39342128/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-resistance-training-muscle-03 | 抗阻训练、肌肉与衰弱 | [38341512](https://pubmed.ncbi.nlm.nih.gov/38341512/) | 2024 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
@@ -55,9 +55,9 @@
 | core-healthspan-sleep-aging-01 | 睡眠与健康结局 | [40982264](https://pubmed.ncbi.nlm.nih.gov/40982264/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-02 | 睡眠与健康结局 | [40072785](https://pubmed.ncbi.nlm.nih.gov/40072785/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-03 | 睡眠与健康结局 | [39960920](https://pubmed.ncbi.nlm.nih.gov/39960920/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-01 | GLP-1、减重与心代谢结局 | [42219271](https://pubmed.ncbi.nlm.nih.gov/42219271/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-02 | GLP-1、减重与心代谢结局 | [42339050](https://pubmed.ncbi.nlm.nih.gov/42339050/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-03 | GLP-1、减重与心代谢结局 | [41761267](https://pubmed.ncbi.nlm.nih.gov/41761267/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-01 | GLP-1、减重与心代谢结局 | [42410309](https://pubmed.ncbi.nlm.nih.gov/42410309/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-02 | GLP-1、减重与心代谢结局 | [42348164](https://pubmed.ncbi.nlm.nih.gov/42348164/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-03 | GLP-1、减重与心代谢结局 | [42339050](https://pubmed.ncbi.nlm.nih.gov/42339050/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-caloric-restriction-human-01 | 热量限制与人体衰老 | [37118425](https://pubmed.ncbi.nlm.nih.gov/37118425/) | 2023 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-caloric-restriction-human-02 | 热量限制与人体衰老 | [28600365](https://pubmed.ncbi.nlm.nih.gov/28600365/) | 2017 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-caloric-restriction-human-03 | 热量限制与人体衰老 | [26332798](https://pubmed.ncbi.nlm.nih.gov/26332798/) | 2016 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |

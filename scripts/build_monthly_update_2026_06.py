@@ -19,9 +19,16 @@ MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-06")
 MONTH_UNDERSCORE = MONTH.replace("-", "_")
 RUN_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", date.today().isoformat())
 RECENT_REPORT = BUILD / f"healthspan_recent_update_{MONTH_UNDERSCORE}_report.json"
-CURATION_REPORT = DATA / f"curation_release_metrics_{MONTH_UNDERSCORE}.json"
+CURATION_REPORT = Path(
+    os.environ.get(
+        "EVIDENCE_ATLAS_CURATION_METRICS",
+        DATA / f"curation_release_metrics_{MONTH_UNDERSCORE}.json",
+    )
+)
+if not CURATION_REPORT.is_absolute():
+    CURATION_REPORT = ROOT / CURATION_REPORT
 MONTH_NUMBER = int(MONTH.split("-")[1])
-RECENT_TAG = f"recent_update_{MONTH_UNDERSCORE}"
+RECENT_TAG = os.environ.get("EVIDENCE_ATLAS_RECENT_TAG", f"recent_update_{MONTH_UNDERSCORE}")
 BASELINE_LABEL = os.environ.get(
     "EVIDENCE_ATLAS_BASELINE_LABEL",
     "6 月底冻结版" if MONTH == "2026-07" else "6 月中本地版",
@@ -278,8 +285,9 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
         retired_findings = safe_int(recent.get("retired", {}).get("finding_decisions"))
         update_sentence = (
             f"按 {date_window} 的 PubMed 窗口找到 {recent_bucket_total:,} 条匹配，其中 {public_recent_added:,} 条是新候选、"
-            f"{matched_existing:,} 条已在库中。清理重复和弱相关记录后，当前候选库由 {before_candidates:,} 条精简为 "
-            f"{len(candidates):,} 条，证据发现由 {before_findings:,} 条精简为 {len(findings):,} 条。数量变小是质量控制，不是资料丢失。"
+            f"{matched_existing:,} 条已在库中。清理重复和弱相关记录后，当前候选库由 {before_candidates:,} 条调整为 "
+            f"{len(candidates):,} 条，证据发现由 {before_findings:,} 条调整为 {len(findings):,} 条。"
+            "已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。"
         )
         recent_detail = (
             f"本轮保留近期候选 {safe_int(recent.get('after', {}).get('recent_candidates_retained')):,} 条，"
@@ -321,7 +329,14 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
     top_recent_rows = []
     sample_rows = list(expansion.get("added_sample", [])[:12])
     if curated_release:
-        featured_pmids = ["42543470", "42219271", "42044540", "42217831", "42212393", "42545663"]
+        featured_pmids = [
+            value.strip()
+            for value in os.environ.get(
+                "EVIDENCE_ATLAS_FEATURED_PMIDS",
+                "42543470,42219271,42044540,42217831,42212393,42545663",
+            ).split(",")
+            if value.strip()
+        ]
         candidates_by_pmid = {row.get("pmid", ""): row for row in candidates}
         sample_rows = [candidates_by_pmid[pmid] for pmid in featured_pmids if pmid in candidates_by_pmid]
     if not sample_rows:
@@ -348,7 +363,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
             "板块": "近期文献",
             "内容": recent_detail + " 新增记录仍是自动草稿，不能直接改变医学结论。",
             "是否公开": "是",
-            "GitHub路径": f"build/healthspan_recent_update_{MONTH_UNDERSCORE}_report.json",
+            "GitHub路径": str(CURATION_REPORT.relative_to(ROOT)).replace("\\", "/"),
             "飞书导入文件": f"build/feishu-public-reader/014-{MONTH}月度更新报告.md",
             "更新月份": MONTH,
         },
@@ -427,7 +442,7 @@ def build_monthly_report(topic_year_rows: list[dict[str, str]], topic_evidence_r
 <body>
   <header>
     <h1>{MONTH} 抗衰证据库月度更新报告</h1>
-    <p>品牌：{esc(BRAND_NAME)}。生成日期：{RUN_DATE}。本轮重点是近期文献增量、证据矩阵扩容和视觉资产更新。</p>
+    <p>品牌：{esc(BRAND_NAME)}。生成日期：{RUN_DATE}。本轮重点是近期文献补检、固定容量精编和视觉资产更新。</p>
   </header>
   <main>
     <section>

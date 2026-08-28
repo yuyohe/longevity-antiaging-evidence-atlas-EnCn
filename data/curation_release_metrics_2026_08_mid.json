@@ -1,0 +1,90 @@
+{
+  "release": "2026-08-mid-curated",
+  "date": "2026-08-09",
+  "search": {
+    "date_window": "2026/07/30..2026/08/09",
+    "queries": 20,
+    "unique_pubmed_matches": 1042,
+    "new_rows": 834,
+    "matched_existing": 208
+  },
+  "capacity_policy": {
+    "candidate_per_topic_cap": 600,
+    "finding_per_topic_cap": 200,
+    "matrix_global_cap": 1500,
+    "matrix_per_topic_cap": 100,
+    "core_review_per_high_grade_topic": 3
+  },
+  "before": {
+    "candidate_records": 16547,
+    "finding_records": 6000
+  },
+  "after": {
+    "candidate_records": 11079,
+    "finding_records": 2966,
+    "recent_candidates_retained": 303,
+    "recent_findings_retained": 211
+  },
+  "retired": {
+    "candidate_decisions": 6302,
+    "candidate_reasons": {
+      "duplicate_record": 101,
+      "non_result_publication_title": 102,
+      "topic_capacity_limit": 5993,
+      "unmapped_topic": 106
+    },
+    "finding_decisions": 4027,
+    "finding_reasons": {
+      "candidate_retired_as_duplicate": 5,
+      "non_primary_commentary_or_correction": 73,
+      "nonhuman_record_in_human_outcome_topic": 65,
+      "protocol_or_registered_plan": 103,
+      "title_topic_signal_missing": 3431,
+      "topic_capacity_limit": 350
+    }
+  },
+  "candidate_topic_counts": {
+    "autophagy-mitophagy": 600,
+    "blood-pressure-aging": 600,
+    "caloric-restriction-human": 600,
+    "cardiorespiratory-fitness": 600,
+    "dietary-pattern-longevity": 600,
+    "epigenetic-clocks": 600,
+    "glp1-weight-cardiometabolic": 600,
+    "itp-mouse-lifespan": 179,
+    "klotho-il11-aging": 600,
+    "ldl-apob-cardiovascular-risk": 600,
+    "metformin-aging": 600,
+    "microbiome-inflammaging": 600,
+    "nad-nmn-nr-aging": 505,
+    "partial-reprogramming": 305,
+    "physical-activity-healthspan": 600,
+    "rapamycin-mtor-aging": 490,
+    "resistance-training-muscle": 600,
+    "senolytics": 600,
+    "sleep-aging": 600,
+    "time-restricted-eating": 600
+  },
+  "finding_topic_counts": {
+    "autophagy-mitophagy": 115,
+    "blood-pressure-aging": 158,
+    "caloric-restriction-human": 104,
+    "cardiorespiratory-fitness": 134,
+    "dietary-pattern-longevity": 200,
+    "epigenetic-clocks": 99,
+    "glp1-weight-cardiometabolic": 200,
+    "itp-mouse-lifespan": 11,
+    "klotho-il11-aging": 183,
+    "ldl-apob-cardiovascular-risk": 152,
+    "metformin-aging": 200,
+    "microbiome-inflammaging": 200,
+    "nad-nmn-nr-aging": 122,
+    "partial-reprogramming": 29,
+    "physical-activity-healthspan": 200,
+    "rapamycin-mtor-aging": 105,
+    "resistance-training-muscle": 200,
+    "senolytics": 154,
+    "sleep-aging": 200,
+    "time-restricted-eating": 200
+  }
+}

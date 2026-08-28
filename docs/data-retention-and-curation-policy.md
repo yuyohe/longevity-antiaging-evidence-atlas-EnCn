@@ -1,6 +1,6 @@
 # 宇多Yul细胞证据图谱：精编与归档规则 / Curation and Retention Policy
 
-**生效日期 / Effective date:** 2026-08-09<br>
+**最近复核 / Last reviewed:** 2026-08-28<br>
 **品牌 / Brand:** 宇多Yul细胞/yulcell
 
 ## 先说结论 / The Short Version
@@ -37,13 +37,15 @@ Removal from an active layer does not mean a paper is false. It means the record
 
 ## 可追溯与恢复 / Traceability and Recovery
 
-- 本轮候选退出原因：`data/archive/candidate_retirement_2026-08.csv`
-- 本轮发现层退出原因：`data/archive/finding_retirement_2026-08.csv`
-- 当前月和上一月 CSV 保持展开，方便直接下载比较。
+- 8 月底候选退出原因：`data/archive/candidate_retirement_2026-08-end.csv`
+- 8 月底发现层退出原因：`data/archive/finding_retirement_2026-08-end.csv`
+- 8 月中期退出日志：`data/archive/candidate_retirement_2026-08-mid.csv` 与 `data/archive/finding_retirement_2026-08-mid.csv`
+- 当前 8 月底与 7 月 CSV 保持展开，方便直接下载比较。
+- 完整 8 月中期五表快照：`archive/public-data/public-data-2026-08-mid.zip`
 - 更早的完整 CSV 按月份压缩到 `archive/public-data/`，ZIP 内含每个文件的行数、字节数和 SHA-256。
 - Git 历史仍保留发布时的完整版本，可以恢复任何旧记录。
 
-The current and previous snapshots stay unpacked. Older snapshots are compressed with internal row counts and SHA-256 hashes. Git history remains the final recovery path.
+The current and previous monthly snapshots stay unpacked. Superseded same-month and older snapshots are compressed with internal row counts and SHA-256 hashes. Git history remains the final recovery path.
 
 ## 自动检索的边界 / Automation Boundary
 

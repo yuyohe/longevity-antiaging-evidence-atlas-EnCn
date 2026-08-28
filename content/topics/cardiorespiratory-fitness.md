@@ -7,7 +7,7 @@
 
 目前最值得优先关注的健康寿命指标之一；较高心肺适能与更低死亡和心血管风险高度相关。
 
-Draft summary: this topic now includes 134 records; final public claims still require full-text review.
+Draft summary: this topic now includes 136 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -84,6 +84,7 @@ Draft summary: this topic now includes 134 records; final public claims still re
 - [Exercise improves cardiorespiratory fitness in people with schizophrenia: A systematic review and meta-analysis.](../papers/pubmed-26475214.md) (2015, Schizophrenia research)
 - [Changes in cardiorespiratory fitness in cardiac rehabilitation patients: a meta-analysis.](../papers/pubmed-22206636.md) (2013, International journal of cardiology)
 - [Cardiorespiratory fitness as a quantitative predictor of all-cause mortality and cardiovascular events in healthy men and women: a meta-analysis.](../papers/pubmed-19454641.md) (2009, JAMA)
+- [Cardiorespiratory exercise testing in clinical oncology research: systematic review and practice recommendations.](../papers/pubmed-18672211.md) (2008, The Lancet. Oncology)
 - [Meta-analysis of the effect of structured exercise training on cardiorespiratory fitness in Type 2 diabetes mellitus.](../papers/pubmed-12856082.md) (2003, Diabetologia)
 - [Association of muscle strength and cardiorespiratory fitness with all-cause and cancer-specific mortality in patients diagnosed with cancer: a systematic review with meta-analysis.](../papers/pubmed-39837589.md) (2025, British journal of sports medicine)
 - [Objectively Assessed Cardiorespiratory Fitness and All-Cause Mortality Risk: An Updated Meta-analysis of 37 Cohort Studies Involving 2,258,029 Participants.](../papers/pubmed-35562197.md) (2022, Mayo Clinic proceedings)
@@ -94,7 +95,6 @@ Draft summary: this topic now includes 134 records; final public claims still re
 - [Cardiorespiratory Fitness in Severe Mental Illness: A Systematic Review and Meta-analysis.](../papers/pubmed-27299747.md) (2017, Sports medicine (Auckland, N.Z.))
 - [Exercise improves cardiorespiratory fitness in people with depression: A meta-analysis of randomized control trials.](../papers/pubmed-26523669.md) (2016, Journal of affective disorders)
 - [Depression Symptom Severity and Cardiorespiratory Fitness in Healthy and Depressed Adults: A Systematic Review and Meta-Analysis.](../papers/pubmed-26446894.md) (2016, Sports medicine (Auckland, N.Z.))
-- [Cardiorespiratory exercise testing in clinical oncology research: systematic review and practice recommendations.](../papers/pubmed-18672211.md) (2008, The Lancet. Oncology)
 - [Evaluation of Genetics in the Association Between Cardiorespiratory Fitness and Health: Insights from a Genome-Wide Polygenic Score for Cardiorespiratory Fitness in the FinnGen and HUNT cohorts.](../papers/pubmed-42087449.md) (2026, Scandinavian journal of medicine & science in sports)
 - [Association of cardiorespiratory fitness with adverse outcomes in patients with and without atrial fibrillation: a prospective cohort study.](../papers/pubmed-40520885.md) (2025, International journal of medical sciences)
 - [Adolescent cardiorespiratory fitness and risk of cancer in late adulthood: A nationwide sibling-controlled cohort study in Sweden.](../papers/pubmed-40338834.md) (2025, PLoS medicine)
@@ -118,6 +118,7 @@ Draft summary: this topic now includes 134 records; final public claims still re
 - [The association of estimated cardiorespiratory fitness with COVID-19 incidence and mortality: A cohort study.](../papers/pubmed-33951071.md) (2021, PloS one)
 - [Trends in cardiorespiratory fitness among apparently healthy adults from the Ball State Adult Fitness Longitudinal Lifestyle STudy (BALL ST) cohort from 1970-2019.](../papers/pubmed-33259526.md) (2020, PloS one)
 - [Cardiorespiratory fitness, body mass index, and cancer mortality: a cohort study of Japanese men.](../papers/pubmed-25261876.md) (2014, BMC public health)
+- [Metabolomic and Proteomic Signatures of Cardiorespiratory Fitness for Predicting All-Cause Mortality and Non-Communicable Disease Risk: A Prospective Study in the UK Biobank.](../papers/pubmed-42394615.md) (2026, Circulation. Genomic and precision medicine)
 - [Survival of the fittest? Peak oxygen uptake and all-cause mortality among older adults in Norway.](../papers/pubmed-39638222.md) (2025, Progress in cardiovascular diseases)
 - [Cardiorespiratory fitness in childhood cancer survivors: a systematic review and meta-analysis.](../papers/pubmed-39365168.md) (2026, European journal of preventive cardiology)
 - [Cardiorespiratory fitness as predictor of cancer mortality: a systematic review and meta-analysis.](../papers/pubmed-25009011.md) (2015, Annals of oncology : official journal of the European Society for Medical Oncology)
@@ -126,7 +127,6 @@ Draft summary: this topic now includes 134 records; final public claims still re
 - [Dose-response associations of cardiorespiratory fitness with all-cause mortality and incidence and mortality of cancer and cardiovascular and respiratory diseases: the UK Biobank cohort study.](../papers/pubmed-30796106.md) (2019, British journal of sports medicine)
 - [Joint associations of sauna bathing and cardiorespiratory fitness on cardiovascular and all-cause mortality risk: a long-term prospective cohort study.](../papers/pubmed-28972808.md) (2018, Annals of medicine)
 - [Benefits of robotic cystectomy with intracorporeal diversion for patients with low cardiorespiratory fitness: A prospective cohort study.](../papers/pubmed-27197920.md) (2016, Urologic oncology)
-- [Metabolomic and Proteomic Signatures of Cardiorespiratory Fitness for Predicting All-Cause Mortality and Non-Communicable Disease Risk: A Prospective Study in the UK Biobank.](../papers/pubmed-42394615.md) (2026, Circulation. Genomic and precision medicine)
 - [Cardiorespiratory Fitness and Mortality in Patients With Chronic Kidney Disease: A Prospective Cohort Study.](../papers/pubmed-40186598.md) (2025, Mayo Clinic proceedings)
 - [Association between estimated cardiorespiratory fitness and breast cancer: a prospective cohort study.](../papers/pubmed-37336634.md) (2023, British journal of sports medicine)
 - [Percentage of Age-Predicted Cardiorespiratory Fitness Is Inversely Associated with Cardiovascular Disease Mortality: A Prospective Cohort Study.](../papers/pubmed-34198307.md) (2021, Cardiology)
@@ -142,12 +142,12 @@ Draft summary: this topic now includes 134 records; final public claims still re
 - [Effects of Exercise Mode on Improving Cardiovascular Function and Cardiorespiratory Fitness After Bariatric Surgery: A Narrative Review.](../papers/pubmed-35034058.md) (2022, American journal of physical medicine & rehabilitation)
 - [Effect of high-intensity exercise on functional capacity, cardiorespiratory function and quality of life in patients with colorectal cancer: a systematic review and meta-analysis.](../papers/pubmed-41313477.md) (2025, Supportive care in cancer : official journal of the Multinational Association of Supportive Care in Cancer)
 - [A systematic review and meta-analysis of the effects of aerobic exercise interventions on cardiorespiratory fitness in adults with intellectual disability.](../papers/pubmed-34452861.md) (2022, Disability and health journal)
-- [Combined Effect of Sauna Bathing and Cardiorespiratory Fitness on the Risk of Sudden Cardiac Deaths in Caucasian Men: A Long-term Prospective Cohort Study.](../papers/pubmed-29551418.md) (2018, Progress in cardiovascular diseases)
+- [Exercise Training and Heart Rate Variability: A Guided Optimization of Cardiorespiratory Fitness in Cardiometabolic Disease.](../papers/pubmed-42560414.md) (2026, Current atherosclerosis reports)
 - [Physical activity and cardiorespiratory fitness in atherosclerotic cardiovascular disease risk prediction: integrating digital phenotyping, mechanistic insights, and multimodal clinical prediction for actionable stratification.](../papers/pubmed-42471101.md) (2026, Current problems in cardiology)
+- [Evaluating current assessment techniques of cardiorespiratory fitness.](../papers/pubmed-38855917.md) (2024, Expert review of cardiovascular therapy)
 - [Update to the 2016 American Heart Association cardiorespiratory fitness statement.](../papers/pubmed-38387825.md) (2024, Progress in cardiovascular diseases)
 - [Impact of Sodium-Glucose Cotransporter-2 Inhibitors on Cardiac Bioenergetic Properties and Cardiorespiratory Fitness: A Special Effect of SGLT2i In Heart Failure?](../papers/pubmed-35191660.md) (2023, Cardiology in review)
-- [Evaluating current assessment techniques of cardiorespiratory fitness.](../papers/pubmed-38855917.md) (2024, Expert review of cardiovascular therapy)
-- [Exercise Training and Heart Rate Variability: A Guided Optimization of Cardiorespiratory Fitness in Cardiometabolic Disease.](../papers/pubmed-42560414.md) (2026, Current atherosclerosis reports)
+- [Combined Effect of Sauna Bathing and Cardiorespiratory Fitness on the Risk of Sudden Cardiac Deaths in Caucasian Men: A Long-term Prospective Cohort Study.](../papers/pubmed-29551418.md) (2018, Progress in cardiovascular diseases)
 - [The Impact of Light Physical Activity, Sedentary Behavior and Cardiorespiratory Fitness in Extending Lifespan and Healthspan Outcomes: How Little is Still Significant? A Narrative Review.](../papers/pubmed-37302646.md) (2023, Current problems in cardiology)
 - [Association of obstructive sleep apnoea with exercise capacity and mortality in a population-based study: results of SHIP-TREND.](../papers/pubmed-42516907.md) (2026, ERJ open research)
 - [Exercise Capacity, Endothelial Function, Muscle Mass, and Strength in Pediatric Patients With Fontan Circulation.](../papers/pubmed-42422410.md) (2026, CJC pediatric and congenital heart disease)
@@ -176,8 +176,10 @@ Draft summary: this topic now includes 134 records; final public claims still re
 - [Long-Term Maintenance of Cardiorespiratory Fitness Gains After Cardiac Rehabilitation Reduces Mortality Risk in Patients With Multimorbidity.](../papers/pubmed-36203224.md) (2023, Journal of cardiopulmonary rehabilitation and prevention)
 - [Cardiorespiratory Fitness and Mortality Risk Across the Spectra of Age, Race, and Sex.](../papers/pubmed-35926933.md) (2022, Journal of the American College of Cardiology)
 - [Association between cardiorespiratory fitness and risk of all-cause and cause-specific mortality.](../papers/pubmed-35294786.md) (2022, European journal of clinical investigation)
+- [Cardiorespiratory Fitness Mediates the Association Between Neighborhood Deprivation and Arterial Stiffness in Women.](../papers/pubmed-42606322.md) (2026, Journal of applied physiology (Bethesda, Md. : 1985))
+- [Longitudinal changes of cardiorespiratory fitness are associated with cardiovascular disease and mortality: evidence from the UK Biobank.](../papers/pubmed-42605962.md) (2026, European journal of preventive cardiology)
 - [Cardiorespiratory Fitness From Cardiopulmonary Exercise Testing Is a Comprehensive Risk-stratifying Tool in Liver Transplant Candidates.](../papers/pubmed-39563725.md) (2024, Transplantation direct)
-- [Left Ventricular Volume as a Predictor of Exercise Capacity and Functional Independence in Individuals with Normal Ejection Fraction.](../papers/pubmed-39489516.md) (2024, European journal of preventive cardiology)
 - [Clinical determinants of maximal aerobic capacity in patients with obstructive sleep apnea syndrome.](../papers/pubmed-42248369.md) (2026, Respiratory medicine)
+- [Left Ventricular Volume as a Predictor of Exercise Capacity and Functional Independence in Individuals with Normal Ejection Fraction.](../papers/pubmed-39489516.md) (2024, European journal of preventive cardiology)
 - [Comparison of Cardiorespiratory Fitness Prediction Equations and Generation of New Predictive Model for Patients with Obesity.](../papers/pubmed-38768055.md) (2024, Medicine and science in sports and exercise)
 - [Maintaining or increasing cardiorespiratory fitness is associated with reduced hospital admission rate.](../papers/pubmed-38019572.md) (2024, European journal of preventive cardiology)

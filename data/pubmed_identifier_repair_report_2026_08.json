@@ -1,14 +1,14 @@
 {
-  "date": "2026-08-09",
+  "date": "2026-08-28",
   "official_source": "NCBI PubMed E-utilities esummary",
-  "pubmed_findings_checked": 2966,
-  "unique_pmids_checked": 2966,
+  "pubmed_findings_checked": 3039,
+  "unique_pmids_checked": 3039,
   "missing_official_summaries": 0,
   "title_mismatches": 0,
   "accepted_minor_title_variants": 3,
-  "finding_doi_corrected": 1395,
-  "finding_pmcid_corrected": 1814,
+  "finding_doi_corrected": 0,
+  "finding_pmcid_corrected": 27,
   "candidate_doi_corrected": 0,
-  "candidate_pmcid_corrected": 1655,
+  "candidate_pmcid_corrected": 84,
   "status": "passed"
 }

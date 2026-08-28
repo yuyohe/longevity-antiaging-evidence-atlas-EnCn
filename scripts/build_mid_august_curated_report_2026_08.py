@@ -1,4 +1,4 @@
-"""Build the mid-August curated public guide, self-contained report, and Feishu indexes."""
+"""Build a curated public guide, self-contained report, and Feishu indexes."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import base64
 import csv
 import html
 import json
+import os
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -16,19 +17,27 @@ DATA = ROOT / "data"
 DOCS = ROOT / "docs"
 PUBLIC_DATA = ROOT / "public-data"
 PUBLIC_READER = ROOT / "content" / "public-reader"
-VISUAL_DIR = DOCS / "assets" / "visual-assets" / "2026-08"
-METRICS_PATH = DATA / "curation_release_metrics_2026_08.json"
+MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-08")
+MONTH_UNDERSCORE = MONTH.replace("-", "_")
+VISUAL_DIR = DOCS / "assets" / "visual-assets" / MONTH
+METRICS_PATH = ROOT / os.environ.get(
+    "EVIDENCE_ATLAS_RELEASE_METRICS", "data/curation_release_metrics_2026_08.json"
+)
 REGISTRY_PATH = DATA / "feishu_table_registry.csv"
-FINDINGS_PATH = PUBLIC_DATA / "evidence-findings-2026-08.csv"
+FINDINGS_PATH = PUBLIC_DATA / f"evidence-findings-{MONTH}.csv"
 TOPICS_PATH = DATA / "topics.csv"
-REPAIR_PATH = DATA / "pubmed_identifier_repair_report_2026_08.json"
+REPAIR_PATH = ROOT / os.environ.get(
+    "EVIDENCE_ATLAS_IDENTIFIER_REPORT", "data/pubmed_identifier_repair_report_2026_08.json"
+)
 
 BRAND = "宇多Yul细胞/yulcell"
 GITHUB = "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"
-SNAPSHOT_DATE = "2026-08-09"
-MONTH = "2026-08"
-REPORT_FILE = "mid-august-public-update-2026-08.html"
-RELEASE_FILE = "mid-august-2026-update.md"
+SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-08-09")
+UPDATE_TITLE_ZH = os.environ.get("EVIDENCE_ATLAS_RELEASE_TITLE_ZH", "2026 年 8 月中期精编更新")
+UPDATE_TITLE_EN = os.environ.get("EVIDENCE_ATLAS_RELEASE_TITLE_EN", "Mid-August 2026 curated update")
+RELEASE_CODE = os.environ.get("EVIDENCE_ATLAS_RELEASE_CODE", "2026-08 MID-MONTH CURATED RELEASE")
+REPORT_FILE = os.environ.get("EVIDENCE_ATLAS_PUBLIC_REPORT_FILE", "mid-august-public-update-2026-08.html")
+RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-august-2026-update.md")
 
 MAIN_IMAGES = [
     ("heatmap-dashboard-2026-08.png", "热力图总览 / Heatmap dashboard", "先看全局，再进入单张图。颜色表示数量或结构，不表示治疗效果。"),
@@ -40,7 +49,14 @@ MAIN_IMAGES = [
     ("ingredient-card-wall-2026-08.png", "50 成分总览 / 50-ingredient wall", "适合发帖总览；每张单卡仍要结合边界说明阅读。"),
 ]
 
-FEATURED_PMIDS = ["42543470", "42219271", "42044540", "42217831", "42212393", "42545663"]
+FEATURED_PMIDS = [
+    value.strip()
+    for value in os.environ.get(
+        "EVIDENCE_ATLAS_FEATURED_PMIDS",
+        "42543470,42219271,42044540,42217831,42212393,42545663",
+    ).split(",")
+    if value.strip()
+]
 FEATURED_NOTES = {
     "42543470": "冠心病患者有氧加抗阻训练的系统综述与 Meta 分析；属于特定患者康复场景，不能直接外推到所有人。",
     "42219271": "2 型糖尿病人群 GLP-1 类治疗与心血管结局的网络 Meta 分析；药物问题必须由医生评估。",
@@ -48,6 +64,12 @@ FEATURED_NOTES = {
     "42217831": "久坐、看电视时间与全因死亡风险的综述之综述；观察到关联不等于单篇研究证明因果。",
     "42212393": "取栓成功后强化与常规降压的一年结局；研究对象很特殊，不能套用为普通人的降压方案。",
     "42545663": "老年人运动获益是否达到临床意义的随机试验随访分析；仍需全文复核效果大小和适用人群。",
+    "42611710": "虚弱老年人的运动综述显示步速和起立等功能指标可能改善，但证据多为低或极低确定性，跌倒次数是否减少仍不清楚。",
+    "42575672": "UK Biobank 队列中，DASH 饮食依从性较高与心衰及心衰死亡风险较低相关；这是观察性关联，不能单独证明因果。",
+    "42648048": "中老年队列观察到睡眠过短或过长与死亡风险升高相关；疾病导致睡眠改变等反向因果仍需考虑。",
+    "41881552": "中国和英国两个队列都观察到用活动时间替代久坐与较低死亡风险相关；这不是把人随机分配去运动的试验。",
+    "42575851": "口服 PCSK9 抑制剂短期试验主要改善 LDL-C 等指标，尚未显示死亡差异；属于处方药研究，不能据此自行用药。",
+    "42616235": "SGLT2 抑制剂与 GLP-1 药物联合的网络 Meta 分析提示心肾结局信号，但联合比较多来自非随机亚组，只能视为待验证假说。",
 }
 
 RETIREMENT_LABELS = {
@@ -124,7 +146,7 @@ def build_feishu_manifest(registry: list[dict[str, str]]) -> None:
         for row in registry
     ]
     write_csv(
-        DATA / "feishu_live_tables_2026_08.csv",
+        DATA / f"feishu_live_tables_{MONTH_UNDERSCORE}.csv",
         rows,
         ["类别", "表名", "飞书链接", "说明", "记录数", "状态", "更新月份"],
     )
@@ -134,7 +156,7 @@ def build_feishu_manifest(registry: list[dict[str, str]]) -> None:
         for row in rows
     )
     by_key = {row["asset_key"]: row for row in registry}
-    text = f"""# 飞书公开资产索引（2026 年 8 月中期精编） / Feishu Public Assets
+    text = f"""# 飞书公开资产索引（{UPDATE_TITLE_ZH}） / Feishu Public Assets
 
 **品牌 / Brand:** {BRAND}<br>
 **冻结日期 / Snapshot date:** {SNAPSHOT_DATE}<br>
@@ -152,11 +174,11 @@ def build_feishu_manifest(registry: list[dict[str, str]]) -> None:
 | --- | --- | ---: | --- | --- |
 {table_rows}
 
-## 为什么数量变小 / Why the Counts Are Smaller
+## 为什么数量受到控制 / Why the Counts Stay Bounded
 
-本次不是继续把自动检索结果塞进主库。候选库从 16,547 条精简为 11,079 条，findings 从 6,000 条精简为 2,966 条。重复项、方案论文、评论勘误、动物/人体边界错误、题名与主题不符及超过容量的低优先级记录退出当前层；完整原因保存在 GitHub 的 `data/archive/`。
+本次不是继续把自动检索结果塞进主库。已满额主题用更相关的新记录替换低优先级旧记录，未满额主题可以在上限内补入合格记录。重复项、方案论文、评论勘误、动物/人体边界错误、题名与主题不符及超过容量的低优先级记录退出当前层；完整原因保存在 GitHub 的 `data/archive/`。
 
-The smaller counts reflect curation, not missing data. Retirement reasons are versioned on GitHub, and older snapshots remain recoverable.
+Counts may rise or fall within fixed limits. Retirement reasons are versioned on GitHub, and older snapshots remain recoverable.
 
 ## 使用边界 / Boundary
 
@@ -171,7 +193,7 @@ def build_navigation(registry: list[dict[str, str]]) -> None:
     by_key = {row["asset_key"]: row for row in registry}
     specs = [
         ("普通读者入口：从这里开始", "Start here", "第一次打开项目的人", "先弄清项目能回答什么、不能回答什么。", "content/public-reader/start-here.md", "reader_navigation", "阅读入口"),
-        ("2026 年 8 月中期精编说明", "Mid-August curated update", "所有读者", "先看这次为什么一边补文献、一边删噪声。", f"content/public-reader/{RELEASE_FILE}", "reader_navigation", "更新说明"),
+        (UPDATE_TITLE_ZH, UPDATE_TITLE_EN, "所有读者", "先看这次为什么一边补文献、一边删噪声。", f"content/public-reader/{RELEASE_FILE}", "reader_navigation", "更新说明"),
         ("15 条结论", "15 takeaways", "普通读者、学生", "先建立判断抗衰说法的基本框架。", "content/public-reader/ten-takeaways.md", "reader_navigation", "阅读入口"),
         ("证据权重怎么看", "How evidence is weighted", "想学会判断证据的人", "分清人体结局、指标、动物和机制研究。", "content/public-reader/evidence-weight.md", "evidence_matrix", "方法说明"),
         ("大众主题速读", "Topic guide", "关心运动、睡眠和代谢的人", "按主题读结论，不必先翻论文。", "content/public-reader/topics.md", "evidence_findings", "阅读入口"),
@@ -208,7 +230,7 @@ def build_navigation(registry: list[dict[str, str]]) -> None:
             }
         )
     write_csv(
-        DATA / "feishu_reader_navigation_2026_08.csv",
+        DATA / f"feishu_reader_navigation_{MONTH_UNDERSCORE}.csv",
         rows,
         list(rows[0]),
     )
@@ -219,6 +241,8 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
     after = metrics["after"]
     search = metrics["search"]
     retired = metrics["retired"]
+    repair = json.loads(REPAIR_PATH.read_text(encoding="utf-8"))
+    public_row_total = after["candidate_records"] * 2 + after["finding_records"] * 2 + 1_500
     levels = Counter(row.get("final_evidence_level") or row.get("evidence_level_draft") or "未分级" for row in findings)
     by_pmid = {row.get("pmid", ""): row for row in findings}
 
@@ -255,7 +279,7 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
             ]
         )
 
-    text = f"""# 宇多Yul细胞/yulcell：2026 年 8 月中期精编更新
+    text = f"""# 宇多Yul细胞/yulcell：{UPDATE_TITLE_ZH}
 
 **冻结日期 / Snapshot date:** {SNAPSHOT_DATE}<br>
 **检索窗口 / Search window:** {search['date_window']}<br>
@@ -263,9 +287,9 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
 
 ## 一句话结论 / One-Sentence Summary
 
-这次不是“继续往里塞”。PubMed 检索找到 {search['unique_pubmed_matches']:,} 条匹配，其中 {search['new_rows']:,} 条是新候选；经过主题核对、去重和容量控制后，当前候选库从 {before['candidate_records']:,} 条精简为 {after['candidate_records']:,} 条，findings 从 {before['finding_records']:,} 条精简为 {after['finding_records']:,} 条。
+这次不是“继续往里塞”。PubMed 检索找到 {search['unique_pubmed_matches']:,} 条匹配，其中 {search['new_rows']:,} 条是新候选；经过主题核对、去重和容量控制后，当前候选库从 {before['candidate_records']:,} 条调整为 {after['candidate_records']:,} 条，findings 从 {before['finding_records']:,} 条调整为 {after['finding_records']:,} 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。
 
-This release adds recent PubMed records while deliberately shrinking the active library. Smaller counts mean less noise, not lost history.
+This release adds and retires records within fixed capacity limits. Counts may rise or fall; older versions remain recoverable.
 
 ## 先看懂四个数字 / Four Numbers to Understand First
 
@@ -274,7 +298,7 @@ This release adds recent PubMed records while deliberately shrinking the active 
 | {after['candidate_records']:,} | 当前候选文献目录 | 不是 {after['candidate_records']:,} 个已证实结论 |
 | {after['finding_records']:,} | 与主题直接相关、进入复核层的 findings | 不是全部完成全文人工复核 |
 | 1,500 | 公开证据矩阵行数 | 不是论文总数 |
-| 29,590 | 五张公开 CSV 的处理层行数总和 | 同一论文可跨层出现，不能当成独立论文数 |
+| {public_row_total:,} | 五张公开 CSV 的处理层行数总和 | 同一论文可跨层出现，不能当成独立论文数 |
 
 ## 本轮找到了什么 / What the Search Found
 
@@ -320,9 +344,9 @@ This release adds recent PubMed records while deliberately shrinking the active 
 
 ## 本轮修正的质量问题 / Quality Fixes
 
-- 修正 PubMed XML 解析范围，参考文献 DOI/PMCID 不再覆盖论文本身的标识。
-- 用 NCBI 官方 E-utilities 核对全部 {len(findings):,} 个 findings PMID：缺失 0，实质题名冲突 0。
-- 修正 findings DOI 1,395 个、PMCID 1,814 个；修复后候选表与 findings DOI 不一致为 0。
+- PubMed XML 解析继续限制在论文本身的 ArticleIdList，参考文献 DOI/PMCID 不会覆盖主文献标识。
+- 用 NCBI 官方 E-utilities 核对全部 {len(findings):,} 个 findings PMID：缺失 {repair['missing_official_summaries']:,}，实质题名冲突 {repair['title_mismatches']:,}。
+- 本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个；候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。
 - 方案论文、评论勘误、明确动物实验不再被自动抬进人体高等级层。
 
 ## 图片与公开资产 / Visuals and Public Assets
@@ -356,6 +380,8 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
     before = metrics["before"]
     after = metrics["after"]
     retired = metrics["retired"]
+    repair = json.loads(REPAIR_PATH.read_text(encoding="utf-8"))
+    public_row_total = after["candidate_records"] * 2 + after["finding_records"] * 2 + 1_500
     levels = Counter(row.get("final_evidence_level") or row.get("evidence_level_draft") or "未分级" for row in findings)
     by_pmid = {row.get("pmid", ""): row for row in findings}
     by_key = {row["asset_key"]: row for row in registry}
@@ -401,9 +427,9 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
   <meta charset="utf-8">
   <link rel="icon" href="data:,">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{BRAND} 2026 年 8 月中期长寿抗衰证据图谱精编更新，含 PubMed 新文献、清理规则、热力图、50 成分卡和 GitHub/飞书资产。">
+  <meta name="description" content="{BRAND} {UPDATE_TITLE_ZH}，含 PubMed 新文献、清理规则、热力图、50 成分卡和 GitHub/飞书资产。">
   <meta name="keywords" content="宇多Yul细胞/yulcell,yulcell,长寿抗衰证据图谱,健康寿命证据图谱,longevity evidence atlas">
-  <title>{BRAND} | 2026 年 8 月中期精编更新</title>
+  <title>{BRAND} | {UPDATE_TITLE_ZH}</title>
   <style>
     :root {{ --ink:#182027; --muted:#5b6670; --line:#d5dde3; --paper:#ffffff; --soft:#f4f7f8; --green:#176b4b; --blue:#235a9f; --coral:#b4473a; --gold:#8a650c; }}
     * {{ box-sizing:border-box; }}
@@ -458,23 +484,23 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
 <body>
   <header>
     <div class="inner">
-      <p class="eyebrow">2026-08 MID-MONTH CURATED RELEASE</p>
+      <p class="eyebrow">{RELEASE_CODE}</p>
       <h1>宇多Yul细胞 / yulcell</h1>
-      <p class="subtitle">长寿抗衰与健康寿命证据图谱：8 月中期精编更新。补进新资料，也清理重复和弱相关记录。</p>
+      <p class="subtitle">长寿抗衰与健康寿命证据图谱：{UPDATE_TITLE_ZH}。补进新资料，也清理重复和弱相关记录。</p>
       <p class="meta">冻结日期 {SNAPSHOT_DATE} · PubMed 窗口 {esc(search['date_window'])} · 双语公开资产</p>
-      <nav class="quick-nav"><a href="#summary">先看结论</a><a href="#cleanup">为什么变小</a><a href="#new">近期文献</a><a href="#visuals">图片</a><a href="#assets">GitHub 与飞书</a></nav>
+      <nav class="quick-nav"><a href="#summary">先看结论</a><a href="#cleanup">如何控量</a><a href="#new">近期文献</a><a href="#visuals">图片</a><a href="#assets">GitHub 与飞书</a></nav>
     </div>
   </header>
   <main>
     <section id="summary"><div class="inner">
       <h2>先说结论 / Summary First</h2>
-      <p class="lead">这次更新不是继续堆数量。检索找到 <strong>{search['unique_pubmed_matches']:,}</strong> 条匹配，其中 <strong>{search['new_rows']:,}</strong> 条是新候选；清理后，当前候选库从 {before['candidate_records']:,} 条变为 {after['candidate_records']:,} 条，findings 从 {before['finding_records']:,} 条变为 {after['finding_records']:,} 条。</p>
-      <p class="notice"><strong>为什么数字变小：</strong>重复、方案论文、评论勘误、动物/人体边界错误、题名与主题不符和超过容量的低优先级记录退出当前层。它们仍可从退出日志、旧快照和 Git 历史恢复。</p>
+      <p class="lead">这次更新不是继续堆数量。检索找到 <strong>{search['unique_pubmed_matches']:,}</strong> 条匹配，其中 <strong>{search['new_rows']:,}</strong> 条是新候选；筛选后，当前候选库从 {before['candidate_records']:,} 条调整为 {after['candidate_records']:,} 条，findings 从 {before['finding_records']:,} 条调整为 {after['finding_records']:,} 条。</p>
+      <p class="notice"><strong>为什么数量仍受控制：</strong>已满额主题以替换为主；未满额主题只在上限内补入合格记录。重复、方案论文、评论勘误、动物/人体边界错误、题名与主题不符和超过容量的低优先级记录退出当前层，并可从退出日志、旧快照和 Git 历史恢复。</p>
       <div class="metrics">
         <div class="metric"><b>{after['candidate_records']:,}</b><span>当前候选文献 / active candidates</span></div>
         <div class="metric blue"><b>{after['finding_records']:,}</b><span>当前 findings / review drafts</span></div>
         <div class="metric gold"><b>1,500</b><span>证据矩阵 / matrix rows</span></div>
-        <div class="metric coral"><b>29,590</b><span>五层 CSV 总行数，不是论文数</span></div>
+        <div class="metric coral"><b>{public_row_total:,}</b><span>五层 CSV 总行数，不是论文数</span></div>
       </div>
     </div></section>
 
@@ -510,7 +536,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
 
     <section class="alt"><div class="inner">
       <h2>质量修正 / Quality Corrections</h2>
-      <p>本轮发现并修正了 PubMed XML 标识范围问题：参考文献列表中的 DOI/PMCID 不再覆盖论文本身。全部 {len(findings):,} 个 findings PMID 已用 NCBI 官方 E-utilities 核对，缺失 0、实质题名冲突 0；修正 findings DOI 1,395 个、PMCID 1,814 个，修复后候选源表与 findings DOI 不一致为 0。</p>
+      <p>PubMed XML 标识继续限制在主文献自身的 ArticleIdList。全部 {len(findings):,} 个 findings PMID 已用 NCBI 官方 E-utilities 核对，缺失 {repair['missing_official_summaries']:,}、实质题名冲突 {repair['title_mismatches']:,}；本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个，候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。</p>
       <p>自动分类也增加了明确动物实验、叙述性综述、方案论文和评论勘误的防误升规则。</p>
     </div></section>
 
@@ -571,7 +597,7 @@ def main() -> None:
     build_html(metrics, findings, topics, registry)
     print(f"wrote content/public-reader/{RELEASE_FILE}")
     print(f"wrote docs/{REPORT_FILE}")
-    print("wrote 9-table Feishu manifest and 14-row reading navigation")
+    print(f"wrote {UPDATE_TITLE_EN}, 9-table Feishu manifest, and 14-row reading navigation")
 
 
 if __name__ == "__main__":

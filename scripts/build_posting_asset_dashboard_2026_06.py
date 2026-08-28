@@ -30,6 +30,8 @@ CURATION_METRICS_PATH = Path(
         ROOT / "data" / f"curation_release_metrics_{MONTH_UNDERSCORE}.json",
     )
 )
+if not CURATION_METRICS_PATH.is_absolute():
+    CURATION_METRICS_PATH = ROOT / CURATION_METRICS_PATH
 OUT = ROOT / "docs" / f"yulcell-posting-asset-dashboard-{RUN_DATE}.html"
 
 MAIN_IMAGES = [
@@ -59,7 +61,7 @@ REPORT_LINKS = [
     ("月度更新 HTML", ROOT / "docs" / f"monthly-update-{MONTH}.html"),
     ("月度更新 Markdown", ROOT / "content" / "public-reader" / f"monthly-update-{MONTH}.md"),
     ("研究热力图 HTML", ROOT / "docs" / f"research-heatmap-{MONTH}.html"),
-    ("PubMed 增量 JSON", ROOT / "build" / f"healthspan_recent_update_{MONTH_UNDERSCORE}_report.json"),
+    ("本轮精编指标 JSON", CURATION_METRICS_PATH),
     ("飞书大众读者包", ROOT / "build" / "feishu-public-reader"),
     ("飞书全量 Markdown 包", ROOT / "build" / "feishu-docs"),
 ]
@@ -198,7 +200,8 @@ def post_copy() -> str:
         )
         curation_note = (
             f"本次不是继续堆数量：当前候选库从 {release['before']['candidate_records']:,} 条"
-            f"清理到 {release['after']['candidate_records']:,} 条。退出记录保留在日志、归档和 Git 历史中。"
+            f"调整为 {release['after']['candidate_records']:,} 条。已满额主题以替换为主，"
+            "退出记录保留在日志、归档和 Git 历史中。"
         )
     else:
         intake_lines = f"- 相对 {BASELINE_LABEL}新增候选：{BASELINE_DELTA:,} 条"

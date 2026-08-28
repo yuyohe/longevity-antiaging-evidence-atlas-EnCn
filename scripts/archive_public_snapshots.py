@@ -95,9 +95,12 @@ def verify_archive(path: Path) -> list[dict[str, str]]:
         return manifest
 
 
-def build_archive(month: str) -> tuple[Path, list[dict[str, str]], list[Path]]:
+def build_archive(
+    month: str, archive_label: str | None = None
+) -> tuple[Path, list[dict[str, str]], list[Path]]:
+    snapshot = archive_label or month
     source_paths = [PUBLIC_DATA / f"{name}-{month}.csv" for name in ASSET_NAMES]
-    archive_path = ARCHIVE_DIR / f"public-data-{month}.zip"
+    archive_path = ARCHIVE_DIR / f"public-data-{snapshot}.zip"
     existing_sources = [path for path in source_paths if path.exists()]
 
     if not existing_sources:
@@ -115,7 +118,7 @@ def build_archive(month: str) -> tuple[Path, list[dict[str, str]], list[Path]]:
         for name, payload in source_payloads.items():
             info, content = zip_entry(name, payload)
             archive.writestr(info, content, compresslevel=9)
-        info, content = zip_entry("MANIFEST.csv", manifest_bytes(month, source_payloads))
+        info, content = zip_entry("MANIFEST.csv", manifest_bytes(snapshot, source_payloads))
         archive.writestr(info, content, compresslevel=9)
     os.replace(temp_path, archive_path)
 
@@ -127,8 +130,9 @@ def build_archive(month: str) -> tuple[Path, list[dict[str, str]], list[Path]]:
     return archive_path, verified_manifest, source_paths
 
 
-def write_checksums(archives: list[Path]) -> None:
-    lines = [f"{sha256_file(path)}  {path.name}" for path in sorted(archives)]
+def write_checksums(archives: list[Path] | None = None) -> None:
+    paths = sorted(archives or ARCHIVE_DIR.glob("public-data-*.zip"))
+    lines = [f"{sha256_file(path)}  {path.name}" for path in paths]
     (ARCHIVE_DIR / "SHA256SUMS.txt").write_text("\n".join(lines) + "\n", encoding="ascii")
 
 
@@ -136,16 +140,22 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("months", nargs="+", help="Snapshots to archive, for example 2026-05 2026-06")
     parser.add_argument(
+        "--archive-label",
+        help="Optional archive suffix when preserving more than one snapshot in the same month.",
+    )
+    parser.add_argument(
         "--delete-source",
         action="store_true",
         help="Delete source CSVs only after archive CRC, byte, row-count, and SHA-256 verification.",
     )
     args = parser.parse_args()
+    if args.archive_label and len(args.months) != 1:
+        parser.error("--archive-label requires exactly one source month")
 
     archives: list[Path] = []
     sources_to_delete: list[Path] = []
     for month in args.months:
-        archive_path, manifest, sources = build_archive(month)
+        archive_path, manifest, sources = build_archive(month, args.archive_label)
         archives.append(archive_path)
         sources_to_delete.extend(sources)
         print(
@@ -153,7 +163,7 @@ def main() -> None:
             f"{len(manifest)} CSVs, {sum(int(row['rows']) for row in manifest):,} rows"
         )
 
-    write_checksums(archives)
+    write_checksums()
     if args.delete_source:
         for source in sources_to_delete:
             source.unlink()

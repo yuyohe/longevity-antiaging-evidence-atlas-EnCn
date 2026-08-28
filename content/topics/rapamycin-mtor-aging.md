@@ -7,12 +7,12 @@
 
 雷帕霉素/mTOR 与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 105 records; final public claims still require full-text review.
+Draft summary: this topic now includes 108 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
 - Highest final evidence level: `C`
-- Median quality confidence score: `47`
+- Median quality confidence score: `46`
 - Status: public draft, not fully reviewed
 
 ## 我们知道什么 / What We Know
@@ -103,16 +103,16 @@ Draft summary: this topic now includes 105 records; final public claims still re
 - [mTOR: A Cellular Regulator Interface in Health and Disease.](../papers/pubmed-30609721.md) (2019, Cells)
 - [Endothelial cell-specific reduction in mTOR ameliorates age-related arterial and metabolic dysfunction.](../papers/pubmed-38017701.md) (2024, Aging cell)
 - [Effect of caloric restriction and rapamycin on ovarian aging in mice.](../papers/pubmed-31359237.md) (2019, GeroScience)
+- [Rapamycin attenuates age-related atrial remodeling and fibrillation by targeting HIF-1α-mediated metabolic dysregulation.](../papers/pubmed-42648451.md) (2026, Biochimica et biophysica acta. Molecular basis of disease)
 - [MicroRNA-496 and Mechanistic Target of Rapamycin Expression are Associated with Type 2 Diabetes Mellitus and Obesity in Elderly People.](../papers/pubmed-30939476.md) (2019, Annals of nutrition & metabolism)
 - [DNA methylation age analysis of rapamycin in common marmosets.](../papers/pubmed-34482522.md) (2021, GeroScience)
-- [mTOR inhibitors potentially preserve fertility in female patients with haematopoietic malignancies: a narrative review.](../papers/pubmed-39537993.md) (2024, Annals of hematology)
 - [More TOR: The expanding role of mTOR in regulating immune responses.](../papers/pubmed-40592340.md) (2025, Immunity)
+- [mTOR inhibitors potentially preserve fertility in female patients with haematopoietic malignancies: a narrative review.](../papers/pubmed-39537993.md) (2024, Annals of hematology)
 - [mTOR signaling as a molecular target for the alleviation of Alzheimer's disease pathogenesis.](../papers/pubmed-35218870.md) (2022, Neurochemistry international)
 - [Multifarious roles of mTOR signaling in cognitive aging and cerebrovascular dysfunction of Alzheimer's disease.](../papers/pubmed-32472959.md) (2020, IUBMB life)
 - [The roles of MTOR and miRNAs in endothelial cell senescence.](../papers/pubmed-32246301.md) (2020, Biogerontology)
 - [mTOR: Role in cancer, metastasis and drug resistance.](../papers/pubmed-31408724.md) (2019, Seminars in cancer biology)
-- [Immunomodulatory and Antiaging Mechanisms of Resveratrol, Rapamycin, and Metformin: Focus on mTOR and AMPK Signaling Networks.](../papers/pubmed-35893737.md) (2022, Pharmaceuticals (Basel, Switzerland))
-- [Neuroimaging Biomarkers of mTOR Inhibition on Vascular and Metabolic Functions in Aging Brain and Alzheimer's Disease.](../papers/pubmed-30140223.md) (2018, Frontiers in aging neuroscience)
+- [Pentadecanoic acid as a potential endogenous mTOR modulator for age-related female infertility: Mechanistic insights, molecular docking evidence, and therapeutic perspectives.](../papers/pubmed-42580602.md) (2026, The Journal of steroid biochemistry and molecular biology)
 - [Exploring the role of mTOR pathway in aging and age-related disorders.](../papers/pubmed-40933955.md) (2025, EXCLI journal)
 - [Targeting mTOR for Anti-Aging and Anti-Cancer Therapy.](../papers/pubmed-37049920.md) (2023, Molecules (Basel, Switzerland))
 - [Mechanism of Activation of Mechanistic Target of Rapamycin Complex 1 by Methionine.](../papers/pubmed-32850834.md) (2020, Frontiers in cell and developmental biology)
@@ -122,11 +122,14 @@ Draft summary: this topic now includes 105 records; final public claims still re
 - [Residual microglia following short-term PLX5622 treatment in 5xFAD mice exhibit diminished NLRP3 inflammasome and mTOR signaling, and enhanced autophagy.](../papers/pubmed-39571180.md) (2025, Aging cell)
 - [Unbiased evaluation of rapamycin's specificity as an mTOR inhibitor.](../papers/pubmed-37222020.md) (2023, Aging cell)
 - [Evaluation of off-label rapamycin use to promote healthspan in 333 adults.](../papers/pubmed-37191826.md) (2023, GeroScience)
+- [Immunomodulatory and Antiaging Mechanisms of Resveratrol, Rapamycin, and Metformin: Focus on mTOR and AMPK Signaling Networks.](../papers/pubmed-35893737.md) (2022, Pharmaceuticals (Basel, Switzerland))
 - [Mechanistic target of rapamycin signaling in mouse models of accelerated aging.](../papers/pubmed-30900725.md) (2020, The journals of gerontology. Series A, Biological sciences and medical sciences)
 - [Sleep-deprived cognitive impairment in aging mice is alleviated by rapamycin.](../papers/pubmed-35083443.md) (2019, Aging pathobiology and therapeutics)
+- [Neuroimaging Biomarkers of mTOR Inhibition on Vascular and Metabolic Functions in Aging Brain and Alzheimer's Disease.](../papers/pubmed-30140223.md) (2018, Frontiers in aging neuroscience)
 - [Rapamycin Exerts Its Geroprotective Effects in the Ageing Human Immune System by Enhancing Resilience Against DNA Damage.](../papers/pubmed-41524558.md) (2026, Aging cell)
 - [Tissue-restricted inhibition of mTOR using chemical genetics.](../papers/pubmed-36095197.md) (2022, Proceedings of the National Academy of Sciences of the United States of America)
 - [E2F2 inhibition induces autophagy via the PI3K/Akt/mTOR pathway in gastric cancer.](../papers/pubmed-34091441.md) (2021, Aging)
+- [Evaluation of Human Serum Albumin Nanoparticles for Rapamycin Delivery.](../papers/pubmed-42626428.md) (2026, ACS omega)
 - [Sirolimus use in allogeneic hematopoietic cell transplant recipients: assessing its senotherapeutic role in a high risk population.](../papers/pubmed-41164085.md) (2025, Frontiers in aging)
 - [Pharmacokinetic analysis of intermittent rapamycin administration in early-stage Alzheimer's Disease.](../papers/pubmed-41046300.md) (2025, GeroScience)
 - [Short-term mTOR inhibition by rapamycin improves cardiac and endothelial function in older men: a proof-of concept pilot study.](../papers/pubmed-40971115.md) (2025, GeroScience)
@@ -140,8 +143,8 @@ Draft summary: this topic now includes 105 records; final public claims still re
 - [First-In-Human Phase I Study Of A Dual mTOR Kinase And DNA-PK Inhibitor (CC-115) In Advanced Malignancy.](../papers/pubmed-31853198.md) (2019, Cancer management and research)
 - [SNCA and mTOR Pathway Single Nucleotide Polymorphisms Interact to Modulate the Age at Onset of Parkinson's Disease.](../papers/pubmed-31234232.md) (2019, Movement disorders : official journal of the Movement Disorder Society)
 - [[The new target of Rapamycin: lysosomal calcium channel TRPML1].](../papers/pubmed-33665668.md) (2021, Sheng li xue bao : [Acta physiologica Sinica])
-- [Modulating mTOR-dependent astrocyte substate transitions to alleviate neurodegeneration.](../papers/pubmed-39779911.md) (2025, Nature aging)
 - [Increased mTOR signaling secondary to a human ILK missense variant inhibits nephrogenesis with decreased metabolism.](../papers/pubmed-40976470.md) (2025, Mechanisms of ageing and development)
+- [Modulating mTOR-dependent astrocyte substate transitions to alleviate neurodegeneration.](../papers/pubmed-39779911.md) (2025, Nature aging)
 - [Differential activation of the mTOR/autophagy pathway predicts cognitive performance in APP/PS1 mice.](../papers/pubmed-31585361.md) (2019, Neurobiology of aging)
 - [The mTOR signaling pathway in cardiac aging.](../papers/pubmed-37274127.md) (2023, The journal of cardiovascular aging)
 - [Sexual identity of enterocytes regulates autophagy to determine intestinal health, lifespan and responses to rapamycin.](../papers/pubmed-37118538.md) (2022, Nature aging)

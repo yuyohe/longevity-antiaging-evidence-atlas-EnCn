@@ -9,4 +9,4 @@ risk,风险扣分,Risk adjustments,摘要级、仅题录、商业过度宣传、
 cap,等级上限,Confidence caps,动物/机制最高 D；仅题录最高 D；皮肤软终点系统综述通常最高 B；口服胶原、抗氧化补剂等高商业风险主题最高 C/B。,hard cap
 final_level,最终等级,Final level,quality_confidence_score 先映射 A/B/C/D/E，再应用上限规则得到 final_evidence_level。,"A>=82, B>=66, C>=48, D>=30, else E"
 if_policy,IF 使用政策,Impact factor policy,IF 是期刊层指标，不作为单篇研究质量的直接替代；若后续导入 JCR IF，只进入 authority_signal_score，不覆盖 RoB/GRADE。,optional external import
-update,更新时间,Update date,本轮评分和公开说明更新时间：2026-08-09。,2026-08-09
+update,更新时间,Update date,本轮评分和公开说明更新时间：2026-08-28。,2026-08-28
