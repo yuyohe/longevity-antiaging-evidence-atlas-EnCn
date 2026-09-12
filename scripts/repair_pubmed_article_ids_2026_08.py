@@ -21,8 +21,10 @@ DATA = ROOT / "data"
 BUILD = ROOT / "build"
 CANDIDATES = DATA / "candidate_sources.csv"
 FINDINGS = DATA / "evidence_findings.csv"
-REPORT = DATA / "pubmed_identifier_repair_report_2026_08.json"
-CACHE = BUILD / "pubmed_identifier_summary_cache_2026_08.json"
+MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-08")
+MONTH_UNDERSCORE = MONTH.replace("-", "_")
+REPORT = DATA / f"pubmed_identifier_repair_report_{MONTH_UNDERSCORE}.json"
+CACHE = BUILD / f"pubmed_identifier_summary_cache_{MONTH_UNDERSCORE}.json"
 
 
 def read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
@@ -39,7 +41,12 @@ def write_csv(path: Path, rows: list[dict[str, str]], fields: list[str]) -> None
 
 
 def normalize_title(value: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+    normalized = re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+    abbreviation_expansions = {
+        "bp": "blood pressure",
+        "osa": "obstructive sleep apnea",
+    }
+    return " ".join(abbreviation_expansions.get(token, token) for token in normalized.split())
 
 
 def article_ids(summary: dict[str, Any]) -> dict[str, str]:
@@ -139,7 +146,7 @@ def main() -> None:
     write_csv(CANDIDATES, candidates, candidate_fields)
     write_csv(FINDINGS, findings, finding_fields)
     report = {
-        "date": os.getenv("EVIDENCE_ATLAS_UPDATE_DATE", "2026-08-09"),
+        "date": os.getenv("EVIDENCE_ATLAS_UPDATE_DATE", f"{MONTH}-01"),
         "official_source": "NCBI PubMed E-utilities esummary",
         "pubmed_findings_checked": len(pubmed_rows),
         "unique_pmids_checked": len(pmids),

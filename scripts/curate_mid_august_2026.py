@@ -34,7 +34,7 @@ TOPIC_PATTERNS = {
     "cardiorespiratory-fitness": r"cardiorespiratory|\bvo2\b|oxygen uptake|exercise capacity|aerobic capacity",
     "resistance-training-muscle": r"resistance training|strength training|muscle strength|sarcopen|frailty|frail|grip strength|muscle mass|functional training",
     "physical-activity-healthspan": r"physical activ|exercise|sedentary|step count|walking|active lifestyle",
-    "blood-pressure-aging": r"blood pressure|hypertension|systolic|diastolic|antihypertens",
+    "blood-pressure-aging": r"blood pressure|hypertension|systolic (?:blood )?pressure|diastolic (?:blood )?pressure|antihypertens",
     "ldl-apob-cardiovascular-risk": r"\bldl\b|ldl-c|apob|apolipoprotein b|cholesterol|lipid.lowering|statin|pcsk9",
     "sleep-aging": r"sleep|insomnia|circadian|apnea|chronotype",
     "dietary-pattern-longevity": r"diet|dietary|mediterranean|ultra.processed|plant.based|food pattern|nutrition",
@@ -70,7 +70,51 @@ RETIRED_STUDY_TYPES = {
     "non_primary_commentary_or_correction",
 }
 LOW_VALUE_TITLE_RE = re.compile(
-    r"^\s*(?:correction|corrigendum|erratum|editorial|comment(?:ary)?|reply|letter)\s*:|\b(?:study|review|trial) protocol\b",
+    r"^\s*(?:correction|corrigendum|erratum|editorial|comment(?:ary)?|reply|letter|retraction|withdrawal)\b"
+    r"|\b(?:study|review|trial) protocol\b|\bexpression of concern\b|\bretracted article\b",
+    re.IGNORECASE,
+)
+AGING_CONTEXT_RE = re.compile(
+    r"\b(?:aging|ageing|older|elderly|longevity|healthspan|frailty|mortality|midlife|centenarian)\b|"
+    r"(?<![-\w])aged\b|\blife[- ]?span\b|\bgeroscien\w*|\bgeroprotect\w*|\brejuven\w*|"
+    r"\bbiological age\b|\bmiddle[- ]aged\b|\blate[- ]life\b|"
+    r"\bage[- ](?:related|associated|dependent)\b|photoaging|inflammaging",
+    re.IGNORECASE,
+)
+RESISTANCE_INTERVENTION_RE = re.compile(
+    r"resistance training|strength training|functional training|exercise|physical training|"
+    r"prehabilitation|rehabilitation|yoga|tai chi|"
+    r"baduanjin|neuromuscular electrical stimulation|\bnmes\b",
+    re.IGNORECASE,
+)
+MUSCLE_PHENOTYPE_RE = re.compile(
+    r"muscle strength|sarcopen|grip strength|handgrip|muscle mass|muscle function|muscle quality",
+    re.IGNORECASE,
+)
+SENESCENCE_SCOPE_RE = re.compile(
+    r"senolytic|senomorphic|senotherapeut|cellular senescence|senescent cell|senescence",
+    re.IGNORECASE,
+)
+ALTERNATE_HYPERTENSION_RE = re.compile(
+    r"portal hypertension|pulmonary(?: arterial)? hypertension|pulmonary artery pressure|"
+    r"intracranial hypertension|intraocular hypertension|ocular hypertension",
+    re.IGNORECASE,
+)
+ACUTE_BLOOD_PRESSURE_RE = re.compile(
+    r"thrombectomy|general anaesthesia|general anesthesia|intraoperative blood pressure|perioperative blood pressure",
+    re.IGNORECASE,
+)
+FORENSIC_AGE_RE = re.compile(
+    r"forensic|chronological age (?:estimation|prediction)|(?:estimate|predict)(?:s|ing|ed)? chronological age",
+    re.IGNORECASE,
+)
+NONHUMAN_TITLE_RE = re.compile(
+    r"\b(?:mice|mouse|rats?|drosophila|zebrafish|seastars?|broilers?|piglets?|porcine|bovine|canine|marmosets?)\b|"
+    r"caenorhabditis|c\.\s*elegans|non.?human primate",
+    re.IGNORECASE,
+)
+MICROBIOME_SCOPE_EXCLUSION_RE = re.compile(
+    r"school.aged|rice aging|food aging|grain aging",
     re.IGNORECASE,
 )
 GRADE_SCORE = {"A": 500, "B": 400, "C": 300, "D": 200, "E": 100}
@@ -128,6 +172,46 @@ def safe_int(value: str) -> int:
 def concept_match(topic_id: str, text: str) -> bool:
     matcher = TOPIC_REGEX.get(topic_id)
     return bool(matcher and matcher.search(text or ""))
+
+
+def finding_scope_match(topic_id: str, text: str) -> bool:
+    """Apply stricter topic scope to active findings than to candidate discovery."""
+    text = text or ""
+    if not concept_match(topic_id, text):
+        return False
+
+    has_aging_context = bool(AGING_CONTEXT_RE.search(text))
+    if topic_id == "resistance-training-muscle":
+        return bool(RESISTANCE_INTERVENTION_RE.search(text)) or (
+            has_aging_context and bool(MUSCLE_PHENOTYPE_RE.search(text))
+        )
+    if topic_id == "blood-pressure-aging":
+        return not ALTERNATE_HYPERTENSION_RE.search(text) and not ACUTE_BLOOD_PRESSURE_RE.search(text)
+    if topic_id == "metformin-aging":
+        return has_aging_context
+    if topic_id == "rapamycin-mtor-aging":
+        return has_aging_context
+    if topic_id == "senolytics":
+        return has_aging_context and (
+            bool(SENESCENCE_SCOPE_RE.search(text))
+            or bool(re.search(r"\b(?:fisetin|quercetin)\b|dasatinib\s*(?:and|\+|/)\s*quercetin", text, re.IGNORECASE))
+        )
+    if topic_id == "nad-nmn-nr-aging":
+        return has_aging_context
+    if topic_id == "epigenetic-clocks":
+        return not FORENSIC_AGE_RE.search(text)
+    if topic_id == "klotho-il11-aging":
+        return has_aging_context
+    if topic_id == "autophagy-mitophagy":
+        return has_aging_context
+    if topic_id == "microbiome-inflammaging":
+        if MICROBIOME_SCOPE_EXCLUSION_RE.search(text):
+            return False
+        return bool(re.search(r"inflammaging|immune aging", text, re.IGNORECASE)) or (
+            has_aging_context
+            and bool(re.search(r"microbiom|microbiota|gut flora", text, re.IGNORECASE))
+        )
+    return True
 
 
 def topic_for_candidate(row: dict[str, str], known_topics: dict[str, str] | None = None) -> dict[str, Any] | None:
@@ -310,13 +394,20 @@ def finding_rejection_reason(row: dict[str, str]) -> str:
     review_status = row.get("review_status", "")
     if review_status.startswith("reviewed_"):
         return ""
+    title = row.get("title_en", "")
+    if LOW_VALUE_TITLE_RE.search(title):
+        return "non_result_publication_title"
     study_type = row.get("study_type_draft", "")
     if study_type in RETIRED_STUDY_TYPES:
         return study_type
     topic_id = row.get("topic_id", "")
-    if not concept_match(topic_id, row.get("title_en", "")):
+    if not concept_match(topic_id, title):
         return "title_topic_signal_missing"
-    if row.get("species_draft") in {"mouse", "animal", "cell"} and topic_id not in PRECLINICAL_TOPICS:
+    if not finding_scope_match(topic_id, title):
+        return "topic_scope_mismatch"
+    if (
+        row.get("species_draft") in {"mouse", "animal", "cell"} or NONHUMAN_TITLE_RE.search(title)
+    ) and topic_id not in PRECLINICAL_TOPICS:
         return "nonhuman_record_in_human_outcome_topic"
     return ""
 
@@ -324,8 +415,11 @@ def finding_rejection_reason(row: dict[str, str]) -> str:
 def finding_score(row: dict[str, str], discovered_ids: set[str]) -> tuple[int, int, int, int, int, str]:
     level = row.get("final_evidence_level") or row.get("evidence_level_draft") or "E"
     topic_id = row.get("topic_id", "")
-    title_signal = 40 if concept_match(topic_id, row.get("title_en", "")) else 0
-    body_signal = 20 if concept_match(topic_id, f"{row.get('result_en', '')} {row.get('conclusion_en', '')}") else 0
+    title_signal = 40 if finding_scope_match(topic_id, row.get("title_en", "")) else 0
+    body_signal = 20 if finding_scope_match(
+        topic_id,
+        f"{row.get('result_en', '')} {row.get('conclusion_en', '')}",
+    ) else 0
     recency = 20 if row.get("candidate_id") in discovered_ids else 0
     year = safe_int(row.get("year"))
     return (

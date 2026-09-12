@@ -348,7 +348,7 @@ def draw_topic_yield(rows: list[dict[str, Any]]) -> Path:
 
 def update_heatmap_manifest(paths: dict[str, Path]) -> None:
     manifest_path = DATA / f"visual_heatmap_assets_{UPDATE_MONTH_UNDERSCORE}.csv"
-    existing = read_csv(manifest_path)
+    existing = read_csv(manifest_path) if manifest_path.exists() else []
     by_id = {row["asset_id"]: row for row in existing}
     new_rows = {
         "H004": {

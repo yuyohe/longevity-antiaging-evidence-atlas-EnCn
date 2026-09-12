@@ -3,7 +3,7 @@
 **Brand / 品牌：** 宇多Yul细胞/yulcell<br>
 **English short name / 英文简称：** yulcell<br>
 **Project / 项目：** Longevity Anti-Aging Evidence Atlas EnCn / 长寿抗衰与健康寿命证据图谱<br>
-**Current snapshot / 当前快照：** 2026-07-29
+**Current snapshot / 当前快照：** 2026-09-13
 
 This page is the public asset map for the **宇多Yul细胞/yulcell** evidence atlas. It links the reader guides, data snapshots, visuals, Feishu tables, and historical releases under one consistent public name.
 
@@ -17,27 +17,27 @@ This page is the public asset map for the **宇多Yul细胞/yulcell** evidence a
 
 - [Repository homepage / GitHub 仓库首页](../README.md)
 - [Chinese guide / 中文详细说明](../README.zh-CN.md)
-- [End-of-July reader update / 7 月底普通读者说明](../content/public-reader/end-july-2026-update.md)
+- [Mid-September reader update / 9 月中旬普通读者说明](../content/public-reader/mid-september-2026-update.md)
 - [Plain-language start page / 普通读者入口](../content/public-reader/start-here.md)
-- [End-of-July visual report / 7 月底自包含报告](end-july-public-update-2026-07.html)
-- [July monthly update / 7 月更新报告](monthly-update-2026-07.html)
-- [July research heatmap / 7 月研究热力图](research-heatmap-2026-07.html)
-- [Posting asset dashboard / 发帖资产面板](yulcell-posting-asset-dashboard-2026-07-29.html)
-- [July visual assets / 7 月图片资产](assets/visual-assets/2026-07/)
+- [Mid-September visual report / 9 月中旬自包含报告](mid-september-public-update-2026-09.html)
+- [September monthly update / 9 月更新报告](monthly-update-2026-09.html)
+- [September research heatmap / 9 月研究热力图](research-heatmap-2026-09.html)
+- [Posting asset dashboard / 发帖资产面板](yulcell-posting-asset-dashboard-2026-09-13.html)
+- [September visual assets / 9 月图片资产](assets/visual-assets/2026-09/)
 
 ## Public Data / 公开数据
 
 - [Public data guide / 公开数据说明](../public-data/README.md)
-- [July public data index / 7 月数据索引](public-full-data-index-2026-07.md)
-- [Candidate sources / 候选来源，16,151 条](../public-data/candidate-sources-2026-07.csv)
-- [Literature library / 全量文献候选库，16,151 条](../public-data/literature-library-2026-07.csv)
-- [Shortlist / 入选短名单，6,000 条](../public-data/shortlist-sources-2026-07.csv)
-- [Evidence findings / 证据发现，6,000 条](../public-data/evidence-findings-2026-07.csv)
-- [Evidence matrix / 证据矩阵，3,000 条](../public-data/evidence-matrix-2026-07.csv)
+- [September public data index / 9 月数据索引](public-full-data-index-2026-09.md)
+- [Candidate sources / 候选来源，11,132 条](../public-data/candidate-sources-2026-09.csv)
+- [Literature library / 全量文献候选库，11,132 条](../public-data/literature-library-2026-09.csv)
+- [Shortlist / 入选短名单，2,291 条](../public-data/shortlist-sources-2026-09.csv)
+- [Evidence findings / 证据发现，2,291 条](../public-data/evidence-findings-2026-09.csv)
+- [Evidence matrix / 证据矩阵，1,500 条](../public-data/evidence-matrix-2026-09.csv)
 
-The five public CSV processing layers contain 47,302 rows in total. This is not a unique-paper count because one paper may appear in multiple layers.
+The five public CSV processing layers contain 28,346 rows in total. This is not a unique-paper count because one paper may appear in multiple layers. The smaller active collection is deliberate: weakly connected, duplicate, non-result, protocol-only, and over-cap records were retired instead of allowing unlimited growth.
 
-五张公开 CSV 处理层合计 47,302 行。由于同一篇论文可能出现在多个层级，这不是互不重复的论文数。
+五张公开 CSV 处理层合计 28,346 行。由于同一篇论文可能出现在多个层级，这不是互不重复的论文数。本轮主动清退了主题关联过弱、重复、非结果论文、仅方案论文和超过主题容量的记录，缩小体量是有意的质量维护，不是数据遗失。
 
 ## Feishu Bitable / 飞书多维表格
 
@@ -45,18 +45,21 @@ The Feishu layer is the structured Chinese display and review layer. GitHub rema
 
 飞书是中文结构化展示和复核层，GitHub 仍是版本化源头。搜索引擎能否收录飞书页面，取决于每个页面的公开分享设置。
 
-- [Feishu public asset index / 飞书 9 张在线表总索引](feishu-public-assets-2026-07.md)
-- [Live-table manifest / 在线表清单](../data/feishu_live_tables_2026_07.csv)
-- [Reader-navigation source / 阅读导航源数据](../data/feishu_reader_navigation_2026_07.csv)
+- [Feishu public asset index / 飞书 9 张在线表总索引](feishu-public-assets-2026-09.md)
+- [Live-table manifest / 在线表清单](../data/feishu_live_tables_2026_09.csv)
+- [Reader-navigation source / 阅读导航源数据](../data/feishu_reader_navigation_2026_09.csv)
 - [Reading navigation / 普通读者导航，14 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD)
 - [Heatmaps / 热力图与证据产出图，6 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL)
 - [Ingredient cards / 前 50 成分单卡](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla)
-- [Evidence matrix / 证据矩阵，3,000 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir)
+- [Evidence matrix / 证据矩阵，1,500 条](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir)
 
 The online branding fields are maintained by `scripts/stamp_feishu_yulcell_branding.py`.
 
 ## Historical Snapshot / 历史快照
 
+- [End-of-August reader update / 8 月底普通读者说明](../content/public-reader/end-august-2026-update.md)
+- [August public data index / 8 月公开数据索引](public-full-data-index-2026-08.md)
+- [August visual assets / 8 月图片资产](assets/visual-assets/2026-08/)
 - [June-end reader update / 6 月底普通读者说明](../content/public-reader/june-end-2026-update.md)
 - [Mid-July reader update / 7 月中旬普通读者说明](../content/public-reader/mid-july-2026-update.md)
 - [June public data index / 6 月公开数据索引](public-full-data-index-2026-06.md)

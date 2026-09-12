@@ -1,27 +1,27 @@
 # 宇多Yul细胞/yulcell 长寿抗衰与健康寿命证据图谱
 
-**当前公开快照：** 2026-08-28<br>
+**当前公开快照：** 2026-09-13<br>
 **英文项目名：** Longevity Anti-Aging Evidence Atlas EnCn<br>
 **品牌：** 宇多Yul细胞/yulcell
 
 这是一套中英文双语、可以追溯来源的公开证据图谱。它不告诉读者应该买什么或吃多少，而是帮助大家判断：一项“抗衰”说法来自人体结局、指标变化、动物实验、机制线索，还是商业宣传。
 
-> [8 月底精编说明](content/public-reader/end-august-2026-update.md)<br>
-> [8 月底自包含图文报告](docs/end-august-public-update-2026-08.html)<br>
-> [8 月底发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-08-28.html)<br>
-> [飞书 9 张长期表索引](docs/feishu-public-assets-2026-08.md)<br>
-> [8 月公开 CSV 数据包](public-data/README.md)<br>
+> [9 月中旬精编说明](content/public-reader/mid-september-2026-update.md)<br>
+> [9 月中旬自包含图文报告](docs/mid-september-public-update-2026-09.html)<br>
+> [9 月中旬发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-09-13.html)<br>
+> [飞书 9 张长期表索引](docs/feishu-public-assets-2026-09.md)<br>
+> [9 月公开 CSV 数据包](public-data/README.md)<br>
 > [中英文 GitHub 首页](README.md)
 
 ## 这次最重要的变化
 
 这次不是继续往数据库里塞东西，而是“补检 + 清理”同时做。
 
-- PubMed 检索窗口为 2026-08-10 至 2026-08-28。
-- 找到 923 个唯一匹配，其中 911 条是新候选，12 条已经在库中。
-- 最终保留近期候选 248 条，其中 162 条进入 findings。
-- 当前候选库从 11,079 条调整为 11,104 条。
-- findings 从 2,966 条调整为 3,039 条。
+- PubMed 检索窗口为 2026-08-29 至 2026-09-13。
+- 找到 1,191 个唯一匹配，其中 1,124 条是新候选，67 条已经在库中。
+- 最终保留近期候选 350 条，其中 175 条进入 findings。
+- 当前候选库从 11,104 条调整为 11,132 条。
+- findings 从 3,039 条调整为 2,291 条，主动清理了关键词命中但不属于长寿主题的旁支。
 - 证据矩阵继续固定为 1,500 条；已满额主题以替换为主。
 
 数字变小不是资料丢失。重复项、方案论文、评论勘误、动物/人体边界错误、题名与主题不符和超过容量的低优先级记录退出当前层；每条原因都记录在 `data/archive/`，旧快照和 Git 历史仍可恢复。
@@ -30,12 +30,12 @@
 
 | 项目 | 当前数量 | 初中生怎么理解 |
 | --- | ---: | --- |
-| 候选文献 | 11,104 条 | 等待检查的资料目录，不是已证实结论 |
-| 入选短名单 | 3,039 条 | 与主题直接相关、优先继续复核的记录 |
-| 证据发现 | 3,039 条 | 自动整理草稿，还不是全部全文人工复核 |
+| 候选文献 | 11,132 条 | 等待检查的资料目录，不是已证实结论 |
+| 入选短名单 | 2,291 条 | 与主题直接相关、优先继续复核的记录 |
+| 证据发现 | 2,291 条 | 自动整理草稿，还不是全部全文人工复核 |
 | 证据矩阵 | 1,500 条 | 方便按主题和等级比较的有限集合 |
-| 五层公开 CSV | 29,786 行 | 同一论文可跨层出现，不是独立论文总数 |
-| 论文卡片 | 3,039 页 | 当前每条 finding 一页 |
+| 五层公开 CSV | 28,346 行 | 同一论文可跨层出现，不是独立论文总数 |
+| 论文卡片 | 2,291 页 | 当前每条 finding 一页 |
 | 健康寿命主题 | 20 个 | 本版固定主题，不随热度随意增加 |
 | 图片资产 | 57 张 | 7 张主图和 50 张单成分卡 |
 | 飞书在线表 | 9 张 | 复用长期表，不再每月新建一套 |
@@ -53,19 +53,19 @@
 
 ## 本轮质量修正
 
-PubMed XML 解析继续限制在论文本身的标识列表。本轮用 NCBI 官方 E-utilities 核对全部 3,039 个 findings PMID：
+PubMed XML 解析继续限制在论文本身的标识列表。本轮还把“发现”和“公开入选”拆成两道门：检索可以宽，但 findings 必须真正属于长寿、衰老或健康寿命问题。本轮用 NCBI 官方 E-utilities 核对全部 2,291 个 findings PMID：
 
 - 官方摘要缺失：0；
 - 实质题名冲突：0；
-- 接受轻微题名格式差异：3 个；
-- 修正 findings PMCID：27 个；
-- 修正候选 PMCID：84 个。
+- 接受轻微题名格式或标准缩写差异：2 个；
+- 修正 findings PMCID：9 个；
+- 修正候选 PMCID：62 个。
 
 研究类型判断也增加了动物实验、叙述性综述、方案论文、评论和勘误的防误升规则。
 
 ## 普通人从哪里开始
 
-1. 先读[8 月底精编说明](content/public-reader/end-august-2026-update.md)，理解如何同时补检、替换和清退。
+1. 先读[9 月中旬精编说明](content/public-reader/mid-september-2026-update.md)，理解如何同时补检、替换和清退。
 2. 打开[普通读者入口](content/public-reader/start-here.md)，按自己的问题选择主题。
 3. 用[15 条结论](content/public-reader/ten-takeaways.md)建立判断框架。
 4. 用[证据权重怎么看](content/public-reader/evidence-weight.md)分清人体、动物、指标和机制研究。
@@ -82,16 +82,16 @@ PubMed XML 解析继续限制在论文本身的标识列表。本轮用 NCBI 官
 
 图片入口：
 
-- [8 月底自包含图文报告](docs/end-august-public-update-2026-08.html)
-- [8 月底发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-08-28.html)
-- [8 月研究热力图](docs/research-heatmap-2026-08.html)
-- [8 月全部 57 张 PNG](docs/assets/visual-assets/2026-08/)
+- [9 月中旬自包含图文报告](docs/mid-september-public-update-2026-09.html)
+- [9 月中旬发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-09-13.html)
+- [9 月研究热力图](docs/research-heatmap-2026-09.html)
+- [9 月全部 57 张 PNG](docs/assets/visual-assets/2026-09/)
 
 ## 飞书怎么读
 
-飞书用于中文结构化展示和复核，GitHub 保留版本化源文件。普通读者先看阅读导航，不要一上来就打开 11,104 条候选表。
+飞书用于中文结构化展示和复核，GitHub 保留版本化源文件。普通读者先看阅读导航，不要一上来就打开 11,132 条候选表。
 
-- [飞书公开资产总索引](docs/feishu-public-assets-2026-08.md)
+- [飞书公开资产总索引](docs/feishu-public-assets-2026-09.md)
 - [飞书普通读者导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD)
 - [飞书研究图](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL)
 - [飞书 50 成分卡](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla)
@@ -124,7 +124,7 @@ docs/                       报告、图片和公开资产索引
 
 ## English Summary
 
-The 2026-08-28 **宇多Yul细胞/yulcell** release keeps the active atlas bounded at 11,104 candidates, 3,039 findings, and a 1,500-row matrix. A bounded PubMed refresh found 911 new candidates; 248 recent candidates remain active and 162 entered findings. Retirement reasons are versioned, older snapshots remain recoverable, and nine stable Feishu tables are reused rather than recreated monthly.
+The 2026-09-13 **宇多Yul细胞/yulcell** release keeps the active atlas bounded at 11,132 candidates, 2,291 findings, and a 1,500-row matrix. A bounded PubMed refresh found 1,124 new candidates; 350 recent candidates remain active and 175 entered findings. Stricter scope checks removed broad-keyword leakage, retirement reasons remain versioned, and nine stable Feishu tables are reused rather than recreated monthly.
 
 ## 使用边界
 

@@ -7,7 +7,7 @@
 
 人体证据有价值但边界明显，不能直接等同于延寿已证实。
 
-Draft summary: this topic now includes 104 records; final public claims still require full-text review.
+Draft summary: this topic now includes 102 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -62,6 +62,7 @@ Draft summary: this topic now includes 104 records; final public claims still re
 - [Is Caloric Restriction Associated with Better Healthy Aging Outcomes? A Systematic Review and Meta-Analysis of Randomized Controlled Trials.](../papers/pubmed-32751664.md) (2020, Nutrients)
 - [Is Fasting Superior to Continuous Caloric Restriction for Weight Loss and Metabolic Outcomes in Obese Adults? A Systematic Review and Meta-Analysis of Randomized Clinical Trials.](../papers/pubmed-39458528.md) (2024, Nutrients)
 - [Effect of calorie restriction and intermittent fasting on glucose homeostasis, lipid profile, inflammatory, and hormonal markers in patients with polycystic ovary syndrome: a systematic review.](../papers/pubmed-38646104.md) (2024, Frontiers in nutrition)
+- [Caloric restriction improves glycemic control via the adiponectin-ceramide axis in non-obese men and women: the CALERIE™ 2 randomized controlled trial.](../papers/pubmed-42425963.md) (2026, Nature communications)
 - [Effects of a combined energy restriction and vigorous-intensity exercise intervention on the human gut microbiome: A randomised controlled trial.](../papers/pubmed-40828642.md) (2025, The Journal of physiology)
 - [Histological improvements following energy restriction and exercise: The role of insulin resistance in resolution of MASH.](../papers/pubmed-38914313.md) (2024, Journal of hepatology)
 - [Caloric Restriction Intervention Alters Specific Circulating Biomarkers of the Senescence-Associated Secretome in Middle-Aged and Older Adults With Obesity and Prediabetes in an 18-Week Randomized Controlled Trial.](../papers/pubmed-37738560.md) (2024, The journals of gerontology. Series A, Biological sciences and medical sciences)
@@ -86,7 +87,6 @@ Draft summary: this topic now includes 104 records; final public claims still re
 - [Effect of 2 years of calorie restriction on liver biomarkers: results from the CALERIE phase 2 randomized controlled trial.](../papers/pubmed-32803412.md) (2021, European journal of nutrition)
 - [Changes in body weight, adherence, and appetite during 2 years of calorie restriction: the CALERIE 2 randomized clinical trial.](../papers/pubmed-32144378.md) (2020, European journal of clinical nutrition)
 - [A randomized pilot study comparing zero-calorie alternate-day fasting to daily caloric restriction in adults with obesity.](../papers/pubmed-27569118.md) (2016, Obesity (Silver Spring, Md.))
-- [Caloric restriction improves glycemic control via the adiponectin-ceramide axis in non-obese men and women: the CALERIE™ 2 randomized controlled trial.](../papers/pubmed-42425963.md) (2026, Nature communications)
 - [Intermittent fasting versus continuous caloric restriction for glycemic control and weight loss in type 2 diabetes: A traditional review.](../papers/pubmed-40000314.md) (2025, Primary care diabetes)
 - [Effect of calorie restriction or protein intake on circulating levels of insulin like growth factor I in humans: A systematic review and meta-analysis.](../papers/pubmed-31431306.md) (2020, Clinical nutrition (Edinburgh, Scotland))
 - [Does time-restricted eating add benefits to calorie restriction? A systematic review.](../papers/pubmed-38383703.md) (2024, Obesity (Silver Spring, Md.))
@@ -111,7 +111,6 @@ Draft summary: this topic now includes 104 records; final public claims still re
 - [The significance of caloric restriction mimetics as anti-aging drugs.](../papers/pubmed-38091837.md) (2024, Biochemical and biophysical research communications)
 - [Dietary energy restriction in neurological diseases: what's new?](../papers/pubmed-36369305.md) (2023, European journal of nutrition)
 - [Periodic dietary restriction of animal products induces metabolic reprogramming in humans with effects on cardiometabolic health.](../papers/pubmed-40225784.md) (2025, npj metabolic health and disease)
-- [Extended lifespan in female Drosophila melanogaster through late-life calorie restriction.](../papers/pubmed-38954128.md) (2024, GeroScience)
 - [Organ Protection by Caloric Restriction Depends on Activation of the De Novo NAD+ Synthesis Pathway.](../papers/pubmed-36758124.md) (2023, Journal of the American Society of Nephrology : JASN)
 - [Potential downsides of calorie restriction.](../papers/pubmed-40247012.md) (2025, Nature reviews. Endocrinology)
 - [Mechanisms of ageing: growth hormone, dietary restriction, and metformin.](../papers/pubmed-36848915.md) (2023, The lancet. Diabetes & endocrinology)
@@ -139,6 +138,7 @@ Draft summary: this topic now includes 104 records; final public claims still re
 - [Calorie Restriction as a New Treatment of Inflammatory Diseases.](../papers/pubmed-33554240.md) (2021, Advances in nutrition (Bethesda, Md.))
 - [Beta-Hydroxybutyrate but not NMN supplementation mimics caloric restriction reducing early mortality in Daphnia.](../papers/pubmed-40853391.md) (2025, Biogerontology)
 - [Moderate dietary restriction across generations promotes sustained health and extends lifespan by enhancing antioxidant capacity in Bombyx mori.](../papers/pubmed-40394126.md) (2025, Scientific reports)
+- [Biological Pathways of Strength Preservation During Calorie Restriction-Induced Weight Loss Among Adults Without Obesity.](../papers/pubmed-42677907.md) (2026, Obesity (Silver Spring, Md.))
 - [Multi-omic analysis of biological aging biomarkers in long-term calorie restriction and endurance exercise practitioners: A cross-sectional study.](../papers/pubmed-39692728.md) (2025, Aging cell)
 - [Caloric restriction rejuvenates aged adult stem cells: From mechanisms to interventions.](../papers/pubmed-42276422.md) (2026, Ageing research reviews)
 - [Nanodelivery strategies for caloric restriction mimetics in age-associated neurodegeneration.](../papers/pubmed-42264187.md) (2026, Ageing research reviews)
@@ -148,6 +148,4 @@ Draft summary: this topic now includes 104 records; final public claims still re
 - [The road ahead of dietary restriction on anti-aging: focusing on personalized nutrition.](../papers/pubmed-35950606.md) (2024, Critical reviews in food science and nutrition)
 - [Oxidative stress, antioxidants, hormesis and calorie restriction: The current perspective in the biology of aging.](../papers/pubmed-33845417.md) (2021, Archives of gerontology and geriatrics)
 - [Caloric Restriction Reprograms Adipose Tissues in Rhesus Monkeys.](../papers/pubmed-41042069.md) (2025, Aging cell)
-- [DEAD-box RNA helicase DDX-23 mediates dietary restriction induced health span in Caenorhabditis elegans.](../papers/pubmed-39578298.md) (2025, GeroScience)
-- [The C. elegans Myc-family of transcription factors coordinate a dynamic adaptive response to dietary restriction.](../papers/pubmed-38878153.md) (2024, GeroScience)
 - [Reduction in metabolic noise reveals rejuvenation following transient severe caloric restriction.](../papers/pubmed-37946010.md) (2024, GeroScience)

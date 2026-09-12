@@ -40,13 +40,13 @@ REPORT_FILE = os.environ.get("EVIDENCE_ATLAS_PUBLIC_REPORT_FILE", "mid-august-pu
 RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-august-2026-update.md")
 
 MAIN_IMAGES = [
-    ("heatmap-dashboard-2026-08.png", "热力图总览 / Heatmap dashboard", "先看全局，再进入单张图。颜色表示数量或结构，不表示治疗效果。"),
-    ("heatmap-topic-year-2026-08.png", "主题与年份 / Topic by year", "看不同主题近年的研究数量。2026 年尚未结束，不能和完整年份直接比较。"),
-    ("heatmap-topic-evidence-2026-08.png", "主题与证据等级 / Topic by evidence grade", "看草稿等级分布。A 级也不等于适合每个人使用。"),
-    ("evidence-yield-ingredients-2026-08.png", "成分证据产出 / Ingredient evidence yield", "看哪些成分进入较高层级的比例，不是购买榜。"),
-    ("retraction-density-2026-08.png", "撤稿密度观察 / Retraction watch", "用于提醒复核风险；不能因为一个领域撤稿多就否定全部研究。"),
-    ("topic-evidence-yield-2026-08.png", "主题证据产出 / Topic evidence yield", "比较 20 个主题进入较高等级层的结构。"),
-    ("ingredient-card-wall-2026-08.png", "50 成分总览 / 50-ingredient wall", "适合发帖总览；每张单卡仍要结合边界说明阅读。"),
+    (f"heatmap-dashboard-{MONTH}.png", "热力图总览 / Heatmap dashboard", "先看全局，再进入单张图。颜色表示数量或结构，不表示治疗效果。"),
+    (f"heatmap-topic-year-{MONTH}.png", "主题与年份 / Topic by year", "看不同主题近年的研究数量。2026 年尚未结束，不能和完整年份直接比较。"),
+    (f"heatmap-topic-evidence-{MONTH}.png", "主题与证据等级 / Topic by evidence grade", "看草稿等级分布。A 级也不等于适合每个人使用。"),
+    (f"evidence-yield-ingredients-{MONTH}.png", "成分证据产出 / Ingredient evidence yield", "看哪些成分进入较高层级的比例，不是购买榜。"),
+    (f"retraction-density-{MONTH}.png", "撤稿密度观察 / Retraction watch", "用于提醒复核风险；不能因为一个领域撤稿多就否定全部研究。"),
+    (f"topic-evidence-yield-{MONTH}.png", "主题证据产出 / Topic evidence yield", "比较 20 个主题进入较高等级层的结构。"),
+    (f"ingredient-card-wall-{MONTH}.png", "50 成分总览 / 50-ingredient wall", "适合发帖总览；每张单卡仍要结合边界说明阅读。"),
 ]
 
 FEATURED_PMIDS = [
@@ -70,6 +70,12 @@ FEATURED_NOTES = {
     "41881552": "中国和英国两个队列都观察到用活动时间替代久坐与较低死亡风险相关；这不是把人随机分配去运动的试验。",
     "42575851": "口服 PCSK9 抑制剂短期试验主要改善 LDL-C 等指标，尚未显示死亡差异；属于处方药研究，不能据此自行用药。",
     "42616235": "SGLT2 抑制剂与 GLP-1 药物联合的网络 Meta 分析提示心肾结局信号，但联合比较多来自非随机亚组，只能视为待验证假说。",
+    "42700006": "力量训练、乳清蛋白与 HMB 对老年肌少症的系统综述与 Meta 分析；组合干预不能拆开解释为某一种补剂单独有效。",
+    "42711120": "设备记录的步数与步行强度和较低死亡风险相关；这是前瞻性观察研究，不能据此给每个人设定同一个步数处方。",
+    "42373047": "八个欧美队列的个体数据 Meta 分析观察饮食与老龄期认知的关系；饮食模式证据不能改写成单一食物或补剂的疗效。",
+    "42060953": "七年纵向研究观察失眠严重程度与痴呆风险；关联不证明失眠本身就是唯一原因，也不替代睡眠疾病评估。",
+    "42586098": "脑出血后二级预防降压的个体数据 Meta 分析；研究对象和治疗场景特殊，不能套用成普通人的自行降压方案。",
+    "42410309": "超重或肥胖人群中替尔泊肽与 GLP-1 受体激动剂心血管结局的 Meta 分析；属于处方药比较，必须由医生结合适应证和风险评估。",
 }
 
 RETIREMENT_LABELS = {
@@ -82,6 +88,7 @@ RETIREMENT_LABELS = {
     "nonhuman_record_in_human_outcome_topic": "人体主题中的动物或细胞记录",
     "protocol_or_registered_plan": "方案论文或注册计划",
     "title_topic_signal_missing": "题名与分配主题没有直接关系",
+    "topic_scope_mismatch": "虽命中关键词，但不属于本主题的长寿或健康寿命范围",
 }
 
 ASSET_DESCRIPTIONS = {
@@ -130,6 +137,25 @@ def registry_rows() -> list[dict[str, str]]:
     if len(rows) != 9 or len({row["table_id"] for row in rows}) != 9:
         raise RuntimeError("Feishu registry must contain nine unique tables")
     return rows
+
+
+def refresh_registry_expected_rows() -> None:
+    rows = read_csv(REGISTRY_PATH)
+    visual_rows = read_csv(DATA / f"visual_heatmap_assets_{MONTH_UNDERSCORE}.csv")
+    expected = {
+        "literature_library": len(read_csv(PUBLIC_DATA / f"literature-library-{MONTH}.csv")),
+        "candidate_sources": len(read_csv(PUBLIC_DATA / f"candidate-sources-{MONTH}.csv")),
+        "shortlist_sources": len(read_csv(PUBLIC_DATA / f"shortlist-sources-{MONTH}.csv")),
+        "evidence_findings": len(read_csv(PUBLIC_DATA / f"evidence-findings-{MONTH}.csv")),
+        "evidence_matrix": len(read_csv(PUBLIC_DATA / f"evidence-matrix-{MONTH}.csv")),
+        "heatmaps": sum(row.get("asset_type") != "card_wall_png" for row in visual_rows),
+        "ingredient_cards": len(read_csv(DATA / f"visual_ingredient_cards_{MONTH_UNDERSCORE}.csv")),
+        "ingredient_wall": sum(row.get("asset_type") == "card_wall_png" for row in visual_rows),
+        "reader_navigation": 14,
+    }
+    for row in rows:
+        row["expected_rows"] = str(expected[row["asset_key"]])
+    write_csv(REGISTRY_PATH, rows, list(rows[0]))
 
 
 def build_feishu_manifest(registry: list[dict[str, str]]) -> None:
@@ -186,7 +212,7 @@ Counts may rise or fall within fixed limits. Retirement reasons are versioned on
 
 GitHub source of truth: [{GITHUB}]({GITHUB})
 """
-    (DOCS / "feishu-public-assets-2026-08.md").write_text(text, encoding="utf-8")
+    (DOCS / f"feishu-public-assets-{MONTH}.md").write_text(text, encoding="utf-8")
 
 
 def build_navigation(registry: list[dict[str, str]]) -> None:
@@ -263,7 +289,7 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
                 topics.get(row["topic_id"], {}).get("title_zh", row["topic_id"]),
                 row.get("study_type_draft", ""),
                 row.get("final_evidence_level", ""),
-                FEATURED_NOTES[pmid],
+                FEATURED_NOTES.get(pmid, "本轮近期入选示例；用于说明检索覆盖，不构成疗效或使用建议。"),
             ]
         )
 
@@ -352,8 +378,8 @@ This release adds and retires records within fixed capacity limits. Counts may r
 ## 图片与公开资产 / Visuals and Public Assets
 
 - [自包含图文报告 / Self-contained report](../../docs/{REPORT_FILE})
-- [8 月研究图片 / August images](../../docs/assets/visual-assets/2026-08/)
-- [飞书 9 张长期表 / Nine stable Feishu tables](../../docs/feishu-public-assets-2026-08.md)
+- [{MONTH} 研究图片 / {MONTH} images](../../docs/assets/visual-assets/{MONTH}/)
+- [飞书 9 张长期表 / Nine stable Feishu tables](../../docs/feishu-public-assets-{MONTH}.md)
 - [公开 CSV / Public CSV package](../../public-data/README.md)
 - [精编与归档规则 / Curation policy](../../docs/data-retention-and-curation-policy.md)
 
@@ -399,7 +425,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
         f"<td>{esc(topics.get(by_pmid[pmid]['topic_id'], {}).get('title_zh', by_pmid[pmid]['topic_id']))}</td>"
         f"<td>{esc(by_pmid[pmid].get('study_type_draft', ''))}</td>"
         f"<td><span class=\"grade grade-{esc(by_pmid[pmid].get('final_evidence_level', 'E'))}\">{esc(by_pmid[pmid].get('final_evidence_level', ''))}</span></td>"
-        f"<td>{esc(FEATURED_NOTES[pmid])}</td></tr>"
+        f"<td>{esc(FEATURED_NOTES.get(pmid, '本轮近期入选示例；用于说明检索覆盖，不构成疗效或使用建议。'))}</td></tr>"
         for pmid in FEATURED_PMIDS
         if pmid in by_pmid
     )
@@ -586,11 +612,12 @@ def main() -> None:
         raise RuntimeError("PubMed identifier repair must pass before public report generation")
     findings = read_csv(FINDINGS_PATH)
     topics = {row["topic_id"]: row for row in read_csv(TOPICS_PATH)}
-    registry = registry_rows()
     card_count = len(list((VISUAL_DIR / "ingredient-cards").glob("*.png")))
     if len(findings) != metrics["after"]["finding_records"] or card_count != 50:
         raise RuntimeError("Release inputs do not match curated metrics")
 
+    refresh_registry_expected_rows()
+    registry = registry_rows()
     build_feishu_manifest(registry)
     build_navigation(registry)
     build_markdown(metrics, findings, topics)

@@ -1,0 +1,256 @@
+{
+  "release": "2026-09-mid-curated",
+  "date": "2026-09-13",
+  "search": {
+    "date_window": "2026/08/29..2026/09/13",
+    "queries": 20,
+    "unique_pubmed_matches": 1191,
+    "new_rows": 1124,
+    "matched_existing": 67
+  },
+  "capacity_policy": {
+    "candidate_per_topic_cap": 600,
+    "finding_per_topic_cap": 200,
+    "matrix_global_cap": 1500,
+    "matrix_per_topic_cap": 100,
+    "core_review_per_high_grade_topic": 3
+  },
+  "before": {
+    "candidate_records": 11104,
+    "finding_records": 3039
+  },
+  "after": {
+    "candidate_records": 11132,
+    "finding_records": 2291,
+    "recent_candidates_retained": 350,
+    "recent_findings_retained": 175
+  },
+  "retired": {
+    "candidate_decisions": 1096,
+    "candidate_reasons": {
+      "duplicate_record": 1,
+      "non_result_publication_title": 19,
+      "topic_capacity_limit": 1076
+    },
+    "finding_decisions": 1912,
+    "finding_reasons": {
+      "non_result_publication_title": 6,
+      "nonhuman_record_in_human_outcome_topic": 32,
+      "protocol_or_registered_plan": 10,
+      "title_topic_signal_missing": 682,
+      "topic_capacity_limit": 194,
+      "topic_scope_mismatch": 988
+    }
+  },
+  "candidate_topic_counts": {
+    "autophagy-mitophagy": 600,
+    "blood-pressure-aging": 600,
+    "caloric-restriction-human": 600,
+    "cardiorespiratory-fitness": 600,
+    "dietary-pattern-longevity": 600,
+    "epigenetic-clocks": 600,
+    "glp1-weight-cardiometabolic": 600,
+    "itp-mouse-lifespan": 179,
+    "klotho-il11-aging": 600,
+    "ldl-apob-cardiovascular-risk": 600,
+    "metformin-aging": 600,
+    "microbiome-inflammaging": 600,
+    "nad-nmn-nr-aging": 529,
+    "partial-reprogramming": 318,
+    "physical-activity-healthspan": 600,
+    "rapamycin-mtor-aging": 506,
+    "resistance-training-muscle": 600,
+    "senolytics": 600,
+    "sleep-aging": 600,
+    "time-restricted-eating": 600
+  },
+  "finding_topic_counts": {
+    "autophagy-mitophagy": 61,
+    "blood-pressure-aging": 179,
+    "caloric-restriction-human": 102,
+    "cardiorespiratory-fitness": 141,
+    "dietary-pattern-longevity": 200,
+    "epigenetic-clocks": 111,
+    "glp1-weight-cardiometabolic": 200,
+    "itp-mouse-lifespan": 11,
+    "klotho-il11-aging": 76,
+    "ldl-apob-cardiovascular-risk": 188,
+    "metformin-aging": 46,
+    "microbiome-inflammaging": 76,
+    "nad-nmn-nr-aging": 37,
+    "partial-reprogramming": 30,
+    "physical-activity-healthspan": 200,
+    "rapamycin-mtor-aging": 54,
+    "resistance-training-muscle": 130,
+    "senolytics": 49,
+    "sleep-aging": 200,
+    "time-restricted-eating": 200
+  },
+  "recent_selected_examples": [
+    {
+      "candidate_id": "pubmed-42399213",
+      "pmid": "42399213",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Wernicke's Encephalopathy Following Semaglutide Treatment for Obesity: A Systematic PRISMA Review of Case-Based Evidence.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42410309",
+      "pmid": "42410309",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Cardiovascular Outcomes With Tirzepatide Versus GLP-1 Receptor Agonists in Overweight or Obesity: A Systematic Review and Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42337824",
+      "pmid": "42337824",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Efficacy and Safety of GLP-1 Receptor Agonists on Combined Cardiovascular and Renal Outcomes in Patients With Chronic Kidney Disease: A Systematic Review and Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42586098",
+      "pmid": "42586098",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Intensive blood pressure lowering after spontaneous intracerebral haemorrhage for secondary stroke prevention (RECAP-ICH): a systematic review and individual participant data meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-41920954",
+      "pmid": "41920954",
+      "topic_id": "physical-activity-healthspan",
+      "title_en": "Optimizing physical activity bouts to interrupt sedentary behaviour for cardiometabolic health: a systematic review and meta-analyses of randomized controlled trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-41268866",
+      "pmid": "41268866",
+      "topic_id": "dietary-pattern-longevity",
+      "title_en": "Dietary Patterns and Kidney Health: An Umbrella Review of Systematic Reviews and Meta-Analyses.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-40637782",
+      "pmid": "40637782",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Impact of GLP-1 receptor agonists on cardiovascular outcomes in heart failure with preserved ejection fraction (HFpEF): systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42693519",
+      "pmid": "42693519",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Safety and Glycemic Efficacy of Perioperative Liraglutide in Cardiac Surgery: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42700006",
+      "pmid": "42700006",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Combined effects of strength training, whey protein, and HMB on sarcopenia in older people: A systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42297754",
+      "pmid": "42297754",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "The Effect of Semaglutide on Quality of Life in Adults With Overweight or Obesity: A Brief Systematic Review and Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "E"
+    },
+    {
+      "candidate_id": "pubmed-42068929",
+      "pmid": "42068929",
+      "topic_id": "dietary-pattern-longevity",
+      "title_en": "Adherence to the Mediterranean diet and frailty and disability in older people: A systematic review and meta-analysis featured in the Italian National Guidelines \"La Dieta Mediterranea\".",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42706739",
+      "pmid": "42706739",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Efficacy and Safety of Tirzepatide Versus Dulaglutide in Type 2 Diabetes With or Without Established Atherosclerotic Cardiovascular Disease: A Network Meta-Analysis of Randomized Clinical Trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42700826",
+      "pmid": "42700826",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Effects of yoga on lower-extremity muscle strength, balance, and quality of life across diverse older adult populations: A systematic review and Meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42698133",
+      "pmid": "42698133",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Efficacy of Neuromuscular Electrical Stimulation in Mitigating Muscle Mass Loss: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42442557",
+      "pmid": "42442557",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Tirzepatide, cardiovascular outcomes and mortality in obesity and diabetes: a systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    },
+    {
+      "candidate_id": "pubmed-42699213",
+      "pmid": "42699213",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Hypertension Prevalence and Control at Trial Entry in the REPRIEVE Study Population: Results From a Secondary Analysis.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42474350",
+      "pmid": "42474350",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Home blood pressure telemonitoring reveals race-specific patterns of target organ damage.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42187195",
+      "pmid": "42187195",
+      "topic_id": "physical-activity-healthspan",
+      "title_en": "Supporting Physical Activity and Quality of Life in Older Adults with Coronary Heart Disease: Development of a Web-Based Nursing Intervention.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42678121",
+      "pmid": "42678121",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Characteristics of post-exercise responders versus non-responders following aerobic or isometric exercise in physically inactive adults of African and South Asian descent with high-normal blood pressure or grade I hypertension.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42373047",
+      "pmid": "42373047",
+      "topic_id": "dietary-pattern-longevity",
+      "title_en": "Diet and Cognitive Function in Aging: An Individual Participant Data Meta-Analysis from Eight Cohorts in Europe and the United States.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "A"
+    }
+  ],
+  "notes": [
+    "Discovery is not evidence of benefit.",
+    "Retired rows remain recoverable from Git history and prior public snapshots.",
+    "No protocol, commentary, correction, or title-topic mismatch is promoted into active findings."
+  ]
+}

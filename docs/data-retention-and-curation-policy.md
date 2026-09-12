@@ -1,6 +1,6 @@
 # 宇多Yul细胞证据图谱：精编与归档规则 / Curation and Retention Policy
 
-**最近复核 / Last reviewed:** 2026-08-28<br>
+**最近复核 / Last reviewed:** 2026-09-13<br>
 **品牌 / Brand:** 宇多Yul细胞/yulcell
 
 ## 先说结论 / The Short Version
@@ -27,6 +27,7 @@ Limits are not quotas. A topic with only 29 suitable records keeps 29; weak matc
 - 重复 PMID、DOI 或重复题名 / duplicate PMID, DOI, or normalized title;
 - 方案论文、注册计划、评论、社论、勘误等非结果论文 / protocols, plans, commentaries, editorials, or corrections;
 - 题名没有直接出现该主题概念 / title does not directly signal the assigned topic;
+- 虽然命中宽泛关键词，但实际属于别的疾病、手术预后或非衰老场景 / broad keyword matches that belong to another disease, surgical prognosis, or non-aging context;
 - 人体结局主题中的明确动物实验 / direct animal experiments inside human-outcome topics;
 - 同主题中优先级更低，并且已超过容量上限 / lower-priority records beyond the topic limit;
 - 无法映射到当前 20 个主题 / records not mapped to one of the 20 current topics.
@@ -37,15 +38,24 @@ Removal from an active layer does not mean a paper is false. It means the record
 
 ## 可追溯与恢复 / Traceability and Recovery
 
-- 8 月底候选退出原因：`data/archive/candidate_retirement_2026-08-end.csv`
-- 8 月底发现层退出原因：`data/archive/finding_retirement_2026-08-end.csv`
+- 9 月中旬候选退出原因：`data/archive/candidate_retirement_2026-09-mid.csv`
+- 9 月中旬发现层退出原因：`data/archive/finding_retirement_2026-09-mid.csv`
+- 8 月底退出日志：`data/archive/candidate_retirement_2026-08-end.csv` 与 `data/archive/finding_retirement_2026-08-end.csv`
 - 8 月中期退出日志：`data/archive/candidate_retirement_2026-08-mid.csv` 与 `data/archive/finding_retirement_2026-08-mid.csv`
-- 当前 8 月底与 7 月 CSV 保持展开，方便直接下载比较。
+- 当前 9 月与上一期 8 月 CSV 保持展开，方便直接下载比较。
+- 7 月五表快照：`archive/public-data/public-data-2026-07.zip`
 - 完整 8 月中期五表快照：`archive/public-data/public-data-2026-08-mid.zip`
+- 完整 8 月底五表快照：`archive/public-data/public-data-2026-08-end.zip`
 - 更早的完整 CSV 按月份压缩到 `archive/public-data/`，ZIP 内含每个文件的行数、字节数和 SHA-256。
 - Git 历史仍保留发布时的完整版本，可以恢复任何旧记录。
 
 The current and previous monthly snapshots stay unpacked. Superseded same-month and older snapshots are compressed with internal row counts and SHA-256 hashes. Git history remains the final recovery path.
+
+## 发现层的严格范围 / Stricter Finding Scope
+
+候选层用于发现，因此可以保留宽泛命中；findings 层用于公开复核，必须更严格。例如：只因为出现 `frailty` 的手术预后论文，不自动归入力量训练；只出现槲皮素、二甲双胍、自噬或 mTOR，但没有衰老或健康寿命语境的论文，不自动归入抗衰主题；门静脉高压、肺动脉高压也不当作一般血压管理证据。
+
+Candidate discovery can be broad. Active findings require a direct aging, longevity, healthspan, or intervention connection. This prevents broad terms such as frailty, quercetin, metformin, autophagy, mTOR, or hypertension from admitting unrelated disease records.
 
 ## 自动检索的边界 / Automation Boundary
 

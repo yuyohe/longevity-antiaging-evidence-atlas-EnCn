@@ -2,7 +2,7 @@
 
 To keep the repository usable, the current and previous monthly CSV snapshots remain unpacked under `public-data/`. Older or superseded same-month five-table snapshots are stored here as verified ZIP archives.
 
-为控制仓库体量，当前月和上一月的五张 CSV 保持展开；更早快照或同月被替代的完整快照压缩到这里。`public-data-2026-08-mid.zip` 保存 8 月中期发布的五张原始 CSV。
+为控制仓库体量，当前月和上一月的五张 CSV 保持展开；更早快照或同月被替代的完整快照压缩到这里。当前归档包括 5 月、6 月、7 月、8 月中期和 8 月底五表快照。
 
 Each ZIP contains:
 
@@ -13,13 +13,13 @@ Each ZIP contains:
 `SHA256SUMS.txt` verifies the ZIP files themselves. Run the following command to rebuild or verify the archive:
 
 ```powershell
-python scripts/archive_public_snapshots.py 2026-05 2026-06 --delete-source
+python -X utf8 scripts/archive_public_snapshots.py 2026-07 --archive-label 2026-07 --delete-source
 ```
 
 When preserving a superseded release from the same month, use an explicit label:
 
 ```powershell
-python scripts/archive_public_snapshots.py 2026-08 --archive-label 2026-08-mid
+python -X utf8 scripts/archive_public_snapshots.py 2026-08 --archive-label 2026-08-end
 ```
 
 Retention policy / 保留规则: [`docs/data-retention-and-curation-policy.md`](../../docs/data-retention-and-curation-policy.md)

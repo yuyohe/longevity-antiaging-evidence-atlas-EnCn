@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -15,11 +16,22 @@ DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not
 EXPECTED_TOPICS = 20
 
 
+def latest_release_metrics_path() -> Path:
+    candidates = sorted(
+        path
+        for path in (ROOT / "data").glob("curation_release_metrics_*.json")
+        if re.fullmatch(r"curation_release_metrics_\d{4}_\d{2}\.json", path.name)
+    )
+    if not candidates:
+        raise FileNotFoundError("No current monthly curation release metrics file found")
+    return candidates[-1]
+
+
 def release_expectations() -> tuple[int, int, int]:
     metrics_path = Path(
         os.getenv(
             "RELEASE_METRICS_PATH",
-            ROOT / "data" / "curation_release_metrics_2026_08.json",
+            latest_release_metrics_path(),
         )
     )
     metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
