@@ -21,10 +21,11 @@ This release intentionally removes weakly connected and over-cap records. A smal
 ## Verification State / 验证状态
 
 - Source-data and identifier checks: passed.
-- GitHub public publication: pending final validation and push.
-- Feishu stable-table synchronization: pending GitHub publication.
+- GitHub public publication: passed; `main` was verified anonymously after publishing the release content commit `dda2cc2d`.
+- Feishu stable-table synchronization: passed; the read-only online audit matched all `9/9` tables and their exact row counts.
+- Full September release validator: passed for 28,346 public CSV rows, 57 PNGs, identifier repair, archives, Feishu exports, and the online audit.
 - Browser layout and download-button QA: passed at 1440 x 900 and 390 x 844; 57/57 embedded images loaded, no page-level horizontal overflow, and both PNG download paths completed.
-- Removable-drive backup: not required for this routine maintenance run.
+- Removable-drive backup: not performed and not required for this routine maintenance run; future routine releases may use Git history and verified archives without a removable-drive copy unless one is requested separately.
 
 ## Public Caveat / 公开警示
 

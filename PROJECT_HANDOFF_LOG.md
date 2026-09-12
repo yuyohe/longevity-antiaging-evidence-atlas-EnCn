@@ -42,6 +42,12 @@ python -X utf8 scripts\validate_skin_beauty_public_drafts.py
 python -X utf8 scripts\validate_public_release_2026_09.py
 ```
 
+Current release acceptance:
+
+- GitHub `main` was anonymously verified after publication; the release-content commit is `dda2cc2d`.
+- The Feishu read-only online audit passed all `9/9` stable tables with exact row counts, complete `宇多Yul细胞 / yulcell` brand coverage, current visual attachments, GitHub links, and no mojibake in audited fields.
+- A removable-drive copy was not made for this run. It is optional for future routine maintenance and is only required when explicitly requested.
+
 Do not publish from the development workspace without first checking its worktree. For public releases, start from a clean clone or worktree that matches GitHub `main`, run the complete build chain, validate locally, then perform the read-only Feishu audit.
 
 ## Project Identity
@@ -82,7 +88,9 @@ Known Feishu wiki/base:
 - Wiki/base node token: `WriBw4TXZiOsjQkJWk8ctL1xnVg`
 - Bitable app token is stored in `.env` as `FEISHU_BITABLE_APP_TOKEN`. Do not copy the real value into committed files.
 
-Known table IDs:
+The current nine-table public map is versioned in `data/feishu_live_tables_2026_09.csv`, with the stable ID registry in `data/feishu_table_registry.csv` and the reader-facing index in `docs/feishu-public-assets-2026-09.md`.
+
+Historical table IDs retained for provenance (not the current nine-table release layer):
 
 - `文献总表`: `tblYryTL08h4jE53`
 - `候选文献`: `tblBYXg91Wiw1BJl`
@@ -93,7 +101,7 @@ Known table IDs:
 - `补剂证据矩阵`: `tblAfXqX6qHqpSKb`
 - `方法学与评分说明`: `tbl96mwWn085quRA`
 
-Useful Feishu links:
+Useful historical Feishu links:
 
 - 对外总览: `https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblFsXTD5yqnJTFH`
 - 外观抗老总览: `https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbl9vcaOrwjPcWZt`
