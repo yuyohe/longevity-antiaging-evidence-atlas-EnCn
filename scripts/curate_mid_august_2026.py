@@ -114,7 +114,11 @@ NONHUMAN_TITLE_RE = re.compile(
     re.IGNORECASE,
 )
 MICROBIOME_SCOPE_EXCLUSION_RE = re.compile(
-    r"school.aged|rice aging|food aging|grain aging",
+    r"school.aged|rice aging|food aging|grain aging|microplastic aging|plastisphere|agricultural soils",
+    re.IGNORECASE,
+)
+YOUNG_TRAINING_RE = re.compile(
+    r"\b(?:children|childhood|adolescents?|youth|young (?:female|male|adult))\b|\b(?:soccer|football) players\b",
     re.IGNORECASE,
 )
 GRADE_SCORE = {"A": 500, "B": 400, "C": 300, "D": 200, "E": 100}
@@ -182,6 +186,8 @@ def finding_scope_match(topic_id: str, text: str) -> bool:
 
     has_aging_context = bool(AGING_CONTEXT_RE.search(text))
     if topic_id == "resistance-training-muscle":
+        if YOUNG_TRAINING_RE.search(text) and not has_aging_context:
+            return False
         return bool(RESISTANCE_INTERVENTION_RE.search(text)) or (
             has_aging_context and bool(MUSCLE_PHENOTYPE_RE.search(text))
         )

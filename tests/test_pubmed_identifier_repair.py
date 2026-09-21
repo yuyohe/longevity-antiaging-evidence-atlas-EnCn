@@ -12,6 +12,11 @@ import repair_pubmed_article_ids_2026_08 as repair  # noqa: E402
 
 
 class PubMedIdentifierRepairTests(unittest.TestCase):
+    def test_systolic_abbreviation_matches_without_merging_diastolic(self) -> None:
+        self.assertEqual(repair.normalize_title("Long-term SBP time in target"),
+                         repair.normalize_title("Long-term systolic blood pressure time in target"))
+        self.assertNotEqual(repair.normalize_title("SBP control"), repair.normalize_title("DBP control"))
+
     def test_standard_medical_abbreviations_do_not_create_title_conflicts(self) -> None:
         expanded = (
             "Comorbid Insomnia is Associated with Enhanced Blood Pressure Reduction with CPAP Therapy "

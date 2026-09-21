@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BRAND_ZH = "宇多Yul细胞/yulcell"
 BRAND_EN = "yulcell"
 GITHUB_URL = "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"
-SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-09-13")
+SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-09-21")
 EXPECTED_TABLES = 9
 
 
@@ -76,6 +76,9 @@ def audit_table(
         "总览图",
         "冻结日期",
         "复核日期",
+        "评级资料日期",
+        "撤稿检查日期",
+        "图片更新日期",
     ]
     audit_fields = list(dict.fromkeys(name for name in audit_field_candidates if name in field_names))
     records = client.list_bitable_records(app_token, table_id, field_names=audit_fields)
@@ -122,10 +125,22 @@ def audit_table(
         errors.append(f"{table_name}: {broken_text_records} records contain mojibake/question-mark runs")
 
     category = manifest_row.get("类别", "")
+    if category == "公开全量数据":
+        source_path = ROOT / "public-data" / f"{registry_row['asset_key'].replace('_', '-')}-2026-09.csv"
+        source_keys = {row[unique_field] for row in read_csv(source_path)}
+        if source_keys != set(unique_values):
+            errors.append(f"{table_name}: online keys differ from the current public CSV")
     if category == "公开全量数据" and github_coverage != len(records):
         errors.append(f"{table_name}: GitHub link coverage {github_coverage}/{len(records)}")
     if category == "视觉资产" and attachment_coverage != len(records):
         errors.append(f"{table_name}: attachment coverage {attachment_coverage}/{len(records)}")
+    if registry_row["asset_key"] == "ingredient_cards":
+        for item in records:
+            values = item.get("fields", {})
+            if (not values.get("评级资料日期") or values.get("撤稿检查日期") != SNAPSHOT_DATE
+                    or values.get("图片更新日期") != SNAPSHOT_DATE):
+                errors.append(f"{table_name}: missing or outdated provenance dates")
+                break
     if category == "阅读入口":
         if github_coverage != len(records):
             errors.append(f"{table_name}: GitHub link coverage {github_coverage}/{len(records)}")

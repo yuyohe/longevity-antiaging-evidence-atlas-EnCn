@@ -12,6 +12,22 @@ import curate_mid_august_2026 as curation  # noqa: E402
 
 
 class CurationPolicyTests(unittest.TestCase):
+    def test_environmental_aging_is_not_biological_aging(self) -> None:
+        self.assertFalse(curation.finding_scope_match(
+            "microbiome-inflammaging",
+            "Microplastic aging drives convergence of the plastisphere microbiome toward agricultural soils",
+        ))
+
+    def test_youth_training_is_outside_older_muscle_scope(self) -> None:
+        self.assertFalse(curation.finding_scope_match(
+            "resistance-training-muscle",
+            "Strength training in highly-trained young female soccer players",
+        ))
+        self.assertTrue(curation.finding_scope_match(
+            "resistance-training-muscle",
+            "Resistance training in young and older adults with sarcopenia",
+        ))
+
     def test_topic_concept_guard_rejects_mismatched_record(self) -> None:
         row = {
             "candidate_id": "pubmed-1",

@@ -7,12 +7,12 @@
 
 雷帕霉素/mTOR 与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 54 records; final public claims still require full-text review.
+Draft summary: this topic now includes 55 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
 - Highest final evidence level: `C`
-- Median quality confidence score: `46`
+- Median quality confidence score: `45`
 - Status: public draft, not fully reviewed
 
 ## 我们知道什么 / What We Know
@@ -20,12 +20,12 @@ Draft summary: this topic now includes 54 records; final public claims still req
 - 当前证据可用于建立候选主题和复核优先级。
 - 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level B, pending full review.
 - 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level A, pending full review.
-- 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 D 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level D, pending full review.
-- 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level B, pending full review.
-- 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level B, pending full review.
 - 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level E, pending full review.
 - 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level A, pending full review.
 - 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level B, pending full review.
+- 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level E, pending full review.
+- 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level E, pending full review.
+- 可支持：将「雷帕霉素/mTOR 与衰老」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。 / Supports treating Rapamycin/mTOR and Aging as a candidate evidence topic with draft level E, pending full review.
 
 ## 仍不确定什么 / What Remains Uncertain
 
@@ -43,15 +43,12 @@ Draft summary: this topic now includes 54 records; final public claims still req
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
-- 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
+- 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
 
 ## 相关论文卡片 / Related Paper Cards
 
 - [Targeting the biology of ageing with mTOR inhibitors to improve immune function in older adults: phase 2b and phase 3 randomised trials.](../papers/pubmed-33977284.md) (2021, The lancet. Healthy longevity)
 - [Meta-Analysis of 29 Experiments Evaluating the Effects of Rapamycin on Life Span in the Laboratory Mouse.](../papers/pubmed-27519886.md) (2017, The journals of gerontology. Series A, Biological sciences and medical sciences)
-- [A cocktail of rapamycin, acarbose, and phenylbutyrate prevents age-related cognitive decline in mice by targeting multiple aging pathways.](../papers/pubmed-38755466.md) (2024, GeroScience)
-- [Long-term treatment with the mTOR inhibitor rapamycin has minor effect on clinical laboratory markers in middle-aged marmosets.](../papers/pubmed-30311681.md) (2019, American journal of primatology)
-- [A randomized controlled trial to establish effects of short-term rapamycin treatment in 24 middle-aged companion dogs.](../papers/pubmed-28374166.md) (2017, GeroScience)
 - [Rapamycin's lifespan effect is modulated by mito-nuclear epistasis in Drosophila.](../papers/pubmed-39225061.md) (2024, Aging cell)
 - [The effect of rapamycin and its analogues on age-related musculoskeletal diseases: a systematic review.](../papers/pubmed-35861940.md) (2022, Aging clinical and experimental research)
 - [A randomized control trial to establish the feasibility and safety of rapamycin treatment in an older human cohort: Immunological, physical performance, and cognitive effects.](../papers/pubmed-29408453.md) (2018, Experimental gerontology)
@@ -69,8 +66,9 @@ Draft summary: this topic now includes 54 records; final public claims still req
 - [The Target of Rapamycin Signalling Pathway in Ageing and Lifespan Regulation.](../papers/pubmed-32899412.md) (2020, Genes)
 - [Pleiotropic Effects of mTOR and Autophagy During Development and Aging.](../papers/pubmed-31572724.md) (2019, Frontiers in cell and developmental biology)
 - [mTOR as a central regulator of lifespan and aging.](../papers/pubmed-31316753.md) (2019, F1000Research)
-- [Targeting the biology of aging with mTOR inhibitors.](../papers/pubmed-37142830.md) (2023, Nature aging)
-- [Effect of rapamycin on aging and age-related diseases-past and future.](../papers/pubmed-33037985.md) (2021, GeroScience)
+- [A cocktail of rapamycin, acarbose, and phenylbutyrate prevents age-related cognitive decline in mice by targeting multiple aging pathways.](../papers/pubmed-38755466.md) (2024, GeroScience)
+- [Long-term treatment with the mTOR inhibitor rapamycin has minor effect on clinical laboratory markers in middle-aged marmosets.](../papers/pubmed-30311681.md) (2019, American journal of primatology)
+- [A randomized controlled trial to establish effects of short-term rapamycin treatment in 24 middle-aged companion dogs.](../papers/pubmed-28374166.md) (2017, GeroScience)
 - [Rapamycin Attenuates Age-Related Changes in Marmoset Submandibular Gland: A Non-Human Primate Model of Human Oral Aging.](../papers/pubmed-42372235.md) (2026, Aging and disease)
 - [Placental mTOR Signaling and Sexual Dimorphism in Metabolic Health across the Lifespan of Offspring.](../papers/pubmed-34828683.md) (2021, Children (Basel, Switzerland))
 - [Endothelial cell-specific reduction in mTOR ameliorates age-related arterial and metabolic dysfunction.](../papers/pubmed-38017701.md) (2024, Aging cell)
@@ -93,6 +91,8 @@ Draft summary: this topic now includes 54 records; final public claims still req
 - [Blazing a trail for the clinical use of rapamycin as a geroprotecTOR.](../papers/pubmed-37801202.md) (2023, GeroScience)
 - [Tyrosine protein kinase ABL1 regulates the mTOR/ULK1 pathway to alleviate postoperative cognitive dysfunction in aged mice.](../papers/pubmed-41631736.md) (2026, Histology and histopathology)
 - [Effects of two longevity interventions, calorie restriction and rapamycin treatment, on the kynurenine-aryl hydrocarbon receptor pathway in aging skeletal muscle.](../papers/pubmed-41274338.md) (2026, Biochimie)
+- [Targeting the biology of aging with mTOR inhibitors.](../papers/pubmed-37142830.md) (2023, Nature aging)
+- [Effect of rapamycin on aging and age-related diseases-past and future.](../papers/pubmed-33037985.md) (2021, GeroScience)
 - [The mTOR signaling pathway in cardiac aging.](../papers/pubmed-37274127.md) (2023, The journal of cardiovascular aging)
 - [Sexual identity of enterocytes regulates autophagy to determine intestinal health, lifespan and responses to rapamycin.](../papers/pubmed-37118538.md) (2022, Nature aging)
 - [Lifespan benefits for the combination of rapamycin plus acarbose and for captopril in genetically heterogeneous mice.](../papers/pubmed-36179270.md) (2022, Aging cell)
@@ -101,3 +101,4 @@ Draft summary: this topic now includes 54 records; final public claims still req
 - [Rapamycin rejuvenates oral health in aging mice.](../papers/pubmed-32342860.md) (2020, eLife)
 - [EXPRESS: Rapamycin increases cerebral blood flow and modulates metabolic, inflammatory, and microbiome profiles in healthy middle-aged APOE4 carriers: a pilot single-arm trial.](../papers/pubmed-42723264.md) (2026, Journal of cerebral blood flow and metabolism : official journal of the International Society of Cerebral Blood Flow and Metabolism)
 - [Diet-dependent, beneficial and adverse effects of rapamycin on life span of Drosophila melanogaster.](../papers/pubmed-42570192.md) (2026, GeroScience)
+- [Rapamycin in Frail Older Subjects with Heart Failure with Preserved Ejection Fraction.](../papers/pubmed-42759606.md) (2026, Mayo Clinic proceedings)

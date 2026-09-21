@@ -133,7 +133,7 @@ Codex 维护：文献抓取、论文卡片、证据矩阵、双语主题页、li
 
 当前本地项目就是基于这个 starter 包继续调整。
 
-## 当前正式状态（更新至 2026-09-13）
+## 当前正式状态（更新至 2026-09-21）
 
 - GitHub repository: `longevity-antiaging-evidence-atlas-EnCn`
 - GitHub visibility: public

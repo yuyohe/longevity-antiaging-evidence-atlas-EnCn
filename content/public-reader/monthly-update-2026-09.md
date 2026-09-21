@@ -2,38 +2,38 @@
 
 品牌：宇多Yul细胞/yulcell
 
-生成日期：2026-09-13
+生成日期：2026-09-21
 
 ## 本月一句话
 
-按 2026/08/29 至 2026/09/13 的 PubMed 窗口找到 1,191 条匹配，其中 1,124 条是新候选、67 条已在库中。清理重复和弱相关记录后，当前候选库由 11,104 条调整为 11,132 条，证据发现由 3,039 条调整为 2,291 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。 近期文献仍是草稿层，不直接改变医学结论。
+按 2026/09/14 至 2026/09/21 的 PubMed 窗口找到 386 条匹配，其中 379 条是新候选、7 条已在库中。清理重复和弱相关记录后，当前候选库由 11,132 条调整为 11,141 条，证据发现由 2,291 条调整为 2,339 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。 近期文献仍是草稿层，不直接改变医学结论。
 
 ## 资产规模
 
-- 候选文献：11,132
-- 证据发现：2,291
+- 候选文献：11,141
+- 证据发现：2,339
 - 证据矩阵：1,500
-- 检索新增候选：1,124
-- PubMed 匹配总数：1,191
-- 近期入选 findings：175
-- 候选退出决定：1,096
-- findings 退出决定：1,912
+- 检索新增候选：379
+- PubMed 匹配总数：386
+- 近期入选 findings：62
+- 候选退出决定：370
+- findings 退出决定：337
 - 皮肤/外观主题：9
 - 补剂条目：100
 - 撤稿观察目标：117
 
 ## 近期文献样例
 
-本轮保留近期候选 350 条，其中 175 条进入 findings；记录候选退出决定 1,096 条、findings 退出决定 1,912 条。退出理由可在 data/archive/ 中复核。
+本轮保留近期候选 116 条，其中 62 条进入 findings；记录候选退出决定 370 条、findings 退出决定 337 条。退出理由可在 data/archive/ 中复核。
 
 | PMID | 年份 | 题名 | 查询层 |
 | --- | --- | --- | --- |
-| 42700006 | 2026 | Combined effects of strength training, whey protein, and HMB on sarcopenia in older people: A systematic review and meta | resistance-training-muscle__recent_update_2026_09_mid |
-| 42711120 | 2026 | Combinations of stepping intensity and daily step counts against all-cause and cardiovascular disease mortality: insight | physical-activity-healthspan__recent_update_2026_09_mid |
-| 42373047 | 2026 | Diet and Cognitive Function in Aging: An Individual Participant Data Meta-Analysis from Eight Cohorts in Europe and the  | dietary_pattern_longevity |
-| 42060953 | 2026 | Does insomnia severity increase the risk of dementia? A 7-year longitudinal study. | sleep-aging__recent_update_2026_09_mid |
-| 42586098 | 2026 | Intensive blood pressure lowering after spontaneous intracerebral haemorrhage for secondary stroke prevention (RECAP-ICH | blood-pressure-aging__recent_update_2026_09_mid |
-| 42410309 | 2026 | Cardiovascular Outcomes With Tirzepatide Versus GLP-1 Receptor Agonists in Overweight or Obesity: A Systematic Review an | glp1_obesity_cardiometabolic_outcomes |
+| 42754260 | 2026 | Exercise-based cardiac rehabilitation for coronary heart disease. | physical-activity-healthspan__curated_recent_update_2026_09_late |
+| 42742033 | 2026 | Cardiorespiratory training for people with stroke. | cardiorespiratory-fitness__curated_recent_update_2026_09_late |
+| 42744658 | 2026 | Structured exercise interventions and survival outcomes in patients with cancer: systematic review and meta-analysis of  | physical-activity-healthspan__curated_recent_update_2026_09_late |
+| 42744960 | 2026 | Adherence to the Mediterranean diet is associated with reduced risk of head and neck, gastric, and liver cancers: a syst | dietary-pattern-longevity__curated_recent_update_2026_09_late |
+| 42744622 | 2026 | All-Cause and Cardiovascular Mortality in Relation to Sleep Duration: A Community-Based Cohort With Over 30 Years of Fol | sleep-aging__curated_recent_update_2026_09_late |
+| 42752289 | 2026 | Precise resistance training alleviates osteosarcopenia via the GLP-1/myostatin path: a 32-week randomized controlled tri | resistance-training-muscle__curated_recent_update_2026_09_late |
 
 ## 研究热力图
 

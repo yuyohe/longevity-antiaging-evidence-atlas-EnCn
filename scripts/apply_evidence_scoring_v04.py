@@ -512,6 +512,15 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
     topic = row.get("topic_id", "")
     if is_protocol_record(row) or is_non_primary_record(row):
         return "E"
+    if "metadata_only" in depth:
+        return "D"
+    if "animal" in study or "preclinical" in study or "mechanistic" in study or endpoint in {"S2", "M", "H6"}:
+        return "D"
+    case_based = re.search(
+        r"case[- ]based|case reports?|case series",
+        f"{row.get('title_en', '')} {row.get('publication_types', '')}",
+        re.IGNORECASE,
+    )
     if domain == "longevity":
         topic_caps = {
             "caloric-restriction-human": "B",
@@ -528,11 +537,9 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
             "microbiome-inflammaging": "B",
         }
         if topic in topic_caps:
-            return topic_caps[topic]
-    if "metadata_only" in depth:
-        return "D"
-    if "animal" in study or "preclinical" in study or "mechanistic" in study or endpoint in {"S2", "M", "H6"}:
-        return "D"
+            return max(topic_caps[topic], "C" if case_based else "A")
+    if case_based:
+        return "C"
     if endpoint == "H5":
         return "B"
     if domain == "skin":
@@ -721,7 +728,7 @@ def write_policy_docs() -> None:
         {"rule_id": "source_depth", "name_zh": "来源深度", "name_en": "Source depth", "description_zh": "开放全文/PMC、摘要、仅题录分层；仅题录记录不能进入高等级。", "weight_or_rule": "0-10"},
         {"rule_id": "bibliometrics", "name_zh": "影响力信号", "name_en": "Influence signals", "description_zh": "自动使用 NIH iCite RCR 和 OpenAlex cited_by_count。JCR IF/CiteScore/SJR 若有授权数据，可后续导入；默认不伪造 IF。", "weight_or_rule": "0-20 plus influence_score"},
         {"rule_id": "risk", "name_zh": "风险扣分", "name_en": "Risk adjustments", "description_zh": "摘要级、仅题录、商业过度宣传、可能行业资助、软终点外推等会扣分。", "weight_or_rule": "-0 to -20"},
-        {"rule_id": "cap", "name_zh": "等级上限", "name_en": "Confidence caps", "description_zh": "动物/机制最高 D；仅题录最高 D；皮肤软终点系统综述通常最高 B；口服胶原、抗氧化补剂等高商业风险主题最高 C/B。", "weight_or_rule": "hard cap"},
+        {"rule_id": "cap", "name_zh": "等级上限", "name_en": "Confidence caps", "description_zh": "动物/机制和仅题录最高 D，病例资料汇总最高 C；主题规则不得放宽这些上限。皮肤软终点系统综述通常最高 B；口服胶原、抗氧化补剂等高商业风险主题最高 C/B。", "weight_or_rule": "hard cap"},
         {"rule_id": "final_level", "name_zh": "最终等级", "name_en": "Final level", "description_zh": "quality_confidence_score 先映射 A/B/C/D/E，再应用上限规则得到 final_evidence_level。", "weight_or_rule": "A>=82, B>=66, C>=48, D>=30, else E"},
         {"rule_id": "if_policy", "name_zh": "IF 使用政策", "name_en": "Impact factor policy", "description_zh": "IF 是期刊层指标，不作为单篇研究质量的直接替代；若后续导入 JCR IF，只进入 authority_signal_score，不覆盖 RoB/GRADE。", "weight_or_rule": "optional external import"},
         {"rule_id": "update", "name_zh": "更新时间", "name_en": "Update date", "description_zh": f"本轮评分和公开说明更新时间：{TODAY}。", "weight_or_rule": TODAY},
@@ -753,6 +760,8 @@ v0.4 改为混合框架：**GRADE 作为公开结论置信度框架，Cochrane R
 | 等级上限 / Confidence caps | hard cap | 动物/机制最高 D；仅题录最高 D；皮肤软终点和高商业风险主题不能仅凭 Meta 分析进入 A。 |
 
 ## 公开等级解释 / Public Level Meaning
+
+病例资料汇总最高按 C 级；动物、机制和仅题录证据最高 D，主题规则不能放宽这些上限。A/B 也是自动草稿，不代表已完成全文方法学复核，更不表示结果一定有益。 / Case-based reviews are capped at C; animal, mechanistic and metadata-only evidence at D. Topic rules cannot relax these caps. A/B remain review drafts and can include null results.
 
 | 等级 | 含义 |
 |---|---|

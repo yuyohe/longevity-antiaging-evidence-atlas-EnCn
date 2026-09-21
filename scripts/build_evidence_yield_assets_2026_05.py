@@ -101,13 +101,13 @@ def ab_surface_count(health: str, skin: str) -> int:
 
 def evidence_yield_label(total: int, ab_count: int, risk: str) -> str:
     if total >= 1000 and ab_count == 0:
-        return "高发表低证据：容易凑热闹"
+        return "发表多；两个场景均低于B"
     if total >= 1000 and ab_count == 1:
-        return "热度部分转化：要分场景"
+        return "发表多；一个场景为A/B"
     if total >= 1000 and ab_count == 2:
-        return "研究多且证据面较强"
+        return "发表多；两个场景为A/B"
     if total < 1000 and ab_count >= 1:
-        return "小分母但有较强信号"
+        return "发表较少；有A/B场景"
     if risk == "高":
         return "小分母/早期且宣传风险高"
     return "小分母早期线索"
@@ -232,7 +232,7 @@ def draw_retraction_density(retractions: list[dict[str, str]]) -> Path:
         key=lambda row: float(row.get("retractions_per_1000_publications") or 0),
         reverse=True,
     )[:20]
-    width = 1500
+    width = 1800
     row_h = 54
     top = 170
     height = top + row_h * len(rows) + 120
@@ -243,7 +243,8 @@ def draw_retraction_density(retractions: list[dict[str, str]]) -> Path:
     label = load_font(23)
     value_font = load_font(24, True)
     draw.text((56, 42), "撤稿密度图：每 1000 篇发表里有多少撤稿", font=title, fill=INK)
-    draw.text((56, 104), "撤稿数必须看分母。小分母高密度，比单纯撤稿数量更值得前置提醒。", font=sub, fill=MUTED)
+    source_date = max(row.get("last_checked", "") for row in retractions)
+    draw.text((56, 104), f"宇多Yul细胞/yulcell | 检索截至 {source_date} | 小分母的比例不稳定，不能用于疗效排名。", font=sub, fill=MUTED)
     max_value = max(float(row.get("retractions_per_1000_publications") or 0) for row in rows)
     bar_x = 420
     bar_w = 780
@@ -284,9 +285,9 @@ def draw_evidence_yield_ingredients(rows: list[dict[str, Any]]) -> Path:
     sub = load_font(25)
     label = load_font(23)
     value = load_font(24, True)
-    draw.text((56, 42), "证据含金量图：不是论文越多越靠谱", font=title, fill=INK)
-    draw.text((56, 104), "看 20 年发表量、A/B 证据面和撤稿密度。高发表但 A/B 证据面少，就更像“热闹但不扎实”。", font=sub, fill=MUTED)
-    headers = [("成分", 56), ("20年发表", 390), ("A/B证据面", 560), ("撤稿/千篇", 730), ("证据含金量", 900), ("判断", 1190)]
+    draw.text((56, 42), "成分证据结构：健康与皮肤分开看", font=title, fill=INK)
+    draw.text((56, 104), f"宇多Yul细胞/yulcell | {RUN_DATE} | 评级沿用既有资料，代理分数不是疗效或购买排名。", font=sub, fill=MUTED)
+    headers = [("成分", 56), ("20年发表", 390), ("A/B证据面", 560), ("撤稿/千篇", 730), ("结构代理分", 900), ("说明", 1190)]
     for text, x in headers:
         draw.text((x, top - 44), text, font=value, fill=INK)
     for idx, row in enumerate(selected):
@@ -315,7 +316,7 @@ def draw_evidence_yield_ingredients(rows: list[dict[str, Any]]) -> Path:
 
 def draw_topic_yield(rows: list[dict[str, Any]]) -> Path:
     rows = sorted(rows, key=lambda row: float(row["a_share_percent"]), reverse=True)
-    width = 1460
+    width = 1750
     row_h = 62
     top = 178
     height = top + row_h * len(rows) + 110
@@ -326,7 +327,7 @@ def draw_topic_yield(rows: list[dict[str, Any]]) -> Path:
     label = load_font(23)
     value = load_font(24, True)
     draw.text((56, 42), "主题证据产出率：A 级证据占比", font=title, fill=INK)
-    draw.text((56, 104), "同样是 A/B 级证据，A 级占比越高，越接近高质量人体/系统评价证据。", font=sub, fill=MUTED)
+    draw.text((56, 104), f"宇多Yul细胞/yulcell | {RUN_DATE} | A 是草稿等级，也可能包含无效结果；占比不代表疗效。", font=sub, fill=MUTED)
     for idx, row in enumerate(rows):
         y = top + idx * row_h
         draw.line((56, y - 8, width - 56, y - 8), fill=LINE, width=1)

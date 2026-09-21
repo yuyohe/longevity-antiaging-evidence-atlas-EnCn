@@ -78,6 +78,17 @@ FEATURED_NOTES = {
     "42410309": "超重或肥胖人群中替尔泊肽与 GLP-1 受体激动剂心血管结局的 Meta 分析；属于处方药比较，必须由医生结合适应证和风险评估。",
 }
 
+if os.environ.get("EVIDENCE_ATLAS_FEATURED_NOTES"):
+    reader_notes = json.loads((ROOT / os.environ["EVIDENCE_ATLAS_FEATURED_NOTES"]).read_text(encoding="utf-8"))
+    FEATURED_NOTES.update({pmid: f"{row['title_zh']}。{row['interpretation_zh']} / {row['interpretation_en']}"
+                          for pmid, row in reader_notes.items()})
+
+STUDY_LABELS = {
+    "systematic_review_or_meta_analysis": "多项研究汇总 / Review & meta-analysis",
+    "human_cohort": "人群追踪研究 / Cohort",
+    "human_randomized_or_clinical_trial": "临床试验 / Clinical trial",
+}
+
 RETIREMENT_LABELS = {
     "duplicate_record": "重复记录",
     "non_result_publication_title": "题名显示不是结果论文",
@@ -262,6 +273,20 @@ def build_navigation(registry: list[dict[str, str]]) -> None:
     )
 
 
+def retraction_refresh_note() -> str:
+    summary = read_csv(DATA / "retraction_risk_summary_20y.csv")
+    publications = read_csv(DATA / "retracted_publications_20y.csv")
+    checked = max(row["last_checked"] for row in summary)
+    unique = len({row["pmid"] for row in publications})
+    return (f"撤稿风险最近查询于 {checked}，覆盖 {len(summary)} 个成分/主题，"
+            f"得到 {len(publications)} 条主题匹配记录、去重 {unique} 个 PMID。"
+            "这是自 2006 年起的发表日期窗口累计，不是本月新增撤稿；"
+            "撤稿密度不能单独证明成分有效或无效。 / "
+            f"Retraction queries checked {checked}: {len(summary)} targets, "
+            f"{len(publications)} matched rows, {unique} unique PMIDs. "
+            "Historical cumulative counts are not new monthly retractions or efficacy scores.")
+
+
 def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topics: dict[str, dict[str, str]]) -> None:
     before = metrics["before"]
     after = metrics["after"]
@@ -287,7 +312,7 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
             [
                 f"[{pmid}](https://pubmed.ncbi.nlm.nih.gov/{pmid}/)",
                 topics.get(row["topic_id"], {}).get("title_zh", row["topic_id"]),
-                row.get("study_type_draft", ""),
+                STUDY_LABELS.get(row.get("study_type_draft", ""), row.get("study_type_draft", "")),
                 row.get("final_evidence_level", ""),
                 FEATURED_NOTES.get(pmid, "本轮近期入选示例；用于说明检索覆盖，不构成疗效或使用建议。"),
             ]
@@ -338,7 +363,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 
 {markdown_table(['层级', '退出原因', '决定数'], retirement_rows)}
 
-“退出”只表示不再占用当前公开层的位置，不代表论文被否定。每条决定都保留在 `data/archive/`，旧完整快照可从 ZIP 和 Git 历史恢复。
+“退出”只表示不再占用当前公开层的位置，不代表论文被否定。决定数包含新抓取后未通过筛选的材料，不全是旧记录被移除。每条决定都保留在 `data/archive/`，旧完整快照可从 ZIP 和 Git 历史恢复。
 
 ## 容量规则 / Capacity Rules
 
@@ -374,8 +399,12 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 用 NCBI 官方 E-utilities 核对全部 {len(findings):,} 个 findings PMID：缺失 {repair['missing_official_summaries']:,}，实质题名冲突 {repair['title_mismatches']:,}。
 - 本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个；候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。
 - 方案论文、评论勘误、明确动物实验不再被自动抬进人体高等级层。
+- 额外排除塑料老化等环境研究，以及没有老龄语境的青少年竞技训练；病例资料汇总最高按 C 级，主题等级不能放宽动物研究的 D 级上限。
+- 50 张成分卡的评级沿用既有资料，本轮刷新撤稿检索、来源链接和图片；不表示 50 个成分都完成了新的全文复核。 / Ingredient grades remain provisional; refreshed counts and visuals do not imply a new full-text review of every ingredient.
 
 ## 图片与公开资产 / Visuals and Public Assets
+
+{retraction_refresh_note()}
 
 - [自包含图文报告 / Self-contained report](../../docs/{REPORT_FILE})
 - [{MONTH} 研究图片 / {MONTH} images](../../docs/assets/visual-assets/{MONTH}/)
@@ -423,7 +452,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
     sample_html = "".join(
         f"<tr><td><a href=\"https://pubmed.ncbi.nlm.nih.gov/{pmid}/\">{pmid}</a></td>"
         f"<td>{esc(topics.get(by_pmid[pmid]['topic_id'], {}).get('title_zh', by_pmid[pmid]['topic_id']))}</td>"
-        f"<td>{esc(by_pmid[pmid].get('study_type_draft', ''))}</td>"
+        f"<td>{esc(STUDY_LABELS.get(by_pmid[pmid].get('study_type_draft', ''), by_pmid[pmid].get('study_type_draft', '')))}</td>"
         f"<td><span class=\"grade grade-{esc(by_pmid[pmid].get('final_evidence_level', 'E'))}\">{esc(by_pmid[pmid].get('final_evidence_level', ''))}</span></td>"
         f"<td>{esc(FEATURED_NOTES.get(pmid, '本轮近期入选示例；用于说明检索覆盖，不构成疗效或使用建议。'))}</td></tr>"
         for pmid in FEATURED_PMIDS
@@ -556,6 +585,8 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
     <section id="visuals"><div class="inner">
       <h2>更新图片 / Updated Visuals</h2>
       <p>本文件内嵌 7 张主图和 50 张单成分卡，可以离线打开。每张图下方都能直接下载 PNG。</p>
+      <p>50 张成分卡沿用既有证据评级，本轮更新撤稿检索与图片；并非每个成分都重新做了全文复核。Ingredient grades remain provisional; updated graphics do not imply a new full-text review of every ingredient.</p>
+      <p>{esc(retraction_refresh_note())}</p>
 {main_figures}
       <details><summary>展开 50 张单成分卡 / Show 50 ingredient cards</summary><div class="card-grid">{card_figures}</div></details>
     </div></section>

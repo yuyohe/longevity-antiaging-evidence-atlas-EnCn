@@ -168,6 +168,29 @@ class StudyClassificationTests(unittest.TestCase):
         }
         self.assertEqual(scoring.normalized_healthspan_endpoint(row), "H3")
 
+    def test_case_report_review_is_not_high_certainty(self) -> None:
+        row = {
+            "title_en": "Wernicke encephalopathy: A systematic review of case-based evidence",
+            "publication_types": "Systematic Review",
+            "evidence_source_depth": "abstract_only",
+            "topic_id": "glp1-weight-cardiometabolic",
+            "endpoint_class_draft": "H1",
+        }
+        self.assertEqual(scoring.confidence_cap(row, "longevity"), "C")
+        row["topic_id"] = "microbiome-inflammaging"
+        self.assertEqual(scoring.confidence_cap(row, "longevity"), "C")
+        row["topic_id"] = "partial-reprogramming"
+        self.assertEqual(scoring.confidence_cap(row, "longevity"), "D")
+
+    def test_topic_cap_cannot_override_animal_boundary(self) -> None:
+        row = {
+            "title_en": "Rapamycin improves lifespan in aged mice",
+            "study_type_draft": "animal_study",
+            "evidence_source_depth": "abstract_only",
+            "topic_id": "rapamycin-mtor-aging",
+        }
+        self.assertEqual(scoring.confidence_cap(row, "longevity"), "D")
+
     def test_protocol_confidence_is_capped_at_e(self) -> None:
         row = {
             "title_en": "Trial protocol for a longevity intervention",

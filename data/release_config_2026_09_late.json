@@ -1,0 +1,21 @@
+{
+  "EVIDENCE_ATLAS_ASSET_MONTH": "2026-09",
+  "EVIDENCE_ATLAS_UPDATE_DATE": "2026-09-21",
+  "EVIDENCE_ATLAS_RELEASE_METRICS": "data/curation_release_metrics_2026_09_late.json",
+  "EVIDENCE_ATLAS_CURATION_METRICS": "data/curation_release_metrics_2026_09_late.json",
+  "EVIDENCE_ATLAS_IDENTIFIER_REPORT": "data/pubmed_identifier_repair_report_2026_09.json",
+  "EVIDENCE_ATLAS_RECENT_TAG": "curated_recent_update_2026_09_late",
+  "EVIDENCE_ATLAS_RELEASE_TITLE_ZH": "2026 年 9 月下旬精编更新",
+  "EVIDENCE_ATLAS_RELEASE_TITLE_EN": "Late-September 2026 curated update",
+  "EVIDENCE_ATLAS_RELEASE_CODE": "2026-09 LATE-SEPTEMBER CURATED RELEASE",
+  "EVIDENCE_ATLAS_RELEASE_LABEL": "9 月下旬",
+  "EVIDENCE_ATLAS_UPDATE_LABEL": "2026 年 9 月下旬",
+  "EVIDENCE_ATLAS_RELEASE_FILE": "late-september-2026-update.md",
+  "EVIDENCE_ATLAS_PUBLIC_REPORT_FILE": "late-september-public-update-2026-09.html",
+  "EVIDENCE_ATLAS_RELEASE_EXPORT_NAME": "001-2026-09下旬精编更新说明.md",
+  "EVIDENCE_ATLAS_BASELINE_LABEL": "9 月中旬冻结版",
+  "EVIDENCE_ATLAS_FEATURED_PMIDS": "42754260,42742033,42744658,42744960,42744622,42752289",
+  "EVIDENCE_ATLAS_FEATURED_NOTES": "data/featured_reader_notes_2026_09_late.json",
+  "EVIDENCE_ATLAS_FEISHU_NAV_URL": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD",
+  "CORE_REVIEW_PER_TOPIC": "3"
+}

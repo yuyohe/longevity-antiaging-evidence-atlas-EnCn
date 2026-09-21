@@ -1,31 +1,21 @@
 # Current Output Status / 当前输出状态
 
-Date / 日期: 2026-09-13
+Date / 日期: 2026-09-21
 
-## Release Snapshot / 发布快照
+## Production Draft Assets / 可发布草稿资产
 
-- PubMed update window: 2026-08-29 through 2026-09-13.
-- Search result: 1,191 unique matches; 1,124 were new to the working pool.
-- Active candidate pool: 11,132 records after deduplication, scope filtering, and topic caps.
-- Finding extraction layer: 2,291 healthspan/longevity finding records.
+- Candidate and literature pools: 11,141 records each; the search screened 379 new candidates and retained 116 recent candidates.
+- Finding extraction layer: 2339 healthspan/longevity finding records.
 - Topic drafts: 20 public draft topic pages.
-- Paper-card drafts: 2,291 public draft paper pages.
-- Evidence matrix: 1,500 cautious draft inclusion records.
-- Visual package: 7 overview images plus 50 ingredient cards.
-- Public CSV package: 28,346 processing-layer rows across five files.
-
-This release intentionally removes weakly connected and over-cap records. A smaller active collection is a maintenance result, not evidence that source records were lost; retired decisions are recorded under `data/archive/`.
-
-本次不是单纯扩容。检索到的新资料经过主题关联、研究结果状态、重复记录和容量上限检查后再进入活跃库；被清退记录及原因保存在 `data/archive/`，因此体量下降是主动整理结果。
-
-## Verification State / 验证状态
-
-- Source-data and identifier checks: passed.
-- GitHub public publication: passed; `main` was verified anonymously after publishing the release content commit `dda2cc2d`.
-- Feishu stable-table synchronization: passed; the read-only online audit matched all `9/9` tables and their exact row counts.
-- Full September release validator: passed for 28,346 public CSV rows, 57 PNGs, identifier repair, archives, Feishu exports, and the online audit.
-- Browser layout and download-button QA: passed at 1440 x 900 and 390 x 844; 57/57 embedded images loaded, no page-level horizontal overflow, and both PNG download paths completed.
-- Removable-drive backup: not performed and not required for this routine maintenance run; future routine releases may use Git history and verified archives without a removable-drive copy unless one is requested separately.
+- Paper-card drafts: 2339 public draft paper pages.
+- Evidence matrix: 1500 cautious draft inclusion records.
+- Core review queue: 54 records; 6 recent papers have bilingual official-abstract explanations, not completed full-text reviews.
+- Five public CSV layers: 28,460 processing rows, not unique papers.
+- Visual assets: 57 PNGs, self-contained report, and posting dashboard.
+- Retraction refresh: 117 targets, 594 topic-matched rows, 538 unique PMIDs; publication-date window 2006-01-01 through 2026-09-21.
+- Prior mid-September five-table snapshot: archived and hash-verified under `archive/public-data/`.
+- GitHub publication and Feishu 9-table online audit: pending for this snapshot.
+- Removable-drive copy: not requested and not performed.
 
 ## Public Caveat / 公开警示
 

@@ -7,12 +7,12 @@
 
 微生物组与炎症性衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 76 records; final public claims still require full-text review.
+Draft summary: this topic now includes 81 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
 - Highest final evidence level: `B`
-- Median quality confidence score: `66`
+- Median quality confidence score: `65`
 - Status: public draft, not fully reviewed
 
 ## 我们知道什么 / What We Know
@@ -85,13 +85,13 @@ Draft summary: this topic now includes 76 records; final public claims still req
 - [Identification of gut microbiota causally associated with aging and longevity and mediation roles of the cerebrospinal fluid proteins: proteomic genetic evidence from Mendelian randomization.](../papers/pubmed-40702285.md) (2026, GeroScience)
 - [Mendelian randomization analyses reveal causal relationships between the human microbiome and longevity.](../papers/pubmed-36991009.md) (2023, Scientific reports)
 - [Genetic insights into the gut microbiota and risk of facial skin aging: A Mendelian randomization study.](../papers/pubmed-38424726.md) (2024, Skin research and technology : official journal of International Society for Bioengineering and the Skin (ISBS) [and] International Society for Digital Imaging of Skin (ISDIS) [and] International Society for Skin Imaging (ISSI))
-- [Age-Associated Differences and Rearing Strategy-Related Alterations in the Gut Microbiome of Captive African Elephants (Loxodonta africana).](../papers/pubmed-42627093.md) (2026, Zoo biology)
 - [The Role of Gut Microbiota Interventions in the Management of Frailty Syndrome: A Scoping Review and Bibliometric Analysis.](../papers/pubmed-42543158.md) (2026, Geriatrics & gerontology international)
 - [The microbiome-gut-brain axis: a new perspective on the pathogenesis and intervention of frailty.](../papers/pubmed-42434422.md) (2026, Frontiers in cellular and infection microbiology)
-- [mTOR-Gut Microbiome Interaction in Aging: Fusobacterium nucleatum, Resistance Training and Multi-nutrient Supplementation Effects in Aged Male Rats.](../papers/pubmed-42500836.md) (2026, FASEB journal : official publication of the Federation of American Societies for Experimental Biology)
+- [The Oral Microbiome-Inflammaging Axis in Elderly Periodontitis: Emerging Immunopathogenic and Systemic Mechanisms.](../papers/pubmed-42740563.md) (2026, Oral diseases)
 - [Hypothalamic Inflammaging: A Central Driver of Type 2 Diabetes Mellitus and Metabolic Disease in Aging.](../papers/pubmed-42722379.md) (2026, Diabetes & metabolism journal)
-- [The epigenetic control of inflammaging in skeletal muscle and adipose tissue.](../papers/pubmed-42218923.md) (2026, Mechanisms of ageing and development)
 - [Immunosenescence, inflammaging, and metabolic disease: A geroscience perspective on mechanisms and links.](../papers/pubmed-42722211.md) (2026, Experimental gerontology)
+- [The epigenetic control of inflammaging in skeletal muscle and adipose tissue.](../papers/pubmed-42218923.md) (2026, Mechanisms of ageing and development)
+- [The canine gut microbiome as a translational model for human health and aging.](../papers/pubmed-42742206.md) (2026, mBio)
 - [Associations of various healthy dietary patterns with biological age acceleration and the mediating role of gut microbiota: results from the China Multi-Ethnic Cohort study.](../papers/pubmed-39494614.md) (2024, The British journal of nutrition)
 - [Human oral microbiome in aging: A systematic review.](../papers/pubmed-40473000.md) (2025, Mechanisms of ageing and development)
 - [Effects of non-pharmacological interventions on gut microbiota and intestinal permeability in older adults: A systematic review: Non-pharmacological interventions on gut microbiota/barrier.](../papers/pubmed-39305569.md) (2025, Archives of gerontology and geriatrics)
@@ -100,24 +100,29 @@ Draft summary: this topic now includes 76 records; final public claims still req
 - [Pediococcus acidilactici PA53 Improves Emotional Well-Being and Gut Health while Modulating Microbiota Composition in Older Adults: A Randomized, Double-Blind, Placebo-Controlled Trial.](../papers/pubmed-42235825.md) (2026, The Journal of nutrition)
 - [The Causal Relationship Between Skin Microbiota and Facial Aging: A Mendelian Randomization Study.](../papers/pubmed-38977452.md) (2024, Aesthetic plastic surgery)
 - [The association of gut microbiome composition with musculoskeletal features in middle-aged and older adults: A two-cohort joint study.](../papers/pubmed-42595281.md) (2026, Bone)
+- [The vicious cycle of SASP and inflammaging promotes aging and age-related diseases.](../papers/pubmed-42722713.md) (2026, Communications biology)
+- [Age-Associated Differences and Rearing Strategy-Related Alterations in the Gut Microbiome of Captive African Elephants (Loxodonta africana).](../papers/pubmed-42627093.md) (2026, Zoo biology)
+- [Role of gut microbiome modulation in the attenuation of aging-related neuroinflammation in early brain injury after subarachnoid hemorrhage.](../papers/pubmed-42762960.md) (2026, Brain research)
 - [Association of anti-anaerobic antibiotics with mortality and the gut microbiome: a sub-study of the BALANCE randomized clinical trial.](../papers/pubmed-42549478.md) (2026, Clinical infectious diseases : an official publication of the Infectious Diseases Society of America)
 - [Oxidative stress, aging, metabolism, SIRT1, and the gut microbiota: the neurocardiac basis of cognitive loss.](../papers/pubmed-42545731.md) (2026, Medical gas research)
+- [mTOR-Gut Microbiome Interaction in Aging: Fusobacterium nucleatum, Resistance Training and Multi-nutrient Supplementation Effects in Aged Male Rats.](../papers/pubmed-42500836.md) (2026, FASEB journal : official publication of the Federation of American Societies for Experimental Biology)
 - [Gut microbiota associates with frailty in older women.](../papers/pubmed-42420265.md) (2026, Nature communications)
 - [The blood metabolome of brain health in midlife and influences of genes, microbiome and exposome.](../papers/pubmed-42342913.md) (2026, Nature aging)
+- [Urbanization-Associated Microbial Diversity Loss and Its Impact on Elderly Health: Integrating Environmental and Host Microbiome Dynamics.](../papers/pubmed-42727931.md) (2026, Environmental microbiology)
 - [Association Characteristics and Potential Mechanisms of Aging, Gut Microbiota, and Hearing Loss.](../papers/pubmed-42531517.md) (2026, Integrative zoology)
 - [Gut microbiota profiles across intrinsic capacity strata in community-dwelling older adults using full-length 16S rRNA sequencing.](../papers/pubmed-42347915.md) (2026, GeroScience)
-- [Urbanization-Associated Microbial Diversity Loss and Its Impact on Elderly Health: Integrating Environmental and Host Microbiome Dynamics.](../papers/pubmed-42727931.md) (2026, Environmental microbiology)
 - [Gut-liver axis through microbiota-metabolite interplay driving age-dependent susceptibility to arsenite-induced liver injury in mice.](../papers/pubmed-42470960.md) (2026, Ecotoxicology and environmental safety)
 - [Polygonatum sibiricum polysaccharide ameliorates intestinal barrier dysfunction in aging mice via gut microbiota-metabolite modulation and TLR4/NF-κB pathway inhibition.](../papers/pubmed-42442028.md) (2026, Phytomedicine : international journal of phytotherapy and phytopharmacology)
 - [A geroprotective probiotic and its functional metabolite counteract inflammaging to extend healthspan.](../papers/pubmed-42642521.md) (2026, Nature aging)
-- [Immune aging biomarkers for clinical trials.](../papers/pubmed-42399672.md) (2026, Nature medicine)
-- [Intestinal T cells in aging: implications for gut barrier integrity and inflammaging.](../papers/pubmed-42141269.md) (2026, GeroScience)
-- [The vicious cycle of SASP and inflammaging promotes aging and age-related diseases.](../papers/pubmed-42722713.md) (2026, Communications biology)
 - [The silent infection load: How lifelong asymptomatic infections may contribute to inflammaging as an evolutionary trade-off of longevity.](../papers/pubmed-42692089.md) (2026, Ageing research reviews)
 - [Inflammaging in melanoma: Precision control for optimizing immune checkpoint inhibition.](../papers/pubmed-42486717.md) (2026, Journal of dermatological science)
+- [Immune aging biomarkers for clinical trials.](../papers/pubmed-42399672.md) (2026, Nature medicine)
+- [Intestinal T cells in aging: implications for gut barrier integrity and inflammaging.](../papers/pubmed-42141269.md) (2026, GeroScience)
 - [Dietary Resistant Maltodextrin Attenuates Skeletal Muscle Atrophy in Association with Modulation of the Microbiota-Gut-Muscle Axis in Aged Mice.](../papers/pubmed-42711247.md) (2026, Journal of microbiology and biotechnology)
 - [AFF3 maintains metabolic quiescence in naive CD8 T cells and prevents premature immune aging.](../papers/pubmed-42334893.md) (2026, JCI insight)
 - [Microbiome-derived metabolites shape CD4+ T cell differentiation and immune aging in HIV-1 infection.](../papers/pubmed-42479464.md) (2026, JCI insight)
+- [Black rice wine attenuates cognitive decline via modulation of the microbiota-gut-brain axis in D-galactose-induced aging mice.](../papers/pubmed-42758096.md) (2026, Food & function)
+- [Gut microbiota dysbiosis shapes brain T-cell immunity in accelerated aging.](../papers/pubmed-42750596.md) (2026, Gut microbes)
 - [Cinnamon polysaccharides reshape gut microbiota and enrich Alloprevotella rava to promote acetate-dependent choline metabolism and delay mammary aging.](../papers/pubmed-42492267.md) (2026, Phytomedicine : international journal of phytotherapy and phytopharmacology)
 - [Attenuating monocytic inflammaging via the miR-146a/TLR4 axis: Characterization and bioactivity of a triterpenoid-rich callus phytocomplex.](../papers/pubmed-42705471.md) (2026, Mechanisms of ageing and development)
 - [Dynamic Compression Reveals Donor-Age-Associated Inflammaging in Human Mesenchymal Stromal Cell Spheroids.](../papers/pubmed-42696704.md) (2026, ACS applied materials & interfaces)

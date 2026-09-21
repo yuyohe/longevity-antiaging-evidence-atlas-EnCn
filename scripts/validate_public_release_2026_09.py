@@ -1,4 +1,4 @@
-"""Validate the bounded mid-September 2026 public release and online evidence."""
+"""Validate the bounded late-September 2026 public release and online evidence."""
 
 from __future__ import annotations
 
@@ -20,18 +20,18 @@ import curate_mid_august_2026 as curation
 
 ROOT = Path(__file__).resolve().parents[1]
 MONTH = "2026-09"
-SNAPSHOT_DATE = "2026-09-13"
+SNAPSHOT_DATE = "2026-09-21"
 BRAND_ZH = "宇多Yul细胞/yulcell"
 BRAND_EN = "yulcell"
 GITHUB_URL = "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"
 EXPECTED = {
-    "candidate-sources": (11132, "id"),
-    "literature-library": (11132, "library_id"),
-    "shortlist-sources": (2291, "candidate_id"),
-    "evidence-findings": (2291, "finding_id"),
+    "candidate-sources": (11141, "id"),
+    "literature-library": (11141, "library_id"),
+    "shortlist-sources": (2339, "candidate_id"),
+    "evidence-findings": (2339, "finding_id"),
     "evidence-matrix": (1500, "paper_id"),
 }
-EXPECTED_TOTAL = 28346
+EXPECTED_TOTAL = 28460
 MAIN_IMAGES = {
     "heatmap-dashboard-2026-09.png",
     "heatmap-topic-year-2026-09.png",
@@ -144,33 +144,33 @@ def validate_active_curation(errors: list[str]) -> None:
 
 
 def validate_metrics_and_retirements(errors: list[str]) -> None:
-    metrics = json.loads((ROOT / "data" / "curation_release_metrics_2026_09_mid.json").read_text(encoding="utf-8"))
+    metrics = json.loads((ROOT / "data" / "curation_release_metrics_2026_09_late.json").read_text(encoding="utf-8"))
     current_metrics = json.loads((ROOT / "data" / "curation_release_metrics_2026_09.json").read_text(encoding="utf-8"))
     if current_metrics != metrics:
-        errors.append("current September metrics alias is not synchronized with mid-September metrics")
-    candidate_retired = read_csv(ROOT / "data" / "archive" / "candidate_retirement_2026-09-mid.csv")
-    finding_retired = read_csv(ROOT / "data" / "archive" / "finding_retirement_2026-09-mid.csv")
+        errors.append("current September metrics alias is not synchronized with late-September metrics")
+    candidate_retired = read_csv(ROOT / "data" / "archive" / "candidate_retirement_2026-09-late.csv")
+    finding_retired = read_csv(ROOT / "data" / "archive" / "finding_retirement_2026-09-late.csv")
     expected_metrics = {
-        "release": "2026-09-mid-curated",
+        "release": "2026-09-late-curated",
         "date": SNAPSHOT_DATE,
         "search": {
-            "date_window": "2026/08/29..2026/09/13",
+            "date_window": "2026/09/14..2026/09/21",
             "queries": 20,
-            "unique_pubmed_matches": 1191,
-            "new_rows": 1124,
-            "matched_existing": 67,
+            "unique_pubmed_matches": 386,
+            "new_rows": 379,
+            "matched_existing": 7,
         },
-        "before": {"candidate_records": 11104, "finding_records": 3039},
+        "before": {"candidate_records": 11132, "finding_records": 2291},
         "after": {
-            "candidate_records": 11132,
-            "finding_records": 2291,
-            "recent_candidates_retained": 350,
-            "recent_findings_retained": 175,
+            "candidate_records": 11141,
+            "finding_records": 2339,
+            "recent_candidates_retained": 116,
+            "recent_findings_retained": 62,
         },
     }
     for key in ["release", "date", "search", "before", "after"]:
         if metrics.get(key) != expected_metrics[key]:
-            errors.append(f"mid-September release metrics mismatch: {key}")
+            errors.append(f"late-September release metrics mismatch: {key}")
     if len(candidate_retired) != metrics["retired"]["candidate_decisions"]:
         errors.append("candidate retirement count differs from release metrics")
     if len(finding_retired) != metrics["retired"]["finding_decisions"]:
@@ -181,7 +181,7 @@ def validate_metrics_and_retirements(errors: list[str]) -> None:
         errors.append("finding retirement reasons differ from release metrics")
 
     repair = json.loads((ROOT / "data" / "pubmed_identifier_repair_report_2026_09.json").read_text(encoding="utf-8"))
-    if repair.get("status") != "passed" or repair.get("pubmed_findings_checked") != 2291:
+    if repair.get("status") != "passed" or repair.get("pubmed_findings_checked") != 2339:
         errors.append("PubMed identifier repair did not pass for all findings")
     if repair.get("missing_official_summaries") or repair.get("title_mismatches"):
         errors.append("PubMed identifier repair has missing records or title mismatches")
@@ -207,7 +207,7 @@ def validate_visuals_and_reports(errors: list[str]) -> None:
         ROOT / "README.md",
         ROOT / "README.zh-CN.md",
         ROOT / "public-data" / "README.md",
-        ROOT / "content" / "public-reader" / "mid-september-2026-update.md",
+        ROOT / "content" / "public-reader" / "late-september-2026-update.md",
         ROOT / "docs" / "feishu-public-assets-2026-09.md",
         ROOT / "docs" / "yulcell-brand-index.md",
         ROOT / "docs" / "data-retention-and-curation-policy.md",
@@ -219,8 +219,8 @@ def validate_visuals_and_reports(errors: list[str]) -> None:
         if "�" in text or "瀹囧" in text or re.search(r"\?{3,}", text):
             errors.append(f"{path.relative_to(ROOT)} contains mojibake/question-mark runs")
 
-    report = (ROOT / "docs" / "mid-september-public-update-2026-09.html").read_text(encoding="utf-8")
-    dashboard = (ROOT / "docs" / "yulcell-posting-asset-dashboard-2026-09-13.html").read_text(encoding="utf-8")
+    report = (ROOT / "docs" / "late-september-public-update-2026-09.html").read_text(encoding="utf-8")
+    dashboard = (ROOT / "docs" / "yulcell-posting-asset-dashboard-2026-09-21.html").read_text(encoding="utf-8")
     if report.count("data:image/png;base64,") != 57 or report.count("button type=\"button\" class=\"download\"") != 57:
         errors.append("self-contained report does not embed 57 downloadable PNGs")
     if dashboard.count("data:image/png;base64,") < 57:
@@ -261,13 +261,18 @@ def validate_feishu(errors: list[str], *, require_online_audit: bool) -> None:
             audit = json.loads(online_report.read_text(encoding="utf-8"))
             if audit.get("status") != "passed" or len(audit.get("tables", [])) != 9:
                 errors.append("Feishu online audit did not pass 9/9 tables")
+            if audit.get("snapshot_date") != SNAPSHOT_DATE:
+                errors.append("Feishu online audit has an outdated snapshot date")
+            actual_counts = {row["table_name"]: row["actual_records"] for row in audit.get("tables", [])}
+            if actual_counts != manifest_counts:
+                errors.append("Feishu online audited counts differ from current manifest")
 
 
 def validate_archives_and_automation(errors: list[str]) -> None:
     archive_dir = ROOT / "archive" / "public-data"
     checksum_lines = (archive_dir / "SHA256SUMS.txt").read_text(encoding="ascii").splitlines()
     expected_hashes = {line.split()[1]: line.split()[0] for line in checksum_lines if line.strip()}
-    for label in ["2026-05", "2026-06", "2026-07", "2026-08-mid", "2026-08-end"]:
+    for label in ["2026-05", "2026-06", "2026-07", "2026-08-mid", "2026-08-end", "2026-09-mid"]:
         archive = archive_dir / f"public-data-{label}.zip"
         manifest = snapshot_archive.verify_archive(archive)
         if len(manifest) != 5 or expected_hashes.get(archive.name) != sha256(archive):
@@ -290,10 +295,34 @@ def validate_archives_and_automation(errors: list[str]) -> None:
 def validate_feishu_packages(errors: list[str]) -> None:
     reader_files = list((ROOT / "build" / "feishu-public-reader").glob("*.md"))
     full_files = list((ROOT / "build" / "feishu-docs").glob("*.md"))
-    if len(reader_files) != 15 or len(full_files) != 2353:
+    if len(reader_files) != 15 or len(full_files) != 2401:
         errors.append(f"Feishu export package count mismatch: reader={len(reader_files)}, full={len(full_files)}")
-    if not (ROOT / "build" / "feishu-public-reader" / "001-2026-09中旬精编更新说明.md").exists():
-        errors.append("Feishu reader package lacks the mid-September curated release guide")
+    if not (ROOT / "build" / "feishu-public-reader" / "001-2026-09下旬精编更新说明.md").exists():
+        errors.append("Feishu reader package lacks the late-September curated release guide")
+
+
+def validate_refreshed_sources(errors: list[str]) -> None:
+    findings = read_csv(ROOT / "data" / "evidence_findings.csv")
+    sources = json.loads((ROOT / "data" / "sources.json").read_text(encoding="utf-8"))
+    if {r["id"] for r in sources} != {r["candidate_id"] for r in findings}:
+        errors.append("source index is not synchronized with active findings")
+    matrix = read_csv(ROOT / "data" / "evidence_matrix.csv")
+    if {r["id"] for r in sources if r["included"]} != {r["paper_id"] for r in matrix}:
+        errors.append("source inclusion flags differ from the matrix")
+    queries = read_csv(ROOT / "data" / "retraction_risk_queries_20y.csv")
+    retractions = read_csv(ROOT / "data" / "retraction_risk_summary_20y.csv")
+    if len(queries) != 117 or len(retractions) != 117 or any(r.get("error") for r in queries):
+        errors.append("117-target retraction refresh is incomplete")
+    if any(r["last_checked"] != SNAPSHOT_DATE for r in queries + retractions):
+        errors.append("retraction source dates are outdated")
+    if any(int(r["retrieved_publication_rows"]) != int(r["pubmed_retracted_count_20y"]) for r in retractions):
+        errors.append("retracted publication detail coverage is incomplete")
+    retracted_pmids = {r["pmid"] for r in read_csv(ROOT / "data" / "retracted_publications_20y.csv")}
+    if retracted_pmids.intersection(r["pmid"] for r in findings):
+        errors.append("known retracted publications remain in active findings")
+    for card in read_csv(ROOT / "data" / "social_cards_top50_ingredients.csv"):
+        if card["retraction_checked_date"] != SNAPSHOT_DATE or not card["evidence_review_date"]:
+            errors.append(f"ingredient source-date mismatch: {card['card_id']}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -311,6 +340,7 @@ def main() -> None:
     errors: list[str] = []
     validate_public_tables(errors)
     validate_active_curation(errors)
+    validate_refreshed_sources(errors)
     validate_metrics_and_retirements(errors)
     validate_visuals_and_reports(errors)
     validate_feishu(errors, require_online_audit=not args.source_only)
@@ -329,7 +359,7 @@ def main() -> None:
         else "9 audited Feishu tables and export packages"
     )
     print(
-        "Validated: 28,346 public CSV rows, bounded active layers, 57 PNGs, "
+        "Validated: 28,460 public CSV rows, bounded active layers, 57 PNGs, "
         f"{scope}, identifier repair, and archives."
     )
 

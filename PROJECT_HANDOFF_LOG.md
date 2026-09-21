@@ -1,6 +1,6 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-09-13
+Last updated / 最后更新：2026-09-21
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
@@ -10,30 +10,32 @@ This file is the local continuity record for future Codex threads and human main
 
 The current public release supersedes the historical counts later in this log.
 
-- Snapshot date: `2026-09-13`
-- Publication repository: `D:\longevity\github-publish-2026-09-mid-final`
+- Snapshot date: `2026-09-21`
+- Publication repository: `D:\longevity\github-publish-2026-09-late`
 - Development workspace: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn` (may contain unrelated local work; do not use it as a clean release checkout)
-- Candidate and literature records: `11,132`
-- Shortlist and evidence findings: `2,291`
+- Candidate and literature records: `11,141`
+- Shortlist and evidence findings: `2,339`
 - Evidence matrix: `1,500`
-- Public CSV processing rows: `28,346`
+- Public CSV processing rows: `28,460`
 - Visual assets: `7` main PNGs plus `50` ingredient cards
 - Feishu release layer: `9` active tables
-- Plain-language release guide: `content/public-reader/mid-september-2026-update.md`
-- Self-contained visual report: `docs/mid-september-public-update-2026-09.html`
-- Posting asset dashboard: `docs/yulcell-posting-asset-dashboard-2026-09-13.html`
+- Plain-language release guide: `content/public-reader/late-september-2026-update.md`
+- Self-contained visual report: `docs/late-september-public-update-2026-09.html`
+- Posting asset dashboard: `docs/yulcell-posting-asset-dashboard-2026-09-21.html`
 - Feishu table manifest: `data/feishu_live_tables_2026_09.csv`
 - Feishu stable table registry: `data/feishu_table_registry.csv`
 - Feishu read-only audit report: `build/feishu_online_audit_2026_09.json`
 
-The mid-September curation searched PubMed for 2026-08-29 through 2026-09-13, found 1,191 unique matches and 1,124 new candidates, retained 350 recent candidates, and placed 175 into findings. Stricter finding-level scope rules removed broad-keyword leakage, reducing active findings from 3,039 to 2,291. The library remains bounded at 600 candidates and 200 findings per topic; the matrix remains bounded at 1,500 total and 100 per topic.
+The late-September curation searched PubMed for 2026-09-14 through 2026-09-21, found 386 unique matches and 379 new candidates, retained 116 recent candidates, and placed 62 into findings. Candidate counts changed from 11,132 to 11,141; findings changed from 2,291 to 2,339. The 370 candidate and 337 finding retirement decisions include new intake rejected during screening, not just removal of previous active records. Limits remain 600 candidates and 200 findings per topic, with a 1,500-total/100-per-topic matrix.
 
-The PubMed XML parser restricts article identifiers to the article's own `PubmedData/ArticleIdList`. A full official-summary repair checked all 2,291 finding PMIDs: missing official summaries and substantive title mismatches are both zero.
+The PubMed XML parser restricts article identifiers to the article's own `PubmedData/ArticleIdList`. A full official-summary repair checked all 2,339 finding PMIDs: missing official summaries and substantive title mismatches are both zero. Six highlighted papers have official-abstract-based bilingual notes; full-text review is pending. All 117 retraction targets were freshly queried, yielding 594 topic-matched rows and 538 unique PMIDs. Ingredient grades retain their original review dates; a visual refresh is not a new full-text review.
+
+Rebuild configuration: `data/release_config_2026_09_late.json`; run `scripts/build_late_september_2026.py` with stages `core`, `visuals`, then `exports`. Refresh PubMed and retraction inputs separately before builds. `data/sources.json` is now rebuilt from current findings rather than the obsolete starter placeholder.
 
 Current release validation:
 
 ```powershell
-$env:EXPECTED_FINDINGS='2291'
+$env:EXPECTED_FINDINGS='2339'
 $env:MIN_MATRIX_ROWS='1500'
 $env:MAX_MATRIX_ROWS='1500'
 python -X utf8 scripts\lint.py
@@ -44,8 +46,7 @@ python -X utf8 scripts\validate_public_release_2026_09.py
 
 Current release acceptance:
 
-- GitHub `main` was anonymously verified after publication; the release-content commit is `dda2cc2d`.
-- The Feishu read-only online audit passed all `9/9` stable tables with exact row counts, complete `宇多Yul细胞 / yulcell` brand coverage, current visual attachments, GitHub links, and no mojibake in audited fields.
+- GitHub publication and the Feishu online audit are pending for this snapshot; do not reuse the mid-September acceptance as evidence of this release.
 - A removable-drive copy was not made for this run. It is optional for future routine maintenance and is only required when explicitly requested.
 
 Do not publish from the development workspace without first checking its worktree. For public releases, start from a clean clone or worktree that matches GitHub `main`, run the complete build chain, validate locally, then perform the read-only Feishu audit.
@@ -53,7 +54,7 @@ Do not publish from the development workspace without first checking its worktre
 ## Project Identity
 
 - GitHub repo: `https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn.git`
-- Publication repo path: `D:\longevity\github-publish-2026-09-mid-final`
+- Publication repo path: `D:\longevity\github-publish-2026-09-late`
 - Development repo path: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn`
 - Public Chinese name: `长寿抗衰与健康寿命证据图谱`
 - Repository name: `longevity-antiaging-evidence-atlas-EnCn`

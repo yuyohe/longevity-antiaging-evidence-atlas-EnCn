@@ -223,7 +223,7 @@ def write_paper_pages(rows: list[dict[str, str]]) -> None:
             "",
             "公开草稿。形成正式推荐或临床解释前，必须人工阅读全文复核。",
         ]
-        (PAPERS / f"{slug(row['candidate_id'])}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+        (PAPERS / f"{slug(row['candidate_id'])}.md").write_text("\n".join(line.rstrip() for line in lines) + "\n", encoding="utf-8")
 
 
 def top_level(rows: list[dict[str, str]]) -> str:

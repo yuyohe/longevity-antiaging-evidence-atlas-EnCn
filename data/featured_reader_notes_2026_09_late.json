@@ -1,0 +1,50 @@
+{
+  "42754260": {
+    "title_zh": "冠心病患者的运动康复：心梗和住院更少",
+    "interpretation_zh": "107 项试验、26,886 名冠心病患者。运动康复减少心梗和住院；短期总死亡的区间上限碰到无差异，不能说人人运动都能确定延寿。适用的是患者康复，需要个体评估。",
+    "interpretation_en": "In 107 trials of coronary heart disease, rehabilitation reduced myocardial infarction and hospitalisation. Short-term all-cause mortality remained borderline; this is patient rehabilitation, not proof of universal lifespan extension.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42754260/",
+    "checked_date": "2026-09-21"
+  },
+  "42742033": {
+    "title_zh": "卒中后的心肺训练：功能小幅改善，未见死亡减少",
+    "interpretation_zh": "53 项试验、2,672 名卒中患者。心肺能力和步速可能小幅改善，但改善是否大到患者能明显感受到仍不确定；随访内未见死亡或再次心脑血管事件减少。功能进步不能改写成延寿。",
+    "interpretation_en": "Across 53 stroke trials, fitness and walking gains were small and their clinical importance uncertain. Mortality and secondary vascular events were not reduced within follow-up.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42742033/",
+    "checked_date": "2026-09-21"
+  },
+  "42744658": {
+    "title_zh": "癌症照护中的结构化运动：生存获益有中等确定性信号",
+    "interpretation_zh": "21 项随机试验的汇总中，总生存等结果有改善信号，作者评为中等确定性；不同结局来自不同试验子集，肿瘤类型和方案也不同。运动是照护的一部分，不能替代抗癌治疗。",
+    "interpretation_en": "A synthesis of 21 randomised trials found moderate-certainty survival signals. Endpoints used different trial subsets and varied cancer settings; exercise is adjunctive care, not a replacement for cancer treatment.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42744658/",
+    "checked_date": "2026-09-21"
+  },
+  "42744960": {
+    "title_zh": "地中海饮食与癌症风险：观察到关联，不等于证明因果",
+    "interpretation_zh": "34 项观察研究、约 429 万人。较高的地中海饮食依从性与部分癌症风险较低相关；饮食多靠自报，部分结果差异较大。人数多也不能消除混杂，更不能推成某种食物或补剂防癌。",
+    "interpretation_en": "Thirty-four observational studies linked Mediterranean diet adherence with lower risks of selected cancers. Self-reported diet, confounding and substantial heterogeneity limit causal interpretation.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42744960/",
+    "checked_date": "2026-09-21"
+  },
+  "42744622": {
+    "title_zh": "睡得较久与死亡风险相关，不表示少睡会更长寿",
+    "interpretation_zh": "台湾 3,305 人随访中位 30.8 年，长睡眠与总死亡风险较高相关；心血管死亡未见显著差异，短睡眠组也未见显著关联。疾病可能同时影响睡眠和死亡，不能据此劝人刻意少睡。",
+    "interpretation_en": "In a 3,305-person Taiwanese cohort, long sleep was associated with all-cause but not significantly with cardiovascular mortality. Short sleep associations were not significant; deliberately shortening sleep is not supported.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42744622/",
+    "checked_date": "2026-09-21"
+  },
+  "42752289": {
+    "title_zh": "98 人抗阻训练研究：功能与机制线索需要分开读",
+    "interpretation_zh": "98 名有骨质疏松和肌肉萎缩的老年患者接受随机分组，论文另有细胞实验。摘要提示肌骨功能与 GLP-1/MSTN 通路变化，但仍需全文核对临床效果大小；不能把自身激素变化说成 GLP-1 药物的效果。",
+    "interpretation_en": "A 98-person trial in older patients combined clinical and cell experiments. Clinical effect sizes need full-text review; endogenous GLP-1 pathway changes do not demonstrate an effect of GLP-1 medication.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42752289/",
+    "checked_date": "2026-09-21"
+  }
+}

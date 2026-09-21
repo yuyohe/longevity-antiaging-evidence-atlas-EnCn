@@ -3,7 +3,7 @@
 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。<br>
 Draft status: automatically prepared; not fully reviewed; not medical advice.
 
-Last updated / 更新时间：2026-09-13
+Last updated / 更新时间：2026-04-29
 
 ## 我们为什么重做评分
 
@@ -24,6 +24,8 @@ v0.4 改为混合框架：**GRADE 作为公开结论置信度框架，Cochrane R
 | 等级上限 / Confidence caps | hard cap | 动物/机制最高 D；仅题录最高 D；皮肤软终点和高商业风险主题不能仅凭 Meta 分析进入 A。 |
 
 ## 公开等级解释 / Public Level Meaning
+
+病例资料汇总最高按 C 级；动物、机制和仅题录证据最高 D，主题规则不能放宽这些上限。A/B 也是自动草稿，不代表已完成全文方法学复核，更不表示结果一定有益。 / Case-based reviews are capped at C; animal, mechanistic and metadata-only evidence at D. Topic rules cannot relax these caps. A/B remain review drafts and can include null results.
 
 | 等级 | 含义 |
 |---|---|

@@ -24,7 +24,7 @@ Draft summary: this topic now includes 37 records; final public claims still req
 - 可支持：将「NAD/NMN/NR」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。 / Supports treating NAD/NMN/NR as a candidate evidence topic with draft level E, pending full review.
 - 可支持：将「NAD/NMN/NR」作为证据图谱中的候选主题，并按 E 级草判证据继续复核。 / Supports treating NAD/NMN/NR as a candidate evidence topic with draft level E, pending full review.
 - 可支持：将「NAD/NMN/NR」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating NAD/NMN/NR as a candidate evidence topic with draft level B, pending full review.
-- 可支持：将「NAD/NMN/NR」作为证据图谱中的候选主题，并按 D 级草判证据继续复核。 / Supports treating NAD/NMN/NR as a candidate evidence topic with draft level D, pending full review.
+- 可支持：将「NAD/NMN/NR」作为证据图谱中的候选主题，并按 C 级草判证据继续复核。 / Supports treating NAD/NMN/NR as a candidate evidence topic with draft level C, pending full review.
 - 可支持：将「NAD/NMN/NR」作为证据图谱中的候选主题，并按 C 级草判证据继续复核。 / Supports treating NAD/NMN/NR as a candidate evidence topic with draft level C, pending full review.
 
 ## 仍不确定什么 / What Remains Uncertain
@@ -42,7 +42,7 @@ Draft summary: this topic now includes 37 records; final public claims still req
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
-- 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
+- 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
 - 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
 
 ## 相关论文卡片 / Related Paper Cards
@@ -53,7 +53,6 @@ Draft summary: this topic now includes 37 records; final public claims still req
 - [The role of NAD and NAD precursors on longevity and lifespan modulation in the budding yeast, Saccharomyces cerevisiae.](../papers/pubmed-35260986.md) (2022, Biogerontology)
 - [Role and Potential Mechanisms of Nicotinamide Mononucleotide in Aging.](../papers/pubmed-37548938.md) (2024, Aging and disease)
 - [A randomized placebo-controlled trial of nicotinamide riboside in older adults with mild cognitive impairment.](../papers/pubmed-37994989.md) (2024, GeroScience)
-- [Long-term NAD+ supplementation prevents the progression of age-related hearing loss in mice.](../papers/pubmed-37395319.md) (2023, Aging cell)
 - [Nicotinamide riboside combined with exercise to treat hypertension in middle-aged and older adults: a pilot randomized clinical trial.](../papers/pubmed-40770531.md) (2025, GeroScience)
 - [The efficacy and safety of β-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults: a randomized, multicenter, double-blind, placebo-controlled, parallel-group, dose-dependent clinical trial.](../papers/pubmed-36482258.md) (2023, GeroScience)
 - [Effects of Nicotinamide Mononucleotide Supplementation on Muscle and Liver Functions Among the Middle-aged and Elderly: A Systematic Review and Meta-analysis of Randomized Controlled Trials.](../papers/pubmed-39185644.md) (2025, Current pharmaceutical biotechnology)
@@ -64,6 +63,7 @@ Draft summary: this topic now includes 37 records; final public claims still req
 - [NAD+-Precursor Supplementation With L-Tryptophan, Nicotinic Acid, and Nicotinamide Does Not Affect Mitochondrial Function or Skeletal Muscle Function in Physically Compromised Older Adults.](../papers/pubmed-34191033.md) (2021, The Journal of nutrition)
 - [An integrated anti-aging framework targeting NAD(+) homeostasis, mitochondrial quality control, and redox stability: Roles of NMN/NR, PQQ, and EGT.](../papers/pubmed-42068909.md) (2026, Redox biology)
 - [Potential Synergistic Supplementation of NAD+ Promoting Compounds as a Strategy for Increasing Healthspan.](../papers/pubmed-36678315.md) (2023, Nutrients)
+- [Long-term NAD+ supplementation prevents the progression of age-related hearing loss in mice.](../papers/pubmed-37395319.md) (2023, Aging cell)
 - [Cognitive and Alzheimer's disease biomarker effects of oral nicotinamide riboside (NR) supplementation in older adults with subjective cognitive decline and mild cognitive impairment.](../papers/pubmed-39817194.md) (2025, Alzheimer's & dementia (New York, N. Y.))
 - [Nicotinamide riboside supplementation restores microglial health and improves cognition in aged male mice.](../papers/pubmed-41273482.md) (2025, GeroScience)
 - [Nicotinamide Mononucleotide (NMN) Prevents Age-Associated Transcriptional Drift in a Tissue-Dependent Manner: Mechanistic Leads From Ras-Related Protein Rab-11A-Mediated Trafficking and Carnitine Palmitoyltransferase 2-Linked Fatty Acid Oxidation.](../papers/pubmed-42634749.md) (2026, Cureus)

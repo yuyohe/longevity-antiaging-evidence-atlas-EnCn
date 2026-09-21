@@ -107,8 +107,12 @@ def wrap_text(
     for ch in text:
         trial = f"{line}{ch}"
         if line and text_len(draw, trial, font) > max_width:
-            lines.append(line.rstrip())
-            line = ch.lstrip()
+            if ch in "，。；：！？、）】》" and len(line) > 1:
+                lines.append(line[:-1].rstrip())
+                line = line[-1] + ch
+            else:
+                lines.append(line.rstrip())
+                line = ch.lstrip()
             if max_lines and len(lines) >= max_lines:
                 break
         else:
@@ -233,6 +237,7 @@ def make_ingredient_card(row: dict[str, str]) -> Path:
     en_font = load_font(30)
 
     draw.text((70, top_y), row["card_id"], font=small_font, fill=accent)
+    draw.text((185, top_y), "宇多Yul细胞/yulcell", font=small_font, fill=MUTED)
     risk_ink, risk_bg = risk_color(row.get("commercial_overclaim_risk", "中"))
     draw_round_rect(draw, (690, top_y - 4, 830, top_y + 42), 18, risk_bg, outline=None)
     draw.text((716, top_y + 4), f"宣传风险 {row.get('commercial_overclaim_risk', '中')}", font=load_font(22, bold=True), fill=risk_ink)
@@ -262,8 +267,9 @@ def make_ingredient_card(row: dict[str, str]) -> Path:
     if y < 1020:
         y = draw_section(draw, 70, y, "撤稿记录", retraction, max_width, accent, 2)
 
-    footer = f"更新 {UPDATE_MONTH} | 只做证据导航，不给个人剂量、诊断或处方替代"
-    draw.text((70, h - 90), footer, font=load_font(23), fill=MUTED)
+    footer = f"评级沿用既有资料 | 撤稿检索 {row.get('retraction_checked_date', row.get('last_checked', ''))}"
+    draw.text((70, h - 105), footer, font=load_font(22), fill=MUTED)
+    draw.text((70, h - 75), "只做证据导航，不给个人剂量、诊断或处方替代", font=load_font(22), fill=MUTED)
 
     path = CARD_DIR / f"{row['card_id']}-{safe_filename(row['name_zh'])}.png"
     img.save(path, optimize=True, quality=95)
@@ -340,6 +346,7 @@ def draw_heatmap(
         color = gradient_color(i, 7)
         draw.rectangle((300 + i * 46, legend_y + 2, 338 + i * 46, legend_y + 28), fill=color)
     draw.text((700, legend_y), "2026 年尚未结束，后续会继续更新。", font=load_font(24), fill=MUTED)
+    draw.text((60, height - 40), f"宇多Yul细胞/yulcell | 快照 {os.environ.get('EVIDENCE_ATLAS_UPDATE_DATE', UPDATE_MONTH)}", font=load_font(22), fill=MUTED)
     output.parent.mkdir(parents=True, exist_ok=True)
     img.save(output, optimize=True, quality=95)
     return output
@@ -356,7 +363,7 @@ def make_card_wall(card_paths: list[Path], output: Path) -> Path:
     img = Image.new("RGB", (w, h), PAPER)
     draw = ImageDraw.Draw(img)
     draw.text((gap, 32), "前 50 个常见成分卡片总览", font=load_font(42, bold=True), fill=INK)
-    draw.text((gap, 84), "每张小图都可单独放进飞书画廊视图或社交媒体卡片。", font=load_font(25), fill=MUTED)
+    draw.text((gap, 84), f"宇多Yul细胞/yulcell | {os.environ.get('EVIDENCE_ATLAS_UPDATE_DATE', UPDATE_MONTH)} | 评级沿用既有资料", font=load_font(25), fill=MUTED)
 
     for idx, path in enumerate(card_paths):
         r = idx // cols
@@ -440,6 +447,9 @@ def main() -> None:
                 "category": row.get("category", ""),
                 "health_evidence": row.get("health_evidence", ""),
                 "skin_evidence": row.get("skin_evidence", ""),
+                "evidence_review_date": row.get("evidence_review_date", row.get("last_checked", "")),
+                "retraction_checked_date": row.get("retraction_checked_date", ""),
+                "visual_snapshot_date": row.get("visual_snapshot_date", ""),
                 "commercial_overclaim_risk": row.get("commercial_overclaim_risk", ""),
                 "one_sentence": row.get("one_sentence", ""),
                 "common_misunderstanding": row.get("common_misunderstanding", ""),
@@ -526,6 +536,9 @@ def main() -> None:
             "category",
             "health_evidence",
             "skin_evidence",
+            "evidence_review_date",
+            "retraction_checked_date",
+            "visual_snapshot_date",
             "commercial_overclaim_risk",
             "one_sentence",
             "common_misunderstanding",

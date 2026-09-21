@@ -44,6 +44,8 @@ def normalize_title(value: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
     abbreviation_expansions = {
         "bp": "blood pressure",
+        "sbp": "systolic blood pressure",
+        "dbp": "diastolic blood pressure",
         "osa": "obstructive sleep apnea",
     }
     return " ".join(abbreviation_expansions.get(token, token) for token in normalized.split())

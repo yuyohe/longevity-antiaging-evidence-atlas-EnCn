@@ -106,7 +106,6 @@ Draft summary: this topic now includes 102 records; final public claims still re
 - [Effect of 2-Year Caloric Restriction in the Absence of Malnutrition on Indicators of Anemia, Iron Status, and Hepcidin in Healthy Adults: A Randomized Clinical Trial.](../papers/pubmed-41825741.md) (2026, The Journal of nutrition)
 - [Intermittent calorie restriction alters T cell subsets and metabolic markers in people with multiple sclerosis.](../papers/pubmed-35816900.md) (2022, EBioMedicine)
 - [Randomised controlled trial of intermittent vs continuous energy restriction during chemotherapy for early breast cancer.](../papers/pubmed-34912072.md) (2022, British journal of cancer)
-- [Rapamycin not dietary restriction improves resilience against pathogens: a meta-analysis.](../papers/pubmed-36399256.md) (2023, GeroScience)
 - [Nutrition and dietary restrictions in cancer prevention.](../papers/pubmed-38147966.md) (2024, Biochimica et biophysica acta. Reviews on cancer)
 - [The significance of caloric restriction mimetics as anti-aging drugs.](../papers/pubmed-38091837.md) (2024, Biochemical and biophysical research communications)
 - [Dietary energy restriction in neurological diseases: what's new?](../papers/pubmed-36369305.md) (2023, European journal of nutrition)
@@ -149,3 +148,4 @@ Draft summary: this topic now includes 102 records; final public claims still re
 - [Oxidative stress, antioxidants, hormesis and calorie restriction: The current perspective in the biology of aging.](../papers/pubmed-33845417.md) (2021, Archives of gerontology and geriatrics)
 - [Caloric Restriction Reprograms Adipose Tissues in Rhesus Monkeys.](../papers/pubmed-41042069.md) (2025, Aging cell)
 - [Reduction in metabolic noise reveals rejuvenation following transient severe caloric restriction.](../papers/pubmed-37946010.md) (2024, GeroScience)
+- [Rapamycin not dietary restriction improves resilience against pathogens: a meta-analysis.](../papers/pubmed-36399256.md) (2023, GeroScience)

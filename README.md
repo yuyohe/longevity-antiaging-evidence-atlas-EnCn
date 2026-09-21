@@ -1,12 +1,12 @@
 # 宇多Yul细胞/yulcell · 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging & Healthspan Evidence Atlas EnCn
 
-**Current snapshot / 当前公开快照:** 2026-09-13<br>
+**Current snapshot / 当前公开快照:** 2026-09-21<br>
 **Maintainer and public brand / 维护方与公开品牌:** 宇多Yul细胞/yulcell<br>
 **Repository / 仓库:** `longevity-antiaging-evidence-atlas-EnCn`
 
-> **Mid-September curated update / 9 月中旬精编说明:** [plain-language guide / 普通读者说明](content/public-reader/mid-september-2026-update.md)<br>
-> **Self-contained report / 自包含图文报告:** [open report / 打开报告](docs/mid-september-public-update-2026-09.html)<br>
-> **Posting asset dashboard / 发帖资产面板:** [open dashboard / 打开面板](docs/yulcell-posting-asset-dashboard-2026-09-13.html)<br>
+> **Late-September curated update / 9 月下旬精编说明:** [plain-language guide / 普通读者说明](content/public-reader/late-september-2026-update.md)<br>
+> **Self-contained report / 自包含图文报告:** [open report / 打开报告](docs/late-september-public-update-2026-09.html)<br>
+> **Posting asset dashboard / 发帖资产面板:** [open dashboard / 打开面板](docs/yulcell-posting-asset-dashboard-2026-09-21.html)<br>
 > **Feishu assets / 飞书资产:** [nine stable tables / 9 张长期表](docs/feishu-public-assets-2026-09.md)<br>
 > **Public data / 公开数据:** [September CSV package / 9 月 CSV 数据包](public-data/README.md)<br>
 > **Chinese guide / 中文详细说明:** [README.zh-CN.md](README.zh-CN.md)
@@ -21,25 +21,25 @@ This bilingual, versioned atlas helps readers distinguish stronger human evidenc
 
 | Asset / 资产 | Active size / 当前体量 | What it means / 怎么理解 |
 | --- | ---: | --- |
-| Candidate sources / 候选来源 | 11,132 | Search index awaiting review / 等待复核的资料目录 |
-| Shortlist / 入选短名单 | 2,291 | Direct topic matches prioritized for review / 与主题直接相关的优先复核记录 |
-| Evidence findings / 证据发现 | 2,291 | Automated drafts, not completed full-text reviews / 自动整理草稿，不等于全文复核完成 |
+| Candidate sources / 候选来源 | 11,141 | Search index awaiting review / 等待复核的资料目录 |
+| Shortlist / 入选短名单 | 2,339 | Direct topic matches prioritized for review / 与主题直接相关的优先复核记录 |
+| Evidence findings / 证据发现 | 2,339 | Automated drafts, not completed full-text reviews / 自动整理草稿，不等于全文复核完成 |
 | Evidence matrix / 证据矩阵 | 1,500 | Bounded comparison layer / 有容量上限的比较层 |
-| Public CSV processing rows / 五层 CSV 总行数 | 28,346 | A paper may occur in several layers / 同一论文可跨层出现 |
-| Paper cards / 论文卡片 | 2,291 | One page per active finding / 每条当前 finding 一页 |
+| Public CSV processing rows / 五层 CSV 总行数 | 28,460 | A paper may occur in several layers / 同一论文可跨层出现 |
+| Paper cards / 论文卡片 | 2,339 | One page per active finding / 每条当前 finding 一页 |
 | Healthspan topics / 健康寿命主题 | 20 | Fixed topic set for this release / 本版固定主题集合 |
 | Visual assets / 图片资产 | 57 | 7 main charts plus 50 ingredient cards / 7 张主图和 50 张成分卡 |
 | Feishu Bitable / 飞书多维表格 | 9 | Stable tables reused across releases / 跨版本复用的长期表 |
 
-The 28,346-row total is the sum of five processing layers. It is not a count of unique papers.
+The 28,460-row total is the sum of five processing layers. It is not a count of unique papers.
 
-28,346 行是五张处理层表的行数相加，不是互不重复的论文数。
+28,460 行是五张处理层表的行数相加，不是互不重复的论文数。
 
 ## Why Counts Stay Bounded / 为什么体量保持受控
 
-This release searched PubMed from 2026-08-29 through 2026-09-13, found 1,191 unique matches, and identified 1,124 new candidates. After stricter scope checks, deduplication, and capacity controls, candidates changed from 11,104 to 11,132 and findings from 3,039 to 2,291. Full topics primarily replace lower-priority records; under-cap topics add only suitable records.
+This release searched PubMed from 2026-09-14 through 2026-09-21, found 386 unique matches, and identified 379 new candidates. After scope checks, deduplication, and capacity controls, candidates changed from 11,132 to 11,141 and findings from 2,291 to 2,339. Full topics primarily replace lower-priority records; under-cap topics add only suitable records.
 
-本轮补检 2026-08-29 至 2026-09-13 的 PubMed 文献，得到 1,191 个唯一匹配，其中 1,124 条是新候选。经过更严格的主题范围核对、去重和容量控制，候选由 11,104 条调整为 11,132 条，findings 由 3,039 条调整为 2,291 条；已满额主题以替换为主，未满额主题只补入合格记录。
+本轮补检 2026-09-14 至 2026-09-21 的 PubMed 文献，得到 386 个唯一匹配，其中 379 条是新候选。经过主题核对、去重和容量控制，候选由 11,132 条调整为 11,141 条，findings 由 2,291 条调整为 2,339 条；已满额主题以替换为主，未满额主题只补入合格记录。
 
 - Duplicate records, protocols, plans, commentaries, corrections, and clear topic mismatches leave the active layers. / 重复项、方案论文、评论勘误和明确主题错配退出当前层。
 - Direct animal or cell experiments leave human-outcome topics. / 明确动物或细胞实验退出人体结局主题。
@@ -51,22 +51,26 @@ Full policy / 完整规则: [curation and retention policy / 精编与归档规�
 
 ## What Changed / 本次更新
 
-- **English:** 350 recent candidates remain active; 175 entered the findings layer after topic and quality guards.
-- **中文：** 近期候选最终保留 350 条，其中 175 条通过主题与质量防线进入 findings。
+- **English:** 116 recent candidates remain active; 62 entered findings. Six highlighted studies have abstract-based bilingual explanations, with full-text review still pending.
+- **中文：** 近期候选最终保留 116 条，其中 62 条进入 findings；另为 6 篇代表研究编写双语摘要解读，全文复核仍待完成。
 - **English:** Active findings now contain no protocols or non-primary commentary/correction records.
 - **中文：** 当前 findings 不再包含方案论文，也不包含评论、社论或勘误记录。
-- **English:** Broad keyword leakage is now rejected at the findings layer, including alternate forms of hypertension, frailty-only prognosis, and ingredient mentions without an aging context.
-- **中文：** findings 层新增严格范围防线，剔除其他类型高压、仅做预后判断的衰弱研究，以及没有衰老语境的成分词命中。
-- **English:** All 2,291 finding PMIDs were checked against official NCBI summaries; missing summaries and substantive title mismatches are both zero.
-- **中文：** 用 NCBI 官方摘要核对全部 2,291 个 finding PMID；摘要缺失和实质题名冲突均为 0。
+- **English:** Plastic aging and youth sports records without an aging context are excluded. Case-based reviews cannot exceed C; topic caps cannot override the D cap for animal studies.
+- **中文：** 排除塑料老化和没有老龄语境的青少年竞技研究；病例资料汇总最高 C，主题规则不能突破动物研究最高 D 的限制。
+- **English:** All 2,339 finding PMIDs were checked against official NCBI summaries; missing summaries and substantive title mismatches are both zero.
+- **中文：** 用 NCBI 官方摘要核对全部 2,339 个 finding PMID；摘要缺失和实质题名冲突均为 0。
 - **English:** All seven main visuals and 50 ingredient cards were regenerated.
-- **中文：** 7 张主图和 50 张单成分卡全部重建。
+- **中文：** 7 张主图和 50 张单成分卡全部重建，补上品牌、日期和解读边界。
+- **English:** Retraction searches were refreshed for 117 targets: 594 topic-matched rows, 538 unique PMIDs. These are not newly retracted papers or a count of efficacy failures.
+- **中文：** 重新查询 117 个成分/主题的撤稿风险，得到 594 条主题匹配记录、去重 538 个 PMID；不是本月新增撤稿，也不代表 538 项疗效失败。
+- **English:** Ingredient grades are inherited provisional assessments; refreshed counts and images do not imply 50 new full-text reviews.
+- **中文：** 50 张成分卡沿用既有暂定评级；更新数量和图片，不等于完成了 50 个成分的新一轮全文复核。
 - **English:** Weekly automation now produces a capped intake pull request and cannot write candidates directly to `main`.
 - **中文：** 每周自动检索现在只生成有上限的 intake Pull Request，不能直接把候选写入 `main`。
 
 ## Start Here / 从这里开始
 
-1. [Mid-September update / 9 月中旬精编说明](content/public-reader/mid-september-2026-update.md)
+1. [Late-September update / 9 月下旬精编说明](content/public-reader/late-september-2026-update.md)
 2. [Plain-language start page / 普通读者入口](content/public-reader/start-here.md)
 3. [15 takeaways / 15 条结论](content/public-reader/ten-takeaways.md)
 4. [Evidence weighting / 证据权重怎么看](content/public-reader/evidence-weight.md)
@@ -77,8 +81,8 @@ Full policy / 完整规则: [curation and retention policy / 精编与归档规�
 
 ## Visuals and Feishu / 图片与飞书
 
-- [Self-contained September report / 9 月自包含报告](docs/mid-september-public-update-2026-09.html)
-- [Posting asset dashboard / 发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-09-13.html)
+- [Self-contained September report / 9 月自包含报告](docs/late-september-public-update-2026-09.html)
+- [Posting asset dashboard / 发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-09-21.html)
 - [September research heatmap / 9 月研究热力图](docs/research-heatmap-2026-09.html)
 - [All 57 September PNGs / 9 月全部图片](docs/assets/visual-assets/2026-09/)
 - [Feishu public asset index / 飞书公开资产索引](docs/feishu-public-assets-2026-09.md)
@@ -115,9 +119,9 @@ docs/                       reports, visuals, public indexes / 报告、图片�
 
 ## Historical Snapshots / 历史快照
 
-The August and September CSV snapshots remain unpacked for direct comparison. May, June, July, mid-August, and end-August five-table snapshots are verified ZIP archives under [`archive/public-data/`](archive/public-data/). Git history remains the final recovery path.
+The August and September CSV snapshots remain unpacked for direct comparison. May, June, July, mid-August, end-August, and mid-September five-table snapshots are verified ZIP archives under [`archive/public-data/`](archive/public-data/). Git history remains the final recovery path. Removable-drive copies are optional and were not made for this release.
 
-8 月和 9 月 CSV 保持展开，便于直接比较；5 月、6 月、7 月、8 月中期和 8 月底五表快照均已压缩校验，位于 [`archive/public-data/`](archive/public-data/)。Git 历史仍是最终恢复路径。
+8 月和 9 月 CSV 保持展开，便于直接比较；5 月、6 月、7 月、8 月中期、8 月底和 9 月中旬五表快照均已压缩校验，位于 [`archive/public-data/`](archive/public-data/)。Git 历史仍是最终恢复路径。移动硬盘副本是可选项，本轮未执行。
 
 ## Boundary / 使用边界
 

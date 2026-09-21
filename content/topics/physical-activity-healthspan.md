@@ -18,8 +18,8 @@ Draft summary: this topic now includes 200 records; final public claims still re
 ## 我们知道什么 / What We Know
 
 - 活动量、减少久坐和功能维持具有稳定公共健康价值。
-- 可支持：将「身体活动与健康寿命」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating Physical Activity and Healthspan as a candidate evidence topic with draft level B, pending full review.
 - 可支持：将「身体活动与健康寿命」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating Physical Activity and Healthspan as a candidate evidence topic with draft level A, pending full review.
+- 可支持：将「身体活动与健康寿命」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating Physical Activity and Healthspan as a candidate evidence topic with draft level B, pending full review.
 - 可支持：将「身体活动与健康寿命」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating Physical Activity and Healthspan as a candidate evidence topic with draft level A, pending full review.
 - 可支持：将「身体活动与健康寿命」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating Physical Activity and Healthspan as a candidate evidence topic with draft level A, pending full review.
 - 可支持：将「身体活动与健康寿命」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating Physical Activity and Healthspan as a candidate evidence topic with draft level A, pending full review.
@@ -47,6 +47,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 
 ## 相关论文卡片 / Related Paper Cards
 
+- [Exercise-based cardiac rehabilitation for coronary heart disease.](../papers/pubmed-42754260.md) (2026, The Cochrane database of systematic reviews)
 - [Effects of Exercise on Aerobic Capacity in People with Chronic Obstructive Pulmonary Disease: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.](../papers/pubmed-42512681.md) (2026, Healthcare (Basel, Switzerland))
 - [Post-diagnosis physical activity in relation to mortality among gynecological cancer survivors.](../papers/pubmed-42400650.md) (2026, Cancer causes & control : CCC)
 - [Post-diagnosis physical activity in relation to mortality among prostate cancer survivors: a systematic review and meta-analysis.](../papers/pubmed-42348026.md) (2026, Cancer causes & control : CCC)
@@ -135,6 +136,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Long-Term Leisure-Time Physical Activity Intensity and All-Cause and Cause-Specific Mortality: A Prospective Cohort of US Adults.](../papers/pubmed-35876019.md) (2022, Circulation)
 - [Association of the "Weekend Warrior" and Other Leisure-time Physical Activity Patterns With All-Cause and Cause-Specific Mortality: A Nationwide Cohort Study.](../papers/pubmed-35788615.md) (2022, JAMA internal medicine)
 - [Recommended physical activity and all cause and cause specific mortality in US adults: prospective cohort study.](../papers/pubmed-32611588.md) (2020, BMJ (Clinical research ed.))
+- [Right Heart Cardiac Magnetic Resonance Profiles and Cardiopulmonary Reserve in Older Adults Undergoing Long-Term Multicomponent Exercise: A 2-Year Longitudinal Study.](../papers/pubmed-42717600.md) (2026, Scandinavian journal of medicine & science in sports)
 - [Associations of Combined Moderate and Vigorous Physical Activity With All-Cause, Cardiovascular, and Cancer Mortality: A Cohort Study of 586 936 US Adults.](../papers/pubmed-42333692.md) (2026, Journal of the American Heart Association)
 - [Accelerometer-Derived "Weekend Warrior" Physical Activity Pattern and Venous Thromboembolism Incidence and Mortality: A Prospective Cohort Study.](../papers/pubmed-42333669.md) (2026, Journal of the American Heart Association)
 - [Device-measured and self-reported physical activity and the trajectory of cardio-renal-metabolic multimorbidity: a prospective cohort study in UK Biobank.](../papers/pubmed-42135687.md) (2026, BMC public health)
@@ -152,12 +154,11 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Aerobic Exercise Training and Nontraditional Cardiovascular Risk Factors in Hemodialysis Patients: Results from a Prospective Randomized Trial.](../papers/pubmed-31597151.md) (2019, Cardiorenal medicine)
 - [10-year exercise training in chronic heart failure: a randomized controlled trial.](../papers/pubmed-22999730.md) (2012, Journal of the American College of Cardiology)
 - [Associations of physical activity and sedentary behaviors with mortality: An observational analysis and Mendelian randomization study.](../papers/pubmed-41579440.md) (2026, Geriatric nursing (New York, N.Y.))
-- [Right Heart Cardiac Magnetic Resonance Profiles and Cardiopulmonary Reserve in Older Adults Undergoing Long-Term Multicomponent Exercise: A 2-Year Longitudinal Study.](../papers/pubmed-42717600.md) (2026, Scandinavian journal of medicine & science in sports)
 - [Combinations of stepping intensity and daily step counts against all-cause and cardiovascular disease mortality: insights from a device-based prospective study.](../papers/pubmed-42711120.md) (2026, British journal of sports medicine)
-- [Association of muscle-strengthening and aerobic physical activity with all-cause, cardiovascular disease, and cancer mortality in US adults with diabetes.](../papers/pubmed-39913676.md) (2026, European journal of preventive cardiology)
 - [Joint associations of accelerometer-measured sleep duration and physical activity with cardiovascular disease and all-cause mortality: a longitudinal cohort study.](../papers/pubmed-42386465.md) (2026, Nutrition, metabolism, and cardiovascular diseases : NMCD)
 - [Global and regional burden of cardiovascular diseases due to low physical activity from 1990 to 2021 and projections to 2045: a joinpoint regression and age-period-cohort analysis based on GBD 2021.](../papers/pubmed-42298050.md) (2026, Internal and emergency medicine)
 - [Association Between Sitting Time and Physical Activity With Survival Among Stroke Survivors: A National Cohort Study.](../papers/pubmed-41554394.md) (2026, Archives of physical medicine and rehabilitation)
+- [Association of muscle-strengthening and aerobic physical activity with all-cause, cardiovascular disease, and cancer mortality in US adults with diabetes.](../papers/pubmed-39913676.md) (2026, European journal of preventive cardiology)
 - [Association of Weekend Warrior and Other Physical Activity Patterns With Mortality Among Adults With Diabetes : A Cohort Study.](../papers/pubmed-40690774.md) (2025, Annals of internal medicine)
 - [Cardiac rehabilitation and physical activity decrease the risk of stroke after acute myocardial infarction: A nationwide cohort study in Sweden.](../papers/pubmed-40253981.md) (2025, Annals of physical and rehabilitation medicine)
 - [Association of aerobic and muscle-strengthening physical activity with all-cause and cardiovascular disease mortality among adults with type 2 diabetes: A prospective cohort of US adults.](../papers/pubmed-38492549.md) (2024, Diabetes & metabolic syndrome)
@@ -187,6 +188,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Effects of simultaneous cognitive and aerobic exercise training on dual-task walking performance in healthy older adults: results from a pilot randomized controlled trial.](../papers/pubmed-32122325.md) (2020, BMC geriatrics)
 - [The effect of a randomized controlled physical activity trial on health related quality of life in metabolically unhealthy African-American women: FIERCE STUDY.](../papers/pubmed-29428830.md) (2018, Contemporary clinical trials)
 - [Effect of structured physical activity on prevention of major mobility disability in older adults: the LIFE study randomized clinical trial.](../papers/pubmed-24866862.md) (2014, JAMA)
+- [Structured exercise interventions and survival outcomes in patients with cancer: systematic review and meta-analysis of randomised controlled trials.](../papers/pubmed-42744658.md) (2026, British journal of sports medicine)
 - [Effectiveness of physical exercise on osteosarcopenia in older adults: A systematic review.](../papers/pubmed-41637773.md) (2026, Geriatric nursing (New York, N.Y.))
 - [Effects of exercise on the efficacy and adverse effects of immunosuppressants: a systematic review and meta-analysis.](../papers/pubmed-41581431.md) (2026, Transplantation reviews (Orlando, Fla.))
 - [The effects of functional exercise on healthy aging in women over 60 years of age: A systematic review and meta-analysis.](../papers/pubmed-41547029.md) (2026, Archives of gerontology and geriatrics)
@@ -212,6 +214,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [High-intensity interval training versus moderate-intensity continuous training on exercise capacity and quality of life in patients with coronary artery disease: A systematic review and meta-analysis.](../papers/pubmed-28825321.md) (2017, European journal of preventive cardiology)
 - [The effects of resistance exercise on physical performance and health-related quality of life in prostate cancer patients: a systematic review.](../papers/pubmed-26003426.md) (2015, Supportive care in cancer : official journal of the Multinational Association of Supportive Care in Cancer)
 - [Physical activity associations with physical function and body composition among community-dwelling older adults in Japan: The Kyotango Longevity Cohort Study.](../papers/pubmed-41024459.md) (2025, Geriatrics & gerontology international)
+- [Effect of manual diaphragmatic release technique on exercise capacity and sleep quality in older adults with Type II diabetes: A randomized controlled trial.](../papers/pubmed-42758547.md) (2026, Physiology international)
 - [Are exercise benefits in older adults clinically meaningful?: An ancillary and follow-up analysis of a multicenter randomized controlled trial.](../papers/pubmed-42545663.md) (2026, GeroScience)
 - [Exercise-Based Telerehabilitation for Heart Failure Patients Declining Outpatient Rehabilitation-A Randomized Controlled Trial.](../papers/pubmed-39501477.md) (2025, Medicine and science in sports and exercise)
 - [Exercise in patients with hip osteoarthritis - effects on muscle and functional performance: A randomized trial.](../papers/pubmed-33956561.md) (2022, Physiotherapy theory and practice)
@@ -237,13 +240,10 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Effects of Exercise on Cancer Treatment Efficacy: A Systematic Review of Preclinical and Clinical Studies.](../papers/pubmed-34215623.md) (2021, Cancer research)
 - [A Systematic Review of Exercise Systematic Reviews in the Cancer Literature (2005-2017).](../papers/pubmed-28942909.md) (2017, PM & R : the journal of injury, function, and rehabilitation)
 - [Physical activity maintenance in colorectal cancer survivors after an exercise intervention applying behaviour change techniques: a systematic review and meta-analysis.](../papers/pubmed-39098882.md) (2026, Journal of cancer survivorship : research and practice)
+- [Immunological effects of supervised exercise in long COVID in adults: A secondary analysis of a randomized crossover trial.](../papers/pubmed-42665974.md) (2026, Physiological reports)
 - [Beneficial effects of foreign language learning and aerobic exercise on dentate gyrus volume and mnemonic discrimination in healthy older adults: Results from a randomized controlled trial.](../papers/pubmed-42516172.md) (2026, Imaging neuroscience (Cambridge, Mass.))
 - [Effects of Commercial Exergames vs. Traditional Indoor Exercise on Mood in Older Adults: A Randomized Controlled Trial.](../papers/pubmed-42278703.md) (2026, Healthcare (Basel, Switzerland))
 - [Effects of an individualised exercise program in hospitalised older adults with cancer: A randomised clinical trial.](../papers/pubmed-39615400.md) (2025, The journal of nutrition, health & aging)
 - [Effects of short-term multicomponent exercise intervention on muscle power in hospitalized older patients: A secondary analysis of a randomized clinical trial.](../papers/pubmed-37989600.md) (2023, Journal of cachexia, sarcopenia and muscle)
 - [Effects of Yoga and Aerobic Exercise on Verbal Fluency in Physically Inactive Older Adults: Randomized Controlled Trial (FitForAge).](../papers/pubmed-37021083.md) (2023, Clinical interventions in aging)
-- [Immunological effects of supervised exercise in long COVID in adults: A secondary analysis of a randomized crossover trial.](../papers/pubmed-42665974.md) (2026, Physiological reports)
 - [The effects of resistance exercise with blood flow restriction on muscle performance, muscle mass, and function in older adults: a systematic review.](../papers/pubmed-42432513.md) (2026, European review of aging and physical activity : official journal of the European Group for Research into Elderly and Physical Activity)
-- [The effects of chronic exercise interventions on executive function in healthy older adults and optimal training characteristics: A systematic review based on randomized controlled trials.](../papers/pubmed-40578653.md) (2025, Psychology of sport and exercise)
-- [Optimal Dose of Aerobic Exercise Programs to Reduce Pain Intensity and Improve Health Status in Patients With Fibromyalgia: A Dose-Response Meta-Analysis.](../papers/pubmed-40272395.md) (2025, Physical therapy)
-- [Sedentary Behavior Intervention as a Catalyst for Healthier Eating.](../papers/pubmed-42065687.md) (2026, Journal of nutrition education and behavior)

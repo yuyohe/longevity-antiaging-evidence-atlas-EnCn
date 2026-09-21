@@ -1,6 +1,6 @@
 # 宇多Yul细胞证据图谱：精编与归档规则 / Curation and Retention Policy
 
-**最近复核 / Last reviewed:** 2026-09-13<br>
+**最近复核 / Last reviewed:** 2026-09-21<br>
 **品牌 / Brand:** 宇多Yul细胞/yulcell
 
 ## 先说结论 / The Short Version
@@ -38,6 +38,8 @@ Removal from an active layer does not mean a paper is false. It means the record
 
 ## 可追溯与恢复 / Traceability and Recovery
 
+- 9 月下旬候选退出原因：`data/archive/candidate_retirement_2026-09-late.csv`
+- 9 月下旬发现层排除/退出原因：`data/archive/finding_retirement_2026-09-late.csv`；其中包含新增后未通过筛选的记录，不全是旧记录退出。
 - 9 月中旬候选退出原因：`data/archive/candidate_retirement_2026-09-mid.csv`
 - 9 月中旬发现层退出原因：`data/archive/finding_retirement_2026-09-mid.csv`
 - 8 月底退出日志：`data/archive/candidate_retirement_2026-08-end.csv` 与 `data/archive/finding_retirement_2026-08-end.csv`
@@ -46,6 +48,7 @@ Removal from an active layer does not mean a paper is false. It means the record
 - 7 月五表快照：`archive/public-data/public-data-2026-07.zip`
 - 完整 8 月中期五表快照：`archive/public-data/public-data-2026-08-mid.zip`
 - 完整 8 月底五表快照：`archive/public-data/public-data-2026-08-end.zip`
+- 完整 9 月中旬五表快照：`archive/public-data/public-data-2026-09-mid.zip`
 - 更早的完整 CSV 按月份压缩到 `archive/public-data/`，ZIP 内含每个文件的行数、字节数和 SHA-256。
 - Git 历史仍保留发布时的完整版本，可以恢复任何旧记录。
 
@@ -56,6 +59,16 @@ The current and previous monthly snapshots stay unpacked. Superseded same-month 
 候选层用于发现，因此可以保留宽泛命中；findings 层用于公开复核，必须更严格。例如：只因为出现 `frailty` 的手术预后论文，不自动归入力量训练；只出现槲皮素、二甲双胍、自噬或 mTOR，但没有衰老或健康寿命语境的论文，不自动归入抗衰主题；门静脉高压、肺动脉高压也不当作一般血压管理证据。
 
 Candidate discovery can be broad. Active findings require a direct aging, longevity, healthspan, or intervention connection. This prevents broad terms such as frailty, quercetin, metformin, autophagy, mTOR, or hypertension from admitting unrelated disease records.
+
+9 月下旬补充：塑料老化不是生物衰老；没有老龄语境的青少年竞技训练不进入老年抗阻训练主题。病例资料汇总最高 C，动物研究最高 D；主题等级上限不能放宽研究本身的上限。
+
+Late-September guards reject environmental plastic aging and youth training without an aging context. Case-based reviews are capped at C and animal studies at D; topic-level rules cannot relax these caps.
+
+## 移动硬盘副本 / Removable-Drive Copies
+
+例行维护不默认复制到移动硬盘。只有用户明确提出时才另行执行，不作为 GitHub 与飞书更新的前置条件。
+
+Removable-drive copies are optional and require an explicit request; they are not a prerequisite for routine GitHub and Feishu maintenance.
 
 ## 自动检索的边界 / Automation Boundary
 
