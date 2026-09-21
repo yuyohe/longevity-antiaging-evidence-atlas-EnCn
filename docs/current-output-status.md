@@ -14,7 +14,10 @@ Date / 日期: 2026-09-21
 - Visual assets: 57 PNGs, self-contained report, and posting dashboard.
 - Retraction refresh: 117 targets, 594 topic-matched rows, 538 unique PMIDs; publication-date window 2006-01-01 through 2026-09-21.
 - Prior mid-September five-table snapshot: archived and hash-verified under `archive/public-data/`.
-- GitHub publication and Feishu 9-table online audit: pending for this snapshot.
+- GitHub public `main`: release-content commit `9997ee503f7ae527421be5dac314844c41e64848`, anonymously verified with current date and intact Chinese brand.
+- Feishu online audit: 9/9 passed; exact row counts and source keys, complete brand/link/attachment coverage, current card provenance dates, no mojibake in audited fields.
+- Verification: 41 unit tests, lint, healthspan and skin validators, complete September release validation, 57/57 decoded images, desktop/mobile layouts, and two real PNG downloads passed.
+- Legacy optional GitHub-to-Feishu workflow: cloud configuration is incomplete, so its preflight explicitly skips publishing. The nine-table sync and audit above were completed locally; no local secrets were copied into GitHub.
 - Removable-drive copy: not requested and not performed.
 
 ## Public Caveat / 公开警示

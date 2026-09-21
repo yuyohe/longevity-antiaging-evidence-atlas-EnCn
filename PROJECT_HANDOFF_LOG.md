@@ -46,7 +46,11 @@ python -X utf8 scripts\validate_public_release_2026_09.py
 
 Current release acceptance:
 
-- GitHub publication and the Feishu online audit are pending for this snapshot; do not reuse the mid-September acceptance as evidence of this release.
+- GitHub release-content commit `9997ee503f7ae527421be5dac314844c41e64848` was anonymously verified on public `main`; the README contains the current date and Chinese brand without question-mark runs.
+- Local verification passed 41 unit tests, lint, healthspan/skin draft validation, source-only release validation, and archive hashes. Full export contains 2,401 pages; the public-reader export contains 15.
+- Playwright checked 1440 x 900 and 390 x 844 viewports, decoded all 57 images, and tested both original-PNG download and generated-poster download. Screenshots and downloads remain local under ignored `output/` and `.playwright-cli/`.
+- Feishu read-only audit passed `9/9` stable tables with exact counts and current source-key sets, full brand/GitHub coverage, complete attachments, and no mojibake in audited fields. Ingredient cards also passed separate inherited-rating, retraction-query and image-snapshot date checks. One transient `1254607 Data not ready` update was resumed by primary key without duplicate records.
+- The release-content GitHub Lint run passed. The legacy optional cloud Feishu workflow failed because `FEISHU_SOURCE_TABLE_ID` was not configured; a configuration preflight now explicitly skips that optional sync when any required secret is missing. Local credentials were not copied to GitHub. The successful nine-table maintenance above used the local release scripts and is independent of that legacy workflow.
 - A removable-drive copy was not made for this run. It is optional for future routine maintenance and is only required when explicitly requested.
 
 Do not publish from the development workspace without first checking its worktree. For public releases, start from a clean clone or worktree that matches GitHub `main`, run the complete build chain, validate locally, then perform the read-only Feishu audit.
