@@ -15,6 +15,7 @@ from urllib.parse import parse_qs, urlparse
 from dotenv import load_dotenv
 
 from feishu_client import FeishuClient
+from sync_feishu_full_public_data_2026_05 import normalize as public_value
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +26,7 @@ SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-09-21")
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-09")
 MONTH_KEY = MONTH.replace("-", "_")
 EXPECTED_TABLES = 9
+SOURCE_CHECK_FIELDS = ["title_en", "study_type_draft", "final_evidence_level", "endpoint_class_draft", "doi", "pmid", "last_checked"]
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -81,6 +83,7 @@ def audit_table(
         "评级资料日期",
         "撤稿检查日期",
         "图片更新日期",
+        *SOURCE_CHECK_FIELDS,
     ]
     audit_fields = list(dict.fromkeys(name for name in audit_field_candidates if name in field_names))
     records = client.list_bitable_records(app_token, table_id, field_names=audit_fields)
@@ -127,11 +130,21 @@ def audit_table(
         errors.append(f"{table_name}: {broken_text_records} records contain mojibake/question-mark runs")
 
     category = manifest_row.get("类别", "")
+    content_mismatches = 0
     if category == "公开全量数据":
         source_path = ROOT / "public-data" / f"{registry_row['asset_key'].replace('_', '-')}-{MONTH}.csv"
-        source_keys = {row[unique_field] for row in read_csv(source_path)}
+        source_by_key = {row[unique_field]: row for row in read_csv(source_path)}
+        source_keys = set(source_by_key)
         if source_keys != set(unique_values):
             errors.append(f"{table_name}: online keys differ from the current public CSV")
+        for item in records:
+            values = item.get("fields", {})
+            source = source_by_key.get(str(values.get(unique_field, "")), {})
+            if any(public_value(source.get(field)) != str(values.get(field) or "")
+                   for field in SOURCE_CHECK_FIELDS if field in field_names and field in source):
+                content_mismatches += 1
+        if content_mismatches:
+            errors.append(f"{table_name}: {content_mismatches} records differ in audited source content")
     if category == "公开全量数据" and github_coverage != len(records):
         errors.append(f"{table_name}: GitHub link coverage {github_coverage}/{len(records)}")
     if category == "视觉资产" and attachment_coverage != len(records):
@@ -165,6 +178,7 @@ def audit_table(
         "github_link_coverage": github_coverage,
         "attachment_coverage": attachment_coverage,
         "broken_text_records": broken_text_records,
+        "source_content_mismatches": content_mismatches,
         "status": "passed" if not errors else "failed",
     }
     return result, errors

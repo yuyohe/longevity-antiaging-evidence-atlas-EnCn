@@ -14,6 +14,23 @@ import archive_public_snapshots as snapshots  # noqa: E402
 
 
 class PublicSnapshotArchiveTests(unittest.TestCase):
+    def test_existing_archive_is_reused_but_never_replaced_with_new_content(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            public = root / "public-data"
+            public.mkdir()
+            for name in snapshots.ASSET_NAMES:
+                (public / f"{name}-2026-08.csv").write_text("id,title\n1,Original\n", encoding="utf-8")
+            with patch.object(snapshots, "PUBLIC_DATA", public), patch.object(snapshots, "ARCHIVE_DIR", root / "archive"):
+                path, _, _ = snapshots.build_archive("2026-08")
+                original = path.read_bytes()
+                reused, _, _ = snapshots.build_archive("2026-08")
+                self.assertEqual(reused.read_bytes(), original)
+                (public / "candidate-sources-2026-08.csv").write_text("id,title\n2,Changed\n", encoding="utf-8")
+                with self.assertRaises(FileExistsError):
+                    snapshots.build_archive("2026-08")
+                self.assertEqual(path.read_bytes(), original)
+
     def test_same_month_label_is_used_for_archive_and_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

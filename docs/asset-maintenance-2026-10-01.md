@@ -43,6 +43,10 @@ Archiving is recoverable and does not rewrite Git history. It reduces active-dir
 
 ## 后续维护入口 / Reproducible Maintenance
 
+本轮在线验收：飞书 9/9 张长期表通过，五张数据表共 28,670 行，核查题名、DOI、研究类型等字段与本地一致；57 张附件齐全，导航 14 条，核查字段无乱码。GitHub 内容提交 `99290b361dbb97fffd3d69f645ed1faa0d9e52bd` 已确认公开发布，仓库品牌简介也已更新。
+
+Online acceptance passed for all nine Feishu tables, with exact counts, audited source fields, attachments and branding. The release-content commit is publicly available on GitHub. Fifty local unit tests and full release validation passed.
+
 当前版本统一由 `data/current_release.json` 指定，复用已有构建脚本，不再每月复制一套运行器。
 
 ```powershell

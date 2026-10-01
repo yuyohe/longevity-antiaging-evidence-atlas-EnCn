@@ -61,7 +61,7 @@ Previous releases describe their own snapshot dates. September and October each 
 | [2026-08](../archive/visual-releases/visual-release-2026-08.zip) | 61 | 57 张图和 4 个大网页 / 57 images and 4 large HTML files |
 | [2026-09 早期版本 / Earlier versions](../archive/visual-releases/visual-release-2026-09.zip) | 2 | 中旬报告和旧面板；下旬仍展开 / Mid-month report and panel; late release stays unpacked |
 
-182 个原件共约 126.5 MiB，压缩后约 97.0 MiB。归档前后逐文件校验字节数和 SHA-256。旧 HTML 路径保留提示，旧图片链接指向冻结版本。这是在整理工作目录，**不是重写 Git 历史，也不保证完整克隆更小**。
+182 个原件共约 126.5 MiB，压缩后约 97.0 MiB。归档前后逐文件校验字节数和 SHA-256。旧 HTML 路径保留提示，旧图片目录保留归档下载说明。这是在整理工作目录，**不是重写 Git 历史，也不保证完整克隆更小**。
 
 The 182 original files total approximately 126.5 MiB, compressed to 97.0 MiB. Every file is verified. This organizes the working tree without rewriting Git history or promising smaller full clones.
 

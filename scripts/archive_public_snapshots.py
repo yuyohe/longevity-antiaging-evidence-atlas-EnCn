@@ -112,6 +112,16 @@ def build_archive(
         raise FileNotFoundError(f"Incomplete {month} snapshot; missing: {missing}")
 
     source_payloads = {path.name: path.read_bytes() for path in source_paths}
+    if archive_path.exists():
+        manifest = verify_archive(archive_path)
+        archived_hashes = {row["file"]: row["sha256"] for row in manifest}
+        source_hashes = {name: sha256_bytes(payload) for name, payload in source_payloads.items()}
+        if archived_hashes != source_hashes:
+            raise FileExistsError(
+                f"Refusing to replace different historical contents in {archive_path.name}; "
+                "use a new --archive-label"
+            )
+        return archive_path, manifest, source_paths
     temp_path = archive_path.with_suffix(".zip.tmp")
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(temp_path, "w", allowZip64=True) as archive:

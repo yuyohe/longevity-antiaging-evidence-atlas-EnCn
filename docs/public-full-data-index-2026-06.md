@@ -1,5 +1,7 @@
 # 抗衰证据库公开全量数据包（2026-06）
 
+> **历史快照 / Historical snapshot:** 此页数字对应 2026-06，不是当前数据。CSV 原件已归档，请从[校验后的五表 ZIP / Verified CSV archive](../archive/public-data/public-data-2026-06.zip)恢复；当前入口见[资产总目录 / Current assets](asset-catalog.md)。下表旧路径用于识别包内文件，不表示仍在展开目录。
+
 **品牌 / Brand：** 宇多Yul细胞/yulcell  
 **项目 / Project：** 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging Evidence Atlas EnCn
 

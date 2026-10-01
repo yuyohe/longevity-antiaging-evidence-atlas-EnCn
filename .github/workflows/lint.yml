@@ -15,4 +15,8 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: python scripts/lint.py
+      - run: python -m unittest discover -s tests
+      - run: python scripts/validate_public_drafts.py
+      - run: python scripts/validate_skin_beauty_public_drafts.py
+      - run: python scripts/validate_public_release.py --source-only
       - run: python scripts/build_index.py
