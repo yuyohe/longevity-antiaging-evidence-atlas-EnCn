@@ -205,11 +205,19 @@ def esearch(query: str, retmax: int, sort: str = "relevance") -> list[str]:
 
 
 def esummary(pmids: list[str]) -> dict[str, dict]:
-    if not pmids:
-        return {}
-    data = request_json("esummary.fcgi", {"db": "pubmed", "id": ",".join(pmids)})
-    result = data.get("result", {})
-    return {pmid: result.get(pmid, {}) for pmid in pmids}
+    summaries = {}
+    # Bound GET URLs and fail closed instead of silently dropping requested IDs.
+    for start in range(0, len(pmids), 200):
+        batch = pmids[start:start + 200]
+        if start:
+            time.sleep(0.34)
+        data = request_json("esummary.fcgi", {"db": "pubmed", "id": ",".join(batch)})
+        result = data.get("result", {})
+        missing = [pmid for pmid in batch if not result.get(pmid) or result[pmid].get("error")]
+        if missing:
+            raise RuntimeError(f"PubMed summaries missing requested IDs: {missing}")
+        summaries.update({pmid: result[pmid] for pmid in batch})
+    return summaries
 
 
 def parse_articles(pmids: list[str]) -> dict[str, ET.Element]:
@@ -514,6 +522,15 @@ def has_mixed_human_and_animal_subjects(type_text: str, title_text: str, body_te
     )
 
 
+def secondary_design(title: str, body: str) -> str:
+    title, body = title.lower(), body.lower()
+    if "imputed placebo" in title:
+        return "human_indirect_model_analysis"
+    if "secondary analysis" in title and ("associated with" in title or "association of" in title):
+        return "human_observational_secondary_analysis"
+    return ""
+
+
 def classify_study(pub_types: list[str], body: str, source: str, title: str = "") -> str:
     type_text = " ".join(pub_types).lower()
     title_text = title.lower()
@@ -530,6 +547,8 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         return "mixed_human_and_animal_study"
     if has_direct_animal_subject(type_text, title_text, body_text):
         return "animal_study"
+    if secondary_design(title_text, body_text):
+        return secondary_design(title_text, body_text)
     if (
         any(term in type_text for term in ["randomized controlled trial", "clinical trial"])
         or any(term in title_text for term in ["randomized controlled trial", "randomised controlled trial", "randomized trial", "randomised trial"])

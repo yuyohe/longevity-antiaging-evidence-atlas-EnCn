@@ -7,7 +7,7 @@
 
 Klotho / IL-11 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 76 records; final public claims still require full-text review.
+Draft summary: this topic now includes 77 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -111,6 +111,7 @@ Draft summary: this topic now includes 76 records; final public claims still req
 - [Serum Anti-Aging Protein α-Klotho Mediates the Association between Diet Quality and Kidney Function.](../papers/pubmed-37375648.md) (2023, Nutrients)
 - [No Evidence That Genetic Variation at the Klotho Locus Is Associated With Longevity in Caucasians from the Newcastle 85+ Study and the UK Biobank.](../papers/pubmed-34893828.md) (2022, The journals of gerontology. Series A, Biological sciences and medical sciences)
 - [Serum Klotho Levels and Major Age-Related Ocular Disorders: A Cross-Sectional and Genetic Association Study.](../papers/pubmed-42065487.md) (2026, Translational vision science & technology)
+- [SOX2 and NTF3 expression are associated with taste-bud alterations in aging klotho-deficient mice.](../papers/pubmed-42785525.md) (2026, Mechanisms of ageing and development)
 - [IL-11 neutralizing antibodies alleviate pulmonary fibrosis in aging mice by inhibiting TGF-β/NOX4/IL-11 signaling pathway.](../papers/pubmed-42364821.md) (2026, Biochemical pharmacology)
 - [Blocking IL-11 improves healthspan and lifespan in mice.](../papers/pubmed-39117983.md) (2024, Nature aging)
 - [Klotho, a longevity factor, improves cognitive function in aging nonhuman primates.](../papers/pubmed-37429952.md) (2023, Nature aging)

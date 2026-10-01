@@ -49,15 +49,15 @@
 | core-healthspan-ldl-apob-cardiovascular-risk-01 | LDL-C/apoB 与心血管风险 | [41717350](https://pubmed.ncbi.nlm.nih.gov/41717350/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-ldl-apob-cardiovascular-risk-02 | LDL-C/apoB 与心血管风险 | [41235335](https://pubmed.ncbi.nlm.nih.gov/41235335/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-ldl-apob-cardiovascular-risk-03 | LDL-C/apoB 与心血管风险 | [35886124](https://pubmed.ncbi.nlm.nih.gov/35886124/) | 2022 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-01 | 饮食模式与死亡风险 | [41515149](https://pubmed.ncbi.nlm.nih.gov/41515149/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-02 | 饮食模式与死亡风险 | [41158656](https://pubmed.ncbi.nlm.nih.gov/41158656/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-03 | 饮食模式与死亡风险 | [40866745](https://pubmed.ncbi.nlm.nih.gov/40866745/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-01 | 饮食模式与死亡风险 | [42773062](https://pubmed.ncbi.nlm.nih.gov/42773062/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-02 | 饮食模式与死亡风险 | [41515149](https://pubmed.ncbi.nlm.nih.gov/41515149/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-03 | 饮食模式与死亡风险 | [41158656](https://pubmed.ncbi.nlm.nih.gov/41158656/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-01 | 睡眠与健康结局 | [40982264](https://pubmed.ncbi.nlm.nih.gov/40982264/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-02 | 睡眠与健康结局 | [40072785](https://pubmed.ncbi.nlm.nih.gov/40072785/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-03 | 睡眠与健康结局 | [39960920](https://pubmed.ncbi.nlm.nih.gov/39960920/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-01 | GLP-1、减重与心代谢结局 | [42410309](https://pubmed.ncbi.nlm.nih.gov/42410309/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-02 | GLP-1、减重与心代谢结局 | [42348164](https://pubmed.ncbi.nlm.nih.gov/42348164/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-glp1-weight-cardiometabolic-03 | GLP-1、减重与心代谢结局 | [42339050](https://pubmed.ncbi.nlm.nih.gov/42339050/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-01 | GLP-1、减重与心代谢结局 | [42730869](https://pubmed.ncbi.nlm.nih.gov/42730869/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-02 | GLP-1、减重与心代谢结局 | [42410309](https://pubmed.ncbi.nlm.nih.gov/42410309/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-glp1-weight-cardiometabolic-03 | GLP-1、减重与心代谢结局 | [42348164](https://pubmed.ncbi.nlm.nih.gov/42348164/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-caloric-restriction-human-01 | 热量限制与人体衰老 | [37118425](https://pubmed.ncbi.nlm.nih.gov/37118425/) | 2023 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-caloric-restriction-human-02 | 热量限制与人体衰老 | [28600365](https://pubmed.ncbi.nlm.nih.gov/28600365/) | 2017 | B | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-caloric-restriction-human-03 | 热量限制与人体衰老 | [26332798](https://pubmed.ncbi.nlm.nih.gov/26332798/) | 2016 | B | Cochrane RoB 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |

@@ -7,12 +7,12 @@
 
 表观遗传时钟 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 118 records; final public claims still require full-text review.
+Draft summary: this topic now includes 125 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
 - Highest final evidence level: `B`
-- Median quality confidence score: `56`
+- Median quality confidence score: `55`
 - Status: public draft, not fully reviewed
 
 ## 我们知道什么 / What We Know
@@ -89,23 +89,23 @@ Draft summary: this topic now includes 118 records; final public claims still re
 - [The association between phenotypic age acceleration and the risk of all-cause and cancer mortality among cancer survivors: NHANES 1999-2018.](../papers/pubmed-41318813.md) (2025, Scientific reports)
 - [Association of body roundness index with risk of all-cause, cardiovascular disease-cause, and cancer-cause mortality: the role of biological age acceleration.](../papers/pubmed-41225580.md) (2025, Nutrition journal)
 - [[Biological age in orthopedics : Importance, assessment, and clinical recommendations].](../papers/pubmed-42734668.md) (2026, Orthopadie (Heidelberg, Germany))
+- [Biological age measured by DNA methylation clocks and reproductive history: Systematic review and meta-analysis.](../papers/pubmed-42735812.md) (2026, Mechanisms of ageing and development)
 - [The evidence for epigenetic age acceleration in neurological disease: A systematic review.](../papers/pubmed-42242554.md) (2026, Ageing research reviews)
 - [The application of epigenetic clocks in degenerative musculoskeletal diseases: A systematic review.](../papers/pubmed-40409455.md) (2025, Osteoarthritis and cartilage)
 - [A systematic review and meta-analysis of epigenetic clocks in schizophrenia.](../papers/pubmed-35780750.md) (2022, Schizophrenia research)
 - [A systematic review of biological, social and environmental factors associated with epigenetic clock acceleration.](../papers/pubmed-33930583.md) (2021, Ageing research reviews)
 - [What can we learn from physical capacity about biological age? A systematic review.](../papers/pubmed-35306185.md) (2022, Ageing research reviews)
-- [Biological age measured by DNA methylation clocks and reproductive history: Systematic review and meta-analysis.](../papers/pubmed-42735812.md) (2026, Mechanisms of ageing and development)
 - [Biological age acceleration, genetic susceptibility, and incident diabetic retinopathy risk: A prospective cohort study.](../papers/pubmed-42097117.md) (2026, The journal of nutrition, health & aging)
 - [The mediating role of biological age acceleration in the associations between lifestyle factors and incident digestive system cancers: A Prospective Cohort Study from the UK Biobank.](../papers/pubmed-42001653.md) (2026, The journal of nutrition, health & aging)
 - [Longitudinal changes in epigenetic clocks predict survival in the InCHIANTI cohort.](../papers/pubmed-41826710.md) (2026, Nature aging)
 - [Association of Edentulism With Subsequent Biological Age: A Cohort Study.](../papers/pubmed-41664441.md) (2026, Journal of clinical periodontology)
+- [Associations between biological age acceleration and hospitalization burden of community-acquired pneumonia: a cohort study.](../papers/pubmed-41241887.md) (2025, GeroScience)
 - [From ageing clocks to human digital twins in personalising healthcare through biological age analysis.](../papers/pubmed-40841468.md) (2025, NPJ digital medicine)
 - [Biological Age Acceleration Associated with the Progression Trajectory of Cardio-Renal-Metabolic Multimorbidity: A Prospective Cohort Study.](../papers/pubmed-40507052.md) (2025, Nutrients)
 - [Individualized Biological Age as a Predictor of Disease: Korean Genome and Epidemiology Study (KoGES) Cohort.](../papers/pubmed-35330504.md) (2022, Journal of personalized medicine)
 - [A new monocyte epigenetic clock reveals nonlinear effects of alcohol consumption on biological aging in three independent cohorts (N = 2242).](../papers/pubmed-35257385.md) (2022, Alcoholism, clinical and experimental research)
 - [Adverse childhood experiences, DNA methylation age acceleration, and cortisol in UK children: a prospective population-based cohort study.](../papers/pubmed-32264940.md) (2020, Clinical epigenetics)
 - [Exploring the Relationship of Relative Telomere Length and the Epigenetic Clock in the LipidCardio Cohort.](../papers/pubmed-31234328.md) (2019, International journal of molecular sciences)
-- [Associations between biological age acceleration and hospitalization burden of community-acquired pneumonia: a cohort study.](../papers/pubmed-41241887.md) (2025, GeroScience)
 - [Phenotypic age acceleration and early-onset lung cancer: a case-control and prognostic cohort study involving multiple clinical centres with validation in the UK Biobank.](../papers/pubmed-41671868.md) (2026, EBioMedicine)
 - [Newborn DNA methylation age differentiates long-term weight trajectories: the Boston Birth Cohort.](../papers/pubmed-39256781.md) (2024, BMC medicine)
 - [Gestational DNA methylation age as a marker for fetal development and birth outcomes: findings from the Boston Birth Cohort.](../papers/pubmed-39164769.md) (2024, Clinical epigenetics)
@@ -133,6 +133,7 @@ Draft summary: this topic now includes 118 records; final public claims still re
 - [Accelerated aging in psychiatric disorders: evidence from epigenetic clocks.](../papers/pubmed-41651336.md) (2026, Progress in neuro-psychopharmacology & biological psychiatry)
 - [Histone modifications in biological age determination: mechanisms, biomarkers, and therapeutic perspectives.](../papers/pubmed-41642447.md) (2026, GeroScience)
 - [Integrating biological age, epigenetic clocks, and telomere length in precision nutrition strategies for chronic disease management: Potential frameworks and ongoing challenges.](../papers/pubmed-40714351.md) (2025, Nutrition research (New York, N.Y.))
+- [Brain aging clocks: From methodological advances to cellular mechanisms.](../papers/pubmed-42543123.md) (2026, Experimental gerontology)
 - [Biological Versus Technical Reliability of Epigenetic Clocks and Implications for Disease Prognosis and Intervention Response.](../papers/pubmed-42525215.md) (2026, Aging cell)
 - [Metabolic dysregulation and biological age acceleration in Hashimoto's thyroiditis: a cross-sectional study based on clinical biomarker aging indices and metabolomics.](../papers/pubmed-42434311.md) (2026, Frontiers in endocrinology)
 - [Age-dependent prognostic value of biological age for metastasis and survival in gastrointestinal cancer.](../papers/pubmed-42414378.md) (2026, Scientific reports)
@@ -142,15 +143,21 @@ Draft summary: this topic now includes 118 records; final public claims still re
 - [OMICmAge quantifies biological age by integrating multi-omics with electronic medical records.](../papers/pubmed-41741793.md) (2026, Nature aging)
 - [Organ-specific proteomic aging clocks predict disease and longevity across diverse populations.](../papers/pubmed-41299092.md) (2026, Nature aging)
 - [A sex-adjusted 7-biomarker clinical aging clock for translational preventative medicine.](../papers/pubmed-41372266.md) (2025, Scientific reports)
+- [Estimation of biological age and age-related outcomes with easily accessible parameters in Chinese.](../papers/pubmed-41099967.md) (2025, GeroScience)
 - [Chronological and Biological Age in Predicting Outcomes of Older Patients in Neurosurgery.](../papers/pubmed-41083368.md) (2025, Neurologia medico-chirurgica)
 - [Sleep chart of biological aging clocks across organs and omics.](../papers/pubmed-40832429.md) (2025, medRxiv : the preprint server for health sciences)
 - [Modelling of biological age in stable and acute exacerbations of chronic obstructive pulmonary disease.](../papers/pubmed-40830456.md) (2025, BMC pulmonary medicine)
 - [Biological Age, Aging Clocks, and the Interplay with Lymphoid Neoplasms: Mechanisms and Clinical Frontiers.](../papers/pubmed-40726806.md) (2025, Lymphatics)
 - [OvaRePred (HerTempo): an enhanced ovarian aging clock for personalized reserve assessment, endocrine age modeling, and predicting reproductive milestones across the female lifecycle.](../papers/pubmed-41019317.md) (2025, Frontiers in endocrinology)
-- [Estimation of biological age and age-related outcomes with easily accessible parameters in Chinese.](../papers/pubmed-41099967.md) (2025, GeroScience)
+- [Race-related differences in protective effects of emotion regulation against GrimAge acceleration are driven by assaultive trauma.](../papers/pubmed-40232770.md) (2026, Psychological trauma : theory, research, practice and policy)
 - [Epigenetic age acceleration is not strongly associated with cardiorespiratory fitness in heart failure: a pilot study.](../papers/pubmed-42751917.md) (2026, Epigenomics)
-- [Biological Age Acceleration Predicts Functional Decline and Surgical Risk in Knee Arthroplasty.](../papers/pubmed-42744006.md) (2026, The Journal of arthroplasty)
 - [Association between DNA methylation-based aging clocks and periodontitis in aged adults: results from NHANES 1999-2002.](../papers/pubmed-42741881.md) (2026, Epigenomics)
+- [Can Preoperative Nutritional Status Be One of the Parameters Evaluating Biological Age for Elderly Patients Undergoing Spinal Surgery?: A Propensity Score-Matched Analysis.](../papers/pubmed-41802447.md) (2026, Spine)
+- [Periodontitis, Edentulism, and Accelerated Biological Aging: A Population-Based Study of Epigenetic Clocks.](../papers/pubmed-42775949.md) (2026, Journal of periodontal research)
+- [Tissue-specific aging clocks map structured aging-modulatory drug-score patterns across 49 human tissue and cell-line categories.](../papers/pubmed-42771094.md) (2026, Biogerontology)
+- [Nocturia is Associated with Biological Age not Chronological Age.](../papers/pubmed-42489812.md) (2026, Journal of community health)
+- [Association Between Coffee and Tea Consumption and Biological Age Acceleration: Evidence from the UK Biobank Study.](../papers/pubmed-41869973.md) (2026, Ophthalmic epidemiology)
+- [Biological Age Acceleration Predicts Functional Decline and Surgical Risk in Knee Arthroplasty.](../papers/pubmed-42744006.md) (2026, The Journal of arthroplasty)
 - [Accelerated biological ageing is associated with a large drusen burden.](../papers/pubmed-42740461.md) (2026, Acta ophthalmologica)
 - [Integration of proteomic aging clocks in a phase 2a clinical trial supports simultaneous geroprotective assessment.](../papers/pubmed-42706338.md) (2026, Nature biotechnology)
 - [Psychological distress in adult patients with colorectal cancer: roles of biological age and neighborhood deprivation.](../papers/pubmed-42696404.md) (2026, Journal of the National Cancer Institute)

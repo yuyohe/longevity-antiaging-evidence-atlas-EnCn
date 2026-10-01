@@ -18,10 +18,10 @@ Draft summary: this topic now includes 200 records; final public claims still re
 ## 我们知道什么 / What We Know
 
 - 人体试验和真实世界研究显示体重、糖代谢和心血管相关收益。
-- 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level B, pending full review.
-- 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level B, pending full review.
-- 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level B, pending full review.
 - 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level A, pending full review.
+- 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level B, pending full review.
+- 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level B, pending full review.
+- 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 B 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level B, pending full review.
 - 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level A, pending full review.
 - 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level A, pending full review.
 - 可支持：将「GLP-1、减重与心代谢结局」作为证据图谱中的候选主题，并按 A 级草判证据继续复核。 / Supports treating GLP-1, Weight Loss, and Cardiometabolic Outcomes as a candidate evidence topic with draft level A, pending full review.
@@ -47,6 +47,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 
 ## 相关论文卡片 / Related Paper Cards
 
+- [GLP-1 Receptor Agonists and Musculoskeletal Outcomes: A Systematic Literature Review and Meta-Analysis.](../papers/pubmed-42730869.md) (2026, Drugs)
 - [Cardiovascular Outcomes With Tirzepatide Versus GLP-1 Receptor Agonists in Overweight or Obesity: A Systematic Review and Meta-Analysis.](../papers/pubmed-42410309.md) (2026, Diabetes, obesity & metabolism)
 - [Cardiovascular Efficacy of GLP-1 Receptor Agonists by Kidney Function: An Updated Meta-Analysis of Randomized Trials Including the SOUL Trial.](../papers/pubmed-42348164.md) (2026, Diabetes, obesity & metabolism)
 - [Semaglutide and major adverse cardiovascular events in patients with and without DM: A systematic review and meta-analysis.](../papers/pubmed-42339050.md) (2026, Biomedical reports)
@@ -58,14 +59,15 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Risk of major adverse cardiovascular events and stroke associated with treatment with GLP-1 or the dual GIP/GLP-1 receptor agonist tirzepatide for type 2 diabetes: A systematic review and meta-analysis.](../papers/pubmed-38400569.md) (2024, European stroke journal)
 - [Tirzepatide cardiovascular event risk assessment: a pre-specified meta-analysis.](../papers/pubmed-35210595.md) (2022, Nature medicine)
 - [Efficacy and Safety of Tirzepatide Versus Dulaglutide in Type 2 Diabetes With or Without Established Atherosclerotic Cardiovascular Disease: A Network Meta-Analysis of Randomized Clinical Trials.](../papers/pubmed-42706739.md) (2026, Endocrinology, diabetes & metabolism)
+- [Effect of Semaglutide on the Inflammatory Biomarker High-Sensitivity CRP in Patients With Established Cardiovascular Disease and Overweight or Obesity in SELECT: A Prespecified Secondary Analysis.](../papers/pubmed-42610271.md) (2026, Circulation)
 - [Semaglutide versus placebo in individuals with poor weight loss after bariatric surgery: a double-blinded, randomized, placebo-controlled trial.](../papers/pubmed-42174253.md) (2026, Nature medicine)
 - [Semaglutide on liver fibrosis and heart outcomes in patients at high risk of liver fibrosis: a prespecified analysis of the SELECT randomized trial.](../papers/pubmed-41928037.md) (2026, Nature medicine)
 - [Cardiorenal Outcomes With Tirzepatide Compared With Dulaglutide in Patients With Diabetes and Cardiovascular Disease: A Post Hoc Analysis of the SURPASS-CVOT Randomized Clinical Trial.](../papers/pubmed-41903177.md) (2026, JAMA cardiology)
 - [Effect of semaglutide on COVID-19 and other infections: an analysis from the FLOW randomized clinical trial.](../papers/pubmed-41728915.md) (2026, Nephrology, dialysis, transplantation : official publication of the European Dialysis and Transplant Association - European Renal Association)
 - [Oral Semaglutide and Cardiovascular Outcomes in People With Type 2 Diabetes, According to SGLT2i Use: Prespecified Analyses of the SOUL Randomized Trial.](../papers/pubmed-40156843.md) (2025, Circulation)
-- [Effect of Semaglutide on the Inflammatory Biomarker High-Sensitivity CRP in Patients With Established Cardiovascular Disease and Overweight or Obesity in SELECT: A Prespecified Secondary Analysis.](../papers/pubmed-42610271.md) (2026, Circulation)
 - [The Effect of Semaglutide on Quality of Life in Adults With Overweight or Obesity: A Brief Systematic Review and Meta-Analysis.](../papers/pubmed-42297754.md) (2026, Diabetes, obesity & metabolism)
 - [A Systematic Review and Meta-Analysis of Semaglutide Effects on Adipose Tissue and Emerging Effects on Brain and Cognition.](../papers/pubmed-41766347.md) (2026, Obesity reviews : an official journal of the International Association for the Study of Obesity)
+- [GLP-1 Receptor Agonists in Heart Failure: A Systematic Review and Meta-analysis with Phenotype-Specific Effects and Dual Analytical Frameworks.](../papers/pubmed-42791433.md) (2026, Drugs)
 - [Safety and Glycemic Efficacy of Perioperative Liraglutide in Cardiac Surgery: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.](../papers/pubmed-42693519.md) (2026, Cardiology in review)
 - [Cardiovascular Outcomes of GLP-1-Based Medicines Among People With Overweight and Obesity: An Umbrella Review of Meta-Analyses of Randomized Controlled Trials.](../papers/pubmed-42483841.md) (2026, Obesity reviews : an official journal of the International Association for the Study of Obesity)
 - [Tirzepatide, cardiovascular outcomes and mortality in obesity and diabetes: a systematic review and meta-analysis.](../papers/pubmed-42442557.md) (2026, Diabetes research and clinical practice)
@@ -77,11 +79,15 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Clinical Outcomes Associated with GLP-1 Receptor Agonist Exposure in Non-Diabetic Patients with Chronic Pancreatitis: A Retrospective Cohort Study.](../papers/pubmed-42645931.md) (2026, Journal of personalized medicine)
 - [The interplay of GLP-1 receptor agonist use, chronic kidney disease and fracture risk in obese pAtients: a retrospective cohort study.](../papers/pubmed-41995433.md) (2026, British journal of clinical pharmacology)
 - [Risk of suicidal ideation and suicidality among adults prescribed semaglutide for weight management: A population-based cohort study.](../papers/pubmed-40760781.md) (2025, Diabetes, obesity & metabolism)
+- [Effect of semaglutide on kidney outcomes in the SELECT, FLOW, and SOUL trials: a prespecified pooled analysis.](../papers/pubmed-42567173.md) (2026, The lancet. Diabetes & endocrinology)
 - [Semaglutide and Musculoskeletal Health: A Mendelian Randomization Study Based on GLP-1 Receptor Expression.](../papers/pubmed-42405390.md) (2026, Endocrine, metabolic & immune disorders drug targets)
 - [Combined use of SGLT2 inhibitor and GLP-1 receptor agonist versus either monotherapy for cardiorenal Outcomes: an exploratory network meta-analysis of 16 randomized trials.](../papers/pubmed-42616235.md) (2026, Endocrine)
+- [Outcomes of GLP-1 Receptor Agonist Therapy after Liver Transplantation in Patients with Type 2 Diabetes: A Real-World Cohort Study.](../papers/pubmed-42803248.md) (2026, Journal of gastrointestinal and liver diseases : JGLD)
+- [Impact of GLP-1 receptor agonists on cardiovascular outcomes in patients with peripheral artery disease without diabetes: A propensity score-matched analysis.](../papers/pubmed-41137196.md) (2026, Journal of investigative medicine : the official publication of the American Federation for Clinical Research)
 - [Association of tirzepatide versus Glucagon-Like Peptide-1 receptor agonists with oral and periodontal outcomes in patients with type 2 Diabetes: A Global propensity Score-Matched cohort study.](../papers/pubmed-42764072.md) (2026, Diabetes research and clinical practice)
 - [Tirzepatide and the risk of atherosclerotic cardiovascular events: population based cohort study.](../papers/pubmed-42556854.md) (2026, BMJ (Clinical research ed.))
 - [Cannabis use and cardiovascular, renal, and mortality outcomes in patients with type 2 diabetes receiving GLP-1 receptor agonists: A propensity score-matched cohort study.](../papers/pubmed-42546368.md) (2026, Drug and alcohol dependence)
+- [Ixekizumab With Tirzepatide Achieved Greater Disease Control Than Ixekizumab Alone in Adults With Psoriatic Arthritis and Overweight or Obesity: Results From a Randomized Clinical Trial.](../papers/pubmed-41903163.md) (2026, Arthritis & rheumatology (Hoboken, N.J.))
 - [Effect of Tirzepatide on Health-Related Quality of Life in Japanese Patients With Obesity Disease: Patient-Reported Outcomes From the SURMOUNT-J Study.](../papers/pubmed-42108080.md) (2026, Diabetes, obesity & metabolism)
 - [Tirzepatide and health-related quality of life in adults with obesity or overweight: Results from the SURMOUNT-3 phase 3 randomized trial.](../papers/pubmed-40365662.md) (2025, Diabetes, obesity & metabolism)
 - [Effects of Semaglutide Treatment on Psoriatic Lesions in Obese Patients with Type 2 Diabetes Mellitus: An Open-Label, Randomized Clinical Trial.](../papers/pubmed-39858442.md) (2025, Biomolecules)
@@ -132,6 +138,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Apitegromab for lean mass preservation during tirzepatide-induced weight loss: a randomized, double-blind, placebo-controlled phase 2 trial.](../papers/pubmed-42260100.md) (2026, Nature medicine)
 - [Short-Term Combined Treatment With Tirzepatide and Metformin for Overweight/Obese Chinese Women With Polycystic Ovary Syndrome: A Prospective, Open-Label, Randomised Controlled Trial.](../papers/pubmed-42236268.md) (2026, Diabetes, obesity & metabolism)
 - [Semaglutide 25 mg Oral Versus Semaglutide 2.4 mg Injectable: An Indirect Treatment Comparison of Weight Loss Outcomes.](../papers/pubmed-42225300.md) (2026, Diabetes, obesity & metabolism)
+- [Insights from changes in NDEV biomarkers of metabolism: effects of PPARγ and GLP1 receptor agonists on brain metabolism.](../papers/pubmed-41992726.md) (2026, The Journal of clinical endocrinology and metabolism)
 - [Weight Changes With Tirzepatide and Concomitant Weight-Inducing Medications: Post Hoc Analysis of Randomized Clinical Trials.](../papers/pubmed-41885866.md) (2026, JAMA network open)
 - [Tirzepatide on obstructive sleep apnea-related cardiometabolic risk: secondary outcomes of the SURMOUNT-OSA randomized trial.](../papers/pubmed-41540105.md) (2026, Nature medicine)
 - [Semaglutide Treatment of Antipsychotic-Treated Patients With Schizophrenia, Prediabetes, and Obesity: The HISTORI Randomized Clinical Trial.](../papers/pubmed-40900607.md) (2025, JAMA psychiatry)
@@ -160,7 +167,8 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Effect of Liraglutide Treatment on Prediabetes and Overweight or Obesity in Clozapine- or Olanzapine-Treated Patients With Schizophrenia Spectrum Disorder: A Randomized Clinical Trial.](../papers/pubmed-28601891.md) (2017, JAMA psychiatry)
 - [Effect of liraglutide 3.0 mg in individuals with obesity and moderate or severe obstructive sleep apnea: the SCALE Sleep Apnea randomized clinical trial.](../papers/pubmed-27005405.md) (2016, International journal of obesity (2005))
 - [Dual Glucagon and GLP-1 Receptor Agonist Survodutide Improves Biomarkers of Beta-Cell Function and Insulin Sensitivity in People With Type 2 Diabetes or Living With Overweight/Obesity.](../papers/pubmed-42331726.md) (2026, Diabetes, obesity & metabolism)
-- [Insights from changes in NDEV biomarkers of metabolism: effects of PPARγ and GLP1 receptor agonists on brain metabolism.](../papers/pubmed-41992726.md) (2026, The Journal of clinical endocrinology and metabolism)
+- [Insulin, Semaglutide and Dapagliflozin in Adults With Type 1 Diabetes: Design and Methods of Triple Therapy for Type 1 Diabetes (TTT1)-An International Phase 3 Clinical Trial.](../papers/pubmed-42473259.md) (2026, Diabetes, obesity & metabolism)
+- [Semaglutide improves markers of cardiovascular risk in people with HIV.](../papers/pubmed-42084141.md) (2026, AIDS (London, England))
 - [Analysis of the efficacy and safety of liraglutide, semaglutide, and tirzepatide for the treatment of overweight and obesity: a systematic review and network meta-analysis.](../papers/pubmed-42560457.md) (2026, Journal of endocrinological investigation)
 - [Nutritional intake changes during GLP-1 receptor agonist therapy: A systematic review and meta-analysis.](../papers/pubmed-42508090.md) (2026, Diabetes & metabolic syndrome)
 - [Semaglutide and Other GLP-1 Agonists for Antipsychotic-Associated Metabolic Dysfunction in Schizophrenia: A Systematic Review and Meta-Analysis.](../papers/pubmed-42503999.md) (2026, Journal of clinical psychopharmacology)
@@ -221,29 +229,21 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Impact of Digital Engagement on Weight Loss Outcomes in Obesity Management Among Individuals Using GLP-1 and Dual GLP-1/GIP Receptor Agonist Therapy: Retrospective Cohort Service Evaluation Study.](../papers/pubmed-40164173.md) (2025, Journal of medical Internet research)
 - [Factors associated with weight loss response to GLP-1 analogues for obesity treatment: a retrospective cohort analysis.](../papers/pubmed-39819958.md) (2025, BMJ open)
 - [Association of semaglutide with risk of suicidal ideation in a real-world cohort.](../papers/pubmed-38182782.md) (2024, Nature medicine)
+- [Peer Referral Pathways and 6-Month Outcomes in a Tirzepatide-Supported Digital Weight Loss Service: Retrospective Cohort Study.](../papers/pubmed-42804756.md) (2026, Journal of medical Internet research)
+- [Real-World Effectiveness and Treatment Patterns of Tirzepatide in a Large UK Digital Health Cohort.](../papers/pubmed-42560020.md) (2026, Diabetes, obesity & metabolism)
 - [Incretin-Based Therapies in Doxorubicin-Induced Cardiotoxicity: A Systematic Review of GLP-1 and Dual GIP/GLP-1 Agonists.](../papers/pubmed-42455418.md) (2026, Cardiovascular toxicology)
 - [Gastrointestinal safety of semaglutide and tirzepatide vs. placebo in obese individuals without diabetes: a systematic review and meta analysis.](../papers/pubmed-40189856.md) (2025, Annals of Saudi medicine)
 - [Appetite Suppression by GLP-1 Receptor Agonists: Role of Delayed Gastric Emptying.](../papers/pubmed-42392577.md) (2026, Obesity (Silver Spring, Md.))
+- [Estimating the True MACE Benefits From Tirzepatide in SURPASS-CVOT Using an Imputed Placebo Analysis of REWIND.](../papers/pubmed-41940793.md) (2026, Diabetes care)
 - [Wernicke's Encephalopathy Following Semaglutide Treatment for Obesity: A Systematic PRISMA Review of Case-Based Evidence.](../papers/pubmed-42399213.md) (2026, Obesity (Silver Spring, Md.))
+- [Oral semaglutide for weight loss and liver fibrosis in overweight and obesity: A randomized controlled trial.](../papers/pubmed-41066034.md) (2026, Indian journal of gastroenterology : official journal of the Indian Society of Gastroenterology)
 - [Efficacy and safety of once-weekly semaglutide 2·4 mg in Chinese adults with overweight or obesity (STEP 12): a randomised, double-blind, placebo-controlled, multicentre, phase 3b trial.](../papers/pubmed-42575111.md) (2026, The lancet. Diabetes & endocrinology)
 - [Elecoglipron, an oral small molecule GLP-1 receptor agonist in adults with type 2 diabetes (SOLSTICE): a multicentre, phase 2b, randomised, placebo-controlled trial.](../papers/pubmed-42259343.md) (2026, Lancet (London, England))
 - [Elecoglipron, an oral small molecule GLP-1 receptor agonist in adults with obesity or overweight (VISTA): a multicentre, phase 2, randomised, placebo-controlled clinical trial.](../papers/pubmed-42259337.md) (2026, Lancet (London, England))
-- [Cagrilintide-semaglutide (CagriSema) versus semaglutide or cagrilintide in people with type 2 diabetes (REIMAGINE 2): a double-blind, randomised, controlled, phase 3 study.](../papers/pubmed-42251859.md) (2026, The lancet. Diabetes & endocrinology)
-- [Comprehensive Long-Term Changes in Cardiovascular Risk Biomarkers With Tirzepatide: A SURMOUNT-1 Post Hoc Analysis.](../papers/pubmed-42233927.md) (2026, Journal of the American College of Cardiology)
-- [Tirzepatide for maintenance of bodyweight reduction in people with obesity in the USA (SURMOUNT-MAINTAIN): a multicentre, double-blind, randomised, placebo-controlled trial.](../papers/pubmed-42119587.md) (2026, Lancet (London, England))
-- [Once-weekly semaglutide versus placebo in patients with alcohol use disorder and comorbid obesity: a randomised, double-blind, placebo-controlled trial.](../papers/pubmed-42070571.md) (2026, Lancet (London, England))
-- [Efficacy and safety of oral semaglutide 14 mg (flexible dose) in early-stage symptomatic Alzheimer's disease (evoke and evoke+): two phase 3, randomised, placebo-controlled trials.](../papers/pubmed-41865758.md) (2026, Lancet (London, England))
-- [Comparison of Dose Escalation Versus Switching to Tirzepatide Among People With Type 2 Diabetes Inadequately Controlled on Lower Doses of Dulaglutide : A Randomized Clinical Trial.](../papers/pubmed-40183678.md) (2025, Annals of internal medicine)
-- [Semaglutide in patients with overweight or obesity and chronic kidney disease without diabetes: a randomized double-blind placebo-controlled clinical trial.](../papers/pubmed-39455729.md) (2025, Nature medicine)
-- [A randomized, double-blind, placebo-controlled trial of weight loss using liraglutide 3.0 mg for weight recurrence after Roux-en-Y gastric bypass.](../papers/pubmed-39401933.md) (2025, Surgery for obesity and related diseases : official journal of the American Society for Bariatric Surgery)
-- [Liraglutide for Children 6 to <12 Years of Age with Obesity - A Randomized Trial.](../papers/pubmed-39258838.md) (2025, The New England journal of medicine)
-- [Effect of oral semaglutide on energy intake, appetite, control of eating and gastric emptying in adults living with obesity: A randomized controlled trial.](../papers/pubmed-39082206.md) (2024, Diabetes, obesity & metabolism)
-- [Impact of BMI and comorbidities on efficacy of once-weekly semaglutide: Post hoc analyses of the STEP 1 randomized trial.](../papers/pubmed-36876594.md) (2023, Obesity (Silver Spring, Md.))
-- [Liraglutide or insulin glargine treatments improves hepatic fat in obese patients with type 2 diabetes and nonalcoholic fatty liver disease in twenty-six weeks: A randomized placebo-controlled trial.](../papers/pubmed-33035599.md) (2020, Diabetes research and clinical practice)
-- [A Randomized, Controlled Trial of Liraglutide for Adolescents with Obesity.](../papers/pubmed-32233338.md) (2020, The New England journal of medicine)
-- [A randomized, open-label, active comparator trial assessing the effects of 26 weeks of liraglutide or sitagliptin on cardiovascular function in young obese adults with type 2 diabetes.](../papers/pubmed-32157772.md) (2020, Diabetes, obesity & metabolism)
-- [Efficacy of Liraglutide for Weight Loss Among Patients With Type 2 Diabetes: The SCALE Diabetes Randomized Clinical Trial.](../papers/pubmed-26284720.md) (2015, JAMA)
-- [A Randomized, Controlled Trial of 3.0 mg of Liraglutide in Weight Management.](../papers/pubmed-26132939.md) (2015, The New England journal of medicine)
-- [Long-Term Association Between GLP-1 Receptor Agonist Use and Incident Pancreatic Cancer: A Propensity Score-Matched Retrospective Cohort Study Using the TriNetX Network.](../papers/pubmed-42745130.md) (2026, Journal of gastrointestinal cancer)
-- [Prior GLP-1RA or Tirzepatide Use and Early Cardiorenal Outcomes After Metabolic and Bariatric Surgery.](../papers/pubmed-42735883.md) (2026, The American journal of medicine)
-- [Psychiatric Safety of GLP-1 and Dual GIP/GLP-1 Receptor Agonists in Adolescents With Obesity.](../papers/pubmed-42736027.md) (2026, Diabetes, obesity & metabolism)
+- [Real-world evaluation of the effectiveness and safety of tirzepatide in patients with obesity: A prospective study.](../papers/pubmed-42542297.md) (2026, Clinical nutrition ESPEN)
+- [Association of GLP-1-based therapy with asthma-related outcomes in patients with obesity: a propensity-matched retrospective cohort study.](../papers/pubmed-42733229.md) (2026, Expert review of respiratory medicine)
+- [Endoscopic Sleeve Gastroplasty Versus Oral Semaglutide for Obesity: A Real-World Comparative Cohort Study.](../papers/pubmed-42259388.md) (2026, Endoscopy)
+- [Effectiveness of Adding GLP-1 Receptor Agonists to SGLT2 Inhibitor Therapy in Chronic Kidney Disease: A Population Based Study.](../papers/pubmed-42802242.md) (2026, Diabetes, obesity & metabolism)
+- [Divergent Risks of Endocrine and Non-Endocrine Malignancies in GLP-1 Receptor Agonist Users: A Propensity-Matched Real-World Analysis of Over 140,000 Patients.](../papers/pubmed-42142623.md) (2026, Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists)
+- [Real-World Effectiveness and Safety of Tirzepatide in Type 1 Diabetes and Obesity: Impact on Glycaemia, Weight, and Cardiometabolic Risk Markers.](../papers/pubmed-42410316.md) (2026, Diabetes, obesity & metabolism)
+- [Trends in GLP-1 Receptor Agonist Prescribing Without an Apparent FDA-Approved Indication.](../papers/pubmed-42768905.md) (2026, Obesity (Silver Spring, Md.))

@@ -1,6 +1,6 @@
 # 宇多Yul细胞证据图谱：精编与归档规则 / Curation and Retention Policy
 
-**最近复核 / Last reviewed:** 2026-09-21<br>
+**最近复核 / Last reviewed:** 2026-10-01<br>
 **品牌 / Brand:** 宇多Yul细胞/yulcell
 
 ## 先说结论 / The Short Version
@@ -38,13 +38,15 @@ Removal from an active layer does not mean a paper is false. It means the record
 
 ## 可追溯与恢复 / Traceability and Recovery
 
+- 当前统一入口：[资产总目录 / Asset catalog](asset-catalog.md)，区分当前、上一期和历史归档。
+- 10 月初退出日志：`data/archive/candidate_retirement_2026-10.csv` 与 `data/archive/finding_retirement_2026-10.csv`。
 - 9 月下旬候选退出原因：`data/archive/candidate_retirement_2026-09-late.csv`
 - 9 月下旬发现层排除/退出原因：`data/archive/finding_retirement_2026-09-late.csv`；其中包含新增后未通过筛选的记录，不全是旧记录退出。
 - 9 月中旬候选退出原因：`data/archive/candidate_retirement_2026-09-mid.csv`
 - 9 月中旬发现层退出原因：`data/archive/finding_retirement_2026-09-mid.csv`
 - 8 月底退出日志：`data/archive/candidate_retirement_2026-08-end.csv` 与 `data/archive/finding_retirement_2026-08-end.csv`
 - 8 月中期退出日志：`data/archive/candidate_retirement_2026-08-mid.csv` 与 `data/archive/finding_retirement_2026-08-mid.csv`
-- 当前 9 月与上一期 8 月 CSV 保持展开，方便直接下载比较。
+- 当前 10 月与上一期 9 月 CSV 保持展开，方便直接下载比较。8 月最新五表快照已完整压缩校验为 `archive/public-data/public-data-2026-08.zip`。
 - 7 月五表快照：`archive/public-data/public-data-2026-07.zip`
 - 完整 8 月中期五表快照：`archive/public-data/public-data-2026-08-mid.zip`
 - 完整 8 月底五表快照：`archive/public-data/public-data-2026-08-end.zip`
@@ -53,6 +55,14 @@ Removal from an active layer does not mean a paper is false. It means the record
 - Git 历史仍保留发布时的完整版本，可以恢复任何旧记录。
 
 The current and previous monthly snapshots stay unpacked. Superseded same-month and older snapshots are compressed with internal row counts and SHA-256 hashes. Git history remains the final recovery path.
+
+6 至 8 月的 171 张旧 PNG，以及 6 至 9 月已被替代的 11 个大网页，归入 4 个视觉 ZIP。每个原件都有字节数与 SHA-256；旧网页路径保留归档说明。当前与上一期的大报告、发帖面板和图片保留直接入口，不再在首页并列展示所有旧版本。
+
+Four verified visual archives preserve 171 old PNGs and 11 superseded large HTML files. Original paths, bytes and SHA-256 hashes are retained. Current and previous assets remain directly accessible; the homepage does not present every historical release as current.
+
+归档只整理当前文件树，不删除 Git 历史，不保证完整克隆体积下降。本轮未删除历史工作目录，也没有移动到移动硬盘。
+
+Archiving tidies the working tree, not the full Git history. Historical local workspaces were not deleted; no removable-drive copy was made.
 
 ## 发现层的严格范围 / Stricter Finding Scope
 
@@ -63,6 +73,10 @@ Candidate discovery can be broad. Active findings require a direct aging, longev
 9 月下旬补充：塑料老化不是生物衰老；没有老龄语境的青少年竞技训练不进入老年抗阻训练主题。病例资料汇总最高 C，动物研究最高 D；主题等级上限不能放宽研究本身的上限。
 
 Late-September guards reject environmental plastic aging and youth training without an aging context. Case-based reviews are capped at C and animal studies at D; topic-level rules cannot relax these caps.
+
+10 月初补充：使用母试验数据的观察性二次分析，以及推算安慰剂的间接模型比较，独立标注研究设计，最高 C。它们不能自动继承随机治疗比较的身份。合并真实随机治疗比较的分析不会仅因“二次分析”而全部降级。
+
+Early-October guards distinguish observational secondary analyses and imputed-placebo models from direct randomized treatment comparisons, with a C cap. Genuine pooled randomized treatment comparisons are not automatically downgraded.
 
 ## 移动硬盘副本 / Removable-Drive Copies
 

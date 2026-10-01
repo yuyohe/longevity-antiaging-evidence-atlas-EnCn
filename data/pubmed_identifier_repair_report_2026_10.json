@@ -1,0 +1,15 @@
+{
+  "reviewed_title_updates": 1,
+  "date": "2026-10-01",
+  "official_source": "NCBI PubMed E-utilities esummary",
+  "pubmed_findings_checked": 2424,
+  "unique_pmids_checked": 2424,
+  "missing_official_summaries": 0,
+  "title_mismatches": 0,
+  "accepted_minor_title_variants": 5,
+  "finding_doi_corrected": 0,
+  "finding_pmcid_corrected": 10,
+  "candidate_doi_corrected": 0,
+  "candidate_pmcid_corrected": 44,
+  "status": "passed"
+}

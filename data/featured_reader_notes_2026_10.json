@@ -1,0 +1,50 @@
+{
+  "42773062": {
+    "title_zh": "超加工食品与慢病风险：人数很多，仍是关联证据",
+    "interpretation_zh": "51 个前瞻性队列、约 882 万人的汇总，发现吃较多超加工食品与多种慢病及死亡风险较高相关。作者评为低到中等确定性；饮食测量误差和其他生活习惯仍可能影响结果。不能改写成某一种食品一定致病。",
+    "interpretation_en": "A synthesis of 51 prospective cohorts linked higher ultra-processed food intake with multiple chronic outcomes. Low-to-moderate certainty and confounding limit causal claims about individual foods.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42773062/",
+    "checked_date": "2026-10-01"
+  },
+  "42551769": {
+    "title_zh": "线上辅助运动对肌少症可能有帮助，但不是已证实延寿",
+    "interpretation_zh": "14 项试验、927 名肌少症老人，数字化运动干预对力量、平衡和行走有改善信号，但生活质量未见明确改善。证据确定性从极低到中等，部分结果在新场景中可能不同；不能把功能改善写成寿命延长。",
+    "interpretation_en": "Fourteen trials in 927 older adults with sarcopenia suggest functional benefits from digital exercise, with no clear quality-of-life improvement. Very-low-to-moderate certainty and variable effects do not establish lifespan extension.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42551769/",
+    "checked_date": "2026-10-01"
+  },
+  "42730869": {
+    "title_zh": "GLP-1 类药物与瘦体重：身体成分变化不等于功能受损",
+    "interpretation_zh": "60 篇临床资料的汇总提示瘦体重下降，证据确定性较低，可能与减重有关。瘦体重不只包含肌肉；是否带来力量或日常活动能力下降仍不清楚。骨骼和关节未见明确效应也不等于证明完全无风险，不能据此自行停药。",
+    "interpretation_en": "This review found lower lean mass with GLP-1 therapies, with low certainty and uncertain functional consequences. Lean mass is not muscle alone; unclear bone or joint effects do not establish absence of risk.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42730869/",
+    "checked_date": "2026-10-01"
+  },
+  "42786612": {
+    "title_zh": "卒中合并睡眠呼吸暂停：主要心脏指标未见明确组间差异",
+    "interpretation_zh": "71 人随机试验中，CPAP 治疗的 12 个月左心房容积指标变化，与对照组没有显著差异。随时间变化的轨迹和部分功能结果出现信号，但不能用这些次要发现掩盖主要比较不显著。结果只适用于研究人群，不是自行使用设备的建议。",
+    "interpretation_en": "In 71 stroke patients with sleep apnea, the 12-month change in left atrial volume did not differ significantly between groups. Trajectory and functional signals should not obscure this main comparison or be generalized beyond the studied population.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42786612/",
+    "checked_date": "2026-10-01"
+  },
+  "42782098": {
+    "title_zh": "肌少症与癌症治疗风险：用过试验数据，不代表这个比较是随机的",
+    "interpretation_zh": "研究只分析母试验常规照护组中的 161 名高龄晚期癌症患者，观察到肌少症与严重毒性和部分生存结局相关。患者不是被随机分成有、无肌少症两组，所以这是观察性二次分析，不能证明补肌肉就能减少死亡。",
+    "interpretation_en": "This analysis used 161 usual-care participants from a parent trial. Sarcopenia was not randomized, so associations with toxicity and survival are observational and do not establish that increasing muscle reduces mortality.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42782098/",
+    "checked_date": "2026-10-01"
+  },
+  "41940793": {
+    "title_zh": "替尔泊肽的推算对照：模型结果不等于真实安慰剂组",
+    "interpretation_zh": "作者借助两项既有试验，调整人群差异后推算替尔泊肽相对安慰剂的心血管结果。这是间接、探索性比较，不是新开展的替尔泊肽对安慰剂随机试验；结果依赖模型假设，不能说已经证明健康人用药可延寿。",
+    "interpretation_en": "An exploratory indirect comparison combined two trials to estimate an imputed placebo contrast. Model assumptions matter; this is not a new randomized tirzepatide-placebo trial or evidence of lifespan extension in healthy people.",
+    "review_depth": "official_pubmed_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41940793/",
+    "checked_date": "2026-10-01"
+  }
+}

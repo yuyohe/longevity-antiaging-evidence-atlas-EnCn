@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 from typing import Iterable
+from expand_healthspan_pubmed_v05 import secondary_design
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -252,6 +253,8 @@ def normalized_study_type(row: dict[str, str]) -> str:
         return "mixed_human_and_animal_study"
     if has_direct_animal_subject(publication_types, title, body):
         return "animal_study"
+    if secondary_design(title, body):
+        return secondary_design(title, body)
     if (
         any(term in publication_types for term in ["randomized controlled trial", "clinical trial"])
         or any(term in title for term in ["randomized controlled trial", "randomised controlled trial", "randomized trial", "randomised trial"])
@@ -304,6 +307,8 @@ def normalized_species(row: dict[str, str], study_type: str) -> str:
         "human_randomized_or_clinical_trial",
         "human_cohort",
         "human_mendelian_randomization",
+        "human_indirect_model_analysis",
+        "human_observational_secondary_analysis",
     }:
         return "human"
     if current in {"human", "mouse", "animal", "cell"}:
@@ -521,6 +526,9 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
         f"{row.get('title_en', '')} {row.get('publication_types', '')}",
         re.IGNORECASE,
     )
+    limited_design = bool(case_based) or study in {
+        "human_indirect_model_analysis", "human_observational_secondary_analysis"
+    }
     if domain == "longevity":
         topic_caps = {
             "caloric-restriction-human": "B",
@@ -537,8 +545,8 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
             "microbiome-inflammaging": "B",
         }
         if topic in topic_caps:
-            return max(topic_caps[topic], "C" if case_based else "A")
-    if case_based:
+            return max(topic_caps[topic], "C" if limited_design else "A")
+    if limited_design:
         return "C"
     if endpoint == "H5":
         return "B"

@@ -7,7 +7,7 @@
 
 NAD/NMN/NR 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 37 records; final public claims still require full-text review.
+Draft summary: this topic now includes 38 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -63,13 +63,14 @@ Draft summary: this topic now includes 37 records; final public claims still req
 - [NAD+-Precursor Supplementation With L-Tryptophan, Nicotinic Acid, and Nicotinamide Does Not Affect Mitochondrial Function or Skeletal Muscle Function in Physically Compromised Older Adults.](../papers/pubmed-34191033.md) (2021, The Journal of nutrition)
 - [An integrated anti-aging framework targeting NAD(+) homeostasis, mitochondrial quality control, and redox stability: Roles of NMN/NR, PQQ, and EGT.](../papers/pubmed-42068909.md) (2026, Redox biology)
 - [Potential Synergistic Supplementation of NAD+ Promoting Compounds as a Strategy for Increasing Healthspan.](../papers/pubmed-36678315.md) (2023, Nutrients)
+- [Nicotinamide riboside supplementation restores microglial health and improves cognition in aged male mice.](../papers/pubmed-41273482.md) (2025, GeroScience)
 - [Long-term NAD+ supplementation prevents the progression of age-related hearing loss in mice.](../papers/pubmed-37395319.md) (2023, Aging cell)
 - [Cognitive and Alzheimer's disease biomarker effects of oral nicotinamide riboside (NR) supplementation in older adults with subjective cognitive decline and mild cognitive impairment.](../papers/pubmed-39817194.md) (2025, Alzheimer's & dementia (New York, N. Y.))
-- [Nicotinamide riboside supplementation restores microglial health and improves cognition in aged male mice.](../papers/pubmed-41273482.md) (2025, GeroScience)
 - [Nicotinamide Mononucleotide (NMN) Prevents Age-Associated Transcriptional Drift in a Tissue-Dependent Manner: Mechanistic Leads From Ras-Related Protein Rab-11A-Mediated Trafficking and Carnitine Palmitoyltransferase 2-Linked Fatty Acid Oxidation.](../papers/pubmed-42634749.md) (2026, Cureus)
 - [17-a-estradiol late in life extends lifespan in aging UM-HET3 male mice; nicotinamide riboside and three other drugs do not affect lifespan in either sex.](../papers/pubmed-33788371.md) (2021, Aging cell)
 - [A Multicentre, Randomised, Double Blind, Parallel Design, Placebo Controlled Study to Evaluate the Efficacy and Safety of Uthever (NMN Supplement), an Orally Administered Supplementation in Middle Aged and Older Adults.](../papers/pubmed-35821806.md) (2022, Frontiers in aging)
 - [Nicotinamide Riboside Supplementation for Treating Elevated Systolic Blood Pressure and Arterial Stiffness in Midlife and Older Adults.](../papers/pubmed-35620522.md) (2022, Frontiers in cardiovascular medicine)
+- [Enhancing the anti-ageing capacity of hUC-MSCs via NMN co-treatment in D-galactose-induced ageing mice and cellular senescence models.](../papers/pubmed-42520895.md) (2026, Mechanisms of ageing and development)
 - [Safety and efficacy of long-term nicotinamide mononucleotide supplementation on metabolism, sleep, and nicotinamide adenine dinucleotide biosynthesis in healthy, middle-aged Japanese men.](../papers/pubmed-38191197.md) (2024, Endocrine journal)
 - [Nicotinamide Mononucleotide Adenylyltransferase 1 and NAD(+) Homeostasis in Neuroprotection and Aging.](../papers/pubmed-42646333.md) (2026, Metabolites)
 - [Comparison of anti-aging effect of PQQ (Pyrroloquinoline quinone) and NMN/NR (Nicotinamide mononucleotide /Nicotinamide riboside) - possible combination use.](../papers/pubmed-41390101.md) (2026, Ageing research reviews)

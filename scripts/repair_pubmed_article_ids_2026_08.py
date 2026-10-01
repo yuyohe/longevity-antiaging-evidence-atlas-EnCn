@@ -82,6 +82,24 @@ def main() -> None:
         CACHE.write_text(json.dumps(summaries, ensure_ascii=False), encoding="utf-8")
 
     missing = [pmid for pmid in pmids if not summaries.get(pmid)]
+    approved_path = DATA / f"pubmed_title_updates_{MONTH_UNDERSCORE}.json"
+    approved = {r["pmid"]: r for r in json.loads(approved_path.read_text(encoding="utf-8"))} if approved_path.exists() else {}
+    reviewed_title_updates = 0
+    for row in pubmed_rows:
+        update = approved.get(row["pmid"])
+        if not update:
+            continue
+        summary = summaries.get(row["pmid"], {})
+        if (summary.get("title") != update["official_title"]
+                or article_ids(summary).get("doi", "").lower() != update["doi"].lower()
+                or row.get("doi", "").lower() != update["doi"].lower()
+                or row["title_en"] not in {update["previous_title"], update["official_title"]}):
+            raise RuntimeError(f"Reviewed title update no longer matches official identifiers: {row['pmid']}")
+        reviewed_title_updates += row["title_en"] != update["official_title"]
+        row["title_en"] = update["official_title"]
+        candidate = candidates_by_id.get(row["candidate_id"])
+        if candidate:
+            candidate["title_en"] = update["official_title"]
     title_mismatches: list[dict[str, str]] = []
     accepted_title_variants = 0
     for row in pubmed_rows:
@@ -148,6 +166,7 @@ def main() -> None:
     write_csv(CANDIDATES, candidates, candidate_fields)
     write_csv(FINDINGS, findings, finding_fields)
     report = {
+        "reviewed_title_updates": reviewed_title_updates,
         "date": os.getenv("EVIDENCE_ATLAS_UPDATE_DATE", f"{MONTH}-01"),
         "official_source": "NCBI PubMed E-utilities esummary",
         "pubmed_findings_checked": len(pubmed_rows),

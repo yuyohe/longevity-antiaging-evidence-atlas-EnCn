@@ -1,24 +1,24 @@
 # Current Output Status / 当前输出状态
 
-Date / 日期: 2026-09-21
+Date / 日期: 2026-10-01
 
 ## Production Draft Assets / 可发布草稿资产
 
-- Candidate and literature pools: 11,141 records each; the search screened 379 new candidates and retained 116 recent candidates.
-- Finding extraction layer: 2339 healthspan/longevity finding records.
+- Candidate pool: 11,161 records after bounded curation; 220 newly active, 200 previous records retired.
+- Finding extraction layer: 2424 healthspan/longevity finding records.
 - Topic drafts: 20 public draft topic pages.
-- Paper-card drafts: 2339 public draft paper pages.
+- Paper-card drafts: 2424 public draft paper pages.
 - Evidence matrix: 1500 cautious draft inclusion records.
-- Core review queue: 54 records; 6 recent papers have bilingual official-abstract explanations, not completed full-text reviews.
-- Five public CSV layers: 28,460 processing rows, not unique papers.
-- Visual assets: 57 PNGs, self-contained report, and posting dashboard.
-- Retraction refresh: 117 targets, 594 topic-matched rows, 538 unique PMIDs; publication-date window 2006-01-01 through 2026-09-21.
-- Prior mid-September five-table snapshot: archived and hash-verified under `archive/public-data/`.
-- GitHub public `main`: release-content commit `9997ee503f7ae527421be5dac314844c41e64848`, anonymously verified with current date and intact Chinese brand.
-- Feishu online audit: 9/9 passed; exact row counts and source keys, complete brand/link/attachment coverage, current card provenance dates, no mojibake in audited fields.
-- Verification: 41 unit tests, lint, healthspan and skin validators, complete September release validation, 57/57 decoded images, desktop/mobile layouts, and two real PNG downloads passed.
-- Legacy optional GitHub-to-Feishu workflow: cloud configuration is incomplete, so its preflight explicitly skips publishing. The nine-table sync and audit above were completed locally; no local secrets were copied into GitHub.
-- Removable-drive copy: not requested and not performed.
+
+## Asset Maintenance / 资产整理
+
+- 宇多Yul细胞/yulcell：57 张当前 PNG、两份自包含 HTML、9 张长期飞书表的同步源文件均已生成。
+- 182 个旧视觉文件已逐文件校验归档；8 月五表 29,786 行已归档，9 月/10 月各五表保持展开。
+- [统一资产总目录 / Asset catalog](asset-catalog.md)；[本次整理说明 / Maintenance record](asset-maintenance-2026-10-01.md)。
+- 49 项单元测试、lint、长寿/皮肤草稿校验和当前源文件验收通过。
+- Playwright：桌面与手机无横向溢出，两份 HTML 的 57 张图全部解码，原图下载与海报生成实测成功。
+- 本准备提交仅声明本地验收完成；GitHub 与飞书在线发布验收待后续记录。Local validation passed; online publication is pending at this preparation commit.
+- 未执行移动硬盘备份 / No removable-drive backup.
 
 ## Public Caveat / 公开警示
 

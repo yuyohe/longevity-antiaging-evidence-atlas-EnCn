@@ -266,6 +266,10 @@ def fetch_recent_candidates(
     for topic in base.TOPICS:
         query = recent_query(topic["base"], start_date, end_date)
         pmids = base.esearch(query, retmax_per_topic, sort="pub_date")
+        if len(pmids) >= retmax_per_topic:
+            raise RuntimeError(
+                f"Search may be truncated for {topic['id']}; increase --retmax-per-topic"
+            )
         summaries = base.esummary(pmids)
         new_for_query = 0
         for pmid in pmids:

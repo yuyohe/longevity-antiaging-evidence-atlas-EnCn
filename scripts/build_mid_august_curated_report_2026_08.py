@@ -87,6 +87,8 @@ STUDY_LABELS = {
     "systematic_review_or_meta_analysis": "多项研究汇总 / Review & meta-analysis",
     "human_cohort": "人群追踪研究 / Cohort",
     "human_randomized_or_clinical_trial": "临床试验 / Clinical trial",
+    "human_indirect_model_analysis": "模型间接比较 / Indirect model analysis",
+    "human_observational_secondary_analysis": "观察性二次分析 / Observational secondary analysis",
 }
 
 RETIREMENT_LABELS = {
@@ -242,7 +244,7 @@ def build_navigation(registry: list[dict[str, str]]) -> None:
         ("撤稿怎么看", "How to read retractions", "关注研究可靠性的人", "把撤稿当复核信号，不作简单好坏判断。", "content/public-reader/retractions.md", "heatmaps", "风险说明"),
         ("精编与归档规则", "Curation and retention policy", "想复核清理规则的人", "查看容量上限、退出理由和恢复方式。", "docs/data-retention-and-curation-policy.md", "reader_navigation", "方法说明"),
         ("公开 CSV 数据", "Public CSV data", "研究者、数据分析人员", "下载当前五张处理层表，并注意同一论文会跨层出现。", "public-data/README.md", "candidate_sources", "数据入口"),
-        ("GitHub 项目首页", "GitHub repository", "所有读者", "查看版本历史、方法、报告和全部公开资产。", "README.md", "reader_navigation", "项目入口"),
+        ("资产总目录", "Asset catalog", "所有读者", "分清当前版、上一期和历史归档；查找图片、表格和恢复入口。", "docs/asset-catalog.md", "reader_navigation", "项目入口"),
     ]
     rows = []
     for index, (zh, en, audience, note, github_path, feishu_key, asset_type) in enumerate(specs, 1):
@@ -285,6 +287,20 @@ def retraction_refresh_note() -> str:
             f"Retraction queries checked {checked}: {len(summary)} targets, "
             f"{len(publications)} matched rows, {unique} unique PMIDs. "
             "Historical cumulative counts are not new monthly retractions or efficacy scores.")
+
+
+def archive_note() -> str:
+    path = DATA / "asset_archive_index.json"
+    if not path.exists():
+        return ""
+    archives = json.loads(path.read_text(encoding="utf-8"))
+    count = sum(row["files"] for row in archives)
+    mib = sum(row["original_bytes"] for row in archives) / 1024 ** 2
+    return (f"历史视觉归档收纳 {count} 个旧网页和图片原件，原始体积约 {mib:.1f} MiB。"
+            "每个文件都校验 SHA-256；当前与上一期入口继续保留，旧网页改为归档提示。"
+            "这整理的是公开工作目录，不代表 Git 全部历史的下载体积变小。 / "
+            f"Verified archives preserve {count} original historical files. Current and previous releases remain accessible; "
+            "this tidies the working tree, not the size of the complete Git history.")
 
 
 def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topics: dict[str, dict[str, str]]) -> None:
@@ -358,8 +374,11 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 新候选：{search['new_rows']:,} 条；已在库中：{search['matched_existing']:,} 条。
 - 最终保留近期候选：{after['recent_candidates_retained']:,} 条；其中进入 findings：{after['recent_findings_retained']:,} 条。
 - 新记录仍是自动整理草稿，不能因为标成 A 或 B 就直接改成医学结论。
+- 检索按 PubMed 发表日期筛选，可能包含较早在线发表、最近编入期刊的文章；不等于这些论文都是本周首次公开。
 
 ## 为什么要删 / Why Active Records Were Retired
+
+{archive_note()}
 
 {markdown_table(['层级', '退出原因', '决定数'], retirement_rows)}
 
@@ -399,6 +418,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 用 NCBI 官方 E-utilities 核对全部 {len(findings):,} 个 findings PMID：缺失 {repair['missing_official_summaries']:,}，实质题名冲突 {repair['title_mismatches']:,}。
 - 本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个；候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。
 - 方案论文、评论勘误、明确动物实验不再被自动抬进人体高等级层。
+- 模型推算的安慰剂比较、试验中的观察性二次分析，不沿用母试验的随机对照身份；本版按更保守的独立类型标注，最高 C 级，仍待全文复核。
 - 额外排除塑料老化等环境研究，以及没有老龄语境的青少年竞技训练；病例资料汇总最高按 C 级，主题等级不能放宽动物研究的 D 级上限。
 - 50 张成分卡的评级沿用既有资料，本轮刷新撤稿检索、来源链接和图片；不表示 50 个成分都完成了新的全文复核。 / Ingredient grades remain provisional; refreshed counts and visuals do not imply a new full-text review of every ingredient.
 
@@ -407,6 +427,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 {retraction_refresh_note()}
 
 - [自包含图文报告 / Self-contained report](../../docs/{REPORT_FILE})
+- [当前、上一期与历史归档 / Asset catalog](../../docs/asset-catalog.md)
 - [{MONTH} 研究图片 / {MONTH} images](../../docs/assets/visual-assets/{MONTH}/)
 - [飞书 9 张长期表 / Nine stable Feishu tables](../../docs/feishu-public-assets-{MONTH}.md)
 - [公开 CSV / Public CSV package](../../public-data/README.md)
@@ -561,6 +582,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
 
     <section id="cleanup" class="alt"><div class="inner">
       <h2>这次怎样做减法 / How the Library Was Curated</h2>
+      <p>{esc(archive_note())}</p>
       <p>候选每主题最多 600 条，findings 每主题最多 200 条，矩阵总计最多 1,500 条、每主题最多 100 条。上限不是配额：合格记录少就少放，不为填表而凑数。</p>
       <div class="table-wrap"><table><thead><tr><th>层级</th><th>退出原因</th><th>决定数</th></tr></thead><tbody>{reason_html}</tbody></table></div>
       <p>候选退出决定 {retired['candidate_decisions']:,} 条，findings 退出决定 {retired['finding_decisions']:,} 条。一个记录可能先经过新检索，再因去重或容量规则退出，因此“决定数”不能简单当成净减少数。</p>
@@ -570,6 +592,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <h2>近期文献 / Recent Literature</h2>
       <p>20 个主题共得到 {search['unique_pubmed_matches']:,} 个唯一 PubMed 匹配：新候选 {search['new_rows']:,} 条，已有记录 {search['matched_existing']:,} 条；最终保留近期候选 {after['recent_candidates_retained']:,} 条，其中 {after['recent_findings_retained']:,} 条进入 findings。</p>
       <p class="notice">下面只是检索覆盖示例，不是治疗推荐。所有等级仍是公开草稿，完整全文、偏倚风险和适用人群需要继续人工复核。</p>
+      <p>检索按 PubMed 发表日期筛选，可能包含较早在线发表、最近编入期刊的文章，不等于本周首次公开。Publication-date matches may include earlier online publications.</p>
       <div class="table-wrap"><table><thead><tr><th>PMID</th><th>主题</th><th>研究类型草稿</th><th>等级</th><th>怎么理解</th></tr></thead><tbody>{sample_html}</tbody></table></div>
       <h3>当前等级分布</h3>
       <div class="metrics">
@@ -595,6 +618,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <h2>质量修正 / Quality Corrections</h2>
       <p>PubMed XML 标识继续限制在主文献自身的 ArticleIdList。全部 {len(findings):,} 个 findings PMID 已用 NCBI 官方 E-utilities 核对，缺失 {repair['missing_official_summaries']:,}、实质题名冲突 {repair['title_mismatches']:,}；本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个，候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。</p>
       <p>自动分类也增加了明确动物实验、叙述性综述、方案论文和评论勘误的防误升规则。</p>
+      <p>模型推算的安慰剂比较、试验中的观察性二次分析，不沿用母试验的随机对照身份；本版独立标注，最高 C 级，仍待全文复核。Indirect models and observational secondary analyses are not direct randomized treatment comparisons.</p>
     </div></section>
 
     <section id="assets"><div class="inner">
@@ -602,6 +626,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <div class="asset-grid">
         <div><h3>GitHub</h3><ul class="link-list">
           <li><a href="{GITHUB}">项目首页 / Repository</a></li>
+          <li><a href="{GITHUB}/blob/main/docs/asset-catalog.md">当前、上一期与历史归档 / Asset catalog</a></li>
           <li><a href="{GITHUB}/blob/main/content/public-reader/{RELEASE_FILE}">普通读者说明</a></li>
           <li><a href="{GITHUB}/tree/main/public-data">公开 CSV</a></li>
           <li><a href="{GITHUB}/blob/main/docs/data-retention-and-curation-policy.md">精编与归档规则</a></li>

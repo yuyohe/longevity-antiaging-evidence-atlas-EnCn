@@ -1,0 +1,38 @@
+[
+  {
+    "month": "2026-06",
+    "archive": "archive/visual-releases/visual-release-2026-06.zip",
+    "files": 58,
+    "original_bytes": 18570875,
+    "archive_bytes": 15244987,
+    "sha256": "7f89a4f60727e37b898e5a9e31212f7bb0fbe2ccee6534407db5627ae22bb7c1",
+    "source_commit": "2cebd911c985a11e69cff975ea03799eae5805a7"
+  },
+  {
+    "month": "2026-07",
+    "archive": "archive/visual-releases/visual-release-2026-07.zip",
+    "files": 61,
+    "original_bytes": 39598049,
+    "archive_bytes": 30621071,
+    "sha256": "d9ac2b43770b88dbd5533265e69db8fc90a9416bf1e6dbb046ca48a8c05469e7",
+    "source_commit": "2cebd911c985a11e69cff975ea03799eae5805a7"
+  },
+  {
+    "month": "2026-08",
+    "archive": "archive/visual-releases/visual-release-2026-08.zip",
+    "files": 61,
+    "original_bytes": 52367442,
+    "archive_bytes": 39844650,
+    "sha256": "0ce194e3d265c96397f5e0ec1c3ebb74cda78e15a4560619d62fcbed2982205a",
+    "source_commit": "2cebd911c985a11e69cff975ea03799eae5805a7"
+  },
+  {
+    "month": "2026-09",
+    "archive": "archive/visual-releases/visual-release-2026-09.zip",
+    "files": 2,
+    "original_bytes": 22074752,
+    "archive_bytes": 16024673,
+    "sha256": "234bc99e1a23e7bffed916f66af16c4e262e0dc38c510f42bab5c140ec6e4a34",
+    "source_commit": "2cebd911c985a11e69cff975ea03799eae5805a7"
+  }
+]

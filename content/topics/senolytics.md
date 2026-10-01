@@ -7,12 +7,12 @@
 
 Senolytics 清除衰老细胞 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 49 records; final public claims still require full-text review.
+Draft summary: this topic now includes 52 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
 - Highest final evidence level: `C`
-- Median quality confidence score: `47`
+- Median quality confidence score: `46`
 - Status: public draft, not fully reviewed
 
 ## 我们知道什么 / What We Know
@@ -69,6 +69,7 @@ Draft summary: this topic now includes 49 records; final public claims still req
 - [A geroscience motivated approach to treat Alzheimer's disease: Senolytics move to clinical trials.](../papers/pubmed-34687726.md) (2021, Mechanisms of ageing and development)
 - [Blocking PD-L2 prevents senescent cell accumulation and age-related dysfunction.](../papers/pubmed-42721966.md) (2026, Cell metabolism)
 - [SGLT2 inhibition eliminates senescent cells and alleviates pathological aging.](../papers/pubmed-38816549.md) (2024, Nature aging)
+- [Targeting Cellular Senescence Enhances Post-Burn Wound Healing in Aged Mice.](../papers/pubmed-42320016.md) (2026, Shock (Augusta, Ga.))
 - [Senescent cell transplantation into the skin induces age-related peripheral dysfunction and cognitive decline.](../papers/pubmed-39374134.md) (2025, Aging cell)
 - [Pharmacological Modulation of Immunosenescence and Inflammaging: Senolytics, Senomorphics, and Emerging Therapies.](../papers/pubmed-42376766.md) (2026, Immunological investigations)
 - [Senolytics ameliorate cognitive decline in D-galactose-induced aging mice by inhibiting astrocytic cholesterol accumulation.](../papers/pubmed-42235613.md) (2026, Mechanisms of ageing and development)
@@ -83,6 +84,7 @@ Draft summary: this topic now includes 49 records; final public claims still req
 - [Quercetin as a Multi-Target Natural Therapeutic in Aging-Related Diseases: Systemic Molecular and Cellular Mechanisms.](../papers/pubmed-40944361.md) (2025, Phytotherapy research : PTR)
 - [Fisetin as a senotherapeutic agent: Evidence and perspectives for age-related diseases.](../papers/pubmed-39384074.md) (2024, Mechanisms of ageing and development)
 - [Senescent cell-derived extracellular vesicles as potential mediators of innate immunosenescence and inflammaging.](../papers/pubmed-38237747.md) (2024, Experimental gerontology)
+- [Cellular senescence and the SASP in skeletal ageing: convergent mechanisms of progressive bone loss in osteoporosis.](../papers/pubmed-42773290.md) (2026, Biogerontology)
 - [Cellular Senescence, Inflammaging and Cardiovascular Disease.](../papers/pubmed-41546123.md) (2026, Immunological reviews)
 - [Hypoxia-inducible factor and cellular senescence in pulmonary aging and disease.](../papers/pubmed-40011266.md) (2025, Biogerontology)
 - [Spatial mapping and senolytic targeting of senescent and disease-associated microglia in aged mouse brain white matter.](../papers/pubmed-42443609.md) (2026, Nature aging)
@@ -91,6 +93,7 @@ Draft summary: this topic now includes 49 records; final public claims still req
 - [Senolytic and senomorphic agent procyanidin C1 alleviates structural and functional decline in the aged retina.](../papers/pubmed-38657052.md) (2024, Proceedings of the National Academy of Sciences of the United States of America)
 - [Preventing spontaneous cerebral microhemorrhages in aging mice: a novel approach targeting cellular senescence with ABT263/navitoclax.](../papers/pubmed-38044400.md) (2024, GeroScience)
 - [Mapping epidermal and dermal cellular senescence in human skin aging.](../papers/pubmed-39370688.md) (2025, Aging cell)
+- [Effects of quercetin supplementation on antioxidant capacity, inflammatory status, ovarian reserve and steroidogenesis in juvenile and reproductively aged rabbit does.](../papers/pubmed-42365827.md) (2026, Domestic animal endocrinology)
 - [Targeting cellular senescence mitigates chemotherapy-induced bone loss in young and aged mice.](../papers/pubmed-42686970.md) (2026, GeroScience)
 - [Profiling the molecular and physiological effects of senolytic treatment on aged mice identifies immune, fibrotic and metabolic remodeling.](../papers/pubmed-42310394.md) (2026, Nature aging)
 - [Cellular Senescence Is a Central Driver of Cognitive Disparities in Aging.](../papers/pubmed-40077862.md) (2025, Aging cell)

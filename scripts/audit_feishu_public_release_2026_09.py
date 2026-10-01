@@ -22,6 +22,8 @@ BRAND_ZH = "宇多Yul细胞/yulcell"
 BRAND_EN = "yulcell"
 GITHUB_URL = "https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn"
 SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-09-21")
+MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-09")
+MONTH_KEY = MONTH.replace("-", "_")
 EXPECTED_TABLES = 9
 
 
@@ -126,7 +128,7 @@ def audit_table(
 
     category = manifest_row.get("类别", "")
     if category == "公开全量数据":
-        source_path = ROOT / "public-data" / f"{registry_row['asset_key'].replace('_', '-')}-2026-09.csv"
+        source_path = ROOT / "public-data" / f"{registry_row['asset_key'].replace('_', '-')}-{MONTH}.csv"
         source_keys = {row[unique_field] for row in read_csv(source_path)}
         if source_keys != set(unique_values):
             errors.append(f"{table_name}: online keys differ from the current public CSV")
@@ -171,9 +173,9 @@ def audit_table(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--env-file", type=Path, default=ROOT / ".env")
-    parser.add_argument("--manifest", type=Path, default=ROOT / "data" / "feishu_live_tables_2026_09.csv")
+    parser.add_argument("--manifest", type=Path, default=ROOT / "data" / f"feishu_live_tables_{MONTH_KEY}.csv")
     parser.add_argument("--registry", type=Path, default=ROOT / "data" / "feishu_table_registry.csv")
-    parser.add_argument("--report", type=Path, default=ROOT / "build" / "feishu_online_audit_2026_09.json")
+    parser.add_argument("--report", type=Path, default=ROOT / "build" / f"feishu_online_audit_{MONTH_KEY}.json")
     args = parser.parse_args()
 
     load_dotenv(args.env_file)
@@ -204,7 +206,7 @@ def main() -> None:
         print(f"[{index}/{EXPECTED_TABLES}] {result['table_name']}: {result['actual_records']} records, {result['status']}")
 
     report = {
-        "audit_version": "2026-09-stable-tables-v1",
+        "audit_version": f"{MONTH}-stable-tables-v1",
         "audited_at_utc": datetime.now(timezone.utc).isoformat(),
         "snapshot_date": SNAPSHOT_DATE,
         "manifest": str(args.manifest.resolve()),

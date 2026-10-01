@@ -1,130 +1,88 @@
-# 宇多Yul细胞/yulcell · 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging & Healthspan Evidence Atlas EnCn
+# 宇多Yul细胞/yulcell · 长寿抗衰与健康寿命证据图谱
+## Longevity Anti-Aging & Healthspan Evidence Atlas EnCn
 
-**Current snapshot / 当前公开快照:** 2026-09-21<br>
-**Maintainer and public brand / 维护方与公开品牌:** 宇多Yul细胞/yulcell<br>
-**Repository / 仓库:** `longevity-antiaging-evidence-atlas-EnCn`
+**当前公开快照 / Current snapshot: 2026-10-01**
 
-> **Late-September curated update / 9 月下旬精编说明:** [plain-language guide / 普通读者说明](content/public-reader/late-september-2026-update.md)<br>
-> **Self-contained report / 自包含图文报告:** [open report / 打开报告](docs/late-september-public-update-2026-09.html)<br>
-> **Posting asset dashboard / 发帖资产面板:** [open dashboard / 打开面板](docs/yulcell-posting-asset-dashboard-2026-09-21.html)<br>
-> **Feishu assets / 飞书资产:** [nine stable tables / 9 张长期表](docs/feishu-public-assets-2026-09.md)<br>
-> **Public data / 公开数据:** [September CSV package / 9 月 CSV 数据包](public-data/README.md)<br>
-> **Chinese guide / 中文详细说明:** [README.zh-CN.md](README.zh-CN.md)
+一张帮助大家看懂抗衰研究的证据地图：研究了谁、测了什么、结论有多可靠、不能说明什么。不是治疗或购物指南。
 
-This bilingual, versioned atlas helps readers distinguish stronger human evidence from biomarkers, animal studies, mechanisms, and marketing claims. It is an evidence-navigation project, not a treatment or shopping guide.
+A bilingual evidence map: who was studied, what was measured, how reliable the findings are, and what they do not prove. This is not a treatment or shopping guide.
 
-这是一套中英文双语、可追溯版本的公开证据图谱，帮助读者分清较强人体证据、生物标志物、动物研究、机制线索和商业宣传。它是证据导航，不是治疗或购物指南。
+## 从这里开始 / Start Here
 
-**Search keywords / 搜索关键词:** 宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, Longevity Anti-Aging Evidence Atlas, Healthspan Evidence Atlas.
+- **[资产总目录 / Asset catalog](docs/asset-catalog.md)**：当前使用、上一期对照、历史恢复 / Current, previous and archived assets.
+- **[本次整理说明 / Current reader update](content/public-reader/october-2026-update.md)**：新文献与清理记录 / New literature and curation.
+- **[自包含图文报告 / Offline visual report](docs/october-public-update-2026-10.html)**：内嵌 57 张图 / 57 embedded PNGs.
+- **[发帖资产面板 / Posting panel](docs/yulcell-posting-asset-dashboard-2026-10-01.html)**：选图、生成和下载 / Select, generate and download.
+- **[飞书 9 张长期表 / Nine stable Feishu tables](docs/feishu-public-assets-2026-10.md)**：不按月重复建表 / Existing tables and links retained.
+- **[公开数据 / Public CSVs](public-data/README.md)**，**[中文详细说明 / Chinese guide](README.zh-CN.md)**。
 
-## September Snapshot / 9 月快照
+HTML 是可离线打开的文件；GitHub 文件页不一定直接运行它。图片全部嵌入，无需额外网站或本地服务器。
 
-| Asset / 资产 | Active size / 当前体量 | What it means / 怎么理解 |
+The HTML files open offline with embedded images. GitHub's file page may display source rather than run the HTML.
+
+## 本次做了什么 / This Update
+
+**补资料，但不无限扩张。** 补检 2026-09-22 至 2026-10-01，得到 1,216 个唯一 PubMed 匹配，其中 1,129 个为新候选。筛选后，候选新增进入当前层 220 条、旧记录退出 200 条，净增仅 20 条；findings 新增进入 130 条、旧记录退出 45 条，净增 85 条。
+
+**Refresh without unbounded growth.** The search found 1,216 unique PubMed matches, including 1,129 new candidates. The active candidate layer added 220 records and retired 200 old records, a net increase of 20. Findings added 130 and retired 45, a net increase of 85.
+
+**认真整理旧资产。** 182 个旧网页和图片原件归入 4 个逐文件校验的 ZIP。旧网页保留归档提示；9 月和 10 月数据继续展开，便于对照。这是整理工作目录，不是删除历史证据或重写 Git 历史。
+
+**Organize historical assets.** Four verified ZIPs preserve 182 original historical files. Old HTML paths show archive notices; September and October CSVs remain unpacked. Git history is not rewritten.
+
+**纠正容易夸大的解释。** 模型推算对照和观察性二次分析不再沿用母试验的随机对照标签。6 篇代表文献新增双语摘要解读，全部 2,424 个 finding PMID 已与 NCBI 官方记录核对。全文复核仍待完成。
+
+**Avoid overstated designs.** Indirect models and observational secondary analyses are not labeled direct randomized comparisons. Six studies have bilingual abstract-based notes; all 2,424 finding PMIDs were checked against official NCBI records. Full-text review remains pending.
+
+## 当前体量 / Current Inventory
+
+| 资产 / Asset | 数量 / Count | 怎么理解 / Meaning |
 | --- | ---: | --- |
-| Candidate sources / 候选来源 | 11,141 | Search index awaiting review / 等待复核的资料目录 |
-| Shortlist / 入选短名单 | 2,339 | Direct topic matches prioritized for review / 与主题直接相关的优先复核记录 |
-| Evidence findings / 证据发现 | 2,339 | Automated drafts, not completed full-text reviews / 自动整理草稿，不等于全文复核完成 |
-| Evidence matrix / 证据矩阵 | 1,500 | Bounded comparison layer / 有容量上限的比较层 |
-| Public CSV processing rows / 五层 CSV 总行数 | 28,460 | A paper may occur in several layers / 同一论文可跨层出现 |
-| Paper cards / 论文卡片 | 2,339 | One page per active finding / 每条当前 finding 一页 |
-| Healthspan topics / 健康寿命主题 | 20 | Fixed topic set for this release / 本版固定主题集合 |
-| Visual assets / 图片资产 | 57 | 7 main charts plus 50 ingredient cards / 7 张主图和 50 张成分卡 |
-| Feishu Bitable / 飞书多维表格 | 9 | Stable tables reused across releases / 跨版本复用的长期表 |
+| 候选目录 / Candidates | 11,161 | 等待复核，不是已证实结论 / Search index, not proven conclusions |
+| 优先短名单 / Shortlist | 2,424 | 值得继续检查 / Prioritized for review |
+| 证据发现 / Findings | 2,424 | 自动整理草稿 / Automated review drafts |
+| 证据矩阵 / Matrix | 1,500 | 有容量上限的比较层 / Bounded comparison layer |
+| 五张 CSV 总行数 / Five CSV layers | 28,670 | 同一论文可跨层出现，不是独立论文数 / Not a unique-paper count |
+| 主题 / Topics | 20 | 固定主题集合 / Fixed topic set |
+| 图片 / Visuals | 57 | 7 张主图、50 张成分卡 / 7 charts and 50 cards |
+| 飞书长期表 / Stable Feishu tables | 9 | 原链接复用 / Existing links retained |
 
-The 28,460-row total is the sum of five processing layers. It is not a count of unique papers.
+候选每主题最多 600 条，findings 最多 200 条；矩阵每主题最多 100 条，总计最多 1,500 条。上限不是配额。近期保留 307 条候选，其中 161 条进入 findings，这包含此前已在库的记录，不等于新增数量。
 
-28,460 行是五张处理层表的行数相加，不是互不重复的论文数。
+Candidates are capped at 600 per topic, findings at 200, and the matrix at 100 per topic and 1,500 overall. Limits are not quotas. The retained recent set of 307 candidates and 161 findings includes existing records.
 
-## Why Counts Stay Bounded / 为什么体量保持受控
+## 如何阅读 / How to Read
 
-This release searched PubMed from 2026-09-14 through 2026-09-21, found 386 unique matches, and identified 379 new candidates. After scope checks, deduplication, and capacity controls, candidates changed from 11,132 to 11,141 and findings from 2,291 to 2,339. Full topics primarily replace lower-priority records; under-cap topics add only suitable records.
+1. [普通读者入口 / Reader introduction](content/public-reader/start-here.md)：先理解这张地图能回答什么。
+2. [15 条基本判断 / 15 takeaways](content/public-reader/ten-takeaways.md)：建立判断抗衰说法的框架。
+3. [证据权重 / Evidence weighting](content/public-reader/evidence-weight.md)：分清疾病结局、身体功能、化验指标和动物研究。
+4. [按主题阅读 / Topic guide](content/public-reader/topics.md)：再查运动、睡眠、代谢等具体问题。
+5. [精编与归档规则 / Curation policy](docs/data-retention-and-curation-policy.md)：需要复核时查看方法与退出日志。
 
-本轮补检 2026-09-14 至 2026-09-21 的 PubMed 文献，得到 386 个唯一匹配，其中 379 条是新候选。经过主题核对、去重和容量控制，候选由 11,132 条调整为 11,141 条，findings 由 2,291 条调整为 2,339 条；已满额主题以替换为主，未满额主题只补入合格记录。
+## 图片与边界 / Visuals and Limits
 
-- Duplicate records, protocols, plans, commentaries, corrections, and clear topic mismatches leave the active layers. / 重复项、方案论文、评论勘误和明确主题错配退出当前层。
-- Direct animal or cell experiments leave human-outcome topics. / 明确动物或细胞实验退出人体结局主题。
-- Candidates are capped at 600 per topic; findings at 200 per topic. Limits are not quotas. / 候选每主题最多 600 条，findings 最多 200 条；上限不是配额。
-- The matrix is capped at 1,500 total and 100 per topic. / 矩阵总计最多 1,500 条，每主题最多 100 条。
-- Every retirement reason is logged; older complete snapshots remain recoverable. / 每条退出原因有日志，旧完整快照仍可恢复。
+[本期全部图片 / Current PNGs](docs/assets/visual-assets/2026-10/)已重建。117 个成分或主题的撤稿风险查询更新至 2026-10-01：595 条主题匹配行、539 个唯一 PMID。这是历史累计，不是本月新增撤稿数量，也不是疗效排名。
 
-Full policy / 完整规则: [curation and retention policy / 精编与归档规则](docs/data-retention-and-curation-policy.md).
+All visuals were rebuilt. Retraction queries cover 117 targets, with 595 matched rows and 539 unique PMIDs. These are historical cumulative counts, not new monthly retractions or efficacy rankings.
 
-## What Changed / 本次更新
+50 张成分卡沿用既有暂定评级，分别标明评级资料日期、撤稿检查日期和图片日期。图片更新不等于完成 50 个成分的新一轮全文复核。
 
-- **English:** 116 recent candidates remain active; 62 entered findings. Six highlighted studies have abstract-based bilingual explanations, with full-text review still pending.
-- **中文：** 近期候选最终保留 116 条，其中 62 条进入 findings；另为 6 篇代表研究编写双语摘要解读，全文复核仍待完成。
-- **English:** Active findings now contain no protocols or non-primary commentary/correction records.
-- **中文：** 当前 findings 不再包含方案论文，也不包含评论、社论或勘误记录。
-- **English:** Plastic aging and youth sports records without an aging context are excluded. Case-based reviews cannot exceed C; topic caps cannot override the D cap for animal studies.
-- **中文：** 排除塑料老化和没有老龄语境的青少年竞技研究；病例资料汇总最高 C，主题规则不能突破动物研究最高 D 的限制。
-- **English:** All 2,339 finding PMIDs were checked against official NCBI summaries; missing summaries and substantive title mismatches are both zero.
-- **中文：** 用 NCBI 官方摘要核对全部 2,339 个 finding PMID；摘要缺失和实质题名冲突均为 0。
-- **English:** All seven main visuals and 50 ingredient cards were regenerated.
-- **中文：** 7 张主图和 50 张单成分卡全部重建，补上品牌、日期和解读边界。
-- **English:** Retraction searches were refreshed for 117 targets: 594 topic-matched rows, 538 unique PMIDs. These are not newly retracted papers or a count of efficacy failures.
-- **中文：** 重新查询 117 个成分/主题的撤稿风险，得到 594 条主题匹配记录、去重 538 个 PMID；不是本月新增撤稿，也不代表 538 项疗效失败。
-- **English:** Ingredient grades are inherited provisional assessments; refreshed counts and images do not imply 50 new full-text reviews.
-- **中文：** 50 张成分卡沿用既有暂定评级；更新数量和图片，不等于完成了 50 个成分的新一轮全文复核。
-- **English:** Weekly automation now produces a capped intake pull request and cannot write candidates directly to `main`.
-- **中文：** 每周自动检索现在只生成有上限的 intake Pull Request，不能直接把候选写入 `main`。
+Ingredient cards preserve existing provisional grades and distinguish evidence-review, retraction-check and image dates. Updated images do not imply new full-text reviews of all 50 ingredients.
 
-## Start Here / 从这里开始
+- 动物延寿不等于人类延寿 / Animal lifespan findings do not establish human lifespan extension.
+- 指标改善不等于返老还童 / Biomarker changes do not establish rejuvenation.
+- 论文多、图颜色深不等于有效 / More papers and darker heatmaps do not prove efficacy.
+- A 级草稿不是处方 / An A-grade draft is not a prescription.
+- 不提供个人诊断、剂量、停药或购买建议 / No personal diagnosis, dosing, stopping medication or purchase advice.
 
-1. [Late-September update / 9 月下旬精编说明](content/public-reader/late-september-2026-update.md)
-2. [Plain-language start page / 普通读者入口](content/public-reader/start-here.md)
-3. [15 takeaways / 15 条结论](content/public-reader/ten-takeaways.md)
-4. [Evidence weighting / 证据权重怎么看](content/public-reader/evidence-weight.md)
-5. [Topic guide / 大众主题速读](content/public-reader/topics.md)
-6. [Common supplements / 最常见 30 个补剂](content/public-reader/supplements-top-30.md)
-7. [Skin and appearance / 护肤与外观抗老速读](content/public-reader/skin.md)
-8. [Doctor-first topics / 哪些内容必须先问医生](content/public-reader/doctor-first.md)
+## 项目与归档 / Project and Archives
 
-## Visuals and Feishu / 图片与飞书
+GitHub 是版本化源头；飞书是结构化阅读、筛选与复核层。品牌统一使用 **宇多Yul细胞/yulcell**。搜索引擎是否收录仍受分享权限和抓取规则影响，不能保证排名或收录。
 
-- [Self-contained September report / 9 月自包含报告](docs/late-september-public-update-2026-09.html)
-- [Posting asset dashboard / 发帖资产面板](docs/yulcell-posting-asset-dashboard-2026-09-21.html)
-- [September research heatmap / 9 月研究热力图](docs/research-heatmap-2026-09.html)
-- [All 57 September PNGs / 9 月全部图片](docs/assets/visual-assets/2026-09/)
-- [Feishu public asset index / 飞书公开资产索引](docs/feishu-public-assets-2026-09.md)
-- [Feishu reading navigation / 飞书普通读者导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD)
+GitHub is the versioned source of truth; Feishu is the structured reading and review layer. Consistent branding does not guarantee search indexing or ranking.
 
-GitHub is the versioned source of truth. Feishu is the structured Chinese reading and review layer. Search-engine visibility for Feishu still depends on public sharing and crawler access.
+[上一期 2026-09-21 / Previous release](content/public-reader/late-september-2026-update.md) · [历史 CSV / Historical CSVs](archive/public-data/) · [历史图片和网页 / Historical visuals](archive/visual-releases/README.md) · [更新日志 / Changelog](CHANGELOG.md)
 
-GitHub 是版本化源头；飞书是结构化中文阅读和复核层。飞书能否被搜索引擎收录，仍取决于公开分享和搜索引擎抓取权限。
+例行维护不默认备份到移动硬盘；本轮未复制到移动硬盘。Removable-drive backups are optional and were not performed.
 
-## Evidence Rules / 证据规则
-
-- Do not present animal lifespan studies as proven human lifespan extension. / 不把动物延寿实验说成人类延寿已经证实。
-- Do not present biomarker improvement as clinical rejuvenation. / 不把生物标志物改善说成临床返老还童。
-- Research volume and dark heatmap colors do not prove efficacy. / 论文多、热力图颜色深，不代表疗效更强。
-- Candidate records require review before being treated as evidence. / 候选记录必须经过复核，不能直接当成结论。
-- Do not provide personal prescriptions, dosing, diagnosis, procedure advice, or purchase recommendations. / 不提供个人处方、剂量、诊断、医美操作或购买建议。
-
-Scoring / 评分方法: [evidence scoring v0.5 / 证据评分 v0.5](content/overview/evidence-scoring-v0-5.md)<br>
-Methods / 方法说明: [methods and scoring / 方法与分级](content/overview/methods-and-scoring.md)
-
-## Repository Structure / 仓库结构
-
-```text
-data/                       active structured data / 当前结构化数据
-data/archive/               retirement decision logs / 退出决定日志
-public-data/                current and previous CSV snapshots / 当前与上一期 CSV
-archive/public-data/        compressed older snapshots / 压缩历史快照
-content/public-reader/      plain-language pages / 普通读者页面
-content/papers/             active paper cards / 当前论文卡片
-content/topics/             20 healthspan topics / 20 个健康寿命主题
-scripts/                    build, validation, Feishu sync / 构建、校验、飞书同步
-docs/                       reports, visuals, public indexes / 报告、图片、公开索引
-```
-
-## Historical Snapshots / 历史快照
-
-The August and September CSV snapshots remain unpacked for direct comparison. May, June, July, mid-August, end-August, and mid-September five-table snapshots are verified ZIP archives under [`archive/public-data/`](archive/public-data/). Git history remains the final recovery path. Removable-drive copies are optional and were not made for this release.
-
-8 月和 9 月 CSV 保持展开，便于直接比较；5 月、6 月、7 月、8 月中期、8 月底和 9 月中旬五表快照均已压缩校验，位于 [`archive/public-data/`](archive/public-data/)。Git 历史仍是最终恢复路径。移动硬盘副本是可选项，本轮未执行。
-
-## Boundary / 使用边界
-
-This project supports evidence review, public education, and content production. It does not provide personal medical advice, diagnosis, prescriptions, dosing protocols, aesthetic procedure guidance, or purchase recommendations.
-
-本项目用于证据复核、公众科普和内容生产，不提供个人医疗建议、诊断、处方、剂量方案、医美操作建议或购买推荐。
+**搜索关键词 / Search keywords:** 宇多Yul细胞/yulcell, yulcell, 宇多Yul细胞, 长寿抗衰证据图谱, 健康寿命证据图谱, Longevity Anti-Aging Evidence Atlas, Healthspan Evidence Atlas.

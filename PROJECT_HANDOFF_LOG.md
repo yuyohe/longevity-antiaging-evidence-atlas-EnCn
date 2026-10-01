@@ -1,12 +1,32 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-09-21
+Last updated / 最后更新：2026-10-01
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
 本文档是本地交接记录，供后续 Codex 线程和人工维护者快速接手。这里记录已经完成的工作、执行流程、GitHub/飞书同步方式，以及凭据文件位置。不要把真实密钥写入本文档。
 
 ## Current Release Snapshot / 当前发布快照
+
+The current source snapshot is **2026-10-01**. The September section below is historical.
+
+- Reusable publication worktree: `D:\longevity\github-publish-current`, branch `codex/october-2026-curated`; baseline `2cebd911c985a11e69cff975ea03799eae5805a7`.
+- Current configuration: `data/current_release.json`. Use `scripts/build_release.py` stages `identifiers`, `core`, `visuals`, `exports`, `delta`, `sync`, `audit`, `validate`.
+- Current totals: 11,161 candidates/literature; 2,424 shortlist/findings/paper pages; 1,500 matrix rows; 28,670 five-layer public CSV rows; 20 topics; 54 core-review records; 57 PNGs; 9 stable Feishu tables.
+- Current entry points: `docs/asset-catalog.md`, `content/public-reader/october-2026-update.md`, `docs/october-public-update-2026-10.html`, `docs/yulcell-posting-asset-dashboard-2026-10-01.html`.
+- Search window: 2026-09-22 through 2026-10-01; 1,216 unique matches, 1,129 new candidates. Retained recent sets: 307 candidates and 161 findings, including existing records.
+- Actual turnover: candidates +220 new active / -200 old active; findings +130 / -45. The 1,109 and 1,100 retirement decisions also include newly rejected intake.
+- Official identifier check: 2,424 findings, zero missing summaries and unresolved title conflicts; one title update verified by DOI/EFetch/ESummary, logged in `data/pubmed_title_updates_2026_10.json`.
+- Retraction layer: 117 fresh queries, 595 matched rows, 539 unique PMIDs; cumulative historical publication window, not newly retracted papers. Preserve inherited ingredient-review dates.
+- Archive organization: 182 old PNG/HTML originals in four verified ZIPs; the latest August five-table snapshot (29,786 rows) archived separately. September and October stay unpacked. Git history and previous local workspaces were not deleted.
+- Local checks: 49 unit tests, lint, healthspan/skin draft checks and source-release validator passed. Playwright decoded 57/57 images in both HTML assets; desktop/mobile had no horizontal overflow; generated-poster and original-PNG downloads passed.
+- Publication status at this preparation step: local source ready; GitHub push and Feishu sync/audit pending. The final acceptance is recorded in `docs/current-output-status.md` after publication.
+- Current Feishu manifests/audit use suffix `2026_10`. Run `delta` before `sync`; delta compares current public CSVs with September. Upload images with the fresh ignored `output/feishu-delta-2026-10/visual_tokens_2026_10.csv` cache. Never publish tokens.
+- Mobile-drive backup is not part of routine maintenance and was not performed. Do not copy to E: unless explicitly asked.
+
+All new commands must use `python -X utf8` on this Windows host; plain Python startup can fail decoding site configuration with GBK. The checked `pwsh` runner is PowerShell 7.6.5 Core. Keep the dirty development workspace untouched.
+
+## Previous Release / 上一期 2026-09-21
 
 The current public release supersedes the historical counts later in this log.
 
@@ -58,7 +78,7 @@ Do not publish from the development workspace without first checking its worktre
 ## Project Identity
 
 - GitHub repo: `https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn.git`
-- Publication repo path: `D:\longevity\github-publish-2026-09-late`
+- Publication repo path: `D:\longevity\github-publish-current`
 - Development repo path: `D:\longevity\longevity-antiaging-evidence-atlas-EnCn`
 - Public Chinese name: `长寿抗衰与健康寿命证据图谱`
 - Repository name: `longevity-antiaging-evidence-atlas-EnCn`
@@ -93,7 +113,7 @@ Known Feishu wiki/base:
 - Wiki/base node token: `WriBw4TXZiOsjQkJWk8ctL1xnVg`
 - Bitable app token is stored in `.env` as `FEISHU_BITABLE_APP_TOKEN`. Do not copy the real value into committed files.
 
-The current nine-table public map is versioned in `data/feishu_live_tables_2026_09.csv`, with the stable ID registry in `data/feishu_table_registry.csv` and the reader-facing index in `docs/feishu-public-assets-2026-09.md`.
+The current nine-table public map is versioned in `data/feishu_live_tables_2026_10.csv`, with the stable ID registry in `data/feishu_table_registry.csv` and the reader-facing index in `docs/feishu-public-assets-2026-10.md`.
 
 Historical table IDs retained for provenance (not the current nine-table release layer):
 

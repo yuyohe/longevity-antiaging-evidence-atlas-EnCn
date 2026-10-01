@@ -14,6 +14,24 @@ import expand_healthspan_pubmed_v05 as expansion  # noqa: E402
 
 
 class StudyClassificationTests(unittest.TestCase):
+    def test_secondary_design_does_not_inherit_parent_trial_type(self):
+        cases = [
+            ("Sarcopenia Is Associated With Mortality: A Secondary Analysis", "human_observational_secondary_analysis"),
+            ("Estimating MACE Benefits Using an Imputed Placebo Analysis", "human_indirect_model_analysis"),
+        ]
+        for title, expected in cases:
+            row = {"title_en": title, "publication_types": "Randomized Controlled Trial",
+                   "result_en": "Analysis of trial participants.", "evidence_source_depth": "abstract_only",
+                   "topic_id": "glp1-weight-cardiometabolic", "endpoint_class_draft": "H1"}
+            self.assertEqual(expansion.classify_study(["Randomized Controlled Trial"], row["result_en"], "PubMed", title), expected)
+            self.assertEqual(scoring.normalized_study_type(row), expected)
+            self.assertEqual(scoring.normalized_species(row, expected), "human")
+            self.assertEqual(scoring.confidence_cap(row, "longevity"), "C")
+
+    def test_pooled_randomized_treatment_comparison_remains_trial(self):
+        title = "Effect of semaglutide on kidney outcomes: a prespecified pooled analysis"
+        self.assertEqual(expansion.classify_study(["Randomized Controlled Trial"], "Participants were randomly assigned.", "PubMed", title), "human_randomized_or_clinical_trial")
+
     def test_article_ids_ignore_reference_list_identifiers(self) -> None:
         article = ET.fromstring(
             """

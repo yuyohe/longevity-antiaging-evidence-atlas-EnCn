@@ -7,12 +7,12 @@
 
 雷帕霉素/mTOR 与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 55 records; final public claims still require full-text review.
+Draft summary: this topic now includes 56 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
 - Highest final evidence level: `C`
-- Median quality confidence score: `45`
+- Median quality confidence score: `46`
 - Status: public draft, not fully reviewed
 
 ## 我们知道什么 / What We Know
@@ -70,6 +70,7 @@ Draft summary: this topic now includes 55 records; final public claims still req
 - [Long-term treatment with the mTOR inhibitor rapamycin has minor effect on clinical laboratory markers in middle-aged marmosets.](../papers/pubmed-30311681.md) (2019, American journal of primatology)
 - [A randomized controlled trial to establish effects of short-term rapamycin treatment in 24 middle-aged companion dogs.](../papers/pubmed-28374166.md) (2017, GeroScience)
 - [Rapamycin Attenuates Age-Related Changes in Marmoset Submandibular Gland: A Non-Human Primate Model of Human Oral Aging.](../papers/pubmed-42372235.md) (2026, Aging and disease)
+- [Therapeutic Immune Reprogramming by Rapamycin Attenuates Plaque Inflammation and Lymphoid Immune Responses in Aged Atherosclerotic Mice.](../papers/pubmed-42775680.md) (2026, Aging cell)
 - [Placental mTOR Signaling and Sexual Dimorphism in Metabolic Health across the Lifespan of Offspring.](../papers/pubmed-34828683.md) (2021, Children (Basel, Switzerland))
 - [Endothelial cell-specific reduction in mTOR ameliorates age-related arterial and metabolic dysfunction.](../papers/pubmed-38017701.md) (2024, Aging cell)
 - [Effect of caloric restriction and rapamycin on ovarian aging in mice.](../papers/pubmed-31359237.md) (2019, GeroScience)
