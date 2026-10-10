@@ -36,6 +36,8 @@ The content commit was anonymously verified on public main. Its immutable README
 
 62 项单元测试与源发布校验通过。两份自包含报告各 57 个嵌入 PNG 的 SHA-256 与原图完全一致，仅更新文字与链接。飞书简洁视图已在浏览器重新加载确认三列说明与多行布局保存成功。本次未重新运行本地 HTML 的浏览器下载测试，前面的 Playwright 结果属于标注前版本。
 
+本次阅读说明内容提交 [`d4fe0518`](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/commit/d4fe05183bb402f0a4d37d36b4f0d3ae7bdef07c) 已发布到公开 main，GitHub 页面已显示新的双语读表说明；原文 SHA-256 与本地一致。[线上 Lint 检查](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/actions/runs/38038490715)通过。补充只读审计也确认 9/9 表的数据与附件完整，证据数据和 PNG 未改动。
+
 The annotation pass distinguishes grades, outcome codes, review status, chart denominators and dates. It adds 67 field descriptions and two notes to each of the 14 navigation entries, without changing evidence or PNGs. The signed-in reader view works; anonymous visibility is a separate unresolved check. Sharing permissions were not changed.
 
 ## Public Boundaries / 使用边界
