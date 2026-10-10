@@ -25,3 +25,5 @@ These are the latest public files for this month. Check the snapshot date and Gi
 The five processing layers total 28,734 rows, not unique papers. A paper may appear in several layers.
 
 说明：这些表是证据地图的资料层，不等于个人医疗建议。读者可以用 PMID、DOI、主题、证据等级、期刊和评分字段追溯每条记录。
+
+第一次读表，先看[术语、等级和状态说明 / Reading guide](../content/public-reader/evidence-weight.md)。A–E 是本项目草稿排序，不是标准 GRADE 或疗效评级；H1–H6 表示实际测量结果；PMCID 表示全文入口，不代表已读完全文。`not_assessed` 是未评估，空白是未知，不是零风险。

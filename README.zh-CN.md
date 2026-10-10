@@ -7,6 +7,8 @@
 
 ## 先找对入口 / Find the Right Entry
 
+- 第一次来看：[普通读者入口](content/public-reader/start-here.md)，选自己的问题；不必先读维护报告。
+- 看到缩写或等级不明白：[读表说明](content/public-reader/evidence-weight.md)，解释 A/B、H1–H6、PMID、全文待复核和图中百分比。
 - 想知道本次变化：[10 月 10 日更新说明](content/public-reader/october-10-2026-update.md)。
 - 想找所有资产：[资产总目录](docs/asset-catalog.md)，分为当前、上一期和历史归档。
 - 想交给助理发帖：[自包含报告](docs/october-10-public-update-2026-10.html)和[发帖面板](docs/yulcell-posting-asset-dashboard-2026-10-10.html)。
@@ -14,6 +16,8 @@
 - 想复核数据：[公开 CSV](public-data/README.md)。
 
 English readers: start with the [bilingual homepage](README.md) or [asset catalog](docs/asset-catalog.md).
+
+若飞书链接跳回旧“数据表”，或看不到“当前阅读导航”，先读 GitHub 入口；当前表的未登录可见性仍需管理员核对，不要把旧表误当最新资料。
 
 ## 这次整理了什么 / What Changed
 

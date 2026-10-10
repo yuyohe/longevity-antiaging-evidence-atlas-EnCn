@@ -3,7 +3,11 @@
 **品牌 / Brand：** 宇多Yul细胞/yulcell<br>
 **当前快照 / Current snapshot：** 2026-10-10
 
-第一次打开时，先用[飞书 10 月 10 日阅读导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD)。不要从 11,167 条全量候选库开始读。
+第一次打开时，先用[飞书简洁阅读导航](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD)。不要从 11,167 条全量候选库开始读。原“表格”视图保留全部字段，新“普通读者图例 / Reader notes”视图集中显示标题与两列阅读提醒。
+
+导航有 **14 个可选入口**，不是必须读完的 14 步。新增的“先看什么 / Start with”和“避免误读 / Do not infer”两列帮助你选择内容和保留边界。缩写、等级和状态请看[读表说明](evidence-weight.md)。
+
+若链接回到旧“数据表”，或侧栏没有“当前阅读导航”，先打开[GitHub 普通读者入口](start-here.md)；当前表的未登录可见性仍需管理员核对。下面的文件名是助理导入用的文件，不是普通访客必须手动寻找的入口。
 
 ## 普通读者包 / Public Reader Package
 

@@ -6,6 +6,7 @@ import json
 import os
 from datetime import date
 from pathlib import Path
+from reader_annotations import VISUAL_NOTES, reader_legend_html
 from typing import Any
 
 from PIL import Image
@@ -96,6 +97,7 @@ def image_record(image_id: str, title: str, path: Path) -> dict[str, object]:
     return {
         "id": image_id,
         "title": title,
+        "readerNote": VISUAL_NOTES.get(image_id, ""),
         "filename": path.name,
         "localPath": str(path),
         "size": path.stat().st_size,
@@ -424,6 +426,7 @@ HTML_TEMPLATE = """<!doctype html>
       <h2>本轮资产规模</h2>
       <div class="notice">这些图用于发帖和内部说明。它们展示研究活跃度、证据分布和撤稿风险，不构成个人医疗建议、用药建议、剂量建议、医美操作建议或购买建议。</div>
       <div id="stats" class="stats"></div>
+      __READER_LEGEND__
     </section>
 
     <section id="main-assets">
@@ -444,6 +447,7 @@ HTML_TEMPLATE = """<!doctype html>
       <h3>GitHub 公开入口</h3>
       <div class="table-scroll"><table class="link-table" id="githubLinks"></table></div>
       <h3>飞书在线多维表格</h3>
+      <p class="meta">若跳回旧“数据表”或看不到当前阅读导航，先使用 GitHub 阅读入口；当前表未登录可见性仍需管理员核对。</p>
       <div class="table-scroll"><table class="link-table" id="feishuLinks"></table></div>
       <h3>本地公开 CSV 表格</h3>
       <div class="table-scroll"><table class="link-table" id="tableLinks"></table></div>
@@ -527,6 +531,7 @@ HTML_TEMPLATE = """<!doctype html>
           <img src="${asset.dataUrl}" alt="${asset.title}">
           <div class="body">
             <h3>${asset.title}</h3>
+            <p class="meta">${asset.readerNote}</p>
             <p class="meta">${asset.filename} · ${asset.width}×${asset.height} · ${formatBytes(asset.size)}</p>
             <div class="toolbar">
               <button class="primary" data-download-main="${asset.id}">下载原图</button>
@@ -722,6 +727,7 @@ def build_html(main_assets: list[dict[str, object]], cards: list[dict[str, objec
         "__FEISHU_LINKS__": json.dumps(feishu_links(), ensure_ascii=False),
         "__STATS__": json.dumps(stats(), ensure_ascii=False),
         "__POST_COPY__": json.dumps(post_copy(), ensure_ascii=False),
+        "__READER_LEGEND__": reader_legend_html(),
     }
     html = HTML_TEMPLATE
     for key, value in replacements.items():

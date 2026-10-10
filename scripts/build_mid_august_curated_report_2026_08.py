@@ -10,6 +10,7 @@ import os
 from collections import Counter
 from pathlib import Path
 from typing import Any
+from reader_annotations import NAVIGATION_HELP, VISUAL_NOTES, reader_legend_html
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,13 +41,13 @@ REPORT_FILE = os.environ.get("EVIDENCE_ATLAS_PUBLIC_REPORT_FILE", "mid-august-pu
 RELEASE_FILE = os.environ.get("EVIDENCE_ATLAS_RELEASE_FILE", "mid-august-2026-update.md")
 
 MAIN_IMAGES = [
-    (f"heatmap-dashboard-{MONTH}.png", "热力图总览 / Heatmap dashboard", "先看全局，再进入单张图。颜色表示数量或结构，不表示治疗效果。"),
-    (f"heatmap-topic-year-{MONTH}.png", "主题与年份 / Topic by year", "看不同主题近年的研究数量。2026 年尚未结束，不能和完整年份直接比较。"),
-    (f"heatmap-topic-evidence-{MONTH}.png", "主题与证据等级 / Topic by evidence grade", "看草稿等级分布。A 级也不等于适合每个人使用。"),
-    (f"evidence-yield-ingredients-{MONTH}.png", "成分证据产出 / Ingredient evidence yield", "看哪些成分进入较高层级的比例，不是购买榜。"),
-    (f"retraction-density-{MONTH}.png", "撤稿密度观察 / Retraction watch", "用于提醒复核风险；不能因为一个领域撤稿多就否定全部研究。"),
-    (f"topic-evidence-yield-{MONTH}.png", "主题证据产出 / Topic evidence yield", "比较 20 个主题进入较高等级层的结构。"),
-    (f"ingredient-card-wall-{MONTH}.png", "50 成分总览 / 50-ingredient wall", "适合发帖总览；每张单卡仍要结合边界说明阅读。"),
+    (f"heatmap-dashboard-{MONTH}.png", "热力图总览 / Heatmap dashboard", VISUAL_NOTES["heatmap-dashboard"]),
+    (f"heatmap-topic-year-{MONTH}.png", "主题与年份 / Topic by year", VISUAL_NOTES["heatmap-topic-year"]),
+    (f"heatmap-topic-evidence-{MONTH}.png", "主题与证据等级 / Topic by evidence grade", VISUAL_NOTES["heatmap-topic-evidence"]),
+    (f"evidence-yield-ingredients-{MONTH}.png", "成分证据产出 / Ingredient evidence yield", VISUAL_NOTES["evidence-yield-ingredients"]),
+    (f"retraction-density-{MONTH}.png", "撤稿密度观察 / Retraction watch", VISUAL_NOTES["retraction-density"]),
+    (f"topic-evidence-yield-{MONTH}.png", "主题证据产出 / Topic evidence yield", VISUAL_NOTES["topic-evidence-yield"]),
+    (f"ingredient-card-wall-{MONTH}.png", "50 成分总览 / 50-ingredient wall", VISUAL_NOTES["ingredient-card-wall"]),
 ]
 
 FEATURED_PMIDS = [
@@ -115,7 +116,7 @@ ASSET_DESCRIPTIONS = {
     "heatmaps": "6 张研究图和证据产出图",
     "ingredient_cards": "50 张常见成分单卡",
     "ingredient_wall": "1 张 50 成分总览墙",
-    "reader_navigation": "普通读者 14 步阅读入口",
+    "reader_navigation": "普通读者 14 个可选入口，不必逐项读完",
 }
 
 
@@ -193,7 +194,7 @@ def build_feishu_manifest(registry: list[dict[str, str]]) -> None:
     )
 
     table_rows = "\n".join(
-        f"| {row['类别']} | {row['表名']} | {int(row['记录数']):,} | {row['状态']} | [打开飞书]({row['飞书链接']}) |"
+        f"| {row['表名']} | {int(row['记录数']):,} | {row['说明']} | 当前使用 / Active | [打开飞书]({row['飞书链接']}) |"
         for row in rows
     )
     by_key = {row["asset_key"]: row for row in registry}
@@ -209,11 +210,23 @@ def build_feishu_manifest(registry: list[dict[str, str]]) -> None:
 - [2. 当前研究图 / Research visuals]({by_key['heatmaps']['url']})：看研究数量和证据结构，不当疗效榜。
 - [3. 当前 50 成分卡 / Ingredient cards]({by_key['ingredient_cards']['url']})：查常见成分的证据边界。
 
+**先看图例 / Read the legend:** [读表、缩写与百分比说明](../content/public-reader/evidence-weight.md)。A–E 是草稿排序，H1–H6 是测了什么；全文待复核不等于结论已经确认。导航是 14 个可选入口，不是必读的 14 步。
+
+当前导航入口使用“普通读者图例 / Reader notes”简洁视图，集中显示标题、先看什么、避免误读；原“表格”视图仍保留全部字段。已登录页面可正常打开该导航；这不代表未登录访客也有同样的访问范围。
+
+**公开入口提醒 / Visitor access:** 2026-10-10 未登录浏览器测试中，当前导航链接跳回旧“数据表”，侧栏未显示当前导航。API 已确认新表和旧表位于同一多维表格，但这不证明访客能看到新表。若遇到同样情况，先读 [GitHub 普通读者入口](../content/public-reader/start-here.md)；当前表的公开分享范围仍需管理员核对。本次没有扩大分享权限。
+
 ## 全部多维表格 / All Bitable Tables
 
-| 类别 | 稳定表名 | 记录数 | 状态 | 入口 |
-| --- | --- | ---: | --- | --- |
+| 稳定表名 | 记录数 | 看这张表能得到什么 | 状态 | 入口 |
+| --- | ---: | --- | --- | --- |
 {table_rows}
+
+前五张表是目录、候选、短名单、待复核笔记和比较矩阵等处理层；同一篇论文会跨层出现，行数不能相加当作独立论文数。Active 只表示当前使用，不表示成分有效。Five overlapping data layers; active is an asset status, not efficacy.
+
+飞书文件里还保留历史表；带旧月份的表不能当成当前版本。管理员复查时，请用未登录窗口点开当前导航，确认显示 14 个入口，再核对这 9 张表的公开只读范围；不要为了方便阅读而开放编辑权限。
+
+图表数字来自有容量上限的当前集合；0 不代表没有研究，成分“50% A/B 证据面”是两个用途场景中的一个，不是一半论文有效。图片制作日期也不是评级重新确认日期。
 
 ## 为什么数量受到控制 / Why the Counts Stay Bounded
 
@@ -259,6 +272,8 @@ def build_navigation(registry: list[dict[str, str]]) -> None:
                 "English title": en,
                 "适合谁": audience,
                 "一句话说明": note,
+                "先看什么 / Start with": NAVIGATION_HELP[index - 1][0],
+                "避免误读 / Do not infer": NAVIGATION_HELP[index - 1][1],
                 "GitHub链接": f"{GITHUB}/blob/main/{github_path}",
                 "飞书链接": by_key[feishu_key]["url"],
                 "资产类型": asset_type,
@@ -617,6 +632,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
         <div class="metric gold"><b>1,500</b><span>证据矩阵 / matrix rows</span></div>
         <div class="metric coral"><b>{public_row_total:,}</b><span>五层 CSV 总行数，不是论文数</span></div>
       </div>
+      {reader_legend_html()}
     </div></section>
 
     <section id="cleanup" class="alt"><div class="inner">

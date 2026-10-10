@@ -14,6 +14,7 @@ import os
 import re
 import shutil
 from pathlib import Path
+from reader_annotations import VISUAL_NOTES
 from typing import Any
 
 from PIL import Image, ImageDraw, ImageFont
@@ -547,6 +548,9 @@ def main() -> None:
             "local_path",
         ],
     )
+    for item in heatmap_manifest:
+        key = Path(item["local_path"]).name.removesuffix(f"-{UPDATE_MONTH}.png")
+        item["description"] = VISUAL_NOTES[key]
     write_csv(
         DATA_DIR / f"visual_heatmap_assets_{UPDATE_MONTH_UNDERSCORE}.csv",
         heatmap_manifest,

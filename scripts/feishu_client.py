@@ -131,6 +131,19 @@ class FeishuClient:
                 break
         return tables
 
+    def update_bitable_field_description(
+        self, app_token: str, table_id: str, field: Dict[str, Any], text: str
+    ) -> Dict[str, Any]:
+        """Add help without renaming, converting or unhiding an existing field."""
+        if field["type"] not in (1, 17):
+            raise ValueError("Reader help only supports text and attachment fields")
+        body = {key: field[key] for key in ("field_name", "type", "property", "ui_type", "is_hidden") if key in field}
+        description = field.get("description")
+        body["description"] = {**(description if isinstance(description, dict) else {}), "text": text}
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/fields/{field['field_id']}"
+        resp = requests.put(url, headers=self._headers(), json=body, timeout=30)
+        return self._json(resp)
+
     def create_bitable_table(
         self,
         app_token: str,
@@ -202,6 +215,11 @@ class FeishuClient:
             if not payload.get("has_more") or not page_token:
                 break
         return views
+
+    def set_bitable_view_hidden_fields(self, app_token: str, table_id: str, view_id: str, field_ids: List[str]) -> Dict[str, Any]:
+        url = f"{self.base_url}/open-apis/bitable/v1/apps/{app_token}/tables/{table_id}/views/{view_id}"
+        resp = requests.patch(url, headers=self._headers(), json={"property": {"hidden_fields": field_ids}}, timeout=30)
+        return self._json(resp)
 
     def upload_bitable_file(self, app_token: str, file_path: str | Path, parent_type: str = "bitable_file") -> str:
         path = Path(file_path)

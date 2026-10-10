@@ -28,7 +28,17 @@ The content commit was anonymously verified on public main. Its immutable README
 
 旧的可选云端飞书工作流不是本轮九表更新的证明；九表以完成写入后的只读审计为验收依据。后续验收记录提交只补状态和交接说明，不改变内容快照。
 
-## Public Caveat / 公开警示
+## Reader Annotation Pass / 普通读者标注检查
+
+2026-10-10 另做一次读者视角检查，没有增加论文、改评级或重画 PNG。已补五层处理关系、A–E 草稿排序与 H1–H6 终点的区别、英文状态、成分两场景百分比、撤稿分母和三种日期说明。入门页旧撤稿数已修正为当前 596 条匹配行。
+
+飞书 9 张当前表的 67 处字段说明已逐项写入并回读；14 条导航加上“先看什么”和“避免误读”，7 张主图的说明同步更新。新增一个三列“普通读者图例 / Reader notes”视图，保留原视图与全部数据。已登录浏览器确认该视图可打开；未登录时曾跳回旧“数据表”，公开访客可见性仍需管理员核对，本次未改分享权限。
+
+62 项单元测试与源发布校验通过。两份自包含报告各 57 个嵌入 PNG 的 SHA-256 与原图完全一致，仅更新文字与链接。飞书简洁视图已在浏览器重新加载确认三列说明与多行布局保存成功。本次未重新运行本地 HTML 的浏览器下载测试，前面的 Playwright 结果属于标注前版本。
+
+The annotation pass distinguishes grades, outcome codes, review status, chart denominators and dates. It adds 67 field descriptions and two notes to each of the 14 navigation entries, without changing evidence or PNGs. The signed-in reader view works; anonymous visibility is a separate unresolved check. Sharing permissions were not changed.
+
+## Public Boundaries / 使用边界
 
 - 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。
 - Draft status: automatically prepared; not fully reviewed; not medical advice.

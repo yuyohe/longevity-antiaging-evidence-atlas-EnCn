@@ -7,6 +7,7 @@ import os
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
+from reader_annotations import reader_legend_html
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -196,7 +197,8 @@ def build_heatmap_html(topic_year_rows: list[dict[str, str]], topic_evidence_row
   <main>
     <section>
       <h2>主题 × 年份</h2>
-      <div class="note">这张图看研究活跃度，不是有效性排序。近期文献需要人工复核后才能改变公开结论等级。</div>
+      <div class="note">只统计有容量上限的当前矩阵，不是全球论文总量；颜色深表示该格记录多。0 是本次未纳入，不是没有研究或无效。2026 年未结束，不能与完整年份直接比较。</div>
+      {reader_legend_html()}
       <table><thead><tr><th>主题</th>{"".join(f"<th>{year}</th>" for year in years)}<th>合计</th></tr></thead><tbody>{"".join(year_rows)}</tbody></table>
     </section>
     <section>
@@ -217,16 +219,18 @@ def build_heatmap_html(topic_year_rows: list[dict[str, str]], topic_evidence_row
 
 品牌：{BRAND_NAME}
 
-颜色版 HTML：`docs/research-heatmap-{MONTH}.html`
+颜色版 HTML：[打开文件 / Open HTML](../../docs/research-heatmap-{MONTH}.html)。GitHub 文件页可能只显示源代码；该页不是直接运行的网站。
 
-这张图看研究活跃度，不是有效性排序。2026 年还没有结束，不能和 2025 全年直接比较。
+这张图只统计**有容量上限的当前证据矩阵**，不是全球论文总量，也不是有效性排序。筛选和主题容量会影响数量。**0 表示当前集合没有记录，不是这个方向没有研究或无效**。2026 年尚未结束，不能与完整年份直接比较。
+
+A–E 是草稿排序，不是标准 GRADE 或疗效等级；主题 A/B 比例的分母是当前该主题矩阵记录数，分母为 0 时比例不可解释。成分的 A/B 证据面则只比较健康寿命、皮肤两个场景：1/2=50%，不是一半论文有效。[完整读表说明 / Full glossary](evidence-weight.md)。
 
 {md_table(["主题", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "合计"], md_rows)}
 
 ## 数据文件
 
-- `data/research_heatmap_topic_year_{MONTH_UNDERSCORE}.csv`
-- `data/research_heatmap_topic_evidence_{MONTH_UNDERSCORE}.csv`
+- [主题与年份 / Topic by year](../../data/research_heatmap_topic_year_{MONTH_UNDERSCORE}.csv)
+- [主题与草稿等级 / Topic by draft grade](../../data/research_heatmap_topic_evidence_{MONTH_UNDERSCORE}.csv)
 """
     (CONTENT / "public-reader" / "research-heatmap.md").write_text(md_text, encoding="utf-8")
     (BUILD / "feishu-public-reader").mkdir(parents=True, exist_ok=True)

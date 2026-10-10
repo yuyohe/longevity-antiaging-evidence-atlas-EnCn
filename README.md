@@ -9,6 +9,8 @@ A bilingual evidence map: who was studied, what was measured, how reliable the f
 
 ## 从这里开始 / Start Here
 
+- **[第一次来看 / First visit](content/public-reader/start-here.md)**：选自己的问题，不必先翻数据 / Choose a question before browsing data.
+- **[读表与缩写说明 / Reading guide and glossary](content/public-reader/evidence-weight.md)**：A/B、H1–H6、草稿状态、百分比和日期 / Grades, outcomes, review status, percentages and dates.
 - **[资产总目录 / Asset catalog](docs/asset-catalog.md)**：当前使用、上一期对照、历史恢复 / Current, previous and archived assets.
 - **[本次整理说明 / Current reader update](content/public-reader/october-10-2026-update.md)**：新文献与清理记录 / New literature and curation.
 - **[自包含图文报告 / Offline visual report](docs/october-10-public-update-2026-10.html)**：内嵌 57 张图 / 57 embedded PNGs.
@@ -19,6 +21,10 @@ A bilingual evidence map: who was studied, what was measured, how reliable the f
 HTML 是可离线打开的文件；GitHub 文件页不一定直接运行它。图片全部嵌入，无需额外网站或本地服务器。
 
 The HTML files open offline with embedded images. GitHub's file page may display source rather than run the HTML.
+
+飞书链接若跳回旧“数据表”，或没有显示“当前阅读导航”，先用上面的 GitHub 阅读入口；目前未登录访客的当前表可见性仍需管理员核对。
+
+If Feishu returns to an old table or hides the current navigation, use the GitHub reader entry. Anonymous visibility of the current tables still needs an administrator check.
 
 ## 本次做了什么 / This Update
 
