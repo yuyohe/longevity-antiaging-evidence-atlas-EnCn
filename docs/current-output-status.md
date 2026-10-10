@@ -22,7 +22,11 @@ Playwright 检查两个自包含 HTML：各 57/57 张图解码，桌面 1440×10
 
 Feishu read-back passed for all nine stable tables, including counts, keys, source fields, branding, links and all 57 image attachments. Navigation retains 14 entries. Full local release validation also passed.
 
-GitHub 发布确认和公开版本自动测试结果将在推送后补入本页。本地完成不等同于线上发布。
+GitHub 内容提交 [`abf6a61d9f281d88ce50bdfe368110ad2cf1875a`](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/commit/abf6a61d9f281d88ce50bdfe368110ad2cf1875a) 已匿名确认出现在公开 `main`（2026-10-10 01:23 UTC）。不可变版本的 README 与本地 SHA-256 一致，日期/品牌正确，无连续问号或替换字符；About 简介保留商标和双语说明。[GitHub Lint 验收](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/actions/runs/38012975341)通过，包含单元测试、草稿校验、源发布/归档校验与索引构建。
+
+The content commit was anonymously verified on public main. Its immutable README matches the local bytes and preserves the date, exact brand and bilingual text without mojibake. GitHub Lint passed.
+
+旧的可选云端飞书工作流不是本轮九表更新的证明；九表以完成写入后的只读审计为验收依据。后续验收记录提交只补状态和交接说明，不改变内容快照。
 
 ## Public Caveat / 公开警示
 

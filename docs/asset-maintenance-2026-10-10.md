@@ -52,6 +52,10 @@ Six featured studies have Chinese titles, short interpretations and explicit lim
 
 Read-only acceptance passed all nine tables after synchronization. Current source fields match; all image attachments are present. No credentials or attachment tokens are public assets.
 
+GitHub 内容提交 [`abf6a61d`](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/commit/abf6a61d9f281d88ce50bdfe368110ad2cf1875a) 于 2026-10-10 01:23 UTC 匿名确认出现在公开 `main`，README 字节、日期、品牌和双语文字通过核验。[Lint 自动测试](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/actions/runs/38012975341)通过。首次上传遇到 HTTP 408，确认远端未变化后重试成功；只对本次命令使用 HTTP/1.1、OpenSSL 和 64 MiB 请求缓冲，没有改全局 Git 设置，没有强制推送。
+
+The public content commit and its CI were verified. An initial HTTP timeout was retried without changing global Git settings or forcing the branch. The optional REST fallback was not used.
+
 同步缓存、差异目录、PubMed 核对缓存均按具体发布日期隔离。基线比较从校验后的 10 月 1 日 ZIP 读取，避免同月覆盖后与自己比较。配置统一由 `data/current_release.json` 指定。
 
 ```powershell

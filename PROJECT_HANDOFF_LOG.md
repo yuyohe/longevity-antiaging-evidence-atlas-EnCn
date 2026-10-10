@@ -19,6 +19,8 @@ Current snapshot: **2026-10-10**. Worktree `D:\longevity\github-publish-current`
 - All 2,450 finding PMIDs checked officially; missing/title conflicts 0; one verified title change, 12 finding PMCID / 17 candidate PMCID fixes. Six source-table Chinese annotations remain abstract-based and full-text-pending.
 - Mixed/nonrandomized allocation is independently typed and capped at C; scoring does not mistake the substring nonrandomized for a fully randomized design.
 - Existing Feishu IDs remain stable; read-only audit passed 9/9 at 2026-10-10 00:50 UTC. Counts, keys and audited source fields match, including Chinese title/result/conclusion; all 57 image attachments and 14 navigation entries are current. Audited mojibake records: zero. Full local release validation and 55 unit tests passed; browser-generated and original-PNG downloads passed. Acceptance is recorded in `docs/current-output-status.md`.
+- Content commit `abf6a61d9f281d88ce50bdfe368110ad2cf1875a` was anonymously verified on public main at 2026-10-10 01:23 UTC. Immutable README bytes/date/brand/bilingual text matched; GitHub About retains the exact brand. Lint run `38012975341` passed. Follow-up acceptance metadata does not change the source data or images.
+- Git transport: an initial HTTP 408 left main unchanged. The successful retry used `git -c http.version=HTTP/1.1 -c http.sslBackend=openssl -c http.postBuffer=67108864 push origin HEAD:main`; no global settings changed, no force push, no REST publication used. Large transfers may take time even after buffered pack output reaches 100%.
 - No removable-drive copy. Keep the dirty development checkout and older local worktrees unchanged.
 
 ## Previous Snapshot / 上期 2026-10-01
