@@ -2,38 +2,38 @@
 
 品牌：宇多Yul细胞/yulcell
 
-生成日期：2026-10-01
+生成日期：2026-10-10
 
 ## 本月一句话
 
-按 2026/09/22 至 2026/10/01 的 PubMed 窗口找到 1,216 条匹配，其中 1,129 条是新候选、87 条已在库中。清理重复和弱相关记录后，当前候选库由 11,141 条调整为 11,161 条，证据发现由 2,339 条调整为 2,424 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。 近期文献仍是草稿层，不直接改变医学结论。
+按 2026/10/02 至 2026/10/10 的 PubMed 窗口找到 298 条匹配，其中 289 条是新候选、9 条已在库中。清理重复和弱相关记录后，当前候选库由 11,161 条调整为 11,167 条，证据发现由 2,424 条调整为 2,450 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。 近期文献仍是草稿层，不直接改变医学结论。
 
 ## 资产规模
 
-- 候选文献：11,161
-- 证据发现：2,424
+- 候选文献：11,167
+- 证据发现：2,450
 - 证据矩阵：1,500
-- 检索新增候选：1,129
-- PubMed 匹配总数：1,216
-- 近期入选 findings：161
-- 候选退出决定：1,109
-- findings 退出决定：1,100
+- 检索新增候选：289
+- PubMed 匹配总数：298
+- 近期入选 findings：39
+- 候选退出决定：283
+- findings 退出决定：268
 - 皮肤/外观主题：9
 - 补剂条目：100
 - 撤稿观察目标：117
 
 ## 近期文献样例
 
-本轮保留近期候选 307 条，其中 161 条进入 findings；记录候选退出决定 1,109 条、findings 退出决定 1,100 条。退出理由可在 data/archive/ 中复核。
+本轮保留近期候选 81 条，其中 39 条进入 findings；记录候选退出决定 283 条、findings 退出决定 268 条。退出理由可在 data/archive/ 中复核。
 
 | PMID | 年份 | 题名 | 查询层 |
 | --- | --- | --- | --- |
-| 42773062 | 2026 | Ultra-processed food consumption and risk of multiple chronic diseases among 8,819,894 adults from 51 prospective cohort | dietary-pattern-longevity__curated_recent_update_2026_10 |
-| 42551769 | 2026 | Effects of digital health-based exercise interventions on older adults with sarcopenia: Systematic Review and Meta-Analy | resistance-training-muscle__curated_recent_update_2026_08 |
-| 42730869 | 2026 | GLP-1 Receptor Agonists and Musculoskeletal Outcomes: A Systematic Literature Review and Meta-Analysis. | glp1-weight-cardiometabolic__curated_recent_update_2026_10 |
-| 42786612 | 2026 | Effect of Continuous Positive Airway Pressure on Left Atrial Volume Index in Patients With Stroke and Obstructive Sleep  | sleep-aging__curated_recent_update_2026_10 |
-| 42782098 | 2026 | Sarcopenia Is Associated With Severe Treatment Toxicity and Mortality in Older Adults With Advanced Cancer: A Secondary  | resistance-training-muscle__curated_recent_update_2026_10 |
-| 41940793 | 2026 | Estimating the True MACE Benefits From Tirzepatide in SURPASS-CVOT Using an Imputed Placebo Analysis of REWIND. | glp1-weight-cardiometabolic__curated_recent_update_2026_10 |
+| 42832337 | 2026 | Changes in physical performance and frailty-associated risk associated with participation in a community exercise progra | resistance-training-muscle__curated_recent_update_2026_10_10 |
+| 42678372 | 2026 | Effects of resistance training sets on cognition and brain-derived neurotrophic factor in cognitively impaired individua | resistance-training-muscle__curated_recent_update_2026_10_10 |
+| 42849790 | 2026 | Associations of Pre-Diagnostic Cardiorespiratory Fitness and Handgrip Strength With All-Cause Mortality and 15-Year Surv | cardiorespiratory-fitness__curated_recent_update_2026_10_10 |
+| 42837024 | 2026 | GLP-1 receptor agonists for obstructive sleep apnea: a meta-analysis of randomized controlled trials. | glp1-weight-cardiometabolic__curated_recent_update_2026_10_10 |
+| 42834340 | 2026 | Therapeutic reversal of cellular senescence: A systematic review of senolytics, senomorphics and anti-ageing therapies i | senolytics__curated_recent_update_2026_10_10 |
+| 42834177 | 2026 | Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells. | autophagy-mitophagy__curated_recent_update_2026_10_10 |
 
 ## 研究热力图
 

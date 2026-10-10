@@ -14,6 +14,32 @@ import expand_healthspan_pubmed_v05 as expansion  # noqa: E402
 
 
 class StudyClassificationTests(unittest.TestCase):
+    def test_conclusion_identifies_cohort_when_title_omits_design(self):
+        row = {"title_en": "Associations of fitness with mortality after cancer diagnosis",
+               "publication_types": "Journal Article", "result_en": "Among 10,462 participants, 2,101 deaths occurred.",
+               "conclusion_en": "Fitness showed an inverse association with mortality in this cohort."}
+        self.assertEqual(scoring.normalized_study_type(row), "human_cohort")
+
+    def test_measured_apnea_frequency_is_a_functional_endpoint(self):
+        row = {"title_en": "GLP-1 receptor agonists for obstructive sleep apnea",
+               "conclusion_en": "Therapies reduced AHI and body weight.", "endpoint_class_draft": "H3"}
+        self.assertEqual(scoring.normalized_healthspan_endpoint(row), "H2")
+
+    def test_mixed_allocation_does_not_inherit_fully_randomized_label(self):
+        for title, body in [
+            ("Resistance training: a quasi-experimental study", "Participants were randomly assigned."),
+            ("Resistance training in older adults", "We randomized thirty participants and nonrandomly allocated thirteen participants to a control group."),
+        ]:
+            row = {"title_en": title, "result_en": body, "publication_types": "Randomized Controlled Trial",
+                   "evidence_source_depth": "abstract_only", "endpoint_class_draft": "H2",
+                   "topic_id": "resistance-training-muscle"}
+            expected = "human_nonrandomized_or_mixed_trial"
+            self.assertEqual(expansion.classify_study(["Randomized Controlled Trial"], body, "PubMed", title), expected)
+            self.assertEqual(scoring.normalized_study_type(row), expected)
+            self.assertEqual(scoring.normalized_species(row, expected), "human")
+            self.assertEqual(scoring.confidence_cap(row, "longevity"), "C")
+            self.assertLess(scoring.design_score(expected), scoring.design_score("human_randomized_or_clinical_trial"))
+
     def test_secondary_design_does_not_inherit_parent_trial_type(self):
         cases = [
             ("Sarcopenia Is Associated With Mortality: A Secondary Analysis", "human_observational_secondary_analysis"),

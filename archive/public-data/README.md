@@ -2,7 +2,7 @@
 
 To keep the repository usable, the current and previous monthly CSV snapshots remain unpacked under `public-data/`. Older or superseded same-month five-table snapshots are stored here as verified ZIP archives.
 
-为控制仓库体量，当前月和上一月的五张 CSV 保持展开；更早快照或同月被替代的完整快照压缩到这里。当前归档包括 5 月、6 月、7 月、8 月中期、8 月底和 9 月中旬五表快照。
+为控制展开目录体量，当前月和上一月的五张 CSV 保持展开；更早快照或同月被替代的完整快照压缩到这里。归档包括 5 月、6 月、7 月、8 月多个版本、9 月中旬，以及 [10 月 1 日五表快照](public-data-2026-10-01.zip)。归档不会缩小完整 Git 历史。
 
 Each ZIP contains:
 

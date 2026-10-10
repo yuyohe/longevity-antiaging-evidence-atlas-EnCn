@@ -266,7 +266,7 @@ def normalized_study_type(row: dict[str, str]) -> str:
         return "human_mendelian_randomization"
     if (
         any(term in title_and_types for term in ["cohort", "prospective study", "longitudinal study"])
-        or any(term in body for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort"])
+        or any(term in body for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort", "in this cohort"])
     ):
         return "human_cohort"
     if any(
@@ -309,6 +309,7 @@ def normalized_species(row: dict[str, str], study_type: str) -> str:
         "human_mendelian_randomization",
         "human_indirect_model_analysis",
         "human_observational_secondary_analysis",
+        "human_nonrandomized_or_mixed_trial",
     }:
         return "human"
     if current in {"human", "mouse", "animal", "cell"}:
@@ -341,6 +342,8 @@ def normalized_healthspan_endpoint(row: dict[str, str]) -> str:
         return "H1"
     if any(term in text for term in ["vo2", "frailty", "grip strength", "cognition", "falls", "sarcopenia", "disability", "quality of life"]):
         return "H2"
+    if any(term in text for term in ["reduced ahi", "apnea-hypopnea index", "apnoea-hypopnoea index", "sleep apnea severity"]):
+        return "H2"
     if any(term in text for term in ["ldl", "apob", "blood pressure", "hba1c", "waist", "glucose", "body weight", "obesity", "insulin"]):
         return "H3"
     if any(term in text for term in ["epigenetic clock", "methylation age", "biological age", "aging clock"]):
@@ -356,6 +359,8 @@ def design_score(study_type: str) -> int:
         return 3
     if "systematic_review" in s or "meta_analysis" in s or "meta-analysis" in s:
         return 34
+    if s == "human_nonrandomized_or_mixed_trial":
+        return 18
     if "randomized" in s or "clinical_trial" in s or "clinical trial" in s:
         return 29
     if "mendelian" in s:
@@ -491,6 +496,8 @@ def risk_adjustment(row: dict[str, str], domain: str) -> tuple[int, str, str, st
         industry_risk = "high_commercial_overclaim_risk"
     if "systematic_review" in study or "meta_analysis" in study:
         tool, rob, amstar = "AMSTAR 2", "not_assessed_public_draft", "not_assessed_public_draft"
+    elif study == "human_nonrandomized_or_mixed_trial":
+        tool, rob, amstar = "comparison-specific RoB 2 / ROBINS-I", "not_assessed_public_draft", "not_applicable"
     elif "randomized" in study or "clinical" in study:
         tool, rob, amstar = "Cochrane RoB 2", "not_assessed_public_draft", "not_applicable"
     elif "cohort" in study or "observational" in study:
@@ -527,7 +534,7 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
         re.IGNORECASE,
     )
     limited_design = bool(case_based) or study in {
-        "human_indirect_model_analysis", "human_observational_secondary_analysis"
+        "human_indirect_model_analysis", "human_observational_secondary_analysis", "human_nonrandomized_or_mixed_trial"
     }
     if domain == "longevity":
         topic_caps = {

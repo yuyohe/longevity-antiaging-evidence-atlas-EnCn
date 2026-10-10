@@ -23,8 +23,8 @@ CANDIDATES = DATA / "candidate_sources.csv"
 FINDINGS = DATA / "evidence_findings.csv"
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-08")
 MONTH_UNDERSCORE = MONTH.replace("-", "_")
-REPORT = DATA / f"pubmed_identifier_repair_report_{MONTH_UNDERSCORE}.json"
-CACHE = BUILD / f"pubmed_identifier_summary_cache_{MONTH_UNDERSCORE}.json"
+REPORT = ROOT / os.environ.get("EVIDENCE_ATLAS_IDENTIFIER_REPORT", f"data/pubmed_identifier_repair_report_{MONTH_UNDERSCORE}.json")
+CACHE = BUILD / f"pubmed_identifier_summary_cache_{os.environ.get('EVIDENCE_ATLAS_UPDATE_DATE', MONTH_UNDERSCORE)}.json"
 
 
 def read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:

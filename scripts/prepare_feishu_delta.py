@@ -5,29 +5,34 @@ import json
 import os
 from pathlib import Path
 
+from release_baseline import baseline_rows
+
 ROOT = Path(__file__).resolve().parents[1]
 MONTH = os.environ["EVIDENCE_ATLAS_ASSET_MONTH"]
 BASELINE = os.environ["EVIDENCE_ATLAS_BASELINE_MONTH"]
 
 
-def indexed(path, key):
-    with path.open(encoding="utf-8-sig", newline="") as handle:
-        rows = list(csv.DictReader(handle))
+def indexed_rows(rows, key, label):
     result = {row[key]: row for row in rows}
     if len(result) != len(rows) or "" in result:
-        raise RuntimeError(f"Blank or duplicate primary keys in {path.name}")
+        raise RuntimeError(f"Blank or duplicate primary keys in {label}")
     return result
 
 
+def indexed(path, key):
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        return indexed_rows(list(csv.DictReader(handle)), key, path.name)
+
+
 def main():
-    output = ROOT / "output" / f"feishu-delta-{MONTH}"
+    output = Path(os.environ.get("FEISHU_DELTA_DIR", str(ROOT / "output" / f"feishu-delta-{MONTH}")))
     output.mkdir(parents=True, exist_ok=True)
     summary = {}
     for asset, key in [("literature_library", "library_id"), ("candidate_sources", "id"),
                        ("shortlist_sources", "candidate_id"), ("evidence_findings", "finding_id"),
                        ("evidence_matrix", "paper_id")]:
         prefix = asset.replace("_", "-")
-        before = indexed(ROOT / "public-data" / f"{prefix}-{BASELINE}.csv", key)
+        before = indexed_rows(baseline_rows(ROOT, os.environ, asset), key, f"baseline {asset}")
         after = indexed(ROOT / "public-data" / f"{prefix}-{MONTH}.csv", key)
         changed = sorted(k for k, row in after.items() if before.get(k) != row)
         (output / f"{asset}.txt").write_text("".join(k + "\n" for k in changed), encoding="utf-8")

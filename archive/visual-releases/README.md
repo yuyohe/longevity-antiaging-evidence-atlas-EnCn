@@ -1,6 +1,6 @@
 # 宇多Yul细胞/yulcell 历史视觉归档 / Historical Visual Archives
 
-归档日期 / Archived on: **2026-10-01**
+最近新增 / Latest addition: **2026-10-10**
 
 这里保存被替代版本的大型自包含 HTML 与原始 PNG。不是当前结论。最新版本见[资产总目录 / Current asset catalog](../../docs/asset-catalog.md)。
 
@@ -21,6 +21,10 @@ These ZIP files preserve superseded self-contained reports and PNGs. Do not trea
 所有包在移出展开目录前已逐文件读取并校验。原件仍可从 Git 提交 `2cebd911c985a11e69cff975ea03799eae5805a7` 恢复。9 月包只归档已被替代的中旬报告和面板；9 月下旬与 10 月当前版继续直接可用。
 
 All files were verified before retirement. The September package covers superseded mid-month HTML only; late September and current October remain directly available.
+
+本轮新增 [2026-10-01 完整视觉包](visual-release-2026-10-01.zip)：57 张 PNG 和两个自包含 HTML，共 59 个原件；冻结来源是 Git `9dc9f4f7eb5616b856cbcd732c0f4dc09c04a26c`。10 月 1 日报告和面板原路径保留归档提示。`docs/assets/visual-assets/2026-10/` 现在指向最新 10 月 10 日图片，不能再用这个活动路径复现 10 月 1 日图。
+
+The October 1 package preserves all 59 visual originals. Its HTML paths now show archive notices. The active October image directory represents October 10; recover earlier October PNGs from this archive or its frozen commit.
 
 验证已有视觉包 / Verify all existing visual archives:
 

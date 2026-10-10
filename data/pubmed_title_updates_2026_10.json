@@ -7,5 +7,14 @@
     "checked_date": "2026-10-01",
     "source_url": "https://pubmed.ncbi.nlm.nih.gov/42520895/",
     "verification": "Official EFetch and ESummary agree on the updated title; PMID, DOI and journal match the existing record. Animal/cell study, not a human intervention trial."
+  },
+  {
+    "pmid": "42772454",
+    "doi": "10.1016/j.ajcnut.2026.101533",
+    "previous_title": "Effects of a self-selected vegetarian vs. omnivorous diet on protein intake and muscle mass in older adults during resistance exercise: the IMPACT randomized controlled trial.",
+    "official_title": "Effects of a self-selected vegetarian compared with omnivorous diet on protein intake and muscle mass in older adults during resistance exercise: the IMPACT randomized controlled trial.",
+    "checked_date": "2026-10-10",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42772454/",
+    "verification": "Official EFetch and ESummary agree; PMID, DOI and journal match. The wording vs. changed to compared with; this is the same IMPACT trial, not a new paper."
   }
 ]

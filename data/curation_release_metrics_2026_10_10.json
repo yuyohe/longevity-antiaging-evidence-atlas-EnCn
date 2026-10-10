@@ -1,0 +1,269 @@
+{
+  "release": "2026-10-10-curated",
+  "date": "2026-10-10",
+  "search": {
+    "date_window": "2026/10/02..2026/10/10",
+    "queries": 20,
+    "unique_pubmed_matches": 298,
+    "new_rows": 289,
+    "matched_existing": 9
+  },
+  "capacity_policy": {
+    "candidate_per_topic_cap": 600,
+    "finding_per_topic_cap": 200,
+    "matrix_global_cap": 1500,
+    "matrix_per_topic_cap": 100,
+    "core_review_per_high_grade_topic": 3
+  },
+  "before": {
+    "candidate_records": 11161,
+    "finding_records": 2424
+  },
+  "after": {
+    "candidate_records": 11167,
+    "finding_records": 2450,
+    "recent_candidates_retained": 81,
+    "recent_findings_retained": 39
+  },
+  "retired": {
+    "candidate_decisions": 283,
+    "candidate_reasons": {
+      "topic_capacity_limit": 283
+    },
+    "finding_decisions": 268,
+    "finding_reasons": {
+      "nonhuman_record_in_human_outcome_topic": 9,
+      "protocol_or_registered_plan": 3,
+      "title_topic_signal_missing": 172,
+      "topic_capacity_limit": 40,
+      "topic_scope_mismatch": 44
+    }
+  },
+  "candidate_topic_counts": {
+    "autophagy-mitophagy": 600,
+    "blood-pressure-aging": 600,
+    "caloric-restriction-human": 600,
+    "cardiorespiratory-fitness": 600,
+    "dietary-pattern-longevity": 600,
+    "epigenetic-clocks": 600,
+    "glp1-weight-cardiometabolic": 600,
+    "itp-mouse-lifespan": 179,
+    "klotho-il11-aging": 600,
+    "ldl-apob-cardiovascular-risk": 600,
+    "metformin-aging": 600,
+    "microbiome-inflammaging": 600,
+    "nad-nmn-nr-aging": 549,
+    "partial-reprogramming": 322,
+    "physical-activity-healthspan": 600,
+    "rapamycin-mtor-aging": 517,
+    "resistance-training-muscle": 600,
+    "senolytics": 600,
+    "sleep-aging": 600,
+    "time-restricted-eating": 600
+  },
+  "finding_topic_counts": {
+    "autophagy-mitophagy": 79,
+    "blood-pressure-aging": 200,
+    "caloric-restriction-human": 103,
+    "cardiorespiratory-fitness": 147,
+    "dietary-pattern-longevity": 200,
+    "epigenetic-clocks": 126,
+    "glp1-weight-cardiometabolic": 200,
+    "itp-mouse-lifespan": 11,
+    "klotho-il11-aging": 77,
+    "ldl-apob-cardiovascular-risk": 200,
+    "metformin-aging": 48,
+    "microbiome-inflammaging": 95,
+    "nad-nmn-nr-aging": 38,
+    "partial-reprogramming": 30,
+    "physical-activity-healthspan": 200,
+    "rapamycin-mtor-aging": 56,
+    "resistance-training-muscle": 185,
+    "senolytics": 55,
+    "sleep-aging": 200,
+    "time-restricted-eating": 200
+  },
+  "recent_selected_examples": [
+    {
+      "candidate_id": "pubmed-42848227",
+      "pmid": "42848227",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Efficacy and safety of PCSK9 inhibitors combined with statins in acute ischemic stroke: a systematic review and meta-analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42848972",
+      "pmid": "42848972",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Effects of Blood Pressure Lowering by Hematoma Location in Acute Intracerebral Hemorrhage.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42786612",
+      "pmid": "42786612",
+      "topic_id": "sleep-aging",
+      "title_en": "Effect of Continuous Positive Airway Pressure on Left Atrial Volume Index in Patients With Stroke and Obstructive Sleep Apnea: A Randomized Trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42826254",
+      "pmid": "42826254",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Comparative evaluation of the sarcopenia index and 5 related creatinine-cystatin C biomarkers in relation to all-cause mortality in older adults: A cohort study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42842780",
+      "pmid": "42842780",
+      "topic_id": "cardiorespiratory-fitness",
+      "title_en": "Nurse-Led Qigong Program Improves Exercise Capacity, Quality of Life, and Fatigue in Patients With Heart Failure: A Randomized Controlled Trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42851132",
+      "pmid": "42851132",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Estimated small dense low-density lipoprotein cholesterol and incident myocardial infarction in patients undergoing dialysis: a nationwide cohort study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42848613",
+      "pmid": "42848613",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Handgrip Strength for Mortality Prediction in Hemodialysis Patients Using the Chronological-to-Metabolic Age Ratio: A Multicenter Prospective Cohort Study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42843720",
+      "pmid": "42843720",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Low-density lipoprotein cholesterol reduction and its effect on all-cause death: A sub-analysis of the population-based cohort study LATINO.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42841221",
+      "pmid": "42841221",
+      "topic_id": "sleep-aging",
+      "title_en": "Reallocation of 24-hour movement behaviour composition and mortality: exploring effect modification by sleep characteristics.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42832417",
+      "pmid": "42832417",
+      "topic_id": "microbiome-inflammaging",
+      "title_en": "Oral microbiome signatures of ageing and cognitive function across distinct geographical cohorts.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42678372",
+      "pmid": "42678372",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Effects of resistance training sets on cognition and brain-derived neurotrophic factor in cognitively impaired individuals: a quasi-experimental study.",
+      "study_type": "human_nonrandomized_or_mixed_trial",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42849790",
+      "pmid": "42849790",
+      "topic_id": "cardiorespiratory-fitness",
+      "title_en": "Associations of Pre-Diagnostic Cardiorespiratory Fitness and Handgrip Strength With All-Cause Mortality and 15-Year Survival After Cancer Diagnosis.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42843107",
+      "pmid": "42843107",
+      "topic_id": "sleep-aging",
+      "title_en": "Impact of obstructive sleep apnea on outcomes of acute respiratory distress syndrome: propensity matched analysis of a national cohort.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42647189",
+      "pmid": "42647189",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Possible osteosarcopenia is associated with floss in intrinsic capacity and early cognitive deficits: a longitudinal study of older adults in Singapore.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42832337",
+      "pmid": "42832337",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Changes in physical performance and frailty-associated risk associated with participation in a community exercise programme: Findings from the ExWell cohort.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42849860",
+      "pmid": "42849860",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Does Volunteering Give an Extra Health Boost? Volunteering and High Blood Pressure Among Insured and Uninsured U.S. Adults in Late Midlife.",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42842950",
+      "pmid": "42842950",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Kidney Outcomes With GLP-1 Receptor Agonists and Tirzepatide Versus Finerenone in Type 2 Diabetes and Chronic Kidney Disease: A Real-World Cohort Study.",
+      "study_type": "human_cohort",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42720604",
+      "pmid": "42720604",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "\"Uncontrolled Hypertension Among Medicare Beneficiaries in Rural South Carolina.\".",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42837024",
+      "pmid": "42837024",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "GLP-1 receptor agonists for obstructive sleep apnea: a meta-analysis of randomized controlled trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42834177",
+      "pmid": "42834177",
+      "topic_id": "autophagy-mitophagy",
+      "title_en": "Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells.",
+      "study_type": "animal_study",
+      "draft_level": "D"
+    }
+  ],
+  "notes": [
+    "Discovery is not evidence of benefit.",
+    "Retired rows remain recoverable from Git history and prior public snapshots.",
+    "No protocol, commentary, correction, or title-topic mismatch is promoted into active findings."
+  ],
+  "active_turnover": {
+    "candidate_sources": {
+      "before": 11161,
+      "after": 11167,
+      "old_removed": 66,
+      "new_active": 72,
+      "net_change": 6
+    },
+    "evidence_findings": {
+      "before": 2424,
+      "after": 2450,
+      "old_removed": 9,
+      "new_active": 35,
+      "net_change": 26
+    }
+  }
+}

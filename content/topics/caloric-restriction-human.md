@@ -7,7 +7,7 @@
 
 人体证据有价值但边界明显，不能直接等同于延寿已证实。
 
-Draft summary: this topic now includes 102 records; final public claims still require full-text review.
+Draft summary: this topic now includes 103 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -146,6 +146,7 @@ Draft summary: this topic now includes 102 records; final public claims still re
 - [Caloric restriction for the immunometabolic control of human health.](../papers/pubmed-36848376.md) (2024, Cardiovascular research)
 - [The road ahead of dietary restriction on anti-aging: focusing on personalized nutrition.](../papers/pubmed-35950606.md) (2024, Critical reviews in food science and nutrition)
 - [Oxidative stress, antioxidants, hormesis and calorie restriction: The current perspective in the biology of aging.](../papers/pubmed-33845417.md) (2021, Archives of gerontology and geriatrics)
+- [Caloric restriction mimetics rewire the AMPK-mTOR-ULK1 signaling nexus to restore autophagic proteostasis in the aging brain.](../papers/pubmed-42833312.md) (2026, Molecular and cellular neurosciences)
 - [Caloric Restriction Reprograms Adipose Tissues in Rhesus Monkeys.](../papers/pubmed-41042069.md) (2025, Aging cell)
 - [Reduction in metabolic noise reveals rejuvenation following transient severe caloric restriction.](../papers/pubmed-37946010.md) (2024, GeroScience)
 - [Rapamycin not dietary restriction improves resilience against pathogens: a meta-analysis.](../papers/pubmed-36399256.md) (2023, GeroScience)

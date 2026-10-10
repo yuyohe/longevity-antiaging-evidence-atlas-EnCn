@@ -8,6 +8,7 @@ import json
 import re
 import subprocess
 import zipfile
+from datetime import date
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -90,11 +91,28 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", help="Archive and replace only verified historical files")
     parser.add_argument("--repair-links", action="store_true", help="Repair links to already archived files")
+    parser.add_argument("--snapshot-month", help="Archive one explicit monthly PNG snapshot")
+    parser.add_argument("--archive-label", help="Unique archive label, for example 2026-10-01")
+    parser.add_argument("--html", action="append", default=[], help="Exact docs HTML filename to preserve")
     args = parser.parse_args()
     if args.repair_links:
         repair_archived_links()
         return
-    groups = candidates()
+    if args.snapshot_month:
+        if not re.fullmatch(r"\d{4}-\d{2}", args.snapshot_month) or not args.archive_label or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.archive_label):
+            parser.error("Explicit snapshots require YYYY-MM and a unique YYYY-MM-DD archive label")
+        paths = list((ROOT / "docs/assets/visual-assets" / args.snapshot_month).rglob("*.png"))
+        for name in args.html:
+            if Path(name).name != name or not name.endswith(".html"):
+                parser.error("--html must be an exact docs filename")
+            paths.append(ROOT / "docs" / name)
+        if len([p for p in paths if p.suffix == ".png"]) != 57 or not args.html:
+            raise RuntimeError("Expected exactly 57 PNGs and explicit HTML inputs")
+        groups = {args.archive_label: sorted(paths)}
+    else:
+        if args.archive_label or args.html:
+            parser.error("--archive-label and --html require --snapshot-month")
+        groups = candidates()
     if not args.apply:
         print(json.dumps({m: {"files": len(ps), "bytes": sum(p.stat().st_size for p in ps)}
                           for m, ps in groups.items()}, indent=2))
@@ -115,7 +133,7 @@ def main() -> None:
                 raise RuntimeError(f"Unexpected source: {path}")
             records.append({"path": path.relative_to(ROOT).as_posix(), "bytes": path.stat().st_size,
                             "sha256": digest(path.read_bytes())})
-        manifest = {"month": month, "archived_on": "2026-10-01", "source_commit": source_commit, "files": records}
+        manifest = {"month": month, "archived_on": date.today().isoformat(), "source_commit": source_commit, "files": records}
         temp = archive_path.with_suffix(".zip.tmp")
         with zipfile.ZipFile(temp, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
             for row in records:
@@ -140,7 +158,7 @@ def main() -> None:
                       "source_commit": manifest["source_commit"]})
     (ROOT / "data/asset_archive_index.json").write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8")
     (ARCHIVES / "SHA256SUMS.txt").write_text("".join(f"{r['sha256']}  {Path(r['archive']).name}\n" for r in index), encoding="ascii")
-    for month in MONTHS[:-1]:
+    for month in (() if args.snapshot_month else MONTHS[:-1]):
         directory = ROOT / "docs/assets/visual-assets" / month
         directory.mkdir(parents=True, exist_ok=True)
         (directory / "README.md").write_text(f"# {month} 历史图片 / Historical Images\n\n宇多Yul细胞/yulcell 此期 57 张原图已完整归档。\n\n[下载校验后的历史包 / Download verified archive](../../../../archive/visual-releases/visual-release-{month}.zip)\n\n[当前资产目录 / Current assets](../../../asset-catalog.md)\n", encoding="utf-8")

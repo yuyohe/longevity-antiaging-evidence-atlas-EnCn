@@ -1,7 +1,7 @@
-# 飞书公开资产索引（2026 年 10 月初整理更新） / Feishu Public Assets
+# 飞书公开资产索引（2026 年 10 月 10 日资产整理更新） / Feishu Public Assets
 
 **品牌 / Brand:** 宇多Yul细胞/yulcell<br>
-**冻结日期 / Snapshot date:** 2026-10-01<br>
+**冻结日期 / Snapshot date:** 2026-10-10<br>
 **表格策略 / Table policy:** 复用 9 张长期表，不再每月新建一组 / Reuse nine stable tables instead of creating monthly duplicates.
 
 ## 最短阅读路线 / Shortest Route
@@ -14,10 +14,10 @@
 
 | 类别 | 稳定表名 | 记录数 | 状态 | 入口 |
 | --- | --- | ---: | --- | --- |
-| 公开全量数据 | 宇多Yul细胞_当前文献库 | 11,161 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE) |
-| 公开全量数据 | 宇多Yul细胞_当前候选来源 | 11,161 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblWoc9k5UIsKq4J) |
-| 公开全量数据 | 宇多Yul细胞_当前入选短名单 | 2,424 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblhZtMqsgCxFq0v) |
-| 公开全量数据 | 宇多Yul细胞_当前证据发现 | 2,424 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblgAIsjA1UR4jLr) |
+| 公开全量数据 | 宇多Yul细胞_当前文献库 | 11,167 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE) |
+| 公开全量数据 | 宇多Yul细胞_当前候选来源 | 11,167 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblWoc9k5UIsKq4J) |
+| 公开全量数据 | 宇多Yul细胞_当前入选短名单 | 2,450 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblhZtMqsgCxFq0v) |
+| 公开全量数据 | 宇多Yul细胞_当前证据发现 | 2,450 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblgAIsjA1UR4jLr) |
 | 公开全量数据 | 宇多Yul细胞_当前证据矩阵 | 1,500 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir) |
 | 视觉资产 | 宇多Yul细胞_当前研究图 | 6 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL) |
 | 视觉资产 | 宇多Yul细胞_当前50成分卡 | 50 | active | [打开飞书](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla) |

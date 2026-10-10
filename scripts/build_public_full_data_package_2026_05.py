@@ -128,7 +128,7 @@ def main() -> None:
     )
 
     table = "\n".join(
-        f"| {row['资产名称']} | {int(row['记录数']):,} | `{row['公开文件']}` | {row['说明']} |"
+        f"| {row['资产名称']} | {int(row['记录数']):,} | [打开 CSV / Open CSV]({BRAND_GITHUB_URL}/blob/main/{row['公开文件']}) | {row['说明']} |"
         for row in rows
     )
     total = sum(int(row["记录数"]) for row in rows)
@@ -142,6 +142,8 @@ def main() -> None:
 
 这些 `{MONTH}` 文件是本月最新公开快照，具体版本以冻结日期和 Git 提交为准。同月再次发布前，会把旧五表快照压缩校验后放入 `archive/public-data/`；工作候选库不自动改写公开层。下一次经复核发布的数量可能增加，也可能减少。
 
+These are the latest public files for this month. Check the snapshot date and Git commit. Superseded same-month files are preserved in verified archives. Candidate records and draft grades are not established medical conclusions.
+
 搜索关键词：{BRAND_SEO_KEYWORDS}。
 
 | 数据表 | 记录数 | 文件 | 内容 |
@@ -149,6 +151,8 @@ def main() -> None:
 {table}
 
 合计公开记录数：{total:,}。这里是五张处理层表的记录数相加；同一篇文献可能出现在候选、短名单、发现和矩阵等不同层，不能把总行数理解成互不重复的论文篇数。
+
+The five processing layers total {total:,} rows, not unique papers. A paper may appear in several layers.
 
 说明：这些表是证据地图的资料层，不等于个人医疗建议。读者可以用 PMID、DOI、主题、证据等级、期刊和评分字段追溯每条记录。
 """

@@ -78,6 +78,7 @@ FEATURED_NOTES = {
     "42410309": "超重或肥胖人群中替尔泊肽与 GLP-1 受体激动剂心血管结局的 Meta 分析；属于处方药比较，必须由医生结合适应证和风险评估。",
 }
 
+reader_notes = {}
 if os.environ.get("EVIDENCE_ATLAS_FEATURED_NOTES"):
     reader_notes = json.loads((ROOT / os.environ["EVIDENCE_ATLAS_FEATURED_NOTES"]).read_text(encoding="utf-8"))
     FEATURED_NOTES.update({pmid: f"{row['title_zh']}。{row['interpretation_zh']} / {row['interpretation_en']}"
@@ -89,6 +90,7 @@ STUDY_LABELS = {
     "human_randomized_or_clinical_trial": "临床试验 / Clinical trial",
     "human_indirect_model_analysis": "模型间接比较 / Indirect model analysis",
     "human_observational_secondary_analysis": "观察性二次分析 / Observational secondary analysis",
+    "human_nonrandomized_or_mixed_trial": "非随机或混合分配研究 / Nonrandomized or mixed allocation",
 }
 
 RETIREMENT_LABELS = {
@@ -303,6 +305,38 @@ def archive_note() -> str:
             "this tidies the working tree, not the size of the complete Git history.")
 
 
+def featured_sections(findings: list[dict[str, str]], as_html: bool = False) -> str:
+    by_pmid = {row.get("pmid", ""): row for row in findings}
+    sections = []
+    for pmid in FEATURED_PMIDS:
+        row = by_pmid.get(pmid)
+        if not row:
+            continue
+        note = reader_notes.get(pmid) or {"title_zh": row.get("title_zh") or row["title_en"],
+                                         "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                                         "interpretation_zh": FEATURED_NOTES.get(pmid, "题录示例，全文待复核。"),
+                                         "interpretation_en": "Bibliographic example; full-text review pending."}
+        design = STUDY_LABELS.get(row.get("study_type_draft", ""), row.get("study_type_draft", ""))
+        grade = row.get("final_evidence_level", "")
+        url = note["source_url"]
+        if as_html:
+            sections.append(f'<article class="study-note"><h3>{esc(note["title_zh"])}</h3>'
+                            f'<p>{esc(design)} · {esc(grade)} 级草稿 · <a href="{esc(url)}">PubMed {pmid}</a></p>'
+                            f'<p>{esc(note["interpretation_zh"])}</p>'
+                            f'<details><summary>English interpretation</summary><p>{esc(note["interpretation_en"])}</p></details></article>')
+        else:
+            sections.append(f'### {note["title_zh"]}\n\n{design}；{grade} 级草稿。[官方来源 / PubMed {pmid}]({url})\n\n'
+                            f'{note["interpretation_zh"]}\n\n{note["interpretation_en"]}\n')
+    return "\n".join(sections)
+
+
+def turnover_rows(metrics: dict[str, Any]) -> list[list[str]]:
+    return [[label, f"{row['before']:,}", f"{row['old_removed']:,}", f"{row['new_active']:,}",
+             f"{row['after']:,}", f"{row['net_change']:+,}"]
+            for key, label in [("candidate_sources", "候选 / Candidates"), ("evidence_findings", "发现 / Findings")]
+            if (row := metrics.get("active_turnover", {}).get(key))]
+
+
 def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topics: dict[str, dict[str, str]]) -> None:
     before = metrics["before"]
     after = metrics["after"]
@@ -358,6 +392,10 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
 
 This release adds and retires records within fixed capacity limits. Counts may rise or fall; older versions remain recoverable.
 
+{markdown_table(['层级 / Layer', '上期 / Before', '旧记录退出 / Retired', '新进入 / Added', '当前 / After', '净变化 / Net'], turnover_rows(metrics))}
+
+按上期与本期记录 ID 比较；“新进入”可能来自原有候选，不等于本期新发表。Actual turnover compares stable record identifiers, not first-publication dates.
+
 ## 先看懂四个数字 / Four Numbers to Understand First
 
 | 数字 | 是什么 | 不是什么 |
@@ -398,7 +436,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 
 这些例子只是说明本轮覆盖了哪些问题，不是疗效推荐。题名和标识已与 NCBI PubMed 核对；结论仍需全文复核。
 
-{markdown_table(['PMID', '主题', '研究类型草稿', '等级草稿', '怎么理解'], sample_rows)}
+{featured_sections(findings)}
 
 ## 当前等级分布 / Current Draft Grades
 
@@ -419,6 +457,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个；候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。
 - 方案论文、评论勘误、明确动物实验不再被自动抬进人体高等级层。
 - 模型推算的安慰剂比较、试验中的观察性二次分析，不沿用母试验的随机对照身份；本版按更保守的独立类型标注，最高 C 级，仍待全文复核。
+- 明确写作准实验、或对照组非随机分配的研究，独立标为非随机/混合分配研究，最高 C 级；不能因为一部分组间随机化，就把所有比较当作随机对照。 / Quasi-experimental and mixed-allocation studies are not fully randomized comparisons.
 - 额外排除塑料老化等环境研究，以及没有老龄语境的青少年竞技训练；病例资料汇总最高按 C 级，主题等级不能放宽动物研究的 D 级上限。
 - 50 张成分卡的评级沿用既有资料，本轮刷新撤稿检索、来源链接和图片；不表示 50 个成分都完成了新的全文复核。 / Ingredient grades remain provisional; refreshed counts and visuals do not imply a new full-text review of every ingredient.
 
@@ -584,6 +623,8 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <h2>这次怎样做减法 / How the Library Was Curated</h2>
       <p>{esc(archive_note())}</p>
       <p>候选每主题最多 600 条，findings 每主题最多 200 条，矩阵总计最多 1,500 条、每主题最多 100 条。上限不是配额：合格记录少就少放，不为填表而凑数。</p>
+      <div class="table-wrap"><table><thead><tr><th>层级 / Layer</th><th>上期</th><th>旧记录退出</th><th>新进入</th><th>当前</th><th>净变化</th></tr></thead><tbody>{''.join('<tr>' + ''.join(f'<td>{esc(cell)}</td>' for cell in row) + '</tr>' for row in turnover_rows(metrics))}</tbody></table></div>
+      <p>按记录 ID 与上期比较；新进入 findings 可以来自原有候选，不等于新发表。Turnover compares stable record identifiers.</p>
       <div class="table-wrap"><table><thead><tr><th>层级</th><th>退出原因</th><th>决定数</th></tr></thead><tbody>{reason_html}</tbody></table></div>
       <p>候选退出决定 {retired['candidate_decisions']:,} 条，findings 退出决定 {retired['finding_decisions']:,} 条。一个记录可能先经过新检索，再因去重或容量规则退出，因此“决定数”不能简单当成净减少数。</p>
     </div></section>
@@ -593,7 +634,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <p>20 个主题共得到 {search['unique_pubmed_matches']:,} 个唯一 PubMed 匹配：新候选 {search['new_rows']:,} 条，已有记录 {search['matched_existing']:,} 条；最终保留近期候选 {after['recent_candidates_retained']:,} 条，其中 {after['recent_findings_retained']:,} 条进入 findings。</p>
       <p class="notice">下面只是检索覆盖示例，不是治疗推荐。所有等级仍是公开草稿，完整全文、偏倚风险和适用人群需要继续人工复核。</p>
       <p>检索按 PubMed 发表日期筛选，可能包含较早在线发表、最近编入期刊的文章，不等于本周首次公开。Publication-date matches may include earlier online publications.</p>
-      <div class="table-wrap"><table><thead><tr><th>PMID</th><th>主题</th><th>研究类型草稿</th><th>等级</th><th>怎么理解</th></tr></thead><tbody>{sample_html}</tbody></table></div>
+      {featured_sections(findings, as_html=True)}
       <h3>当前等级分布</h3>
       <div class="metrics">
         <div class="metric"><b>{levels.get('A',0):,}</b><span>A：优先复核，不是处方</span></div><div class="metric blue"><b>{levels.get('B',0):,}</b><span>B：中高置信候选</span></div><div class="metric gold"><b>{levels.get('C',0):,}</b><span>C：有信号、限制明显</span></div><div class="metric coral"><b>{levels.get('D',0)+levels.get('E',0):,}</b><span>D/E：早期、低置信或不足</span></div>
@@ -619,6 +660,7 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <p>PubMed XML 标识继续限制在主文献自身的 ArticleIdList。全部 {len(findings):,} 个 findings PMID 已用 NCBI 官方 E-utilities 核对，缺失 {repair['missing_official_summaries']:,}、实质题名冲突 {repair['title_mismatches']:,}；本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个，候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。</p>
       <p>自动分类也增加了明确动物实验、叙述性综述、方案论文和评论勘误的防误升规则。</p>
       <p>模型推算的安慰剂比较、试验中的观察性二次分析，不沿用母试验的随机对照身份；本版独立标注，最高 C 级，仍待全文复核。Indirect models and observational secondary analyses are not direct randomized treatment comparisons.</p>
+      <p>准实验和非随机对照组独立标注，最高 C 级。部分组间随机化不能使所有比较都成为随机对照。Quasi-experimental and mixed-allocation studies are not fully randomized comparisons.</p>
     </div></section>
 
     <section id="assets"><div class="inner">

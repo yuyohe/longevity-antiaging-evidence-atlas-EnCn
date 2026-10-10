@@ -1,0 +1,62 @@
+{
+  "42832337": {
+    "paper_title_zh": "参与社区运动项目与身体表现及虚弱相关风险的变化：ExWell 队列发现",
+    "conclusion_zh": "社区运动项目出现功能改善信号，但观察性分析不能证明因果或延寿；全文待复核。",
+    "title_zh": "社区运动：身体功能变好了，但研究没有随机对照组",
+    "interpretation_zh": "爱尔兰 ExWell 项目追踪了 1,290 名有慢性病的社区参与者，平均 69 岁。24 周后，虚弱人群的步速、起身行走和部分生活质量指标改善。它是队列的二次分析，不是随机分组试验；更虚弱的人退出也更多，留下来的参与者可能更健康。可理解为现实项目的积极信号，不能把改善全部归因于项目，也没有证明延寿。",
+    "interpretation_en": "A secondary analysis of the ExWell cohort followed 1,290 community participants with chronic conditions, mean age 69. Several functional measures improved by 24 weeks. There was no randomized comparator, and attrition was greater among frailer participants. This is an encouraging programme association, not proof of a causal effect or longer lifespan.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42832337/",
+    "checked_date": "2026-10-10"
+  },
+  "42678372": {
+    "paper_title_zh": "抗阻训练组数对认知受损者认知和脑源性神经营养因子的影响：准实验研究",
+    "conclusion_zh": "身体功能改善，认知和 BDNF 未见显著改善；对照组非随机，不能当作完全随机试验，全文待复核。",
+    "title_zh": "抗阻训练：体能有改善，认知与 BDNF 没有显著改善",
+    "interpretation_zh": "研究把 30 名认知受损者随机分到两种训练组，另有 13 人非随机进入对照组，持续 8 周。两种训练组的身体功能有改善，但认知测验和 BDNF（与神经有关的一种蛋白）没有显著组间改善。训练组之间的随机化，不能使与非随机对照组的比较也变成随机试验。样本小、时间短，不能宣传为改善认知或治疗痴呆。",
+    "interpretation_en": "Thirty participants with cognitive impairment were randomized between two training groups, while 13 controls were allocated nonrandomly. After eight weeks, physical performance improved, but cognition and BDNF did not show significant between-group improvement. Randomization between training groups does not randomize their comparison with controls. This small mixed-allocation study does not establish a cognitive treatment benefit.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42678372/",
+    "checked_date": "2026-10-10"
+  },
+  "42849790": {
+    "paper_title_zh": "诊断前心肺体能和握力与癌症诊断后全因死亡及 15 年生存的关联",
+    "conclusion_zh": "体能与死亡风险存在队列关联，不能保证某项训练让癌症患者多活多少年；全文待复核。",
+    "title_zh": "患癌前体能较好，与患癌后的较低死亡风险相关",
+    "interpretation_zh": "UK Biobank 队列分析了后来患癌的 10,462 人，随访中记录到 2,101 例死亡。患癌前估算的心肺体能越好，之后死亡风险总体越低，握力也有较弱关联。这里比较的是原本体能不同的人，不是把人随机分去训练；疾病、生活方式和选择因素仍可能影响结果。它支持关注体能的研究方向，不能保证某项运动让癌症患者多活多少年。",
+    "interpretation_en": "A UK Biobank cohort included 10,462 people who subsequently developed cancer, with 2,101 deaths. Higher estimated pre-diagnostic cardiorespiratory fitness was associated with lower later mortality; grip strength showed a weaker association. This was not a randomized exercise intervention. Confounding and selection remain possible, and the study cannot promise a survival gain from a particular exercise programme.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42849790/",
+    "checked_date": "2026-10-10"
+  },
+  "42837024": {
+    "paper_title_zh": "GLP-1 受体激动剂用于阻塞性睡眠呼吸暂停：随机对照试验 Meta 分析",
+    "conclusion_zh": "呼吸暂停次数和体重有改善信号，但研究差异大，不能替代 CPAP；处方药需医生评估，全文待复核。",
+    "title_zh": "减重药与睡眠呼吸暂停：有改善信号，不能替代现有治疗",
+    "interpretation_zh": "汇总 6 项随机试验、1,069 名中重度阻塞性睡眠呼吸暂停成人。相关治疗平均减少了每小时呼吸暂停或低通气次数，也减轻体重；不同研究结果差异很大，最低血氧等指标没有显著改善。研究主要涉及利拉鲁肽和替尔泊肽，不能推广到所有同类药。它没有证明可以替代 CPAP（气道正压通气）；处方药需医生评估，未观察到更多不良事件也不等于长期绝对安全。",
+    "interpretation_en": "Six randomized trials included 1,069 adults with moderate-to-severe obstructive sleep apnea. Liraglutide- or tirzepatide-based treatment reduced apnea-hypopnea frequency and weight, but effects varied substantially across studies. Minimum oxygen saturation did not improve significantly. This does not establish a class-wide effect or replacement for CPAP. Prescribing requires clinical assessment; a nonsignificant adverse-event difference does not establish long-term safety.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42837024/",
+    "checked_date": "2026-10-10"
+  },
+  "42834340": {
+    "paper_title_zh": "细胞衰老的治疗性逆转：人体试验中清除衰老细胞、调节衰老表型及抗衰疗法的系统综述",
+    "conclusion_zh": "人体研究仍小而短，临床疗效及长期安全性尚未确立；题名不等于已证实返老还童，全文待复核。",
+    "title_zh": "清除衰老细胞：人体研究仍少，不能当作成熟抗衰治疗",
+    "interpretation_zh": "这篇系统综述纳入 6 项已完成的人体研究，另列出 1 项进行中试验。部分身体功能或衰老相关指标有早期信号，但研究混合了随机、非随机和小型探索试验，样本少、随访短。作者明确认为，临床疗效与长期安全性仍不足以确立。题名中的“逆转”不能直接理解为人已返老还童；这仍是研究方向，不是自行用药建议。",
+    "interpretation_en": "This systematic review synthesized six completed human studies and separately listed one ongoing trial. It mixed randomized, nonrandomized and pilot studies, reporting preliminary functional or biomarker signals. Small samples and short follow-up leave clinical efficacy and long-term safety unestablished. The title's reversal language does not prove human rejuvenation; these interventions remain investigational.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42834340/",
+    "checked_date": "2026-10-10"
+  },
+  "42834177": {
+    "paper_title_zh": "衰老中伴侣介导自噬的下降损害巨噬细胞清除衰老细胞的能力",
+    "conclusion_zh": "细胞与小鼠机制证据，没有人体疗效、安全性或延寿结果；不能用来宣传补剂功效，全文待复核。",
+    "title_zh": "细胞的清理通路：小鼠机制发现，离人体应用还有距离",
+    "interpretation_zh": "研究关注伴侣介导自噬，可粗略理解为细胞有选择地分解旧蛋白的通路。细胞与小鼠实验发现，这条通路减弱可能使免疫细胞更难清除衰老细胞；激活通路后，老年小鼠的衰老细胞负担等指标改善。它帮助解释机制，但没有人体疗效或安全性结果，也没有证明人类延寿。不能把机制图直接变成补剂功效或用药广告。",
+    "interpretation_en": "Cell and mouse experiments examined chaperone-mediated autophagy, a selective protein-degradation pathway. Its decline impaired macrophage clearance of senescent cells; activation reduced senescent-cell burden in aged mice and disease severity in a mouse fibrosis model. This is mechanistic, preclinical evidence, not a human efficacy, safety or lifespan result, and cannot substantiate a supplement claim.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42834177/",
+    "checked_date": "2026-10-10"
+  }
+}

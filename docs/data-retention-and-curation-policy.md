@@ -1,6 +1,6 @@
 # 宇多Yul细胞证据图谱：精编与归档规则 / Curation and Retention Policy
 
-**最近复核 / Last reviewed:** 2026-10-01<br>
+**最近复核 / Last reviewed:** 2026-10-10<br>
 **品牌 / Brand:** 宇多Yul细胞/yulcell
 
 ## 先说结论 / The Short Version
@@ -58,7 +58,15 @@ The current and previous monthly snapshots stay unpacked. Superseded same-month 
 
 6 至 8 月的 171 张旧 PNG，以及 6 至 9 月已被替代的 11 个大网页，归入 4 个视觉 ZIP。每个原件都有字节数与 SHA-256；旧网页路径保留归档说明。当前与上一期的大报告、发帖面板和图片保留直接入口，不再在首页并列展示所有旧版本。
 
-Four verified visual archives preserve 171 old PNGs and 11 superseded large HTML files. Original paths, bytes and SHA-256 hashes are retained. Current and previous assets remain directly accessible; the homepage does not present every historical release as current.
+Four verified visual archives preserve 171 old PNGs and 11 superseded large HTML files. Original paths, bytes and SHA-256 hashes are retained.
+
+10 月 10 日补充：同月更新也先封存。10 月 1 日五张 CSV、57 张 PNG 和两个大网页已单独归档，原链接显示历史提示。最新 10 月 CSV 和 9 月 CSV 继续展开；与 10 月 1 日的增减比较读取校验后的 ZIP，不误用已被更新的同月文件。
+
+Same-month releases are frozen before replacement. The October 1 snapshot has its own verified CSV and visual archives. Turnover uses that immutable baseline, while the latest October and September CSVs stay unpacked.
+
+缓存、图片上传令牌和同步差异目录按具体发布日期区分。图表重新生成后必须重新上传，不能复用上期图片附件。日期代表完成了什么检查，要分清摘要、全文、撤稿和图片的时间。
+
+Caches and upload state are release-date-specific. Regenerated graphics receive fresh attachments. Abstract checks, full-text reviews, retraction queries and image dates remain distinct.
 
 归档只整理当前文件树，不删除 Git 历史，不保证完整克隆体积下降。本轮未删除历史工作目录，也没有移动到移动硬盘。
 

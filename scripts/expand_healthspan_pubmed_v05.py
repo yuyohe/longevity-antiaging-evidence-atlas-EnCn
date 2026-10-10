@@ -524,6 +524,8 @@ def has_mixed_human_and_animal_subjects(type_text: str, title_text: str, body_te
 
 def secondary_design(title: str, body: str) -> str:
     title, body = title.lower(), body.lower()
+    if re.search(r"quasi[- ]experimental", title) or re.search(r"non[- ]?random(?:ly|ized|ised).{0,120}(?:control group|controls)", body):
+        return "human_nonrandomized_or_mixed_trial"
     if "imputed placebo" in title:
         return "human_indirect_model_analysis"
     if "secondary analysis" in title and ("associated with" in title or "association of" in title):
@@ -560,7 +562,7 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         return "human_mendelian_randomization"
     if (
         any(term in f"{type_text} {title_text}" for term in ["cohort", "prospective study", "longitudinal study"])
-        or any(term in body_text for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort"])
+        or any(term in body_text for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort", "in this cohort"])
     ):
         return "human_cohort"
     if any(
@@ -592,7 +594,7 @@ def classify_species(study_type: str, body: str, title: str = "") -> str:
         return "animal"
     if study_type == "mixed_human_and_animal_study":
         return "mixed_human_animal"
-    if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort", "human_mendelian_randomization"}:
+    if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort", "human_mendelian_randomization", "human_nonrandomized_or_mixed_trial"}:
         return "human"
     if any(term in lower for term in ["participants", "patients", "adults", "women", "men", "cohort"]):
         return "human"

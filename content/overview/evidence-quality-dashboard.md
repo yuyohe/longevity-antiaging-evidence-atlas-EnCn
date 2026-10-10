@@ -3,11 +3,11 @@
 草稿状态：自动整理，尚未完成全文复核，不构成医疗建议。<br>
 Draft status: automatically prepared; not fully reviewed; not medical advice.
 
-Last updated / 更新时间：2026-10-01
+Last updated / 更新时间：2026-10-10
 
 ## 总览窗口 / Summary Window
 
-- 健康寿命文献：2424 条；v0.4 等级分布：A:228, B:1308, C:415, D:419, E:54。
+- 健康寿命文献：2450 条；v0.4 等级分布：A:228, B:1323, C:422, D:421, E:56。
 - 外观抗老/皮肤文献：180 条；v0.4 等级分布：A:0, B:9, C:15, D:57, E:99。
 - 补剂证据矩阵：100 个补剂/营养方向；v0.4 等级分布：A:0, B:0, C:6, D:48, E:46。
 - 对外阅读入口仍然是 `public-summary.md`，但每条记录现在可追踪到 v0.4 综合评分、影响力信号和上限规则。

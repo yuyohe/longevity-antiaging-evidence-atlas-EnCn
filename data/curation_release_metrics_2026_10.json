@@ -1,12 +1,12 @@
 {
-  "release": "2026-10-curated",
-  "date": "2026-10-01",
+  "release": "2026-10-10-curated",
+  "date": "2026-10-10",
   "search": {
-    "date_window": "2026/09/22..2026/10/01",
+    "date_window": "2026/10/02..2026/10/10",
     "queries": 20,
-    "unique_pubmed_matches": 1216,
-    "new_rows": 1129,
-    "matched_existing": 87
+    "unique_pubmed_matches": 298,
+    "new_rows": 289,
+    "matched_existing": 9
   },
   "capacity_policy": {
     "candidate_per_topic_cap": 600,
@@ -16,29 +16,27 @@
     "core_review_per_high_grade_topic": 3
   },
   "before": {
-    "candidate_records": 11141,
-    "finding_records": 2339
+    "candidate_records": 11161,
+    "finding_records": 2424
   },
   "after": {
-    "candidate_records": 11161,
-    "finding_records": 2424,
-    "recent_candidates_retained": 307,
-    "recent_findings_retained": 161
+    "candidate_records": 11167,
+    "finding_records": 2450,
+    "recent_candidates_retained": 81,
+    "recent_findings_retained": 39
   },
   "retired": {
-    "candidate_decisions": 1109,
+    "candidate_decisions": 283,
     "candidate_reasons": {
-      "non_result_publication_title": 13,
-      "topic_capacity_limit": 1096
+      "topic_capacity_limit": 283
     },
-    "finding_decisions": 1100,
+    "finding_decisions": 268,
     "finding_reasons": {
-      "non_result_publication_title": 13,
-      "nonhuman_record_in_human_outcome_topic": 16,
-      "protocol_or_registered_plan": 10,
-      "title_topic_signal_missing": 675,
-      "topic_capacity_limit": 186,
-      "topic_scope_mismatch": 200
+      "nonhuman_record_in_human_outcome_topic": 9,
+      "protocol_or_registered_plan": 3,
+      "title_topic_signal_missing": 172,
+      "topic_capacity_limit": 40,
+      "topic_scope_mismatch": 44
     }
   },
   "candidate_topic_counts": {
@@ -54,141 +52,53 @@
     "ldl-apob-cardiovascular-risk": 600,
     "metformin-aging": 600,
     "microbiome-inflammaging": 600,
-    "nad-nmn-nr-aging": 546,
-    "partial-reprogramming": 321,
+    "nad-nmn-nr-aging": 549,
+    "partial-reprogramming": 322,
     "physical-activity-healthspan": 600,
-    "rapamycin-mtor-aging": 515,
+    "rapamycin-mtor-aging": 517,
     "resistance-training-muscle": 600,
     "senolytics": 600,
     "sleep-aging": 600,
     "time-restricted-eating": 600
   },
   "finding_topic_counts": {
-    "autophagy-mitophagy": 74,
+    "autophagy-mitophagy": 79,
     "blood-pressure-aging": 200,
-    "caloric-restriction-human": 102,
-    "cardiorespiratory-fitness": 142,
+    "caloric-restriction-human": 103,
+    "cardiorespiratory-fitness": 147,
     "dietary-pattern-longevity": 200,
-    "epigenetic-clocks": 125,
+    "epigenetic-clocks": 126,
     "glp1-weight-cardiometabolic": 200,
     "itp-mouse-lifespan": 11,
     "klotho-il11-aging": 77,
     "ldl-apob-cardiovascular-risk": 200,
-    "metformin-aging": 47,
-    "microbiome-inflammaging": 91,
+    "metformin-aging": 48,
+    "microbiome-inflammaging": 95,
     "nad-nmn-nr-aging": 38,
     "partial-reprogramming": 30,
     "physical-activity-healthspan": 200,
     "rapamycin-mtor-aging": 56,
-    "resistance-training-muscle": 179,
-    "senolytics": 52,
+    "resistance-training-muscle": 185,
+    "senolytics": 55,
     "sleep-aging": 200,
     "time-restricted-eating": 200
   },
   "recent_selected_examples": [
     {
-      "candidate_id": "pubmed-42773062",
-      "pmid": "42773062",
-      "topic_id": "dietary-pattern-longevity",
-      "title_en": "Ultra-processed food consumption and risk of multiple chronic diseases among 8,819,894 adults from 51 prospective cohorts: a dose-response meta-analysis.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42730869",
-      "pmid": "42730869",
-      "topic_id": "glp1-weight-cardiometabolic",
-      "title_en": "GLP-1 Receptor Agonists and Musculoskeletal Outcomes: A Systematic Literature Review and Meta-Analysis.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42791433",
-      "pmid": "42791433",
-      "topic_id": "glp1-weight-cardiometabolic",
-      "title_en": "GLP-1 Receptor Agonists in Heart Failure: A Systematic Review and Meta-analysis with Phenotype-Specific Effects and Dual Analytical Frameworks.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42813622",
-      "pmid": "42813622",
-      "topic_id": "dietary-pattern-longevity",
-      "title_en": "The Mediterranean-style Japanese Diet: A Systematic Review of the Recommendations for an Anti-aging Lifestyle.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42772577",
-      "pmid": "42772577",
-      "topic_id": "resistance-training-muscle",
-      "title_en": "Frailty-targeted cardiovascular rehabilitation and management in older adults with cardiovascular disease and frailty: a systematic review and meta-analysis.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42617397",
-      "pmid": "42617397",
-      "topic_id": "resistance-training-muscle",
-      "title_en": "Optimal aerobic exercise dose for improving metabolic health and functional outcomes in frail older adults: A systematic review and dose-response meta-analysis.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42811522",
-      "pmid": "42811522",
-      "topic_id": "physical-activity-healthspan",
-      "title_en": "Non-Occupational Physical Activity and All-Cause Mortality in Patients with Coronary Heart Disease: A Dose-Response Meta-Analysis.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42349065",
-      "pmid": "42349065",
-      "topic_id": "sleep-aging",
-      "title_en": "Does treatment of nonsleepy OSA with CPAP therapy change CVD risk? A systematic review.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42341708",
-      "pmid": "42341708",
-      "topic_id": "physical-activity-healthspan",
-      "title_en": "Unraveling the miscellaneous physical and psychological effects of unstructured physical activity interventions on adults: A systematic review and meta-analysis of the current evidence.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42068528",
-      "pmid": "42068528",
+      "candidate_id": "pubmed-42848227",
+      "pmid": "42848227",
       "topic_id": "ldl-apob-cardiovascular-risk",
-      "title_en": "Sources of Heterogeneity in the Efficacy of Statins for Primary Prevention of Cardiovascular Diseases: A Systematic Review with Meta-Regression and Meta-Analysis of Within-Study Subgroup Differences.",
+      "title_en": "Efficacy and safety of PCSK9 inhibitors combined with statins in acute ischemic stroke: a systematic review and meta-analysis.",
       "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42782098",
-      "pmid": "42782098",
-      "topic_id": "resistance-training-muscle",
-      "title_en": "Sarcopenia Is Associated With Severe Treatment Toxicity and Mortality in Older Adults With Advanced Cancer: A Secondary Analysis.",
-      "study_type": "human_observational_secondary_analysis",
-      "draft_level": "C"
-    },
-    {
-      "candidate_id": "pubmed-41940793",
-      "pmid": "41940793",
-      "topic_id": "glp1-weight-cardiometabolic",
-      "title_en": "Estimating the True MACE Benefits From Tirzepatide in SURPASS-CVOT Using an Imputed Placebo Analysis of REWIND.",
-      "study_type": "human_indirect_model_analysis",
-      "draft_level": "C"
-    },
-    {
-      "candidate_id": "pubmed-42567173",
-      "pmid": "42567173",
-      "topic_id": "glp1-weight-cardiometabolic",
-      "title_en": "Effect of semaglutide on kidney outcomes in the SELECT, FLOW, and SOUL trials: a prespecified pooled analysis.",
-      "study_type": "human_randomized_or_clinical_trial",
       "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42848972",
+      "pmid": "42848972",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Effects of Blood Pressure Lowering by Hematoma Location in Acute Intracerebral Hemorrhage.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "C"
     },
     {
       "candidate_id": "pubmed-42786612",
@@ -199,57 +109,161 @@
       "draft_level": "B"
     },
     {
-      "candidate_id": "pubmed-42744658",
-      "pmid": "42744658",
-      "topic_id": "physical-activity-healthspan",
-      "title_en": "Structured exercise interventions and survival outcomes in patients with cancer: systematic review and meta-analysis of randomised controlled trials.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42551769",
-      "pmid": "42551769",
+      "candidate_id": "pubmed-42826254",
+      "pmid": "42826254",
       "topic_id": "resistance-training-muscle",
-      "title_en": "Effects of digital health-based exercise interventions on older adults with sarcopenia: Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
+      "title_en": "Comparative evaluation of the sarcopenia index and 5 related creatinine-cystatin C biomarkers in relation to all-cause mortality in older adults: A cohort study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
     },
     {
-      "candidate_id": "pubmed-42424773",
-      "pmid": "42424773",
-      "topic_id": "sleep-aging",
-      "title_en": "The interplay between circadian misalignment or sleep disturbances and cognition and brain function in individuals with different degrees of insulin resistance - a systematic review.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-42247852",
-      "pmid": "42247852",
-      "topic_id": "sleep-aging",
-      "title_en": "Pharmacological and non-pharmacological treatments for chronic insomnia in perimenopausal and postmenopausal women: a systematic review and meta-analysis.",
-      "study_type": "systematic_review_or_meta_analysis",
-      "draft_level": "A"
-    },
-    {
-      "candidate_id": "pubmed-41408034",
-      "pmid": "41408034",
-      "topic_id": "resistance-training-muscle",
-      "title_en": "Beyond strength: dietary nitrate augments self-selected functional mobility after resistance training in middle-aged adults.",
+      "candidate_id": "pubmed-42842780",
+      "pmid": "42842780",
+      "topic_id": "cardiorespiratory-fitness",
+      "title_en": "Nurse-Led Qigong Program Improves Exercise Capacity, Quality of Life, and Fatigue in Patients With Heart Failure: A Randomized Controlled Trial.",
       "study_type": "human_randomized_or_clinical_trial",
       "draft_level": "B"
     },
     {
-      "candidate_id": "pubmed-42060079",
-      "pmid": "42060079",
-      "topic_id": "resistance-training-muscle",
-      "title_en": "Effects of a resistance training program on chemotherapy-induced peripheral neuropathy, cancer-related fatigue, muscle strength and physical activity in colorectal cancer patients undergoing chemotherapy: a pilot randomized controlled trial.",
-      "study_type": "human_randomized_or_clinical_trial",
+      "candidate_id": "pubmed-42851132",
+      "pmid": "42851132",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Estimated small dense low-density lipoprotein cholesterol and incident myocardial infarction in patients undergoing dialysis: a nationwide cohort study.",
+      "study_type": "human_cohort",
       "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42848613",
+      "pmid": "42848613",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Handgrip Strength for Mortality Prediction in Hemodialysis Patients Using the Chronological-to-Metabolic Age Ratio: A Multicenter Prospective Cohort Study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42843720",
+      "pmid": "42843720",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Low-density lipoprotein cholesterol reduction and its effect on all-cause death: A sub-analysis of the population-based cohort study LATINO.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42841221",
+      "pmid": "42841221",
+      "topic_id": "sleep-aging",
+      "title_en": "Reallocation of 24-hour movement behaviour composition and mortality: exploring effect modification by sleep characteristics.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42832417",
+      "pmid": "42832417",
+      "topic_id": "microbiome-inflammaging",
+      "title_en": "Oral microbiome signatures of ageing and cognitive function across distinct geographical cohorts.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42678372",
+      "pmid": "42678372",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Effects of resistance training sets on cognition and brain-derived neurotrophic factor in cognitively impaired individuals: a quasi-experimental study.",
+      "study_type": "human_nonrandomized_or_mixed_trial",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42849790",
+      "pmid": "42849790",
+      "topic_id": "cardiorespiratory-fitness",
+      "title_en": "Associations of Pre-Diagnostic Cardiorespiratory Fitness and Handgrip Strength With All-Cause Mortality and 15-Year Survival After Cancer Diagnosis.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42843107",
+      "pmid": "42843107",
+      "topic_id": "sleep-aging",
+      "title_en": "Impact of obstructive sleep apnea on outcomes of acute respiratory distress syndrome: propensity matched analysis of a national cohort.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42647189",
+      "pmid": "42647189",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Possible osteosarcopenia is associated with floss in intrinsic capacity and early cognitive deficits: a longitudinal study of older adults in Singapore.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42832337",
+      "pmid": "42832337",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Changes in physical performance and frailty-associated risk associated with participation in a community exercise programme: Findings from the ExWell cohort.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42849860",
+      "pmid": "42849860",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Does Volunteering Give an Extra Health Boost? Volunteering and High Blood Pressure Among Insured and Uninsured U.S. Adults in Late Midlife.",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42842950",
+      "pmid": "42842950",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "Kidney Outcomes With GLP-1 Receptor Agonists and Tirzepatide Versus Finerenone in Type 2 Diabetes and Chronic Kidney Disease: A Real-World Cohort Study.",
+      "study_type": "human_cohort",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42720604",
+      "pmid": "42720604",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "\"Uncontrolled Hypertension Among Medicare Beneficiaries in Rural South Carolina.\".",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42837024",
+      "pmid": "42837024",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "GLP-1 receptor agonists for obstructive sleep apnea: a meta-analysis of randomized controlled trials.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42834177",
+      "pmid": "42834177",
+      "topic_id": "autophagy-mitophagy",
+      "title_en": "Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells.",
+      "study_type": "animal_study",
+      "draft_level": "D"
     }
   ],
   "notes": [
     "Discovery is not evidence of benefit.",
     "Retired rows remain recoverable from Git history and prior public snapshots.",
     "No protocol, commentary, correction, or title-topic mismatch is promoted into active findings."
-  ]
+  ],
+  "active_turnover": {
+    "candidate_sources": {
+      "before": 11161,
+      "after": 11167,
+      "old_removed": 66,
+      "new_active": 72,
+      "net_change": 6
+    },
+    "evidence_findings": {
+      "before": 2424,
+      "after": 2450,
+      "old_removed": 9,
+      "new_active": 35,
+      "net_change": 26
+    }
+  }
 }

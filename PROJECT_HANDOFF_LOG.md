@@ -1,6 +1,6 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-10-01
+Last updated / 最后更新：2026-10-10
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
@@ -8,7 +8,22 @@ This file is the local continuity record for future Codex threads and human main
 
 ## Current Release Snapshot / 当前发布快照
 
-The current source snapshot is **2026-10-01**. The September section below is historical.
+Current snapshot: **2026-10-10**. Worktree `D:\longevity\github-publish-current`; configuration `data/current_release.json`; baseline commit `9dc9f4f7eb5616b856cbcd732c0f4dc09c04a26c`.
+
+- Search 2026-10-02..2026-10-10: 298 unique matches, 289 new candidates, 9 existing matches; recent retained sets 81 candidates / 39 findings.
+- Active: 11,167 candidates/literature; 2,450 findings/shortlist/paper pages; 1,500 matrix; 28,734 processing rows. Candidate turnover +72/-66; findings +35/-9.
+- Reader update `content/public-reader/october-10-2026-update.md`; report `docs/october-10-public-update-2026-10.html`; panel `docs/yulcell-posting-asset-dashboard-2026-10-10.html`; canonical entry `docs/asset-catalog.md`.
+- Source metrics `data/curation_release_metrics_2026_10_10.json`; monthly alias points to latest. Date-specific retirement logs and identifier report preserve earlier October files.
+- Baseline comparisons read `archive/public-data/public-data-2026-10-01.zip`, not overwritten October CSVs. Fifty-seven October 1 PNGs and two HTML originals are in `archive/visual-releases/visual-release-2026-10-01.zip`; earlier HTML paths now show notices. Total visual archives: 241 originals in five ZIPs.
+- Fresh PubMed cache `build/pubmed_identifier_summary_cache_2026-10-10.json`; Feishu delta/upload cache `output/feishu-delta-2026-10-10/`. Never reuse earlier October upload tokens.
+- All 2,450 finding PMIDs checked officially; missing/title conflicts 0; one verified title change, 12 finding PMCID / 17 candidate PMCID fixes. Six source-table Chinese annotations remain abstract-based and full-text-pending.
+- Mixed/nonrandomized allocation is independently typed and capped at C; scoring does not mistake the substring nonrandomized for a fully randomized design.
+- Existing Feishu IDs remain stable; read-only audit passed 9/9 at 2026-10-10 00:50 UTC. Counts, keys and audited source fields match, including Chinese title/result/conclusion; all 57 image attachments and 14 navigation entries are current. Audited mojibake records: zero. Full local release validation and 55 unit tests passed; browser-generated and original-PNG downloads passed. Acceptance is recorded in `docs/current-output-status.md`.
+- No removable-drive copy. Keep the dirty development checkout and older local worktrees unchanged.
+
+## Previous Snapshot / 上期 2026-10-01
+
+This section preserves the **2026-10-01** snapshot. Its paths and counts are historical; use the current section above for October 10.
 
 - Reusable publication worktree: `D:\longevity\github-publish-current`, branch `codex/october-2026-curated`; baseline `2cebd911c985a11e69cff975ea03799eae5805a7`.
 - Current configuration: `data/current_release.json`. Use `scripts/build_release.py` stages `identifiers`, `core`, `visuals`, `exports`, `delta`, `sync`, `audit`, `validate`.

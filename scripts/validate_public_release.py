@@ -14,6 +14,7 @@ from PIL import Image
 import archive_legacy_visuals as visual_archive
 import archive_public_snapshots as csv_archive
 import validate_public_release_2026_09 as shared
+from release_baseline import baseline_rows
 
 ROOT = Path(__file__).resolve().parents[1]
 read_csv = shared.read_csv
@@ -48,7 +49,7 @@ def main() -> None:
     for name, count, field in [("candidate_sources", nc, "candidate_records"), ("evidence_findings", nf, "finding_records")]:
         require(len(read_csv(ROOT / "data" / f"{name}.csv")) == count, f"Active count mismatch: {name}")
     for layer in ["candidate", "finding"]:
-        rows = read_csv(ROOT / "data/archive" / f"{layer}_retirement_{month}.csv")
+        rows = read_csv(ROOT / config.get(f"EVIDENCE_ATLAS_{layer.upper()}_RETIREMENT", f"data/archive/{layer}_retirement_{month}.csv"))
         require(len(rows) == metrics["retired"][f"{layer}_decisions"], f"Retirement count mismatch: {layer}")
         require(dict(sorted(Counter(r["reason"] for r in rows).items())) == metrics["retired"][f"{layer}_reasons"],
                 f"Retirement reasons mismatch: {layer}")
@@ -90,8 +91,14 @@ def main() -> None:
         require(pmid in findings_by_pmid and pmid in notes, f"Missing featured paper/note: {pmid}")
         require(notes[pmid]["checked_date"] == date and notes[pmid]["review_depth"].endswith("full_text_pending"),
                 f"Featured provenance mismatch: {pmid}")
+        if "paper_title_zh" in notes[pmid]:
+            require(findings_by_pmid[pmid]["title_zh"] == notes[pmid]["paper_title_zh"] and
+                    findings_by_pmid[pmid]["conclusion_zh"] == notes[pmid]["conclusion_zh"],
+                    f"Featured Chinese note missing from source table: {pmid}")
     for pmid in ["42782098", "41940793"]:
-        row = findings_by_pmid.get(pmid, {})
+        if pmid not in findings_by_pmid:
+            continue
+        row = findings_by_pmid[pmid]
         require(row.get("study_type_draft") != "human_randomized_or_clinical_trial", f"Secondary design mislabeled: {pmid}")
         require(row.get("final_evidence_level", "") in {"C", "D", "E"}, f"Secondary design overgraded: {pmid}")
 
@@ -129,7 +136,7 @@ def main() -> None:
     for release_month in [month, previous]:
         require(len(list((ROOT / "public-data").glob(f"*-{release_month}.csv"))) == 5, f"Missing CSV snapshot: {release_month}")
     for file_key, metric_key in [("candidate-sources", "candidate_records"), ("evidence-findings", "finding_records")]:
-        require(len(read_csv(ROOT / "public-data" / f"{file_key}-{previous}.csv")) == metrics["before"][metric_key], "Baseline count mismatch")
+        require(len(baseline_rows(ROOT, config, file_key)) == metrics["before"][metric_key], "Baseline count mismatch")
     index = json.loads((ROOT / "data/asset_archive_index.json").read_text(encoding="utf-8"))
     for row in index:
         archived = visual_archive.verify_archive(ROOT / row["archive"])

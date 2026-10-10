@@ -26,7 +26,7 @@ SNAPSHOT_DATE = os.environ.get("EVIDENCE_ATLAS_UPDATE_DATE", "2026-09-21")
 MONTH = os.environ.get("EVIDENCE_ATLAS_ASSET_MONTH", "2026-09")
 MONTH_KEY = MONTH.replace("-", "_")
 EXPECTED_TABLES = 9
-SOURCE_CHECK_FIELDS = ["title_en", "study_type_draft", "final_evidence_level", "endpoint_class_draft", "doi", "pmid", "last_checked"]
+SOURCE_CHECK_FIELDS = ["title_en", "title_zh", "result_zh", "conclusion_zh", "study_type_draft", "final_evidence_level", "endpoint_class_draft", "doi", "pmid", "last_checked"]
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:

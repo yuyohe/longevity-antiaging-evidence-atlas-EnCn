@@ -7,7 +7,7 @@
 
 二甲双胍与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 47 records; final public claims still require full-text review.
+Draft summary: this topic now includes 48 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -90,6 +90,7 @@ Draft summary: this topic now includes 47 records; final public claims still req
 - [Mortality in type 2 diabetic subjects prescribed metformin and sulphonylurea drugs in combination: cohort study.](../papers/pubmed-15133756.md) (2004, Diabetes/metabolism research and reviews)
 - [Short-term exposure to a clinical dose of metformin increases skeletal muscle mitochondrial H(2)O(2) emission and production in healthy, older adults: A randomized controlled trial.](../papers/pubmed-35405248.md) (2022, Experimental gerontology)
 - [Metformin and weight loss medication impact on survival outcomes in older women with obesity-related cancers.](../papers/pubmed-40595354.md) (2025, Scientific reports)
+- [Impact of metformin use on neurocognitive functions in older people: a systematic review and meta-analysis.](../papers/pubmed-42841129.md) (2026, Dementia & neuropsychologia)
 - [Serum lactate level and mortality in metformin-associated lactic acidosis requiring renal replacement therapy: a systematic review of case reports and case series.](../papers/pubmed-28693440.md) (2017, BMC nephrology)
 - [Metformin: An Old Drug with New Tricks-Promising Role in Vascular Aging and Cardioprotection.](../papers/pubmed-40471543.md) (2025, Drugs & aging)
 - [Metformin therapy increases leukocyte telomere length, telomerase activity, and longevity gene expression in Asian Indians with prediabetes: A 24-week participant-blind, outcome-assessor-blinded randomized controlled trial.](../papers/pubmed-42692117.md) (2026, Mechanisms of ageing and development)
