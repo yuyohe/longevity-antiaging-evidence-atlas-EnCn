@@ -1,0 +1,24 @@
+{
+  "organized_on": "2026-10-16",
+  "asset_order": ["reader_navigation", "heatmaps", "ingredient_cards", "ingredient_wall", "evidence_matrix", "evidence_findings", "literature_library", "candidate_sources", "shortlist_sources"],
+  "table_names": {
+    "reader_navigation": "00 从这里开始（项目介绍）",
+    "heatmaps": "01 研究热力图",
+    "ingredient_cards": "02 成分卡片（50种）",
+    "ingredient_wall": "03 成分总览（一张图）",
+    "evidence_matrix": "10 证据对照表",
+    "evidence_findings": "11 研究笔记（待复核）",
+    "literature_library": "20 文献来源（目录）",
+    "candidate_sources": "21 检索来源（原始）",
+    "shortlist_sources": "22 优先复核名单"
+  },
+  "folders": {
+    "evidence": "二、查证据",
+    "sources": "三、找原文",
+    "history": "90 历史资料（旧月份）",
+    "maintenance": "99 维护工具"
+  },
+  "continuation_policy": "不按月份建表。2026-10-16文献目录界面显示11,167/20,000条（含限免额度），目前无需续表。按实际单表额度的90%预警；若额度仍为20,000条，则18,000条预警，达到20,000条并完成去重后才建同名续表02。保留稳定主键、前后表链接和统一目录；额度变化以飞书界面为准。",
+  "table_limit_observation": {"date": "2026-10-16", "table_id": "tblIPdcBJPH6UkAE", "rows": 11167, "displayed_limit": 20000, "includes_temporary_allowance": true},
+  "preserve_existing_records": true
+}

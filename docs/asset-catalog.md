@@ -1,74 +1,48 @@
-# 宇多Yul细胞/yulcell 资产总目录 / Asset Catalog
+# 宇多Yul细胞/yulcell：当前内容目录 / Current Reader Catalog
 
-**当前版本 / Current snapshot: 2026-10-10**
+这是运动、睡眠、饮食、补剂和抗衰研究的证据图谱。第一次来先看图，关心某个说法再查证据，需要核对时再找论文。
 
-第一次来，先看本次说明；找发帖素材，打开发帖面板；做数据分析，再下载 CSV。不需要先翻上万条候选。
+[项目介绍与图片](../README.md) · [读表说明](../content/public-reader/evidence-weight.md)
 
-Start with the reader guide, use the posting panel for images, and download CSVs for analysis. Candidate records are not proven medical conclusions.
+Evidence snapshot / 资料快照：2026-10-10。Organization / 分类整理：2026-10-16。
 
-## 当前使用 / Current Release
+## 先看介绍和图 / Introduction and Visuals
 
-| 想做什么 / Purpose | 入口 / Open | 内容 / Contents |
-| --- | --- | --- |
-| 看本次变化 / Read the update | [10 月 10 日普通读者说明 / Reader guide](../content/public-reader/october-10-2026-update.md) | 六篇短解读、增减与边界 / Six notes, turnover and limits |
-| 看完整图文 / Read the report | [自包含报告 / Offline report](october-10-public-update-2026-10.html) | 57 张内嵌图，可下载 / 57 embedded downloadable PNGs |
-| 给助理发帖 / Prepare posts | [发帖面板 / Posting panel](yulcell-posting-asset-dashboard-2026-10-10.html) | 选图、生成与下载 / Select, generate and download |
-| 单独取图片 / Get PNGs | [10 月图片目录 / Images](assets/visual-assets/2026-10/) | 7 张主图、50 张成分卡 / 7 main charts, 50 cards |
-| 在线筛选 / Filter online | [飞书 9 张长期表 / Nine stable tables](feishu-public-assets-2026-10.md) | 复用原链接，不按月新建 / Existing links retained |
-| 分析数据 / Analyze data | [五表数据包 / Five CSV layers](../public-data/README.md) | 合计 28,734 行，不是独立论文数 / Processing rows, not unique papers |
-| 了解方法 / Check methods | [精编与归档规则 / Curation policy](data-retention-and-curation-policy.md) | 容量、退出理由、恢复方法 / Limits and recovery |
+| 内容 / Content | 打开后能看到什么 / Meaning | 记录数 / Rows |
+| --- | --- | ---: |
+| [00 从这里开始（项目介绍）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD) | 项目是什么、看图入口和阅读说明 / Introduction and navigation | 14 |
+| [01 研究热力图](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL) | 6张研究图；看研究分布与统计口径 / Six research charts | 6 |
+| [02 成分卡片（50种）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla) | 查50种成分的用途、暂定评级、误解与注意 / Fifty context-specific cards | 50 |
+| [03 成分总览（一张图）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblOTMnRmq5uStWE) | 把50张卡放在一起作索引，不是购买排行 / Visual index, not a ranking | 1 |
+## 查证据 / Evidence
 
-GitHub 会把 HTML 显示成源代码或文件预览。通过文件页的下载按钮取得 HTML 后，本地双击即可离线阅读；图片已包含在文件内。网页不是额外的网站托管服务。
+| 内容 / Content | 打开后能看到什么 / Meaning | 记录数 / Rows |
+| --- | --- | ---: |
+| [10 证据对照表](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir) | 在同一张表中比较研究 / Compare selected studies | 1,500 |
+| [11 研究笔记（待复核）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblgAIsjA1UR4jLr) | 根据摘要等整理的研究笔记，全文待复核 / Draft notes, full-text review pending | 2,450 |
+## 找原文 / Sources
 
-GitHub displays HTML as source or a file preview. The downloaded HTML opens locally without a server; images are embedded. This repository does not imply a separately hosted website.
+| 内容 / Content | 打开后能看到什么 / Meaning | 记录数 / Rows |
+| --- | --- | ---: |
+| [20 文献来源（目录）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE) | 用题名、PMID、DOI追查论文 / Trace original publications | 11,167 |
+| [21 检索来源（原始）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblWoc9k5UIsKq4J) | 保留检索词、抓取来源等技术记录 / Raw search provenance | 11,167 |
+| [22 优先复核名单](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblhZtMqsgCxFq0v) | 优先检查哪些记录，不表示已经验证 / Review priorities, not approvals | 2,450 |
 
-## 飞书直达 / Direct Feishu Links
+五张资料表属于不同处理层，同一论文可能重复出现。总行数不能当成独立论文数；入选与草稿等级也不代表功效已经确认。
 
-| 长期表 / Stable table | 记录数 / Rows | 地址 / Link |
-| --- | ---: | --- |
-| 普通读者导航 / Reading navigation | 14 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD) |
-| 文献候选库 / Literature library | 11,167 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE) |
-| 候选来源 / Candidate sources | 11,167 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblWoc9k5UIsKq4J) |
-| 优先复核短名单 / Review shortlist | 2,450 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblhZtMqsgCxFq0v) |
-| 证据发现 / Draft findings | 2,450 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblgAIsjA1UR4jLr) |
-| 证据矩阵 / Evidence matrix | 1,500 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir) |
-| 热力图与证据产出 / Research charts | 6 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL) |
-| 单成分卡 / Ingredient cards | 50 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla) |
-| 成分卡墙 / Ingredient wall | 1 | [打开 / Open](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblOTMnRmq5uStWE) |
+The five data layers overlap. Candidate inclusion and draft grades do not establish efficacy.
 
-品牌名便于识别和检索，但不能保证搜索引擎一定收录飞书页面；仍取决于分享权限和抓取规则。
+## GitHub 图片与文件 / Images and Files
 
-Consistent branding aids identification, but Feishu search indexing still depends on sharing and crawler access.
+- [本期图片](assets/visual-assets/2026-10/)：7张主图和50张成分卡。
+- [公开数据](../public-data/README.md)：需要分析或复核时再下载。
+- [离线图文报告](october-10-public-update-2026-10.html)：图片已内嵌，本地打开即可。
+- [助理发帖面板](yulcell-posting-asset-dashboard-2026-10-10.html)：生成、下载图片。
 
-## 上一期对照 / Previous Release
+## 历史与维护 / History and Maintenance
 
-- [2026-10-01 说明 / Reader guide](../content/public-reader/october-2026-update.md)
-- [10 月 1 日全部原图与网页 / Original images and HTML](../archive/visual-releases/visual-release-2026-10-01.zip)
-- [10 月 1 日五表快照 / Five CSV layers](../archive/public-data/public-data-2026-10-01.zip)
-- [冻结完整项目 / Frozen project](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/tree/9dc9f4f7eb5616b856cbcd732c0f4dc09c04a26c)
-- [9 月下旬说明 / Late-September guide](../content/public-reader/late-september-2026-update.md)与[图文报告 / Report](late-september-public-update-2026-09.html)
+旧月份只放在[历史资料](../archive/README.md)，飞书侧栏归入“90 历史资料（旧月份）”。旧链接和独有资料保留，不与当前入口混排。核验记录见[当前状态](current-output-status.md)。
 
-旧版是当时的快照，不是当前结论。9 月与最新 10 月各五张 CSV 保持展开。10 月 1 日单独封存；当前 10 月图片目录已经更新为 10 月 10 日，找上期原图请使用上面的 ZIP。
+不按月份建表。2026-10-16文献目录界面显示11,167/20,000条（含限免额度），目前无需续表。按实际单表额度的90%预警；若额度仍为20,000条，则18,000条预警，达到20,000条并完成去重后才建同名续表02。保留稳定主键、前后表链接和统一目录；额度变化以飞书界面为准。
 
-Previous releases describe their own dates. September and the latest October each retain five unpacked CSVs. Recover October 1 from its ZIP; the active October image directory now represents October 10.
-
-## 历史恢复 / Historical Recovery
-
-| 视觉包 / Visual archive | 原件数 / Original files | 范围 / Scope |
-| --- | ---: | --- |
-| [2026-06](../archive/visual-releases/visual-release-2026-06.zip) | 58 | 57 张图和 1 个大网页 / 57 images and 1 large HTML |
-| [2026-07](../archive/visual-releases/visual-release-2026-07.zip) | 61 | 57 张图和 4 个大网页 / 57 images and 4 large HTML files |
-| [2026-08](../archive/visual-releases/visual-release-2026-08.zip) | 61 | 57 张图和 4 个大网页 / 57 images and 4 large HTML files |
-| [2026-09 早期版本 / Earlier versions](../archive/visual-releases/visual-release-2026-09.zip) | 2 | 中旬报告和旧面板；下旬仍展开 / Mid-month report and panel; late release stays unpacked |
-| [2026-10-01](../archive/visual-releases/visual-release-2026-10-01.zip) | 59 | 57 张图和 2 个大网页 / 57 images and 2 large HTML files |
-
-241 个原件共约 157.8 MiB，压缩后约 121.7 MiB。归档前后逐文件校验字节数和 SHA-256。旧 HTML 路径保留提示。这是在整理工作目录，**不是重写 Git 历史，也不保证完整克隆更小**。
-
-The 241 originals total approximately 157.8 MiB, compressed to 121.7 MiB. Every file is verified. This organizes the working tree without rewriting Git history or promising smaller full clones.
-
-- [历史 CSV 归档 / Historical CSV archives](../archive/public-data/)
-- [视觉包恢复说明 / Visual restoration guide](../archive/visual-releases/README.md)
-- [视觉包校验清单 / SHA-256 checksums](../archive/visual-releases/SHA256SUMS.txt)
-- [本次资产整理记录 / Maintenance record](asset-maintenance-2026-10-10.md)
-
-**使用边界 / Boundary:** 候选是目录，findings 是待复核摘要，矩阵是筛选工具。研究多不等于疗效强，动物延寿不等于人类延寿；不提供处方、剂量或购买建议。
+若未登录时看不到当前表，请先用GitHub入口；本次整理不扩大分享或编辑权限。Old month tables are historical snapshots. This reorganization does not change access permissions.

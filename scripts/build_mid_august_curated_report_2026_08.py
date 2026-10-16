@@ -246,27 +246,27 @@ GitHub source of truth: [{GITHUB}]({GITHUB})
 def build_navigation(registry: list[dict[str, str]]) -> None:
     by_key = {row["asset_key"]: row for row in registry}
     specs = [
-        ("普通读者入口：从这里开始", "Start here", "第一次打开项目的人", "先弄清项目能回答什么、不能回答什么。", "content/public-reader/start-here.md", "reader_navigation", "阅读入口"),
-        (UPDATE_TITLE_ZH, UPDATE_TITLE_EN, "所有读者", "先看这次为什么一边补文献、一边删噪声。", f"content/public-reader/{RELEASE_FILE}", "reader_navigation", "更新说明"),
-        ("15 条结论", "15 takeaways", "普通读者、学生", "先建立判断抗衰说法的基本框架。", "content/public-reader/ten-takeaways.md", "reader_navigation", "阅读入口"),
-        ("证据权重怎么看", "How evidence is weighted", "想学会判断证据的人", "分清人体结局、指标、动物和机制研究。", "content/public-reader/evidence-weight.md", "evidence_matrix", "方法说明"),
-        ("大众主题速读", "Topic guide", "关心运动、睡眠和代谢的人", "按主题读结论，不必先翻论文。", "content/public-reader/topics.md", "evidence_findings", "阅读入口"),
-        ("最常见 30 个补剂", "30 common supplements", "想查补剂的人", "先看常见误解和安全边界。", "content/public-reader/supplements-top-30.md", "ingredient_cards", "补剂入口"),
-        ("护肤与外观抗老速读", "Skin and appearance guide", "关心防晒、皱纹和医美的人", "把皮肤改善和延长寿命分开看。", "content/public-reader/skin.md", "ingredient_cards", "皮肤入口"),
-        ("哪些内容必须先问医生", "Doctor-first topics", "涉及药物和慢病的人", "药物、慢病和高风险干预先找专业人员。", "content/public-reader/doctor-first.md", "reader_navigation", "安全边界"),
-        ("研究热力图", "Research heatmaps", "想看全局结构的人", "颜色深表示记录多，不表示干预更有效。", "content/public-reader/research-heatmap.md", "heatmaps", "视觉入口"),
-        ("50 成分卡", "50 ingredient cards", "发帖和查成分的人", "每张卡都同时写证据和不能支持的说法。", "content/public-reader/ingredient-cards-top-50.md", "ingredient_cards", "视觉入口"),
-        ("撤稿怎么看", "How to read retractions", "关注研究可靠性的人", "把撤稿当复核信号，不作简单好坏判断。", "content/public-reader/retractions.md", "heatmaps", "风险说明"),
-        ("精编与归档规则", "Curation and retention policy", "想复核清理规则的人", "查看容量上限、退出理由和恢复方式。", "docs/data-retention-and-curation-policy.md", "reader_navigation", "方法说明"),
-        ("公开 CSV 数据", "Public CSV data", "研究者、数据分析人员", "下载当前五张处理层表，并注意同一论文会跨层出现。", "public-data/README.md", "candidate_sources", "数据入口"),
-        ("资产总目录", "Asset catalog", "所有读者", "分清当前版、上一期和历史归档；查找图片、表格和恢复入口。", "docs/asset-catalog.md", "reader_navigation", "项目入口"),
+        ("00 这是什么？从这里开始", "What is this?", "第一次来的读者", "整理运动、睡眠、补剂等研究，说明对象、发现和限制。", "content/public-reader/start-here.md", "reader_navigation", "项目介绍"),
+        ("01 看图：研究热力图", "Research heatmap", "想先看全局的读者", "当前收录了哪些研究，按主题、年份和草稿等级看分布。", "content/public-reader/research-heatmap.md", "heatmaps", "先看图"),
+        ("02 查成分：50种成分卡", "50 ingredient cards", "想查一种成分的读者", "每张卡说明用途、暂定证据、误解和注意。", "content/public-reader/ingredient-cards-top-50.md", "ingredient_cards", "先看图"),
+        ("03 看总览：一张图看50种成分", "Ingredient overview", "想快速浏览的读者", "先看成分索引，再进入单卡了解限制。", f"docs/assets/visual-assets/{MONTH}/ingredient-card-wall-{MONTH}.png", "ingredient_wall", "先看图"),
+        ("10 查证据：运动、睡眠、饮食等", "Topic evidence", "关心具体健康问题的读者", "按主题读研究结论，不必先翻论文目录。", "content/public-reader/topics.md", "evidence_findings", "查证据"),
+        ("11 查证据：常见补剂", "Supplement evidence", "关心NMN、鱼油等补剂的读者", "先看用途、常见误解和风险边界。", "content/public-reader/supplements-top-30.md", "ingredient_cards", "查证据"),
+        ("12 查证据：皮肤与外观", "Skin evidence", "关心护肤和医美的读者", "区分皮肤改善和人体延寿。", "content/public-reader/skin.md", "ingredient_cards", "查证据"),
+        ("13 先问医生：药物和高风险项目", "Doctor-first topics", "涉及药物、慢病或医美的读者", "这些内容需要专业评估，不能按表自行执行。", "content/public-reader/doctor-first.md", "reader_navigation", "查证据"),
+        ("14 读不懂？等级和缩写说明", "Codes and grades", "遇到缩写的读者", "分清A/B、H1至H6、全文待复核和未评估。", "content/public-reader/evidence-weight.md", "evidence_matrix", "读表说明"),
+        ("15 可靠性：撤稿怎么看", "Reading retractions", "想核对研究可靠性的读者", "区分历史累计、小分母比率与疗效判断。", "content/public-reader/retractions.md", "heatmaps", "读表说明"),
+        ("20 找原文：论文与数据目录", "Source publications", "需要核对原文的读者", "用PMID或DOI找论文；五层数据会重叠。", "public-data/README.md", "literature_library", "找原文"),
+        ("90 历史资料与整理规则", "History and retention", "需要旧资料的读者", "旧月份保留在归档，不与当前版本混排。", "archive/README.md", "reader_navigation", "历史与维护"),
+        ("91 最近一次资料更新", "Latest evidence update", "想了解本次资料变化的读者", "记录新增、退出和代表研究，不是入门必读。", f"content/public-reader/{RELEASE_FILE}", "reader_navigation", "历史与维护"),
+        ("21 全部当前入口", "Current catalog", "需要更多资料的读者", "统一按看图、查证据和找原文分类。", "docs/asset-catalog.md", "reader_navigation", "找原文"),
     ]
     rows = []
     for index, (zh, en, audience, note, github_path, feishu_key, asset_type) in enumerate(specs, 1):
         rows.append(
             {
                 "entry_id": f"R{index:03d}",
-                "公开标题": f"{BRAND} | {zh}",
+                "公开标题": zh,
                 "阅读顺序": f"{index:02d}",
                 "中文名称": zh,
                 "English title": en,

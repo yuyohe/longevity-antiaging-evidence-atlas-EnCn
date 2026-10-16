@@ -13,6 +13,7 @@ from PIL import Image
 
 import archive_legacy_visuals as visual_archive
 import archive_public_snapshots as csv_archive
+import archive_reader_history as reader_archive
 import validate_public_release_2026_09 as shared
 from release_baseline import baseline_rows
 
@@ -111,8 +112,13 @@ def main() -> None:
     require(set(ids) == {r["table_id"] for r in registry}, "Manifest/registry IDs differ")
     counts = {r["表名"]: int(r["记录数"]) for r in manifest}
     require(counts == {r["stable_name"]: int(r["expected_rows"]) for r in registry}, "Manifest/registry counts differ")
+    layout = json.loads((ROOT / "data/reader_layout.json").read_text(encoding="utf-8")) if (ROOT / "data/reader_layout.json").exists() else None
+    expected_names = {r["stable_name"] for r in registry}
+    if layout:
+        require([r["asset_key"] for r in registry] == layout["asset_order"], "Reader-facing asset order differs")
+        require(all(r["stable_name"] == layout["table_names"].get(r["asset_key"]) for r in registry), "Reader-facing names differ")
     for row in manifest:
-        require(row["状态"] == "active" and row["更新月份"] == month and row["表名"].startswith("宇多Yul细胞_当前"),
+        require(row["状态"] == "active" and row["更新月份"] == month and row["表名"] in expected_names,
                 f"Stale Feishu manifest: {row['表名']}")
     if not args.source_only:
         audit = json.loads((ROOT / "build" / f"feishu_online_audit_{key}.json").read_text(encoding="utf-8"))
@@ -129,6 +135,7 @@ def main() -> None:
         for filename, expected_hash in hashes.items():
             verifier(directory / filename)
             require(shared.sha256(directory / filename) == expected_hash, f"Archive hash mismatch: {filename}")
+    require(reader_archive.verify_manifest(ROOT) > 0, "Reader history manifest is empty")
     year, number = map(int, month.split("-"))
     previous = f"{year if number > 1 else year - 1:04d}-{number - 1 if number > 1 else 12:02d}"
     csv_paths = list((ROOT / "public-data").glob("*.csv"))

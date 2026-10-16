@@ -78,6 +78,10 @@ def main() -> None:
                      ["sync_feishu_csv_table.py", "--csv", f"data/feishu_reader_navigation_{month_key}.csv",
                       "--table-id", "tbljh1Xmkn6RYWPD", "--table-name", "宇多Yul细胞_当前阅读导航",
                       "--primary-key", "entry_id", "--primary-field", "公开标题", "--delete-stale", "--rename-existing"]]
+    if (ROOT / "data/reader_layout.json").exists():
+        layout = json.loads((ROOT / "data/reader_layout.json").read_text(encoding="utf-8"))
+        nav_command = sync_commands[-1]
+        nav_command[nav_command.index("--table-name") + 1] = layout["table_names"]["reader_navigation"]
     commands = {
         **STAGES,
         "identifiers": [["repair_pubmed_article_ids_2026_08.py"]],

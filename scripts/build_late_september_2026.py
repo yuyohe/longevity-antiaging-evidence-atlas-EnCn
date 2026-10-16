@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGES = {
+    "organize": [["archive_reader_history.py", "--apply"], ["build_reader_home.py"]],
     "core": [
         ["apply_evidence_scoring_v04.py"],
         ["build_healthspan_outputs_v05.py", "--matrix-limit", "1500", "--matrix-per-topic-cap", "100"],
@@ -22,6 +23,7 @@ STAGES = {
         ["build_public_full_data_package_2026_05.py"],
         ["build_monthly_update_2026_06.py"],
         ["build_index.py"],
+        ["build_reader_home.py"],
     ],
     "visuals": [
         ["refresh_ingredient_card_sources.py"],
@@ -29,6 +31,7 @@ STAGES = {
         ["build_visual_feishu_assets_2026_05.py"],
         ["build_mid_august_curated_report_2026_08.py"],
         ["build_posting_asset_dashboard_2026_06.py"],
+        ["build_reader_home.py"],
     ],
     "exports": [["prepare_feishu_docs.py"]],
 }

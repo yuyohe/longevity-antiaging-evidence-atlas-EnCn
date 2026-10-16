@@ -1,6 +1,22 @@
 # 宇多Yul细胞/yulcell 当前验收状态 / Current Output Status
 
-Date / 日期: 2026-10-10
+Evidence snapshot / 资料快照: 2026-10-10 · Organization / 分类整理: 2026-10-16
+
+## Reader Layout / 本次阅读整理
+
+本轮只做分类、说明和历史版本整理，没有新增文献、更改评级或重画图片。当前入口按“项目介绍 → 热力图与成分卡 → 查证据 → 找原文”排列；首页直接展示真实图片，维护记录折叠到后面。
+
+飞书保留全部48张数据表，其中9张为当前表、39张旧月份与早期表集中放入“90 历史资料（旧月份）”。当前表改为短名称，原表ID和链接不变；仪表盘、工作流及既有页面收进维护工具，不改其内容。14条导航重排，并保留“先看什么”“避免误读”说明。旧表中的独有记录没有删除，也没有重新塞回当前有容量控制的资料层。
+
+2026-10-16完成九表只读回查：9/9通过，记录数、主键、来源字段、品牌和GitHub链接一致，57个图片附件完整，核验字段无乱码。文献目录界面显示11,167/20,000条，额度含限免部分；当前不需要续表。以后按实际额度90%预警，达到上限并去重后才建同名续表，不按月份建重复表。
+
+GitHub的68份旧阅读说明与HTML移入[统一历史目录](../archive/reader-history/README.md)，保留逐文件校验及冻结来源提交。归档副本修正相对链接并统一UTF-8/LF；原始字节可从来源提交恢复。旧GitHub文件路径已改变，需从历史目录访问；飞书原表链接不变。
+
+本地71项单元测试、lint、人体与皮肤草稿校验、完整发布校验及索引构建通过；15份读者导出和2,512份完整导出已重建。Git差异确认当前五层公开CSV、科学源表和57张PNG均未改变。飞书浏览器重新加载后，入口排序和目录分组仍保持。
+
+本轮没有修改分享权限，也不做移动硬盘备份。未登录访客能否直接进入飞书当前表仍是单独的权限核对项，不能把已登录回查通过当作匿名访问验证。
+
+English: this pass reorganizes reader entry points without changing evidence or images. All 48 Feishu data tables remain; 39 historical tables are grouped separately. Nine current table IDs remain stable. Sixty-eight old reader documents move to a checksummed archive with frozen original references. Sharing permissions and removable-drive backups are unchanged.
 
 ## Production Draft Assets / 可发布草稿资产
 

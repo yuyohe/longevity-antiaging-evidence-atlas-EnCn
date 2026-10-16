@@ -1,66 +1,24 @@
-# 宇多Yul细胞/yulcell：长寿抗衰与健康寿命证据图谱
-## Chinese Reader Guide / 中文阅读说明
+# 宇多Yul细胞/yulcell：怎么阅读这个项目
 
-**本版日期 / Snapshot: 2026-10-10**
+这里整理运动、睡眠、饮食、补剂和抗衰技术的研究，帮你看清研究了谁、测了什么、结论能支持到哪一步。动物实验、化验指标和人体疾病结局分开呈现。
 
-我们做的是“研究地图”，不是“抗衰购物清单”。它帮助你看清：一篇论文研究了谁，测的是寿命、疾病、身体功能，还是一个化验数字，以及结果能不能用在普通人身上。
+## 从哪里开始 / Where to Start
 
-## 先找对入口 / Find the Right Entry
+1. [看热力图](content/public-reader/research-heatmap.md)：了解当前研究分布。
+2. [查成分卡](content/public-reader/ingredient-cards-top-50.md)：先看用途、误解和限制。
+3. [按主题读证据](content/public-reader/topics.md)：再查运动、睡眠、饮食等问题。
+4. [找论文来源](public-data/README.md)：需要核对原文时再进入资料层。
 
-- 第一次来看：[普通读者入口](content/public-reader/start-here.md)，选自己的问题；不必先读维护报告。
-- 看到缩写或等级不明白：[读表说明](content/public-reader/evidence-weight.md)，解释 A/B、H1–H6、PMID、全文待复核和图中百分比。
-- 想知道本次变化：[10 月 10 日更新说明](content/public-reader/october-10-2026-update.md)。
-- 想找所有资产：[资产总目录](docs/asset-catalog.md)，分为当前、上一期和历史归档。
-- 想交给助理发帖：[自包含报告](docs/october-10-public-update-2026-10.html)和[发帖面板](docs/yulcell-posting-asset-dashboard-2026-10-10.html)。
-- 想在线查表：[9 张飞书长期表](docs/feishu-public-assets-2026-10.md)，原来的表格链接继续使用。
-- 想复核数据：[公开 CSV](public-data/README.md)。
+[项目首页](README.md)直接展示热力图和两张真实成分卡。[全部当前入口](docs/asset-catalog.md)按看图、查证据、找原文分类；旧月份统一放在[历史资料](archive/README.md)。
 
-English readers: start with the [bilingual homepage](README.md) or [asset catalog](docs/asset-catalog.md).
+## 读之前记住 / Reading Limits
 
-若飞书链接跳回旧“数据表”，或看不到“当前阅读导航”，先读 GitHub 入口；当前表的未登录可见性仍需管理员核对，不要把旧表误当最新资料。
+- A/B 是项目草稿排序，不表示人人有效或值得购买。
+- “研究笔记”“优先复核”不代表已完成全文检查。
+- 颜色深表示记录多；成分图的两个用途场景不是论文有效率。
+- 五层数据会重复收录同一论文，不能把行数当作独立论文总数。
+- 新图不等于评级重新确认。[完整读表说明](content/public-reader/evidence-weight.md)。
 
-## 这次整理了什么 / What Changed
+资料快照：2026-10-10。分类整理：2026-10-16。本次没有新增文献或更改证据评级。
 
-本轮补检 10 月 2 日至 10 月 10 日，找到 298 个唯一匹配。按相关性和容量筛选后，候选新进入 72 条、旧记录退出 66 条，从 11,161 条变为 11,167 条。findings 新进入 35 条、旧记录退出 9 条，从 2,424 条变为 2,450 条；矩阵仍保持 1,500 条。
-
-“退出决定”还包括新抓取后就被排除的材料，不能直接当成旧资料删除数。近期保留 81 条候选、39 条 findings，也包含之前已在库的记录。
-
-本轮将 10 月 1 日的五张 CSV、57 张图和两个大网页单独封存。视觉档案累计 241 个原件，旧网页保留提示，原件可恢复。9 月与最新 10 月 CSV 继续展开；没有重写 Git 历史，也没有备份到移动硬盘。
-
-## 四层材料怎么区分 / Four Layers
-
-| 层级 | 通俗理解 | 最容易误解的地方 |
-| --- | --- | --- |
-| 候选目录 | 图书馆里可能用得上的书目 | 进入目录不等于结论正确 |
-| 证据发现 findings | 读完摘要后做的待复核笔记 | 不等于已经读完全文 |
-| 证据矩阵 | 把不同研究放在同一张比较表里 | 分数是筛选工具，不是治疗建议 |
-| 图片与卡片 | 便于看结构和传播的摘要 | 颜色深、论文多不代表有效 |
-
-五张公开 CSV 共 28,734 行，同一篇论文可在多层出现，所以不是 28,734 篇独立论文。
-
-## 新资料怎样讲清楚 / Reading New Evidence
-
-本次报告只挑 6 篇代表文献深入解释，避免用长名单淹没重点。比如：
-
-- 社区运动参与者身体功能改善，但没有随机对照，不能把改善全部归因于项目。
-- 小型抗阻训练研究改善体能，却没有显著改善认知和 BDNF；不能只讲积极的一半。
-- 患癌前体能好与患癌后死亡风险较低相关，但没有证明训练会让患者多活多少年。
-- 减重药与睡眠呼吸暂停有改善信号，但试验差异大，不能替代 CPAP，也不能自行用药。
-- 清除衰老细胞的六项人体研究仍小、短，临床疗效和长期安全性没有确立。
-- 细胞与小鼠的清理通路实验帮助解释机制，不能当成人体抗衰功效。
-
-[每篇研究的来源和双语解读](content/public-reader/october-10-2026-update.md)均已标明；全文、偏倚风险和适用人群仍需要进一步复核。
-
-## 哪些内容没有被重新证明 / What Was Not Re-established
-
-57 张图片更新了，但 50 张成分卡的评级仍沿用既有暂定资料。评级资料日期、撤稿查询日期和图片日期分开显示，不能把“图是新的”理解成“结论刚被重新验证”。
-
-撤稿查询更新至 10 月 10 日，覆盖 117 个成分或主题，累计 596 条匹配行、540 个唯一 PMID。这个数字不是本月新增撤稿，也不能单独证明某种成分无效。
-
-## 使用边界 / Boundaries
-
-动物延寿不能直接写成人类延寿；化验指标改善不能写成返老还童；A 级草稿不能变成“人人都应该用”。项目不提供个人诊断、处方、剂量、停药、医美操作或购买建议。
-
-GitHub 保存版本，飞书方便阅读与筛选。统一品牌是 **宇多Yul细胞/yulcell**，但不能保证搜索引擎一定收录所有飞书页面。
-
-[项目首页 / Homepage](README.md) · [资产总目录 / Asset catalog](docs/asset-catalog.md) · [归档规则 / Retention policy](docs/data-retention-and-curation-policy.md)
+English: start with the [bilingual homepage](README.md). Current evidence, source material and historical releases have separate entry points.

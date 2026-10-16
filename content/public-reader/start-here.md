@@ -1,75 +1,31 @@
-# 普通读者入口：从这里开始
+# 从这里开始：这是什么？ / Start Here
 
-**品牌 / Brand：** 宇多Yul细胞/yulcell<br>
-**当前公开快照 / Current public snapshot：** 2026-10-10
+**宇多Yul细胞/yulcell · 长寿抗衰与健康寿命证据图谱**
 
-如果你第一次打开这个项目，读这一页。你不需要懂论文，也不需要懂医学统计。
+这里整理运动、睡眠、饮食、补剂和抗衰技术的研究，帮你看清研究了谁、测了什么、结论能支持到哪一步。动物实验、化验指标和人体疾病结局分开呈现。
 
-这个项目做一件事：把“抗衰、长寿、补剂、护肤和前沿技术”的说法拆开，看它们到底有没有证据。
+An evidence guide to exercise, sleep, nutrition, supplements and aging research: who was studied, what was measured, and what the findings support. Animal experiments, biomarkers and human outcomes are kept separate.
 
-## 第一次来，只读三处 / First Visit
+## 选一个入口 / Choose an Entry
 
-先打开[大众主题速读](topics.md)，选自己的问题；想查某个成分，再看[常见补剂](supplements-top-30.md)的误解和注意。遇到 A/B、H1–H6、PMID 或英文状态，打开[读表说明](evidence-weight.md)。不必先翻上万行数据，也不必按导航读完 14 项。
-
-文献库和候选表是找资料的目录；短名单是优先检查的记录；findings 是待复核笔记；矩阵是有容量上限的比较表。同一论文可跨层出现，**入选不等于已证实，表格总行数不等于论文篇数**。
-
-## 人话版
-
-网上很多抗衰内容会把几种东西混在一起：
-
-- 真的和健康寿命有关的事，比如运动、睡眠、血压、血脂、血糖、体重、控烟酒。
-- 可能有帮助但要看人群和风险的事，比如补剂、体重管理药物、医美项目。
-- 还在研究中的事，比如衰老时钟、动物延寿实验、清除衰老细胞、部分重编程。
-- 商业宣传很容易夸大的事，比如把一个补剂说成逆龄，把皮肤变好说成延寿。
-
-我们把这些东西分开写，避免普通人一看到“抗衰”两个字就被带去买东西。
-
-## 10 月 10 日更新
-
-本次快照包括 11,167 条候选文献、2,450 条证据发现、1,500 条证据矩阵、28,734 行公开 CSV，以及 57 张图片。请先读[2026 年 10 月 10 日更新说明](october-10-2026-update.md)，再按自己的问题选择下面的入口。
-
-## 从这里进入
-
-| 需求 | 打开 | 得到什么 |
+| 你现在想看什么 | 打开 | 能看到什么 |
 | --- | --- | --- |
-| 我完全不知道从哪里开始 | [大众版入口表](index.md) | 项目有哪几类内容 |
-| 我想看 15 条结论 | [15 条结论](ten-takeaways.md) | 哪些抗衰说法最容易误解 |
-| 我想知道哪些方向更靠谱 | [大众主题速读](topics.md) | 运动、睡眠、饮食、血压、血脂等主题怎么理解 |
-| 我想知道证据怎么分级 | [证据权重怎么看](evidence-weight.md) | 哪些文献权重高，哪些只能当线索 |
-| 我想知道哪些成分或方向有撤稿记录 | [撤稿风险怎么看](retractions.md) | 近 20 年发表且已撤稿的 PubMed 观察 |
-| 我想查 NMN、鱼油、胶原蛋白、维生素 | [最常见 30 个补剂](supplements-top-30.md) | 常见补剂的结论、误解和注意 |
-| 我想查完整补剂表 | [大众补剂速查](supplements.md) | 100 个补剂的证据和边界 |
-| 我关心防晒、皱纹、色斑、屏障、医美 | [护肤与外观抗老速读](skin.md) | 皮肤证据和延寿证据不是一回事 |
-| 我看到药物、医美、高剂量补剂 | [哪些内容必须先问医生](doctor-first.md) | 哪些情况不能自己决定 |
+| 我先看看这是什么 | [项目首页](../../README.md) | 热力图、成分卡和简单说明 |
+| 我想看整个研究分布 | [研究热力图](research-heatmap.md) | 当前矩阵的主题、年份和草稿等级 |
+| 我想查一种成分 | [50种成分卡](ingredient-cards-top-50.md) | 健康寿命、皮肤用途、误解与注意 |
+| 我关心运动、睡眠或饮食 | [主题速读](topics.md) | 研究对象、发现和不能外推的结论 |
+| 我关心补剂 | [常见30种补剂](supplements-top-30.md) | 暂定证据和安全边界 |
+| 我看不懂缩写和数字 | [读表说明](evidence-weight.md) | A/B、H1至H6、草稿状态与百分比 |
+| 我要核对论文 | [文献来源](../../public-data/README.md) | PMID、DOI和各层资料的区别 |
 
-## 三个判断
+## 一个例子 / An Example
 
-1. 这个说法是人类研究，还是动物/细胞研究？
-2. 它改善的是死亡、疾病风险和功能，还是只改善某个指标？
-3. 它适合普通人了解，还是需要医生或专业人员参与？
+一篇研究写“某个化验指标改善”，这里只能先记为指标变化。还要检查研究了谁、有没有对照、随访多久，才能判断它能支持什么。不能直接改写成“人变年轻了”。
 
-能回答这三个问题，就不容易被“抗衰营销”带偏。
+五张资料表是不同处理层，同一论文可以跨层出现。“找到”“入选”“整理成笔记”都不等于已证实功效。
 
-## 现有资产
+No individual prescriptions, dosing, stopping medication or purchase recommendations are provided. Draft grades and biomarkers do not establish human lifespan extension.
 
-| 资产 | 数量 | 说明 |
-| --- | ---: | --- |
-| 文献候选库 | 11167 条 | 原始资料池，不建议普通人直接看 |
-| 证据矩阵 | 1500 条 | 已经筛过一轮的研究资料 |
-| 健康寿命发现 | 2450 条 | 自动或摘要整理的待复核笔记，不等于已读完全文 |
-| 健康寿命主题 | 20 个 | 普通人最常问的健康寿命方向 |
-| 皮肤外观主题 | 9 个 | 防晒、皱纹、色斑、屏障、PDRN/PN、医美等 |
-| 皮肤外观证据 | 180 条 | 只回答皮肤和外观，不等于延寿 |
-| 补剂条目 | 100 个 | 看常见误解和注意最重要 |
-| 撤稿观察目标 | 117 个 | 补剂、护肤、抗衰前沿目标 |
-| 撤稿明细 | 596 条 | 近 20 年发表且题名匹配的撤稿行，同一 PMID 可能跨目标重复 |
-| 论文卡片 | 2450 个 | 给研究者和深度读者查证 |
-| 公开 CSV | 28734 行 | 五张处理层表的行数相加，不是独立论文数 |
-| 图片资产 | 57 张 | 7 张主图和 50 张成分卡 |
-| 飞书在线表 | 9 张 | [打开飞书公开资产索引](../../docs/feishu-public-assets-2026-10.md) |
+[全部当前入口](../../docs/asset-catalog.md) · [飞书阅读入口](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD) · [历史资料](../../archive/README.md)
 
-## English Summary
-
-This is the plain-language entry page for non-specialist readers. The current snapshot is dated 2026-10-10 and contains 11,167 candidate records, 2,450 findings, and 1,500 matrix rows. The project separates stronger human evidence from early research, biomarkers, animal studies, supplement marketing, and skin-appearance claims.
-
-One boundary note: this project is for evidence review and content production. It does not provide personal medical advice, prescriptions, dosing protocols, diagnosis, or purchase recommendations.
+资料快照：2026-10-10；阅读分类整理：2026-10-16。本次只整理入口与重复版本，没有重新检索或升级评级。

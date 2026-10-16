@@ -3,6 +3,14 @@
 **最近复核 / Last reviewed:** 2026-10-10<br>
 **品牌 / Brand:** 宇多Yul细胞/yulcell
 
+## 读者入口与续表 / Reader Entries and Continuation Tables
+
+2026-10-16 起，当前入口按“项目介绍、热力图、成分卡、证据、文献来源”排列。月度快照不再与当前表混排；飞书旧表集中放进一个历史文件夹，GitHub旧报告集中放进历史阅读目录。归档保留独有资料，不把过去筛掉的低相关记录重新塞进主库。
+
+不按月份复制表。以飞书当前实际单表额度为硬上限，达到90%时提醒维护者；先去重、清理不应进入当前层的记录，确实达到额度后才建立“文献来源（续表02）”等连续编号表。续表保留相同字段和稳定主键，在统一目录中写清前表、后表及ID范围；不能换个表名就把同一批数据再放一遍。尚未核定实际额度时不猜测数字，也不主动拆开可正常阅读的现有表。
+
+Current entries are organized by reader purpose. Historical tables and documents are archived separately. Continuation tables are created only when a verified platform limit is reached after deduplication; stable keys and predecessor/successor links are retained.
+
 ## 先说结论 / The Short Version
 
 这个项目不追求“越多越好”。候选文献只是等待检查的材料，不等于已经证实的结论。每次更新都同时做两件事：找新资料，也清理旧资料。
