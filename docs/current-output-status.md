@@ -14,6 +14,10 @@ GitHub的68份旧阅读说明与HTML移入[统一历史目录](../archive/reader
 
 本地71项单元测试、lint、人体与皮肤草稿校验、完整发布校验及索引构建通过；15份读者导出和2,512份完整导出已重建。Git差异确认当前五层公开CSV、科学源表和57张PNG均未改变。飞书浏览器重新加载后，入口排序和目录分组仍保持。
 
+内容提交[`1fedac8b`](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/commit/1fedac8bda6143193706c76172ec89206e383c9d)已推送公开main，匿名GitHub页面显示新的双语介绍、三类入口、热力图及两张成分卡；三张首页图片均成功加载。不可变版本README与Git提交字节一致，[线上Lint](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/actions/runs/38887686612)通过。
+
+飞书图片视图另做展示清理：热力图、单卡和总览封面改为适应完整画幅，隐藏重复编号、图片字段等技术项，保留标题及已有说明。原字段和完整表格视图不删除；只改视图，不改数据或图片。普通读者说明视图缩窄标题列，减少无用空白。
+
 本轮没有修改分享权限，也不做移动硬盘备份。未登录访客能否直接进入飞书当前表仍是单独的权限核对项，不能把已登录回查通过当作匿名访问验证。
 
 English: this pass reorganizes reader entry points without changing evidence or images. All 48 Feishu data tables remain; 39 historical tables are grouped separately. Nine current table IDs remain stable. Sixty-eight old reader documents move to a checksummed archive with frozen original references. Sharing permissions and removable-drive backups are unchanged.

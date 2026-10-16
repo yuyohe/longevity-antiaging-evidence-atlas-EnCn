@@ -424,6 +424,18 @@ All validation commands passed before commit.
 
 ## Operating Rules For Future Threads
 
+### Current Reader Organization: 2026-10-16
+
+- Evidence snapshot remains 2026-10-10. This pass changes organization, not scientific records, grades or PNGs.
+- Public content commit: `1fedac8bda6143193706c76172ec89206e383c9d`; main and immutable README verified anonymously. Lint run `38887686612` passed; 71 local tests and full release validation passed.
+- Read `data/reader_layout.json` and `docs/asset-catalog.md` for the nine current table IDs and reader names. Do not restore monthly copies or legacy current-name prefixes. First introduction, then images/cards, evidence, source papers.
+- All 48 Feishu DATA tables remain: 9 current and 39 historical/early tables. The 39 are in history folder `bflBDi3lE1baYLoV`. Evidence folder: `bflM1i9T69dEOPe5`; sources: `bfluFDUMzuiz1UU0`; tools: `bfl9cfDDAdYhblhh`. Dashboard/workflow/existing page are tools, not data tables.
+- Reader views: intro `vewWNihLzD`; heatmaps `vewq0sKvbw`; ingredient cards `vewFwpcl4a`; ingredient wall `vewhsm7kxz`. Gallery covers use full-image fit; duplicate technical display fields are hidden, not deleted. Preserve these views during CSV sync.
+- Nine-table read-only audit passed after renaming and navigation sync. Signed-in reader access verified; anonymous Feishu visibility remains unverified. Do not expand sharing permissions without the appropriate approval.
+- The 68 retired reader documents moved to `archive/reader-history/`, with per-file hashes and frozen original commits. Old GitHub paths are not redirects. Run `scripts/build_release.py organize` for future explicit organization; `core`/`visuals` end with the reader-home builder.
+- Current library UI showed 11,167/20,000 rows, INCLUDING a temporary allowance. Warn at 90% of the actual limit; deduplicate and create a numbered continuation only at the real cap, not every month.
+- Routine upkeep does not require an E: backup. Do not operate on the separate dirty development checkout.
+
 - Always read this file first.
 - Do not ask the user for repeated manual Feishu operations unless API permission is actually blocked.
 - Keep GitHub as source of truth, then sync Feishu from GitHub CSVs.
