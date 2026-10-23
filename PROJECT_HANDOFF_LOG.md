@@ -1,12 +1,29 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-10-10
+Last updated / 最后更新：2026-10-24（资料快照仍为2026-10-23）
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
 本文档是本地交接记录，供后续 Codex 线程和人工维护者快速接手。这里记录已经完成的工作、执行流程、GitHub/飞书同步方式，以及凭据文件位置。不要把真实密钥写入本文档。
 
 ## Current Release Snapshot / 当前发布快照
+
+Current snapshot: **2026-10-23**. Publication worktree `D:\longevity\github-publish-current`; baseline commit `1d40b3ce6d3be6dc60fa812304e79b1bb1672b37`. Do not touch the dirty development checkout.
+
+- Search window 2026-10-11..2026-10-23: 526 unique matches, 513 new candidates and 13 existing matches. Recent retained sets: 120 candidates / 63 findings. PubMed publication-date matches can include earlier online publications.
+- Active: 11,176 candidates/literature; 2,487 findings/shortlist/paper pages; 1,500 matrix rows; five overlapping CSV layers total 28,826 rows. Candidate turnover +108/-99; findings +57/-20. Keep topic caps 600/200 and matrix total/per-topic caps 1,500/100.
+- Config `data/current_release.json`; notes `data/featured_reader_notes_2026_10_23.json`; metrics `data/curation_release_metrics_2026_10_23.json`; report `docs/october-23-public-update-2026-10.html`; panel `docs/yulcell-posting-asset-dashboard-2026-10-23.html`.
+- Baseline is the immutable `archive/public-data/public-data-2026-10-10.zip`. Previous 57 PNGs and two HTML originals are in `archive/visual-releases/visual-release-2026-10-10.zip`. Reader history now contains 76 files. Never compare same-month releases against overwritten monthly CSVs.
+- Official identifier check covers all 2,487 finding PMIDs: zero missing and substantive title conflicts; one title wording update; PMCID corrections 12 findings / 24 candidates. The six featured notes read official abstracts, not full texts.
+- Retraction refresh: 117 targets, 598 historical matched rows, 542 unique PMIDs. Ingredient grades retain prior evidence-review dates. A new image is not a new review.
+- Scope recheck removed two new out-of-scope findings while retaining candidates. `scripts/recheck_curated_findings.py` updates retirement logs and metrics without resetting search counts. Classifier regressions cover narrative appraisals, uncontrolled within-group syntheses and transcriptome endpoints.
+- Reader layout stays introduction, visuals/cards, evidence, source papers, then history/tools. Reuse all nine Feishu table IDs and the existing gallery/reader views; do not create monthly duplicates. Current read-only audit and publication acceptance belong in `docs/current-output-status.md`.
+- Three additional concise views keep existing complete views intact: literature `vew9JtWZPC`, findings `vew0CcjYQ3`, matrix `vewIBjyjNV`. Registry links select these views explicitly. Preserve them in later runs; names and visible fields live in `data/reader_layout.json`. Do not confuse an added view with an added data table.
+- Build order: identifiers, core, visuals, organize, exports, delta, sync, audit, validate. After archiving current-month PNGs, core's final reader-home step needs regenerated images; finish visuals and rerun core before validation. Do not run dependent stages concurrently. Date-specific Feishu upload/delta cache: `output/feishu-delta-2026-10-23/`.
+- This run's browser policy blocks `file:` URLs. Both offline HTML files passed embedded-image hash checks and inline-JavaScript syntax checks; live offline download/poster interactions were not retested. Do not claim the previous run's browser tests as this run's results.
+- No removable-drive backup; no sharing-permission expansion. Use `python -u -X utf8` on this Windows host.
+
+## Previous Snapshot / 上期 2026-10-10
 
 Current snapshot: **2026-10-10**. Worktree `D:\longevity\github-publish-current`; configuration `data/current_release.json`; baseline commit `9dc9f4f7eb5616b856cbcd732c0f4dc09c04a26c`.
 

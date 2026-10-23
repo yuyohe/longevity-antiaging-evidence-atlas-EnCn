@@ -7,7 +7,7 @@
 
 Senolytics 清除衰老细胞 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 55 records; final public claims still require full-text review.
+Draft summary: this topic now includes 56 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -58,8 +58,8 @@ Draft summary: this topic now includes 55 records; final public claims still req
 - [Nanoparticle-based senolytic and senomorphic therapies for healthy aging: design principles, translational evidence, and challenges.](../papers/pubmed-42843466.md) (2026, Ageing research reviews)
 - [Reprogramming cellular senescence and aging clocks for advanced cancer immunotherapy.](../papers/pubmed-41039629.md) (2025, Molecular cancer)
 - [Preliminary Data on the Senolytic Effects of Agrimonia pilosa Ledeb. Extract Containing Agrimols for Immunosenescence in Middle-Aged Humans: A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Comparison Study.](../papers/pubmed-40004995.md) (2025, Nutrients)
-- [Quercetin as a therapeutic agent for skin problems: a systematic review and meta-analysis on antioxidant effects, oxidative stress, inflammation, wound healing, hyperpigmentation, aging, and skin cancer.](../papers/pubmed-39738831.md) (2025, Naunyn-Schmiedeberg's archives of pharmacology)
 - [Therapeutic reversal of cellular senescence: A systematic review of senolytics, senomorphics and anti-ageing therapies in human clinical trials.](../papers/pubmed-42834340.md) (2026, British journal of clinical pharmacology)
+- [Quercetin as a therapeutic agent for skin problems: a systematic review and meta-analysis on antioxidant effects, oxidative stress, inflammation, wound healing, hyperpigmentation, aging, and skin cancer.](../papers/pubmed-39738831.md) (2025, Naunyn-Schmiedeberg's archives of pharmacology)
 - [Targeting Senescence: A Review of Senolytics and Senomorphics in Anti-Aging Interventions.](../papers/pubmed-40563501.md) (2025, Biomolecules)
 - [Targeting Senescence, Oxidative Stress, and Inflammation: Quercetin-Based Strategies for Ocular Diseases in Older Adults.](../papers/pubmed-40503074.md) (2025, Clinical interventions in aging)
 - [Aging, cellular senescence and Parkinson's disease.](../papers/pubmed-39973488.md) (2025, Journal of Parkinson's disease)
@@ -71,6 +71,7 @@ Draft summary: this topic now includes 55 records; final public claims still req
 - [A geroscience motivated approach to treat Alzheimer's disease: Senolytics move to clinical trials.](../papers/pubmed-34687726.md) (2021, Mechanisms of ageing and development)
 - [Blocking PD-L2 prevents senescent cell accumulation and age-related dysfunction.](../papers/pubmed-42721966.md) (2026, Cell metabolism)
 - [SGLT2 inhibition eliminates senescent cells and alleviates pathological aging.](../papers/pubmed-38816549.md) (2024, Nature aging)
+- [The triad of vascular ageing: Cellular senescence, inflammaging, and epigenetic remodelling in atherosclerosis.](../papers/pubmed-42887676.md) (2026, Mechanisms of ageing and development)
 - [Targeting Cellular Senescence Enhances Post-Burn Wound Healing in Aged Mice.](../papers/pubmed-42320016.md) (2026, Shock (Augusta, Ga.))
 - [Senescent cell transplantation into the skin induces age-related peripheral dysfunction and cognitive decline.](../papers/pubmed-39374134.md) (2025, Aging cell)
 - [Pharmacological Modulation of Immunosenescence and Inflammaging: Senolytics, Senomorphics, and Emerging Therapies.](../papers/pubmed-42376766.md) (2026, Immunological investigations)

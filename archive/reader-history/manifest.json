@@ -89,7 +89,7 @@
       "archive_path": "archive/reader-history/content/public-reader/october-2026-update.md",
       "source_commit": "5dfdd2f3180992cd8b1f98a5f62ff4cf642ebedb",
       "source_sha256": "000c239a147b35778b797e2ab00d74e3f3ce2eac61870a57cb2b52949fbb5494",
-      "archived_sha256": "711f1b0eecac31abdb4bb0981ede298d65065a689572c6efe7e98e02db82daec"
+      "archived_sha256": "b0b8d8ea18c820173955eb0596fa4a584856376dfe89fec6bc034e53b99d6d2c"
     },
     {
       "old_path": "docs/asset-maintenance-2026-10-01.md",
@@ -475,6 +475,62 @@
       "source_commit": "5dfdd2f3180992cd8b1f98a5f62ff4cf642ebedb",
       "source_sha256": "5fd7608e9158ef86bc3954dda718aa700f9ff83c3215092d6ebff5ee6ccf9bdb",
       "archived_sha256": "833a11d7108382b7af5866766b447a35889b747cf5a5d7df56914bbd4415882b"
+    },
+    {
+      "old_path": "content/public-reader/october-10-2026-update.md",
+      "archive_path": "archive/reader-history/content/public-reader/october-10-2026-update.md",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "72d7c6b5ec63254051a193cadb2303984b14f22605f517311b074245afc0b272",
+      "archived_sha256": "6f57764d79bb5e260aa44c1413aa7ba70f7c9193bb47354684a273efa5647de4"
+    },
+    {
+      "old_path": "docs/asset-maintenance-2026-10-10.md",
+      "archive_path": "archive/reader-history/docs/asset-maintenance-2026-10-10.md",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "72bf691790697a6943ff842eec3ba53e970015503f2b868cd3a97c1e48d6185c",
+      "archived_sha256": "7c350662f784486784c3ed76a50e838a55ae6ec3f8944f29e81da288c82318cd"
+    },
+    {
+      "old_path": "docs/easy-reader-layer-report-2026-10-10.md",
+      "archive_path": "archive/reader-history/docs/easy-reader-layer-report-2026-10-10.md",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "ee3bb6e866ba97804514b8332c51142ad6744550332c64962ac5d84cbb70aaef",
+      "archived_sha256": "ee3bb6e866ba97804514b8332c51142ad6744550332c64962ac5d84cbb70aaef"
+    },
+    {
+      "old_path": "docs/methods-ab-implementation-report-2026-10-10.md",
+      "archive_path": "archive/reader-history/docs/methods-ab-implementation-report-2026-10-10.md",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "aab9334787915dcf1f54ee287fcd785e64dd25f638c4d276a0f089b6ead4985c",
+      "archived_sha256": "aab9334787915dcf1f54ee287fcd785e64dd25f638c4d276a0f089b6ead4985c"
+    },
+    {
+      "old_path": "docs/october-10-public-update-2026-10.html",
+      "archive_path": "archive/reader-history/docs/october-10-public-update-2026-10.html",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "6c6518f08a15b42a4434ad5269f6fc74338381dcbdd0a9b85cf1463294972c68",
+      "archived_sha256": "657fed6bea64754f549d549c673cbdd54475567c6b92b623793753e7decb777b"
+    },
+    {
+      "old_path": "docs/reader-friendly-upgrade-report-2026-10-10.md",
+      "archive_path": "archive/reader-history/docs/reader-friendly-upgrade-report-2026-10-10.md",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "7bc30f4c4de81fcd081fda923971c75facaee1b9495c3b6a1d6d7da1ef99f3e0",
+      "archived_sha256": "7bc30f4c4de81fcd081fda923971c75facaee1b9495c3b6a1d6d7da1ef99f3e0"
+    },
+    {
+      "old_path": "docs/retraction-risk-layer-report-2026-10-10.md",
+      "archive_path": "archive/reader-history/docs/retraction-risk-layer-report-2026-10-10.md",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "d269c4eec778c86a2026b5183b5494ce7b8a8d50a93a00bde56ca409c53b76bb",
+      "archived_sha256": "d269c4eec778c86a2026b5183b5494ce7b8a8d50a93a00bde56ca409c53b76bb"
+    },
+    {
+      "old_path": "docs/yulcell-posting-asset-dashboard-2026-10-10.html",
+      "archive_path": "archive/reader-history/docs/yulcell-posting-asset-dashboard-2026-10-10.html",
+      "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
+      "source_sha256": "f0df8120467d9537dda79da0c0f70652bf968147701ae8464f2890fe13f0ae86",
+      "archived_sha256": "f91bca85739f24b3c7f2e996ee1d22b0169ca9c3d3b43dff5eed574d6d0891db"
     }
   ]
 }

@@ -7,7 +7,7 @@
 
 二甲双胍与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 48 records; final public claims still require full-text review.
+Draft summary: this topic now includes 49 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -95,3 +95,4 @@ Draft summary: this topic now includes 48 records; final public claims still req
 - [Metformin: An Old Drug with New Tricks-Promising Role in Vascular Aging and Cardioprotection.](../papers/pubmed-40471543.md) (2025, Drugs & aging)
 - [Metformin therapy increases leukocyte telomere length, telomerase activity, and longevity gene expression in Asian Indians with prediabetes: A 24-week participant-blind, outcome-assessor-blinded randomized controlled trial.](../papers/pubmed-42692117.md) (2026, Mechanisms of ageing and development)
 - [Metformin Use Is Associated With Better Cognitive Performance in Older Adults With Type 2 Diabetes: Exploratory Analysis of Vitamin B12 and Methylmalonic Acid Pathways in NHANES 2011-2014.](../papers/pubmed-42806220.md) (2026, Diabetes, obesity & metabolism)
+- [An exploratory study of the effect of metformin on the whole blood transcriptome of nondiabetic older adults with age-related macular degeneration.](../papers/pubmed-42900294.md) (2026, GeroScience)

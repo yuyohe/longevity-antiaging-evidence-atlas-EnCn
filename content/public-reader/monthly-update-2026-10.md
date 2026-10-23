@@ -2,38 +2,38 @@
 
 品牌：宇多Yul细胞/yulcell
 
-生成日期：2026-10-10
+生成日期：2026-10-23
 
 ## 本月一句话
 
-按 2026/10/02 至 2026/10/10 的 PubMed 窗口找到 298 条匹配，其中 289 条是新候选、9 条已在库中。清理重复和弱相关记录后，当前候选库由 11,161 条调整为 11,167 条，证据发现由 2,424 条调整为 2,450 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。 近期文献仍是草稿层，不直接改变医学结论。
+按 2026/10/11 至 2026/10/23 的 PubMed 窗口找到 526 条匹配，其中 513 条是新候选、13 条已在库中。清理重复和弱相关记录后，当前候选库由 11,167 条调整为 11,176 条，证据发现由 2,450 条调整为 2,487 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。 近期文献仍是草稿层，不直接改变医学结论。
 
 ## 资产规模
 
-- 候选文献：11,167
-- 证据发现：2,450
+- 候选文献：11,176
+- 证据发现：2,487
 - 证据矩阵：1,500
-- 检索新增候选：289
-- PubMed 匹配总数：298
-- 近期入选 findings：39
-- 候选退出决定：283
-- findings 退出决定：268
+- 检索新增候选：513
+- PubMed 匹配总数：526
+- 近期入选 findings：63
+- 候选退出决定：504
+- findings 退出决定：483
 - 皮肤/外观主题：9
 - 补剂条目：100
 - 撤稿观察目标：117
 
 ## 近期文献样例
 
-本轮保留近期候选 81 条，其中 39 条进入 findings；记录候选退出决定 283 条、findings 退出决定 268 条。退出理由可在 data/archive/ 中复核。
+本轮保留近期候选 120 条，其中 63 条进入 findings；记录候选退出决定 504 条、findings 退出决定 483 条。退出理由可在 data/archive/ 中复核。
 
 | PMID | 年份 | 题名 | 查询层 |
 | --- | --- | --- | --- |
-| 42832337 | 2026 | Changes in physical performance and frailty-associated risk associated with participation in a community exercise progra | resistance-training-muscle__curated_recent_update_2026_10_10 |
-| 42678372 | 2026 | Effects of resistance training sets on cognition and brain-derived neurotrophic factor in cognitively impaired individua | resistance-training-muscle__curated_recent_update_2026_10_10 |
-| 42849790 | 2026 | Associations of Pre-Diagnostic Cardiorespiratory Fitness and Handgrip Strength With All-Cause Mortality and 15-Year Surv | cardiorespiratory-fitness__curated_recent_update_2026_10_10 |
-| 42837024 | 2026 | GLP-1 receptor agonists for obstructive sleep apnea: a meta-analysis of randomized controlled trials. | glp1-weight-cardiometabolic__curated_recent_update_2026_10_10 |
-| 42834340 | 2026 | Therapeutic reversal of cellular senescence: A systematic review of senolytics, senomorphics and anti-ageing therapies i | senolytics__curated_recent_update_2026_10_10 |
-| 42834177 | 2026 | Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells. | autophagy-mitophagy__curated_recent_update_2026_10_10 |
+| 42880160 | 2026 | Possible sarcopenia defined by the 2025 Asian Working Group for sarcopenia consensus and functional impairment among adu | resistance-training-muscle__curated_recent_update_2026_10_23 |
+| 42660338 | 2026 | Effects of eccentric overload training on lower-limb muscle strength, gait performance, balance, and explosive power in  | resistance-training-muscle__curated_recent_update_2026_10_23 |
+| 42897109 | 2026 | Changes in Muscle Strength Following Semaglutide Treatment in Adults: A Systematic Review With Meta-Analysis of Handgrip | glp1-weight-cardiometabolic__curated_recent_update_2026_10_23 |
+| 42906553 | 2026 | Weight loss during intermittent fasting, not Mediterranean diet quality alone, is associated with lower inflammation: A  | time-restricted-eating__curated_recent_update_2026_10_23 |
+| 42888381 | 2026 | Planned Antihypertensive Deprescribing in Long-Term Care Residents: A Systematic Review of Randomized Evidence. | blood-pressure-aging__curated_recent_update_2026_10_23 |
+| 42900294 | 2026 | An exploratory study of the effect of metformin on the whole blood transcriptome of nondiabetic older adults with age-re | metformin-aging__curated_recent_update_2026_10_23 |
 
 ## 研究热力图
 

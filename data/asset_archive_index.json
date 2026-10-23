@@ -43,5 +43,14 @@
     "archive_bytes": 25916762,
     "sha256": "1b0fd562ea38a34f98c1828415ece8ad86300b4bc0cde62c869f3ed525bba39c",
     "source_commit": "9dc9f4f7eb5616b856cbcd732c0f4dc09c04a26c"
+  },
+  {
+    "month": "2026-10-10",
+    "archive": "archive/visual-releases/visual-release-2026-10-10.zip",
+    "files": 59,
+    "original_bytes": 32852332,
+    "archive_bytes": 25906806,
+    "sha256": "53dbb4985edcaae4b620108067cf77d386f818f4c647175297be50b7ed0813f2",
+    "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37"
   }
 ]

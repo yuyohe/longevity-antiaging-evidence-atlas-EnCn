@@ -408,13 +408,14 @@ def main() -> None:
     card_paths = [make_ingredient_card(row) for row in ingredient_rows]
 
     topic_year_rows = read_csv(DATA_DIR / "research_heatmap_topic_year.csv")
+    matrix_count = len(read_csv(DATA_DIR / "evidence_matrix.csv"))
     topic_year_rows = sorted(topic_year_rows, key=lambda row: int(row.get("total_2020_2026", "0") or 0), reverse=True)
     years = ["2020", "2021", "2022", "2023", "2024", "2025", "2026"]
     topic_year_path = draw_heatmap(
         topic_year_rows,
         years,
-        "研究热力图：哪些抗衰主题这几年更热",
-        "按主题统计 2020-2026 年候选文献数量。深色不是“更有效”，只是研究更多。",
+        "研究分布：当前收录了哪些主题",
+        f"当前 {matrix_count:,} 条矩阵记录中，2020-2026 年的数量；颜色深表示收录多。",
         OUT_DIR / f"heatmap-topic-year-{UPDATE_MONTH}.png",
     )
 
@@ -423,8 +424,8 @@ def main() -> None:
     evidence_path = draw_heatmap(
         evidence_rows,
         ["A", "B", "C", "D", "E"],
-        "证据热力图：哪些主题更接近高等级证据",
-        "A/B 代表更靠近人体临床与系统评价，C/D/E 代表证据还更早期或不稳定。",
+        "草稿等级分布：各主题记录怎样分类",
+        "A-E 是项目复核排序，仍须看研究对象和结果；不代表疗效或标准 GRADE 评级。",
         OUT_DIR / f"heatmap-topic-evidence-{UPDATE_MONTH}.png",
     )
 
@@ -466,7 +467,7 @@ def main() -> None:
             "update_month": UPDATE_MONTH,
             "title": "研究热力图：主题 x 年份",
             "asset_type": "heatmap_png",
-            "description": "按主题和年份显示候选文献数量，颜色越深数量越多。",
+            "description": "按主题和年份统计当前矩阵记录；颜色越深表示收录越多，不能代表全球研究热度或疗效。",
             "data_source": "data/research_heatmap_topic_year.csv",
             "local_path": str(topic_year_path.relative_to(ROOT)).replace("\\", "/"),
         },
@@ -475,7 +476,7 @@ def main() -> None:
             "update_month": UPDATE_MONTH,
             "title": "证据热力图：主题 x 证据等级",
             "asset_type": "heatmap_png",
-            "description": "按主题和证据等级显示文献数量，帮助读者看出哪些方向证据更成熟。",
+            "description": "按主题展示A-E草稿等级的记录数；等级供复核排序，仍须查看研究对象、终点和全文。",
             "data_source": "data/research_heatmap_topic_evidence.csv",
             "local_path": str(evidence_path.relative_to(ROOT)).replace("\\", "/"),
         },

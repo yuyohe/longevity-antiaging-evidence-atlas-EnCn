@@ -1,6 +1,6 @@
 # 撤稿风险观察方法 / Retraction Risk Methodology
 
-Last updated / 更新时间：2026-10-10
+Last updated / 更新时间：2026-10-23
 
 ## 目的
 
@@ -12,7 +12,7 @@ Last updated / 更新时间：2026-10-10
 
 1. 来源为 PubMed。
 2. PubMed Publication Type 包含 `Retracted Publication`。
-3. 被撤稿论文的发表日期在 2006/01/01 到 2026/10/10。
+3. 被撤稿论文的发表日期在 2006/01/01 到 2026/10/23。
 4. 成分或主题词必须匹配题名，题名或摘要再匹配本项目补剂、护肤、抗衰前沿语境。
 5. 查询必须可复跑，查询式写入 `data/retraction_risk_queries_20y.csv`。
 
@@ -50,5 +50,5 @@ Last updated / 更新时间：2026-10-10
 ## 本轮规模
 
 - 目标成分/主题：117 个。
-- 匹配撤稿记录行：596 行。
-- 去重 PMID：540 个。
+- 匹配撤稿记录行：598 行。
+- 去重 PMID：542 个。

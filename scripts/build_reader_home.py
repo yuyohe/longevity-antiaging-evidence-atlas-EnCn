@@ -54,6 +54,10 @@ Evidence snapshot / 资料快照：{cfg['EVIDENCE_ATLAS_UPDATE_DATE']}。Organiz
 
 {chr(10).join(sections)}
 
+文献目录、研究笔记和证据对照表的入口已指向简洁阅读视图，完整字段仍在原视图。`title_en/title_zh`是英文/中文题名，`conclusion_zh/zh_summary`是中文结论/摘要，`year`是发表年份，`PMID`是PubMed文献编号。中文题名留空表示尚未补写翻译。
+
+The three reading views hide maintenance columns without removing data. Empty Chinese titles mean a translation has not yet been added.
+
 五张资料表属于不同处理层，同一论文可能重复出现。总行数不能当成独立论文数；入选与草稿等级也不代表功效已经确认。
 
 The five data layers overlap. Candidate inclusion and draft grades do not establish efficacy.
@@ -192,7 +196,7 @@ GitHub preserves versions; Feishu supports browsing and review. Downloaded HTML 
 - 五层数据会重复收录同一论文，不能把行数当作独立论文总数。
 - 新图不等于评级重新确认。[完整读表说明](content/public-reader/evidence-weight.md)。
 
-资料快照：{snapshot}。分类整理：{layout['organized_on']}。本次没有新增文献或更改证据评级。
+资料快照：{snapshot}。分类整理：{layout['organized_on']}。[本期更新内容](content/public-reader/{cfg['EVIDENCE_ATLAS_RELEASE_FILE']})。
 
 English: start with the [bilingual homepage](README.md). Current evidence, source material and historical releases have separate entry points.
 """
@@ -227,7 +231,7 @@ No individual prescriptions, dosing, stopping medication or purchase recommendat
 
 [全部当前入口](../../docs/asset-catalog.md) · [飞书阅读入口]({by_key['reader_navigation']['url']}) · [历史资料](../../archive/README.md)
 
-资料快照：{snapshot}；阅读分类整理：{layout['organized_on']}。本次只整理入口与重复版本，没有重新检索或升级评级。
+资料快照：{snapshot}；阅读分类整理：{layout['organized_on']}。[本期文献与资产更新]({cfg['EVIDENCE_ATLAS_RELEASE_FILE']})。
 """
     (ROOT / "content/public-reader/start-here.md").write_text(start, encoding="utf-8")
     write_catalog(rows, cfg, layout)

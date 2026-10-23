@@ -545,6 +545,8 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         return "protocol_or_registered_plan"
     if any(term in f"{type_text} {title_text}" for term in ["meta-analysis", "meta analysis", "systematic review", "umbrella review"]):
         return "systematic_review_or_meta_analysis"
+    if "this critical appraisal synthesizes" in body_text:
+        return "narrative_review"
     if has_mixed_human_and_animal_subjects(type_text, title_text, body_text):
         return "mixed_human_and_animal_study"
     if has_direct_animal_subject(type_text, title_text, body_text):

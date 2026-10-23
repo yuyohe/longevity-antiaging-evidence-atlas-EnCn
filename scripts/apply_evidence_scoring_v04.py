@@ -249,6 +249,8 @@ def normalized_study_type(row: dict[str, str]) -> str:
         return "protocol_or_registered_plan"
     if any(term in title_and_types for term in ["meta-analysis", "meta analysis", "systematic review", "umbrella review"]):
         return "systematic_review_or_meta_analysis"
+    if "promise, pitfalls, and evidence gaps" in title or "this critical appraisal synthesizes" in body:
+        return "narrative_review"
     if has_mixed_human_and_animal_subjects(publication_types, title, body):
         return "mixed_human_and_animal_study"
     if has_direct_animal_subject(publication_types, title, body):
@@ -326,6 +328,8 @@ def normalized_species(row: dict[str, str], study_type: str) -> str:
 def normalized_healthspan_endpoint(row: dict[str, str]) -> str:
     """Prefer the paper's title/conclusion over background-only abstract wording."""
     text = f"{row.get('title_en', '')} {row.get('conclusion_en', '')}".lower()
+    if "whole blood transcriptome" in row.get("title_en", "").lower():
+        return "H4"
     if any(
         term in text
         for term in [
@@ -533,7 +537,11 @@ def confidence_cap(row: dict[str, str], domain: str) -> str:
         f"{row.get('title_en', '')} {row.get('publication_types', '')}",
         re.IGNORECASE,
     )
-    limited_design = bool(case_based) or study in {
+    uncontrolled_synthesis = (
+        study == "systematic_review_or_meta_analysis"
+        and "uncontrolled within-group changes" in row.get("result_en", "").lower()
+    )
+    limited_design = bool(case_based) or uncontrolled_synthesis or study in {
         "human_indirect_model_analysis", "human_observational_secondary_analysis", "human_nonrandomized_or_mixed_trial"
     }
     if domain == "longevity":

@@ -3,6 +3,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from urllib.parse import parse_qs, urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
@@ -11,6 +12,17 @@ from build_reader_home import load_registry, ordered_registry
 
 
 class ReaderLayoutTests(unittest.TestCase):
+    def test_reader_views_use_explicit_links_and_hide_maintenance_fields(self):
+        root = Path(__file__).resolve().parents[1]
+        layout = json.loads((root / "data/reader_layout.json").read_text(encoding="utf-8"))
+        registry = {row["asset_key"]: row for row in load_registry()}
+        for key, spec in layout["reader_views"].items():
+            self.assertIn("view", parse_qs(urlsplit(registry[key]["url"]).query))
+            self.assertIn("公开标题", spec["visible_fields"])
+            self.assertNotIn("SEO关键词", spec["visible_fields"])
+            self.assertNotIn("品牌标识", spec["visible_fields"])
+            self.assertLessEqual(len(spec["visible_fields"]), 6)
+
     def test_layout_preserves_all_current_assets(self):
         root = Path(__file__).resolve().parents[1]
         layout = json.loads((root / "data/reader_layout.json").read_text(encoding="utf-8"))

@@ -193,6 +193,15 @@ class CurationPolicyTests(unittest.TestCase):
         self.assertEqual([row["id"] for row in kept], ["pubmed-1"])
         self.assertEqual(retired[0]["duplicate_of"], "pubmed-1")
 
+    def test_weathered_plastic_and_fish_clocks_are_outside_active_scope(self) -> None:
+        cases = [
+            ("microbiome-inflammaging", "Gut microbiome response of adult zebrafish to aged polyethylene microplastics.", "topic_scope_mismatch"),
+            ("epigenetic-clocks", "Epigenetic Clocks Can Predict Age in the Largemouth Bass-Complex.", "nonhuman_record_in_human_outcome_topic"),
+        ]
+        for topic, title, reason in cases:
+            self.assertEqual(curation.finding_rejection_reason({"topic_id": topic, "title_en": title}), reason)
+        self.assertTrue(curation.finding_scope_match("microbiome-inflammaging", "Gut microbiome changes in aged mice"))
+
     def test_per_topic_finding_cap_is_enforced(self) -> None:
         rows = []
         for index in range(4):

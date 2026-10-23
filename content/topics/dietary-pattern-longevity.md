@@ -47,6 +47,7 @@ Draft summary: this topic now includes 200 records; final public claims still re
 
 ## 相关论文卡片 / Related Paper Cards
 
+- [Dietary and lifestyle quality and endometrial cancer: Incidence and survivorship outcomes-An umbrella review of systematic reviews and meta-analyses.](../papers/pubmed-42873780.md) (2026, PloS one)
 - [Ultra-processed food consumption and risk of multiple chronic diseases among 8,819,894 adults from 51 prospective cohorts: a dose-response meta-analysis.](../papers/pubmed-42773062.md) (2026, Family medicine and community health)
 - [Dietary and Nutrition Interventions for Breast Cancer Survivors: An Umbrella Review.](../papers/pubmed-41515149.md) (2025, Nutrients)
 - [Healthy dietary patterns and ovarian cancer risk and survival: a systematic review and meta-analysis.](../papers/pubmed-41158656.md) (2025, Frontiers in nutrition)
@@ -204,13 +205,13 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Anatomy of health effects of Mediterranean diet: Greek EPIC prospective cohort study.](../papers/pubmed-19549997.md) (2009, BMJ (Clinical research ed.))
 - [Modified Mediterranean diet and survival: EPIC-elderly prospective cohort study.](../papers/pubmed-15820966.md) (2005, BMJ (Clinical research ed.))
 - [Dietary pattern and 20 year mortality in elderly men in Finland, Italy, and The Netherlands: longitudinal cohort study.](../papers/pubmed-9233319.md) (1997, BMJ (Clinical research ed.))
+- [Post-Diagnosis Healthy Dietary Patterns in Relation to All-Cause and Cause-Specific Mortality and Life Expectancy among Adults with Type 2 Diabetes: Evidence from Cohort Studies.](../papers/pubmed-42674115.md) (2026, The American journal of clinical nutrition)
+- [Aligning patient and planetary health: planetary health diet adherence and inflammatory bowel disease prognosis across Western and Eastern cohorts.](../papers/pubmed-42373652.md) (2026, NPJ science of food)
 - [Can a Mediterranean diet moderate the development and clinical progression of coronary heart disease? A systematic review.](../papers/pubmed-15278010.md) (2004, Medical science monitor : international medical journal of experimental and clinical research)
 - [Low-fat dietary pattern and risk of cardiovascular disease: the Women's Health Initiative Randomized Controlled Dietary Modification Trial.](../papers/pubmed-16467234.md) (2006, JAMA)
 - [Mediterranean dietary pattern in a randomized trial: prolonged survival and possible reduced cancer rate.](../papers/pubmed-9625397.md) (1998, Archives of internal medicine)
 - [Mediterranean diet and cardiovascular disease: a systematic review and meta-analysis of observational studies.](../papers/pubmed-29177567.md) (2019, European journal of nutrition)
-- [Post-Diagnosis Healthy Dietary Patterns in Relation to All-Cause and Cause-Specific Mortality and Life Expectancy among Adults with Type 2 Diabetes: Evidence from Cohort Studies.](../papers/pubmed-42674115.md) (2026, The American journal of clinical nutrition)
 - [Association of Five Dietary Indices with All-Cause Mortality in Stroke Survivors: A National Cohort Study.](../papers/pubmed-42492864.md) (2026, Journal of stroke and cerebrovascular diseases : the official journal of National Stroke Association)
-- [Aligning patient and planetary health: planetary health diet adherence and inflammatory bowel disease prognosis across Western and Eastern cohorts.](../papers/pubmed-42373652.md) (2026, NPJ science of food)
 - [Mediterranean diet adherence and dietary fat intake in relation to lung cancer outcomes: a prospective cohort study.](../papers/pubmed-42299984.md) (2026, Food & function)
 - [Composite dietary antioxidant index and cardiovascular diseases and all-cause mortality in Iranian adults: a prospective cohort study.](../papers/pubmed-42219859.md) (2026, Nutrition, metabolism, and cardiovascular diseases : NMCD)
 - [Diet quality and all-cause mortality among individuals with chronic kidney disease: a UK Biobank cohort study.](../papers/pubmed-41692249.md) (2026, The American journal of clinical nutrition)
@@ -245,5 +246,4 @@ Draft summary: this topic now includes 200 records; final public claims still re
 - [Diet and Cognitive Function in Aging: An Individual Participant Data Meta-Analysis from Eight Cohorts in Europe and the United States.](../papers/pubmed-42373047.md) (2026, The Journal of nutrition)
 - [Adherence to the Mediterranean diet and frailty and disability in older people: A systematic review and meta-analysis featured in the Italian National Guidelines "La Dieta Mediterranea".](../papers/pubmed-42068929.md) (2026, Nutrition (Burbank, Los Angeles County, Calif.))
 - [Mediterranean diet in cancer patients' survival: A systematic review and meta-analysis for tertiary prevention featured in the Italian National Guidelines "La Dieta Mediterranea".](../papers/pubmed-41579434.md) (2026, Nutrition (Burbank, Los Angeles County, Calif.))
-- [Plant-based dietary pattern and low muscle mass: a nation-wide cohort analysis of Chinese older adults.](../papers/pubmed-37716958.md) (2023, BMC geriatrics)
 - [Adherence to the Mediterranean-DASH Intervention for Neurodegenerative Delay (MIND) diet and longitudinal changes in global cognition: a post hoc analysis of the MIND trial.](../papers/pubmed-42457038.md) (2026, The American journal of clinical nutrition)

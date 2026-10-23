@@ -5,7 +5,7 @@
 
 An evidence guide to exercise, sleep, nutrition, supplements and aging research: who was studied, what was measured, and what the findings support. Animal experiments, biomarkers and human outcomes are kept separate.
 
-资料快照 / Evidence snapshot：2026-10-10 · 分类整理 / Organization：2026-10-16
+资料快照 / Evidence snapshot：2026-10-23 · 分类整理 / Organization：2026-10-23
 
 | 你想做什么 / Your question | 从哪里看 / Open |
 | --- | --- |
@@ -44,7 +44,7 @@ Each card distinguishes healthspan and skin contexts and includes limitations.
 | NMN、鱼油、胶原蛋白等补剂 | [常见补剂](content/public-reader/supplements-top-30.md) |
 | 防晒、皱纹、屏障和医美 | [皮肤与外观](content/public-reader/skin.md) |
 | A/B、H1至H6、全文待复核是什么意思 | [读表与缩写说明](content/public-reader/evidence-weight.md) |
-| 比较不同研究 | [飞书证据对照表](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir) |
+| 比较不同研究 | [飞书证据对照表](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblLnS2g439w9pir&view=vewIBjyjNV) |
 
 等级是项目草稿排序，研究笔记仍可能等待全文复核。图片制作日期不代表评级重新确认；不能据此自行用药、停药或购买补剂。
 
@@ -52,7 +52,7 @@ Grades and notes are provisional. New images do not imply revalidated evidence. 
 
 ## 三、找原文 / Sources
 
-[文献来源目录](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE) · [公开数据与字段说明](public-data/README.md) · [全部当前入口](docs/asset-catalog.md)
+[文献来源目录](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblIPdcBJPH6UkAE&view=vew9JtWZPC) · [公开数据与字段说明](public-data/README.md) · [全部当前入口](docs/asset-catalog.md)
 
 五张数据表是不同处理层，同一论文可能重复出现，总行数不是独立论文数。查具体文献时用 PMID 或 DOI。
 
@@ -61,7 +61,7 @@ The five data layers overlap. Use PMID or DOI to trace individual papers.
 <details>
 <summary>更新记录、历史资料与维护 / Updates, Archives and Maintenance</summary>
 
-- [最近一次文献更新](content/public-reader/october-10-2026-update.md)
+- [最近一次文献更新](content/public-reader/october-23-2026-update.md)
 - [历史版本统一入口](archive/README.md)
 - [维护与分表规则](docs/data-retention-and-curation-policy.md)
 - [核验状态](docs/current-output-status.md)

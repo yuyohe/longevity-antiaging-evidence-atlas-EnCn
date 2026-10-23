@@ -86,6 +86,8 @@ if os.environ.get("EVIDENCE_ATLAS_FEATURED_NOTES"):
                           for pmid, row in reader_notes.items()})
 
 STUDY_LABELS = {
+    "metadata_only_needs_classification": "探索性资料，研究类型待复核 / Design pending review",
+    "narrative_review": "叙述性综述 / Narrative review",
     "systematic_review_or_meta_analysis": "多项研究汇总 / Review & meta-analysis",
     "human_cohort": "人群追踪研究 / Cohort",
     "human_randomized_or_clinical_trial": "临床试验 / Clinical trial",
@@ -401,9 +403,36 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
 **检索窗口 / Search window:** {search['date_window']}<br>
 **本轮目标 / Goal:** 补进真正相关的新资料，同时清理重复、弱相关和放错层级的记录，让初中生也能看懂这张证据地图。
 
-## 一句话结论 / One-Sentence Summary
+## 这张图谱是什么 / What This Atlas Is
 
-这次不是“继续往里塞”。PubMed 检索找到 {search['unique_pubmed_matches']:,} 条匹配，其中 {search['new_rows']:,} 条是新候选；经过主题核对、去重和容量控制后，当前候选库从 {before['candidate_records']:,} 条调整为 {after['candidate_records']:,} 条，findings 从 {before['finding_records']:,} 条调整为 {after['finding_records']:,} 条。已满额主题以替换为主，未满额主题只在固定上限内补入合格记录。
+它整理运动、睡眠、饮食、补剂和抗衰研究，帮助你看清：研究了谁，测了什么，结论能用到哪里。热力图看研究分布，成分卡查具体用途，再沿链接核对论文。
+
+This atlas explains who was studied, what was measured and how far the findings apply. Start with the visuals, look up an ingredient, then follow the sources.
+
+本轮检索找到 {search['unique_pubmed_matches']:,} 个 PubMed 匹配，筛选后保留 {after['recent_candidates_retained']:,} 条近期候选。当前目录 {after['candidate_records']:,} 条、待复核研究笔记 {after['finding_records']:,} 条。各主题继续按固定容量更新。
+
+## 先看图，再查成分 / Visuals and Ingredients
+
+![研究热力图](../../docs/assets/visual-assets/{MONTH}/heatmap-dashboard-{MONTH}.png)
+
+颜色表示当前收录的记录数量。颜色深说明记录多，不能当作疗效更强。
+
+![50种成分总览](../../docs/assets/visual-assets/{MONTH}/ingredient-card-wall-{MONTH}.png)
+
+[50种成分逐张查](ingredient-cards-top-50.md) · [离线图文报告与图片下载](../../docs/{REPORT_FILE})
+
+{retraction_refresh_note()}
+
+## 近期研究，逐篇看懂 / Recent Studies Explained
+
+以下六篇已核对官方摘要，全文尚待复核。检索采用 PubMed 发表日期，可能包括较早在线发表、最近编入期刊的文章。Each note is based on the official abstract; full-text review is pending.
+
+{featured_sections(findings)}
+
+<details>
+<summary>资料数量、筛选规则与校验记录 / Counts, Curation and Checks</summary>
+
+## 本期资料变化 / What Changed
 
 This release adds and retires records within fixed capacity limits. Counts may rise or fall; older versions remain recoverable.
 
@@ -447,12 +476,6 @@ This release adds and retires records within fixed capacity limits. Counts may r
 
 完整规则：[精编与归档规则](../../docs/data-retention-and-curation-policy.md)
 
-## 近期文献举例 / Recent Examples
-
-这些例子只是说明本轮覆盖了哪些问题，不是疗效推荐。题名和标识已与 NCBI PubMed 核对；结论仍需全文复核。
-
-{featured_sections(findings)}
-
 ## 当前等级分布 / Current Draft Grades
 
 | A | B | C | D | E |
@@ -475,6 +498,10 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 明确写作准实验、或对照组非随机分配的研究，独立标为非随机/混合分配研究，最高 C 级；不能因为一部分组间随机化，就把所有比较当作随机对照。 / Quasi-experimental and mixed-allocation studies are not fully randomized comparisons.
 - 额外排除塑料老化等环境研究，以及没有老龄语境的青少年竞技训练；病例资料汇总最高按 C 级，主题等级不能放宽动物研究的 D 级上限。
 - 50 张成分卡的评级沿用既有资料，本轮刷新撤稿检索、来源链接和图片；不表示 50 个成分都完成了新的全文复核。 / Ingredient grades remain provisional; refreshed counts and visuals do not imply a new full-text review of every ingredient.
+
+本轮补查发现的分类问题：塑料老化、鱼类年龄预测退出当前研究笔记，原始候选仍保留；引用队列研究的叙述性综述单独标注；无对照的组内变化汇总最高 C 级；全血基因表达归入生物标志物层。These are draft classification corrections, not a new full-text assessment of all records.
+
+</details>
 
 ## 图片与公开资产 / Visuals and Public Assets
 
@@ -516,9 +543,15 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
     by_pmid = {row.get("pmid", ""): row for row in findings}
     by_key = {row["asset_key"]: row for row in registry}
 
-    main_figures = "\n".join(
+    first_figures = "\n".join(
         figure_html(VISUAL_DIR / filename, title, note)
         for filename, title, note in MAIN_IMAGES
+        if filename.startswith(("heatmap-dashboard", "ingredient-card-wall"))
+    )
+    detail_figures = "\n".join(
+        figure_html(VISUAL_DIR / filename, title, note)
+        for filename, title, note in MAIN_IMAGES
+        if not filename.startswith(("heatmap-dashboard", "ingredient-card-wall"))
     )
     card_figures = "\n".join(
         figure_html(path, path.stem, "证据边界卡 / Evidence boundary card", "card-figure")
@@ -616,67 +649,46 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
     <div class="inner">
       <p class="eyebrow">{RELEASE_CODE}</p>
       <h1>宇多Yul细胞 / yulcell</h1>
-      <p class="subtitle">长寿抗衰与健康寿命证据图谱：{UPDATE_TITLE_ZH}。补进新资料，也清理重复和弱相关记录。</p>
+      <p class="subtitle">长寿抗衰与健康寿命证据图谱<br>运动、睡眠、饮食、补剂：研究了谁，发现了什么，能说明到哪一步？</p>
       <p class="meta">冻结日期 {SNAPSHOT_DATE} · PubMed 窗口 {esc(search['date_window'])} · 双语公开资产</p>
-      <nav class="quick-nav"><a href="#summary">先看结论</a><a href="#cleanup">如何控量</a><a href="#new">近期文献</a><a href="#visuals">图片</a><a href="#assets">GitHub 与飞书</a></nav>
+      <nav class="quick-nav"><a href="#summary">这是什么</a><a href="#visuals">热力图与成分卡</a><a href="#new">近期研究</a><a href="#assets">GitHub 与飞书</a><a href="#cleanup">整理记录</a></nav>
     </div>
   </header>
   <main>
     <section id="summary"><div class="inner">
-      <h2>先说结论 / Summary First</h2>
-      <p class="lead">这次更新不是继续堆数量。检索找到 <strong>{search['unique_pubmed_matches']:,}</strong> 条匹配，其中 <strong>{search['new_rows']:,}</strong> 条是新候选；筛选后，当前候选库从 {before['candidate_records']:,} 条调整为 {after['candidate_records']:,} 条，findings 从 {before['finding_records']:,} 条调整为 {after['finding_records']:,} 条。</p>
-      <p class="notice"><strong>为什么数量仍受控制：</strong>已满额主题以替换为主；未满额主题只在上限内补入合格记录。重复、方案论文、评论勘误、动物/人体边界错误、题名与主题不符和超过容量的低优先级记录退出当前层，并可从退出日志、旧快照和 Git 历史恢复。</p>
-      <div class="metrics">
-        <div class="metric"><b>{after['candidate_records']:,}</b><span>当前候选文献 / active candidates</span></div>
-        <div class="metric blue"><b>{after['finding_records']:,}</b><span>当前 findings / review drafts</span></div>
-        <div class="metric gold"><b>1,500</b><span>证据矩阵 / matrix rows</span></div>
-        <div class="metric coral"><b>{public_row_total:,}</b><span>五层 CSV 总行数，不是论文数</span></div>
-      </div>
-      {reader_legend_html()}
+      <h2>这是什么？ / What Is This?</h2>
+      <p class="lead">这是一份可以查来源的研究地图。你可以先看热力图了解研究分布，查成分卡了解具体用途，再读研究笔记或找到原始论文。</p>
+      <p>This atlas connects readable study notes and ingredient summaries to their original sources.</p>
+      <p>本期补检至 {SNAPSHOT_DATE}，从 {search['unique_pubmed_matches']:,} 个匹配中保留 {after['recent_candidates_retained']:,} 条近期候选。下方先看图，再读六篇研究的中文解读。</p>
+      <details><summary>等级、颜色和缩写怎么读 / Reading the Labels</summary>{reader_legend_html()}</details>
     </div></section>
 
-    <section id="cleanup" class="alt"><div class="inner">
-      <h2>这次怎样做减法 / How the Library Was Curated</h2>
-      <p>{esc(archive_note())}</p>
-      <p>候选每主题最多 600 条，findings 每主题最多 200 条，矩阵总计最多 1,500 条、每主题最多 100 条。上限不是配额：合格记录少就少放，不为填表而凑数。</p>
-      <div class="table-wrap"><table><thead><tr><th>层级 / Layer</th><th>上期</th><th>旧记录退出</th><th>新进入</th><th>当前</th><th>净变化</th></tr></thead><tbody>{''.join('<tr>' + ''.join(f'<td>{esc(cell)}</td>' for cell in row) + '</tr>' for row in turnover_rows(metrics))}</tbody></table></div>
-      <p>按记录 ID 与上期比较；新进入 findings 可以来自原有候选，不等于新发表。Turnover compares stable record identifiers.</p>
-      <div class="table-wrap"><table><thead><tr><th>层级</th><th>退出原因</th><th>决定数</th></tr></thead><tbody>{reason_html}</tbody></table></div>
-      <p>候选退出决定 {retired['candidate_decisions']:,} 条，findings 退出决定 {retired['finding_decisions']:,} 条。一个记录可能先经过新检索，再因去重或容量规则退出，因此“决定数”不能简单当成净减少数。</p>
+    <section id="visuals" class="alt"><div class="inner">
+      <h2>看图，查成分 / Visuals and Ingredients</h2>
+      <p>热力图显示当前收录的研究，成分卡说明具体用途和证据限制。颜色深表示记录多，不能当作疗效排名。Heatmaps show selected research, not treatment effectiveness.</p>
+{first_figures}
+      <details><summary>50种成分，逐张看 / Browse 50 Ingredient Cards</summary><div class="card-grid">{card_figures}</div></details>
+      <details><summary>按年份、等级与撤稿情况继续看 / More Research Charts</summary>{detail_figures}</details>
+      <p>本文件内嵌7张主图和50张成分卡，离线也可下载PNG。成分卡沿用既有暂定评级，本轮更新图像、来源核对和撤稿查询。The 57 images are embedded; refreshed graphics do not mean every ingredient has undergone a new full-text review.</p>
+      <p>{esc(retraction_refresh_note())}</p>
     </div></section>
 
     <section id="new"><div class="inner">
-      <h2>近期文献 / Recent Literature</h2>
-      <p>20 个主题共得到 {search['unique_pubmed_matches']:,} 个唯一 PubMed 匹配：新候选 {search['new_rows']:,} 条，已有记录 {search['matched_existing']:,} 条；最终保留近期候选 {after['recent_candidates_retained']:,} 条，其中 {after['recent_findings_retained']:,} 条进入 findings。</p>
-      <p class="notice">下面只是检索覆盖示例，不是治疗推荐。所有等级仍是公开草稿，完整全文、偏倚风险和适用人群需要继续人工复核。</p>
+      <h2>近期研究，逐篇看懂 / Recent Studies Explained</h2>
+      <p>六篇解读均已核对官方摘要，全文尚待复核。每篇保留研究对象、主要结果和影响解读的限制。Notes are based on official abstracts; full-text review is pending.</p>
       <p>检索按 PubMed 发表日期筛选，可能包含较早在线发表、最近编入期刊的文章，不等于本周首次公开。Publication-date matches may include earlier online publications.</p>
       {featured_sections(findings, as_html=True)}
-      <h3>当前等级分布</h3>
+      <details><summary>当前研究笔记的草稿等级 / Draft Grade Counts</summary>
       <div class="metrics">
         <div class="metric"><b>{levels.get('A',0):,}</b><span>A：优先复核，不是处方</span></div><div class="metric blue"><b>{levels.get('B',0):,}</b><span>B：中高置信候选</span></div><div class="metric gold"><b>{levels.get('C',0):,}</b><span>C：有信号、限制明显</span></div><div class="metric coral"><b>{levels.get('D',0)+levels.get('E',0):,}</b><span>D/E：早期、低置信或不足</span></div>
       </div>
+      </details>
     </div></section>
 
     <section class="alt"><div class="inner">
-      <h2>20 个主题 / 20 Active Topics</h2>
+      <details><summary>20个主题收录了多少资料 / Counts Across 20 Topics</summary>
       <div class="table-wrap"><table><thead><tr><th>主题</th><th>Topic</th><th>候选</th><th>findings</th></tr></thead><tbody>{topic_html}</tbody></table></div>
-    </div></section>
-
-    <section id="visuals"><div class="inner">
-      <h2>更新图片 / Updated Visuals</h2>
-      <p>本文件内嵌 7 张主图和 50 张单成分卡，可以离线打开。每张图下方都能直接下载 PNG。</p>
-      <p>50 张成分卡沿用既有证据评级，本轮更新撤稿检索与图片；并非每个成分都重新做了全文复核。Ingredient grades remain provisional; updated graphics do not imply a new full-text review of every ingredient.</p>
-      <p>{esc(retraction_refresh_note())}</p>
-{main_figures}
-      <details><summary>展开 50 张单成分卡 / Show 50 ingredient cards</summary><div class="card-grid">{card_figures}</div></details>
-    </div></section>
-
-    <section class="alt"><div class="inner">
-      <h2>质量修正 / Quality Corrections</h2>
-      <p>PubMed XML 标识继续限制在主文献自身的 ArticleIdList。全部 {len(findings):,} 个 findings PMID 已用 NCBI 官方 E-utilities 核对，缺失 {repair['missing_official_summaries']:,}、实质题名冲突 {repair['title_mismatches']:,}；本轮修正 findings DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个，候选 DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。</p>
-      <p>自动分类也增加了明确动物实验、叙述性综述、方案论文和评论勘误的防误升规则。</p>
-      <p>模型推算的安慰剂比较、试验中的观察性二次分析，不沿用母试验的随机对照身份；本版独立标注，最高 C 级，仍待全文复核。Indirect models and observational secondary analyses are not direct randomized treatment comparisons.</p>
-      <p>准实验和非随机对照组独立标注，最高 C 级。部分组间随机化不能使所有比较都成为随机对照。Quasi-experimental and mixed-allocation studies are not fully randomized comparisons.</p>
+      </details>
     </div></section>
 
     <section id="assets"><div class="inner">
@@ -694,9 +706,20 @@ def build_html(metrics: dict[str, Any], findings: list[dict[str, str]], topics: 
       <p>飞书继续复用同一组长期表，不再每月新建一套。GitHub 是版本化源头；飞书是中文阅读、筛选和复核层。</p>
     </div></section>
 
-    <section><div class="inner">
-      <h2>不能从这份报告得出什么 / What This Report Does Not Prove</h2>
-      <ul><li>动物延寿不等于人类延寿。</li><li>指标改善不等于返老还童。</li><li>论文多、热力图颜色深不等于干预有效。</li><li>A 级草稿不等于每个人都应该使用。</li><li>本项目不提供个人处方、剂量、诊断、医美操作或购买推荐。</li></ul>
+    <section id="cleanup" class="alt"><div class="inner">
+      <details><summary>本期整理与核验记录 / Curation and Verification</summary>
+      <p>当前候选 {after['candidate_records']:,} 条，研究笔记 {after['finding_records']:,} 条，证据矩阵1,500条。五张CSV合计 {public_row_total:,} 行，同一论文会跨层出现。</p>
+      <p>每主题候选最多600条、研究笔记最多200条；矩阵总计最多1,500条，每主题最多100条。</p>
+      <div class="table-wrap"><table><thead><tr><th>层级</th><th>上期</th><th>旧记录退出</th><th>新进入</th><th>当前</th><th>净变化</th></tr></thead><tbody>{''.join('<tr>' + ''.join(f'<td>{esc(cell)}</td>' for cell in row) + '</tr>' for row in turnover_rows(metrics))}</tbody></table></div>
+      <p>按稳定记录ID与上期比较。进入当前层的记录可能来自原有候选，也可能来自本次检索。</p>
+      <div class="table-wrap"><table><thead><tr><th>层级</th><th>退出原因</th><th>决定数</th></tr></thead><tbody>{reason_html}</tbody></table></div>
+      <p>退出决定包含新抓取后未通过筛选的材料，不全是旧记录移除。{esc(archive_note())}</p>
+      <h3>来源与分类核验 / Source and Classification Checks</h3>
+      <p>全部 {len(findings):,} 个研究笔记PMID已用NCBI官方接口核对：缺失 {repair['missing_official_summaries']:,}，实质题名冲突 {repair['title_mismatches']:,}。本轮修正笔记DOI {repair['finding_doi_corrected']:,} 个、PMCID {repair['finding_pmcid_corrected']:,} 个；候选DOI {repair['candidate_doi_corrected']:,} 个、PMCID {repair['candidate_pmcid_corrected']:,} 个。</p>
+      <p>补查将塑料老化、鱼类年龄预测移出当前研究笔记；叙述性综述不再借用所引用论文的队列身份；无对照的组内变化汇总最高C级；全血基因表达归入生物标志物层。</p>
+      <p>沿用已有的动物研究、方案论文、间接模型和非随机比较限制。所有自动等级仍供复核排序。</p>
+      </details>
+      <p>图谱提供研究信息和来源，不提供个人诊断、处方、剂量或购买建议。This atlas provides research information, not individualized medical advice.</p>
     </div></section>
   </main>
   <footer><div class="inner"><strong>{BRAND}</strong><p>Longevity Anti-Aging & Healthspan Evidence Atlas EnCn · Snapshot {SNAPSHOT_DATE}</p><p><a href="{GITHUB}">{GITHUB}</a></p></div></footer>

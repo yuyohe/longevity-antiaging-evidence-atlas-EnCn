@@ -1,6 +1,6 @@
 # 宇多Yul细胞/yulcell：2026 年 10 月初整理更新
 
-> 历史快照 / Historical snapshot: 2026-10-01。当前版见[10 月 10 日说明](../../../../content/public-reader/october-10-2026-update.md)。本期原图与两个大网页保存在[完整视觉包](../../../visual-releases/visual-release-2026-10-01.zip)，原五表见[数据包](../../../public-data/public-data-2026-10-01.zip)。活动 `2026-10` 路径现在是最新版本，复现旧结果请用归档或冻结 Git 提交。
+> 历史快照 / Historical snapshot: 2026-10-01。当前版见[10 月 10 日说明](october-10-2026-update.md)。本期原图与两个大网页保存在[完整视觉包](../../../visual-releases/visual-release-2026-10-01.zip)，原五表见[数据包](../../../public-data/public-data-2026-10-01.zip)。活动 `2026-10` 路径现在是最新版本，复现旧结果请用归档或冻结 Git 提交。
 
 **冻结日期 / Snapshot date:** 2026-10-01<br>
 **检索窗口 / Search window:** 2026/09/22..2026/10/01<br>

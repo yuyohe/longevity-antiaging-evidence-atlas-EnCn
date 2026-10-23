@@ -201,7 +201,7 @@ def post_copy() -> str:
             f"- 近期候选最终保留：{release['after']['recent_candidates_retained']:,} 条"
         )
         curation_note = (
-            f"本次不是继续堆数量：当前候选库从 {release['before']['candidate_records']:,} 条"
+            f"本轮补检并清理后，当前候选库从 {release['before']['candidate_records']:,} 条"
             f"调整为 {release['after']['candidate_records']:,} 条。已满额主题以替换为主，"
             "退出记录保留在日志、归档和 Git 历史中。"
         )

@@ -49,9 +49,9 @@
 | core-healthspan-ldl-apob-cardiovascular-risk-01 | LDL-C/apoB 与心血管风险 | [41717350](https://pubmed.ncbi.nlm.nih.gov/41717350/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-ldl-apob-cardiovascular-risk-02 | LDL-C/apoB 与心血管风险 | [41235335](https://pubmed.ncbi.nlm.nih.gov/41235335/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-ldl-apob-cardiovascular-risk-03 | LDL-C/apoB 与心血管风险 | [35886124](https://pubmed.ncbi.nlm.nih.gov/35886124/) | 2022 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-01 | 饮食模式与死亡风险 | [42773062](https://pubmed.ncbi.nlm.nih.gov/42773062/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-02 | 饮食模式与死亡风险 | [41515149](https://pubmed.ncbi.nlm.nih.gov/41515149/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
-| core-healthspan-dietary-pattern-longevity-03 | 饮食模式与死亡风险 | [41158656](https://pubmed.ncbi.nlm.nih.gov/41158656/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-01 | 饮食模式与死亡风险 | [42873780](https://pubmed.ncbi.nlm.nih.gov/42873780/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-02 | 饮食模式与死亡风险 | [42773062](https://pubmed.ncbi.nlm.nih.gov/42773062/) | 2026 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
+| core-healthspan-dietary-pattern-longevity-03 | 饮食模式与死亡风险 | [41515149](https://pubmed.ncbi.nlm.nih.gov/41515149/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-01 | 睡眠与健康结局 | [40982264](https://pubmed.ncbi.nlm.nih.gov/40982264/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-02 | 睡眠与健康结局 | [40072785](https://pubmed.ncbi.nlm.nih.gov/40072785/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |
 | core-healthspan-sleep-aging-03 | 睡眠与健康结局 | [39960920](https://pubmed.ncbi.nlm.nih.gov/39960920/) | 2025 | A | AMSTAR 2 | 读取全文或摘要细节；按指定工具完成人工偏倚/方法学复核；确认该条是否支持公开 claim。 |

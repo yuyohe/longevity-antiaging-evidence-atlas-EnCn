@@ -7,7 +7,7 @@
 
 自噬/线粒体自噬 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 79 records; final public claims still require full-text review.
+Draft summary: this topic now includes 82 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -62,12 +62,12 @@ Draft summary: this topic now includes 79 records; final public claims still req
 - [The efficacy of fan use on autophagy and the cellular stress response during prolonged exposure to extreme heat in older adults: a randomized trial.](../papers/pubmed-41297035.md) (2026, Applied physiology, nutrition, and metabolism = Physiologie appliquee, nutrition et metabolisme)
 - [Supplementation of spermidine at 40 mg/day has minimal effects on circulating polyamines: An exploratory double-blind randomized controlled trial in older men.](../papers/pubmed-39405978.md) (2024, Nutrition research (New York, N.Y.))
 - [The effect of spermidine on memory performance in older adults at risk for dementia: A randomized controlled trial.](../papers/pubmed-30388439.md) (2018, Cortex; a journal devoted to the study of the nervous system and behavior)
+- [Therapeutic Timing at Mitochondrial Redox-Autophagy-Mitophagy Checkpoints in Age-Related Hearing Loss.](../papers/pubmed-42814283.md) (2026, Molecular neurobiology)
 - [Autophagy reshapes the aging ER.](../papers/pubmed-42046291.md) (2026, Autophagy)
 - [The autophagy-senescence axis as a threshold model of aging and therapeutic targeting.](../papers/pubmed-41690118.md) (2026, Redox biology)
 - [Monitoring Autophagy in Human Aging: Key Cell Models and Insights.](../papers/pubmed-40152379.md) (2025, Frontiers in bioscience (Landmark edition))
 - [Neuroinflammaging and the Immune Landscape: The Role of Autophagy and Senescence in Aging Brain.](../papers/pubmed-39907842.md) (2025, Biogerontology)
 - [The Role of Endothelial Cell Mitophagy in Age-Related Cardiovascular Diseases.](../papers/pubmed-39122456.md) (2024, Aging and disease)
-- [Therapeutic Timing at Mitochondrial Redox-Autophagy-Mitophagy Checkpoints in Age-Related Hearing Loss.](../papers/pubmed-42814283.md) (2026, Molecular neurobiology)
 - [FGF21 rejuvenates aged human adipose-derived mesenchymal stem cells via enhancement of TFE3-mediated autophagy flux.](../papers/pubmed-42157427.md) (2026, Autophagy)
 - [Exercise alleviates neuroinflammation and cognitive decline in aged mice via hepatic FGF21-driven microglial mitophagy.](../papers/pubmed-42532442.md) (2026, Brain, behavior, and immunity)
 - [Crassifolin A prolongs lifespan and healthspan in Caenorhabditis elegans via activating autophagy.](../papers/pubmed-39890089.md) (2025, Journal of ethnopharmacology)
@@ -90,6 +90,7 @@ Draft summary: this topic now includes 79 records; final public claims still req
 - [BNIP3-Dependent Mitophagy Non-Autonomously Regulates Systemic Aging via NF-κB Suppression in Drosophila.](../papers/pubmed-42128879.md) (2026, Aging cell)
 - [Sex-specific and cell-type-specific changes in chaperone-mediated autophagy across tissues during aging.](../papers/pubmed-39910244.md) (2025, Nature aging)
 - [Asparagine prevents intestinal stem cell aging via the autophagy-lysosomal pathway.](../papers/pubmed-39587832.md) (2025, Aging cell)
+- [Evaluation the role of quinoa seeds in attenuation the brain cellular senescence and aging induced by D-galactose and γ-radiation in rats: insights into autophagy, telomerase activity, amyloid-β and tau proteins.](../papers/pubmed-42762380.md) (2026, Inflammopharmacology)
 - [Estrogen receptor-autophagy axis protects the heart, aorta and kidneys during perimenopausal aging: Evidence from human cohort and mouse experiments.](../papers/pubmed-41490658.md) (2026, Life sciences)
 - [Transglutaminase and its role in Alzheimer's disease: focus on mitochondria, aging, defective mitophagy, synaptic degeneration, and metabolomics.](../papers/pubmed-42185591.md) (2026, GeroScience)
 - [Senescent BMSC-Derived Thbs1 Drives Inflammaging and Impairs Bone Regeneration by Suppressing PINK1/Parkin-Mediated Mitophagy in Macrophages.](../papers/pubmed-42257494.md) (2026, Aging cell)
@@ -100,12 +101,13 @@ Draft summary: this topic now includes 79 records; final public claims still req
 - [Experimental Evidence Against Taurine Deficiency as a Driver of Aging in Humans.](../papers/pubmed-41061678.md) (2025, Aging cell)
 - [A novel mitochondrial autophagy and aging-related gene signature for predicting ovarian cancer.](../papers/pubmed-40539060.md) (2025, Frontiers in immunology)
 - [A Randomized Controlled Clinical Trial in Healthy Older Adults to Determine Efficacy of Glycine and N-Acetylcysteine Supplementation on Glutathione Redox Status and Oxidative Damage.](../papers/pubmed-35821844.md) (2022, Frontiers in aging)
-- [Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells.](../papers/pubmed-42834177.md) (2026, Nature aging)
+- [Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity.](../papers/pubmed-42866687.md) (2026, iScience)
+- [TAOK1 Protects against Renal Ischemia-Reperfusion Injury in Aged Mice through the STK3/BNIP3 Mitophagy Pathway.](../papers/pubmed-42897920.md) (2026, International journal of stem cells)
+- [Berberine as a multi-hallmark modulator of aging: From AMPK and mitophagy to inflammaging and the SASP.](../papers/pubmed-42805510.md) (2026, Fitoterapia)
 - [Ellagitannin Metabolite Urolithin D Ameliorates Cognitive Function and Behavioral Performance in Aging Mice Partially via AMPK/PGC-1α/SIRT3-Dependent Regulation of Mitophagy-Related Molecular Machinery.](../papers/pubmed-42842065.md) (2026, Molecular neurobiology)
 - [SIRT2-dependent SQSTM1 decrotonylation at K100 rescues impaired mitophagy in aged bovine oocytes.](../papers/pubmed-42837843.md) (2026, Theriogenology)
+- [Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells.](../papers/pubmed-42834177.md) (2026, Nature aging)
 - [Chaperone-mediated autophagy in physiological homeostasis, disease and ageing.](../papers/pubmed-42834137.md) (2026, Nature reviews. Molecular cell biology)
-- [Berberine as a multi-hallmark modulator of aging: From AMPK and mitophagy to inflammaging and the SASP.](../papers/pubmed-42805510.md) (2026, Fitoterapia)
-- [Evaluation the role of quinoa seeds in attenuation the brain cellular senescence and aging induced by D-galactose and γ-radiation in rats: insights into autophagy, telomerase activity, amyloid-β and tau proteins.](../papers/pubmed-42762380.md) (2026, Inflammopharmacology)
 - [LAPTM5 correlates with RPE senescence and subretinal fibrosis through the LAPTM5-WWP2-OPTN mitophagy cascade and cGAS/STING activation in a D-galactose-induced aging model.](../papers/pubmed-42709378.md) (2026, GeroScience)
 - [Dioscorea polystachya Turcz. attenuates male reproductive aging through modulation of mTOR-Beclin-1-mediated autophagy in Leydig and Sertoli cells.](../papers/pubmed-42595064.md) (2026, Journal of ethnopharmacology)
 - [Chiisanoside Ameliorates d-Galactose-Induced Age-Related Hearing Loss by Modulating Autophagy and Ferroptosis via the SESN2/AMPK Axis.](../papers/pubmed-42584111.md) (2026, Journal of agricultural and food chemistry)
@@ -118,6 +120,7 @@ Draft summary: this topic now includes 79 records; final public claims still req
 - [Is taurine an aging biomarker?](../papers/pubmed-40472098.md) (2025, Science (New York, N.Y.))
 - [Mitophagy in relation to chronic inflammation/ROS in aging.](../papers/pubmed-38834837.md) (2025, Molecular and cellular biochemistry)
 - [Combined metformin and Taurine attenuate age-related bone loss.](../papers/pubmed-42364025.md) (2026, Molecular biology reports)
+- [Selective autophagy pathways in ageing and neurodegeneration: Emerging roles for mitophagy and nucleophagy.](../papers/pubmed-42868283.md) (2026, The FEBS journal)
 - [Luteolin and glycitein from Codonopsis pilosula ameliorate age-related locomotor decline in C. elegans via DAF-16-dependent but autophagy-divergent pathways.](../papers/pubmed-42593549.md) (2026, Biogerontology)
 - [Microbiota-derived urolithins and cortical thickness in cognitively healthy older adults: a longitudinal MRI analysis of the WAHA trial.](../papers/pubmed-42841852.md) (2026, Food & function)
 - [Pomegranate peel extract bilophytosome protects against UVB- induced skin photoaging through pleiotropic modulation of inflammation, mitophagy, senescence, and metalloproteinases.](../papers/pubmed-42721501.md) (2026, Journal of photochemistry and photobiology. B, Biology)

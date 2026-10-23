@@ -11,7 +11,7 @@
 The canonical inventory is maintained in the asset catalog. This stable brand entry avoids maintaining a second, potentially stale list.
 
 - [GitHub 首页 / Homepage](../README.md)
-- [本期读者说明 / Current update](../content/public-reader/october-10-2026-update.md)
+- [本期读者说明 / Current update](../archive/reader-history/content/public-reader/october-10-2026-update.md)
 - [飞书 9 张长期表 / Nine stable Feishu tables](feishu-public-assets-2026-10.md)
 - [公开数据 / Public CSVs](../public-data/README.md)
 - [历史恢复 / Historical recovery](../archive/visual-releases/README.md)

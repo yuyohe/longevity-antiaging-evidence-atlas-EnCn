@@ -14,6 +14,24 @@ import expand_healthspan_pubmed_v05 as expansion  # noqa: E402
 
 
 class StudyClassificationTests(unittest.TestCase):
+    def test_critical_appraisal_does_not_inherit_a_cited_cohort_design(self):
+        title = "GLP-1 Receptor Agonists in Dentistry: Promise, Pitfalls, and Evidence Gaps."
+        body = "Only a single retrospective cohort study exists. This critical appraisal synthesizes the evidence."
+        self.assertEqual(expansion.classify_study(["Journal Article"], body, "PubMed", title), "narrative_review")
+        self.assertEqual(scoring.normalized_study_type({"title_en": title, "result_en": body}), "narrative_review")
+
+    def test_uncontrolled_synthesis_is_capped_despite_meta_analysis_title(self):
+        row = {"title_en": "Muscle strength: a systematic review", "result_en": "Meta-analysis of uncontrolled within-group changes.",
+               "endpoint_class_draft": "H2", "evidence_source_depth": "abstract_only"}
+        self.assertEqual(scoring.confidence_cap(row, "longevity"), "C")
+        row["result_en"] = "Meta-analysis of randomized treatment comparisons."
+        self.assertEqual(scoring.confidence_cap(row, "longevity"), "A")
+
+    def test_blood_transcriptome_is_not_a_glucose_endpoint(self):
+        row = {"title_en": "Effect of metformin on the whole blood transcriptome",
+               "conclusion_en": "", "endpoint_class_draft": "H3"}
+        self.assertEqual(scoring.normalized_healthspan_endpoint(row), "H4")
+
     def test_conclusion_identifies_cohort_when_title_omits_design(self):
         row = {"title_en": "Associations of fitness with mortality after cancer diagnosis",
                "publication_types": "Journal Article", "result_en": "Among 10,462 participants, 2,101 deaths occurred.",

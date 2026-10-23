@@ -94,7 +94,7 @@ EVIDENCE_GUIDE = """# 证据、数字和缩写怎么看 / Reading Evidence, Numb
 
 ## 飞书入口打不开时 / If Feishu Opens an Old Table
 
-导航有 14 个可选入口，不是必须读完的 14 步。若链接跳到旧“数据表”，或侧栏没有“当前阅读导航”，先用 [GitHub 普通读者入口](start-here.md) 和 [资产总目录](../../docs/asset-catalog.md)中的当期飞书索引。不要把旧表当成当前数据；公开分享范围需要表格管理员核对。
+导航有 14 个可选入口，可以按自己的问题选择。若链接跳到旧“数据表”，或侧栏没有“00 从这里开始（项目介绍）”，先用 [GitHub 普通读者入口](start-here.md) 和 [资产总目录](../../docs/asset-catalog.md)中的当期飞书索引。旧表是历史快照；公开分享范围需要表格管理员核对。
 
 ## English Summary
 

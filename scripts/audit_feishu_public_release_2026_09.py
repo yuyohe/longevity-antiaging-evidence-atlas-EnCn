@@ -75,6 +75,8 @@ def audit_table(
         "SEO关键词",
         "GitHub公开入口",
         "GitHub链接",
+        "飞书链接",
+        "一句话说明",
         "图片",
         "卡片图",
         "总览图",
@@ -157,10 +159,16 @@ def audit_table(
                 errors.append(f"{table_name}: missing or outdated provenance dates")
                 break
     if category == "阅读入口":
+        source_by_key = {row[unique_field]: row for row in read_csv(ROOT / "data" / f"feishu_reader_navigation_{MONTH_KEY}.csv")}
         if github_coverage != len(records):
             errors.append(f"{table_name}: GitHub link coverage {github_coverage}/{len(records)}")
         for item in records:
             values = item.get("fields", {})
+            source = source_by_key.get(str(values.get(unique_field, "")), {})
+            if any(str(values.get(field) or "") != source.get(field, "")
+                   for field in ["公开标题", "GitHub链接", "飞书链接", "一句话说明"]):
+                errors.append(f"{table_name}: navigation text or destination differs from current source")
+                break
             if values.get("冻结日期") != SNAPSHOT_DATE or values.get("复核日期") != SNAPSHOT_DATE:
                 errors.append(f"{table_name}: navigation dates are not {SNAPSHOT_DATE}")
                 break
@@ -223,6 +231,7 @@ def main() -> None:
         "audit_version": f"{MONTH}-stable-tables-v1",
         "audited_at_utc": datetime.now(timezone.utc).isoformat(),
         "snapshot_date": SNAPSHOT_DATE,
+        "base_table_count": len(table_catalog),
         "manifest": str(args.manifest.resolve()),
         "tables": results,
         "errors": all_errors,

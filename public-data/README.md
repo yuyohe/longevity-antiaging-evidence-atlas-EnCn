@@ -2,7 +2,7 @@
 
 **品牌 / Brand：** 宇多Yul细胞/yulcell<br>
 **项目 / Project：** 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging Evidence Atlas EnCn
-**冻结日期 / Snapshot date：** 2026-10-10
+**冻结日期 / Snapshot date：** 2026-10-23
 
 这个目录是 **宇多Yul细胞/yulcell** 给外部读者和研究者下载、复核、二次分析用的公开数据包。它不只包含卡片和热力图，也包含底层候选文献、入选短名单、证据发现和证据矩阵。
 
@@ -14,15 +14,15 @@ These are the latest public files for this month. Check the snapshot date and Gi
 
 | 数据表 | 记录数 | 文件 | 内容 |
 | --- | ---: | --- | --- |
-| 全量文献候选库 | 11,167 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/literature-library-2026-10.csv) | 超过 1 万条候选文献入口，含题名、年份、来源、PMID/DOI、检索词和纳入状态。 |
-| 候选来源原始表 | 11,167 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/candidate-sources-2026-10.csv) | 原始候选来源表，保留抓取来源、检索词、备注和最近检查日期。 |
-| 入选短名单 | 2,450 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/shortlist-sources-2026-10.csv) | 从候选库里进入优先复核的记录，含主题、证据草稿等级、期刊和评分字段。 |
-| 证据发现表 | 2,450 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/evidence-findings-2026-10.csv) | 证据发现记录，含研究类型、终点、结论、过度解读风险和 0.5 评分字段。 |
+| 全量文献候选库 | 11,176 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/literature-library-2026-10.csv) | 超过 1 万条候选文献入口，含题名、年份、来源、PMID/DOI、检索词和纳入状态。 |
+| 候选来源原始表 | 11,176 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/candidate-sources-2026-10.csv) | 原始候选来源表，保留抓取来源、检索词、备注和最近检查日期。 |
+| 入选短名单 | 2,487 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/shortlist-sources-2026-10.csv) | 从候选库里进入优先复核的记录，含主题、证据草稿等级、期刊和评分字段。 |
+| 证据发现表 | 2,487 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/evidence-findings-2026-10.csv) | 证据发现记录，含研究类型、终点、结论、过度解读风险和 0.5 评分字段。 |
 | 证据矩阵 | 1,500 | [打开 CSV / Open CSV](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/blob/main/public-data/evidence-matrix-2026-10.csv) | 入矩阵证据，适合按主题、证据等级、终点等级和行动性筛选。 |
 
-合计公开记录数：28,734。这里是五张处理层表的记录数相加；同一篇文献可能出现在候选、短名单、发现和矩阵等不同层，不能把总行数理解成互不重复的论文篇数。
+合计公开记录数：28,826。这里是五张处理层表的记录数相加；同一篇文献可能出现在候选、短名单、发现和矩阵等不同层，不能把总行数理解成互不重复的论文篇数。
 
-The five processing layers total 28,734 rows, not unique papers. A paper may appear in several layers.
+The five processing layers total 28,826 rows, not unique papers. A paper may appear in several layers.
 
 说明：这些表是证据地图的资料层，不等于个人医疗建议。读者可以用 PMID、DOI、主题、证据等级、期刊和评分字段追溯每条记录。
 

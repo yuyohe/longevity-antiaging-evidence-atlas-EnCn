@@ -1,0 +1,62 @@
+{
+  "42880160": {
+    "paper_title_zh": "按亚洲肌少症工作组2025年标准定义的可能肌少症与50至64岁成人日常功能障碍：纵向队列研究",
+    "conclusion_zh": "50至64岁人群中，握力偏低与后续日常生活困难相关；观察研究不能证明提高握力本身就能消除风险。",
+    "title_zh": "握力变弱，可能早于日常生活变困难",
+    "interpretation_zh": "研究使用中国健康与养老追踪调查，纳入6,904名50至64岁成人。对起初没有相应生活困难的人，最长追踪9年：握力偏低者后来出现基本日常活动困难的风险较高，风险比为1.42。这里的困难包括日常自理受限，并非只看肌肉大小。握力可以提供筛查线索，但这项观察研究没有检验练握力能否预防这些困难。",
+    "interpretation_en": "The study used CHARLS data from 6,904 adults aged 50-64. Among participants initially free of the relevant impairment, follow-up lasted up to nine years. Low handgrip strength was associated with incident basic activities-of-daily-living impairment (HR 1.42). Grip strength may help identify people needing assessment; this observational study did not test whether grip training prevents disability.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42880160/",
+    "checked_date": "2026-10-23"
+  },
+  "42660338": {
+    "paper_title_zh": "离心超负荷训练对老年人下肢力量、步行、平衡及爆发力的影响：系统综述与Meta分析",
+    "conclusion_zh": "15项小型随机试验的汇总支持下肢力量和爆发力改善；尚不能据此确定它全面优于常规抗阻训练。",
+    "title_zh": "力量训练，练出来的改变要看具体测了什么",
+    "interpretation_zh": "这篇综述汇总15项随机试验，共438人，研究离心超负荷训练，也就是着重训练肌肉一边受力、一边被拉长的阶段。合并结果显示，下肢力量和爆发力有所改善。与不训练相比，力量改善较明确；与常规抗阻训练的比较仍需更多研究。它回答的是身体功能问题，没有测量人能否活得更久。",
+    "interpretation_en": "This review pooled 15 randomized trials involving 438 older adults. Eccentric overload training emphasizes the phase in which a muscle lengthens under load. Pooled results favored lower-limb strength and explosive power. Strength gains were clearer against inactive controls; superiority over conventional resistance training remains uncertain. The outcomes were physical function, not lifespan.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42660338/",
+    "checked_date": "2026-10-23"
+  },
+  "42897109": {
+    "paper_title_zh": "成人接受司美格鲁肽治疗后的肌力变化：握力的系统综述与Meta分析",
+    "conclusion_zh": "现有握力研究确定性很低，尚不能确认司美格鲁肽会保留、提高或降低肌力。",
+    "title_zh": "体重下降时，力气能不能保住？",
+    "interpretation_zh": "综述中的主要合并分析纳入10项研究、660名使用司美格鲁肽的人，比较用药前后的握力。平均变化为-0.16公斤力，统计区间跨过零，研究之间差异很大。关键是这些合并比较没有对照组，作者把证据确定性评为很低。因此，暂时没看出明确变化，也不能说明药物已经被证实能保住肌力；药物选择仍需结合个人病情由医生评估。",
+    "interpretation_en": "The primary meta-analysis pooled uncontrolled before-after changes from ten studies with 660 semaglutide-treated participants. Mean grip-strength change was -0.16 kgf, with a confidence interval crossing zero and substantial heterogeneity. The authors rated certainty very low. A nonsignificant change does not establish preserved strength or a causal drug effect. Treatment decisions require an individualized clinical assessment.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42897109/",
+    "checked_date": "2026-10-23"
+  },
+  "42906553": {
+    "paper_title_zh": "间歇性禁食期间的体重下降与较低炎症水平相关：地中海饮食随机对照试验",
+    "conclusion_zh": "53人的短期试验中，炎症指标下降出现在加入禁食、体重下降之后，不能把变化完全归因于单一饮食因素。",
+    "title_zh": "换了饮食，炎症指标为什么没马上下降？",
+    "interpretation_zh": "53名有代谢风险的成人参加16周试验。前8周分别采用研究提供的地中海饮食或原有西式饮食，主要炎症指标超敏C反应蛋白没有改变。后8周加入间歇性禁食后，地中海饮食组相对对照组的该指标下降，同时体重也降得更多。饮食、禁食和体重变化交织在一起，不能把结果归功于某一种食物；短期炎症指标也不能替代长期疾病结局。",
+    "interpretation_en": "In a 16-week trial, 53 adults with metabolic risk factors received a Mediterranean or habitual Western diet. The primary inflammatory marker, high-sensitivity C-reactive protein, did not change during the first eight diet-only weeks. After intermittent fasting was added, it fell in the Mediterranean-diet group relative to controls, alongside greater weight loss. These intertwined changes do not isolate one food or establish long-term disease benefits.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42906553/",
+    "checked_date": "2026-10-23"
+  },
+  "42888381": {
+    "paper_title_zh": "长期照护机构住民有计划减少降压药的随机证据：系统综述",
+    "conclusion_zh": "3项研究的减药方式和人群差异较大，无法得出统一的死亡或住院获益结论；只适用于有医疗监测的照护情境。",
+    "title_zh": "高龄照护中的减药，为什么没有一个统一答案？",
+    "interpretation_zh": "综述纳入3项随机研究，涉及1,548名长期照护机构住民。不同试验的人群、减药办法、监测和随访差异很大，作者没有把它们强行合成一个效果数字。减药确实减少了用药数量，也使血压上升；对死亡、住院等结局，目前还无法给出统一判断。这里研究的是医生监测下的减药，普通读者不应据此自行停药。",
+    "interpretation_en": "Three randomized studies included 1,548 long-term care residents. Populations, deprescribing strategies, monitoring and follow-up differed enough that the authors did not pool them into one effect estimate. Supervised deprescribing reduced medication exposure and raised blood pressure; a common effect on mortality or hospitalization remains unestablished. The findings concern monitored clinical care, not stopping medication independently.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42888381/",
+    "checked_date": "2026-10-23"
+  },
+  "42900294": {
+    "paper_title_zh": "二甲双胍对非糖尿病老年黄斑变性患者全血转录组影响的探索性研究",
+    "conclusion_zh": "15人的血液子研究未发现经多重比较校正后显著改变的单个基因；通路信号仅供后续验证。",
+    "title_zh": "15人的血液分析，离“抗衰有效”还有多远？",
+    "interpretation_zh": "这是一项随机试验里的探索性血液子研究，共15名55岁以上、没有糖尿病的老年黄斑变性患者，其中8人接受二甲双胍、7人为对照。研究测量的是基因表达。把多次比较造成的偶然差异考虑进去后，没有单个基因达到统计显著；一些通路分析出现了值得继续研究的信号。样本很小，也没有由这些血液结果证明人变年轻或寿命延长。",
+    "interpretation_en": "This exploratory blood substudy included 15 nondiabetic adults aged at least 55 with age-related macular degeneration: eight receiving metformin and seven controls. No individual gene differed significantly after correction for multiple comparisons. Pathway analyses produced hypothesis-generating signals requiring replication. The small molecular study did not establish rejuvenation or lifespan extension.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42900294/",
+    "checked_date": "2026-10-23"
+  }
+}

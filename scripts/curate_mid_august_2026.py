@@ -110,11 +110,12 @@ FORENSIC_AGE_RE = re.compile(
 )
 NONHUMAN_TITLE_RE = re.compile(
     r"\b(?:mice|mouse|rats?|drosophila|zebrafish|seastars?|broilers?|piglets?|porcine|bovine|canine|marmosets?)\b|"
-    r"caenorhabditis|c\.\s*elegans|non.?human primate",
+    r"caenorhabditis|c\.\s*elegans|non.?human primate|largemouth bass",
     re.IGNORECASE,
 )
 MICROBIOME_SCOPE_EXCLUSION_RE = re.compile(
-    r"school.aged|rice aging|food aging|grain aging|microplastic aging|plastisphere|agricultural soils",
+    r"school.aged|rice aging|food aging|grain aging|microplastic aging|plastisphere|agricultural soils|"
+    r"(?:aged|weathered)\s+(?:polyethylene\s+)?microplastics?",
     re.IGNORECASE,
 )
 YOUNG_TRAINING_RE = re.compile(

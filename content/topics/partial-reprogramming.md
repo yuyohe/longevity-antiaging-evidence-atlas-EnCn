@@ -7,7 +7,7 @@
 
 部分重编程 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 30 records; final public claims still require full-text review.
+Draft summary: this topic now includes 31 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -77,3 +77,4 @@ Draft summary: this topic now includes 30 records; final public claims still req
 - [Tissue damage and senescence provide critical signals for cellular reprogramming in vivo.](../papers/pubmed-27884981.md) (2016, Science (New York, N.Y.))
 - [Anti-Aging Strategies Based on Cellular Reprogramming.](../papers/pubmed-27426043.md) (2016, Trends in molecular medicine)
 - [Vitamin B(12) boosts cellular reprogramming.](../papers/pubmed-38052932.md) (2023, Nature aging)
+- [A New Frontier: Partial Cellular Reprogramming in Plastic Surgery.](../papers/pubmed-42900571.md) (2026, Plastic and reconstructive surgery)
