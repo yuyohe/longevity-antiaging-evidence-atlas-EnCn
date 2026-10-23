@@ -2,7 +2,7 @@
 
 **冻结日期 / Snapshot date:** 2026-10-23<br>
 **检索窗口 / Search window:** 2026/10/11..2026/10/23<br>
-**本轮目标 / Goal:** 补进真正相关的新资料，同时清理重复、弱相关和放错层级的记录，让初中生也能看懂这张证据地图。
+**本轮整理 / This update:** 补充相关新研究，清理弱相关与错分记录，保留固定容量。
 
 ## 这张图谱是什么 / What This Atlas Is
 
@@ -21,8 +21,6 @@ This atlas explains who was studied, what was measured and how far the findings 
 ![50种成分总览](../../docs/assets/visual-assets/2026-10/ingredient-card-wall-2026-10.png)
 
 [50种成分逐张查](ingredient-cards-top-50.md) · [离线图文报告与图片下载](../../docs/october-23-public-update-2026-10.html)
-
-撤稿风险最近查询于 2026-10-23，覆盖 117 个成分/主题，得到 598 条主题匹配记录、去重 542 个 PMID。这是自 2006 年起的发表日期窗口累计，不是本月新增撤稿；撤稿密度不能单独证明成分有效或无效。 / Retraction queries checked 2026-10-23: 117 targets, 598 matched rows, 542 unique PMIDs. Historical cumulative counts are not new monthly retractions or efficacy scores.
 
 ## 近期研究，逐篇看懂 / Recent Studies Explained
 

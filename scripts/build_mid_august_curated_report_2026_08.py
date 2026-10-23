@@ -401,7 +401,7 @@ def build_markdown(metrics: dict[str, Any], findings: list[dict[str, str]], topi
 
 **冻结日期 / Snapshot date:** {SNAPSHOT_DATE}<br>
 **检索窗口 / Search window:** {search['date_window']}<br>
-**本轮目标 / Goal:** 补进真正相关的新资料，同时清理重复、弱相关和放错层级的记录，让初中生也能看懂这张证据地图。
+**本轮整理 / This update:** 补充相关新研究，清理弱相关与错分记录，保留固定容量。
 
 ## 这张图谱是什么 / What This Atlas Is
 
@@ -420,8 +420,6 @@ This atlas explains who was studied, what was measured and how far the findings 
 ![50种成分总览](../../docs/assets/visual-assets/{MONTH}/ingredient-card-wall-{MONTH}.png)
 
 [50种成分逐张查](ingredient-cards-top-50.md) · [离线图文报告与图片下载](../../docs/{REPORT_FILE})
-
-{retraction_refresh_note()}
 
 ## 近期研究，逐篇看懂 / Recent Studies Explained
 
