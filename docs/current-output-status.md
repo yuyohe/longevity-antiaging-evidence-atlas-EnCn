@@ -34,9 +34,11 @@
 
 ## 发布状态 / Publication
 
-飞书当前内容已更新并通过线上核验。GitHub内容提交与公开首页核验进行中；完成后将在这里补入提交号和检查结果。
+GitHub内容提交 [`eb9c9789`](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/commit/eb9c9789b1ee260207001ab846b4045146f5e052) 已发布至公开 `main`，[Lint检查](https://github.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/actions/runs/40917401317)通过。匿名读取的README与本地UTF-8文本一致；未登录浏览器实查确认双语标题、2026-10-30日期、研究热力图和两张成分示例卡均正常显示。
 
-Feishu is synchronized and audited. GitHub publication acceptance is pending and will be recorded here after remote verification.
+飞书由本地同步完成并通过9/9线上核验。GitHub的可选飞书工作流整体成功，但实际同步步骤因未启用相应配置而跳过，不能把它当成本次飞书更新的凭证。
+
+Content commit `eb9c9789` is on public main and its Lint check passed. The anonymous README matched local UTF-8 text, and all three homepage images loaded. Feishu publication was verified through the local sync and online audit; the optional workflow skipped its sync step.
 
 ## 核验范围 / Limits
 
