@@ -7,7 +7,7 @@
 
 目前最值得优先关注的健康寿命指标之一；较高心肺适能与更低死亡和心血管风险高度相关。
 
-Draft summary: this topic now includes 148 records; final public claims still require full-text review.
+Draft summary: this topic now includes 149 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -169,13 +169,13 @@ Draft summary: this topic now includes 148 records; final public claims still re
 - [Polygenic prediction of cardiorespiratory fitness: The HUNT Study.](../papers/pubmed-40672480.md) (2025, medRxiv : the preprint server for health sciences)
 - [Cardiorespiratory Fitness and Risk of Cardiovascular Events and Mortality in Middle Age Patients without Known Cardiovascular Disease.](../papers/pubmed-38002625.md) (2023, Journal of clinical medicine)
 - [Non-exercise estimated cardiorespiratory fitness and cancer incidence: The NIH-AARP diet and health study.](../papers/pubmed-36828228.md) (2023, Journal of sport and health science)
+- [Association of Summed Rest Score on Technetium-99m Sestamibi With Exercise Capacity and Incident Adverse Outcomes in Hospitalized Patients With Nonischemic Cardiomyopathy: A Retrospective Analysis.](../papers/pubmed-42657690.md) (2026, Journal of the American Heart Association)
 - [Incretin Receptor Agonism, Fat-free Mass, and Cardiorespiratory Fitness: A Narrative Review.](../papers/pubmed-40488294.md) (2025, The Journal of clinical endocrinology and metabolism)
 - [Glucagon-Like Peptide-1 Receptor Agonists and Sodium Glucose Cotransporter-2 Inhibitors and Cardiorespiratory Fitness Interaction.](../papers/pubmed-38870042.md) (2024, Military medicine)
 - [Cardiorespiratory fitness in people with bipolar disorder: A systematic review and meta-analysis.](../papers/pubmed-42702273.md) (2026, Journal of affective disorders)
 - [Determinants of cardiorespiratory fitness in very long-term survivors of allogeneic hematopoietic stem cell transplantation: a national cohort study.](../papers/pubmed-32827056.md) (2021, Supportive care in cancer : official journal of the Multinational Association of Supportive Care in Cancer)
 - [Cardiorespiratory Fitness, Coronary Artery Calcium, and Risk of Later-Life Dementia: The Cooper Center Longitudinal Study.](../papers/pubmed-42567093.md) (2026, JACC. Advances)
 - [Pulmonary Rehabilitation and Exercise Capacity, Rehospitalization, and Survival After Lung Transplant.](../papers/pubmed-42695765.md) (2026, Journal of cardiopulmonary rehabilitation and prevention)
-- [Association of Summed Rest Score on Technetium-99m Sestamibi With Exercise Capacity and Incident Adverse Outcomes in Hospitalized Patients With Nonischemic Cardiomyopathy: A Retrospective Analysis.](../papers/pubmed-42657690.md) (2026, Journal of the American Heart Association)
 - [Cardiorespiratory Fitness Mediates the Association Between Neighborhood Deprivation and Arterial Stiffness in Women.](../papers/pubmed-42606322.md) (2026, Journal of applied physiology (Bethesda, Md. : 1985))
 - [Longitudinal changes of cardiorespiratory fitness are associated with cardiovascular disease and mortality: evidence from the UK Biobank.](../papers/pubmed-42605962.md) (2026, European journal of preventive cardiology)
 - [Cardiorespiratory Fitness Reclassifies Mortality Risk Beyond Traditional Risk Factors: The ETHOS Study.](../papers/pubmed-42841352.md) (2026, Medicine and science in sports and exercise)
@@ -191,7 +191,8 @@ Draft summary: this topic now includes 148 records; final public claims still re
 - [Cardiorespiratory Fitness From Cardiopulmonary Exercise Testing Is a Comprehensive Risk-stratifying Tool in Liver Transplant Candidates.](../papers/pubmed-39563725.md) (2024, Transplantation direct)
 - [Clinical determinants of maximal aerobic capacity in patients with obstructive sleep apnea syndrome.](../papers/pubmed-42248369.md) (2026, Respiratory medicine)
 - [Left Ventricular Volume as a Predictor of Exercise Capacity and Functional Independence in Individuals with Normal Ejection Fraction.](../papers/pubmed-39489516.md) (2024, European journal of preventive cardiology)
+- [Beneficial effects of nicorandil on exercise capacity in heart failure with preserved ejection fraction patients with concomitant coronary microvascular dysfunction.](../papers/pubmed-42933567.md) (2026, Hellenic journal of cardiology : HJC = Hellenike kardiologike epitheorese)
 - [Comparison of Cardiorespiratory Fitness Prediction Equations and Generation of New Predictive Model for Patients with Obesity.](../papers/pubmed-38768055.md) (2024, Medicine and science in sports and exercise)
-- [Economic burden of low cardiorespiratory fitness in France.](../papers/pubmed-42878675.md) (2026, The Journal of sports medicine and physical fitness)
 - [The presence of diabetes in chronic kidney disease is associated with lower cardiorespiratory fitness.](../papers/pubmed-42852962.md) (2026, The Journal of sports medicine and physical fitness)
 - [Maintaining or increasing cardiorespiratory fitness is associated with reduced hospital admission rate.](../papers/pubmed-38019572.md) (2024, European journal of preventive cardiology)
+- [Economic burden of low cardiorespiratory fitness in France.](../papers/pubmed-42878675.md) (2026, The Journal of sports medicine and physical fitness)

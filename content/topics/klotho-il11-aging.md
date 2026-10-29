@@ -7,7 +7,7 @@
 
 Klotho / IL-11 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 77 records; final public claims still require full-text review.
+Draft summary: this topic now includes 78 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -117,6 +117,7 @@ Draft summary: this topic now includes 77 records; final public claims still req
 - [Klotho, a longevity factor, improves cognitive function in aging nonhuman primates.](../papers/pubmed-37429952.md) (2023, Nature aging)
 - [Endurance training mitigates morphine-induced renal dysfunction in young and aged rats: involvement of oxidative stress, SIRT1, Klotho and TFAM.](../papers/pubmed-42554876.md) (2026, Biogerontology)
 - [Aging-suppressor Klotho: Prospects in diagnostics and therapeutics.](../papers/pubmed-36283617.md) (2022, Ageing research reviews)
+- [Effects of 24-h sleep deprivation on circulating irisin, BDNF, and soluble klotho responses during exercise in the heat in young and older males.](../papers/pubmed-42932907.md) (2026, American journal of physiology. Regulatory, integrative and comparative physiology)
 - [The aging heart: exploring the role of Klotho in cardiac health/function.](../papers/pubmed-40799848.md) (2024, The journal of cardiovascular aging)
 - [Deciphering the Biological Aging Impact on Alveolar Bone Loss: Insights From α-Klotho and Renal Function Dynamics.](../papers/pubmed-38995226.md) (2024, The journals of gerontology. Series A, Biological sciences and medical sciences)
 - [Association between serum α-Klotho levels and osteoarthritis prevalence among middle-aged and older adults: an analysis of the NHANES 2007-2016.](../papers/pubmed-38670226.md) (2024, Revista clinica espanola)

@@ -36,12 +36,12 @@ Draft summary: this topic now includes 11 records; final public claims still req
 ## 不能这么说 / What Not To Claim
 
 - 不支持把候选证据写成个人医疗、补剂或抗衰处方。
+- 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
 - 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
 - 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
-- 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
-- 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
-- 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
-- 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
+- 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
+- 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
+- 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
 - 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
 - 不支持：不能把非人体结果直接解释为已证实的人类延寿作用。 / Does not support direct claims of proven human lifespan extension.
 

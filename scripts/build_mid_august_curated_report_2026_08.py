@@ -88,7 +88,7 @@ if os.environ.get("EVIDENCE_ATLAS_FEATURED_NOTES"):
 STUDY_LABELS = {
     "metadata_only_needs_classification": "探索性资料，研究类型待复核 / Design pending review",
     "narrative_review": "叙述性综述 / Narrative review",
-    "systematic_review_or_meta_analysis": "多项研究汇总 / Review & meta-analysis",
+    "systematic_review_or_meta_analysis": "综述或研究汇总 / Review or synthesis",
     "human_cohort": "人群追踪研究 / Cohort",
     "human_randomized_or_clinical_trial": "临床试验 / Clinical trial",
     "human_indirect_model_analysis": "模型间接比较 / Indirect model analysis",
@@ -486,7 +486,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 
 {markdown_table(['主题', 'Topic', '候选', 'findings'], topic_rows)}
 
-## 本轮修正的质量问题 / Quality Fixes
+## 数据核验与分类规则 / Verification and Classification
 
 - PubMed XML 解析继续限制在论文本身的 ArticleIdList，参考文献 DOI/PMCID 不会覆盖主文献标识。
 - 用 NCBI 官方 E-utilities 核对全部 {len(findings):,} 个 findings PMID：缺失 {repair['missing_official_summaries']:,}，实质题名冲突 {repair['title_mismatches']:,}。
@@ -497,7 +497,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 额外排除塑料老化等环境研究，以及没有老龄语境的青少年竞技训练；病例资料汇总最高按 C 级，主题等级不能放宽动物研究的 D 级上限。
 - 50 张成分卡的评级沿用既有资料，本轮刷新撤稿检索、来源链接和图片；不表示 50 个成分都完成了新的全文复核。 / Ingredient grades remain provisional; refreshed counts and visuals do not imply a new full-text review of every ingredient.
 
-本轮补查发现的分类问题：塑料老化、鱼类年龄预测退出当前研究笔记，原始候选仍保留；引用队列研究的叙述性综述单独标注；无对照的组内变化汇总最高 C 级；全血基因表达归入生物标志物层。These are draft classification corrections, not a new full-text assessment of all records.
+既有筛选继续排除塑料老化、鱼类年龄预测等偏题记录；引用队列研究的叙述性综述、无对照的组内变化汇总、全血基因表达也按各自类型处理。本期另修正两处误识别：线虫实验归入动物层；stroke volume（每搏输出量）不再当作 stroke（卒中）。这属于题录和摘要层核验，未完成全库全文评审。Existing scope rules remain in place. This release also separates worm experiments from human studies and cardiac stroke volume from cerebrovascular stroke; full-text review remains pending.
 
 </details>
 

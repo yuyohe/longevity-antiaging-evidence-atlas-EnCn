@@ -31,7 +31,8 @@ DRAFT_NOTICE_EN = "Draft status: automatically prepared; not fully reviewed; not
 
 ANIMAL_SUBJECT_RE = re.compile(
     r"\b(?:mice|mouse|murine|rats?|rodents?|goats?|sheep|lambs?|pigs?|swine|porcine|"
-    r"rabbits?|dogs?|canine|calves|cattle|bovine|horses?|equine|non[- ]?human primates?)\b",
+    r"rabbits?|dogs?|canine|calves|cattle|bovine|horses?|equine|non[- ]?human primates?|"
+    r"caenorhabditis elegans|c\.\s*elegans|drosophila|zebrafish)\b",
     flags=re.IGNORECASE,
 )
 HUMAN_SUBJECT_RE = re.compile(
@@ -564,7 +565,7 @@ def classify_study(pub_types: list[str], body: str, source: str, title: str = ""
         return "human_mendelian_randomization"
     if (
         any(term in f"{type_text} {title_text}" for term in ["cohort", "prospective study", "longitudinal study"])
-        or any(term in body_text for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort", "in this cohort"])
+        or any(term in body_text for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort", "in this cohort", "in this prospective study", "in this large prospective study"])
     ):
         return "human_cohort"
     if any(
@@ -598,7 +599,7 @@ def classify_species(study_type: str, body: str, title: str = "") -> str:
         return "mixed_human_animal"
     if study_type in {"registered_clinical_trial", "human_randomized_or_clinical_trial", "human_cohort", "human_mendelian_randomization", "human_nonrandomized_or_mixed_trial"}:
         return "human"
-    if any(term in lower for term in ["participants", "patients", "adults", "women", "men", "cohort"]):
+    if HUMAN_SUBJECT_RE.search(lower) or re.search(r"\bcohort\b", lower):
         return "human"
     if any(term in lower for term in ["mice", "mouse", "murine"]):
         return "mouse"
@@ -611,9 +612,11 @@ def classify_species(study_type: str, body: str, title: str = "") -> str:
 
 def classify_endpoint(topic_id: str, body: str) -> str:
     lower = f"{topic_id} {body}".lower()
+    # Stroke volume is cardiac output per beat, not a cerebrovascular event.
+    lower = re.sub(r"\bstroke[- ]volume\b", "cardiac volume per beat", lower)
     if any(term in lower for term in ["mortality", "death", "mace", "stroke", "cardiovascular event", "fracture", "dementia incidence", "cancer incidence"]):
         return "H1"
-    if any(term in lower for term in ["vo2", "frailty", "grip strength", "cognition", "falls", "sarcopenia", "disability", "quality of life"]):
+    if any(term in lower for term in ["vo2", "frailty", "grip strength", "muscle strength", "neuromuscular", "cognition", "falls", "sarcopenia", "disability", "quality of life"]):
         return "H2"
     if any(term in lower for term in ["ldl", "apob", "blood pressure", "hba1c", "waist", "glucose", "body weight", "obesity", "insulin"]):
         return "H3"

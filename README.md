@@ -5,7 +5,9 @@
 
 An evidence guide to exercise, sleep, nutrition, supplements and aging research: who was studied, what was measured, and what the findings support. Animal experiments, biomarkers and human outcomes are kept separate.
 
-资料快照 / Evidence snapshot：2026-10-23 · 分类整理 / Organization：2026-10-23
+资料快照 / Evidence snapshot：2026-10-30 · 分类整理 / Organization：2026-10-30
+
+[本期六篇研究解读 / Six studies in this update](content/public-reader/october-end-2026-update.md) · [飞书阅读导航 / Feishu start here](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD)
 
 | 你想做什么 / Your question | 从哪里看 / Open |
 | --- | --- |
@@ -61,7 +63,7 @@ The five data layers overlap. Use PMID or DOI to trace individual papers.
 <details>
 <summary>更新记录、历史资料与维护 / Updates, Archives and Maintenance</summary>
 
-- [最近一次文献更新](content/public-reader/october-23-2026-update.md)
+- [最近一次文献更新](content/public-reader/october-end-2026-update.md)
 - [历史版本统一入口](archive/README.md)
 - [维护与分表规则](docs/data-retention-and-curation-policy.md)
 - [核验状态](docs/current-output-status.md)

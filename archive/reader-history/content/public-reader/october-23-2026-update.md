@@ -14,13 +14,13 @@ This atlas explains who was studied, what was measured and how far the findings 
 
 ## 先看图，再查成分 / Visuals and Ingredients
 
-![研究热力图](../../docs/assets/visual-assets/2026-10/heatmap-dashboard-2026-10.png)
+![研究热力图](../../../../docs/assets/visual-assets/2026-10/heatmap-dashboard-2026-10.png)
 
 颜色表示当前收录的记录数量。颜色深说明记录多，不能当作疗效更强。
 
-![50种成分总览](../../docs/assets/visual-assets/2026-10/ingredient-card-wall-2026-10.png)
+![50种成分总览](../../../../docs/assets/visual-assets/2026-10/ingredient-card-wall-2026-10.png)
 
-[50种成分逐张查](ingredient-cards-top-50.md) · [离线图文报告与图片下载](../../docs/october-23-public-update-2026-10.html)
+[50种成分逐张查](../../../../content/public-reader/ingredient-cards-top-50.md) · [离线图文报告与图片下载](../../docs/october-23-public-update-2026-10.html)
 
 ## 近期研究，逐篇看懂 / Recent Studies Explained
 
@@ -132,7 +132,7 @@ This release adds and retires records within fixed capacity limits. Counts may r
 - 核心人工复核队列：每主题最多 3 条，本版共 54 条。
 - 每周自动检索只能生成有上限的 intake Pull Request，不能再直接把候选推入 `main`。
 
-完整规则：[精编与归档规则](../../docs/data-retention-and-curation-policy.md)
+完整规则：[精编与归档规则](../../../../docs/data-retention-and-curation-policy.md)
 
 ## 当前等级分布 / Current Draft Grades
 
@@ -187,11 +187,11 @@ This release adds and retires records within fixed capacity limits. Counts may r
 撤稿风险最近查询于 2026-10-23，覆盖 117 个成分/主题，得到 598 条主题匹配记录、去重 542 个 PMID。这是自 2006 年起的发表日期窗口累计，不是本月新增撤稿；撤稿密度不能单独证明成分有效或无效。 / Retraction queries checked 2026-10-23: 117 targets, 598 matched rows, 542 unique PMIDs. Historical cumulative counts are not new monthly retractions or efficacy scores.
 
 - [自包含图文报告 / Self-contained report](../../docs/october-23-public-update-2026-10.html)
-- [当前、上一期与历史归档 / Asset catalog](../../docs/asset-catalog.md)
-- [2026-10 研究图片 / 2026-10 images](../../docs/assets/visual-assets/2026-10/)
-- [飞书 9 张长期表 / Nine stable Feishu tables](../../docs/feishu-public-assets-2026-10.md)
-- [公开 CSV / Public CSV package](../../public-data/README.md)
-- [精编与归档规则 / Curation policy](../../docs/data-retention-and-curation-policy.md)
+- [当前、上一期与历史归档 / Asset catalog](../../../../docs/asset-catalog.md)
+- [2026-10 研究图片 / 2026-10 images](../../../../docs/assets/visual-assets/2026-10)
+- [飞书 9 张长期表 / Nine stable Feishu tables](../../../../docs/feishu-public-assets-2026-10.md)
+- [公开 CSV / Public CSV package](../../../../public-data/README.md)
+- [精编与归档规则 / Curation policy](../../../../docs/data-retention-and-curation-policy.md)
 
 ## 读者边界 / Reader Boundary
 

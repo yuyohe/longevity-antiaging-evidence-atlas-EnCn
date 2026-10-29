@@ -1,0 +1,62 @@
+{
+  "42926120": {
+    "paper_title_zh": "衰老干预研究中表观遗传时钟变化与临床结局变化的一致性：系统综述",
+    "conclusion_zh": "26项研究中，时钟读数与健康结局的变化并不稳定一致；目前不能用时钟变年轻代替临床获益。",
+    "title_zh": "检测说你年轻了，身体就真的更健康了吗？",
+    "interpretation_zh": "表观遗传时钟是根据DNA上的化学标记估算年龄的方法。这篇综述检查26项干预研究，其中13项有比较组，13项只有干预前后比较。时钟读数和健康变化常常对不上；没有找到能验证这些时钟可替代临床结局的试验层证据，整体证据确定性很低。因此，报告上的年龄数字变小，仍不能直接解释为少生病或活得更久。",
+    "interpretation_en": "Epigenetic clocks estimate age from chemical marks on DNA. This review examined 26 intervention studies: 13 comparative and 13 single-arm before-and-after studies. Clock changes and health changes were inconsistently aligned, with very low certainty. No trial-level surrogate validation was identified. A lower clock reading does not by itself establish fewer illnesses or longer life.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42926120/",
+    "checked_date": "2026-10-30"
+  },
+  "42950885": {
+    "paper_title_zh": "每日16:8与每周5:2间歇性禁食对减重及代谢健康的影响：随机对照试验",
+    "conclusion_zh": "68名超重或肥胖女性的4周试验观察到体重、脂肪和肌肉量均下降；不能据此判断长期效果或延寿作用。",
+    "title_zh": "体重降下来了，减掉的都是什么？",
+    "interpretation_zh": "68名超重或肥胖女性被随机分到两组：每天限定8小时进食，或每周两天采用模拟禁食饮食。4周后，两组合在一起看，平均体重下降2.7公斤，其中脂肪量下降1.7公斤，肌肉量下降0.6公斤。5:2组的体重和脂肪随时间下降更明显，肌肉变化相近。试验时间短，也没有普通饮食对照组；它比较的是两种方案，不能回答长期是否安全、能否延寿。",
+    "interpretation_en": "Sixty-eight women with overweight or obesity were randomized to an eight-hour daily eating window or a 5:2 regimen using a fasting-mimicking diet on restricted days. Over four weeks, pooled changes were -2.7 kg in body weight, -1.7 kg in fat mass and -0.6 kg in muscle mass. Weight and fat reductions over time favored 5:2; muscle changes were similar. The short trial compared two regimens, without a usual-diet control, and did not establish long-term safety or lifespan effects.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42950885/",
+    "checked_date": "2026-10-30"
+  },
+  "42949507": {
+    "paper_title_zh": "营养与运动联合干预对老年衰弱的影响：系统文献综述及不作Meta分析的证据综合",
+    "conclusion_zh": "结构化运动对衰弱相关结局有益，但营养补充能在运动之外增加多少好处，现有证据仍不足。",
+    "title_zh": "老人练身体，再加营养补充一定更好吗？",
+    "interpretation_zh": "这篇综述针对65岁以上、在社区生活的衰弱老人，纳入10篇文献。衰弱可以理解为身体储备下降，遇到小病或劳累也更容易受影响。研究总体支持结构化运动改善相关功能；只有少数试验直接测量衰弱是否逆转。不同研究的人群、营养方案和测量办法差别很大，尚不能确定营养补充比单独运动多带来多少收益，也不能把某一种补充剂说成统一答案。",
+    "interpretation_en": "This review included 10 publications on combined nutrition and exercise interventions for community-dwelling frail adults aged 65 or older. Structured exercise benefited frailty-related outcomes, but few trials directly assessed reversal. Differences in participants, nutritional interventions and measurements prevented firm conclusions about added benefit beyond exercise alone. The findings do not identify a universally effective supplement.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42949507/",
+    "checked_date": "2026-10-30"
+  },
+  "42950254": {
+    "paper_title_zh": "血流限制抗阻训练对老年人急性及长期心血管与神经肌肉效应的影响：系统综述与Meta分析",
+    "conclusion_zh": "低负荷血流限制训练可改善部分力量指标，但短时血压反应需注意，不能认定它更护心或全面优于普通训练。",
+    "title_zh": "重量更轻的训练，对心血管也一定更轻松吗？",
+    "interpretation_zh": "这篇综述汇总27项研究，考察在限制肢体血流的情况下进行低负荷抗阻训练。与不运动相比，部分腿部力量和肌肉横截面积改善；但训练时的血压可能上升，与常规抗阻训练相比，某些血压指标也更高。长期静息心血管指标大多没有明显变化。重量轻不等于心血管负担一定小，这类训练需要结合个人情况评估，不宜按网络图解自行尝试。",
+    "interpretation_en": "Across 27 studies, low-load blood-flow-restriction resistance training improved selected leg-strength measures and quadriceps size compared with no exercise. Acute blood-pressure responses could be higher, including some comparisons with conventional resistance training, while chronic resting cardiovascular measures were largely unchanged. Lower external loads do not establish cardiovascular superiority; individualized assessment is important.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42950254/",
+    "checked_date": "2026-10-30"
+  },
+  "42307492": {
+    "paper_title_zh": "美国女性的抗阻训练、有氧活动、看电视时间与重大心血管事件风险",
+    "conclusion_zh": "长期坚持抗阻训练的女性，重大心血管事件较少；这是观察关联，不能把具体训练时数当成个人效果保证。",
+    "title_zh": "坚持练力量的人，后来的心血管情况怎样？",
+    "interpretation_zh": "研究追踪117,025名美国女性，平均随访14.5年，记录到5,459例重大心血管事件。与不做抗阻训练相比，每周至少2小时者的事件风险低约20%，但卒中这一项没有明显关联。研究根据生活中实际发生的训练习惯进行比较，没有随机安排谁训练；其他健康习惯仍可能影响结果。",
+    "interpretation_en": "The study followed 117,025 U.S. women for a mean of 14.5 years and recorded 5,459 major cardiovascular events. At least two hours of weekly resistance training was associated with about 20% lower event risk versus none; no clear association was seen for stroke. This observational study cannot eliminate confounding by other habits.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42307492/",
+    "checked_date": "2026-10-30"
+  },
+  "42925461": {
+    "paper_title_zh": "认知障碍成人的有氧身体活动与肺炎及COVID-19死亡风险的关联",
+    "conclusion_zh": "认知障碍人群中，活动较多者的死亡风险较低；身体基础更好的人也可能更能活动，尚不能据此证明因果。",
+    "title_zh": "认知有困难后，身体活动还值得关注吗？",
+    "interpretation_zh": "研究将韩国116,563名轻度认知障碍或痴呆患者的登记、体检和死亡资料连接起来，平均观察3.4年。与不活动者相比，有氧活动较多者的全因死亡及肺炎死亡风险较低。但研究没有随机分组，能活动的人也可能本来就有更好的身体储备。它提供了值得继续检验的线索，不能把活动量直接换算成某个人能降低多少风险。",
+    "interpretation_en": "A Korean registry study linked health and mortality records for 116,563 people with mild cognitive impairment or dementia, with mean follow-up of 3.4 years. More aerobic activity was associated with lower all-cause and pneumonia mortality. Without random assignment, better underlying physiological reserve may partly explain who can remain active. Individual risk reductions cannot be inferred from these associations.",
+    "review_depth": "official_abstract_read_full_text_pending",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42925461/",
+    "checked_date": "2026-10-30"
+  }
+}

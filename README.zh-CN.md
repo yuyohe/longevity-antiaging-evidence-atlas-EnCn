@@ -19,6 +19,6 @@
 - 五层数据会重复收录同一论文，不能把行数当作独立论文总数。
 - 新图不等于评级重新确认。[完整读表说明](content/public-reader/evidence-weight.md)。
 
-资料快照：2026-10-23。分类整理：2026-10-23。[本期更新内容](content/public-reader/october-23-2026-update.md)。
+资料快照：2026-10-30。分类整理：2026-10-30。[本期更新内容](content/public-reader/october-end-2026-update.md)。
 
 English: start with the [bilingual homepage](README.md). Current evidence, source material and historical releases have separate entry points.

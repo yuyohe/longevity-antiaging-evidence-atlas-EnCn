@@ -1,12 +1,28 @@
 # Project Handoff Log / 项目交接记录
 
-Last updated / 最后更新：2026-10-24（资料快照仍为2026-10-23）
+Last updated / 最后更新：2026-10-30
 
 This file is the local continuity record for future Codex threads and human maintainers. It records what has been built, how work is run, how GitHub and Feishu are synchronized, and where credentials are stored. Do not put real secrets in this file.
 
 本文档是本地交接记录，供后续 Codex 线程和人工维护者快速接手。这里记录已经完成的工作、执行流程、GitHub/飞书同步方式，以及凭据文件位置。不要把真实密钥写入本文档。
 
 ## Current Release Snapshot / 当前发布快照
+
+Current snapshot: **2026-10-30**. Publication worktree `D:\longevity\github-publish-current`; baseline commit `6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3`. Keep the dirty development checkout untouched.
+
+- Scope is GitHub plus Feishu; the user explicitly clarified that “Facebook” meant Feishu. No removable-drive backup or access-permission expansion.
+- Search window 2026-10-24..2026-10-30: 213 unique PubMed matches, 209 newly fetched candidates, four existing matches. Recent retained sets: 54 candidates / 27 findings. Publication-date matches can include earlier online articles.
+- Active: 11,181 candidates/literature, 2,497 findings/shortlist/paper pages, 1,500 matrix rows, 54 core-review records. Five overlapping CSV layers total 28,856 rows. Candidate turnover +50/-45; findings +24/-14. Caps remain 600/200 by topic and 1,500/100 for the matrix.
+- Config `data/current_release.json`; notes `data/featured_reader_notes_2026_10_30.json`; metrics `data/curation_release_metrics_2026_10_30.json`; report `docs/october-end-public-update-2026-10.html`; posting panel `docs/yulcell-posting-asset-dashboard-2026-10-30.html`.
+- Immutable baseline: `archive/public-data/public-data-2026-10-23.zip`. The previous 57 PNGs and two HTML originals are in `archive/visual-releases/visual-release-2026-10-23.zip`. Seven older reading files moved into reader history, now 83 files. Date-specific delta/upload cache: `output/feishu-delta-2026-10-30/`.
+- Official identifiers checked for all 2,497 PMIDs: zero missing or substantive title conflicts, nine finding and 14 candidate PMCID corrections. Six featured notes use official abstracts; full texts remain pending.
+- Retraction refresh: 117 targets, 602 historical topic matches and 546 unique PMIDs. Ingredient evidence-review dates remain unchanged.
+- Classifier fixes recognize C. elegans as nonhuman, avoid matching “men” inside “improvement”, and distinguish cardiac stroke volume from cerebrovascular stroke. Explicit prospective-study wording in conclusions retains the cohort label. Auto-generated claim boundaries follow corrected classifications; authored boundaries are preserved.
+- Keep nine stable Feishu tables, the three concise views and visual galleries. Feishu project name now includes the exact brand. Browser connection recovered after an initial timeout. Current remote audit/publication acceptance belongs in `docs/current-output-status.md`; do not infer it from local build completion.
+- Feishu final audit `data/feishu_online_audit_2026_10_30.json` passed 9/9 with no source mismatches. UI gallery images loaded. Local full validation, 81 tests and static self-contained HTML checks passed; offline HTML interactions were not retested. Final classifier review was synced with the ignored `output/sync_final_review_delta_20261030.py`; final image uploads used `output/feishu-delta-2026-10-30/visual_tokens_2026-10-30-final.csv` to avoid path-only token-cache reuse.
+- Build order and same-month image dependency are unchanged: identifiers, core, visuals, core/visuals if old current-month images were archived, organize, exports, delta, sync, audit, validate. Write final status after core, then rerun exports. Use `python -u -X utf8`.
+
+## Previous Snapshot / 上期 2026-10-23
 
 Current snapshot: **2026-10-23**. Publication worktree `D:\longevity\github-publish-current`; baseline commit `1d40b3ce6d3be6dc60fa812304e79b1bb1672b37`. Do not touch the dirty development checkout.
 

@@ -1,0 +1,271 @@
+{
+  "release": "2026-10-end-curated",
+  "date": "2026-10-30",
+  "search": {
+    "date_window": "2026/10/24..2026/10/30",
+    "queries": 20,
+    "unique_pubmed_matches": 213,
+    "new_rows": 209,
+    "matched_existing": 4
+  },
+  "capacity_policy": {
+    "candidate_per_topic_cap": 600,
+    "finding_per_topic_cap": 200,
+    "matrix_global_cap": 1500,
+    "matrix_per_topic_cap": 100,
+    "core_review_per_high_grade_topic": 3
+  },
+  "before": {
+    "candidate_records": 11176,
+    "finding_records": 2487
+  },
+  "after": {
+    "candidate_records": 11181,
+    "finding_records": 2497,
+    "recent_candidates_retained": 54,
+    "recent_findings_retained": 27
+  },
+  "retired": {
+    "candidate_decisions": 204,
+    "candidate_reasons": {
+      "non_result_publication_title": 1,
+      "topic_capacity_limit": 203
+    },
+    "finding_decisions": 200,
+    "finding_reasons": {
+      "non_result_publication_title": 1,
+      "nonhuman_record_in_human_outcome_topic": 3,
+      "protocol_or_registered_plan": 2,
+      "title_topic_signal_missing": 124,
+      "topic_capacity_limit": 40,
+      "topic_scope_mismatch": 30
+    }
+  },
+  "candidate_topic_counts": {
+    "autophagy-mitophagy": 600,
+    "blood-pressure-aging": 600,
+    "caloric-restriction-human": 600,
+    "cardiorespiratory-fitness": 600,
+    "dietary-pattern-longevity": 600,
+    "epigenetic-clocks": 600,
+    "glp1-weight-cardiometabolic": 600,
+    "itp-mouse-lifespan": 179,
+    "klotho-il11-aging": 600,
+    "ldl-apob-cardiovascular-risk": 600,
+    "metformin-aging": 600,
+    "microbiome-inflammaging": 600,
+    "nad-nmn-nr-aging": 556,
+    "partial-reprogramming": 324,
+    "physical-activity-healthspan": 600,
+    "rapamycin-mtor-aging": 522,
+    "resistance-training-muscle": 600,
+    "senolytics": 600,
+    "sleep-aging": 600,
+    "time-restricted-eating": 600
+  },
+  "finding_topic_counts": {
+    "autophagy-mitophagy": 84,
+    "blood-pressure-aging": 200,
+    "caloric-restriction-human": 103,
+    "cardiorespiratory-fitness": 149,
+    "dietary-pattern-longevity": 200,
+    "epigenetic-clocks": 132,
+    "glp1-weight-cardiometabolic": 200,
+    "itp-mouse-lifespan": 11,
+    "klotho-il11-aging": 78,
+    "ldl-apob-cardiovascular-risk": 200,
+    "metformin-aging": 50,
+    "microbiome-inflammaging": 107,
+    "nad-nmn-nr-aging": 38,
+    "partial-reprogramming": 31,
+    "physical-activity-healthspan": 200,
+    "rapamycin-mtor-aging": 57,
+    "resistance-training-muscle": 200,
+    "senolytics": 57,
+    "sleep-aging": 200,
+    "time-restricted-eating": 200
+  },
+  "recent_selected_examples": [
+    {
+      "candidate_id": "pubmed-42950254",
+      "pmid": "42950254",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Acute and Chronic Cardiovascular and Neuromuscular Effects of Blood Flow Restriction Resistance Training in Older Adults: A Systematic Review and Meta-Analysis.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42949507",
+      "pmid": "42949507",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "The impact of interventions combining nutrition and physical exercise on frailty in old age: A systematic literature review and Synthesis Without Meta-analysis (SWiM).",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42307492",
+      "pmid": "42307492",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Resistance Training, Aerobic Activity, Television Viewing, and Risk of Major Cardiovascular Events in U.S. Women.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42925461",
+      "pmid": "42925461",
+      "topic_id": "physical-activity-healthspan",
+      "title_en": "Aerobic physical activity is associated with lower pneumonia and COVID-19 mortality in adults with cognitive impairment.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42950120",
+      "pmid": "42950120",
+      "topic_id": "metformin-aging",
+      "title_en": "Potential Synergistic Association of Donepezil and Metformin With COVID-19 Mortality in Dementia Patients.",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42949055",
+      "pmid": "42949055",
+      "topic_id": "sleep-aging",
+      "title_en": "Risk Factors for Cardiovascular Mortality in Patients With Obstructive Sleep Apnea.",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42928050",
+      "pmid": "42928050",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Estimated sdLDL-C/LDL-C Discordance Is Associated With Advanced Cardiovascular-Kidney-Metabolic Syndrome, Incident Cardiovascular Disease and Mortality: Evidence From Two Population-Based Cohorts.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42951341",
+      "pmid": "42951341",
+      "topic_id": "resistance-training-muscle",
+      "title_en": "Masticatory Performance and its Relationship With Sarcopenia, Frailty and Functional Outcomes in Hospitalized Older Adults: A Prospective Cohort Study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42928656",
+      "pmid": "42928656",
+      "topic_id": "blood-pressure-aging",
+      "title_en": "Joint Association of Longitudinal Single-Point Insulin Sensitivity Estimator Patterns and Hypertension Status with Incident Stroke Among Adults with Cardiovascular-Kidney-Metabolic Syndrome Stages 0-3: A Nationwide Prospective Cohort Study.",
+      "study_type": "human_cohort",
+      "draft_level": "B"
+    },
+    {
+      "candidate_id": "pubmed-42584385",
+      "pmid": "42584385",
+      "topic_id": "sleep-aging",
+      "title_en": "Acute Effects of Cannabis Inhalation on Cardiac Ectopy, Physical Activity, Sleep, and Glucose.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42950885",
+      "pmid": "42950885",
+      "topic_id": "time-restricted-eating",
+      "title_en": "Daily 16:8 Versus Weekly 5:2 Intermittent Fasting for Weight Loss and Metabolic Health: A Randomized Controlled Trial.",
+      "study_type": "human_randomized_or_clinical_trial",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42932003",
+      "pmid": "42932003",
+      "topic_id": "glp1-weight-cardiometabolic",
+      "title_en": "GLP-1 receptor agonist-associated weight loss in breast cancer patients receiving concurrent endocrine therapy: a retrospective cohort analysis.",
+      "study_type": "human_cohort",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42177636",
+      "pmid": "42177636",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Lipoprotein(a) and residual cardiovascular risks in Japanese patients with coronary artery disease who achieve guideline-recommended low-density lipoprotein cholesterol goals.",
+      "study_type": "narrative_review",
+      "draft_level": "C"
+    },
+    {
+      "candidate_id": "pubmed-42290618",
+      "pmid": "42290618",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Cholesterol-lowering therapy from childhood/adolescence and long-term outcomes in familial hypercholesterolaemia: the SAFEHEART study.",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42149947",
+      "pmid": "42149947",
+      "topic_id": "ldl-apob-cardiovascular-risk",
+      "title_en": "Homozygous familial hypercholesterolaemia: insights from the Global HICC Registry.",
+      "study_type": "metadata_only_needs_classification",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42946698",
+      "pmid": "42946698",
+      "topic_id": "rapamycin-mtor-aging",
+      "title_en": "Ginsenoside Rb1 alleviates uterine aging via AMPK-mediated mTOR inactivation.",
+      "study_type": "animal_study",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42951215",
+      "pmid": "42951215",
+      "topic_id": "autophagy-mitophagy",
+      "title_en": "Alginate Oligosaccharide Alleviates Age-Related Hearing Loss via TFEB-Associated Autophagy Restoration to Attenuate Oxidative Stress and Inflammation.",
+      "study_type": "animal_study",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42951052",
+      "pmid": "42951052",
+      "topic_id": "microbiome-inflammaging",
+      "title_en": "Fecal microbiota transplantation and its role in aging of rats: Behavioral and pathological evidence.",
+      "study_type": "animal_study",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42949633",
+      "pmid": "42949633",
+      "topic_id": "senolytics",
+      "title_en": "A Bi-Adjuvant Senolytic Nanovaccine Modulating Dendritic Cell Senescence Ameliorates Aging-Related Metabolic Dysfunction.",
+      "study_type": "animal_study",
+      "draft_level": "D"
+    },
+    {
+      "candidate_id": "pubmed-42926120",
+      "pmid": "42926120",
+      "topic_id": "epigenetic-clocks",
+      "title_en": "Concordance between changes in epigenetic clocks and changes in clinical outcomes in geroscience intervention trials: A systematic review.",
+      "study_type": "systematic_review_or_meta_analysis",
+      "draft_level": "C"
+    }
+  ],
+  "notes": [
+    "Discovery is not evidence of benefit.",
+    "Retired rows remain recoverable from Git history and prior public snapshots.",
+    "No protocol, commentary, correction, or title-topic mismatch is promoted into active findings."
+  ],
+  "active_turnover": {
+    "candidate_sources": {
+      "before": 11176,
+      "after": 11181,
+      "old_removed": 45,
+      "new_active": 50,
+      "net_change": 5
+    },
+    "evidence_findings": {
+      "before": 2487,
+      "after": 2497,
+      "old_removed": 14,
+      "new_active": 24,
+      "net_change": 10
+    }
+  }
+}

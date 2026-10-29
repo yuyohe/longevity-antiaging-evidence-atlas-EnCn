@@ -1,5 +1,5 @@
 {
-  "organized_on": "2026-10-23",
+  "organized_on": "2026-10-30",
   "asset_order": ["reader_navigation", "heatmaps", "ingredient_cards", "ingredient_wall", "evidence_matrix", "evidence_findings", "literature_library", "candidate_sources", "shortlist_sources"],
   "table_names": {
     "reader_navigation": "00 从这里开始（项目介绍）",
@@ -23,7 +23,7 @@
     "evidence_findings": {"name": "研究速读 / Study Notes", "visible_fields": ["公开标题", "topic_zh", "title_zh", "conclusion_zh", "final_evidence_level", "pmid"]},
     "evidence_matrix": {"name": "证据速览 / Evidence", "visible_fields": ["公开标题", "topic", "endpoint_class", "evidence_level", "zh_summary", "paper_id"]}
   },
-  "continuation_policy": "不按月份建表。本期文献目录为11,176条。上次额度核对为2026-10-16，界面显示20,000条（含限免额度），本次未重新确认额度。按实际单表额度的90%预警；若额度仍为20,000条，则18,000条预警，达到20,000条并完成去重后才建同名续表02。保留稳定主键、前后表链接和统一目录；额度变化以飞书界面为准。",
+  "continuation_policy": "不按月份建表。先去重、筛选和归档，再考虑续表。上次额度核对为2026-10-16，界面显示20,000条（含限免额度），本次未重新确认额度。按实际单表额度的90%预警；若额度仍为20,000条，则18,000条预警，达到20,000条并完成去重后才建同名续表02。保留稳定主键、前后表链接和统一目录；额度变化以飞书界面为准。",
   "table_limit_observation": {"date": "2026-10-16", "table_id": "tblIPdcBJPH6UkAE", "rows": 11167, "displayed_limit": 20000, "includes_temporary_allowance": true},
   "preserve_existing_records": true
 }

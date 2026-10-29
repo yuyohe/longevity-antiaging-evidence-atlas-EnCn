@@ -28,4 +28,4 @@ No individual prescriptions, dosing, stopping medication or purchase recommendat
 
 [全部当前入口](../../docs/asset-catalog.md) · [飞书阅读入口](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD) · [历史资料](../../archive/README.md)
 
-资料快照：2026-10-23；阅读分类整理：2026-10-23。[本期文献与资产更新](october-23-2026-update.md)。
+资料快照：2026-10-30；阅读分类整理：2026-10-30。[本期文献与资产更新](october-end-2026-update.md)。

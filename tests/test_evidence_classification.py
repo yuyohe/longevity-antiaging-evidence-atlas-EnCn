@@ -14,6 +14,39 @@ import expand_healthspan_pubmed_v05 as expansion  # noqa: E402
 
 
 class StudyClassificationTests(unittest.TestCase):
+    def test_worm_experiment_is_animal_even_with_improvement_word(self):
+        title = "Ginsenoside Rg1 delays aging in Caenorhabditis elegans."
+        body = "C. elegans showed improvement in muscle function."
+        study = expansion.classify_study(["Journal Article"], body, "PubMed", title)
+        self.assertEqual(study, "animal_study")
+        self.assertEqual(expansion.classify_species(study, body, title), "animal")
+        row = {"title_en": title, "result_en": body, "species_draft": "human"}
+        self.assertEqual(scoring.normalized_study_type(row), "animal_study")
+        self.assertEqual(scoring.normalized_species(row, "animal_study"), "animal")
+
+    def test_improvement_does_not_contain_human_subject_men(self):
+        self.assertEqual(expansion.classify_species("metadata_only_needs_classification", "An improvement was seen."), "needs_review")
+
+    def test_generated_boundary_follows_corrected_species_but_preserves_authored_text(self):
+        old_zh, old_en = expansion.unsupported_claim("human", "H4", False)
+        row = {"title_en": "Mitophagy in Caenorhabditis elegans", "result_en": "Improvement was observed.",
+               "species_draft": "human", "endpoint_class_draft": "H4", "evidence_source_depth": "abstract_only",
+               "claim_not_supported_zh": old_zh, "claim_not_supported_en": old_en}
+        result = scoring.score_row(row, "longevity", {}, {})
+        self.assertEqual(result["claim_not_supported_zh"], expansion.unsupported_claim("animal", "H4", False)[0])
+        row["claim_not_supported_zh"] = "Specific reviewed limitation."
+        self.assertEqual(scoring.score_row(row, "longevity", {}, {})["claim_not_supported_zh"], "Specific reviewed limitation.")
+
+    def test_stroke_volume_is_not_stroke(self):
+        body = "Blood pressure rose; stroke volume was unchanged."
+        self.assertEqual(expansion.classify_endpoint("", body), "H3")
+        row = {"title_en": "Cardiovascular responses to exercise", "result_en": body,
+               "endpoint_class_draft": "H1"}
+        self.assertEqual(scoring.normalized_healthspan_endpoint(row), "H3")
+        row["title_en"] = "Neuromuscular effects of resistance training in older adults"
+        self.assertEqual(scoring.normalized_healthspan_endpoint(row), "H2")
+        self.assertEqual(expansion.classify_endpoint("", "Stroke volume and incident stroke were measured."), "H1")
+
     def test_critical_appraisal_does_not_inherit_a_cited_cohort_design(self):
         title = "GLP-1 Receptor Agonists in Dentistry: Promise, Pitfalls, and Evidence Gaps."
         body = "Only a single retrospective cohort study exists. This critical appraisal synthesizes the evidence."
@@ -37,6 +70,12 @@ class StudyClassificationTests(unittest.TestCase):
                "publication_types": "Journal Article", "result_en": "Among 10,462 participants, 2,101 deaths occurred.",
                "conclusion_en": "Fitness showed an inverse association with mortality in this cohort."}
         self.assertEqual(scoring.normalized_study_type(row), "human_cohort")
+
+    def test_prospective_study_in_conclusion_retains_cohort_label(self):
+        row = {"title_en": "Resistance Training and Cardiovascular Events in U.S. Women",
+               "conclusion_en": "In this large prospective study of U.S. women, resistance training was associated with lower risk."}
+        self.assertEqual(scoring.normalized_study_type(row), "human_cohort")
+        self.assertEqual(expansion.classify_study([], row["conclusion_en"], "PubMed", row["title_en"]), "human_cohort")
 
     def test_measured_apnea_frequency_is_a_functional_endpoint(self):
         row = {"title_en": "GLP-1 receptor agonists for obstructive sleep apnea",

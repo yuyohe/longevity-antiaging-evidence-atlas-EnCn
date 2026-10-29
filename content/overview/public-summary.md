@@ -23,7 +23,7 @@ In short: this atlas separates mature healthspan evidence from early mechanistic
 
 ## 当前版本说了什么
 
-- 当前公开草稿覆盖 20 个健康寿命主题、2487 条 finding、1500 条正式纳入候选记录。
+- 当前公开草稿覆盖 20 个健康寿命主题、2497 条 finding、1500 条正式纳入候选记录。
 - 本轮扩容采用“高权重期刊优先 + 系统综述/Meta/RCT/队列/MR 优先 + 主题均衡”的策略。
 - 最稳健的方向仍主要集中在心肺适能、身体活动、抗阻训练、血压、LDL-C/apoB、饮食模式和睡眠等公共健康或临床风险管理主题。
 - 前沿药物、补剂和 geroscience 技术保留为研究方向，但不会被写成普通人可以自行执行的抗衰建议。
@@ -39,7 +39,7 @@ In short: this atlas separates mature healthspan evidence from early mechanistic
 
 | # | 主题 | 当前立场 | v0.4/v0.5 等级 | 记录数 | 中位质量分 | 边界 |
 |---:|---|---|---|---:|---:|---|
-| 1 | [心肺适能与死亡风险](../topics/cardiorespiratory-fitness.md)<br>Cardiorespiratory Fitness and Mortality | 目前最值得优先关注的健康寿命指标之一；较高心肺适能与更低死亡和心血管风险高度相关。 | A | 148 | 80 | 可作为生活方式优先方向；个体运动处方需结合年龄、疾病和医生评估。 |
+| 1 | [心肺适能与死亡风险](../topics/cardiorespiratory-fitness.md)<br>Cardiorespiratory Fitness and Mortality | 目前最值得优先关注的健康寿命指标之一；较高心肺适能与更低死亡和心血管风险高度相关。 | A | 149 | 80 | 可作为生活方式优先方向；个体运动处方需结合年龄、疾病和医生评估。 |
 | 2 | [身体活动与健康寿命](../topics/physical-activity-healthspan.md)<br>Physical Activity and Healthspan | 整体证据方向稳定：规律身体活动支持更好的健康结局和功能维持。 | A | 200 | 80 | 支持行动方向，不等于给出单一万能运动处方。 |
 | 3 | [抗阻训练、肌肉与衰弱](../topics/resistance-training-muscle.md)<br>Resistance Training, Muscle, and Frailty | 肌肉量、力量和功能是健康寿命的关键支点；抗阻训练是高优先级主题。 | A | 200 | 76 | 可作为健康管理重点；高龄、骨质疏松或慢病人群需专业评估。 |
 | 4 | [血压与健康寿命](../topics/blood-pressure-aging.md)<br>Blood Pressure and Healthspan | 血压控制是心脑血管风险和健康寿命管理中证据最成熟的方向之一。 | A | 200 | 71 | 支持监测和医学管理；不提供药物选择或剂量建议。 |
@@ -49,16 +49,16 @@ In short: this atlas separates mature healthspan evidence from early mechanistic
 | 8 | [GLP-1、减重与心代谢结局](../topics/glp1-weight-cardiometabolic.md)<br>GLP-1, Weight Loss, and Cardiometabolic Outcomes | 临床证据增长很快，主要价值在肥胖、糖代谢和心代谢风险管理。 | A | 200 | 74 | 这是医疗主题，不是普通抗衰保健建议；必须医生监督。 |
 | 9 | [热量限制与人体衰老](../topics/caloric-restriction-human.md)<br>Caloric Restriction in Humans | 人体证据有价值但边界明显，不能直接等同于延寿已证实。 | B | 103 | 69 | 不建议盲目长期极端节食；需关注营养充足和个体风险。 |
 | 10 | [限时进食与代谢健康](../topics/time-restricted-eating.md)<br>Time-Restricted Eating and Metabolic Health | 可作为代谢健康候选策略，但证据强度和适用人群仍不稳定。 | B | 200 | 74 | 糖尿病、孕期、进食障碍或用药人群不应自行尝试。 |
-| 11 | [二甲双胍与衰老](../topics/metformin-aging.md)<br>Metformin and Aging | 二甲双胍与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | B | 49 | 80 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
-| 12 | [雷帕霉素/mTOR 与衰老](../topics/rapamycin-mtor-aging.md)<br>Rapamycin/mTOR and Aging | 雷帕霉素/mTOR 与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 56 | 46 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
-| 13 | [Senolytics 清除衰老细胞](../topics/senolytics.md)<br>Senolytics | Senolytics 清除衰老细胞 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 56 | 47 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 11 | [二甲双胍与衰老](../topics/metformin-aging.md)<br>Metformin and Aging | 二甲双胍与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | B | 50 | 80 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 12 | [雷帕霉素/mTOR 与衰老](../topics/rapamycin-mtor-aging.md)<br>Rapamycin/mTOR and Aging | 雷帕霉素/mTOR 与衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 57 | 45 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 13 | [Senolytics 清除衰老细胞](../topics/senolytics.md)<br>Senolytics | Senolytics 清除衰老细胞 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 57 | 47 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
 | 14 | [NAD/NMN/NR](../topics/nad-nmn-nr-aging.md)<br>NAD/NMN/NR | NAD/NMN/NR 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 38 | 47 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
-| 15 | [表观遗传时钟](../topics/epigenetic-clocks.md)<br>Epigenetic Clocks | 表观遗传时钟 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | B | 131 | 55 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 15 | [表观遗传时钟](../topics/epigenetic-clocks.md)<br>Epigenetic Clocks | 表观遗传时钟 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | B | 132 | 55 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
 | 16 | [ITP 小鼠寿命干预](../topics/itp-mouse-lifespan.md)<br>ITP Mouse Lifespan Interventions | ITP 小鼠寿命干预 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | D | 11 | 38 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
-| 17 | [Klotho / IL-11](../topics/klotho-il11-aging.md)<br>Klotho / IL-11 | Klotho / IL-11 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 77 | 51 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 17 | [Klotho / IL-11](../topics/klotho-il11-aging.md)<br>Klotho / IL-11 | Klotho / IL-11 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 78 | 51 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
 | 18 | [部分重编程](../topics/partial-reprogramming.md)<br>Partial Reprogramming | 部分重编程 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | D | 31 | 42 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
-| 19 | [自噬/线粒体自噬](../topics/autophagy-mitophagy.md)<br>Autophagy and Mitophagy | 自噬/线粒体自噬 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 82 | 42 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
-| 20 | [微生物组与炎症性衰老](../topics/microbiome-inflammaging.md)<br>Microbiome and Inflammaging | 微生物组与炎症性衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | B | 105 | 56 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 19 | [自噬/线粒体自噬](../topics/autophagy-mitophagy.md)<br>Autophagy and Mitophagy | 自噬/线粒体自噬 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | C | 84 | 42 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
+| 20 | [微生物组与炎症性衰老](../topics/microbiome-inflammaging.md)<br>Microbiome and Inflammaging | 微生物组与炎症性衰老 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。 | B | 107 | 56 | 不支持把候选证据写成个人医疗、补剂或抗衰处方。 |
 
 ## 证据等级和评分方法
 
@@ -66,7 +66,7 @@ In short: this atlas separates mature healthspan evidence from early mechanistic
 
 - 方法全文：[证据评分方法 v0.4](evidence-scoring-v0-4.md)
 - 质量总览：[证据质量总览](evidence-quality-dashboard.md)
-- 更新时间：2026-10-23
+- 更新时间：2026-10-30
 
 特别说明：JCR Impact Factor 当前没有自动导入，也不会被伪造。IF 若后续由授权来源导入，只作为影响力信号之一，不替代 GRADE/RoB/AMSTAR 和终点硬度判断。
 

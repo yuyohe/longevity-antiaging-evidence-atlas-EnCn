@@ -7,7 +7,7 @@
 
 自噬/线粒体自噬 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 82 records; final public claims still require full-text review.
+Draft summary: this topic now includes 84 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -39,7 +39,7 @@ Draft summary: this topic now includes 82 records; final public claims still req
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
-- 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
+- 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能据单篇摘要给出剂量、处方或个人医疗建议。 / Does not support dosing, prescriptions, or individual medical advice from one abstract.
 - 不支持：不能把替代指标或 biomarker 改善直接解释为临床逆龄。 / Does not support interpreting surrogate or biomarker change as clinical rejuvenation.
@@ -70,6 +70,7 @@ Draft summary: this topic now includes 82 records; final public claims still req
 - [The Role of Endothelial Cell Mitophagy in Age-Related Cardiovascular Diseases.](../papers/pubmed-39122456.md) (2024, Aging and disease)
 - [FGF21 rejuvenates aged human adipose-derived mesenchymal stem cells via enhancement of TFE3-mediated autophagy flux.](../papers/pubmed-42157427.md) (2026, Autophagy)
 - [Exercise alleviates neuroinflammation and cognitive decline in aged mice via hepatic FGF21-driven microglial mitophagy.](../papers/pubmed-42532442.md) (2026, Brain, behavior, and immunity)
+- [Luteolin and glycitein from Codonopsis pilosula ameliorate age-related locomotor decline in C. elegans via DAF-16-dependent but autophagy-divergent pathways.](../papers/pubmed-42593549.md) (2026, Biogerontology)
 - [Crassifolin A prolongs lifespan and healthspan in Caenorhabditis elegans via activating autophagy.](../papers/pubmed-39890089.md) (2025, Journal of ethnopharmacology)
 - [Ghrelin Alleviates Aging-Related Cognitive Impairment by Regulating Autophagy-Related Signaling via the SHBG/JNK1/Beclin1 Axis in Microglia.](../papers/pubmed-42806945.md) (2026, Aging cell)
 - [Dual Roles of Autophagy in Endometrial Fibrosis and Its Implications in Age-Related Reproductive Dysfunction.](../papers/pubmed-42745023.md) (2026, Reproductive sciences (Thousand Oaks, Calif.))
@@ -78,6 +79,7 @@ Draft summary: this topic now includes 82 records; final public claims still req
 - [Mechanistic study on the role of multi-pathway autophagy in ovarian aging: literature review.](../papers/pubmed-40956551.md) (2025, Apoptosis : an international journal on programmed cell death)
 - [Molecular Mechanisms of Autophagy Decline during Aging.](../papers/pubmed-39195254.md) (2024, Cells)
 - [Dietary CoQ10 Ameliorates Age-Related Megakaryocyte Dysfunction via COPS3-Mediated Activation of Autophagy.](../papers/pubmed-42808563.md) (2026, Aging cell)
+- [Evaluation the role of quinoa seeds in attenuation the brain cellular senescence and aging induced by D-galactose and γ-radiation in rats: insights into autophagy, telomerase activity, amyloid-β and tau proteins.](../papers/pubmed-42762380.md) (2026, Inflammopharmacology)
 - [The Secretome Derived From Human Umbilical Cord Mesenchymal Stem Cells Improves Skin Photoaging by Enhancing Mitophagy to Inhibit the cGAS-STING Pathway.](../papers/pubmed-42723546.md) (2026, Aging cell)
 - [SDF-1 Attenuates Oocyte Quality Decline During Reproductive Aging Through Autophagy-Enhanced Stress Granule Scavenging.](../papers/pubmed-42544868.md) (2026, Advanced science (Weinheim, Baden-Wurttemberg, Germany))
 - [Unveiling the AcSirt2-FOXO-Mitophagy Axis: Insights Into Mitochondrial Quality Control and Delayed Aging in Apis cerana.](../papers/pubmed-42503023.md) (2026, Aging cell)
@@ -90,7 +92,6 @@ Draft summary: this topic now includes 82 records; final public claims still req
 - [BNIP3-Dependent Mitophagy Non-Autonomously Regulates Systemic Aging via NF-κB Suppression in Drosophila.](../papers/pubmed-42128879.md) (2026, Aging cell)
 - [Sex-specific and cell-type-specific changes in chaperone-mediated autophagy across tissues during aging.](../papers/pubmed-39910244.md) (2025, Nature aging)
 - [Asparagine prevents intestinal stem cell aging via the autophagy-lysosomal pathway.](../papers/pubmed-39587832.md) (2025, Aging cell)
-- [Evaluation the role of quinoa seeds in attenuation the brain cellular senescence and aging induced by D-galactose and γ-radiation in rats: insights into autophagy, telomerase activity, amyloid-β and tau proteins.](../papers/pubmed-42762380.md) (2026, Inflammopharmacology)
 - [Estrogen receptor-autophagy axis protects the heart, aorta and kidneys during perimenopausal aging: Evidence from human cohort and mouse experiments.](../papers/pubmed-41490658.md) (2026, Life sciences)
 - [Transglutaminase and its role in Alzheimer's disease: focus on mitochondria, aging, defective mitophagy, synaptic degeneration, and metabolomics.](../papers/pubmed-42185591.md) (2026, GeroScience)
 - [Senescent BMSC-Derived Thbs1 Drives Inflammaging and Impairs Bone Regeneration by Suppressing PINK1/Parkin-Mediated Mitophagy in Macrophages.](../papers/pubmed-42257494.md) (2026, Aging cell)
@@ -102,8 +103,10 @@ Draft summary: this topic now includes 82 records; final public claims still req
 - [A novel mitochondrial autophagy and aging-related gene signature for predicting ovarian cancer.](../papers/pubmed-40539060.md) (2025, Frontiers in immunology)
 - [A Randomized Controlled Clinical Trial in Healthy Older Adults to Determine Efficacy of Glycine and N-Acetylcysteine Supplementation on Glutathione Redox Status and Oxidative Damage.](../papers/pubmed-35821844.md) (2022, Frontiers in aging)
 - [Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity.](../papers/pubmed-42866687.md) (2026, iScience)
-- [TAOK1 Protects against Renal Ischemia-Reperfusion Injury in Aged Mice through the STK3/BNIP3 Mitophagy Pathway.](../papers/pubmed-42897920.md) (2026, International journal of stem cells)
+- [Alginate Oligosaccharide Alleviates Age-Related Hearing Loss via TFEB-Associated Autophagy Restoration to Attenuate Oxidative Stress and Inflammation.](../papers/pubmed-42951215.md) (2026, European journal of pharmaceutical sciences : official journal of the European Federation for Pharmaceutical Sciences)
+- [Selective autophagy pathways in ageing and neurodegeneration: Emerging roles for mitophagy and nucleophagy.](../papers/pubmed-42868283.md) (2026, The FEBS journal)
 - [Berberine as a multi-hallmark modulator of aging: From AMPK and mitophagy to inflammaging and the SASP.](../papers/pubmed-42805510.md) (2026, Fitoterapia)
+- [TAOK1 Protects against Renal Ischemia-Reperfusion Injury in Aged Mice through the STK3/BNIP3 Mitophagy Pathway.](../papers/pubmed-42897920.md) (2026, International journal of stem cells)
 - [Ellagitannin Metabolite Urolithin D Ameliorates Cognitive Function and Behavioral Performance in Aging Mice Partially via AMPK/PGC-1α/SIRT3-Dependent Regulation of Mitophagy-Related Molecular Machinery.](../papers/pubmed-42842065.md) (2026, Molecular neurobiology)
 - [SIRT2-dependent SQSTM1 decrotonylation at K100 rescues impaired mitophagy in aged bovine oocytes.](../papers/pubmed-42837843.md) (2026, Theriogenology)
 - [Decline of chaperone-mediated autophagy in aging impairs macrophage clearance of senescent cells.](../papers/pubmed-42834177.md) (2026, Nature aging)
@@ -120,12 +123,11 @@ Draft summary: this topic now includes 82 records; final public claims still req
 - [Is taurine an aging biomarker?](../papers/pubmed-40472098.md) (2025, Science (New York, N.Y.))
 - [Mitophagy in relation to chronic inflammation/ROS in aging.](../papers/pubmed-38834837.md) (2025, Molecular and cellular biochemistry)
 - [Combined metformin and Taurine attenuate age-related bone loss.](../papers/pubmed-42364025.md) (2026, Molecular biology reports)
-- [Selective autophagy pathways in ageing and neurodegeneration: Emerging roles for mitophagy and nucleophagy.](../papers/pubmed-42868283.md) (2026, The FEBS journal)
-- [Luteolin and glycitein from Codonopsis pilosula ameliorate age-related locomotor decline in C. elegans via DAF-16-dependent but autophagy-divergent pathways.](../papers/pubmed-42593549.md) (2026, Biogerontology)
+- [Ginsenoside Rg1 promotes mitophagy and delays aging through the DAF-16 in Caenorhabditis elegans.](../papers/pubmed-42926247.md) (2026, Biogerontology)
+- [Puerarin extends lifespan and enhances the resistance to oxidative stress through AMPK/TFEB mediated autophagy in Caenorhabditis elegans.](../papers/pubmed-42628698.md) (2026, Mechanisms of ageing and development)
 - [Microbiota-derived urolithins and cortical thickness in cognitively healthy older adults: a longitudinal MRI analysis of the WAHA trial.](../papers/pubmed-42841852.md) (2026, Food & function)
 - [Pomegranate peel extract bilophytosome protects against UVB- induced skin photoaging through pleiotropic modulation of inflammation, mitophagy, senescence, and metalloproteinases.](../papers/pubmed-42721501.md) (2026, Journal of photochemistry and photobiology. B, Biology)
 - [Short-term passive heat acclimation modulates autophagy and cellular stress responses in older active adults.](../papers/pubmed-42674107.md) (2026, Journal of sport and health science)
 - [Sequalae and reversal of age-dependent alterations in mitochondrial dynamics via autophagy enhancement in reprogrammed human neurons.](../papers/pubmed-42604495.md) (2026, Autophagy)
 - [Seasonal differences in epigenetic marks and autophagy-related gene expression during natural aging of honeybee workers.](../papers/pubmed-42173399.md) (2026, Comparative biochemistry and physiology. Part B, Biochemistry & molecular biology)
-- [Puerarin extends lifespan and enhances the resistance to oxidative stress through AMPK/TFEB mediated autophagy in Caenorhabditis elegans.](../papers/pubmed-42628698.md) (2026, Mechanisms of ageing and development)
 - [Cyanidin chloride activates mitophagy to delay aging via PINK1/parkin pathway.](../papers/pubmed-42562489.md) (2026, Food research international (Ottawa, Ont.))

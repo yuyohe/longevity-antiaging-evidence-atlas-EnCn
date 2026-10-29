@@ -108,6 +108,8 @@ def main() -> None:
 
 资料快照 / Evidence snapshot：{snapshot} · 分类整理 / Organization：{layout['organized_on']}
 
+[本期六篇研究解读 / Six studies in this update](content/public-reader/{cfg['EVIDENCE_ATLAS_RELEASE_FILE']}) · [飞书阅读导航 / Feishu start here]({by_key['reader_navigation']['url']})
+
 | 你想做什么 / Your question | 从哪里看 / Open |
 | --- | --- |
 | 先看图，了解有哪些研究 / See the research | [热力图](#一先看图--visuals) · [成分卡片](content/public-reader/ingredient-cards-top-50.md) |

@@ -7,7 +7,7 @@
 
 Senolytics 清除衰老细胞 是重要候选方向，但公开结论必须区分成熟证据、机制线索和过度解读。
 
-Draft summary: this topic now includes 56 records; final public claims still require full-text review.
+Draft summary: this topic now includes 57 records; final public claims still require full-text review.
 
 ## 当前证据等级 / Current Evidence Level
 
@@ -100,6 +100,7 @@ Draft summary: this topic now includes 56 records; final public claims still req
 - [Targeting cellular senescence mitigates chemotherapy-induced bone loss in young and aged mice.](../papers/pubmed-42686970.md) (2026, GeroScience)
 - [Effects of quercetin supplementation on antioxidant capacity, inflammatory status, ovarian reserve and steroidogenesis in juvenile and reproductively aged rabbit does.](../papers/pubmed-42365827.md) (2026, Domestic animal endocrinology)
 - [Profiling the molecular and physiological effects of senolytic treatment on aged mice identifies immune, fibrotic and metabolic remodeling.](../papers/pubmed-42310394.md) (2026, Nature aging)
+- [Quercetin alleviates MSG-induced oxidative toxicity and lifespan deterioration in Caenorhabditis elegans associated with SKN-1-gst-4 detoxification and DAF-16-dependent stress resilience.](../papers/pubmed-42492260.md) (2026, Phytomedicine : international journal of phytotherapy and phytopharmacology)
+- [A Bi-Adjuvant Senolytic Nanovaccine Modulating Dendritic Cell Senescence Ameliorates Aging-Related Metabolic Dysfunction.](../papers/pubmed-42949633.md) (2026, Advanced science (Weinheim, Baden-Wurttemberg, Germany))
 - [Cellular Senescence Is a Central Driver of Cognitive Disparities in Aging.](../papers/pubmed-40077862.md) (2025, Aging cell)
 - [CD4 T cells acquire Eomesodermin to modulate cellular senescence and aging.](../papers/pubmed-41057611.md) (2025, Nature aging)
-- [Quercetin alleviates MSG-induced oxidative toxicity and lifespan deterioration in Caenorhabditis elegans associated with SKN-1-gst-4 detoxification and DAF-16-dependent stress resilience.](../papers/pubmed-42492260.md) (2026, Phytomedicine : international journal of phytotherapy and phytopharmacology)

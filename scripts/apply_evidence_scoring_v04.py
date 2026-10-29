@@ -12,7 +12,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 from typing import Iterable
-from expand_healthspan_pubmed_v05 import secondary_design
+from expand_healthspan_pubmed_v05 import classify_endpoint, secondary_design, unsupported_claim
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,7 +29,8 @@ QUALITY_DASHBOARD = CONTENT / "overview" / "evidence-quality-dashboard.md"
 
 ANIMAL_SUBJECT_RE = re.compile(
     r"\b(?:mice|mouse|murine|rats?|rodents?|goats?|sheep|lambs?|pigs?|swine|porcine|"
-    r"rabbits?|dogs?|canine|calves|cattle|bovine|horses?|equine|non[- ]?human primates?)\b",
+    r"rabbits?|dogs?|canine|calves|cattle|bovine|horses?|equine|non[- ]?human primates?|"
+    r"caenorhabditis elegans|c\.\s*elegans|drosophila|zebrafish)\b",
     flags=re.IGNORECASE,
 )
 HUMAN_SUBJECT_RE = re.compile(
@@ -268,7 +269,7 @@ def normalized_study_type(row: dict[str, str]) -> str:
         return "human_mendelian_randomization"
     if (
         any(term in title_and_types for term in ["cohort", "prospective study", "longitudinal study"])
-        or any(term in body for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort", "in this cohort"])
+        or any(term in body for term in ["prospective cohort", "retrospective cohort", "longitudinal cohort", "in this cohort", "in this prospective study", "in this large prospective study"])
     ):
         return "human_cohort"
     if any(
@@ -328,6 +329,7 @@ def normalized_species(row: dict[str, str], study_type: str) -> str:
 def normalized_healthspan_endpoint(row: dict[str, str]) -> str:
     """Prefer the paper's title/conclusion over background-only abstract wording."""
     text = f"{row.get('title_en', '')} {row.get('conclusion_en', '')}".lower()
+    text = re.sub(r"\bstroke[- ]volume\b", "cardiac volume per beat", text)
     if "whole blood transcriptome" in row.get("title_en", "").lower():
         return "H4"
     if any(
@@ -344,7 +346,7 @@ def normalized_healthspan_endpoint(row: dict[str, str]) -> str:
         ]
     ):
         return "H1"
-    if any(term in text for term in ["vo2", "frailty", "grip strength", "cognition", "falls", "sarcopenia", "disability", "quality of life"]):
+    if any(term in text for term in ["vo2", "frailty", "grip strength", "muscle strength", "neuromuscular", "cognition", "falls", "sarcopenia", "disability", "quality of life"]):
         return "H2"
     if any(term in text for term in ["reduced ahi", "apnea-hypopnea index", "apnoea-hypopnoea index", "sleep apnea severity"]):
         return "H2"
@@ -354,6 +356,8 @@ def normalized_healthspan_endpoint(row: dict[str, str]) -> str:
         return "H5"
     if any(term in text for term in ["mouse lifespan", "mice lifespan", "murine lifespan"]):
         return "H6"
+    if re.search(r"\bstroke[- ]volume\b", row.get("result_en", "").lower()):
+        return classify_endpoint("", row.get("result_en", ""))
     return row.get("endpoint_class_draft") or row.get("endpoint_class") or "H4"
 
 
@@ -591,6 +595,19 @@ def score_row(row: dict[str, str], domain: str, icite: dict, openalex: dict) -> 
     endpoint = row.get("endpoint_class_draft") or row.get("endpoint_class") or row.get("longevity_endpoint_class") or row.get("skin_endpoint_class") or ""
     species = row.get("species_draft") or row.get("species") or ""
     depth = row.get("evidence_source_depth") or row.get("source", "")
+    if domain == "longevity" and not row.get("review_status", "").startswith("reviewed_"):
+        generated_boundaries = {
+            unsupported_claim(subject, outcome, metadata)
+            for subject, outcome, metadata in [
+                ("human", "H1", True), ("animal", "H4", False),
+                ("human", "H4", False), ("human", "H1", False),
+            ]
+        }
+        current_boundary = (row.get("claim_not_supported_zh"), row.get("claim_not_supported_en"))
+        if current_boundary in generated_boundaries:
+            row["claim_not_supported_zh"], row["claim_not_supported_en"] = unsupported_claim(
+                species, endpoint, "metadata_only" in depth
+            )
     ds = design_score(study)
     es = 0 if protocol or non_primary else endpoint_score(endpoint, domain)
     hs = human_score(species, study, domain)

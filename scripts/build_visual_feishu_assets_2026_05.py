@@ -342,6 +342,7 @@ def draw_heatmap(
             draw.text((x + (cell_w - 8 - tw) / 2, y + 20), text, font=value_font, fill=fill)
 
     legend_y = height - 80
+    draw.text((60, height - 116), "0 = 本表该范围未收录，不代表没有相关研究。", font=load_font(24), fill=MUTED)
     draw.text((60, legend_y), "颜色越深，数量越多", font=load_font(24), fill=MUTED)
     for i in range(8):
         color = gradient_color(i, 7)

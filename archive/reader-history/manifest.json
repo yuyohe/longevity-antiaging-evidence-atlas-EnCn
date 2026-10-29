@@ -531,6 +531,55 @@
       "source_commit": "1d40b3ce6d3be6dc60fa812304e79b1bb1672b37",
       "source_sha256": "f0df8120467d9537dda79da0c0f70652bf968147701ae8464f2890fe13f0ae86",
       "archived_sha256": "f91bca85739f24b3c7f2e996ee1d22b0169ca9c3d3b43dff5eed574d6d0891db"
+    },
+    {
+      "old_path": "content/public-reader/october-23-2026-update.md",
+      "archive_path": "archive/reader-history/content/public-reader/october-23-2026-update.md",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "c02c4b5c15ecc71b832b799d82ba48ee5f31ebdbf40d976b1f35596e4d8e360b",
+      "archived_sha256": "8af026613199c567181acc6d074a4a68917c5eb35395ac5e75943feb58cb9af6"
+    },
+    {
+      "old_path": "docs/easy-reader-layer-report-2026-10-23.md",
+      "archive_path": "archive/reader-history/docs/easy-reader-layer-report-2026-10-23.md",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "b5b9447cf91eea077ae1cae1ca8a43b0d2c031773d616145d449092d0560ce4f",
+      "archived_sha256": "b5b9447cf91eea077ae1cae1ca8a43b0d2c031773d616145d449092d0560ce4f"
+    },
+    {
+      "old_path": "docs/methods-ab-implementation-report-2026-10-23.md",
+      "archive_path": "archive/reader-history/docs/methods-ab-implementation-report-2026-10-23.md",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "9f3feee283fb5215e6e1ccb05e6997cd316dd766655687eef04aae2e876dbdd7",
+      "archived_sha256": "9f3feee283fb5215e6e1ccb05e6997cd316dd766655687eef04aae2e876dbdd7"
+    },
+    {
+      "old_path": "docs/october-23-public-update-2026-10.html",
+      "archive_path": "archive/reader-history/docs/october-23-public-update-2026-10.html",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "339aaca08538ac8b555201cf208ddda08e4eb7a5256d9b9db8d3a22414d126b7",
+      "archived_sha256": "37a3c1fde3b4ca5e08712550ed0922846b6cc10630358dc4c2fa658b7c3f83d8"
+    },
+    {
+      "old_path": "docs/reader-friendly-upgrade-report-2026-10-23.md",
+      "archive_path": "archive/reader-history/docs/reader-friendly-upgrade-report-2026-10-23.md",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "b80f1092d1cbbbb952e3969e128cc5f71b294878ed293c9551d711f1f985f90f",
+      "archived_sha256": "b80f1092d1cbbbb952e3969e128cc5f71b294878ed293c9551d711f1f985f90f"
+    },
+    {
+      "old_path": "docs/retraction-risk-layer-report-2026-10-23.md",
+      "archive_path": "archive/reader-history/docs/retraction-risk-layer-report-2026-10-23.md",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "14f5ab0c3fcd3db4acd33f0581b30b4d77b2a8d1aa4984789be2e726710af5c8",
+      "archived_sha256": "14f5ab0c3fcd3db4acd33f0581b30b4d77b2a8d1aa4984789be2e726710af5c8"
+    },
+    {
+      "old_path": "docs/yulcell-posting-asset-dashboard-2026-10-23.html",
+      "archive_path": "archive/reader-history/docs/yulcell-posting-asset-dashboard-2026-10-23.html",
+      "source_commit": "6eabd7c26d1a75ee8e8900f22fd26fa9944ca6c3",
+      "source_sha256": "b8005f5ce4f34a9ef0cb6ec17917ca4db3ea2388755f05187b7629049f5aab38",
+      "archived_sha256": "4040fb483f273a858a60e9d937b35dd207126af3c75a0496307cfbedafd27b87"
     }
   ]
 }
