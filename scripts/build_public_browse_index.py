@@ -114,7 +114,7 @@ def build(output: Path, ref: str | None = None) -> dict:
         if stem in ('literature-library', 'shortlist-sources'):
             view = f'[分页浏览](../{browse_root}/{stem}/README.md)'
         elif stem == 'evidence-findings':
-            view = '[全部研究笔记](../content/papers/)'
+            view = f'[按文献找研究笔记](../{browse_root}/shortlist-sources/README.md)'
         else:
             view = f'[查看文件](../public-data/{stem}-{month}.csv)'
         doc.append(f'| {label} | {counts[stem]:,} | {view} | [下载 CSV]({RAW}/public-data/{stem}-{month}.csv) |')
@@ -125,7 +125,7 @@ def build(output: Path, ref: str | None = None) -> dict:
             '- [50种成分卡片](../content/public-reader/ingredient-cards-top-50.md)',
             '- [研究热力图与图例](../content/public-reader/research-heatmap.md)',
             '- [普通读者版：证据权重与筛选标准](../content/public-reader/evidence-weight.md)',
-            '- [评分说明与分项规则](../data/scoring_policy_v0_4.csv) · [方法学表](../data/methodology_scoring.csv)',
+            '- [0.5评分方法](../content/overview/evidence-scoring-v0-5.md) · [分项规则](../data/scoring_policy_v0_4.csv) · [方法学表](../data/methodology_scoring.csv)',
             '- [撤稿解释](../content/public-reader/retractions.md) · [撤稿记录](../data/retracted_publications_20y.csv) · [检索口径](../data/retraction_risk_queries_20y.csv)',
             '- [主题、补剂、护肤与全部当前入口](asset-catalog.md)', '',
             '## 历史版本也公开 / Public Archives', '',

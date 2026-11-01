@@ -1,7 +1,7 @@
 {
   "snapshot": "2026-10-30",
   "asset_month": "2026-10",
-  "source_ref": "origin/main",
+  "source_ref": "f7167b3a652efe7648dd72f58587e6953efcbd61",
   "row_counts": {
     "literature-library": 11181,
     "candidate-sources": 11181,

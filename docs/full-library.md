@@ -11,7 +11,7 @@
 | 全量文献目录 | 11,181 | [分页浏览](../public-data/browse-2026-10/literature-library/README.md) | [下载 CSV](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/public-data/literature-library-2026-10.csv) |
 | 检索来源原始表 | 11,181 | [查看文件](../public-data/candidate-sources-2026-10.csv) | [下载 CSV](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/public-data/candidate-sources-2026-10.csv) |
 | 优先复核名单 | 2,497 | [分页浏览](../public-data/browse-2026-10/shortlist-sources/README.md) | [下载 CSV](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/public-data/shortlist-sources-2026-10.csv) |
-| 研究笔记（待全文复核） | 2,497 | [全部研究笔记](../content/papers/) | [下载 CSV](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/public-data/evidence-findings-2026-10.csv) |
+| 研究笔记（待全文复核） | 2,497 | [按文献找研究笔记](../public-data/browse-2026-10/shortlist-sources/README.md) | [下载 CSV](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/public-data/evidence-findings-2026-10.csv) |
 | 证据对照表 | 1,500 | [查看文件](../public-data/evidence-matrix-2026-10.csv) | [下载 CSV](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/public-data/evidence-matrix-2026-10.csv) |
 
 文献目录中有 11,061 个不同的 PMID。另有试验注册等来源；候选记录数不等于已确认有效的论文数。五表会重复引用同一文献，不能相加当作论文总数。
@@ -25,7 +25,7 @@ The catalog contains source metadata, including trial registrations. The five pr
 - [50种成分卡片](../content/public-reader/ingredient-cards-top-50.md)
 - [研究热力图与图例](../content/public-reader/research-heatmap.md)
 - [普通读者版：证据权重与筛选标准](../content/public-reader/evidence-weight.md)
-- [评分说明与分项规则](../data/scoring_policy_v0_4.csv) · [方法学表](../data/methodology_scoring.csv)
+- [0.5评分方法](../content/overview/evidence-scoring-v0-5.md) · [分项规则](../data/scoring_policy_v0_4.csv) · [方法学表](../data/methodology_scoring.csv)
 - [撤稿解释](../content/public-reader/retractions.md) · [撤稿记录](../data/retracted_publications_20y.csv) · [检索口径](../data/retraction_risk_queries_20y.csv)
 - [主题、补剂、护肤与全部当前入口](asset-catalog.md)
 
