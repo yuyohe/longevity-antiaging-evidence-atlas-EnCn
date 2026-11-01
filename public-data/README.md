@@ -1,5 +1,9 @@
 # 抗衰证据库公开全量数据包（2026-10）
 
+[全部公开资料与分页目录](../docs/full-library.md) · [直接浏览11,181条来源](browse-2026-10/literature-library/README.md) · [浏览2,497条优先复核记录](browse-2026-10/shortlist-sources/README.md)
+
+大 CSV 超过 GitHub 在线预览范围时，可从分页目录阅读或下载完整文件。以下五表均已通过未登录下载核验。
+
 **品牌 / Brand：** 宇多Yul细胞/yulcell<br>
 **项目 / Project：** 长寿抗衰与健康寿命证据图谱 / Longevity Anti-Aging Evidence Atlas EnCn
 **冻结日期 / Snapshot date：** 2026-10-30

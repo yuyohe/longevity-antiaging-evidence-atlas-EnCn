@@ -1,5 +1,18 @@
 # 当前版本核验 / Current Release Verification
 
+## 2026-11-01 访问核验 / Access Check
+
+- GitHub仓库为公开状态。全新未登录请求取得五张完整CSV：文献目录11,181行、检索来源11,181行、优先复核名单2,497行、研究笔记2,497行、矩阵1,500行，均返回HTTP 200。文献目录含11,061个不同PMID、43条ClinicalTrials.gov来源和77条Crossref来源；来源之间仍可能涉及相同研究。
+- [全部公开资料](full-library.md)集中列出五表、卡片、研究图、评分方法、撤稿记录与历史快照。新增112页文献目录和25页复核名单，每页最多100条；仅改变浏览方式，不改资料快照与科学评级。
+- 飞书此前文件分享实际为`anyone_editable`，现已在底层多维表格与wiki节点读回确认`external_access=true`、`link_share_entity=anyone_readable`。
+- 高级权限原“普通用户”自定义角色只配置5张旧表。现按现有资产清单配置48张表为`table_perm=1`，不允许新增、删除记录；没有修改角色成员、表格内容或历史记录。
+- 两个独立未登录浏览器会话实测仍被导向`暂无组件`的旧仪表盘，当前九张资料表没有出现。**飞书匿名访问未修好，不能标为通过。** 新版角色接口返回缺少`base:role:read`应用授权；没有扩大应用授权或关闭高级权限。需由有管理权限的账号检查高级权限中的“阅读者/默认访客”是否能读取全部当前表与视图，且允许通过链接分享授权。
+- 48张表的名称中未发现AI问答表；本次没有新建或恢复问答入口。内部报告、口播脚本、密钥不列入公开清单。
+
+The GitHub full-data files were anonymously downloaded. Feishu file-link permissions are now read-only, but anonymous table access still fails because the current advanced reader configuration remains unresolved. This access-only update does not change the evidence snapshot or grades.
+
+---
+
 资料快照 / Evidence snapshot：2026-10-30。
 
 ## 阅读入口 / Open

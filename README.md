@@ -7,6 +7,10 @@ An evidence guide to exercise, sleep, nutrition, supplements and aging research:
 
 资料快照 / Evidence snapshot：2026-10-30 · 分类整理 / Organization：2026-10-30
 
+**[全部公开资料 / Full Public Library](docs/full-library.md)**：11,181 条来源记录（含 11,061 个不同 PMID）、2,497 条优先复核记录、2,497 条研究笔记、1,500 条证据矩阵。可免登录分页阅读或下载完整 CSV；[历史数据](archive/public-data/README.md)也保留。
+
+飞书文件链接已改为只读，但匿名访客的当前表访问仍未修好。对外分享请先用上面的 GitHub 入口。[访问核验](docs/current-output-status.md#2026-11-01-访问核验--access-check)
+
 [本期六篇研究解读 / Six studies in this update](content/public-reader/october-end-2026-update.md) · [飞书阅读导航 / Feishu start here](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD)
 
 | 你想做什么 / Your question | 从哪里看 / Open |

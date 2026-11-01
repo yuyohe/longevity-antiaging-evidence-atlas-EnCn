@@ -4,6 +4,8 @@
 
 [项目介绍与图片](../README.md) · [读表说明](../content/public-reader/evidence-weight.md)
 
+[全部公开资料](full-library.md)包含完整文献目录、优先复核名单、研究笔记、证据矩阵、评分方法和历史数据包。GitHub可免登录阅读；飞书匿名访客的当前表访问仍待修复。
+
 Evidence snapshot / 资料快照：2026-10-30。Organization / 分类整理：2026-10-30。
 
 ## 先看介绍和图 / Introduction and Visuals
@@ -49,4 +51,4 @@ The five data layers overlap. Candidate inclusion and draft grades do not establ
 
 不按月份建表。先去重、筛选和归档，再考虑续表。上次额度核对为2026-10-16，界面显示20,000条（含限免额度），本次未重新确认额度。按实际单表额度的90%预警；若额度仍为20,000条，则18,000条预警，达到20,000条并完成去重后才建同名续表02。保留稳定主键、前后表链接和统一目录；额度变化以飞书界面为准。
 
-若未登录时看不到当前表，请先用GitHub入口；本次整理不扩大分享或编辑权限。Old month tables are historical snapshots. This reorganization does not change access permissions.
+2026-11-01访问核验：飞书文件分享已改为链接只读，普通用户自定义角色配置了48张表的阅读权限；匿名浏览器仍被带到旧的空仪表盘。新版角色接口缺少应用权限，匿名全表阅读尚未通过验证。[核验记录](current-output-status.md#2026-11-01-访问核验--access-check)。GitHub完整目录和历史数据包可免登录读取。

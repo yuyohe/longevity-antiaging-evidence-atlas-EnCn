@@ -4,6 +4,10 @@
 
 ## 从哪里开始 / Where to Start
 
+[全部公开资料](docs/full-library.md)：11,181 条来源记录、2,497 条优先复核记录和研究笔记、1,500 条证据矩阵。文献目录可分页阅读，完整 CSV 和历史快照均可免登录下载。各表有重叠，不能把行数相加当成论文篇数。
+
+飞书文件分享已改为只读，但匿名访客仍看不到当前资料表，暂请分享 GitHub 入口。
+
 1. [看热力图](content/public-reader/research-heatmap.md)：了解当前研究分布。
 2. [查成分卡](content/public-reader/ingredient-cards-top-50.md)：先看用途、误解和限制。
 3. [按主题读证据](content/public-reader/topics.md)：再查运动、睡眠、饮食等问题。

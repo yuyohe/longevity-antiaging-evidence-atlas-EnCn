@@ -4,6 +4,8 @@
 
 [项目介绍与图片](../README.md) · [读表说明](../content/public-reader/evidence-weight.md)
 
+**访问状态（2026-11-01）：** 文件分享已改为链接只读，但匿名访客的当前表访问仍未修好。对外请先分享[全部公开资料](full-library.md)，其中保留完整文献和入选记录。
+
 Evidence snapshot / 资料快照：2026-10-30。Organization / 分类整理：2026-10-30。
 
 ## 先看介绍和图 / Introduction and Visuals
@@ -49,4 +51,4 @@ The five data layers overlap. Candidate inclusion and draft grades do not establ
 
 不按月份建表。先去重、筛选和归档，再考虑续表。上次额度核对为2026-10-16，界面显示20,000条（含限免额度），本次未重新确认额度。按实际单表额度的90%预警；若额度仍为20,000条，则18,000条预警，达到20,000条并完成去重后才建同名续表02。保留稳定主键、前后表链接和统一目录；额度变化以飞书界面为准。
 
-若未登录时看不到当前表，请先用GitHub入口；本次整理不扩大分享或编辑权限。Old month tables are historical snapshots. This reorganization does not change access permissions.
+高级权限与文件分享是两层控制。当前“普通用户”自定义角色已配置48张表只读，但匿名访问仍落到旧空仪表盘；新版角色接口缺少应用授权，尚不能确认访客已获得这些表的权限。[访问核验](current-output-status.md#2026-11-01-访问核验--access-check)。

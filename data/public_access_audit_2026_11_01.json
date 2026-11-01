@@ -1,0 +1,32 @@
+{
+  "checked_date": "2026-11-01",
+  "evidence_snapshot": "2026-10-30",
+  "github": {
+    "visibility": "public",
+    "anonymous_full_csv_downloads_verified": true,
+    "row_counts": {
+      "literature_library": 11181,
+      "candidate_sources": 11181,
+      "shortlist_sources": 2497,
+      "evidence_findings": 2497,
+      "evidence_matrix": 1500
+    },
+    "unique_pmids_in_library": 11061,
+    "tables_overlap": true,
+    "scientific_records_changed_in_this_update": false
+  },
+  "feishu": {
+    "external_access": true,
+    "link_share_entity_before": "anyone_editable",
+    "link_share_entity_after": "anyone_readable",
+    "custom_ordinary_role_readonly_tables": 48,
+    "anonymous_browser_sessions_tested": 2,
+    "anonymous_current_table_access_verified": false,
+    "observed_failure": "redirected_to_old_empty_dashboard_current_tables_not_visible",
+    "missing_scope": "base:role:read",
+    "advanced_permissions_disabled": false,
+    "role_members_changed": false,
+    "ai_question_table_name_matches": 0
+  },
+  "excluded_from_publication": ["credentials", "internal_reports", "creator_scripts", "copyrighted_full_text_pdfs"]
+}

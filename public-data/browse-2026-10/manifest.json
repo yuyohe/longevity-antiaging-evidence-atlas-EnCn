@@ -1,0 +1,27 @@
+{
+  "snapshot": "2026-10-30",
+  "asset_month": "2026-10",
+  "source_ref": "origin/main",
+  "row_counts": {
+    "literature-library": 11181,
+    "candidate-sources": 11181,
+    "shortlist-sources": 2497,
+    "evidence-findings": 2497,
+    "evidence-matrix": 1500
+  },
+  "unique_pmids": 11061,
+  "source_counts": {
+    "ClinicalTrials.gov": 43,
+    "Crossref": 77,
+    "PubMed": 11061
+  },
+  "source_sha256": {
+    "literature-library": "db18a81dcd9d0f1f9544f2e8cea877fde93a95a9195d5f7619ce8691acbb7805",
+    "candidate-sources": "fba8e8ca6fb8ccb14fe0cadae1943c712d34ee7d859f19ebb3acb0231171b14f",
+    "shortlist-sources": "f9e35c38934637e14d6fc99b9358f2dd600a47b8e7b4e9f07614741d0377e30f",
+    "evidence-findings": "34c508c680463b9a5260a20286004f3dc74216dd6537101bbee4674ec2ad4a0e",
+    "evidence-matrix": "356f55e815b0e523e3ffc4d1aadb0fbdcc402e905ac3b1c8ef0050578e61b93f"
+  },
+  "page_size": 100,
+  "status": "generated_from_published_snapshot"
+}
