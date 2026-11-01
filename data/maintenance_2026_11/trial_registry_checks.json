@@ -1,0 +1,188 @@
+[
+  {
+    "nct_id": "NCT03151239",
+    "title": "Effect of \"Nicotinamide Mononucleotide\" (NMN) on Cardiometabolic Function",
+    "status": {
+      "statusVerifiedDate": "2021-07",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2017-07-01",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2019-05-30",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2021-06-30",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2017-05-08",
+      "studyFirstSubmitQcDate": "2017-05-10",
+      "studyFirstPostDateStruct": {
+        "date": "2017-05-12",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2021-07-13",
+      "lastUpdatePostDateStruct": {
+        "date": "2021-07-14",
+        "type": "ACTUAL"
+      }
+    },
+    "primary_outcomes": [
+      {
+        "measure": "Change in muscle insulin sensitivity",
+        "description": "The outcome will be assessed by hyperinsulinemic-euglycemic clamp procedure in conjunction with stable isotopic tracer infusion before and after intervention period.",
+        "timeFrame": "before and after at least 8 weeks of treatment"
+      }
+    ],
+    "has_results": false,
+    "last_checked": "2026-11-01",
+    "interpretation": "registration record; not an extra independent study"
+  },
+  {
+    "nct_id": "NCT03568968",
+    "title": "A Randomized Controlled Trial of Nicotinamide Riboside Supplementation in Early Parkinson's Disease",
+    "status": {
+      "statusVerifiedDate": "2025-09",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2020-05-06",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2025-06-17",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2025-06-17",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2018-06-14",
+      "studyFirstSubmitQcDate": "2018-06-14",
+      "studyFirstPostDateStruct": {
+        "date": "2018-06-26",
+        "type": "ACTUAL"
+      },
+      "lastUpdateSubmitDate": "2025-09-23",
+      "lastUpdatePostDateStruct": {
+        "date": "2025-09-26",
+        "type": "ACTUAL"
+      }
+    },
+    "primary_outcomes": [
+      {
+        "measure": "Disease severity assessed by the total MDS-UPDRS (Movement Disorder Society Unified Parkinson's Disease rating Scale): sum of subsections I, II, and III",
+        "description": "The Movement Disorder Society Unified Parkinson's Disease Rating Scale (MDS-UPDRS) assesses motor and non-motor symptoms of PD through four parts, with individual items rated on a 0-4 scale. Subscores are summed to provide a total score ranging from 0 to 260, with higher scores indicating greater disability. The primary outcome will be the MDS-UPDRS Total Score (sum of parts I, II, and III).",
+        "timeFrame": "From baseline to the end of treatment at 52 weeks"
+      }
+    ],
+    "has_results": false,
+    "last_checked": "2026-11-01",
+    "interpretation": "registration record; not an extra independent study"
+  },
+  {
+    "nct_id": "NCT01463813",
+    "title": "Finnish Vitamin D Trial (FIND)",
+    "status": {
+      "statusVerifiedDate": "2018-10",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2012-09",
+        "type": "ACTUAL"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2018-10",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2018-10",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2011-10-13",
+      "studyFirstSubmitQcDate": "2011-11-01",
+      "studyFirstPostDateStruct": {
+        "date": "2011-11-02",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2018-10-22",
+      "lastUpdatePostDateStruct": {
+        "date": "2018-10-23",
+        "type": "ACTUAL"
+      }
+    },
+    "primary_outcomes": [
+      {
+        "measure": "Cardiovascular disease",
+        "description": "CVD incidence in VitD arms vs. placebo arm.",
+        "timeFrame": "5 years"
+      },
+      {
+        "measure": "Cancer",
+        "description": "Cancer incidence in VitD arms vs.placebo arm",
+        "timeFrame": "5 years"
+      }
+    ],
+    "has_results": false,
+    "last_checked": "2026-11-01",
+    "interpretation": "registration record; not an extra independent study"
+  },
+  {
+    "nct_id": "NCT01084148",
+    "title": "Long-term Efficacy and Safety of V0034 CR 01B Cream in Patients With Moderate-to-severe Uremic Xerosis",
+    "status": {
+      "statusVerifiedDate": "2017-11",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2007-01"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2009-01",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2009-03",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2010-03-09",
+      "studyFirstSubmitQcDate": "2010-03-09",
+      "studyFirstPostDateStruct": {
+        "date": "2010-03-10",
+        "type": "ESTIMATED"
+      },
+      "resultsFirstSubmitDate": "2014-01-31",
+      "resultsFirstSubmitQcDate": "2014-01-31",
+      "resultsFirstPostDateStruct": {
+        "date": "2014-03-18",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2017-11-24",
+      "lastUpdatePostDateStruct": {
+        "date": "2017-12-20",
+        "type": "ACTUAL"
+      }
+    },
+    "primary_outcomes": [
+      {
+        "measure": "Treatment Response of Xerosis",
+        "description": "Treatment response rate of uremic xerosis on 5 test areas (right lower leg, left lower leg, forearm having no arterio-venous shunt, chest, dorsum of the neck), using a defined 5-point severity scale:\n\n0 = smooth skin\n\n1. = patches of fine, powdery scales\n2. = diffuse ashy appearance with many fine scales\n3. = moderate scaling with beginning cracks\n4. = intense scaling, moderate cracks Treatment response was defined as a score of 0 or 1 on all test areas at the end of Period I, and a reduction of at least 2 grades on at least one test area (primary efficacy parameter, Period I).",
+        "timeFrame": "28 days"
+      }
+    ],
+    "has_results": true,
+    "last_checked": "2026-11-01",
+    "interpretation": "registration record; not an extra independent study"
+  }
+]

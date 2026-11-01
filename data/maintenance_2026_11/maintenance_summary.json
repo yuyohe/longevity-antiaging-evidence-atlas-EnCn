@@ -1,0 +1,22 @@
+{
+  "queries": 40,
+  "catchup_queries": 20,
+  "delta_queries": 20,
+  "remote_previous_search_watermark": "2026-10-30",
+  "local_previous_search_watermark": "2026-06-29",
+  "query_match_sum_not_unique": 89,
+  "sample_rows_sum": 51,
+  "unique_recent_sample": 49,
+  "incremental_window": [
+    "2026-10-31",
+    "2026-11-01"
+  ],
+  "incremental_match_sum": 4,
+  "incremental_unique_pmids": 4,
+  "incremental_new_vs_remote_pmids": 3,
+  "source_metadata_records": 84,
+  "new_pmids_vs_remote_candidates": 75,
+  "new_pmids_vs_local": 81,
+  "formal_appraisals_completed": 0,
+  "cutoff": "2026-11-01"
+}

@@ -1,0 +1,63 @@
+{
+  "parent": "108a485e4e7fb24b4803364aced40f19da703323",
+  "candidate_before": 11181,
+  "candidate_after": 11257,
+  "new_candidate_records": 76,
+  "source_ledger_before": 2497,
+  "source_ledger_after": 2576,
+  "legacy_formal_snapshot_preserved": true,
+  "existing_field_repairs": [
+    {
+      "file": "data/candidate_sources.csv",
+      "key": "33888596",
+      "field": "pmcid",
+      "old": "",
+      "new": "PMC8550608",
+      "reason": "confirmed identity/route or bilingual legacy-field consistency; no automatic grade promotion",
+      "source": "PMID 16029679 / 33888596; editorial-v1 scope audit",
+      "date": "2026-11-01"
+    },
+    {
+      "file": "data/literature_library.csv",
+      "key": "33888596",
+      "field": "pmcid",
+      "old": "",
+      "new": "PMC8550608",
+      "reason": "confirmed identity/route or bilingual legacy-field consistency; no automatic grade promotion",
+      "source": "PMID 16029679 / 33888596; editorial-v1 scope audit",
+      "date": "2026-11-01"
+    },
+    {
+      "file": "data/skin_beauty_findings.csv",
+      "key": "16029679",
+      "field": "intervention_type",
+      "old": "topical_or_oral",
+      "new": "topical",
+      "reason": "confirmed identity/route or bilingual legacy-field consistency; no automatic grade promotion",
+      "source": "PMID 16029679 / 33888596; editorial-v1 scope audit",
+      "date": "2026-11-01"
+    },
+    {
+      "file": "data/supplement_matrix.csv",
+      "key": "collagen-peptides",
+      "field": "scoring_note_en",
+      "old": "Topic-level supplement score; not a substitute for article-level review. Commercial overclaim risk=high; final level E.",
+      "new": "Topic-level supplement score; not a substitute for article-level review. Commercial overclaim risk=high; final level C.",
+      "reason": "confirmed identity/route or bilingual legacy-field consistency; no automatic grade promotion",
+      "source": "PMID 16029679 / 33888596; editorial-v1 scope audit",
+      "date": "2026-11-01"
+    },
+    {
+      "file": "data/supplement_matrix.csv",
+      "key": "collagen-type-ii",
+      "field": "scoring_note_en",
+      "old": "Topic-level supplement score; not a substitute for article-level review. Commercial overclaim risk=medium; final level D.",
+      "new": "Topic-level supplement score; not a substitute for article-level review. Commercial overclaim risk=medium; final level C.",
+      "reason": "confirmed identity/route or bilingual legacy-field consistency; no automatic grade promotion",
+      "source": "PMID 16029679 / 33888596; editorial-v1 scope audit",
+      "date": "2026-11-01"
+    }
+  ],
+  "images_regenerated": false,
+  "research_rerun": false
+}

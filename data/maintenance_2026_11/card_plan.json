@@ -1,0 +1,29 @@
+{
+  "version": "ingredient-cards-editorial-v1-2026-11-01",
+  "search_start": "2026-06-30",
+  "search_end": "2026-11-01",
+  "retmax_per_query": 4,
+  "selection": "按具体用途选择，非跨终点排行榜。先核研究，资料不足保留有限或不足。",
+  "cards": [
+    {"id":"NOV26-T01","name":"广谱防晒剂","en":"Broad-spectrum sunscreen","route":"topical","query":"sunscreen AND (photoaging OR skin aging) AND (trial OR systematic review)","anchors":["23732711"]},
+    {"id":"NOV26-T02","name":"维A酸","en":"Tretinoin","route":"topical","query":"tretinoin AND photoaging AND (trial OR meta-analysis OR systematic review)","anchors":["35620028","41236273"]},
+    {"id":"NOV26-T03","name":"视黄醇","en":"Retinol","route":"topical","query":"retinol AND (photoaging OR skin aging) AND (randomized OR systematic review)","anchors":["17515510"]},
+    {"id":"NOV26-T04","name":"烟酰胺","en":"Niacinamide","route":"topical","query":"(niacinamide OR nicotinamide) AND topical AND (pigmentation OR wrinkle OR barrier) AND (trial OR review)","anchors":["16029679"]},
+    {"id":"NOV26-T05","name":"维生素C","en":"Topical vitamin C","route":"topical","query":"(ascorbic acid OR vitamin C) AND topical AND (photoaging OR wrinkle) AND (trial OR systematic review)","anchors":["12823436","11896774"]},
+    {"id":"NOV26-T06","name":"壬二酸","en":"Azelaic acid","route":"topical","query":"azelaic acid AND melasma AND (randomized OR systematic review)","anchors":["1816137","37457606"]},
+    {"id":"NOV26-T07","name":"神经酰胺","en":"Ceramides","route":"topical","query":"ceramide AND moisturizer AND (dry skin OR barrier OR eczema) AND (randomized OR systematic review)","anchors":["33984185","42868105"]},
+    {"id":"NOV26-T08","name":"甘油","en":"Glycerol","route":"topical","query":"glycerol AND (xerosis OR skin hydration) AND (randomized OR trial)","anchors":["21258039","39422853"]},
+    {"id":"NOV26-T09","name":"透明质酸","en":"Hyaluronic acid","route":"topical","query":"hyaluronic acid AND topical AND (wrinkles OR skin hydration) AND (randomized OR systematic review)","anchors":["22052267"]},
+    {"id":"NOV26-T10","name":"PDRN","en":"Topical PDRN","route":"topical","query":"(PDRN OR polydeoxyribonucleotide) AND topical AND (trial OR randomized OR skin)","anchors":["42430369"]},
+    {"id":"NOV26-O01","name":"蛋白质补充","en":"Protein supplementation","route":"oral","query":"protein supplementation AND older adults AND resistance training AND (meta-analysis OR randomized)","anchors":["28698222"]},
+    {"id":"NOV26-O02","name":"肌酸","en":"Creatine monohydrate","route":"oral","query":"creatine AND older adults AND resistance training AND (meta-analysis OR randomized)","anchors":["29138605"]},
+    {"id":"NOV26-O03","name":"车前子壳","en":"Psyllium husk","route":"oral","query":"psyllium AND cholesterol AND (meta-analysis OR randomized)","anchors":["30239559"]},
+    {"id":"NOV26-O04","name":"Omega-3／普通鱼油","en":"Omega-3 supplements","route":"oral","query":"omega-3 AND supplementation AND (cardiovascular OR atrial fibrillation) AND (randomized OR meta-analysis)","anchors":["30415637","34612056"]},
+    {"id":"NOV26-O05","name":"维生素D","en":"Vitamin D","route":"oral","query":"vitamin D AND older adults AND (fracture OR falls OR mortality) AND (randomized OR meta-analysis)","anchors":["35939577"]},
+    {"id":"NOV26-O06","name":"胶原肽","en":"Oral collagen peptides","route":"oral","query":"collagen AND oral AND skin aging AND (meta-analysis OR randomized)","anchors":["24401291","40324552"]},
+    {"id":"NOV26-O07","name":"NR","en":"Nicotinamide riboside","route":"oral","query":"nicotinamide riboside AND (older OR aging) AND (randomized OR systematic review)","anchors":["29599478"]},
+    {"id":"NOV26-O08","name":"NMN","en":"Nicotinamide mononucleotide","route":"oral","query":"nicotinamide mononucleotide AND (randomized OR systematic review) AND (human OR adults OR women)","anchors":["33888596"]},
+    {"id":"NOV26-O09","name":"镁","en":"Magnesium","route":"oral","query":"magnesium supplementation AND older adults AND (sleep OR insomnia) AND (randomized OR systematic review)","anchors":["33865376"]},
+    {"id":"NOV26-O10","name":"辅酶Q10","en":"Coenzyme Q10","route":"oral","query":"coenzyme Q10 AND (heart failure OR statin myalgia) AND (randomized OR systematic review)","anchors":["25282031"]}
+  ]
+}

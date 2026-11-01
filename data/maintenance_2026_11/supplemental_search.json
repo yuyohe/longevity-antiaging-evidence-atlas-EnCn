@@ -1,0 +1,19 @@
+{
+  "query": "10.1038/s41514-026-00482-7[DOI]",
+  "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=10.1038%2Fs41514-026-00482-7%5BDOI%5D&retmode=json&retmax=5&sort=pub+date",
+  "match_count": 0,
+  "retrieved_pmids": [],
+  "other_exact_pmids": [
+    "22770932",
+    "34980969",
+    "34921679",
+    "42661485",
+    "42578920",
+    "39313949",
+    "38481069",
+    "34791770",
+    "25473210"
+  ],
+  "date": "2026-11-01",
+  "reason": "targeted date and endpoint checks; legacy retraction identity checks"
+}

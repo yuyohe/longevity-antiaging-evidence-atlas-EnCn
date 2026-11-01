@@ -1,0 +1,799 @@
+[
+  {
+    "query_id": "NOV26-T01-recent",
+    "card_id": "NOV26-T01",
+    "query": "(sunscreen AND (photoaging OR skin aging) AND (trial OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 3,
+    "retrieved_pmids": [
+      "42557920",
+      "42493591",
+      "42582527"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28sunscreen+AND+%28photoaging+OR+skin+aging%29+AND+%28trial+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T02-recent",
+    "card_id": "NOV26-T02",
+    "query": "(tretinoin AND photoaging AND (trial OR meta-analysis OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 2,
+    "retrieved_pmids": [
+      "41644086",
+      "42430731"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28tretinoin+AND+photoaging+AND+%28trial+OR+meta-analysis+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T03-recent",
+    "card_id": "NOV26-T03",
+    "query": "(retinol AND (photoaging OR skin aging) AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 2,
+    "retrieved_pmids": [
+      "42653210",
+      "42430369"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28retinol+AND+%28photoaging+OR+skin+aging%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T04-recent",
+    "card_id": "NOV26-T04",
+    "query": "((niacinamide OR nicotinamide) AND topical AND (pigmentation OR wrinkle OR barrier) AND (trial OR review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 5,
+    "retrieved_pmids": [
+      "42901881",
+      "42686896",
+      "41545810",
+      "42406361"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%28niacinamide+OR+nicotinamide%29+AND+topical+AND+%28pigmentation+OR+wrinkle+OR+barrier%29+AND+%28trial+OR+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T05-recent",
+    "card_id": "NOV26-T05",
+    "query": "((ascorbic acid OR vitamin C) AND topical AND (photoaging OR wrinkle) AND (trial OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42761976"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%28ascorbic+acid+OR+vitamin+C%29+AND+topical+AND+%28photoaging+OR+wrinkle%29+AND+%28trial+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T06-recent",
+    "card_id": "NOV26-T06",
+    "query": "(azelaic acid AND melasma AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28azelaic+acid+AND+melasma+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T07-recent",
+    "card_id": "NOV26-T07",
+    "query": "(ceramide AND moisturizer AND (dry skin OR barrier OR eczema) AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 4,
+    "retrieved_pmids": [
+      "42949579",
+      "42868105",
+      "42876425",
+      "42556430"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28ceramide+AND+moisturizer+AND+%28dry+skin+OR+barrier+OR+eczema%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T08-recent",
+    "card_id": "NOV26-T08",
+    "query": "(glycerol AND (xerosis OR skin hydration) AND (randomized OR trial)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28glycerol+AND+%28xerosis+OR+skin+hydration%29+AND+%28randomized+OR+trial%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T09-recent",
+    "card_id": "NOV26-T09",
+    "query": "(hyaluronic acid AND topical AND (wrinkles OR skin hydration) AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42830871"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28hyaluronic+acid+AND+topical+AND+%28wrinkles+OR+skin+hydration%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T10-recent",
+    "card_id": "NOV26-T10",
+    "query": "((PDRN OR polydeoxyribonucleotide) AND topical AND (trial OR randomized OR skin)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 3,
+    "retrieved_pmids": [
+      "42675341",
+      "42392660",
+      "42430369"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%28PDRN+OR+polydeoxyribonucleotide%29+AND+topical+AND+%28trial+OR+randomized+OR+skin%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O01-recent",
+    "card_id": "NOV26-O01",
+    "query": "(protein supplementation AND older adults AND resistance training AND (meta-analysis OR randomized)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 12,
+    "retrieved_pmids": [
+      "42747199",
+      "42742972",
+      "42829363",
+      "42617474"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28protein+supplementation+AND+older+adults+AND+resistance+training+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O02-recent",
+    "card_id": "NOV26-O02",
+    "query": "(creatine AND older adults AND resistance training AND (meta-analysis OR randomized)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 6,
+    "retrieved_pmids": [
+      "42678372",
+      "42782335",
+      "42712402",
+      "42616143"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28creatine+AND+older+adults+AND+resistance+training+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O03-recent",
+    "card_id": "NOV26-O03",
+    "query": "(psyllium AND cholesterol AND (meta-analysis OR randomized)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42443321"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28psyllium+AND+cholesterol+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O04-recent",
+    "card_id": "NOV26-O04",
+    "query": "(omega-3 AND supplementation AND (cardiovascular OR atrial fibrillation) AND (randomized OR meta-analysis)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 13,
+    "retrieved_pmids": [
+      "42696854",
+      "42714408",
+      "42807527",
+      "42746141"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28omega-3+AND+supplementation+AND+%28cardiovascular+OR+atrial+fibrillation%29+AND+%28randomized+OR+meta-analysis%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O05-recent",
+    "card_id": "NOV26-O05",
+    "query": "(vitamin D AND older adults AND (fracture OR falls OR mortality) AND (randomized OR meta-analysis)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 19,
+    "retrieved_pmids": [
+      "42704968",
+      "42823826",
+      "41725388",
+      "42906854"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28vitamin+D+AND+older+adults+AND+%28fracture+OR+falls+OR+mortality%29+AND+%28randomized+OR+meta-analysis%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O06-recent",
+    "card_id": "NOV26-O06",
+    "query": "(collagen AND oral AND skin aging AND (meta-analysis OR randomized)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 3,
+    "retrieved_pmids": [
+      "42866687",
+      "42342959",
+      "42650863"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28collagen+AND+oral+AND+skin+aging+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O07-recent",
+    "card_id": "NOV26-O07",
+    "query": "(nicotinamide riboside AND (older OR aging) AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 3,
+    "retrieved_pmids": [
+      "42848371",
+      "42877680",
+      "42478598"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28nicotinamide+riboside+AND+%28older+OR+aging%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O08-recent",
+    "card_id": "NOV26-O08",
+    "query": "(nicotinamide mononucleotide AND (randomized OR systematic review) AND (human OR adults OR women)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 7,
+    "retrieved_pmids": [
+      "42603990",
+      "42393428",
+      "42877680",
+      "42787547"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28nicotinamide+mononucleotide+AND+%28randomized+OR+systematic+review%29+AND+%28human+OR+adults+OR+women%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O09-recent",
+    "card_id": "NOV26-O09",
+    "query": "(magnesium supplementation AND older adults AND (sleep OR insomnia) AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42829807"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28magnesium+supplementation+AND+older+adults+AND+%28sleep+OR+insomnia%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O10-recent",
+    "card_id": "NOV26-O10",
+    "query": "(coenzyme Q10 AND (heart failure OR statin myalgia) AND (randomized OR systematic review)) AND (\"2026/06/30\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "recent_published",
+    "window": [
+      "2026-06-30",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 3,
+    "retrieved_pmids": [
+      "42869600",
+      "41592337",
+      "42864613"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28coenzyme+Q10+AND+%28heart+failure+OR+statin+myalgia%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F06%2F30%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T01-delta",
+    "card_id": "NOV26-T01",
+    "query": "(sunscreen AND (photoaging OR skin aging) AND (trial OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28sunscreen+AND+%28photoaging+OR+skin+aging%29+AND+%28trial+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T02-delta",
+    "card_id": "NOV26-T02",
+    "query": "(tretinoin AND photoaging AND (trial OR meta-analysis OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28tretinoin+AND+photoaging+AND+%28trial+OR+meta-analysis+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T03-delta",
+    "card_id": "NOV26-T03",
+    "query": "(retinol AND (photoaging OR skin aging) AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28retinol+AND+%28photoaging+OR+skin+aging%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T04-delta",
+    "card_id": "NOV26-T04",
+    "query": "((niacinamide OR nicotinamide) AND topical AND (pigmentation OR wrinkle OR barrier) AND (trial OR review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42901881"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%28niacinamide+OR+nicotinamide%29+AND+topical+AND+%28pigmentation+OR+wrinkle+OR+barrier%29+AND+%28trial+OR+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T05-delta",
+    "card_id": "NOV26-T05",
+    "query": "((ascorbic acid OR vitamin C) AND topical AND (photoaging OR wrinkle) AND (trial OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%28ascorbic+acid+OR+vitamin+C%29+AND+topical+AND+%28photoaging+OR+wrinkle%29+AND+%28trial+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T06-delta",
+    "card_id": "NOV26-T06",
+    "query": "(azelaic acid AND melasma AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28azelaic+acid+AND+melasma+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T07-delta",
+    "card_id": "NOV26-T07",
+    "query": "(ceramide AND moisturizer AND (dry skin OR barrier OR eczema) AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42949579"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28ceramide+AND+moisturizer+AND+%28dry+skin+OR+barrier+OR+eczema%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T08-delta",
+    "card_id": "NOV26-T08",
+    "query": "(glycerol AND (xerosis OR skin hydration) AND (randomized OR trial)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28glycerol+AND+%28xerosis+OR+skin+hydration%29+AND+%28randomized+OR+trial%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T09-delta",
+    "card_id": "NOV26-T09",
+    "query": "(hyaluronic acid AND topical AND (wrinkles OR skin hydration) AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28hyaluronic+acid+AND+topical+AND+%28wrinkles+OR+skin+hydration%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-T10-delta",
+    "card_id": "NOV26-T10",
+    "query": "((PDRN OR polydeoxyribonucleotide) AND topical AND (trial OR randomized OR skin)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%28PDRN+OR+polydeoxyribonucleotide%29+AND+topical+AND+%28trial+OR+randomized+OR+skin%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O01-delta",
+    "card_id": "NOV26-O01",
+    "query": "(protein supplementation AND older adults AND resistance training AND (meta-analysis OR randomized)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42747199"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28protein+supplementation+AND+older+adults+AND+resistance+training+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O02-delta",
+    "card_id": "NOV26-O02",
+    "query": "(creatine AND older adults AND resistance training AND (meta-analysis OR randomized)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28creatine+AND+older+adults+AND+resistance+training+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O03-delta",
+    "card_id": "NOV26-O03",
+    "query": "(psyllium AND cholesterol AND (meta-analysis OR randomized)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28psyllium+AND+cholesterol+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O04-delta",
+    "card_id": "NOV26-O04",
+    "query": "(omega-3 AND supplementation AND (cardiovascular OR atrial fibrillation) AND (randomized OR meta-analysis)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28omega-3+AND+supplementation+AND+%28cardiovascular+OR+atrial+fibrillation%29+AND+%28randomized+OR+meta-analysis%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O05-delta",
+    "card_id": "NOV26-O05",
+    "query": "(vitamin D AND older adults AND (fracture OR falls OR mortality) AND (randomized OR meta-analysis)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 1,
+    "retrieved_pmids": [
+      "42823826"
+    ],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28vitamin+D+AND+older+adults+AND+%28fracture+OR+falls+OR+mortality%29+AND+%28randomized+OR+meta-analysis%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O06-delta",
+    "card_id": "NOV26-O06",
+    "query": "(collagen AND oral AND skin aging AND (meta-analysis OR randomized)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28collagen+AND+oral+AND+skin+aging+AND+%28meta-analysis+OR+randomized%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O07-delta",
+    "card_id": "NOV26-O07",
+    "query": "(nicotinamide riboside AND (older OR aging) AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28nicotinamide+riboside+AND+%28older+OR+aging%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O08-delta",
+    "card_id": "NOV26-O08",
+    "query": "(nicotinamide mononucleotide AND (randomized OR systematic review) AND (human OR adults OR women)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28nicotinamide+mononucleotide+AND+%28randomized+OR+systematic+review%29+AND+%28human+OR+adults+OR+women%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O09-delta",
+    "card_id": "NOV26-O09",
+    "query": "(magnesium supplementation AND older adults AND (sleep OR insomnia) AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28magnesium+supplementation+AND+older+adults+AND+%28sleep+OR+insomnia%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  },
+  {
+    "query_id": "NOV26-O10-delta",
+    "card_id": "NOV26-O10",
+    "query": "(coenzyme Q10 AND (heart failure OR statin myalgia) AND (randomized OR systematic review)) AND (\"2026/10/31\"[Date - Publication] : \"2026/11/01\"[Date - Publication])",
+    "retrieved_at": "2026-11-01",
+    "source": "PubMed",
+    "query_type": "incremental_since_latest_remote",
+    "window": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "retmax": 4,
+    "sort": "pub date",
+    "match_count": 0,
+    "retrieved_pmids": [],
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28coenzyme+Q10+AND+%28heart+failure+OR+statin+myalgia%29+AND+%28randomized+OR+systematic+review%29%29+AND+%28%222026%2F10%2F31%22%5BDate+-+Publication%5D+%3A+%222026%2F11%2F01%22%5BDate+-+Publication%5D%29&retmode=json&retmax=4&sort=pub+date",
+    "error": ""
+  }
+]
