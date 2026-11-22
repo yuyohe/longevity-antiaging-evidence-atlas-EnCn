@@ -1,0 +1,32 @@
+{
+  "cutoff": "2026-11-22",
+  "base_commit": "112fd91d92c2257b873ea52ce363107b070c6910",
+  "unique_sampled_pmids": 502,
+  "ingredient_unique": 23,
+  "topic_queries": 38,
+  "card_queries": 20,
+  "integrity_queries": 1,
+  "capped_topic_queries": 27,
+  "selected_candidates": 24,
+  "new_candidates": 22,
+  "known_candidates": [
+    "pubmed-42848371",
+    "pubmed-42454954"
+  ],
+  "baseline": 11257,
+  "current": 11279,
+  "current_unique_pmids": 11158,
+  "individual_decisions": 37,
+  "baseline_pubmed_checks": 83,
+  "baseline_integrity_changes": 0,
+  "tracked_fields_changed": 0,
+  "formal_promotions": 0,
+  "formal_grade_changes": 0,
+  "retraction_topics": 117,
+  "old_unique_retracted": 546,
+  "current_unique_retracted": 559,
+  "current_retraction_matches": 616,
+  "new_unique_retraction_matches": 13,
+  "dropped_retraction_matches": 0,
+  "new_retracted_in_intake": 0
+}

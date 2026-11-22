@@ -1,5 +1,7 @@
 # 宇多Yul细胞/yulcell
 
+**[11 月 22 日更新：口服胶原能不能淡纹？为什么撤稿比例会变？ / November research update](docs/maintenance-2026-11-22.md)** · [当前来源目录：11,279 条](docs/full-library.md)
+
 [抗衰成分推荐｜外用10项、口服10项（2026-11-01）](content/cards/ingredients-2026-11/index.md)
 
 ## 长寿抗衰与健康寿命证据图谱 / Longevity & Healthspan Evidence Atlas
@@ -8,9 +10,9 @@
 
 An evidence guide to exercise, sleep, nutrition, supplements and aging research: who was studied, what was measured, and what the findings support. Animal experiments, biomarkers and human outcomes are kept separate.
 
-资料快照 / Evidence snapshot：2026-10-30 · 分类整理 / Organization：2026-10-30
+正式证据快照 / Graded snapshot：2026-10-30 · 文献目录 / Source intake：2026-11-22
 
-**[全部公开资料 / Full Public Library](docs/full-library.md)**：11,181 条来源记录（含 11,061 个不同 PMID）、2,497 条优先复核记录、2,497 条研究笔记、1,500 条证据矩阵。可免登录分页阅读或下载完整 CSV；[历史数据](archive/public-data/README.md)也保留。
+**[全部公开资料 / Full Public Library](docs/full-library.md)**：当前目录含 11,158 个不同 PMID。10 月正式快照的优先复核名单和研究笔记各有 2,497 条，证据矩阵有 1,500 条。[历史数据](archive/public-data/README.md)保留。
 
 飞书文件链接已改为只读，但匿名访客的当前表访问仍未修好。对外分享请先用上面的 GitHub 入口。[访问核验](docs/current-output-status.md#2026-11-01-访问核验--access-check)
 

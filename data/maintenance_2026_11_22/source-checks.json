@@ -1,0 +1,815 @@
+{
+  "baseline_pubmed": [
+    {
+      "pmid": "11896774",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "12823436",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "16029679",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "17515510",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "1816137",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "21258039",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "22052267",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "23732711",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "24401291",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "25282031",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "28698222",
+      "old_links": [
+        [
+          "ErratumIn",
+          "32943392"
+        ]
+      ],
+      "current_links": [
+        [
+          "ErratumIn",
+          "32943392"
+        ]
+      ],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "29138605",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "29599478",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "30239559",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "30415637",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "33865376",
+      "old_links": [
+        [
+          "ErratumIn",
+          "39702257"
+        ]
+      ],
+      "current_links": [
+        [
+          "ErratumIn",
+          "39702257"
+        ]
+      ],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "33888596",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "33984185",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "34612056",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "35620028",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "35939577",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "37457606",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "39422853",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "40324552",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "41236273",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "41545810",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "41592337",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "41644086",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "41725388",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42342959",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42392660",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42393428",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42406361",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42430369",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42430731",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42443321",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42478598",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42493591",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42556430",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42557920",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42582527",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42603990",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42616143",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42617474",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42650863",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42653210",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42675341",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42678372",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42686896",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42696854",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42704968",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42712402",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42714408",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42742972",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42746141",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42747199",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42761976",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42782335",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42787547",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42807527",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42823826",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42829363",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42829807",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42830871",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42848371",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42864613",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42866687",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42868105",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42869600",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42876425",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42877680",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42901881",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42906854",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42949579",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "22770932",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "34980969",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "34921679",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42661485",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "42578920",
+      "old_links": [],
+      "current_links": [],
+      "current_status_tags": [],
+      "changed": false
+    },
+    {
+      "pmid": "39313949",
+      "old_links": [
+        [
+          "RetractionIn",
+          "41834780"
+        ]
+      ],
+      "current_links": [
+        [
+          "RetractionIn",
+          "41834780"
+        ]
+      ],
+      "current_status_tags": [
+        "Retracted Publication"
+      ],
+      "changed": false
+    },
+    {
+      "pmid": "38481069",
+      "old_links": [
+        [
+          "RetractionIn",
+          "41271445"
+        ]
+      ],
+      "current_links": [
+        [
+          "RetractionIn",
+          "41271445"
+        ]
+      ],
+      "current_status_tags": [
+        "Retracted Publication"
+      ],
+      "changed": false
+    },
+    {
+      "pmid": "34791770",
+      "old_links": [
+        [
+          "RetractionIn",
+          "37495544"
+        ]
+      ],
+      "current_links": [
+        [
+          "RetractionIn",
+          "37495544"
+        ]
+      ],
+      "current_status_tags": [
+        "Retracted Publication"
+      ],
+      "changed": false
+    },
+    {
+      "pmid": "25473210",
+      "old_links": [
+        [
+          "RetractionIn",
+          "26839493"
+        ]
+      ],
+      "current_links": [
+        [
+          "RetractionIn",
+          "26839493"
+        ]
+      ],
+      "current_status_tags": [
+        "Retracted Publication"
+      ],
+      "changed": false
+    }
+  ],
+  "registries_and_dois": [
+    {
+      "id": "NCT03151239",
+      "source": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03151239",
+      "fields": {
+        "status": "COMPLETED",
+        "results": false,
+        "last_posted": "2021-07-14",
+        "primary_measures": [
+          "Change in muscle insulin sensitivity"
+        ]
+      },
+      "changed": []
+    },
+    {
+      "id": "NCT03568968",
+      "source": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03568968",
+      "fields": {
+        "status": "COMPLETED",
+        "results": false,
+        "last_posted": "2025-09-26",
+        "primary_measures": [
+          "Disease severity assessed by the total MDS-UPDRS (Movement Disorder Society Unified Parkinson's Disease rating Scale): sum of subsections I, II, and III"
+        ]
+      },
+      "changed": []
+    },
+    {
+      "id": "NCT01463813",
+      "source": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT01463813",
+      "fields": {
+        "status": "COMPLETED",
+        "results": false,
+        "last_posted": "2018-10-23",
+        "primary_measures": [
+          "Cardiovascular disease",
+          "Cancer"
+        ]
+      },
+      "changed": []
+    },
+    {
+      "id": "NCT01084148",
+      "source": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT01084148",
+      "fields": {
+        "status": "COMPLETED",
+        "results": true,
+        "last_posted": "2017-12-20",
+        "primary_measures": [
+          "Treatment Response of Xerosis"
+        ]
+      },
+      "changed": []
+    },
+    {
+      "id": "10.1371/journal.pone.0350905",
+      "source": "Crossref",
+      "url": "https://doi.org/10.1371/journal.pone.0350905",
+      "fields": {
+        "title": [
+          "Topical medium-length PDRN enhances dermal extracellular matrix repair in photodamaged skin via PI3K–Akt/TGF-β–regulated pathways"
+        ],
+        "type": "journal-article",
+        "update_to": []
+      },
+      "changed": []
+    },
+    {
+      "id": "10.1038/s41514-026-00482-7",
+      "source": "Crossref",
+      "url": "https://doi.org/10.1038/s41514-026-00482-7",
+      "fields": {
+        "title": [
+          "Sustained NAD⁺ augmentation by high-dose nicotinamide mononucleotide supplementation in older adults: a 24-week randomized, double-blind, placebo-controlled trial"
+        ],
+        "type": "journal-article",
+        "update_to": []
+      },
+      "changed": []
+    },
+    {
+      "id": "10.1016/j.amjmed.2025.04.034",
+      "source": "Crossref",
+      "url": "https://doi.org/10.1016/j.amjmed.2025.04.034",
+      "fields": {
+        "title": [
+          "Effects of Collagen Supplements on Skin Aging: A Systematic Review and Meta-Analysis of Randomized Controlled Trials"
+        ],
+        "type": "journal-article",
+        "update_to": []
+      },
+      "changed": []
+    }
+  ],
+  "linked_records": [
+    {
+      "pmid": "30747228",
+      "doi": "10.3892/ijmm.2019.4074",
+      "title": "Rapamycin‑induced miR‑30a downregulation inhibits senescence of VSMCs by targeting Beclin1.",
+      "links": [
+        {
+          "type": "ExpressionOfConcernIn",
+          "pmid": "42725387"
+        }
+      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30747228/"
+    },
+    {
+      "pmid": "37052770",
+      "doi": "10.1007/s11357-023-00786-6",
+      "title": "Rapamycin restores peripheral blood flow in aged mice and in mouse models of atherosclerosis and Alzheimer's disease.",
+      "links": [
+        {
+          "type": "ErratumIn",
+          "pmid": "42965647"
+        }
+      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37052770/"
+    },
+    {
+      "pmid": "43002407",
+      "doi": "10.1001/jamaneurol.2026.4304",
+      "title": "Error in Abstract.",
+      "links": [
+        {
+          "type": "ErratumFor",
+          "pmid": "42804222"
+        }
+      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43002407/"
+    }
+  ],
+  "notice_sources": [
+    {
+      "pmid": "42725387",
+      "doi": "10.3892/ijmm.2026.5981",
+      "title": "[Expression of Concern] Rapamycin‑induced miR‑30a downregulation inhibits senescence of VSMCs by targeting Beclin1.",
+      "links": [
+        {
+          "type": "ExpressionOfConcernFor",
+          "pmid": "30747228"
+        }
+      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42725387/"
+    },
+    {
+      "pmid": "42965647",
+      "doi": "10.1007/s11357-026-02609-w",
+      "title": "Correction to: Rapamycin restores peripheral blood flow in aged mice and in mouse models of atherosclerosis and Alzheimer's disease.",
+      "links": [
+        {
+          "type": "ErratumFor",
+          "pmid": "37052770"
+        }
+      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42965647/"
+    }
+  ]
+}

@@ -2,7 +2,9 @@
 
 宇多Yul细胞/yulcell
 
-资料快照：2026-10-30。这里包含底层文献目录和入选资料，不只展示卡片。
+**当前目录（2026-11-22）：[下载全部 11,279 条来源](https://raw.githubusercontent.com/yuyohe/longevity-antiaging-evidence-atlas-EnCn/main/data/maintenance_2026_11_22/literature-library.csv)** · [只看本期新增的 22 条](../data/maintenance_2026_11_22/new-candidates.csv) · [本期解读](maintenance-2026-11-22.md)。来源目录中有 11,158 个不同的 PMID。
+
+下表是 2026-10-30 的正式快照，保留当时的分页目录和入选记录。11 月新收到的来源还没进入正式矩阵。
 
 ## 文献与入选资料 / Sources and Selected Records
 

@@ -1,5 +1,7 @@
 # 抗衰证据库公开全量数据包（2026-10）
 
+[最新来源目录与 11 月新增](../docs/full-library.md)；下方五表是 10 月 30 日正式快照。
+
 [全部公开资料与分页目录](../docs/full-library.md) · [直接浏览11,181条来源](browse-2026-10/literature-library/README.md) · [浏览2,497条优先复核记录](browse-2026-10/shortlist-sources/README.md)
 
 大 CSV 超过 GitHub 在线预览范围时，可从分页目录阅读或下载完整文件。以下五表均已通过未登录下载核验。

@@ -1,5 +1,7 @@
 # 大众版入口表 / Easy Reader Home
 
+[这期先看：喝胶原后皮肤更湿润，就等于皱纹变浅了吗？](../../docs/maintenance-2026-11-22.md)
+
 [抗衰成分推荐｜外用10项、口服10项（2026-11-01）](../cards/ingredients-2026-11/index.md)
 
 

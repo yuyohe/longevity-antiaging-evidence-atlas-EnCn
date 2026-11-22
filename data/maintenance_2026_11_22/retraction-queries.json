@@ -1,0 +1,3708 @@
+{
+  "vitamin-d": {
+    "name": "维生素 D",
+    "group": "口服/补剂",
+    "denominator": 26044,
+    "retracted": 50,
+    "pmids": [
+      "40057967",
+      "39834161",
+      "39713736",
+      "39121007",
+      "38847469",
+      "38820075",
+      "37194326",
+      "36864348",
+      "36678627",
+      "36524519",
+      "36394723",
+      "36246569",
+      "36066168",
+      "35978636",
+      "35903295",
+      "35774751",
+      "35707482",
+      "35685731",
+      "35567425",
+      "35186523",
+      "35140804",
+      "34917171",
+      "34891159",
+      "34737778",
+      "34717823",
+      "34717822",
+      "34689128",
+      "34675985",
+      "34102194",
+      "34017029",
+      "33186385",
+      "31428171",
+      "30733856",
+      "30459099",
+      "29330224",
+      "29316405",
+      "28742409",
+      "28668998",
+      "28122931",
+      "27868194",
+      "26609167",
+      "30944690",
+      "24412233",
+      "24132976",
+      "23884390",
+      "23649140",
+      "23637537",
+      "23204220",
+      "22980306",
+      "22763121"
+    ],
+    "old_denominator": 25980,
+    "old_retracted": 50,
+    "old_pmids": [
+      "40057967",
+      "39834161",
+      "39713736",
+      "39121007",
+      "38847469",
+      "38820075",
+      "37194326",
+      "36864348",
+      "36678627",
+      "36524519",
+      "36394723",
+      "36246569",
+      "36066168",
+      "35978636",
+      "35903295",
+      "35774751",
+      "35707482",
+      "35685731",
+      "35567425",
+      "35186523",
+      "35140804",
+      "34917171",
+      "34891159",
+      "34737778",
+      "34717823",
+      "34717822",
+      "34689128",
+      "34675985",
+      "34102194",
+      "34017029",
+      "33186385",
+      "31428171",
+      "30733856",
+      "30459099",
+      "29330224",
+      "29316405",
+      "28742409",
+      "28668998",
+      "28122931",
+      "27868194",
+      "26609167",
+      "30944690",
+      "24412233",
+      "24132976",
+      "23884390",
+      "23649140",
+      "23637537",
+      "23204220",
+      "22980306",
+      "22763121"
+    ],
+    "denominator_query": "(\"Vitamin D\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Vitamin D\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "vitamin-c": {
+    "name": "维生素 C",
+    "group": "口服/补剂",
+    "denominator": 3093,
+    "retracted": 11,
+    "pmids": [
+      "33094466",
+      "30465062",
+      "30069463",
+      "28454351",
+      "25429759",
+      "25057895",
+      "22970172",
+      "22033423",
+      "21655231",
+      "22409829",
+      "19154523"
+    ],
+    "old_denominator": 3073,
+    "old_retracted": 11,
+    "old_pmids": [
+      "33094466",
+      "30465062",
+      "30069463",
+      "28454351",
+      "25429759",
+      "25057895",
+      "22970172",
+      "22033423",
+      "21655231",
+      "22409829",
+      "19154523"
+    ],
+    "denominator_query": "(\"Vitamin C\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Vitamin C\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "omega-3": {
+    "name": "Omega-3",
+    "group": "口服/补剂",
+    "denominator": 10347,
+    "retracted": 18,
+    "pmids": [
+      "41461240",
+      "35686230",
+      "32967476",
+      "32512788",
+      "30409173",
+      "30336660",
+      "30230402",
+      "29982544",
+      "28068596",
+      "26611718",
+      "25747955",
+      "24973862",
+      "24269522",
+      "22388930",
+      "21503968",
+      "19916246",
+      "19571329",
+      "19154523"
+    ],
+    "old_denominator": 10309,
+    "old_retracted": 18,
+    "old_pmids": [
+      "41461240",
+      "35686230",
+      "32967476",
+      "32512788",
+      "30409173",
+      "30336660",
+      "30230402",
+      "29982544",
+      "28068596",
+      "26611718",
+      "25747955",
+      "24973862",
+      "24269522",
+      "22388930",
+      "21503968",
+      "19916246",
+      "19571329",
+      "19154523"
+    ],
+    "denominator_query": "(\"omega-3\"[Title] OR \"omega 3\"[Title] OR \"fish oil\"[Title] OR \"eicosapentaenoic acid\"[Title] OR \"docosahexaenoic acid\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"omega-3\"[Title] OR \"omega 3\"[Title] OR \"fish oil\"[Title] OR \"eicosapentaenoic acid\"[Title] OR \"docosahexaenoic acid\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "collagen-peptides": {
+    "name": "胶原蛋白/胶原肽",
+    "group": "口服/补剂",
+    "denominator": 365,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 362,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"collagen peptide\"[Title] OR \"collagen peptides\"[Title] OR \"oral collagen\"[Title] OR \"hydrolyzed collagen\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"collagen peptide\"[Title] OR \"collagen peptides\"[Title] OR \"oral collagen\"[Title] OR \"hydrolyzed collagen\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "protein-eaa": {
+    "name": "蛋白粉/必需氨基酸",
+    "group": "口服/补剂",
+    "denominator": 458,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 455,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"essential amino acid\"[Title] OR \"essential amino acids\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"essential amino acid\"[Title] OR \"essential amino acids\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "creatine": {
+    "name": "肌酸",
+    "group": "口服/补剂",
+    "denominator": 1693,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 1679,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Creatine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Creatine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "calcium-magnesium": {
+    "name": "钙/镁",
+    "group": "口服/补剂",
+    "denominator": 16735,
+    "retracted": 29,
+    "pmids": [
+      "38467361",
+      "38064270",
+      "36773634",
+      "36052146",
+      "35966747",
+      "35615690",
+      "35368954",
+      "35035523",
+      "34847839",
+      "34492849",
+      "32728854",
+      "30840612",
+      "29316405",
+      "28899817",
+      "28668998",
+      "28544600",
+      "26808666",
+      "26016859",
+      "25215286",
+      "25099178",
+      "23573102",
+      "21987453",
+      "21833783",
+      "21778673",
+      "18851852",
+      "18597101",
+      "17911405",
+      "17035703",
+      "16824631"
+    ],
+    "old_denominator": 16661,
+    "old_retracted": 29,
+    "old_pmids": [
+      "38467361",
+      "38064270",
+      "36773634",
+      "36052146",
+      "35966747",
+      "35615690",
+      "35368954",
+      "35035523",
+      "34847839",
+      "34492849",
+      "32728854",
+      "30840612",
+      "29316405",
+      "28899817",
+      "28668998",
+      "28544600",
+      "26808666",
+      "26016859",
+      "25215286",
+      "25099178",
+      "23573102",
+      "21987453",
+      "21833783",
+      "21778673",
+      "18851852",
+      "18597101",
+      "17911405",
+      "17035703",
+      "16824631"
+    ],
+    "denominator_query": "(\"calcium\"[Title] OR \"magnesium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"calcium\"[Title] OR \"magnesium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "zinc": {
+    "name": "锌",
+    "group": "口服/补剂",
+    "denominator": 11385,
+    "retracted": 34,
+    "pmids": [
+      "40107539",
+      "39653981",
+      "39535573",
+      "39028478",
+      "38956110",
+      "38173374",
+      "37720732",
+      "37086354",
+      "37071257",
+      "36994320",
+      "36388536",
+      "36167110",
+      "36043146",
+      "35543376",
+      "35299084",
+      "34995308",
+      "34618822",
+      "34255800",
+      "34161364",
+      "33247380",
+      "33149573",
+      "32645102",
+      "31845207",
+      "31125822",
+      "31056723",
+      "29804469",
+      "29316405",
+      "29176314",
+      "28668998",
+      "28160242",
+      "27608907",
+      "27334434",
+      "24715076",
+      "23974923"
+    ],
+    "old_denominator": 11339,
+    "old_retracted": 32,
+    "old_pmids": [
+      "40107539",
+      "39653981",
+      "39535573",
+      "39028478",
+      "38956110",
+      "38173374",
+      "37086354",
+      "37071257",
+      "36994320",
+      "36388536",
+      "36167110",
+      "36043146",
+      "35543376",
+      "35299084",
+      "34995308",
+      "34618822",
+      "34255800",
+      "34161364",
+      "33247380",
+      "32645102",
+      "31845207",
+      "31125822",
+      "31056723",
+      "29804469",
+      "29316405",
+      "29176314",
+      "28668998",
+      "28160242",
+      "27608907",
+      "27334434",
+      "24715076",
+      "23974923"
+    ],
+    "denominator_query": "(\"Zinc\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Zinc\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "coq10": {
+    "name": "辅酶 Q10",
+    "group": "口服/补剂",
+    "denominator": 1428,
+    "retracted": 6,
+    "pmids": [
+      "33620550",
+      "33146779",
+      "29111905",
+      "28949260",
+      "24813752",
+      "22448096"
+    ],
+    "old_denominator": 1421,
+    "old_retracted": 6,
+    "old_pmids": [
+      "33620550",
+      "33146779",
+      "29111905",
+      "28949260",
+      "24813752",
+      "22448096"
+    ],
+    "denominator_query": "(\"coenzyme Q10\"[Title] OR \"CoQ10\"[Title] OR \"ubiquinone\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"coenzyme Q10\"[Title] OR \"CoQ10\"[Title] OR \"ubiquinone\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "melatonin": {
+    "name": "褪黑素",
+    "group": "口服/补剂",
+    "denominator": 4292,
+    "retracted": 37,
+    "pmids": [
+      "38827802",
+      "38215799",
+      "37854169",
+      "37777583",
+      "37478726",
+      "37391460",
+      "36090543",
+      "35392575",
+      "35082916",
+      "34973379",
+      "33674975",
+      "32695901",
+      "32218740",
+      "31956332",
+      "31025320",
+      "30923460",
+      "30476721",
+      "29770487",
+      "29275919",
+      "28981157",
+      "28978121",
+      "28782839",
+      "28694170",
+      "28413861",
+      "27696512",
+      "26507336",
+      "26184924",
+      "25655081",
+      "23555281",
+      "22348531",
+      "21835536",
+      "21452601",
+      "19817970",
+      "19522738",
+      "19012662",
+      "17349019",
+      "16842535"
+    ],
+    "old_denominator": 4270,
+    "old_retracted": 37,
+    "old_pmids": [
+      "38827802",
+      "38215799",
+      "37854169",
+      "37777583",
+      "37478726",
+      "37391460",
+      "36090543",
+      "35392575",
+      "35082916",
+      "34973379",
+      "33674975",
+      "32695901",
+      "32218740",
+      "31956332",
+      "31025320",
+      "30923460",
+      "30476721",
+      "29770487",
+      "29275919",
+      "28981157",
+      "28978121",
+      "28782839",
+      "28694170",
+      "28413861",
+      "27696512",
+      "26507336",
+      "26184924",
+      "25655081",
+      "23555281",
+      "22348531",
+      "21835536",
+      "21452601",
+      "19817970",
+      "19522738",
+      "19012662",
+      "17349019",
+      "16842535"
+    ],
+    "denominator_query": "(\"Melatonin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Melatonin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "probiotics": {
+    "name": "益生菌",
+    "group": "口服/补剂",
+    "denominator": 19286,
+    "retracted": 48,
+    "pmids": [
+      "39333280",
+      "38930475",
+      "38554964",
+      "38155392",
+      "37935287",
+      "36860450",
+      "36669151",
+      "36267315",
+      "35941976",
+      "35874662",
+      "35873427",
+      "35669168",
+      "35035837",
+      "34691213",
+      "34652635",
+      "34306309",
+      "34122006",
+      "33981369",
+      "33477482",
+      "33134572",
+      "33103122",
+      "32985280",
+      "32859044",
+      "32334580",
+      "32180972",
+      "32017005",
+      "31803643",
+      "31802692",
+      "31114137",
+      "30675190",
+      "30459099",
+      "30257523",
+      "30057015",
+      "29891223",
+      "28922099",
+      "28403547",
+      "28326881",
+      "28142296",
+      "27669638",
+      "26749362",
+      "26020238",
+      "25879690",
+      "25037247",
+      "24237003",
+      "24019796",
+      "24001238",
+      "22798958",
+      "21891907"
+    ],
+    "old_denominator": 19143,
+    "old_retracted": 48,
+    "old_pmids": [
+      "39333280",
+      "38930475",
+      "38554964",
+      "38155392",
+      "37935287",
+      "36860450",
+      "36669151",
+      "36267315",
+      "35941976",
+      "35874662",
+      "35873427",
+      "35669168",
+      "35035837",
+      "34691213",
+      "34652635",
+      "34306309",
+      "34122006",
+      "33981369",
+      "33477482",
+      "33134572",
+      "33103122",
+      "32985280",
+      "32859044",
+      "32334580",
+      "32180972",
+      "32017005",
+      "31803643",
+      "31802692",
+      "31114137",
+      "30675190",
+      "30459099",
+      "30257523",
+      "30057015",
+      "29891223",
+      "28922099",
+      "28403547",
+      "28326881",
+      "28142296",
+      "27669638",
+      "26749362",
+      "26020238",
+      "25879690",
+      "25037247",
+      "24237003",
+      "24019796",
+      "24001238",
+      "22798958",
+      "21891907"
+    ],
+    "denominator_query": "(\"probiotic\"[Title] OR \"probiotics\"[Title] OR \"Lactobacillus\"[Title] OR \"Bifidobacterium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"probiotic\"[Title] OR \"probiotics\"[Title] OR \"Lactobacillus\"[Title] OR \"Bifidobacterium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "nmn": {
+    "name": "NMN",
+    "group": "口服/补剂",
+    "denominator": 281,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 277,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"NMN\"[Title] OR \"nicotinamide mononucleotide\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"NMN\"[Title] OR \"nicotinamide mononucleotide\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "nr": {
+    "name": "NR",
+    "group": "口服/补剂",
+    "denominator": 229,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 228,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"nicotinamide riboside\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"nicotinamide riboside\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "nad-precursors": {
+    "name": "NAD 前体",
+    "group": "口服/补剂",
+    "denominator": 508,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 503,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"NAD precursor\"[Title] OR \"NAD precursors\"[Title] OR \"nicotinamide riboside\"[Title] OR \"nicotinamide mononucleotide\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"NAD precursor\"[Title] OR \"NAD precursors\"[Title] OR \"nicotinamide riboside\"[Title] OR \"nicotinamide mononucleotide\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "resveratrol": {
+    "name": "白藜芦醇",
+    "group": "口服/补剂",
+    "denominator": 4284,
+    "retracted": 22,
+    "pmids": [
+      "36175937",
+      "35399833",
+      "33919028",
+      "32683392",
+      "31136990",
+      "35541685",
+      "29843156",
+      "29439139",
+      "29387206",
+      "29074559",
+      "28849139",
+      "27941804",
+      "27149559",
+      "25936406",
+      "23625030",
+      "23461657",
+      "21887248",
+      "21749863",
+      "19359525",
+      "18791811",
+      "18789672",
+      "18201729"
+    ],
+    "old_denominator": 4270,
+    "old_retracted": 21,
+    "old_pmids": [
+      "35399833",
+      "33919028",
+      "32683392",
+      "31136990",
+      "35541685",
+      "29843156",
+      "29439139",
+      "29387206",
+      "29074559",
+      "28849139",
+      "27941804",
+      "27149559",
+      "25936406",
+      "23625030",
+      "23461657",
+      "21887248",
+      "21749863",
+      "19359525",
+      "18791811",
+      "18789672",
+      "18201729"
+    ],
+    "denominator_query": "(\"Resveratrol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Resveratrol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "quercetin": {
+    "name": "槲皮素",
+    "group": "口服/补剂",
+    "denominator": 3663,
+    "retracted": 19,
+    "pmids": [
+      "40100888",
+      "36805894",
+      "36092164",
+      "35000160",
+      "34950418",
+      "34873428",
+      "32397267",
+      "31307244",
+      "29379801",
+      "29035884",
+      "28604104",
+      "28454351",
+      "28115850",
+      "28026003",
+      "26393898",
+      "23533474",
+      "23529952",
+      "23331460",
+      "22275840"
+    ],
+    "old_denominator": 3639,
+    "old_retracted": 19,
+    "old_pmids": [
+      "40100888",
+      "36805894",
+      "36092164",
+      "35000160",
+      "34950418",
+      "34873428",
+      "32397267",
+      "31307244",
+      "29379801",
+      "29035884",
+      "28604104",
+      "28454351",
+      "28115850",
+      "28026003",
+      "26393898",
+      "23533474",
+      "23529952",
+      "23331460",
+      "22275840"
+    ],
+    "denominator_query": "(\"Quercetin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Quercetin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "curcumin": {
+    "name": "姜黄素",
+    "group": "口服/补剂",
+    "denominator": 6157,
+    "retracted": 40,
+    "pmids": [
+      "38507103",
+      "38339947",
+      "38266637",
+      "37471645",
+      "37422651",
+      "37348638",
+      "36866793",
+      "36558044",
+      "35721822",
+      "35711494",
+      "35272135",
+      "34202112",
+      "33919028",
+      "33557949",
+      "31827700",
+      "31510839",
+      "31096703",
+      "31016760",
+      "31013312",
+      "31002157",
+      "30402869",
+      "30110401",
+      "29311914",
+      "28377722",
+      "28120490",
+      "26752181",
+      "26032092",
+      "25792385",
+      "25780454",
+      "25747863",
+      "25445044",
+      "23613781",
+      "23408929",
+      "22928089",
+      "22668778",
+      "22051236",
+      "19735646",
+      "19359525",
+      "18292803",
+      "17240359"
+    ],
+    "old_denominator": 6120,
+    "old_retracted": 40,
+    "old_pmids": [
+      "38507103",
+      "38339947",
+      "38266637",
+      "37471645",
+      "37422651",
+      "37348638",
+      "36866793",
+      "36558044",
+      "35721822",
+      "35711494",
+      "35272135",
+      "34202112",
+      "33919028",
+      "33557949",
+      "31827700",
+      "31510839",
+      "31096703",
+      "31016760",
+      "31013312",
+      "31002157",
+      "30402869",
+      "30110401",
+      "29311914",
+      "28377722",
+      "28120490",
+      "26752181",
+      "26032092",
+      "25792385",
+      "25780454",
+      "25747863",
+      "25445044",
+      "23613781",
+      "23408929",
+      "22928089",
+      "22668778",
+      "22051236",
+      "19735646",
+      "19359525",
+      "18292803",
+      "17240359"
+    ],
+    "denominator_query": "(\"Curcumin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Curcumin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "green-tea-catechins": {
+    "name": "绿茶儿茶素",
+    "group": "口服/补剂",
+    "denominator": 1188,
+    "retracted": 5,
+    "pmids": [
+      "30582209",
+      "27659310",
+      "24682582",
+      "28962222",
+      "22022384"
+    ],
+    "old_denominator": 1180,
+    "old_retracted": 5,
+    "old_pmids": [
+      "30582209",
+      "27659310",
+      "24682582",
+      "28962222",
+      "22022384"
+    ],
+    "denominator_query": "(\"green tea catechin\"[Title] OR \"green tea catechins\"[Title] OR \"EGCG\"[Title] OR \"epigallocatechin gallate\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"green tea catechin\"[Title] OR \"green tea catechins\"[Title] OR \"EGCG\"[Title] OR \"epigallocatechin gallate\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "astaxanthin": {
+    "name": "虾青素",
+    "group": "口服/补剂",
+    "denominator": 1243,
+    "retracted": 1,
+    "pmids": [
+      "31973028"
+    ],
+    "old_denominator": 1234,
+    "old_retracted": 1,
+    "old_pmids": [
+      "31973028"
+    ],
+    "denominator_query": "(\"Astaxanthin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Astaxanthin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "hyaluronic-acid": {
+    "name": "透明质酸",
+    "group": "口服/补剂",
+    "denominator": 1696,
+    "retracted": 3,
+    "pmids": [
+      "36643861",
+      "32092830",
+      "25604697"
+    ],
+    "old_denominator": 1685,
+    "old_retracted": 3,
+    "old_pmids": [
+      "36643861",
+      "32092830",
+      "25604697"
+    ],
+    "denominator_query": "(\"hyaluronic acid\"[Title] OR \"hyaluronan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"hyaluronic acid\"[Title] OR \"hyaluronan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "ceramides": {
+    "name": "神经酰胺",
+    "group": "口服/补剂",
+    "denominator": 137,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 137,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Ceramides\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Ceramides\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "niacinamide": {
+    "name": "烟酰胺",
+    "group": "口服/补剂",
+    "denominator": 50,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 49,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Niacinamide\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Niacinamide\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "vitamin-b12": {
+    "name": "维生素 B12",
+    "group": "口服/补剂",
+    "denominator": 3218,
+    "retracted": 2,
+    "pmids": [
+      "38421889",
+      "23902646"
+    ],
+    "old_denominator": 3191,
+    "old_retracted": 2,
+    "old_pmids": [
+      "38421889",
+      "23902646"
+    ],
+    "denominator_query": "(\"vitamin B12\"[Title] OR \"cobalamin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"vitamin B12\"[Title] OR \"cobalamin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "folate": {
+    "name": "叶酸",
+    "group": "口服/补剂",
+    "denominator": 3908,
+    "retracted": 3,
+    "pmids": [
+      "38718938",
+      "23937678",
+      "22468673"
+    ],
+    "old_denominator": 3891,
+    "old_retracted": 3,
+    "old_pmids": [
+      "38718938",
+      "23937678",
+      "22468673"
+    ],
+    "denominator_query": "(\"Folate\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Folate\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "multivitamin": {
+    "name": "复合维生素",
+    "group": "口服/补剂",
+    "denominator": 505,
+    "retracted": 1,
+    "pmids": [
+      "25115164"
+    ],
+    "old_denominator": 501,
+    "old_retracted": 1,
+    "old_pmids": [
+      "25115164"
+    ],
+    "denominator_query": "(\"Multivitamin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Multivitamin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "vitamin-e": {
+    "name": "维生素 E",
+    "group": "口服/补剂",
+    "denominator": 2989,
+    "retracted": 6,
+    "pmids": [
+      "35586814",
+      "35237342",
+      "35000160",
+      "31089253",
+      "29804469",
+      "28847198"
+    ],
+    "old_denominator": 2974,
+    "old_retracted": 6,
+    "old_pmids": [
+      "35586814",
+      "35237342",
+      "35000160",
+      "31089253",
+      "29804469",
+      "28847198"
+    ],
+    "denominator_query": "(\"Vitamin E\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Vitamin E\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "vitamin-a": {
+    "name": "维生素 A",
+    "group": "口服/补剂",
+    "denominator": 2913,
+    "retracted": 5,
+    "pmids": [
+      "35804266",
+      "35685731",
+      "35071591",
+      "34217246",
+      "22854406"
+    ],
+    "old_denominator": 2905,
+    "old_retracted": 5,
+    "old_pmids": [
+      "35804266",
+      "35685731",
+      "35071591",
+      "34217246",
+      "22854406"
+    ],
+    "denominator_query": "(\"Vitamin A\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Vitamin A\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "vitamin-k2": {
+    "name": "维生素 K2",
+    "group": "口服/补剂",
+    "denominator": 326,
+    "retracted": 3,
+    "pmids": [
+      "24975215",
+      "19499964",
+      "17190100"
+    ],
+    "old_denominator": 323,
+    "old_retracted": 3,
+    "old_pmids": [
+      "24975215",
+      "19499964",
+      "17190100"
+    ],
+    "denominator_query": "(\"vitamin K2\"[Title] OR \"menaquinone\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"vitamin K2\"[Title] OR \"menaquinone\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "selenium": {
+    "name": "硒",
+    "group": "口服/补剂",
+    "denominator": 7658,
+    "retracted": 8,
+    "pmids": [
+      "39342340",
+      "38091170",
+      "37245338",
+      "36388536",
+      "35723386",
+      "35586814",
+      "30057015",
+      "25231122"
+    ],
+    "old_denominator": 7616,
+    "old_retracted": 8,
+    "old_pmids": [
+      "39342340",
+      "38091170",
+      "37245338",
+      "36388536",
+      "35723386",
+      "35586814",
+      "30057015",
+      "25231122"
+    ],
+    "denominator_query": "(\"Selenium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Selenium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "iodine": {
+    "name": "碘",
+    "group": "口服/补剂",
+    "denominator": 4914,
+    "retracted": 6,
+    "pmids": [
+      "36755777",
+      "26353858",
+      "24446669",
+      "24895501",
+      "19725779",
+      "17199437"
+    ],
+    "old_denominator": 4905,
+    "old_retracted": 6,
+    "old_pmids": [
+      "36755777",
+      "26353858",
+      "24446669",
+      "24895501",
+      "19725779",
+      "17199437"
+    ],
+    "denominator_query": "(\"Iodine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Iodine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "iron": {
+    "name": "铁",
+    "group": "口服/补剂",
+    "denominator": 22591,
+    "retracted": 46,
+    "pmids": [
+      "41572815",
+      "40545217",
+      "40111536",
+      "38876422",
+      "38560133",
+      "38173374",
+      "36591132",
+      "36234843",
+      "36226302",
+      "36096173",
+      "35795277",
+      "35421099",
+      "35299084",
+      "35071591",
+      "34995308",
+      "34492849",
+      "33938360",
+      "32741833",
+      "32698792",
+      "32614844",
+      "35025360",
+      "32223474",
+      "32218586",
+      "32096669",
+      "31514541",
+      "31477792",
+      "30464757",
+      "30323700",
+      "30304441",
+      "29843553",
+      "29338568",
+      "28901214",
+      "28073037",
+      "27894198",
+      "27483303",
+      "27269410",
+      "26715522",
+      "26037728",
+      "25643259",
+      "23286295",
+      "23029172",
+      "22745539",
+      "22051236",
+      "21187917",
+      "19725757",
+      "17029598"
+    ],
+    "old_denominator": 22466,
+    "old_retracted": 42,
+    "old_pmids": [
+      "41572815",
+      "38876422",
+      "38560133",
+      "38173374",
+      "36226302",
+      "36096173",
+      "35795277",
+      "35421099",
+      "35299084",
+      "35071591",
+      "34995308",
+      "34492849",
+      "33938360",
+      "32741833",
+      "32698792",
+      "32614844",
+      "35025360",
+      "32223474",
+      "32218586",
+      "32096669",
+      "31514541",
+      "31477792",
+      "30464757",
+      "30323700",
+      "30304441",
+      "29843553",
+      "29338568",
+      "28901214",
+      "28073037",
+      "27894198",
+      "27483303",
+      "27269410",
+      "26715522",
+      "26037728",
+      "25643259",
+      "23286295",
+      "23029172",
+      "22745539",
+      "22051236",
+      "21187917",
+      "19725757",
+      "17029598"
+    ],
+    "denominator_query": "(\"Iron\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Iron\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "copper": {
+    "name": "铜",
+    "group": "口服/补剂",
+    "denominator": 5824,
+    "retracted": 20,
+    "pmids": [
+      "40715258",
+      "38876422",
+      "38452479",
+      "37692067",
+      "36864348",
+      "35917103",
+      "33938360",
+      "33740180",
+      "33706171",
+      "33409152",
+      "32669563",
+      "32614844",
+      "30247074",
+      "30168446",
+      "29589240",
+      "25963145",
+      "22067807",
+      "21319953",
+      "21221660",
+      "17585902"
+    ],
+    "old_denominator": 5800,
+    "old_retracted": 19,
+    "old_pmids": [
+      "40715258",
+      "38876422",
+      "38452479",
+      "37692067",
+      "36864348",
+      "35917103",
+      "33938360",
+      "33740180",
+      "33706171",
+      "33409152",
+      "32669563",
+      "32614844",
+      "30247074",
+      "30168446",
+      "29589240",
+      "25963145",
+      "21319953",
+      "21221660",
+      "17585902"
+    ],
+    "denominator_query": "(\"Copper\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Copper\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "manganese": {
+    "name": "锰",
+    "group": "口服/补剂",
+    "denominator": 2018,
+    "retracted": 2,
+    "pmids": [
+      "30304441",
+      "25039075"
+    ],
+    "old_denominator": 2010,
+    "old_retracted": 2,
+    "old_pmids": [
+      "30304441",
+      "25039075"
+    ],
+    "denominator_query": "(\"Manganese\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Manganese\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "chromium": {
+    "name": "铬",
+    "group": "口服/补剂",
+    "denominator": 1844,
+    "retracted": 10,
+    "pmids": [
+      "38125608",
+      "37809394",
+      "37478726",
+      "35421180",
+      "34995308",
+      "34358508",
+      "32695901",
+      "30524820",
+      "22033423",
+      "18165437"
+    ],
+    "old_denominator": 1836,
+    "old_retracted": 9,
+    "old_pmids": [
+      "38125608",
+      "37809394",
+      "37478726",
+      "35421180",
+      "34995308",
+      "32695901",
+      "30524820",
+      "22033423",
+      "18165437"
+    ],
+    "denominator_query": "(\"Chromium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Chromium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "potassium": {
+    "name": "钾",
+    "group": "口服/补剂",
+    "denominator": 4077,
+    "retracted": 7,
+    "pmids": [
+      "37423467",
+      "35609063",
+      "35143535",
+      "31484832",
+      "30099113",
+      "28050281",
+      "26302666"
+    ],
+    "old_denominator": 4050,
+    "old_retracted": 7,
+    "old_pmids": [
+      "37423467",
+      "35609063",
+      "35143535",
+      "31484832",
+      "30099113",
+      "28050281",
+      "26302666"
+    ],
+    "denominator_query": "(\"Potassium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Potassium\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "electrolytes": {
+    "name": "电解质",
+    "group": "口服/补剂",
+    "denominator": 235,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 235,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Electrolytes\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Electrolytes\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "psyllium": {
+    "name": "车前子壳/可溶性纤维",
+    "group": "口服/补剂",
+    "denominator": 323,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 322,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"psyllium\"[Title] OR \"soluble fiber\"[Title] OR \"soluble fibre\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"psyllium\"[Title] OR \"soluble fiber\"[Title] OR \"soluble fibre\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "beta-glucan": {
+    "name": "β-葡聚糖",
+    "group": "口服/补剂",
+    "denominator": 1024,
+    "retracted": 1,
+    "pmids": [
+      "32520965"
+    ],
+    "old_denominator": 1019,
+    "old_retracted": 1,
+    "old_pmids": [
+      "32520965"
+    ],
+    "denominator_query": "(\"beta glucan\"[Title] OR \"beta-glucan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"beta glucan\"[Title] OR \"beta-glucan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "inulin": {
+    "name": "菊粉",
+    "group": "口服/补剂",
+    "denominator": 1236,
+    "retracted": 2,
+    "pmids": [
+      "30503580",
+      "29636277"
+    ],
+    "old_denominator": 1227,
+    "old_retracted": 2,
+    "old_pmids": [
+      "30503580",
+      "29636277"
+    ],
+    "denominator_query": "(\"Inulin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Inulin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "prebiotic-mix": {
+    "name": "益生元复合物",
+    "group": "口服/补剂",
+    "denominator": 2535,
+    "retracted": 2,
+    "pmids": [
+      "35669168",
+      "21891907"
+    ],
+    "old_denominator": 2514,
+    "old_retracted": 2,
+    "old_pmids": [
+      "35669168",
+      "21891907"
+    ],
+    "denominator_query": "(\"prebiotic\"[Title] OR \"prebiotics\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"prebiotic\"[Title] OR \"prebiotics\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "lutein": {
+    "name": "叶黄素",
+    "group": "口服/补剂",
+    "denominator": 858,
+    "retracted": 2,
+    "pmids": [
+      "41573009",
+      "27222156"
+    ],
+    "old_denominator": 854,
+    "old_retracted": 2,
+    "old_pmids": [
+      "41573009",
+      "27222156"
+    ],
+    "denominator_query": "(\"Lutein\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Lutein\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "zeaxanthin": {
+    "name": "玉米黄质",
+    "group": "口服/补剂",
+    "denominator": 354,
+    "retracted": 1,
+    "pmids": [
+      "41573009"
+    ],
+    "old_denominator": 354,
+    "old_retracted": 1,
+    "old_pmids": [
+      "41573009"
+    ],
+    "denominator_query": "(\"Zeaxanthin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Zeaxanthin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "lycopene": {
+    "name": "番茄红素",
+    "group": "口服/补剂",
+    "denominator": 1193,
+    "retracted": 2,
+    "pmids": [
+      "25487946",
+      "21625550"
+    ],
+    "old_denominator": 1184,
+    "old_retracted": 2,
+    "old_pmids": [
+      "25487946",
+      "21625550"
+    ],
+    "denominator_query": "(\"Lycopene\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Lycopene\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "beta-carotene": {
+    "name": "β-胡萝卜素",
+    "group": "口服/补剂",
+    "denominator": 1139,
+    "retracted": 2,
+    "pmids": [
+      "22854406",
+      "17448905"
+    ],
+    "old_denominator": 1136,
+    "old_retracted": 2,
+    "old_pmids": [
+      "22854406",
+      "17448905"
+    ],
+    "denominator_query": "(\"beta carotene\"[Title] OR \"beta-carotene\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"beta carotene\"[Title] OR \"beta-carotene\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "alpha-lipoic-acid": {
+    "name": "α-硫辛酸",
+    "group": "口服/补剂",
+    "denominator": 972,
+    "retracted": 6,
+    "pmids": [
+      "35930219",
+      "34450170",
+      "30745578",
+      "22448096",
+      "19019027",
+      "16460684"
+    ],
+    "old_denominator": 966,
+    "old_retracted": 6,
+    "old_pmids": [
+      "35930219",
+      "34450170",
+      "30745578",
+      "22448096",
+      "19019027",
+      "16460684"
+    ],
+    "denominator_query": "(\"alpha lipoic acid\"[Title] OR \"alpha-lipoic acid\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"alpha lipoic acid\"[Title] OR \"alpha-lipoic acid\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "nac": {
+    "name": "NAC/N-乙酰半胱氨酸",
+    "group": "口服/补剂",
+    "denominator": 1479,
+    "retracted": 4,
+    "pmids": [
+      "36090543",
+      "35795313",
+      "34258270",
+      "30446769"
+    ],
+    "old_denominator": 1471,
+    "old_retracted": 4,
+    "old_pmids": [
+      "36090543",
+      "35795313",
+      "34258270",
+      "30446769"
+    ],
+    "denominator_query": "(\"N-acetylcysteine\"[Title] OR \"N acetylcysteine\"[Title] OR \"NAC\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"N-acetylcysteine\"[Title] OR \"N acetylcysteine\"[Title] OR \"NAC\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "glutathione": {
+    "name": "谷胱甘肽",
+    "group": "口服/补剂",
+    "denominator": 2892,
+    "retracted": 3,
+    "pmids": [
+      "37478726",
+      "34157031",
+      "24987684"
+    ],
+    "old_denominator": 2882,
+    "old_retracted": 3,
+    "old_pmids": [
+      "37478726",
+      "34157031",
+      "24987684"
+    ],
+    "denominator_query": "(\"Glutathione\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Glutathione\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "glycine": {
+    "name": "甘氨酸",
+    "group": "口服/补剂",
+    "denominator": 1428,
+    "retracted": 2,
+    "pmids": [
+      "36106391",
+      "29843553"
+    ],
+    "old_denominator": 1420,
+    "old_retracted": 2,
+    "old_pmids": [
+      "36106391",
+      "29843553"
+    ],
+    "denominator_query": "(\"Glycine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Glycine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "taurine": {
+    "name": "牛磺酸",
+    "group": "口服/补剂",
+    "denominator": 1492,
+    "retracted": 5,
+    "pmids": [
+      "33146779",
+      "30396066",
+      "28118062",
+      "20830294",
+      "18414974"
+    ],
+    "old_denominator": 1483,
+    "old_retracted": 5,
+    "old_pmids": [
+      "33146779",
+      "30396066",
+      "28118062",
+      "20830294",
+      "18414974"
+    ],
+    "denominator_query": "(\"Taurine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Taurine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "l-carnitine": {
+    "name": "左旋肉碱",
+    "group": "口服/补剂",
+    "denominator": 1290,
+    "retracted": 3,
+    "pmids": [
+      "34326917",
+      "33517804",
+      "23843223"
+    ],
+    "old_denominator": 1285,
+    "old_retracted": 3,
+    "old_pmids": [
+      "34326917",
+      "33517804",
+      "23843223"
+    ],
+    "denominator_query": "(\"L-carnitine\"[Title] OR \"levocarnitine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"L-carnitine\"[Title] OR \"levocarnitine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "acetyl-l-carnitine": {
+    "name": "乙酰左旋肉碱",
+    "group": "口服/补剂",
+    "denominator": 158,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 157,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"acetyl-L-carnitine\"[Title] OR \"acetyl carnitine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"acetyl-L-carnitine\"[Title] OR \"acetyl carnitine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "citrulline": {
+    "name": "瓜氨酸",
+    "group": "口服/补剂",
+    "denominator": 608,
+    "retracted": 1,
+    "pmids": [
+      "30206378"
+    ],
+    "old_denominator": 604,
+    "old_retracted": 1,
+    "old_pmids": [
+      "30206378"
+    ],
+    "denominator_query": "(\"Citrulline\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Citrulline\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "arginine": {
+    "name": "精氨酸",
+    "group": "口服/补剂",
+    "denominator": 3344,
+    "retracted": 4,
+    "pmids": [
+      "37615707",
+      "32114003",
+      "30054435",
+      "23812551"
+    ],
+    "old_denominator": 3327,
+    "old_retracted": 4,
+    "old_pmids": [
+      "37615707",
+      "32114003",
+      "30054435",
+      "23812551"
+    ],
+    "denominator_query": "(\"Arginine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Arginine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "beta-alanine": {
+    "name": "β-丙氨酸",
+    "group": "口服/补剂",
+    "denominator": 321,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 320,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Beta-Alanine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Beta-Alanine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "hmb": {
+    "name": "HMB",
+    "group": "口服/补剂",
+    "denominator": 129,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 129,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"HMB\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"HMB\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "collagen-type-ii": {
+    "name": "二型胶原",
+    "group": "口服/补剂",
+    "denominator": 133,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 133,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"type II collagen\"[Title] OR \"undenatured type II collagen\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"type II collagen\"[Title] OR \"undenatured type II collagen\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "glucosamine": {
+    "name": "氨糖",
+    "group": "口服/补剂",
+    "denominator": 569,
+    "retracted": 1,
+    "pmids": [
+      "31998780"
+    ],
+    "old_denominator": 567,
+    "old_retracted": 1,
+    "old_pmids": [
+      "31998780"
+    ],
+    "denominator_query": "(\"Glucosamine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Glucosamine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "chondroitin": {
+    "name": "软骨素",
+    "group": "口服/补剂",
+    "denominator": 465,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 464,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Chondroitin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Chondroitin\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "msm": {
+    "name": "MSM",
+    "group": "口服/补剂",
+    "denominator": 257,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 257,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"methylsulfonylmethane\"[Title] OR \"MSM\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"methylsulfonylmethane\"[Title] OR \"MSM\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "boswellia": {
+    "name": "乳香提取物",
+    "group": "口服/补剂",
+    "denominator": 196,
+    "retracted": 1,
+    "pmids": [
+      "23111960"
+    ],
+    "old_denominator": 194,
+    "old_retracted": 1,
+    "old_pmids": [
+      "23111960"
+    ],
+    "denominator_query": "(\"Boswellia\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Boswellia\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "ashwagandha": {
+    "name": "南非醉茄",
+    "group": "口服/补剂",
+    "denominator": 165,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 162,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Ashwagandha\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Ashwagandha\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "rhodiola": {
+    "name": "红景天",
+    "group": "口服/补剂",
+    "denominator": 216,
+    "retracted": 2,
+    "pmids": [
+      "35784643",
+      "35602107"
+    ],
+    "old_denominator": 213,
+    "old_retracted": 2,
+    "old_pmids": [
+      "35784643",
+      "35602107"
+    ],
+    "denominator_query": "(\"Rhodiola\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Rhodiola\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "ginseng": {
+    "name": "人参",
+    "group": "口服/补剂",
+    "denominator": 1572,
+    "retracted": 3,
+    "pmids": [
+      "29628975",
+      "24806341",
+      "22570673"
+    ],
+    "old_denominator": 1569,
+    "old_retracted": 3,
+    "old_pmids": [
+      "29628975",
+      "24806341",
+      "22570673"
+    ],
+    "denominator_query": "(\"Ginseng\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Ginseng\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "maca": {
+    "name": "玛咖",
+    "group": "口服/补剂",
+    "denominator": 128,
+    "retracted": 1,
+    "pmids": [
+      "26998182"
+    ],
+    "old_denominator": 128,
+    "old_retracted": 1,
+    "old_pmids": [
+      "26998182"
+    ],
+    "denominator_query": "(\"Maca\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Maca\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "ginkgo": {
+    "name": "银杏",
+    "group": "口服/补剂",
+    "denominator": 748,
+    "retracted": 1,
+    "pmids": [
+      "29207671"
+    ],
+    "old_denominator": 742,
+    "old_retracted": 1,
+    "old_pmids": [
+      "29207671"
+    ],
+    "denominator_query": "(\"Ginkgo\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Ginkgo\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "bacopa": {
+    "name": "婆罗米",
+    "group": "口服/补剂",
+    "denominator": 125,
+    "retracted": 1,
+    "pmids": [
+      "35992047"
+    ],
+    "old_denominator": 125,
+    "old_retracted": 1,
+    "old_pmids": [
+      "35992047"
+    ],
+    "denominator_query": "(\"Bacopa\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Bacopa\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "lions-mane": {
+    "name": "猴头菇",
+    "group": "口服/补剂",
+    "denominator": 187,
+    "retracted": 1,
+    "pmids": [
+      "26988860"
+    ],
+    "old_denominator": 183,
+    "old_retracted": 1,
+    "old_pmids": [
+      "26988860"
+    ],
+    "denominator_query": "(\"lion's mane\"[Title] OR \"Hericium erinaceus\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"lion's mane\"[Title] OR \"Hericium erinaceus\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "berberine": {
+    "name": "小檗碱",
+    "group": "口服/补剂",
+    "denominator": 1374,
+    "retracted": 12,
+    "pmids": [
+      "36276998",
+      "35465190",
+      "34712379",
+      "34489150",
+      "33632015",
+      "32524872",
+      "32277648",
+      "31545226",
+      "31391714",
+      "29491706",
+      "25409232",
+      "16621886"
+    ],
+    "old_denominator": 1371,
+    "old_retracted": 12,
+    "old_pmids": [
+      "36276998",
+      "35465190",
+      "34712379",
+      "34489150",
+      "33632015",
+      "32524872",
+      "32277648",
+      "31545226",
+      "31391714",
+      "29491706",
+      "25409232",
+      "16621886"
+    ],
+    "denominator_query": "(\"Berberine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Berberine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "cinnamon": {
+    "name": "肉桂",
+    "group": "口服/补剂",
+    "denominator": 693,
+    "retracted": 4,
+    "pmids": [
+      "36903823",
+      "36090212",
+      "35290563",
+      "35008615"
+    ],
+    "old_denominator": 687,
+    "old_retracted": 3,
+    "old_pmids": [
+      "36090212",
+      "35290563",
+      "35008615"
+    ],
+    "denominator_query": "(\"Cinnamon\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Cinnamon\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "garlic-extract": {
+    "name": "大蒜提取物",
+    "group": "口服/补剂",
+    "denominator": 203,
+    "retracted": 2,
+    "pmids": [
+      "39437887",
+      "26088761"
+    ],
+    "old_denominator": 203,
+    "old_retracted": 2,
+    "old_pmids": [
+      "39437887",
+      "26088761"
+    ],
+    "denominator_query": "(\"Garlic Extract\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Garlic Extract\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "plant-sterols": {
+    "name": "植物甾醇",
+    "group": "口服/补剂",
+    "denominator": 187,
+    "retracted": 1,
+    "pmids": [
+      "25109666"
+    ],
+    "old_denominator": 187,
+    "old_retracted": 1,
+    "old_pmids": [
+      "25109666"
+    ],
+    "denominator_query": "(\"Plant Sterols\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Plant Sterols\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "red-yeast-rice": {
+    "name": "红曲米",
+    "group": "口服/补剂",
+    "denominator": 553,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 550,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"red yeast rice\"[Title] OR \"Monascus\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"red yeast rice\"[Title] OR \"Monascus\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "policosanol": {
+    "name": "普利醇",
+    "group": "口服/补剂",
+    "denominator": 80,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 79,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Policosanol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Policosanol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "milk-thistle": {
+    "name": "水飞蓟",
+    "group": "口服/补剂",
+    "denominator": 133,
+    "retracted": 1,
+    "pmids": [
+      "33473288"
+    ],
+    "old_denominator": 133,
+    "old_retracted": 1,
+    "old_pmids": [
+      "33473288"
+    ],
+    "denominator_query": "(\"Milk Thistle\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Milk Thistle\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "saw-palmetto": {
+    "name": "锯棕榈",
+    "group": "口服/补剂",
+    "denominator": 45,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 45,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Saw Palmetto\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Saw Palmetto\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "cranberry": {
+    "name": "蔓越莓",
+    "group": "口服/补剂",
+    "denominator": 450,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 450,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Cranberry\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Cranberry\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "d-mannose": {
+    "name": "D-甘露糖",
+    "group": "口服/补剂",
+    "denominator": 655,
+    "retracted": 1,
+    "pmids": [
+      "32308412"
+    ],
+    "old_denominator": 653,
+    "old_retracted": 1,
+    "old_pmids": [
+      "32308412"
+    ],
+    "denominator_query": "(\"D-mannose\"[Title] OR \"mannose\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"D-mannose\"[Title] OR \"mannose\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "peppermint-oil": {
+    "name": "薄荷油",
+    "group": "口服/补剂",
+    "denominator": 117,
+    "retracted": 2,
+    "pmids": [
+      "16399846",
+      "16355390"
+    ],
+    "old_denominator": 117,
+    "old_retracted": 2,
+    "old_pmids": [
+      "16399846",
+      "16355390"
+    ],
+    "denominator_query": "(\"peppermint oil\"[Title] OR \"Mentha piperita\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"peppermint oil\"[Title] OR \"Mentha piperita\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "ginger": {
+    "name": "姜",
+    "group": "口服/补剂",
+    "denominator": 1020,
+    "retracted": 1,
+    "pmids": [
+      "31428171"
+    ],
+    "old_denominator": 1013,
+    "old_retracted": 1,
+    "old_pmids": [
+      "31428171"
+    ],
+    "denominator_query": "(\"Ginger\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Ginger\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "spirulina": {
+    "name": "螺旋藻",
+    "group": "口服/补剂",
+    "denominator": 1129,
+    "retracted": 3,
+    "pmids": [
+      "39517296",
+      "37341889",
+      "32142842"
+    ],
+    "old_denominator": 1125,
+    "old_retracted": 2,
+    "old_pmids": [
+      "39517296",
+      "32142842"
+    ],
+    "denominator_query": "(\"Spirulina\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Spirulina\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "chlorella": {
+    "name": "小球藻",
+    "group": "口服/补剂",
+    "denominator": 908,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 903,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Chlorella\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Chlorella\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "moringa": {
+    "name": "辣木",
+    "group": "口服/补剂",
+    "denominator": 1262,
+    "retracted": 4,
+    "pmids": [
+      "35143535",
+      "34270569",
+      "30647808",
+      "30168446"
+    ],
+    "old_denominator": 1253,
+    "old_retracted": 4,
+    "old_pmids": [
+      "35143535",
+      "34270569",
+      "30647808",
+      "30168446"
+    ],
+    "denominator_query": "(\"Moringa\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Moringa\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "wheatgrass": {
+    "name": "小麦草",
+    "group": "口服/补剂",
+    "denominator": 60,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 59,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Wheatgrass\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Wheatgrass\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "beetroot": {
+    "name": "甜菜根",
+    "group": "口服/补剂",
+    "denominator": 3013,
+    "retracted": 1,
+    "pmids": [
+      "38623889"
+    ],
+    "old_denominator": 2996,
+    "old_retracted": 1,
+    "old_pmids": [
+      "38623889"
+    ],
+    "denominator_query": "(\"beetroot\"[Title] OR \"dietary nitrate\"[Title] OR \"nitrate\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"beetroot\"[Title] OR \"dietary nitrate\"[Title] OR \"nitrate\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "cocoa-flavanols": {
+    "name": "可可黄烷醇",
+    "group": "口服/补剂",
+    "denominator": 91,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 91,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"cocoa flavanol\"[Title] OR \"cocoa flavanols\"[Title] OR \"cocoa polyphenol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"cocoa flavanol\"[Title] OR \"cocoa flavanols\"[Title] OR \"cocoa polyphenol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "olive-leaf": {
+    "name": "橄榄叶提取物",
+    "group": "口服/补剂",
+    "denominator": 473,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 471,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"olive leaf\"[Title] OR \"oleuropein\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"olive leaf\"[Title] OR \"oleuropein\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "black-seed-oil": {
+    "name": "黑种草籽油",
+    "group": "口服/补剂",
+    "denominator": 616,
+    "retracted": 1,
+    "pmids": [
+      "32512788"
+    ],
+    "old_denominator": 613,
+    "old_retracted": 1,
+    "old_pmids": [
+      "32512788"
+    ],
+    "denominator_query": "(\"black seed oil\"[Title] OR \"Nigella sativa\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"black seed oil\"[Title] OR \"Nigella sativa\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "evening-primrose-oil": {
+    "name": "月见草油",
+    "group": "口服/补剂",
+    "denominator": 50,
+    "retracted": 1,
+    "pmids": [
+      "28742409"
+    ],
+    "old_denominator": 50,
+    "old_retracted": 1,
+    "old_pmids": [
+      "28742409"
+    ],
+    "denominator_query": "(\"evening primrose oil\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"evening primrose oil\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "borage-oil": {
+    "name": "琉璃苣油",
+    "group": "口服/补剂",
+    "denominator": 13,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 13,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"borage oil\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"borage oil\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "cla": {
+    "name": "共轭亚油酸",
+    "group": "口服/补剂",
+    "denominator": 1099,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 1096,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"conjugated linoleic acid\"[Title] OR \"CLA\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"conjugated linoleic acid\"[Title] OR \"CLA\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "mct-oil": {
+    "name": "MCT 油",
+    "group": "口服/补剂",
+    "denominator": 145,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 144,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"MCT oil\"[Title] OR \"medium chain triglyceride\"[Title] OR \"medium-chain triglyceride\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"MCT oil\"[Title] OR \"medium chain triglyceride\"[Title] OR \"medium-chain triglyceride\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "sam-e": {
+    "name": "SAM-e",
+    "group": "口服/补剂",
+    "denominator": 200,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 198,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"S-adenosylmethionine\"[Title] OR \"SAM-e\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"S-adenosylmethionine\"[Title] OR \"SAM-e\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "inositol": {
+    "name": "肌醇",
+    "group": "口服/补剂",
+    "denominator": 909,
+    "retracted": 7,
+    "pmids": [
+      "34919250",
+      "30132953",
+      "28980870",
+      "27736936",
+      "26507336",
+      "21835536",
+      "18854115"
+    ],
+    "old_denominator": 903,
+    "old_retracted": 7,
+    "old_pmids": [
+      "34919250",
+      "30132953",
+      "28980870",
+      "27736936",
+      "26507336",
+      "21835536",
+      "18854115"
+    ],
+    "denominator_query": "(\"Inositol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Inositol\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "phosphatidylserine": {
+    "name": "磷脂酰丝氨酸",
+    "group": "口服/补剂",
+    "denominator": 255,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 254,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Phosphatidylserine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Phosphatidylserine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "citicoline": {
+    "name": "胞磷胆碱",
+    "group": "口服/补剂",
+    "denominator": 123,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 121,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Citicoline\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Citicoline\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "choline": {
+    "name": "胆碱",
+    "group": "口服/补剂",
+    "denominator": 1922,
+    "retracted": 1,
+    "pmids": [
+      "31991181"
+    ],
+    "old_denominator": 1918,
+    "old_retracted": 1,
+    "old_pmids": [
+      "31991181"
+    ],
+    "denominator_query": "(\"Choline\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Choline\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "l-theanine": {
+    "name": "L-茶氨酸",
+    "group": "口服/补剂",
+    "denominator": 279,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 278,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"L-theanine\"[Title] OR \"theanine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"L-theanine\"[Title] OR \"theanine\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "tryptophan": {
+    "name": "色氨酸",
+    "group": "口服/补剂",
+    "denominator": 1818,
+    "retracted": 2,
+    "pmids": [
+      "38655353",
+      "34122006"
+    ],
+    "old_denominator": 1800,
+    "old_retracted": 2,
+    "old_pmids": [
+      "38655353",
+      "34122006"
+    ],
+    "denominator_query": "(\"Tryptophan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Tryptophan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "5-htp": {
+    "name": "5-HTP",
+    "group": "口服/补剂",
+    "denominator": 95,
+    "retracted": 1,
+    "pmids": [
+      "19557117"
+    ],
+    "old_denominator": 95,
+    "old_retracted": 1,
+    "old_pmids": [
+      "19557117"
+    ],
+    "denominator_query": "(\"5-HTP\"[Title] OR \"5 hydroxytryptophan\"[Title] OR \"5-hydroxytryptophan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"5-HTP\"[Title] OR \"5 hydroxytryptophan\"[Title] OR \"5-hydroxytryptophan\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "valerian": {
+    "name": "缬草",
+    "group": "口服/补剂",
+    "denominator": 38,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 38,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"Valerian\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"Valerian\"[Title]) AND (\"dietary supplement\"[Title/Abstract] OR \"nutritional supplement\"[Title/Abstract] OR supplement[Title] OR supplements[Title] OR supplementation[Title/Abstract] OR dietary[Title/Abstract] OR nutrition*[Title/Abstract] OR oral[Title/Abstract] OR intake[Title/Abstract] OR deficiency[Title/Abstract] OR diet[Title/Abstract] OR food[Title/Abstract] OR fortified[Title/Abstract] OR dose[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "skin-sunscreen": {
+    "name": "防晒",
+    "group": "皮肤外用",
+    "denominator": 2733,
+    "retracted": 1,
+    "pmids": [
+      "30414837"
+    ],
+    "old_denominator": 2722,
+    "old_retracted": 1,
+    "old_pmids": [
+      "30414837"
+    ],
+    "denominator_query": "(\"sunscreen\"[Title] OR \"photoprotection\"[Title] OR \"sun protection\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"sunscreen\"[Title] OR \"photoprotection\"[Title] OR \"sun protection\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-retinoids": {
+    "name": "维A酸/视黄醇",
+    "group": "皮肤外用",
+    "denominator": 1052,
+    "retracted": 1,
+    "pmids": [
+      "25565812"
+    ],
+    "old_denominator": 1048,
+    "old_retracted": 1,
+    "old_pmids": [
+      "25565812"
+    ],
+    "denominator_query": "(\"retinoid\"[Title] OR \"retinoids\"[Title] OR \"retinol\"[Title] OR \"tretinoin\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"retinoid\"[Title] OR \"retinoids\"[Title] OR \"retinol\"[Title] OR \"tretinoin\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-niacinamide": {
+    "name": "烟酰胺",
+    "group": "皮肤外用",
+    "denominator": 450,
+    "retracted": 1,
+    "pmids": [
+      "35342760"
+    ],
+    "old_denominator": 446,
+    "old_retracted": 1,
+    "old_pmids": [
+      "35342760"
+    ],
+    "denominator_query": "(\"niacinamide\"[Title] OR \"nicotinamide\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"niacinamide\"[Title] OR \"nicotinamide\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-topical-vitamin-c": {
+    "name": "外用维C",
+    "group": "皮肤外用",
+    "denominator": 755,
+    "retracted": 1,
+    "pmids": [
+      "22033423"
+    ],
+    "old_denominator": 750,
+    "old_retracted": 1,
+    "old_pmids": [
+      "22033423"
+    ],
+    "denominator_query": "(\"vitamin C\"[Title] OR \"ascorbic acid\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"vitamin C\"[Title] OR \"ascorbic acid\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-hyaluronic-acid": {
+    "name": "透明质酸",
+    "group": "皮肤外用",
+    "denominator": 3017,
+    "retracted": 9,
+    "pmids": [
+      "36841387",
+      "35651502",
+      "33090687",
+      "33015440",
+      "32299553",
+      "30046611",
+      "25604697",
+      "25473210",
+      "25167809"
+    ],
+    "old_denominator": 2997,
+    "old_retracted": 9,
+    "old_pmids": [
+      "36841387",
+      "35651502",
+      "33090687",
+      "33015440",
+      "32299553",
+      "30046611",
+      "25604697",
+      "25473210",
+      "25167809"
+    ],
+    "denominator_query": "(\"hyaluronic acid\"[Title] OR \"hyaluronan\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"hyaluronic acid\"[Title] OR \"hyaluronan\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-ceramides": {
+    "name": "神经酰胺",
+    "group": "皮肤外用",
+    "denominator": 674,
+    "retracted": 0,
+    "pmids": [],
+    "old_denominator": 671,
+    "old_retracted": 0,
+    "old_pmids": [],
+    "denominator_query": "(\"ceramide\"[Title] OR \"ceramides\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"ceramide\"[Title] OR \"ceramides\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    ]
+  },
+  "skin-polyphenols": {
+    "name": "多酚/抗氧化剂",
+    "group": "皮肤外用",
+    "denominator": 7369,
+    "retracted": 20,
+    "pmids": [
+      "39169199",
+      "39101317",
+      "38720726",
+      "38173533",
+      "38169772",
+      "37517755",
+      "36805894",
+      "35728636",
+      "35669730",
+      "35468144",
+      "35222807",
+      "34941898",
+      "34898371",
+      "33574987",
+      "32869889",
+      "32841671",
+      "28856566",
+      "26111626",
+      "23870286",
+      "21887248"
+    ],
+    "old_denominator": 7298,
+    "old_retracted": 19,
+    "old_pmids": [
+      "39169199",
+      "39101317",
+      "38720726",
+      "38173533",
+      "38169772",
+      "37517755",
+      "36805894",
+      "35728636",
+      "35669730",
+      "35468144",
+      "35222807",
+      "34941898",
+      "33574987",
+      "32869889",
+      "32841671",
+      "28856566",
+      "26111626",
+      "23870286",
+      "21887248"
+    ],
+    "denominator_query": "(\"polyphenol\"[Title] OR \"polyphenols\"[Title] OR \"antioxidant\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"polyphenol\"[Title] OR \"polyphenols\"[Title] OR \"antioxidant\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-energy-devices": {
+    "name": "医美能量设备",
+    "group": "皮肤外用",
+    "denominator": 2053,
+    "retracted": 5,
+    "pmids": [
+      "38807440",
+      "38279602",
+      "36118840",
+      "26760033",
+      "23368685"
+    ],
+    "old_denominator": 2029,
+    "old_retracted": 5,
+    "old_pmids": [
+      "38807440",
+      "38279602",
+      "36118840",
+      "26760033",
+      "23368685"
+    ],
+    "denominator_query": "(\"laser resurfacing\"[Title] OR \"microneedling\"[Title] OR \"chemical peel\"[Title] OR \"radiofrequency\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"laser resurfacing\"[Title] OR \"microneedling\"[Title] OR \"chemical peel\"[Title] OR \"radiofrequency\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR sunscreen[Title/Abstract] OR barrier[Title/Abstract] OR cosmetic*[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "skin-pdrn-polynucleotide": {
+    "name": "PDRN/PN/Skin Booster",
+    "group": "皮肤外用",
+    "denominator": 186,
+    "retracted": 4,
+    "pmids": [
+      "39313949",
+      "38481069",
+      "34791770",
+      "25473210"
+    ],
+    "old_denominator": 175,
+    "old_retracted": 4,
+    "old_pmids": [
+      "39313949",
+      "38481069",
+      "34791770",
+      "25473210"
+    ],
+    "denominator_query": "(\"PDRN\"[Title] OR \"polydeoxyribonucleotide\"[Title] OR \"polydeoxyribonucleotides\"[Title] OR \"polynucleotide\"[Title] OR \"polynucleotides\"[Title] OR \"polynucleotide filler\"[Title] OR \"PN-HPT\"[Title] OR \"skin booster\"[Title] OR \"skin boosters\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR cosmetic*[Title/Abstract] OR filler[Title/Abstract] OR aesthetic*[Title/Abstract] OR rejuvenation[Title/Abstract] OR booster[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"PDRN\"[Title] OR \"polydeoxyribonucleotide\"[Title] OR \"polydeoxyribonucleotides\"[Title] OR \"polynucleotide\"[Title] OR \"polynucleotides\"[Title] OR \"polynucleotide filler\"[Title] OR \"PN-HPT\"[Title] OR \"skin booster\"[Title] OR \"skin boosters\"[Title]) AND (skin[Title/Abstract] OR dermatolog*[Title/Abstract] OR photoaging[Title/Abstract] OR wrinkle*[Title/Abstract] OR pigment*[Title/Abstract] OR topical[Title/Abstract] OR cosmetic*[Title/Abstract] OR filler[Title/Abstract] OR aesthetic*[Title/Abstract] OR rejuvenation[Title/Abstract] OR booster[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [
+          "\"polynucleotide filler\"[Title]"
+        ],
+        "outputmessages": []
+      },
+      {},
+      {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [
+          "\"polynucleotide filler\"[Title]"
+        ],
+        "outputmessages": []
+      }
+    ]
+  },
+  "antiaging-metformin": {
+    "name": "二甲双胍",
+    "group": "抗衰前沿",
+    "denominator": 717,
+    "retracted": 1,
+    "pmids": [
+      "35693701"
+    ],
+    "old_denominator": 710,
+    "old_retracted": 1,
+    "old_pmids": [
+      "35693701"
+    ],
+    "denominator_query": "(\"metformin\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"metformin\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-rapamycin": {
+    "name": "雷帕霉素/mTOR",
+    "group": "抗衰前沿",
+    "denominator": 1454,
+    "retracted": 3,
+    "pmids": [
+      "36799162",
+      "31298038",
+      "31180515"
+    ],
+    "old_denominator": 1447,
+    "old_retracted": 2,
+    "old_pmids": [
+      "36799162",
+      "31298038"
+    ],
+    "denominator_query": "(\"rapamycin\"[Title] OR \"sirolimus\"[Title] OR \"mTOR\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"rapamycin\"[Title] OR \"sirolimus\"[Title] OR \"mTOR\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-senolytics": {
+    "name": "Senolytics",
+    "group": "抗衰前沿",
+    "denominator": 894,
+    "retracted": 1,
+    "pmids": [
+      "34873428"
+    ],
+    "old_denominator": 884,
+    "old_retracted": 1,
+    "old_pmids": [
+      "34873428"
+    ],
+    "denominator_query": "(\"senolytic\"[Title] OR \"senolytics\"[Title] OR \"dasatinib\"[Title] OR \"quercetin\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"senolytic\"[Title] OR \"senolytics\"[Title] OR \"dasatinib\"[Title] OR \"quercetin\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-nad": {
+    "name": "NAD/NMN/NR",
+    "group": "抗衰前沿",
+    "denominator": 962,
+    "retracted": 2,
+    "pmids": [
+      "24337988",
+      "21541336"
+    ],
+    "old_denominator": 942,
+    "old_retracted": 2,
+    "old_pmids": [
+      "24337988",
+      "21541336"
+    ],
+    "denominator_query": "(\"NAD\"[Title] OR \"NMN\"[Title] OR \"nicotinamide mononucleotide\"[Title] OR \"nicotinamide riboside\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"NAD\"[Title] OR \"NMN\"[Title] OR \"nicotinamide mononucleotide\"[Title] OR \"nicotinamide riboside\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-resveratrol": {
+    "name": "白藜芦醇",
+    "group": "抗衰前沿",
+    "denominator": 1057,
+    "retracted": 5,
+    "pmids": [
+      "30962260",
+      "29875176",
+      "29273676",
+      "25057490",
+      "19071213"
+    ],
+    "old_denominator": 1057,
+    "old_retracted": 5,
+    "old_pmids": [
+      "30962260",
+      "29875176",
+      "29273676",
+      "25057490",
+      "19071213"
+    ],
+    "denominator_query": "(\"resveratrol\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"resveratrol\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-epigenetic-clocks": {
+    "name": "表观遗传时钟",
+    "group": "抗衰前沿",
+    "denominator": 808,
+    "retracted": 1,
+    "pmids": [
+      "35427433"
+    ],
+    "old_denominator": 796,
+    "old_retracted": 1,
+    "old_pmids": [
+      "35427433"
+    ],
+    "denominator_query": "(\"epigenetic clock\"[Title] OR \"DNA methylation age\"[Title] OR \"biological age\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"epigenetic clock\"[Title] OR \"DNA methylation age\"[Title] OR \"biological age\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-telomere": {
+    "name": "端粒",
+    "group": "抗衰前沿",
+    "denominator": 4657,
+    "retracted": 5,
+    "pmids": [
+      "35463973",
+      "33634502",
+      "29145503",
+      "24665044",
+      "19193721"
+    ],
+    "old_denominator": 4635,
+    "old_retracted": 5,
+    "old_pmids": [
+      "35463973",
+      "33634502",
+      "29145503",
+      "24665044",
+      "19193721"
+    ],
+    "denominator_query": "(\"telomere\"[Title] OR \"telomerase\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"telomere\"[Title] OR \"telomerase\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "antiaging-autophagy": {
+    "name": "自噬/线粒体自噬",
+    "group": "抗衰前沿",
+    "denominator": 4248,
+    "retracted": 18,
+    "pmids": [
+      "40348252",
+      "39719232",
+      "36799162",
+      "35693701",
+      "35361048",
+      "33546760",
+      "32239675",
+      "31860870",
+      "31487280",
+      "31298038",
+      "31180515",
+      "30910846",
+      "30370550",
+      "30359321",
+      "29802156",
+      "25369834",
+      "24669285",
+      "23381122"
+    ],
+    "old_denominator": 4221,
+    "old_retracted": 17,
+    "old_pmids": [
+      "40348252",
+      "39719232",
+      "36799162",
+      "35693701",
+      "35361048",
+      "33546760",
+      "32239675",
+      "31860870",
+      "31487280",
+      "31298038",
+      "30910846",
+      "30370550",
+      "30359321",
+      "29802156",
+      "25369834",
+      "24669285",
+      "23381122"
+    ],
+    "denominator_query": "(\"autophagy\"[Title] OR \"mitophagy\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication])",
+    "numerator_query": "(\"autophagy\"[Title] OR \"mitophagy\"[Title]) AND (aging[Title/Abstract] OR ageing[Title/Abstract] OR longevity[Title/Abstract] OR healthspan[Title/Abstract] OR lifespan[Title/Abstract] OR senescence[Title/Abstract] OR age-related[Title/Abstract] OR anti-aging[Title/Abstract] OR anti-ageing[Title/Abstract]) AND (\"2006/01/01\"[Date - Publication] : \"2026/11/22\"[Date - Publication]) AND \"Retracted Publication\"[Publication Type]",
+    "warnings": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  }
+}
