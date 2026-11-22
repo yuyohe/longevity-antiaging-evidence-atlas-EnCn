@@ -1,0 +1,76 @@
+{
+  "as_of": "2026-11-22",
+  "feishu_gallery_url": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewg8m58OG",
+  "questions": [
+    {
+      "slug": "fractures",
+      "topic": "骨折",
+      "question": "额外补维生素 D，骨折会更少吗？",
+      "question_en": "Does extra vitamin D prevent fractures?",
+      "answer": "在一项两万多人的试验里，补维生素 D 和吃安慰剂的人，五年里发生骨折的比例几乎一样。",
+      "who": "美国中老年人，男性至少 50 岁，女性至少 55 岁。招募时没有专挑缺维生素 D 或有骨质疏松的人。",
+      "measured": "数的是实际有多少人骨折。两组都约为每 1,000 人中有 60 人骨折。",
+      "confidence": "试验人数多，跟踪也久。这个结果适合回答一般人额外补充的问题，不能用来判断已确诊缺乏者该怎么治。",
+      "detail": "VITAL 试验共 25,871 人，中位随访 5.3 年。发生骨折的有：维生素 D 组 769/12,927 人，安慰剂组 782/12,944 人。换算成每千人是整个随访期的累计人数，不是每年的人数。风险比 0.98（95% 置信区间 0.89 至 1.08）。",
+      "english": "In VITAL, fracture incidence was similar with vitamin D or placebo over a median of 5.3 years. Participants were not recruited for vitamin D deficiency or osteoporosis.",
+      "card": "NOV26-O05",
+      "sources": [{"pmid": "35939577", "label": "VITAL：维生素 D 与实际发生的骨折"}]
+    },
+    {
+      "slug": "wrinkles",
+      "topic": "皱纹",
+      "question": "喝胶原蛋白，能让皱纹变浅吗？",
+      "question_en": "Does drinking collagen reduce wrinkles?",
+      "answer": "皮肤可能更水润，但还说不准皱纹会不会变浅。这两件事用的是不同的测量方法。",
+      "who": "35 项随机试验，共 2,534 名健康成年人，比较口服胶原蛋白肽和对照组。",
+      "measured": "仪器测到皮肤含水量和弹性有所改善；单看皱纹，去掉少数对结果影响特别大的研究，淡纹效果就不稳定了。",
+      "confidence": "保湿有一些证据。光凭这些试验，还不足以说照镜子能看见皱纹变浅。",
+      "detail": "这份综述分别分析了含水量、弹性和皱纹。另一项 12 周试验在部分眼角纹指标上看到了改善，但它用的是胶原蛋白、维生素 E 和谷胱甘肽的组合，没法把变化单算给胶原蛋白。",
+      "english": "A review of 35 trials found signals for hydration and elasticity. Wrinkle results were sensitive to individual studies; a benefit from a mixed product cannot be attributed to collagen alone.",
+      "card": "NOV26-O06",
+      "sources": [{"pmid": "43047141", "label": "35 项试验：保湿、弹性和皱纹分开分析"}, {"pmid": "43047132", "label": "12 周复方试验：眼角纹与皮肤弹性"}]
+    },
+    {
+      "slug": "cholesterol",
+      "topic": "血脂",
+      "question": "车前子壳能降低“坏胆固醇”吗？",
+      "question_en": "Can psyllium lower LDL cholesterol?",
+      "answer": "能降一些。车前子壳是一种膳食纤维，吃它的那组，验血时“坏胆固醇”平均更低。",
+      "who": "28 项试验，共 1,924 人，有人胆固醇偏高，也有人不高。试验至少持续 3 周。",
+      "measured": "测的是血脂单上的 LDL，也就是“坏胆固醇”，平均比对照组低 0.33 mmol/L。这批试验没数有多少人发生心梗。",
+      "confidence": "对“能否降低 LDL”有中等把握。0.33 是组间平均差，每个人不一定降这么多。",
+      "detail": "这份汇总纳入 28 项随机对照试验。LDL 胆固醇的平均组间差是 −0.33 mmol/L（95% 置信区间 −0.38 至 −0.27）。作者把这项结果的证据评为中等，因为各试验结果不完全一致。",
+      "english": "Across 28 trials, psyllium lowered LDL cholesterol by an average of 0.33 mmol/L relative to control. This analysis assessed blood lipids, not the number of heart attacks.",
+      "card": "NOV26-O03",
+      "sources": [{"pmid": "30239559", "label": "车前子壳和血脂：28 项随机试验"}]
+    },
+    {
+      "slug": "strength",
+      "topic": "肌力",
+      "question": "练力量时吃肌酸，会更有劲吗？",
+      "question_en": "Does creatine add to strength training in older adults?",
+      "answer": "两组都练力量，吃肌酸的那组在力量测试中平均多进步了一点。",
+      "who": "11 项随机试验，参加者至少 60 岁，多数身体状况较好。比较的是同样练力量、补不补肌酸的差别。",
+      "measured": "力量测试有小幅额外进步；肌肉多长了多少、日常活动有没有更轻松，都没看出明确的额外好处。",
+      "confidence": "对力量这点进步有中等把握。身体虚弱的老人能不能同样受益，还不清楚。",
+      "detail": "综述把不同力量测试换算到同一尺度，合并效应量 g = 0.31（95% 置信区间 0.18 至 0.45）。这不等于力量多了 31%。作者对力量、肌肉量、身体功能三项结果的证据把握分别评为中等、低和很低。",
+      "english": "In generally healthy adults aged 60 or older, creatine added a small strength benefit to resistance training. Extra gains in muscle mass or physical function remain uncertain.",
+      "card": "NOV26-O02",
+      "sources": [{"pmid": "42712402", "label": "60 岁以上人群：肌酸加力量训练的 11 项试验"}]
+    },
+    {
+      "slug": "memory",
+      "topic": "记忆",
+      "question": "记忆开始变差，补烟酰胺核糖（NR）有用吗？",
+      "question_en": "Does NR improve cognition in people with mild memory impairment?",
+      "answer": "有轻度认知障碍的人补了 12 周 NR，一项血液指标升了，记忆等认知测试却没看到改善。",
+      "who": "参加者经诊断有轻度认知障碍，主要表现为记忆受损。42 人完成试验：22 人补 NR，20 人吃安慰剂。",
+      "measured": "补 NR 的人血液中的 NAD+ 升到原来的约两倍。研究者也做了认知测试，两组相比没有看到好处。",
+      "confidence": "人数少，时间也短，看不出吃得更久会怎样。这项试验也回答不了能不能预防失智。",
+      "detail": "NAD+ 是细胞参与能量代谢的一种物质，NR 是身体用来合成它的原料之一。这项试验把认知功能列为主要结果。验血能说明身体里的物质变了，不能代替做认知测试。",
+      "english": "In a 12-week pilot trial in amnestic mild cognitive impairment, 42 people completed follow-up. Blood NAD+ roughly doubled in the NR group, without improvement in the primary cognitive outcome.",
+      "card": "NOV26-O07",
+      "sources": [{"pmid": "42478598", "label": "NR 试验：同时验血和做认知测试"}]
+    }
+  ]
+}

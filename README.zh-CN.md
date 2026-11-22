@@ -1,5 +1,15 @@
 # 宇多Yul细胞/yulcell：怎么阅读这个项目
 
+<!-- reader-questions:start -->
+## 你想了解什么？ / Read by question
+
+- [额外补维生素 D，骨折会更少吗？](content/public-reader/questions/fractures.md)
+- [喝胶原蛋白，能让皱纹变浅吗？](content/public-reader/questions/wrinkles.md)
+- [车前子壳能降低“坏胆固醇”吗？](content/public-reader/questions/cholesterol.md)
+- [练力量时吃肌酸，会更有劲吗？](content/public-reader/questions/strength.md)
+- [记忆开始变差，补烟酰胺核糖（NR）有用吗？](content/public-reader/questions/memory.md)
+<!-- reader-questions:end -->
+
 **[11 月 22 日更新：胶原、鱼油和撤稿的分母](docs/maintenance-2026-11-22.md)** · [查当前 11,279 条来源](docs/full-library.md)
 
 [抗衰成分推荐｜外用10项、口服10项（2026-11-01）](content/cards/ingredients-2026-11/index.md)

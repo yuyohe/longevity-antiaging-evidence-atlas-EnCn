@@ -1,5 +1,15 @@
 # 宇多Yul细胞/yulcell
 
+<!-- reader-questions:start -->
+## 你想了解什么？ / Read by question
+
+- [额外补维生素 D，骨折会更少吗？](content/public-reader/questions/fractures.md)
+- [喝胶原蛋白，能让皱纹变浅吗？](content/public-reader/questions/wrinkles.md)
+- [车前子壳能降低“坏胆固醇”吗？](content/public-reader/questions/cholesterol.md)
+- [练力量时吃肌酸，会更有劲吗？](content/public-reader/questions/strength.md)
+- [记忆开始变差，补烟酰胺核糖（NR）有用吗？](content/public-reader/questions/memory.md)
+<!-- reader-questions:end -->
+
 **[11 月 22 日更新：口服胶原能不能淡纹？为什么撤稿比例会变？ / November research update](docs/maintenance-2026-11-22.md)** · [当前来源目录：11,279 条](docs/full-library.md)
 
 [抗衰成分推荐｜外用10项、口服10项（2026-11-01）](content/cards/ingredients-2026-11/index.md)
@@ -16,7 +26,7 @@ An evidence guide to exercise, sleep, nutrition, supplements and aging research:
 
 飞书文件链接已改为只读，但匿名访客的当前表访问仍未修好。对外分享请先用上面的 GitHub 入口。[访问核验](docs/current-output-status.md#2026-11-01-访问核验--access-check)
 
-[本期六篇研究解读 / Six studies in this update](content/public-reader/october-end-2026-update.md) · [飞书阅读导航 / Feishu start here](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD)
+[本期六篇研究解读 / Six studies in this update](content/public-reader/october-end-2026-update.md) · [飞书：按问题读 / Read by question](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewg8m58OG)
 
 | 你想做什么 / Your question | 从哪里看 / Open |
 | --- | --- |

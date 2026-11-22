@@ -1,6 +1,6 @@
 # 宇多Yul细胞/yulcell：当前内容目录 / Current Reader Catalog
 
-这是运动、睡眠、饮食、补剂和抗衰研究的证据图谱。第一次来先看图，关心某个说法再查证据，需要核对时再找论文。
+这是运动、睡眠、饮食、补剂和抗衰研究的证据图谱。关心骨折、皱纹、血脂、肌力或记忆，可[从自己的问题开始](../content/public-reader/questions/README.md)；想看研究分布，可往下看图。
 
 [项目介绍与图片](../README.md) · [读表说明](../content/public-reader/evidence-weight.md)
 
@@ -12,7 +12,7 @@ Evidence snapshot / 资料快照：2026-10-30。Organization / 分类整理：20
 
 | 内容 / Content | 打开后能看到什么 / Meaning | 记录数 / Rows |
 | --- | --- | ---: |
-| [00 从这里开始（项目介绍）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD) | 项目是什么、看图入口和阅读说明 / Introduction and navigation | 14 |
+| [00 从这里开始（项目介绍）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewWNihLzD) | 11 月 22 日：首页导航 15 行，另有[五张问题卡（飞书画册）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewg8m58OG) / Home navigation and questions | 20 |
 | [01 研究热力图](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblASMHdK01yuvjL) | 6张研究图；看研究分布与统计口径 / Six research charts | 6 |
 | [02 成分卡片（50种）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbliLsUC2T8lXHla) | 查50种成分的用途、暂定评级、误解与注意 / Fifty context-specific cards | 50 |
 | [03 成分总览（一张图）](https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tblOTMnRmq5uStWE) | 把50张卡放在一起作索引，不是购买排行 / Visual index, not a ranking | 1 |
