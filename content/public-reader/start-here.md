@@ -1,6 +1,6 @@
 # 从这里开始：这是什么？ / Start Here
 
-[从自己的问题开始：骨折、皱纹、血脂、肌力、记忆](questions/README.md)
+[从 50 个问题里选一个：运动、饮食、心脏、睡眠、护肤、补剂](questions/README.md)
 
 [抗衰成分推荐｜外用10项、口服10项（2026-11-01）](../cards/ingredients-2026-11/index.md)
 

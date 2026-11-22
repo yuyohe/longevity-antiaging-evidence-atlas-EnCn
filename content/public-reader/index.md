@@ -1,6 +1,6 @@
 # 大众版入口表 / Easy Reader Home
 
-[选一个想了解的问题：骨折、皱纹、血脂、肌力、记忆](questions/README.md)
+[选一个想了解的问题：50 题，按生活场景分成六组](questions/README.md)
 
 [这期先看：喝胶原后皮肤更湿润，就等于皱纹变浅了吗？](../../docs/maintenance-2026-11-22.md)
 

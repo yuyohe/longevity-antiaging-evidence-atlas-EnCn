@@ -6,6 +6,8 @@
 
 下表是 2026-10-30 的正式快照，保留当时的分页目录和入选记录。11 月新收到的来源还没进入正式矩阵。
 
+11 月 23 日：[50 个常见问题](../content/public-reader/questions/README.md)另附[51 篇读者参考](../data/reader-question-sources.csv)，其中 47 篇与上述目录重叠，4 篇单列。两份清单不能直接相加。
+
 ## 文献与入选资料 / Sources and Selected Records
 
 | 资料 | 记录数 | 在线阅读 | 完整数据 |

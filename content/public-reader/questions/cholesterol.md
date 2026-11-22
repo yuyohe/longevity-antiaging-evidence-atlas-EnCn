@@ -7,18 +7,18 @@
 - **有多大把握：** 对“能否降低 LDL”有中等把握。0.33 是组间平均差，每个人不一定降这么多。
 
 <details>
-<summary>研究数字、出处和成分卡评级 / Study details</summary>
+<summary>研究数字和出处 / Study details</summary>
 
 这份汇总纳入 28 项随机对照试验。LDL 胆固醇的平均组间差是 −0.33 mmol/L（95% 置信区间 −0.38 至 −0.27）。作者把这项结果的证据评为中等，因为各试验结果不完全一致。
 
 - [车前子壳和血脂：28 项随机试验 · PMID 30239559](https://pubmed.ncbi.nlm.nih.gov/30239559/)
 
-[原成分卡：车前子壳 · B 级](../../cards/ingredients-2026-11/NOV26-O03.md) · [这个等级怎么评](../../../methodology/ingredient-card-grading-v1.md)。这是资料库给成分卡的评级，不是给这项试验打分。
+[原成分卡：车前子壳 · B 级](../../cards/ingredients-2026-11/NOV26-O03.md) · [成分卡评级方法](../../../methodology/ingredient-card-grading-v1.md)
 
 **Can psyllium lower LDL cholesterol?** Across 28 trials, psyllium lowered LDL cholesterol by an average of 0.33 mmol/L relative to control. This analysis assessed blood lipids, not the number of heart attacks.
 
-核对日期：2026-11-22。
+核对日期：2026-11-23。
 
 </details>
 
-[返回：选一个想了解的问题](README.md)
+[同类问题：血压与心脏](groups/heart.md) · [全部 50 个问题](README.md)

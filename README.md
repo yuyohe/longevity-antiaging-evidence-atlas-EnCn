@@ -3,11 +3,13 @@
 <!-- reader-questions:start -->
 ## 你想了解什么？ / Read by question
 
-- [额外补维生素 D，骨折会更少吗？](content/public-reader/questions/fractures.md)
+**[按主题找：50 个健康问题](content/public-reader/questions/README.md)**
+
+[运动与肌力](content/public-reader/questions/groups/move.md) · [吃饭与体重](content/public-reader/questions/groups/food.md) · [血压与心脏](content/public-reader/questions/groups/heart.md) · [睡眠与记忆](content/public-reader/questions/groups/sleep.md) · [护肤与皱纹](content/public-reader/questions/groups/skin.md) · [补剂与衰老](content/public-reader/questions/groups/bone.md)
+
 - [喝胶原蛋白，能让皱纹变浅吗？](content/public-reader/questions/wrinkles.md)
-- [车前子壳能降低“坏胆固醇”吗？](content/public-reader/questions/cholesterol.md)
-- [练力量时吃肌酸，会更有劲吗？](content/public-reader/questions/strength.md)
-- [记忆开始变差，补烟酰胺核糖（NR）有用吗？](content/public-reader/questions/memory.md)
+- [都在练力量，多补蛋白质能多长多少？](content/public-reader/questions/protein.md)
+- [下午喝了咖啡，到睡觉时还可能有影响吗？](content/public-reader/questions/coffee.md)
 <!-- reader-questions:end -->
 
 **[11 月 22 日更新：口服胶原能不能淡纹？为什么撤稿比例会变？ / November research update](docs/maintenance-2026-11-22.md)** · [当前来源目录：11,279 条](docs/full-library.md)

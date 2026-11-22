@@ -7,18 +7,18 @@
 - **有多大把握：** 试验人数多，跟踪也久。这个结果适合回答一般人额外补充的问题，不能用来判断已确诊缺乏者该怎么治。
 
 <details>
-<summary>研究数字、出处和成分卡评级 / Study details</summary>
+<summary>研究数字和出处 / Study details</summary>
 
 VITAL 试验共 25,871 人，中位随访 5.3 年。发生骨折的有：维生素 D 组 769/12,927 人，安慰剂组 782/12,944 人。换算成每千人是整个随访期的累计人数，不是每年的人数。风险比 0.98（95% 置信区间 0.89 至 1.08）。
 
 - [VITAL：维生素 D 与实际发生的骨折 · PMID 35939577](https://pubmed.ncbi.nlm.nih.gov/35939577/)
 
-[原成分卡：维生素D · B 级](../../cards/ingredients-2026-11/NOV26-O05.md) · [这个等级怎么评](../../../methodology/ingredient-card-grading-v1.md)。这是资料库给成分卡的评级，不是给这项试验打分。
+[原成分卡：维生素D · B 级](../../cards/ingredients-2026-11/NOV26-O05.md) · [成分卡评级方法](../../../methodology/ingredient-card-grading-v1.md)
 
 **Does extra vitamin D prevent fractures?** In VITAL, fracture incidence was similar with vitamin D or placebo over a median of 5.3 years. Participants were not recruited for vitamin D deficiency or osteoporosis.
 
-核对日期：2026-11-22。
+核对日期：2026-11-23。
 
 </details>
 
-[返回：选一个想了解的问题](README.md)
+[同类问题：补剂与衰老](groups/bone.md) · [全部 50 个问题](README.md)

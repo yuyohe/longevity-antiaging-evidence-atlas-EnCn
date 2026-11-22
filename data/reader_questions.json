@@ -1,34 +1,312 @@
 {
-  "as_of": "2026-11-22",
+  "as_of": "2026-11-23",
   "feishu_gallery_url": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewg8m58OG",
   "questions": [
     {
-      "slug": "fractures",
-      "topic": "骨折",
-      "question": "额外补维生素 D，骨折会更少吗？",
-      "question_en": "Does extra vitamin D prevent fractures?",
-      "answer": "在一项两万多人的试验里，补维生素 D 和吃安慰剂的人，五年里发生骨折的比例几乎一样。",
-      "who": "美国中老年人，男性至少 50 岁，女性至少 55 岁。招募时没有专挑缺维生素 D 或有骨质疏松的人。",
-      "measured": "数的是实际有多少人骨折。两组都约为每 1,000 人中有 60 人骨折。",
-      "confidence": "试验人数多，跟踪也久。这个结果适合回答一般人额外补充的问题，不能用来判断已确诊缺乏者该怎么治。",
-      "detail": "VITAL 试验共 25,871 人，中位随访 5.3 年。发生骨折的有：维生素 D 组 769/12,927 人，安慰剂组 782/12,944 人。换算成每千人是整个随访期的累计人数，不是每年的人数。风险比 0.98（95% 置信区间 0.89 至 1.08）。",
-      "english": "In VITAL, fracture incidence was similar with vitamin D or placebo over a median of 5.3 years. Participants were not recruited for vitamin D deficiency or osteoporosis.",
-      "card": "NOV26-O05",
-      "sources": [{"pmid": "35939577", "label": "VITAL：维生素 D 与实际发生的骨折"}]
+      "slug": "strength",
+      "topic": "肌力",
+      "question": "练力量时吃肌酸，会更有劲吗？",
+      "question_en": "Does creatine add to strength training in older adults?",
+      "answer": "两组都练力量，吃肌酸的那组在力量测试中平均多进步了一点。",
+      "who": "11 项随机试验，参加者至少 60 岁，多数身体状况较好。比较的是同样练力量、补不补肌酸的差别。",
+      "measured": "力量测试有小幅额外进步；肌肉多长了多少、日常活动有没有更轻松，都没看出明确的额外好处。",
+      "confidence": "对力量这点进步有中等把握。身体虚弱的老人能不能同样受益，还不清楚。",
+      "detail": "综述把不同力量测试换算到同一尺度，合并效应量 g = 0.31（95% 置信区间 0.18 至 0.45）。这不等于力量多了 31%。作者对力量、肌肉量、身体功能三项结果的证据把握分别评为中等、低和很低。",
+      "english": "In generally healthy adults aged 60 or older, creatine added a small strength benefit to resistance training. Extra gains in muscle mass or physical function remain uncertain.",
+      "card": "NOV26-O02",
+      "sources": [
+        {
+          "pmid": "42712402",
+          "label": "60 岁以上人群：肌酸加力量训练的 11 项试验"
+        }
+      ],
+      "group": "move"
     },
     {
-      "slug": "wrinkles",
-      "topic": "皱纹",
-      "question": "喝胶原蛋白，能让皱纹变浅吗？",
-      "question_en": "Does drinking collagen reduce wrinkles?",
-      "answer": "皮肤可能更水润，但还说不准皱纹会不会变浅。这两件事用的是不同的测量方法。",
-      "who": "35 项随机试验，共 2,534 名健康成年人，比较口服胶原蛋白肽和对照组。",
-      "measured": "仪器测到皮肤含水量和弹性有所改善；单看皱纹，去掉少数对结果影响特别大的研究，淡纹效果就不稳定了。",
-      "confidence": "保湿有一些证据。光凭这些试验，还不足以说照镜子能看见皱纹变浅。",
-      "detail": "这份综述分别分析了含水量、弹性和皱纹。另一项 12 周试验在部分眼角纹指标上看到了改善，但它用的是胶原蛋白、维生素 E 和谷胱甘肽的组合，没法把变化单算给胶原蛋白。",
-      "english": "A review of 35 trials found signals for hydration and elasticity. Wrinkle results were sensitive to individual studies; a benefit from a mixed product cannot be attributed to collagen alone.",
-      "card": "NOV26-O06",
-      "sources": [{"pmid": "43047141", "label": "35 项试验：保湿、弹性和皱纹分开分析"}, {"pmid": "43047132", "label": "12 周复方试验：眼角纹与皮肤弹性"}]
+      "slug": "steps",
+      "topic": "走路步数",
+      "question": "一天没走够一万步，也有好处吗？",
+      "question_en": "Do fewer than 10,000 steps still count?",
+      "answer": "看得到差别，不必跨过一万步才算数。走得很少的人，每天多走一些，后来死亡和新发心血管病的风险就已经较低。",
+      "who": "12 项研究，共 111,309 人，用设备记录日常步数。",
+      "measured": "研究把不同步数的人放在一起比较。以每天约 2,000 步作参照，不到 3,000 步时两条风险曲线就出现差别。",
+      "confidence": "这是跟踪人群看到的规律，没有给参加者随机分配步数。不能把某个整数当作人人都要达到的门槛。",
+      "detail": "不同设备、佩戴位置和步速都会影响数字。论文中的拐点是人群估计，不能精确到个人每天该走哪一步。",
+      "english": "Lower risks were observed well below 10,000 steps per day in a pooled analysis. This does not establish an individual target.",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "37676198",
+          "label": "Relationship of Daily Step Counts to All-Cause Mortality and Cardiovascular Events."
+        }
+      ]
+    },
+    {
+      "slug": "weekend",
+      "topic": "周末运动",
+      "question": "只有周末有空运动，比平时分开练差很多吗？",
+      "question_en": "Is concentrating exercise into one or two sessions worse?",
+      "answer": "在整周运动量相近的人里，集中一两次练和分几次练，随访期间的死亡风险没有明显差别。",
+      "who": "约 35 万名美国成年人，自己报告平时怎么运动，研究者跟踪了约十年。",
+      "measured": "研究数的是死亡人数，按每周运动次数和总量分组；没有比较受伤、体能进步或每次练得累不累。",
+      "confidence": "这能打消“周末运动都白练”的顾虑，但没有证明两种安排在所有方面一样。",
+      "detail": "控制总运动量后，两种安排的全因死亡风险比为 1.08，95% 置信区间 0.97 至 1.20。参加者自行选择锻炼方式。",
+      "english": "At comparable total activity, mortality did not differ clearly by weekly session pattern in this observational cohort.",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "35788615",
+          "label": "Association of the \"Weekend Warrior\" and Other Leisure-time Physical Activity Patterns With All-Cause and Cause-Specific Mortality: A Nationwide Cohort Study."
+        }
+      ]
+    },
+    {
+      "slug": "stairs",
+      "topic": "日常短时活动",
+      "question": "不去健身房，赶路或爬楼时那一小段快走算不算？",
+      "question_en": "Do short bursts of everyday activity count?",
+      "answer": "算活动。平时不专门锻炼的人中，日常有短时间使劲活动的人，随访中的死亡风险较低。",
+      "who": "英国 25,241 名自称不锻炼的人，平均约 62 岁，戴设备记录活动。",
+      "measured": "设备识别的是突然变剧烈的活动，并不知道某一次是在爬楼、赶车还是干家务。平均跟踪近 7 年。",
+      "confidence": "结果是关联，没有证明多爬几段楼就能让某个人延寿，也没要求所有人做剧烈活动。",
+      "detail": "研究期间有 852 人死亡。设备测量比单靠回忆更直接，但身体本来较好的人也更可能活动得起来。",
+      "english": "Wearable-detected bursts of vigorous daily activity were associated with lower mortality among people who reported no exercise.",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "36482104",
+          "label": "Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality."
+        }
+      ]
+    },
+    {
+      "slug": "sitting",
+      "topic": "久坐",
+      "question": "同样坐很久，平时动得多和动得少有区别吗？",
+      "question_en": "Does physical activity change the link between sitting and mortality?",
+      "answer": "有区别。长时间坐着和较高死亡风险的关系，在日常活动最少的人里最明显。",
+      "who": "汇总资料中，超过 100 万人同时提供了坐多久、动多少和随访结果。",
+      "measured": "最活跃的一组里，每天坐超过 8 小时和不到 4 小时的人，死亡风险没有明显差别。",
+      "confidence": "这是人群观察。结果不能换算成“运动多少分钟就能抵消坐多久”，也没有回答久坐后腰疼的问题。",
+      "detail": "坐的时间与死亡风险的分析用了 13 项研究。研究者还单独分析了看电视的时间，两种久坐口径不能混用。",
+      "english": "High activity attenuated the association of sitting with mortality in a pooled cohort analysis; there is no personal cancellation formula.",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "27475271",
+          "label": "Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women."
+        }
+      ]
+    },
+    {
+      "slug": "taichi",
+      "topic": "太极拳",
+      "question": "老人练太极，起身和走动能更利索吗？",
+      "question_en": "Does tai chi help frail older people get up and move?",
+      "answer": "有些动作能改善：练太极的人从椅子起身、转身走动的测试表现更好，但握力没有明显变强。",
+      "who": "11 项随机试验，涉及 1,676 名至少 60 岁、有衰弱或肌少症的人。",
+      "measured": "有的测试数半分钟内能站起几次，有的计时看起身、行走、折返要多久。肌肉量和步速没有一致改善。",
+      "confidence": "能说的是这些动作有进步。对照组是否也锻炼，会影响两组能拉开多大差距。",
+      "detail": "综述分别比较了太极与不运动、太极与其他运动。动作测试和肌肉大小不能互相代替。",
+      "english": "Trials in frail or sarcopenic older adults found gains in selected functional tests, not clear gains in grip strength or muscle mass.",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "36223875",
+          "label": "The effect of Tai Chi in elderly individuals with sarcopenia and frailty: A systematic review and meta-analysis of randomized controlled trials."
+        }
+      ]
+    },
+    {
+      "slug": "protein",
+      "topic": "蛋白粉",
+      "question": "都在练力量，多补蛋白质能多长多少？",
+      "question_en": "Does extra protein add to resistance training?",
+      "answer": "平均有一点额外收获，不是喝了就长肌肉。两组都训练时，补蛋白质的一组，去掉脂肪后的体重平均多增加约 0.3 公斤。",
+      "who": "49 项试验，共 1,863 人，都做了至少 6 周力量训练。",
+      "measured": "研究测了力量、身体成分和肌肉大小。“去掉脂肪后的体重”还包括水分等，不等于 0.3 公斤全是肌肉。",
+      "confidence": "结果支持在训练基础上有小幅额外收益。并未比较品牌，也不能说明不训练、光喝蛋白粉有什么效果。",
+      "detail": "去脂体重的平均额外变化为 0.30 公斤，95% 置信区间为 0.09 至 0.52 公斤。原来吃多少蛋白质、练了多久，都可能影响收益。",
+      "english": "Across 49 trials, adding protein to resistance training increased fat-free mass by about 0.30 kg more than control on average.",
+      "card": "NOV26-O01",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "28698222",
+          "label": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults."
+        }
+      ]
+    },
+    {
+      "slug": "fitness",
+      "topic": "心肺耐力",
+      "question": "体重正常，心肺耐力就一定好吗？",
+      "question_en": "Does normal weight guarantee good fitness?",
+      "answer": "体重和耐力是两回事。即使体重正常，体能测试表现差的人，随访中的死亡风险也较高。",
+      "who": "美国一家体检机构的 25,714 名男性，平均约 44 岁。",
+      "measured": "研究同时看体重、心肺耐力和随访死亡记录。在不同体重组，耐力差都与较高风险有关。",
+      "confidence": "这项研究不能直接代表女性，也不能从体重秤读数推算一个人的耐力或寿命。",
+      "detail": "研究者把既往心血管病、吸烟、高血压等因素纳入分析。总体统计仍然不能预测某一个人会活多久。",
+      "english": "In men, low fitness predicted mortality across BMI categories. Body weight alone did not capture fitness.",
+      "group": "move",
+      "sources": [
+        {
+          "pmid": "10546694",
+          "label": "Relationship between low cardiorespiratory fitness and mortality in normal-weight, overweight, and obese men."
+        }
+      ]
+    },
+    {
+      "slug": "fasting",
+      "topic": "限时进食减重",
+      "question": "吃的一样少，再限定吃饭时间，会多瘦吗？",
+      "question_en": "Does a shorter eating window add to calorie restriction?",
+      "answer": "在一项为期一年的试验里，两组都少吃，额外限定吃饭时间的那组没有明确多瘦。",
+      "who": "139 名有肥胖问题的成年人随机分组，118 人完成一年随访。",
+      "measured": "两组平均分别减了 8.0 和 6.3 公斤。虽然数字不同，但这点差距也可能来自抽样波动。",
+      "confidence": "能回答的是这种安排是否比单纯少吃额外有效。它没有比较哪种方法对某个人更容易坚持。",
+      "detail": "两种安排的平均净差为 −1.8 公斤，95% 置信区间 −4.0 至 0.4；腰围和体脂也没显示明确的额外好处。",
+      "english": "Adding a time window to calorie restriction did not significantly improve one-year weight loss in this trial.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "35443107",
+          "label": "Calorie Restriction with or without Time-Restricted Eating in Weight Loss."
+        }
+      ]
+    },
+    {
+      "slug": "processed",
+      "topic": "超加工食品",
+      "question": "常吃超加工食品，会影响寿命吗？",
+      "question_en": "Do people who eat more ultra-processed food die earlier?",
+      "answer": "一项长期跟踪发现，吃得最多的那组死亡风险较高。它不能告诉你，吃一包零食会少活多久。",
+      "who": "西班牙近两万名大学毕业生，填问卷记录经常吃的食物。",
+      "measured": "研究按超加工食品吃得多少把人分成四组，随访中共记录 335 例死亡。",
+      "confidence": "吃什么并非随机分配，运动、收入等生活差异难以完全排除。不能把所有经过加工的食物都算进这一类。",
+      "detail": "按研究使用的 NOVA 分类，摄入最高四分之一与最低四分之一相比，调整后的风险比为 1.62（95% 置信区间 1.13 至 2.33）。",
+      "english": "Higher ultra-processed food intake was associated with mortality in a Spanish cohort. This was not a randomized food trial.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "31142450",
+          "label": "Association between consumption of ultra-processed foods and all cause mortality: SUN prospective cohort study."
+        }
+      ]
+    },
+    {
+      "slug": "fiber",
+      "topic": "膳食纤维与血糖",
+      "question": "血糖偏高，多吃膳食纤维能在化验单上看出来吗？",
+      "question_en": "Can higher fiber intake improve blood sugar control?",
+      "answer": "一些试验能测出来：增加膳食纤维后，反映一段时间平均血糖的糖化血红蛋白有小幅改善。",
+      "who": "综述收集了糖尿病前期或不同类型糖尿病成人的对照试验及长期跟踪研究。",
+      "measured": "试验比较提高纤维摄入前后的血糖、血脂等指标；关于死亡风险的资料另来自人群随访。",
+      "confidence": "能支持的是饮食里增加纤维对血糖管理有帮助。这些数据不能把效果指定给某一种粉，也不能用来替代降糖药。",
+      "detail": "论文把血糖控制的试验与观察死亡的研究分别分析。原来纤维吃得少的人，与已经吃得较多的人，变化幅度可能不同。",
+      "english": "Controlled trials found modest improvements in glycaemic measures with increased fiber; mortality evidence came from cohorts.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "32142510",
+          "label": "Dietary fibre and whole grains in diabetes management: Systematic review and meta-analyses."
+        }
+      ]
+    },
+    {
+      "slug": "tea",
+      "topic": "喝茶",
+      "question": "常喝茶的人更长寿，是茶本身的功劳吗？",
+      "question_en": "Can studies of tea drinkers prove tea extends life?",
+      "answer": "跟踪研究里，喝茶较多的人死亡风险往往略低；单凭这些资料，分不清有多少是茶本身的功劳。",
+      "who": "综述汇总了 39 篇前瞻性人群研究报告，主要看日常喝红茶、绿茶的成年人。",
+      "measured": "研究看心血管事件、中风或死亡；没有把人随机分成长期喝茶与不喝两组。",
+      "confidence": "作者对全因死亡这项结果的把握较低。不能把喝茶的人群差异写成“喝一杯就多活多久”。",
+      "detail": "偏倚风险较高的研究往往报告更大的效果。研究饮品与高浓度提取物也不是同一件事。",
+      "english": "A review of prospective cohorts found inverse associations, but certainty for all-cause mortality was low.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "32073596",
+          "label": "Dose-Response Relation between Tea Consumption and Risk of Cardiovascular Disease and All-Cause Mortality: A Systematic Review and Meta-Analysis of Population-Based Studies."
+        }
+      ]
+    },
+    {
+      "slug": "coffee",
+      "topic": "咖啡因和睡眠",
+      "question": "下午喝了咖啡，到睡觉时还可能有影响吗？",
+      "question_en": "Can caffeine six hours before bed still affect sleep?",
+      "answer": "可能。一次摄入较多咖啡因，即使离睡觉还有六小时，当晚的睡眠也可能缩短。",
+      "who": "一项小型成人对照试验，在不同夜晚比较咖啡因和安慰剂。",
+      "measured": "受试者用睡眠记录仪，也写睡眠日记。研究在睡前、提前三小时和提前六小时分别作了比较。",
+      "confidence": "试验用的是固定且较高的咖啡因量，不是一小杯咖啡。不能据此给所有人划一条下午几点钟的截止线。",
+      "detail": "研究把摄入时间分开，避免把刚喝完的影响套到整个下午。各种咖啡、茶和能量饮料所含咖啡因并不一样。",
+      "english": "Caffeine given six hours before bedtime still disrupted sleep in this small controlled trial. The tested amount is not every cup of coffee.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "24235903",
+          "label": "Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed."
+        }
+      ]
+    },
+    {
+      "slug": "regain",
+      "topic": "减重后反弹",
+      "question": "用了替尔泊肽减重，停药后反弹的只有体重吗？",
+      "question_en": "When weight returns after tirzepatide, do other measures change?",
+      "answer": "不只体重。在停药后体重反弹较多的人里，原先改善的腰围、血压和血糖指标往往也往回走。",
+      "who": "308 人在治疗时至少减掉原体重的十分之一，随后被分到停药组，继续跟踪一年。",
+      "measured": "按减掉的体重又长回来多少分组，再比较腰围和化验变化。反弹较多组的平均腰围增加也更多。",
+      "confidence": "这是对停药组的事后分析，不能据此预测某个人反弹多少；是否继续用药要和开药医生商量。",
+      "detail": "研究只分析对治疗已有明显反应的人，不能代表所有开始用减重药者；反弹幅度不是随机分配的。",
+      "english": "Greater regain after tirzepatide withdrawal was accompanied by greater reversal of several cardiometabolic improvements in a post hoc analysis.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "41284285",
+          "label": "Cardiometabolic Parameter Change by Weight Regain on Tirzepatide Withdrawal in Adults With Obesity: A Post Hoc Analysis of the SURMOUNT-4 Trial."
+        }
+      ]
+    },
+    {
+      "slug": "older-weight",
+      "topic": "减重与行走",
+      "question": "体重偏高的老人减肥，除了秤上的数，走路会变快吗？",
+      "question_en": "Can a weight-loss and exercise program improve walking in older women?",
+      "answer": "一项小试验不只称了体重：同时调整饮食和运动的老年女性，走完 400 米也比对照组进步更多。",
+      "who": "研究让体重偏高、活动能力有一定受限的老年女性随机参加综合项目或健康教育。",
+      "measured": "综合项目组平均减重约 6 公斤；走完 400 米的用时也改善，膝部伸展力量没有明显下降。",
+      "confidence": "饮食和运动一起改，无法分清各占多少功劳。不能把它解释成让虚弱老人只少吃就会走得更快。",
+      "detail": "研究比较的是整套干预与健康教育，也做了起身、平衡等身体功能测试。参与人群很具体。",
+      "english": "In an older female sample, weight loss plus exercise improved walking performance versus education; its components were not isolated.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "21753869",
+          "label": "Effects of a weight loss plus exercise program on physical function in overweight, older women: a randomized controlled trial."
+        }
+      ]
+    },
+    {
+      "slug": "meal-glucose",
+      "topic": "进食时间与血糖",
+      "question": "把一天的饭集中在较短时间，血糖会稳一点吗？",
+      "question_en": "Can a shorter eating window change glucose in type 2 diabetes?",
+      "answer": "一个很小的试验里可以：限时吃饭的那几周，血糖处于研究设定范围内的时间平均更长。",
+      "who": "14 名 2 型糖尿病成年人，每个人先后试过两种进食时间安排，每种持续三周。",
+      "measured": "平均每天在目标范围内约 15.1 小时，对照期间约 12.2 小时；另一项衡量胰岛素敏感性的主要测量没有明确改善。",
+      "confidence": "短期血糖曲线不能代表长期并发症。正在用降糖药的人，改变进餐时间要先与医生讨论。",
+      "detail": "这是交叉试验，让同一个人和自己比较。24 小时平均血糖与肝脏、肌肉对胰岛素的反应是不同结果。",
+      "english": "A three-week crossover trial found more time in the normal glucose range, without a clear improvement in insulin sensitivity.",
+      "group": "food",
+      "sources": [
+        {
+          "pmid": "35871650",
+          "label": "Three weeks of time-restricted eating improves glucose homeostasis in adults with type 2 diabetes but does not improve insulin sensitivity: a randomised crossover trial."
+        }
+      ]
     },
     {
       "slug": "cholesterol",
@@ -42,21 +320,129 @@
       "detail": "这份汇总纳入 28 项随机对照试验。LDL 胆固醇的平均组间差是 −0.33 mmol/L（95% 置信区间 −0.38 至 −0.27）。作者把这项结果的证据评为中等，因为各试验结果不完全一致。",
       "english": "Across 28 trials, psyllium lowered LDL cholesterol by an average of 0.33 mmol/L relative to control. This analysis assessed blood lipids, not the number of heart attacks.",
       "card": "NOV26-O03",
-      "sources": [{"pmid": "30239559", "label": "车前子壳和血脂：28 项随机试验"}]
+      "sources": [
+        {
+          "pmid": "30239559",
+          "label": "车前子壳和血脂：28 项随机试验"
+        }
+      ],
+      "group": "heart"
     },
     {
-      "slug": "strength",
-      "topic": "肌力",
-      "question": "练力量时吃肌酸，会更有劲吗？",
-      "question_en": "Does creatine add to strength training in older adults?",
-      "answer": "两组都练力量，吃肌酸的那组在力量测试中平均多进步了一点。",
-      "who": "11 项随机试验，参加者至少 60 岁，多数身体状况较好。比较的是同样练力量、补不补肌酸的差别。",
-      "measured": "力量测试有小幅额外进步；肌肉多长了多少、日常活动有没有更轻松，都没看出明确的额外好处。",
-      "confidence": "对力量这点进步有中等把握。身体虚弱的老人能不能同样受益，还不清楚。",
-      "detail": "综述把不同力量测试换算到同一尺度，合并效应量 g = 0.31（95% 置信区间 0.18 至 0.45）。这不等于力量多了 31%。作者对力量、肌肉量、身体功能三项结果的证据把握分别评为中等、低和很低。",
-      "english": "In generally healthy adults aged 60 or older, creatine added a small strength benefit to resistance training. Extra gains in muscle mass or physical function remain uncertain.",
-      "card": "NOV26-O02",
-      "sources": [{"pmid": "42712402", "label": "60 岁以上人群：肌酸加力量训练的 11 项试验"}]
+      "slug": "fish-oil",
+      "topic": "普通鱼油",
+      "question": "没有心血管病，吃普通鱼油能预防心梗或中风吗？",
+      "question_en": "Does ordinary fish oil prevent a first major cardiovascular event?",
+      "answer": "一项大型试验没有发现，普通鱼油能明确减少心梗、中风或心血管死亡合在一起的总风险。",
+      "who": "美国 25,871 名中老年人，随机吃鱼油或安慰剂，随访中位数 5.3 年。",
+      "measured": "主要心血管事件两组分别有 386 人和 419 人发生。单看心梗出现较少的信号，但它是次要结果。",
+      "confidence": "这对一般人群的预防问题很有参考价值，不能拿来代替高风险患者使用处方鱼油的研究。",
+      "detail": "主要组合结果的风险比为 0.92，95% 置信区间 0.80 至 1.06。吃鱼这种饮食习惯也不是这项试验比较的干预。",
+      "english": "VITAL did not show a clear reduction in its primary cardiovascular composite with marine omega-3 supplements.",
+      "card": "NOV26-O04",
+      "group": "heart",
+      "sources": [
+        {
+          "pmid": "30415637",
+          "label": "Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer."
+        }
+      ]
+    },
+    {
+      "slug": "pressure",
+      "topic": "老年高血压",
+      "question": "老人降血压，除了数字好看，能少出心血管大事吗？",
+      "question_en": "Can tighter blood-pressure control reduce cardiovascular events in older patients?",
+      "answer": "在一些老年高血压患者中，医生指导下较严格地控制血压，确实减少了严重心血管事件。",
+      "who": "4 项随机试验，共 10,857 名至少 65 岁的高血压患者，平均随访约 3 年。",
+      "measured": "合并多个严重心血管事件来看，强化治疗组风险较低；单看心梗或中风，这份汇总未看到明确差别。",
+      "confidence": "这不是“血压越低越好”的个人目标。患者是否容易头晕、肾功能如何，都影响医生怎么定目标。",
+      "detail": "主要心血管事件的相对风险为 0.71（95% 置信区间 0.60 至 0.84）。这是两组的相对差，不是每 100 人一定少 29 人出事。",
+      "english": "Four trials in older hypertensive patients found fewer major cardiovascular events with more intensive treatment. Targets depend on the patient.",
+      "group": "heart",
+      "sources": [
+        {
+          "pmid": "28153104",
+          "label": "Outcomes of Intensive Blood Pressure Lowering in Older Hypertensive Patients."
+        }
+      ]
+    },
+    {
+      "slug": "dash",
+      "topic": "降压饮食",
+      "question": "都吃降压饮食，再缩短吃饭时间，血压会更低吗？",
+      "question_en": "Does a shorter eating window add to a DASH diet for blood pressure?",
+      "answer": "一项六周试验里，两组血压都下降；加上限时进食的那组平均降得更多。",
+      "who": "74 名没有高危特征的一级原发性高血压患者。两组都按 DASH 饮食吃，其中一组还限制进食时段。",
+      "measured": "高压平均分别下降约 8.5 和 5.6 毫米汞柱。研究测的是血压，没有跟踪多年后的中风或心梗。",
+      "confidence": "有随机分组，但时间短、人数少。研究不支持用限时吃饭自行取代降压药。",
+      "detail": "每组 37 人。只有新增的进食时间限制是两组的主要区别，不能把两组血压下降都归给它。",
+      "english": "A small six-week randomized trial found a greater blood-pressure drop with DASH plus a time window than with DASH alone.",
+      "group": "heart",
+      "sources": [
+        {
+          "pmid": "38886740",
+          "label": "Effects of DASH diet with or without time-restricted eating in the management of stage 1 primary hypertension: a randomized controlled trial."
+        }
+      ]
+    },
+    {
+      "slug": "q10",
+      "topic": "辅酶 Q10",
+      "question": "辅酶 Q10 的“护心”研究，研究的是健康人吗？",
+      "question_en": "Who was studied in the positive heart-failure trial of CoQ10?",
+      "answer": "常被引用的这项试验研究的是中重度心衰患者。他们本来就在接受治疗，不能用来说明健康人补 Q10 能护心。",
+      "who": "420 名慢性心衰患者，在原有治疗上随机加辅酶 Q10 或安慰剂。",
+      "measured": "两年内，主要心血管不良事件约为 15% 对 26%；但 16 周时，步行测试等短期指标并没有明显改善。",
+      "confidence": "对这批患者是值得关注的结果。心衰有多种类型，一项试验不足以判断每个人是否适合加用。",
+      "detail": "Q-SYMBIO 的比较是加用补充剂与加用安慰剂，没有用 Q10 替代心衰标准治疗。",
+      "english": "Q-SYMBIO tested adjunctive CoQ10 in moderate-to-severe heart failure, not prevention in healthy people.",
+      "card": "NOV26-O10",
+      "group": "heart",
+      "sources": [
+        {
+          "pmid": "25282031",
+          "label": "The effect of coenzyme Q10 on morbidity and mortality in chronic heart failure: results from Q-SYMBIO: a randomized double-blind trial."
+        }
+      ]
+    },
+    {
+      "slug": "multivitamin",
+      "topic": "复合维生素",
+      "question": "平时吃得不够均衡，吃复合维生素就更能预防心血管病吗？",
+      "question_en": "Did baseline diet identify who gets cardiovascular protection from a multivitamin?",
+      "answer": "在一项长期试验的分析里，按原有饮食分组后，没找到哪种吃法的人靠复合维生素能稳定获得额外保护。",
+      "who": "13,316 名至少 50 岁的美国男医生，基线时填过饮食问卷，平均观察约 11 年。",
+      "measured": "比较的是心梗、中风、心血管死亡等实际事件，再看原来的饮食会不会改变补充剂的效果。",
+      "confidence": "男医生不能代表所有人。吃得不均衡也不同于医生已经查明缺某一种维生素。",
+      "detail": "这是原试验的二次分析。个别饮食分组出现差别，但在大量比较中没有形成一致规律。",
+      "english": "Baseline diet did not consistently modify the effect of randomized multivitamins on cardiovascular outcomes in older male physicians.",
+      "group": "heart",
+      "sources": [
+        {
+          "pmid": "28384735",
+          "label": "Effect of Baseline Nutritional Status on Long-term Multivitamin Use and Cardiovascular Disease Risk: A Secondary Analysis of the Physicians' Health Study II Randomized Clinical Trial."
+        }
+      ]
+    },
+    {
+      "slug": "apob",
+      "topic": "血脂单上的 apoB",
+      "question": "血脂单上有了 LDL，再看 apoB 会看到不同的事吗？",
+      "question_en": "Can apoB and LDL cholesterol tell different stories?",
+      "answer": "会。LDL 胆固醇看的是携带的胆固醇量，apoB 更接近在数相关颗粒；同一个人在两项指标中的位置可能不同。",
+      "who": "加拿大一项研究纳入 2,103 名起初没有冠心病的男性。",
+      "measured": "把每项化验值从低到高分成五组，只有约一半的人在 LDL 和 apoB 的分组位置完全相同。",
+      "confidence": "这能解释两项指标为何不总一致。分组不一样不等于有病，更不等于每个人都该自行加检查或换药。",
+      "detail": "研究按人群分布比较，而不是拿化验单的正常范围计数。部分 apoB 相对较高者还伴有更多代谢风险特征。",
+      "english": "Only about half of men fell into the same quintile for apoB and LDL cholesterol; these measures capture different aspects of lipoproteins.",
+      "group": "heart",
+      "sources": [
+        {
+          "pmid": "12745098",
+          "label": "Concordance/discordance between plasma apolipoprotein B levels and the cholesterol indexes of atherosclerotic risk."
+        }
+      ]
     },
     {
       "slug": "memory",
@@ -70,7 +456,569 @@
       "detail": "NAD+ 是细胞参与能量代谢的一种物质，NR 是身体用来合成它的原料之一。这项试验把认知功能列为主要结果。验血能说明身体里的物质变了，不能代替做认知测试。",
       "english": "In a 12-week pilot trial in amnestic mild cognitive impairment, 42 people completed follow-up. Blood NAD+ roughly doubled in the NR group, without improvement in the primary cognitive outcome.",
       "card": "NOV26-O07",
-      "sources": [{"pmid": "42478598", "label": "NR 试验：同时验血和做认知测试"}]
+      "sources": [
+        {
+          "pmid": "42478598",
+          "label": "NR 试验：同时验血和做认知测试"
+        }
+      ],
+      "group": "sleep"
+    },
+    {
+      "slug": "magnesium",
+      "topic": "镁和睡眠",
+      "question": "老人补镁，是更快睡着，还是整晚能睡更久？",
+      "question_en": "Does magnesium help older adults fall asleep or sleep longer?",
+      "answer": "小试验里有更快入睡的信号，整晚能否睡得更久却说不准。",
+      "who": "3 项随机试验共 151 名老年人，比较口服镁与安慰剂。",
+      "measured": "汇总可合并的结果后，平均入睡约快 17 分钟；总睡眠时长没有明确差别。",
+      "confidence": "这些试验都有一定偏倚，作者对结果把握很低。17 分钟不能当成每个人会得到的效果。",
+      "detail": "入睡时间和整晚总时长是两项不同的结局；这份综述对证据质量的评价为低到很低。",
+      "english": "Small trials suggested shorter sleep onset, without a clear gain in total sleep time; certainty was low to very low.",
+      "card": "NOV26-O09",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "33865376",
+          "label": "Oral magnesium supplementation for insomnia in older adults: a Systematic Review & Meta-Analysis."
+        }
+      ]
+    },
+    {
+      "slug": "melatonin",
+      "topic": "褪黑素",
+      "question": "吃褪黑素能更快睡着，就等于第二天觉得睡好了？",
+      "question_en": "Does falling asleep faster on melatonin mean sleep feels better?",
+      "answer": "不一定。在一些老年失眠患者中，设备测到入睡变快，患者自己评价的睡眠质量却没见改善。",
+      "who": "一份早期综述中的 6 项双盲交叉试验合计 95 人，各试验平均年龄约 65 至 79 岁。",
+      "measured": "4 项试验发现入睡时间缩短；有些用腕部仪器，有些做睡眠监测，只有部分研究也询问本人感受。",
+      "confidence": "人数少、研究早、所用制剂不同。这个结果不能用于判断所有失眠类型或长期使用效果。",
+      "detail": "设备能看某些睡眠变化，次日自我感觉则回答另一个问题。这份资料没有比较所有助眠药。",
+      "english": "Small older trials in selected elderly patients found changes in sleep onset without clear subjective sleep-quality benefits.",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "11828891",
+          "label": "Melatonin in elderly patients with insomnia. A systematic review."
+        }
+      ]
+    },
+    {
+      "slug": "insomnia",
+      "topic": "失眠训练",
+      "question": "网上的失眠训练课，比只看睡眠常识更有用吗？",
+      "question_en": "Can digital CBT for insomnia outperform sleep education in people with mild cognitive impairment?",
+      "answer": "一项小试验里，做结构化失眠训练的人，12 周后的失眠症状评分比只看睡眠常识的人改善更多。",
+      "who": "40 名至少 50 岁、既有失眠症状又有轻度认知障碍的成年人，随机分到两个线上项目。",
+      "measured": "比较的是一套认知行为治疗课程与睡眠健康教育，结果来自失眠严重程度问卷。",
+      "confidence": "这主要是看课程能不能办起来的小试验。参加者知道自己在哪一组，不能把结果套给所有助眠软件。",
+      "detail": "19 人参加治疗课程，21 人参加健康教育；两组接触内容和次数也不同。研究没有证明预防失智。",
+      "english": "A small feasibility trial found lower insomnia symptom scores with structured digital CBT-I versus online education.",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "41755528",
+          "label": "Digital Cognitive Behavioural Therapy for Insomnia Compared to Sleep Health Education in Older Adults With Mild Cognitive Impairment and Insomnia: A Feasibility Randomised Controlled Trial."
+        }
+      ]
+    },
+    {
+      "slug": "sleep-hours",
+      "topic": "睡眠时长",
+      "question": "睡得越久，寿命就越长吗？",
+      "question_en": "Does a longer night's sleep always mean a longer life?",
+      "answer": "跟踪研究没看到“越久越好”。与中间时长相比，自报睡得特别短和特别长的人，后来的死亡风险都较高。",
+      "who": "汇总多项前瞻性成人研究，先问日常睡多久，再查随访期间的死亡记录。",
+      "measured": "测的是人群中的睡眠时长和死亡风险。研究没有要求原本健康的人改变睡眠时间。",
+      "confidence": "生病会让人睡得更久，也可能缩短寿命。看到长睡与风险有关，不等于少睡就会改善健康。",
+      "detail": "各研究定义短睡、长睡的界线不同，不能根据这条曲线算出适合每个人的精确时长。",
+      "english": "Both short and long self-reported sleep were associated with mortality in prospective cohorts; this does not establish an optimal duration for an individual.",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "20469800",
+          "label": "Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies."
+        }
+      ]
+    },
+    {
+      "slug": "cpap",
+      "topic": "睡眠呼吸暂停",
+      "question": "打鼾的人用了呼吸机，症状改善和预防心梗是一回事吗？",
+      "question_en": "Does relief of sleep apnea symptoms prove prevention of cardiovascular events?",
+      "answer": "是两个结果。试验里鼾声和白天犯困都减轻了，但严重心血管事件没有明确减少。",
+      "who": "SAVE 试验纳入已有心血管病、合并中重度阻塞性睡眠呼吸暂停的人，多数并不特别嗜睡。",
+      "measured": "呼吸机加常规治疗与单用常规治疗相比，平均跟踪 3.7 年；使用组平均每晚使用 3.3 小时。",
+      "confidence": "这是特定患者和实际使用时长下的结果。不能据此判断单纯打鼾是否要治疗，也不是停用已开呼吸机的理由。",
+      "detail": "主要心血管事件为 17.0% 对 15.4%，两组差异不明确。呼吸暂停次数、症状和生活质量则是另外测量的结果。",
+      "english": "In SAVE, CPAP improved symptoms but did not reduce the primary cardiovascular composite in the trial population.",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "27571048",
+          "label": "CPAP for Prevention of Cardiovascular Events in Obstructive Sleep Apnea."
+        }
+      ]
+    },
+    {
+      "slug": "mind-diet",
+      "topic": "健脑饮食",
+      "question": "照着“健脑食谱”吃三年，记忆测试会比别人好吗？",
+      "question_en": "Did the MIND diet outperform a control diet on cognition over three years?",
+      "answer": "这项试验没有看到明确优势。两组的认知测试都有进步，健脑饮食组没有明显多进步。",
+      "who": "604 名没有认知障碍、有失智家族史的老年人。两组都接受轻度热量控制。",
+      "measured": "三年后比较一组认知测试的总分，脑部影像的变化也没有明显组间差别。",
+      "confidence": "这并不等于健康饮食毫无价值。它回答的是这份特定食谱比对照饮食有没有额外的认知好处。",
+      "detail": "研究比较 MIND 饮食和对照饮食，两组均获得饮食支持。认知分数的平均组间差很小，置信区间跨过零。",
+      "english": "In a three-year randomized trial, changes in cognition did not differ clearly between MIND and a control diet with mild calorie restriction.",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "37466280",
+          "label": "Trial of the MIND Diet for Prevention of Cognitive Decline in Older Persons."
+        }
+      ]
+    },
+    {
+      "slug": "hearing",
+      "topic": "助听器与记忆",
+      "question": "已经有听力和记忆问题，配助听器就能防止发展成失智吗？",
+      "question_en": "Did hearing aids prevent progression to dementia-level impairment over two years?",
+      "answer": "上海一项试验里，有些人的认知评分改善了，但两年内发展到失智程度的人数没有明确减少。",
+      "who": "703 名至少 60 岁、既有中重度听力损失又有轻度认知障碍的人，随机接受助听干预或听力教育。",
+      "measured": "主要看多少人进展到失智水平；其次才看有多少人评分恢复到正常。两项结果回答不同的问题。",
+      "confidence": "试验没有证明防止失智，也没有否定助听器对听力沟通的价值。",
+      "detail": "两组进展比例分别约 3.1% 和 4.7%，差异没有排除偶然。评分改善是预先设定的次要结果。",
+      "english": "CHOICE found no clear reduction in progression to dementia-level impairment at 24 months, despite a signal on a secondary cognitive outcome.",
+      "group": "sleep",
+      "sources": [
+        {
+          "pmid": "42804222",
+          "label": "Hearing Intervention for Older Adults With Mild Cognitive Impairment: The CHOICE Randomized Clinical Trial."
+        }
+      ]
+    },
+    {
+      "slug": "wrinkles",
+      "topic": "皱纹",
+      "question": "喝胶原蛋白，能让皱纹变浅吗？",
+      "question_en": "Does drinking collagen reduce wrinkles?",
+      "answer": "皮肤可能更水润，但还说不准皱纹会不会变浅。这两件事用的是不同的测量方法。",
+      "who": "35 项随机试验，共 2,534 名健康成年人，比较口服胶原蛋白肽和对照组。",
+      "measured": "仪器测到皮肤含水量和弹性有所改善；单看皱纹，去掉少数对结果影响特别大的研究，淡纹效果就不稳定了。",
+      "confidence": "保湿有一些证据。光凭这些试验，还不足以说照镜子能看见皱纹变浅。",
+      "detail": "这份综述分别分析了含水量、弹性和皱纹。另一项 12 周试验在部分眼角纹指标上看到了改善，但它用的是胶原蛋白、维生素 E 和谷胱甘肽的组合，没法把变化单算给胶原蛋白。",
+      "english": "A review of 35 trials found signals for hydration and elasticity. Wrinkle results were sensitive to individual studies; a benefit from a mixed product cannot be attributed to collagen alone.",
+      "card": "NOV26-O06",
+      "sources": [
+        {
+          "pmid": "43047141",
+          "label": "35 项试验：保湿、弹性和皱纹分开分析"
+        },
+        {
+          "pmid": "43047132",
+          "label": "12 周复方试验：眼角纹与皮肤弹性"
+        }
+      ],
+      "group": "skin"
+    },
+    {
+      "slug": "sunscreen",
+      "topic": "防晒与皮肤老化",
+      "question": "平时坚持防晒，几年后真能看出区别吗？",
+      "question_en": "Can regular sunscreen slow visible skin aging?",
+      "answer": "能看到一些区别。澳大利亚一项试验发现，经常用防晒的人，几年后皮肤表面纹理老化得较慢。",
+      "who": "903 名不到 55 岁的成年人，随机分成每天用防晒或照自己习惯用的组。",
+      "measured": "约四年半后，研究者比较皮肤表面纹理的变化。对照组也可以用防晒，不是完全不防晒。",
+      "confidence": "有长期随机试验支持预防日晒引起的老化；它没证明防晒霜能把已经有的皱纹抹掉。",
+      "detail": "研究在日照较强的澳大利亚进行。每日组纹理老化进展的相对优势比为 0.76，不能翻译成每个人的皱纹少 24%。",
+      "english": "Regular sunscreen use slowed measured photoaging over 4.5 years compared with discretionary use.",
+      "card": "NOV26-T01",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "23732711",
+          "label": "Sunscreen and prevention of skin aging: a randomized trial."
+        }
+      ]
+    },
+    {
+      "slug": "tretinoin",
+      "topic": "外用维 A 酸",
+      "question": "药用维 A 酸能改善晒出来的细纹吗？",
+      "question_en": "Does prescription topical tretinoin improve photoaging?",
+      "answer": "多项人体试验发现，外用维 A 酸能改善日晒后的一些细纹和色素不均。研究的是药用维 A 酸。",
+      "who": "一份综述纳入 7 项随机试验，参加者已有日晒造成的皮肤改变，以女性居多。",
+      "measured": "研究者观察皱纹、色斑等外观变化。不同试验用的制剂和评分方法不同，观察约数月至两年。",
+      "confidence": "在这种用途上有直接人体证据，但不能套给任意“含维 A”护肤品。这是处方药，孕期或备孕尤其要先问医生。",
+      "detail": "维 A 酸与化妆品中的视黄醇不是同一成分。试验没有给出适用于所有产品、所有人的统一淡纹比例。",
+      "english": "Trials support topical tretinoin for some signs of photoaging; findings do not transfer directly to cosmetic retinol.",
+      "card": "NOV26-T02",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "35620028",
+          "label": "Topical tretinoin for treating photoaging: A systematic review of randomized controlled trials."
+        }
+      ]
+    },
+    {
+      "slug": "retinol",
+      "topic": "视黄醇",
+      "question": "视黄醇淡纹的那项试验，涂的是脸吗？",
+      "question_en": "Was the classic retinol wrinkle trial conducted on faces?",
+      "answer": "没有。研究者在同一个人的两只手臂上做对照；用视黄醇乳液的一侧，细纹评分改善更多。",
+      "who": "36 名住在养老机构的老人，平均 87 岁，每人一侧手臂用研究乳液，另一侧用不含视黄醇的基底。",
+      "measured": "24 周后比较细纹评分，两只手臂有差别。部分人另做了皮肤取样。",
+      "confidence": "这个设计能比较这款乳液在老年手臂上的作用，不能保证任意面霜用在脸上会有同样变化。",
+      "detail": "实验人员分配左右手臂，评估时不知道哪侧用了视黄醇。评价组织变化的子样本比 36 人还小。",
+      "english": "The controlled 24-week retinol study found better fine-wrinkle scores on treated aged arm skin, not directly on the face.",
+      "card": "NOV26-T03",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "17515510",
+          "label": "Improvement of naturally aged skin with vitamin A (retinol)."
+        }
+      ]
+    },
+    {
+      "slug": "niacinamide",
+      "topic": "外用烟酰胺",
+      "question": "涂烟酰胺，脸上的色斑会淡一点吗？",
+      "question_en": "Did topical niacinamide improve pigmented spots?",
+      "answer": "有一项半脸试验看到色斑外观改善。它回答的是特定配方能不能让部分斑点变淡，没证明能把自然肤色变白。",
+      "who": "50 名有日晒老化迹象的白人女性，一侧脸用烟酰胺配方，另一侧用不含它的基底。",
+      "measured": "12 周后用照片和仪器比较，色斑、部分细纹和肤色泛黄等指标有所改善。",
+      "confidence": "同一人左右脸比较很有用，但人群和肤色范围窄，不能推到所有肤色和所有色斑。",
+      "detail": "研究测了多种外观指标，也测了弹性。结论针对这款外用配方，不涉及口服烟酰胺。",
+      "english": "A 12-week split-face trial found improvement in pigmented spots and several appearance measures in a selected female sample.",
+      "card": "NOV26-T04",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "16029679",
+          "label": "Niacinamide: A B vitamin that improves aging facial skin appearance."
+        }
+      ]
+    },
+    {
+      "slug": "vitamin-c",
+      "topic": "外用维生素 C",
+      "question": "维 C 精华改善皮肤纹理，有人体试验看过吗？",
+      "question_en": "Was topical vitamin C tested on skin texture in people?",
+      "answer": "有。一项试验中，含维 C 的乳霜比不含维 C 的基底更能改善日晒后皮肤的表面纹理。",
+      "who": "有日晒老化迹象的女性，研究部位是颈下和手臂，不是把各种维 C 精华往脸上比较。",
+      "measured": "研究持续半年，除了医生评分，还给皮肤纹理做印模，看到部分较深纹沟变浅。",
+      "confidence": "能支持的是特定乳霜对这些部位的效果；不能从中推出某瓶精华能淡多少斑。",
+      "detail": "皮肤印模记录表面起伏，另有组织取样。口服维生素 C 与这项外用研究的给药途径不同。",
+      "english": "A six-month controlled trial found changes in texture on photoaged neck and arm skin with one topical vitamin C cream.",
+      "card": "NOV26-T05",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "12823436",
+          "label": "Topical ascorbic acid on photoaged skin. Clinical, topographical and ultrastructural evaluation: double-blind study vs. placebo."
+        }
+      ]
+    },
+    {
+      "slug": "azelaic",
+      "topic": "壬二酸与黄褐斑",
+      "question": "壬二酸淡黄褐斑的研究，有没有把防晒也算进去？",
+      "question_en": "Was sunscreen used in the azelaic-acid melasma trial?",
+      "answer": "有。比较壬二酸和另一种淡斑药的试验里，两组都做了防晒；不能说单靠壬二酸就能得到全部效果。",
+      "who": "329 名有黄褐斑的女性，一组用研究用壬二酸乳霜，一组用氢醌乳霜，都配合广谱防晒。",
+      "measured": "24 周后比较斑片大小、颜色和总体评分，这些项目没有发现两组有明显差别。",
+      "confidence": "没发现差别不等于已证明两者完全等效。研究针对黄褐斑，也没有测试所有浓度的日常护肤品。",
+      "detail": "研究用的是两种有活性的配方，缺少只用基底加防晒的第三组，无法拆开每项措施的贡献。",
+      "english": "Both groups used sunscreen in a 24-week melasma trial; no clear between-group difference was found on the reported measures.",
+      "card": "NOV26-T06",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "1816137",
+          "label": "The treatment of melasma. 20% azelaic acid versus 4% hydroquinone cream."
+        }
+      ]
+    },
+    {
+      "slug": "ceramides",
+      "topic": "神经酰胺与皮肤屏障",
+      "question": "湿疹皮肤用了含神经酰胺的霜，变好了就是它的功劳吗？",
+      "question_en": "Did a ceramide cream add measurable benefit to standard eczema care?",
+      "answer": "不能只看使用前后。一个试验里两组湿疹都改善了，含神经酰胺那组在关键屏障指标上没有明确多改善。",
+      "who": "60 名患中度特应性皮炎的成年人，都接受标准治疗，再随机使用研究乳霜或对照。",
+      "measured": "比较角质层水分、皮肤水分流失等指标。观察到 42 天，两组改善幅度的差距没有达到明确水平。",
+      "confidence": "这对一个具体配方是有用的对照，不能据此说所有保湿霜都无效，或所有神经酰胺霜都更好。",
+      "detail": "研究是单中心、样本较小的双盲试验。某组“比试验前好”和“比另一组好”是两个问题。",
+      "english": "In adults receiving standard atopic dermatitis therapy, key barrier changes did not differ clearly between groups in a small trial.",
+      "card": "NOV26-T07",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "42868105",
+          "label": "Effect of a Ceramide NP-Containing Moisturizer on Skin Barrier Function in Adults with Atopic Dermatitis: A Randomized, Double-Blind, Placebo-Controlled Study."
+        }
+      ]
+    },
+    {
+      "slug": "glycerol",
+      "topic": "甘油与干燥起屑",
+      "question": "“甘油能改善起皮”的试验，用的是纯甘油吗？",
+      "question_en": "Was pure glycerol tested in the dry-skin trial?",
+      "answer": "不是。试验用的是甘油加石蜡的乳液，治的是肾病相关的皮肤干燥。这个组合比基底乳液更能改善起屑。",
+      "who": "100 名有中重度肾病相关皮肤干燥的患者，左右小腿分别用两种乳液，99 人纳入分析。",
+      "measured": "第七天，研究乳液一侧约 73% 达到预设改善标准，对照一侧约 44%。",
+      "confidence": "同一个人左右腿作对照，可以比较成品；不能分出甘油和石蜡各贡献多少，也不等于普通干皮有同样改善率。",
+      "detail": "达标指干燥评分至少改善两级，后续开放使用阶段没有沿用同样的盲法比较。",
+      "english": "A glycerol-plus-paraffin emulsion improved uremic dry skin more than its base; the study did not isolate glycerol.",
+      "card": "NOV26-T08",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "21258039",
+          "label": "Randomized, double-blind study with glycerol and paraffin in uremic xerosis."
+        }
+      ]
+    },
+    {
+      "slug": "hyaluronic",
+      "topic": "外涂玻尿酸",
+      "question": "外涂玻尿酸，保湿和填平眼纹是一回事吗？",
+      "question_en": "Do all topical hyaluronic acid creams that hydrate also reduce eye wrinkles?",
+      "answer": "保湿比较一致，眼纹结果却随配方而变。外涂乳霜的试验也不是在研究注射填充。",
+      "who": "76 名 30 至 60 岁女性，眼周一侧用含透明质酸的乳霜，另一侧用基底乳霜。",
+      "measured": "60 天后，不同分子大小的配方都改善了含水量和弹性；只有部分较小分子的配方在纹深指标上有明显改善。",
+      "confidence": "只能按测试过的成品和部位来读。“玻尿酸”三个字不足以保证每瓶都能淡纹。",
+      "detail": "研究分别测含水量、弹性和眼周皮肤印模。水分读数上升，本身并不能证明纹路变浅。",
+      "english": "Hydration improved across the tested formulations, whereas wrinkle-depth benefits were seen only with some molecular weights.",
+      "card": "NOV26-T09",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "22052267",
+          "label": "Efficacy of cream-based novel formulations of hyaluronic acid of different molecular weights in anti-wrinkle treatment."
+        }
+      ]
+    },
+    {
+      "slug": "pdrn",
+      "topic": "外涂 PDRN",
+      "question": "PDRN 眼霜有效，能拿水光针的研究来证明吗？",
+      "question_en": "Can injection results establish whether a topical PDRN cream works?",
+      "answer": "不能。涂在皮肤上和注射进去是两种用法。外涂有自己的小试验，但还不能替所有 PDRN 眼霜作保证。",
+      "who": "一项 31 人、28 天的半脸试验，一侧用特定 PDRN 眼霜，一侧用视黄醇眼霜。",
+      "measured": "作者报告眼周纹路等测量有差别。没有一侧只用基底，因此不能从这里算出它比普通基底多改善多少。",
+      "confidence": "范围只到短期、这两款配方和眼周。它也不能回答医美注射的效果或安全性。",
+      "detail": "论文还报告了细胞和离体皮肤实验。判断眼霜对人的作用时，应读单独的人体部分；也不能把类别的撤稿数算到这篇头上。",
+      "english": "A short split-face study compared a specific topical PDRN formulation with retinol, without a vehicle-only arm. Injection evidence is separate.",
+      "card": "NOV26-T10",
+      "group": "skin",
+      "sources": [
+        {
+          "pmid": "42430369",
+          "label": "Topical medium-length PDRN enhances dermal extracellular matrix repair in photodamaged skin via PI3K-Akt/TGF-β-regulated pathways."
+        }
+      ]
+    },
+    {
+      "slug": "fractures",
+      "topic": "骨折",
+      "question": "额外补维生素 D，骨折会更少吗？",
+      "question_en": "Does extra vitamin D prevent fractures?",
+      "answer": "在一项两万多人的试验里，补维生素 D 和吃安慰剂的人，五年里发生骨折的比例几乎一样。",
+      "who": "美国中老年人，男性至少 50 岁，女性至少 55 岁。招募时没有专挑缺维生素 D 或有骨质疏松的人。",
+      "measured": "数的是实际有多少人骨折。两组都约为每 1,000 人中有 60 人骨折。",
+      "confidence": "试验人数多，跟踪也久。这个结果适合回答一般人额外补充的问题，不能用来判断已确诊缺乏者该怎么治。",
+      "detail": "VITAL 试验共 25,871 人，中位随访 5.3 年。发生骨折的有：维生素 D 组 769/12,927 人，安慰剂组 782/12,944 人。换算成每千人是整个随访期的累计人数，不是每年的人数。风险比 0.98（95% 置信区间 0.89 至 1.08）。",
+      "english": "In VITAL, fracture incidence was similar with vitamin D or placebo over a median of 5.3 years. Participants were not recruited for vitamin D deficiency or osteoporosis.",
+      "card": "NOV26-O05",
+      "sources": [
+        {
+          "pmid": "35939577",
+          "label": "VITAL：维生素 D 与实际发生的骨折"
+        }
+      ],
+      "group": "bone"
+    },
+    {
+      "slug": "nmn",
+      "topic": "NMN 与血糖",
+      "question": "NMN 改善了肌肉的一项指标，就说明人变年轻了吗？",
+      "question_en": "Does an improved muscle marker after NMN mean a person aged more slowly?",
+      "answer": "还不能这样说。一项人体试验看到肌肉对胰岛素的反应改善，但没有测人是否活得更久或少生病。",
+      "who": "体重偏高、有糖尿病前期的绝经后女性，随机用 NMN 或安慰剂，持续 10 周。",
+      "measured": "研究在受控条件下测胰岛素帮助身体处理葡萄糖的能力，也取肌肉样本看信号变化。",
+      "confidence": "直接测到了代谢反应，但人群小而且特殊。不能把短期指标写成“能让一般人逆龄”。",
+      "detail": "这项试验的主要研究对象与健康年轻男性、已确诊糖尿病患者都不同。它也没有测试补充 NMN 能否预防并发症。",
+      "english": "A short randomized trial found improved muscle insulin sensitivity in selected women, not demonstrated rejuvenation or longer survival.",
+      "card": "NOV26-O08",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "33888596",
+          "label": "Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women."
+        }
+      ]
+    },
+    {
+      "slug": "resveratrol",
+      "topic": "白藜芦醇与记忆",
+      "question": "健康老人补白藜芦醇半年，背词能记得更牢吗？",
+      "question_en": "Did resveratrol improve verbal memory in healthy older adults?",
+      "answer": "没有看到明确的额外进步。研究事先选定的词语记忆测试，白藜芦醇组和安慰剂组的变化没有明显差别。",
+      "who": "60 名 60 至 79 岁成年人，随机分组，试验持续 26 周。",
+      "measured": "主要看学习和回忆一串词语的表现，还做了图形识别和脑部影像检查。",
+      "confidence": "人数不多。另一次探索性测试上出现的趋势也不明确，不能用来替换主要记忆测试的结果。",
+      "detail": "主要结局是加州词语学习测验。研究用的是白藜芦醇补充剂，不是喝红酒，也没有跟踪失智发病。",
+      "english": "The prespecified verbal memory outcome did not improve clearly versus placebo after 26 weeks of resveratrol.",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "29548848",
+          "label": "Effects of resveratrol on memory performance, hippocampus connectivity and microstructure in older adults - A randomized controlled trial."
+        }
+      ]
+    },
+    {
+      "slug": "clock",
+      "topic": "生物年龄检测",
+      "question": "验血算出来的“衰老速度”慢了，就等于寿命延长了吗？",
+      "question_en": "Does slowing a blood-based aging clock show longer life?",
+      "answer": "不等于。同一批人的血样，用一种算法看，衰老速度略慢；换另外两种算法，算出来的生物年龄没有明显变化。",
+      "who": "CALERIE 原试验将 220 名无肥胖的成年人随机分组，两年后研究者又用留存血样分析。",
+      "measured": "看的是血细胞 DNA 的化学标记，分别用几种“时钟”计算。研究没有等到参加者一生结束才数寿命。",
+      "confidence": "这能检验算法会不会随饮食干预改变，不能把时钟读数换成“多活几年”，也不构成节食方案。",
+      "detail": "DunedinPACE 的变化较小；PhenoAge 和 GrimAge 的年龄估计未见明确改变。这是对原试验样本的事后分析。",
+      "english": "Calorie restriction modestly affected one DNA methylation pace measure, not two other clocks; lifespan was not measured.",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "37118425",
+          "label": "Effect of long-term caloric restriction on DNA methylation measures of biological aging in healthy adults from the CALERIE trial."
+        }
+      ]
+    },
+    {
+      "slug": "probiotic",
+      "topic": "益生菌与便秘",
+      "question": "便秘吃益生菌，会多几次不用靠药的排便吗？",
+      "question_en": "Did the HN019 probiotic improve complete spontaneous bowel movements?",
+      "answer": "看菌株。上海一项试验里，吃 HN019 和吃安慰剂的人都有改善，两组每周自主、排得干净的次数没有明显差别。",
+      "who": "5 家医院共 229 名功能性便秘成年人，随机吃这株双歧杆菌或安慰剂，持续 8 周。",
+      "measured": "每周这类排便次数平均分别增加约 0.80 次和 0.66 次。比较的是两组变化，不只看吃益生菌的人自己前后比。",
+      "confidence": "对这株菌和这项结果是直接证据，不能替其他菌株、饮食纤维或其他原因的便秘下结论。",
+      "detail": "研究预先指定“完全自主排便”为主要结果。这比笼统问肚子舒不舒服更具体。",
+      "english": "In a 229-person trial, HN019 did not clearly improve complete spontaneous bowel movements over placebo.",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "39356506",
+          "label": "Eight-Week Supplementation With Bifidobacterium lactis HN019 and Functional Constipation: A Randomized Clinical Trial."
+        }
+      ]
+    },
+    {
+      "slug": "lutein",
+      "topic": "叶黄素与眼睛",
+      "question": "“叶黄素护眼”的大试验，测的是近视吗？",
+      "question_en": "Did the major lutein trial test whether it prevents myopia?",
+      "answer": "没有。它研究的是已经有较高黄斑病变风险的成年人，看病情会不会发展到晚期，不是看孩子近视度数。",
+      "who": "AREDS2 纳入有进展风险的眼病患者，在原有营养配方的基础上比较是否再加入叶黄素和玉米黄质等。",
+      "measured": "主要分析里，额外加入两者没有明确进一步减少晚期黄斑病变；这个比较也不是整个复方对比什么都不吃。",
+      "confidence": "这项试验不能证明预防近视或缓解看屏幕累。具体眼底病是否适合特定配方，由眼科医生按病情判断。",
+      "detail": "原文还讨论用叶黄素和玉米黄质替换原配方中 β-胡萝卜素的考量。替换配方与额外叠加是不同问题。",
+      "english": "AREDS2 studied progression of age-related macular degeneration and add-ons to a base formulation, not childhood myopia.",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "23644932",
+          "label": "Lutein + zeaxanthin and omega-3 fatty acids for age-related macular degeneration: the Age-Related Eye Disease Study 2 (AREDS2) randomized clinical trial."
+        }
+      ]
+    },
+    {
+      "slug": "calcium",
+      "topic": "补钙与骨折",
+      "question": "住在家里的中老年人，常规吃钙片会更少摔断骨头吗？",
+      "question_en": "Does routine calcium supplementation prevent fractures in community-dwelling older adults?",
+      "answer": "一份大型试验汇总没有发现，住在社区的一般中老年人常规吃钙片，髋部骨折就明显变少。",
+      "who": "33 项随机试验、共 51,145 名 50 岁以上社区居民；里面分别比较了钙、维生素 D 或两者合用。",
+      "measured": "数的是实际发生的骨折。单用钙和合用钙加维 D 的比较，都没有看到明确更少的髋部骨折。",
+      "confidence": "这不是对已确诊缺乏、住在护理机构或接受骨质疏松治疗者的结论，也不是说饮食中的钙不重要。",
+      "detail": "总人数涵盖所有比较，并非 51,145 人都做了单用钙的试验。髋部骨折是主要结果，另看了其他骨折。",
+      "english": "A review of randomized trials found no clear fracture-prevention benefit from routine calcium supplements in community-dwelling older people.",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "29279934",
+          "label": "Association Between Calcium or Vitamin D Supplementation and Fracture Incidence in Community-Dwelling Older Adults: A Systematic Review and Meta-analysis."
+        }
+      ]
+    },
+    {
+      "slug": "beetroot",
+      "topic": "甜菜根汁与血压",
+      "question": "喝甜菜根汁，年轻人和老人的血压反应一样吗？",
+      "question_en": "Did younger and older adults have the same blood-pressure response to beetroot juice?",
+      "answer": "一项小试验里不一样。喝富含硝酸盐的甜菜根汁后，老年组的平均动脉压有下降，年轻组没看到同样变化。",
+      "who": "39 名 18 至 30 岁成年人和 36 名 67 至 79 岁成年人完成试验，分别经历多种干预，每种两周。",
+      "measured": "老年组的平均动脉压在干预后约低 4 毫米汞柱。这是把整个心跳周期合起来算的压力，不是常说的“高压降了 4”。",
+      "confidence": "这是小样本、短时间的血压研究，不能据此说喝果汁能替代治疗或预防中风。",
+      "detail": "研究含去除硝酸盐的对照果汁，也测了口腔菌群。不同年龄组原来的血压不同，不能把年龄单独当作原因。",
+      "english": "A small crossover study found a fall in mean arterial pressure in older but not younger participants after nitrate-rich beetroot juice.",
+      "group": "bone",
+      "sources": [
+        {
+          "pmid": "40615058",
+          "label": "Ageing modifies the oral microbiome, nitric oxide bioavailability and vascular responses to dietary nitrate supplementation."
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "move",
+      "zh": "运动与肌力",
+      "en": "Movement and strength",
+      "examples": "步数、周末运动、蛋白粉",
+      "feishu": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewoz0W4bQ"
+    },
+    {
+      "id": "food",
+      "zh": "吃饭与体重",
+      "en": "Food and weight",
+      "examples": "断食、膳食纤维、减重反弹",
+      "feishu": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewf0Ark0B"
+    },
+    {
+      "id": "heart",
+      "zh": "血压与心脏",
+      "en": "Blood pressure and heart health",
+      "examples": "鱼油、胆固醇、降压饮食",
+      "feishu": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewsGrQFbG"
+    },
+    {
+      "id": "sleep",
+      "zh": "睡眠与记忆",
+      "en": "Sleep and memory",
+      "examples": "褪黑素、失眠、听力与记忆",
+      "feishu": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewBtF7KZ9"
+    },
+    {
+      "id": "skin",
+      "zh": "护肤与皱纹",
+      "en": "Skin and wrinkles",
+      "examples": "防晒、眼纹、PDRN 眼霜",
+      "feishu": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewJKwLvXX"
+    },
+    {
+      "id": "bone",
+      "zh": "补剂与衰老",
+      "en": "Supplements and aging",
+      "examples": "骨折、益生菌、生物年龄",
+      "feishu": "https://ucngl3rlrux2.feishu.cn/wiki/WriBw4TXZiOsjQkJWk8ctL1xnVg?table=tbljh1Xmkn6RYWPD&view=vewsEdd81X"
     }
   ]
 }

@@ -7,18 +7,18 @@
 - **有多大把握：** 对力量这点进步有中等把握。身体虚弱的老人能不能同样受益，还不清楚。
 
 <details>
-<summary>研究数字、出处和成分卡评级 / Study details</summary>
+<summary>研究数字和出处 / Study details</summary>
 
 综述把不同力量测试换算到同一尺度，合并效应量 g = 0.31（95% 置信区间 0.18 至 0.45）。这不等于力量多了 31%。作者对力量、肌肉量、身体功能三项结果的证据把握分别评为中等、低和很低。
 
 - [60 岁以上人群：肌酸加力量训练的 11 项试验 · PMID 42712402](https://pubmed.ncbi.nlm.nih.gov/42712402/)
 
-[原成分卡：肌酸 · B 级](../../cards/ingredients-2026-11/NOV26-O02.md) · [这个等级怎么评](../../../methodology/ingredient-card-grading-v1.md)。这是资料库给成分卡的评级，不是给这项试验打分。
+[原成分卡：肌酸 · B 级](../../cards/ingredients-2026-11/NOV26-O02.md) · [成分卡评级方法](../../../methodology/ingredient-card-grading-v1.md)
 
 **Does creatine add to strength training in older adults?** In generally healthy adults aged 60 or older, creatine added a small strength benefit to resistance training. Extra gains in muscle mass or physical function remain uncertain.
 
-核对日期：2026-11-22。
+核对日期：2026-11-23。
 
 </details>
 
-[返回：选一个想了解的问题](README.md)
+[同类问题：运动与肌力](groups/move.md) · [全部 50 个问题](README.md)
