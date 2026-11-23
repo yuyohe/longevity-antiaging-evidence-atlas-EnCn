@@ -6,6 +6,8 @@
 - **测到了什么：** 4 项试验发现入睡时间缩短；有些用腕部仪器，有些做睡眠监测，只有部分研究也询问本人感受。
 - **有多大把握：** 人数少、研究早、所用制剂不同。这个结果不能用于判断所有失眠类型或长期使用效果。
 
+[在个人站读这道题](https://yulcell.cn/evidence/melatonin/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

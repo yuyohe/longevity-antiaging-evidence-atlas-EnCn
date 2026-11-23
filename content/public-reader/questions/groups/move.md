@@ -1,5 +1,7 @@
 # 运动与肌力 / Movement and strength
 
+[在个人站按主题阅读](https://yulcell.cn/evidence/#yc-move)
+
 - [练力量时吃肌酸，会更有劲吗？](../strength.md)
 - [一天没走够一万步，也有好处吗？](../steps.md)
 - [只有周末有空运动，比平时分开练差很多吗？](../weekend.md)

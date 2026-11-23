@@ -1,5 +1,7 @@
 # 血压与心脏 / Blood pressure and heart health
 
+[在个人站按主题阅读](https://yulcell.cn/evidence/#yc-heart)
+
 - [车前子壳能降低“坏胆固醇”吗？](../cholesterol.md)
 - [没有心血管病，吃普通鱼油能预防心梗或中风吗？](../fish-oil.md)
 - [老人降血压，除了数字好看，能少出心血管大事吗？](../pressure.md)

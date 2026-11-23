@@ -6,6 +6,8 @@
 - **测到了什么：** 24 周后比较斑片大小、颜色和总体评分，这些项目没有发现两组有明显差别。
 - **有多大把握：** 没发现差别不等于已证明两者完全等效。研究针对黄褐斑，也没有测试所有浓度的日常护肤品。
 
+[在个人站读这道题](https://yulcell.cn/evidence/azelaic/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

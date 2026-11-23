@@ -1,5 +1,7 @@
 # 补剂与衰老 / Supplements and aging
 
+[在个人站按主题阅读](https://yulcell.cn/evidence/#yc-bone)
+
 - [额外补维生素 D，骨折会更少吗？](../fractures.md)
 - [NMN 改善了肌肉的一项指标，就说明人变年轻了吗？](../nmn.md)
 - [健康老人补白藜芦醇半年，背词能记得更牢吗？](../resveratrol.md)

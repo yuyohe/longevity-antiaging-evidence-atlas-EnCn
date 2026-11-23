@@ -6,6 +6,8 @@
 - **测到了什么：** 补 NR 的人血液中的 NAD+ 升到原来的约两倍。研究者也做了认知测试，两组相比没有看到好处。
 - **有多大把握：** 人数少，时间也短，看不出吃得更久会怎样。这项试验也回答不了能不能预防失智。
 
+[在个人站读这道题](https://yulcell.cn/evidence/memory/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

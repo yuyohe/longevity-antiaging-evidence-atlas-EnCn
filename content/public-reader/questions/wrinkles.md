@@ -6,6 +6,8 @@
 - **测到了什么：** 仪器测到皮肤含水量和弹性有所改善；单看皱纹，去掉少数对结果影响特别大的研究，淡纹效果就不稳定了。
 - **有多大把握：** 保湿有一些证据。光凭这些试验，还不足以说照镜子能看见皱纹变浅。
 
+[在个人站读这道题](https://yulcell.cn/evidence/wrinkles/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

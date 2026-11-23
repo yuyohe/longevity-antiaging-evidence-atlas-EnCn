@@ -6,6 +6,8 @@
 - **测到了什么：** 综合项目组平均减重约 6 公斤；走完 400 米的用时也改善，膝部伸展力量没有明显下降。
 - **有多大把握：** 饮食和运动一起改，无法分清各占多少功劳。不能把它解释成让虚弱老人只少吃就会走得更快。
 
+[在个人站读这道题](https://yulcell.cn/evidence/older-weight/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

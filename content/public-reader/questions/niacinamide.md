@@ -6,6 +6,8 @@
 - **测到了什么：** 12 周后用照片和仪器比较，色斑、部分细纹和肤色泛黄等指标有所改善。
 - **有多大把握：** 同一人左右脸比较很有用，但人群和肤色范围窄，不能推到所有肤色和所有色斑。
 
+[在个人站读这道题](https://yulcell.cn/evidence/niacinamide/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

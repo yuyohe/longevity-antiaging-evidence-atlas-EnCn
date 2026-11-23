@@ -6,6 +6,8 @@
 - **测到了什么：** 力量测试有小幅额外进步；肌肉多长了多少、日常活动有没有更轻松，都没看出明确的额外好处。
 - **有多大把握：** 对力量这点进步有中等把握。身体虚弱的老人能不能同样受益，还不清楚。
 
+[在个人站读这道题](https://yulcell.cn/evidence/strength/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

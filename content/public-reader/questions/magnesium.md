@@ -6,6 +6,8 @@
 - **测到了什么：** 汇总可合并的结果后，平均入睡约快 17 分钟；总睡眠时长没有明确差别。
 - **有多大把握：** 这些试验都有一定偏倚，作者对结果把握很低。17 分钟不能当成每个人会得到的效果。
 
+[在个人站读这道题](https://yulcell.cn/evidence/magnesium/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

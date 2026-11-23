@@ -6,6 +6,8 @@
 - **测到了什么：** 60 天后，不同分子大小的配方都改善了含水量和弹性；只有部分较小分子的配方在纹深指标上有明显改善。
 - **有多大把握：** 只能按测试过的成品和部位来读。“玻尿酸”三个字不足以保证每瓶都能淡纹。
 
+[在个人站读这道题](https://yulcell.cn/evidence/hyaluronic/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

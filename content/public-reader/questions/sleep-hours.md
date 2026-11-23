@@ -6,6 +6,8 @@
 - **测到了什么：** 测的是人群中的睡眠时长和死亡风险。研究没有要求原本健康的人改变睡眠时间。
 - **有多大把握：** 生病会让人睡得更久，也可能缩短寿命。看到长睡与风险有关，不等于少睡就会改善健康。
 
+[在个人站读这道题](https://yulcell.cn/evidence/sleep-hours/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

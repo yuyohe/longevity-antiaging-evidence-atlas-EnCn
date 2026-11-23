@@ -6,6 +6,8 @@
 - **测到了什么：** 三年后比较一组认知测试的总分，脑部影像的变化也没有明显组间差别。
 - **有多大把握：** 这并不等于健康饮食毫无价值。它回答的是这份特定食谱比对照饮食有没有额外的认知好处。
 
+[在个人站读这道题](https://yulcell.cn/evidence/mind-diet/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

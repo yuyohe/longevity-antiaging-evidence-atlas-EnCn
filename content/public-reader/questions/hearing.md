@@ -6,6 +6,8 @@
 - **测到了什么：** 主要看多少人进展到失智水平；其次才看有多少人评分恢复到正常。两项结果回答不同的问题。
 - **有多大把握：** 试验没有证明防止失智，也没有否定助听器对听力沟通的价值。
 
+[在个人站读这道题](https://yulcell.cn/evidence/hearing/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

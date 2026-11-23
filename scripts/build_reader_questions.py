@@ -10,6 +10,8 @@ SOURCE = ROOT / "data/reader_questions.json"
 CARDS = ROOT / "data/maintenance_2026_11/ingredient_cards.json"
 DEST = ROOT / "content/public-reader/questions"
 START, END = "<!-- reader-questions:start -->", "<!-- reader-questions:end -->"
+SITE = "https://yulcell.cn/evidence/"
+CREDIT = "维护by 宇多Yul细胞"
 FIELDS = (("研究了谁", "who"), ("测到了什么", "measured"), ("有多大把握", "confidence"))
 
 
@@ -48,6 +50,8 @@ def page(q, card, date, group, bibliography):
 
 {facts}
 
+[在个人站读这道题]({SITE}{q["slug"]}/) · {CREDIT}
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 
@@ -79,10 +83,11 @@ def outputs():
         items = [q for q in questions if q["group"] == gid]
         nav.append(f'- [{g["zh"]} · {len(items)} 题](groups/{gid}.md)：{g["examples"]}')
         all_links.append(f'### {g["zh"]}\n\n' + menu(items))
-        out[DEST / "groups" / (gid + ".md")] = (f'# {g["zh"]} / {g["en"]}\n\n' + menu(items, "../")
+        out[DEST / "groups" / (gid + ".md")] = (f'# {g["zh"]} / {g["en"]}\n\n'
+              + f'[在个人站按主题阅读]({SITE}#yc-{gid})\n\n' + menu(items, "../")
               + f'\n\n[全部 50 个问题](../README.md) · [飞书分类画册（可能需登录）]({g["feishu"]})\n')
     out[DEST / "README.md"] = ("# 选一个想了解的问题 / Read by question\n\n"
-        + "50 个问题，按你想改善的事来找。\n\n" + "\n".join(nav)
+        + f'50 个问题，按你想改善的事来找。[到个人站查问题]({SITE}) · {CREDIT}\n\n' + "\n".join(nav)
         + "\n\n<details>\n<summary>展开全部 50 个问题</summary>\n\n" + "\n\n".join(all_links)
         + "\n\n</details>\n\n[这些问题怎么选的](../../../docs/reader-question-selection.md)"
           " · [全部论文出处](../../../data/reader-question-sources.csv)"
@@ -90,7 +95,7 @@ def outputs():
     prefix = "content/public-reader/questions/"
     by_slug = {q["slug"]: q for q in questions}
     block = ("## 你想了解什么？ / Read by question\n\n"
-             + f'**[按主题找：50 个健康问题]({prefix}README.md)**\n\n'
+             + f'**[个人站：抗衰研究 50 问]({SITE})** · [GitHub 目录]({prefix}README.md) · {CREDIT}\n\n'
              + " · ".join(f'[{g["zh"]}]({prefix}groups/{g["id"]}.md)' for g in groups.values())
              + "\n\n" + menu([by_slug[s] for s in ("wrinkles","protein","coffee")], prefix))
     for name in ("README.md", "README.zh-CN.md"):

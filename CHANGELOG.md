@@ -4,6 +4,8 @@
 
 [大众问题库](content/public-reader/questions/README.md)从 5 题扩至 50 题，保留原链接，新增六个分类入口。每题独立列出人群、实测结果与局限；51 篇参考中 4 篇为单列补充，不改变旧证据矩阵及评级。[选题及来源](docs/reader-question-selection.md)
 
+[个人站「抗衰研究 50 问」](https://yulcell.cn/evidence/)上线。每个问题都有独立网址，可从本站、GitHub 和飞书对照阅读。维护by 宇多Yul细胞。本次更新阅读入口，未改变论文结论或评分。
+
 ## 2026-11-22
 
 [按自己的问题读](content/public-reader/questions/README.md)：新增骨折、皱纹、血脂、肌力、记忆 5 个入口。每页区分研究对象、实际结果和把握程度，附原论文与原成分卡，未改动既有评级。

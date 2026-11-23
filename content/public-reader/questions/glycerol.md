@@ -6,6 +6,8 @@
 - **测到了什么：** 第七天，研究乳液一侧约 73% 达到预设改善标准，对照一侧约 44%。
 - **有多大把握：** 同一个人左右腿作对照，可以比较成品；不能分出甘油和石蜡各贡献多少，也不等于普通干皮有同样改善率。
 
+[在个人站读这道题](https://yulcell.cn/evidence/glycerol/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

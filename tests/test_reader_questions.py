@@ -7,6 +7,19 @@ from scripts import build_reader_questions as reader
 
 
 class ReaderQuestions(unittest.TestCase):
+    def test_website_links_match_each_question_and_group(self):
+        data, _ = reader.load()
+        pages = reader.outputs()
+        for q in data["questions"]:
+            md = pages[reader.DEST / (q["slug"] + ".md")]
+            self.assertEqual(re.findall(r'\]\((https://yulcell\.cn/evidence/[^)]*)\)', md),
+                             [reader.SITE + q["slug"] + "/"])
+            self.assertIn(reader.CREDIT, md)
+        for g in data["groups"]:
+            self.assertIn(f'({reader.SITE}#yc-{g["id"]})', pages[reader.DEST / "groups" / (g["id"] + ".md")])
+        for home in (reader.ROOT / "README.md", reader.ROOT / "README.zh-CN.md", reader.DEST / "README.md"):
+            self.assertIn(f"({reader.SITE})", pages[home])
+
     def test_home_shortcuts_and_generated_pages(self):
         data, _ = reader.load()
         questions = data["questions"]

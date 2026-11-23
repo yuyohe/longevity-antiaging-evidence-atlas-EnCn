@@ -6,6 +6,8 @@
 - **测到了什么：** 约四年半后，研究者比较皮肤表面纹理的变化。对照组也可以用防晒，不是完全不防晒。
 - **有多大把握：** 有长期随机试验支持预防日晒引起的老化；它没证明防晒霜能把已经有的皱纹抹掉。
 
+[在个人站读这道题](https://yulcell.cn/evidence/sunscreen/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

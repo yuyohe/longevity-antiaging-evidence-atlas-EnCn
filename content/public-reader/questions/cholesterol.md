@@ -6,6 +6,8 @@
 - **测到了什么：** 测的是血脂单上的 LDL，也就是“坏胆固醇”，平均比对照组低 0.33 mmol/L。这批试验没数有多少人发生心梗。
 - **有多大把握：** 对“能否降低 LDL”有中等把握。0.33 是组间平均差，每个人不一定降这么多。
 
+[在个人站读这道题](https://yulcell.cn/evidence/cholesterol/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

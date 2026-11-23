@@ -6,6 +6,8 @@
 - **测到了什么：** 主要看学习和回忆一串词语的表现，还做了图形识别和脑部影像检查。
 - **有多大把握：** 人数不多。另一次探索性测试上出现的趋势也不明确，不能用来替换主要记忆测试的结果。
 
+[在个人站读这道题](https://yulcell.cn/evidence/resveratrol/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

@@ -6,6 +6,8 @@
 - **测到了什么：** 把每项化验值从低到高分成五组，只有约一半的人在 LDL 和 apoB 的分组位置完全相同。
 - **有多大把握：** 这能解释两项指标为何不总一致。分组不一样不等于有病，更不等于每个人都该自行加检查或换药。
 
+[在个人站读这道题](https://yulcell.cn/evidence/apob/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

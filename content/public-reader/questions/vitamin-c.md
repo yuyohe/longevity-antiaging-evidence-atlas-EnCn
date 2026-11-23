@@ -6,6 +6,8 @@
 - **测到了什么：** 研究持续半年，除了医生评分，还给皮肤纹理做印模，看到部分较深纹沟变浅。
 - **有多大把握：** 能支持的是特定乳霜对这些部位的效果；不能从中推出某瓶精华能淡多少斑。
 
+[在个人站读这道题](https://yulcell.cn/evidence/vitamin-c/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

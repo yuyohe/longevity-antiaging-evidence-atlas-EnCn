@@ -1,5 +1,7 @@
 # 睡眠与记忆 / Sleep and memory
 
+[在个人站按主题阅读](https://yulcell.cn/evidence/#yc-sleep)
+
 - [记忆开始变差，补烟酰胺核糖（NR）有用吗？](../memory.md)
 - [老人补镁，是更快睡着，还是整晚能睡更久？](../magnesium.md)
 - [吃褪黑素能更快睡着，就等于第二天觉得睡好了？](../melatonin.md)

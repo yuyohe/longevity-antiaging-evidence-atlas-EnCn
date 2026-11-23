@@ -6,6 +6,8 @@
 - **测到了什么：** 比较的是心梗、中风、心血管死亡等实际事件，再看原来的饮食会不会改变补充剂的效果。
 - **有多大把握：** 男医生不能代表所有人。吃得不均衡也不同于医生已经查明缺某一种维生素。
 
+[在个人站读这道题](https://yulcell.cn/evidence/multivitamin/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

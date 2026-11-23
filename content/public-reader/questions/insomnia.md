@@ -6,6 +6,8 @@
 - **测到了什么：** 比较的是一套认知行为治疗课程与睡眠健康教育，结果来自失眠严重程度问卷。
 - **有多大把握：** 这主要是看课程能不能办起来的小试验。参加者知道自己在哪一组，不能把结果套给所有助眠软件。
 
+[在个人站读这道题](https://yulcell.cn/evidence/insomnia/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

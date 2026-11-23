@@ -6,6 +6,8 @@
 - **测到了什么：** 24 周后比较细纹评分，两只手臂有差别。部分人另做了皮肤取样。
 - **有多大把握：** 这个设计能比较这款乳液在老年手臂上的作用，不能保证任意面霜用在脸上会有同样变化。
 
+[在个人站读这道题](https://yulcell.cn/evidence/retinol/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

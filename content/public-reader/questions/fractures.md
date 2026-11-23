@@ -6,6 +6,8 @@
 - **测到了什么：** 数的是实际有多少人骨折。两组都约为每 1,000 人中有 60 人骨折。
 - **有多大把握：** 试验人数多，跟踪也久。这个结果适合回答一般人额外补充的问题，不能用来判断已确诊缺乏者该怎么治。
 
+[在个人站读这道题](https://yulcell.cn/evidence/fractures/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

@@ -6,6 +6,8 @@
 - **测到了什么：** 研究按超加工食品吃得多少把人分成四组，随访中共记录 335 例死亡。
 - **有多大把握：** 吃什么并非随机分配，运动、收入等生活差异难以完全排除。不能把所有经过加工的食物都算进这一类。
 
+[在个人站读这道题](https://yulcell.cn/evidence/processed/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

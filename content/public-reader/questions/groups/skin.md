@@ -1,5 +1,7 @@
 # 护肤与皱纹 / Skin and wrinkles
 
+[在个人站按主题阅读](https://yulcell.cn/evidence/#yc-skin)
+
 - [喝胶原蛋白，能让皱纹变浅吗？](../wrinkles.md)
 - [平时坚持防晒，几年后真能看出区别吗？](../sunscreen.md)
 - [药用维 A 酸能改善晒出来的细纹吗？](../tretinoin.md)

@@ -6,6 +6,8 @@
 - **测到了什么：** 研究同时看体重、心肺耐力和随访死亡记录。在不同体重组，耐力差都与较高风险有关。
 - **有多大把握：** 这项研究不能直接代表女性，也不能从体重秤读数推算一个人的耐力或寿命。
 
+[在个人站读这道题](https://yulcell.cn/evidence/fitness/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 

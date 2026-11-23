@@ -6,6 +6,8 @@
 - **测到了什么：** 研究数的是死亡人数，按每周运动次数和总量分组；没有比较受伤、体能进步或每次练得累不累。
 - **有多大把握：** 这能打消“周末运动都白练”的顾虑，但没有证明两种安排在所有方面一样。
 
+[在个人站读这道题](https://yulcell.cn/evidence/weekend/) · 维护by 宇多Yul细胞
+
 <details>
 <summary>研究数字和出处 / Study details</summary>
 
